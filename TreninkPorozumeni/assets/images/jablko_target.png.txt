@@ -1,0 +1,10 @@
+jablko_target.png - TreninkPorozumeni field 5.3 (grammatical number), Jablko lezi v kosiku. (target - 1 jablko v kosiku)
+Date: 2026-09-30
+
+1. Service and parameters:
+   Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+   model=muse-image-1.0, size=1024x1024 (API returned 1600x1600 WebP)
+   Post-processing: Pillow, convert RGB + LANCZOS downscale to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: exactly one shiny red apple with a small stem lying inside a round woven light tan wicker basket, the apple clearly inside the basket. There is exactly one apple, a single apple, no more, no fewer, nothing else in the basket. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

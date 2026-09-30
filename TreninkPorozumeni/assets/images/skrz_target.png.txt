@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned larger WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration: a gray striped cat squeezing through a hole in a low wooden fence of vertical light-brown boards, the wooden boards at the edges of the hole overlap and partly cover the middle of the cat's body, so the cat is clearly inside the hole, the cat's head and front half already sticking out of the hole on the near left side, the back half and tail still behind the fence on the other side, partly hidden behind the boards. The cat is going through the hole in the fence, not over it and not in front of it. One cat and one fence with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

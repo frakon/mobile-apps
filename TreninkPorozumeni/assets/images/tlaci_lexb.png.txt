@@ -1,0 +1,12 @@
+Image: tlaci_lexb.png — lexical distractor for „Medvěd tlačí lva." (bear replaced by rabbit; repaired push composition)
+Generated: 2026-09-30 (repair regeneration; user visual review follow-up request 9 consistency extension)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+- Blind test: 5/5 fresh opus evaluators PASS (round 2)
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, both animals facing left: a small white rabbit with long upright ears standing half upright on its bent hind legs firmly planted at ground level directly behind a lion, the rabbit leaning its whole body forward at a diagonal like someone pushing a heavy cart, both front paws pressed flat against the rear of the lion's hindquarters, visible pushing effort in the rabbit's braced stance; the lion in front of the rabbit walking slowly forward on all four legs at the same ground level, calm neutral face, head level, mouth closed, being pushed along. The rabbit behind is the active pusher, the calm lion in front is passively being pushed. Two clearly separate whole animals with correct realistic anatomy, all paws at the same ground level, bodies touching only where the rabbit's front paws press on the lion's hindquarters, a few short motion lines behind the rabbit's feet, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

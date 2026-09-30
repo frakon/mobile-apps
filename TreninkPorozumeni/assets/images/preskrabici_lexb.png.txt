@@ -1,0 +1,5 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned larger WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Round 2 (round-1 dog along the box rim read as lying INSIDE the box by blind describers; moved head/tail to stick out sideways beyond the box edges, below the box top)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: a large closed brown cardboard box with a flat taped top standing in the foreground, and a brown dog lying on the ground hidden behind the box, so that the box covers its whole body: only the dog's head sticking out sideways beyond the left edge of the box and the tip of its bushy tail sticking out sideways beyond the right edge of the box are visible, both lower than the top of the box. Nothing of the dog is visible above the box top. The dog is lying behind the box, not inside it. Only the box and the dog, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

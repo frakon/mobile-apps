@@ -1,0 +1,11 @@
+Image: vede_a.png — „Policista vede zloděje.“
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a policeman in a dark blue uniform and police cap walking toward the left in front, holding one end of a rope in his hand; the rope stretches back to a thief in a black-and-white striped shirt and small black flat cap who walks behind the policeman with his head hanging low and shoulders slumped, being led along by the rope. The policeman is in front leading, the thief is behind being led. Two clearly separate whole people with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,10 @@
+jablko_lexb.png - TreninkPorozumeni field 5.3 (grammatical number), Jablko lezi v kosiku. (lexb - jablko vedle kosiku)
+Date: 2026-09-30
+
+1. Service and parameters:
+   Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+   model=muse-image-1.0, size=1024x1024 (API returned 1600x1600 WebP)
+   Post-processing: Pillow, convert RGB + LANCZOS downscale to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: exactly one shiny red apple with a small stem lying on the ground NEXT TO a round woven light tan wicker basket, beside the basket, the basket completely empty, the apple clearly outside the basket. There is exactly one apple, a single apple, no more, no fewer, and it is beside the basket, not inside it. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

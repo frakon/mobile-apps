@@ -1,0 +1,11 @@
+Image: kvetiny_gram.png — Field 5.3 (grammatical number), sentence „Květiny jsou ve váze." — grammatical-number distractor (count changed)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one red tulip flower with green stem and leaves standing in one blue vase, the vase standing on one small rectangular wooden table with four legs. There is exactly one flower, a single flower, nothing else in the vase. Only the table, the vase and the flower, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

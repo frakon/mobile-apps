@@ -1,0 +1,5 @@
+﻿Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Model: muse-image-1.0, size parameter: 1024x1024 (API returned larger WebP; decoded + LANCZOS-downscaled to 512x512 PNG via Pillow)
+Script: .claude/skills/image-generation/scripts/generate-muse-image.ps1 + Pillow convert
+Prompt (verbatim):
+Children's book watercolor illustration, side view: a small bed with a blue blanket; a white rabbit with long ears stands on the bed and lifts one corner of a big soft yellow pillow with one paw, holding the pillow edge up in the air; a colorful wooden toy cube with a yellow star, a blue circle and a green triangle painted on its faces lies on the mattress half covered by the pillow, the front half of the cube sticking out from under the pillow edge and clearly visible. The rabbit is hiding the cube under the pillow. The cube is under the pillow. Only the bed, the rabbit, the pillow and the cube, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned WEBP 1600x1600), converted to 512x512 PNG via Pillow (RGB, LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: a large blue vase standing on a small wooden table in the foreground, a white rabbit sitting on the table directly behind the vase, the vase hiding most of the rabbit's body, the rabbit's two long upright ears and part of its head peeking out to one side of the vase, not above the vase opening, and its small fluffy tail visible on the other side of the vase. The rabbit is behind the vase, not inside the vase, the vase partly hides the rabbit. Only the table, the vase and the rabbit, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

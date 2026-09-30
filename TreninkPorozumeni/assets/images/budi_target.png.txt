@@ -1,0 +1,11 @@
+Image: budi_target.png — Field 5.1 item „budi“, target picture of the sentence for „Tatínka budí holčička.“
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a little girl with blonde pigtails in a red dress standing beside a simple bed, leaning over it and shaking with her hand the shoulder of her father, an adult man with short dark hair, who lies asleep under a blue blanket in the bed, eyes closed, head on a pillow. The girl is the active one waking him up, the sleeping father is the passive one being woken. Two clearly separate whole people with correct realistic anatomy, bodies not touching except the girl hand on the father shoulder, one simple bed and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

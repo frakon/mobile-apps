@@ -1,0 +1,11 @@
+Image: kouse_lexa.png â€” â€žKonÄ› kouÅ¡e pes." (lex distractor: horse replaced by cow)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a large black-and-white spotted cow stands with all four hooves on the ground, its short tail raised UP over its back away from its legs; a small brown dog stands on all four paws behind the cow, head lowered near the ground, and bites the cow's hind leg very LOW, just above the hoof, the dog's jaws visibly clamped around the thin lower leg above the hoof; the cow turns its head back over its shoulder with a startled wide-eyed open-mouthed expression. The dog is the active biter biting the cow's lower hind leg, the cow is the passive one being bitten. Correct realistic anatomy, exactly four cow legs, tail clearly separate and high above, bodies not touching except the dog's mouth on the lower hind leg, two clearly separate whole animals floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

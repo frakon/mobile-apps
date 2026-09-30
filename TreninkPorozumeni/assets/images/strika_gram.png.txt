@@ -1,0 +1,11 @@
+Image: strika_gram.png â€” â€žKluka stÅ™Ã­kÃ¡ holÄiÄka." (gram distractor: roles swapped â€” boy squirts girl)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a boy with short brown hair in a blue t-shirt stands on the left holding a bright green toy water pistol with both hands stretched forward, squirting a thin stream of water with small blue drops flying through the air toward a girl; the little girl with blonde pigtails in a red dress stands on the right, laughing and shielding her face with both raised hands as the water drops reach her. The boy is the active squirter, the girl is the passive one being squirted. Two clearly separate whole children with correct realistic anatomy, bodies not touching, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

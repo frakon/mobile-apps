@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned WEBP 1600x1600), converted to 512x512 PNG via Pillow (RGB, LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: a big closed brown cardboard box in the foreground, a boy with short brown hair wearing a red t-shirt standing calmly directly behind the box, the box hiding the lower half of his body, only his chest, arms and head visible above the top of the box. The boy is behind the box, the box partly hides the boy. Only the box and the boy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

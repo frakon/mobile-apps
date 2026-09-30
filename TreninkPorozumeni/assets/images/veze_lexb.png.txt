@@ -1,0 +1,11 @@
+Image: veze_lexb.png â€” â€žKluka veze holÄiÄka na sÃ¡ÅˆkÃ¡ch." (lex distractor: girl replaced by mother)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a mother, an adult woman with brown hair in a bun in a long yellow winter coat and boots, walks to the left leaning forward, pulling with both hands a rope attached to a wooden sled behind her; a boy with short brown hair in a blue winter jacket sits on the sled with his hands resting on its sides, calmly riding. The mother is the active puller, the boy is the passive rider being pulled on the sled. One adult woman and one boy, two clearly separate whole people with correct realistic anatomy, bodies not touching, the rope only in the woman's hands, floating in pure white empty space, no ground, no snow, no shadow, no scenery, no text, nothing else in the picture.

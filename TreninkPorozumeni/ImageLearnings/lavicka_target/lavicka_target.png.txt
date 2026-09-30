@@ -1,0 +1,11 @@
+Image: lavicka_target.png — Field 5.3 (grammatical number), sentence „Kluk sedí na lavičce." — target picture (sentence true)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one young boy with short brown hair in a blue t-shirt and dark shorts sitting upright in the middle of one long simple wooden park bench with horizontal back slats and no armrests, a bench wide enough for three people, most of the bench empty, hands on his knees, feet hanging down. There is exactly one boy, a single child, no other people on the bench. Only the long bench and the boy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

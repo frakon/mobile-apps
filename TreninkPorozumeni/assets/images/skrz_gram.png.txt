@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned larger WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: a gray striped cat actively climbing over the top edge of a low wooden fence of vertical light-brown boards, caught in the middle of the climb: the cat's front paws reach down the left side of the fence, its hind legs push and kick up on the right side of the fence, its arched body is up in the air above the fence top edge, clearly in energetic climbing motion, not lying and not resting. The cat is climbing over the top of the fence, not through it. One cat and one fence with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned WEBP 1600x1600), converted to 512x512 PNG via Pillow (RGB, LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: a closed white door standing upright in its brown wooden door frame, a single brown lace-up shoe lying directly in front of the door, closer to the viewer, the whole shoe fully visible near the bottom of the door. The shoe is in front of the door. Only the door and the shoe, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

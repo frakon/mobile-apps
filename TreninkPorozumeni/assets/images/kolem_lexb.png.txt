@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned larger WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: a little boy in a red T-shirt and blue shorts in full running stride passing close beside a small house with white walls and a red roof, the boy seen in full side profile running from left to right, already beyond the house, his face and chest pointing to the right away past the house, his arms swinging in running motion and not touching the house, one of his legs partly hidden behind the corner of the house. The boy is running past the house, not toward it and not touching it. One boy and one house with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

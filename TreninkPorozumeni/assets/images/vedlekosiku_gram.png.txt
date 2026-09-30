@@ -1,0 +1,5 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned larger WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Attempts used: 1
+Prompt (verbatim):
+Children's book watercolor illustration, side view: a brown woven wicker basket with a curved handle standing on the right, and a single red apple lying inside the basket, clearly visible over the rim of the basket. Only the basket and the apple, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

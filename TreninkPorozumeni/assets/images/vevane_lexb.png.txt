@@ -1,0 +1,5 @@
+﻿Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Model: muse-image-1.0, size parameter: 1024x1024 (API returned larger WebP; decoded + LANCZOS-downscaled to 512x512 PNG via Pillow)
+Script: .claude/skills/image-generation/scripts/generate-muse-image.ps1 + Pillow convert
+Prompt (verbatim):
+Children's book watercolor illustration, side view: an open brown cardboard box with its flaps open; a gray striped cat sits inside the cardboard box, its head and ears sticking up above the box edge, body hidden inside the box. The cat is inside the box. Only the box and the cat, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

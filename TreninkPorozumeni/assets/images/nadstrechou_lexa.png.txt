@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned larger WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: a small toy-style airplane flying in the air clearly above the roof ridge of a small simple house with white walls and a red triangular roof, the airplane high above the roof, not touching it. The airplane is flying above the roof. One airplane and one house, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

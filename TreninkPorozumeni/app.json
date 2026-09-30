@@ -4,6 +4,7 @@
     "slug": "TreninkPorozumeni",
     "version": "1.0.0",
     "orientation": "landscape",
+    "scheme": "treninkporozumeni",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
@@ -23,7 +24,8 @@
     },
     "plugins": [
       "expo-audio",
-      "expo-asset"
+      "expo-asset",
+      "expo-router"
     ]
   }
 }

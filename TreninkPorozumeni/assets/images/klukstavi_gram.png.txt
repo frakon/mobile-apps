@@ -1,0 +1,11 @@
+Image: klukstavi_gram.png — Field 5.3 (grammatical number), sentence „Kluk staví kostky." — grammatical-number distractor (count changed)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: three young boys with short brown hair, one in a blue t-shirt, one in a red t-shirt, one in a green t-shirt, all in dark shorts, sitting on the floor around one single shared colorful toy block tower of red, yellow, blue and green cubes, each boy carefully placing a cube on the same one tower. There are exactly three boys, no more, no fewer, clearly separate, building one single shared tower together, no other people. Only the three boys and the one toy block tower, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

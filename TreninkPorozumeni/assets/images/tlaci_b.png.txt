@@ -1,11 +1,12 @@
-Image: tlaci_b.png — „Lev tlačí medvěda.“
-Generated: 2026-09-30
+Image: tlaci_b.png — „Lev tlačí medvěda." (repaired: push from behind with braced stance)
+Generated: 2026-09-30 (repair regeneration; user visual review follow-up request 9)
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
 - Parameters: model=muse-image-1.0, size=1024x1024
 - API returned 1600x1600 WebP (despite PNG/1024x1024 request)
 - Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+- Blind test: 5/5 fresh opus evaluators PASS (round 2)
 
 2. Verbatim prompt:
-Children's book watercolor illustration, side view: a lion standing behind a brown bear, the lion actively pushing the bear forward with both front paws pressed firmly against the bear's rear back, the bear leaning forward and bracing its legs as it is being pushed. Two clearly separate whole animals with correct realistic anatomy, bodies not touching except the lion's paws on the bear's back, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, side view, both animals facing left: a lion standing half upright on its bent hind legs firmly planted at ground level directly behind a brown bear, the lion leaning its whole body forward at a diagonal like someone pushing a heavy cart, both front paws pressed flat against the rear of the bear's hindquarters, visible pushing effort in the lion's braced stance, the lion's mouth closed and face focused but friendly; the brown bear in front of the lion walking slowly forward on all four legs at the same ground level, calm neutral face, head level, mouth closed, being pushed along, not startled. The lion behind is the active pusher, the calm bear in front is passively being pushed. Two clearly separate whole animals with correct realistic anatomy, all paws at the same ground level, bodies touching only where the lion's front paws press on the bear's hindquarters, a few short motion lines behind the lion's feet, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

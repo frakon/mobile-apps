@@ -1,0 +1,11 @@
+Image: objima_lexb.png â€” â€žBabiÄku objÃ­mÃ¡ holÄiÄka." (lex distractor: girl replaced by boy)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a boy with short brown hair in a blue t-shirt stands beside a seated grandmother, leans in and wraps both his arms around her shoulders in front, hugging her tightly with his cheek pressed to her cheek; the grandmother, an old woman with grey hair in a bun, round glasses and a purple cardigan, sits on a simple wooden chair with both her own hands resting passively on her lap, smiling but not hugging back. The boy is the active hugger, the grandmother is the passive one being hugged. His hands rest on her shoulders and upper back, away from her neck and throat. Two clearly separate whole people with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

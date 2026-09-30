@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned larger WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: a small orange butterfly with wings spread wide flying up and away out of an open brown cardboard box with its flaps open, the butterfly just above the box opening, head pointing up and away from the box. The butterfly is flying out of the box. One butterfly and one box with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

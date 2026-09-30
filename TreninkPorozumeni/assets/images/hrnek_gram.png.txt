@@ -1,0 +1,10 @@
+hrnek_gram.png - TreninkPorozumeni field 5.3 (grammatical number), Hrnek stoji na stole. (gram - 3 hrnky misto 1)
+Date: 2026-09-30
+
+1. Service and parameters:
+   Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+   model=muse-image-1.0, size=1024x1024 (API returned 1600x1600 WebP)
+   Post-processing: Pillow, convert RGB + LANCZOS downscale to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: exactly three identical plain sky-blue ceramic mugs with round handles standing upright in a row on the flat top of a small light brown wooden table with four straight legs. There are exactly three mugs, no more, no fewer, clearly separate, nothing else on the table. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

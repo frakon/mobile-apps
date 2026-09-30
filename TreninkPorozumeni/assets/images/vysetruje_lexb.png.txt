@@ -1,0 +1,11 @@
+Image: vysetruje_lexb.png — lexical distractor for „Doktor vyšetřuje pacienta." (doctor replaced by nurse)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: an adult female nurse in a white nurse uniform dress with a nurse cap on her head standing and leaning forward toward a young boy patient who sits calmly on a small stool with his hands resting in his lap; the nurse holds a large magnifying glass up in one hand, examining the boy's chest through it. The nurse is the active examiner, the boy just sits still being examined. Two clearly separate whole people with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

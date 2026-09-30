@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned WEBP 1600x1600), converted to 512x512 PNG via Pillow (RGB, LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: a white door standing upright in its brown wooden door frame, the door slightly ajar and opened a little toward the viewer, a red ball lying behind the door, the door hiding most of the ball, only a small part of the ball peeking out from behind the edge of the door through the narrow gap. The ball is behind the door, the door partly hides the ball. Only the door and the ball, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: hrusky_lexb.png - sentence: „Hrušky leží na talíři.“ - lexical distractor B
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: exactly three ripe yellow-green pears with small brown stems, no more, no fewer, clearly separate and not touching, lying UNDER a small brown wooden table with four legs, the pears on the floor level between the table legs, and on top of the table stands one round white plate that is completely empty. There are exactly three pears under the table and the plate on the table is empty. Only the table, the empty plate and the pears under the table, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

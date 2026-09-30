@@ -1,0 +1,11 @@
+Image: skrabe_lexb.png — lexb distractor for „Kočka škrábe psa.“ — fox scratches the dog instead of the cat
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: an orange-red fox with a long bushy white-tipped tail and pointed snout rearing up on its hind legs and swiping one extended front paw with spread claws at the side of a small brown dog; the dog flinches away from the fox, ears flat back and tail tucked, yelping. The fox is the aggressive attacker, the dog is the frightened victim shrinking away. Two clearly separate whole animals with correct realistic anatomy, bodies not touching except the fox's paw reaching the dog's side, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

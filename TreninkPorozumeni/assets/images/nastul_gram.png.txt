@@ -1,0 +1,5 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned larger WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Attempts used: 1
+Prompt (verbatim):
+Children's book watercolor illustration, side view: a gray cat in mid-jump in the air on the left, body angled steeply downward, leaping down off the left edge of the top of a small wooden table on the right, front paws stretched down toward the empty space below. The cat is jumping down from the table. Only the table and the cat, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

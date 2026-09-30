@@ -1,0 +1,10 @@
+hrnek_lexa.png - TreninkPorozumeni field 5.3 (grammatical number), Hrnek stoji na stole. (lexa - sklenice misto hrnku)
+Date: 2026-09-30
+
+1. Service and parameters:
+   Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+   model=muse-image-1.0, size=1024x1024 (API returned 1600x1600 WebP)
+   Post-processing: Pillow, convert RGB + LANCZOS downscale to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: exactly one plain clear drinking glass without a handle standing upright on the flat top of a small light brown wooden table with four straight legs. There is exactly one glass, a single glass, no more, no fewer, nothing else on the table. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

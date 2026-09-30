@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned WEBP 1600x1600), converted to 512x512 PNG via Pillow (RGB, LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: a single brown lace-up shoe lying on its sole on the seat of a small wooden chair with a straight backrest and four straight legs, the shoe resting fully on the chair seat. The shoe is on the chair. Only the chair and the shoe, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

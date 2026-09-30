@@ -1,0 +1,11 @@
+Image: svihadlo_gram.png - sentence: „Kluk skáče přes švihadlo.“ - grammatical-number distractor (wrong count)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: exactly three boys with short brown hair, the first wearing a red t-shirt, the second wearing a green t-shirt, the third wearing a yellow t-shirt, all in blue shorts and all wearing blue sneakers with white soles, each in mid-jump in the air over his own skipping rope, each holding one wooden handle of his rope in each hand, each rope swinging under his feet. There are exactly three boys, no more, no fewer, clearly separate, none cropped at the edge. Three clearly whole children with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

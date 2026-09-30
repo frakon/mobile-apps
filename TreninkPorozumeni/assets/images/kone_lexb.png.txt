@@ -1,0 +1,10 @@
+kone_lexb.png - TreninkPorozumeni field 5.3 (grammatical number), Kone bezi. (lexb - kone stoji, nebezi)
+Date: 2026-09-30
+
+1. Service and parameters:
+   Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+   model=muse-image-1.0, size=1024x1024 (API returned 1600x1600 WebP)
+   Post-processing: Pillow, convert RGB + LANCZOS downscale to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: exactly three chestnut brown horses with flowing dark brown manes and tails, all standing completely still, all four hooves down on the same level, legs straight, heads calm and level, manes and tails hanging down calmly, standing side by side facing the same direction. There are exactly three horses, no more, no fewer, clearly separate, none cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

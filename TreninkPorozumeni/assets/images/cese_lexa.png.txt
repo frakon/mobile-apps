@@ -1,0 +1,11 @@
+Image: cese_lexa.png — lexical distractor for „Holčička češe maminku." (mother replaced by doll)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a little girl standing behind a toy doll and combing the doll's long brown hair with a bright pink comb held in her raised hand; the toy doll sits on a low stool with its stiff plastic arms in its lap, a clearly artificial doll with painted face. The little girl is the one actively combing, the doll sits still. One whole child and one whole toy doll, clearly separate, with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

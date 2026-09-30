@@ -1,0 +1,5 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned larger WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Attempts used: 1
+Prompt (verbatim):
+Children's book watercolor illustration, side view: a brown dog in mid-leap in the air, body stretched horizontally, directly above a closed brown cardboard box, clearly passing over the box from left to right, not touching the box at all. The dog is jumping over the box. Only the box and the dog, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

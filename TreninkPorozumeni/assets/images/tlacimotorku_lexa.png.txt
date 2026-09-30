@@ -1,0 +1,12 @@
+Image: tlacimotorku_lexa.png — „Motorku tlačí auto." (lex distractor: car replaced by tractor)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+- Blind test: 5/5 fresh opus evaluators + independent verifier PASS (round 1)
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, both vehicles level and facing left: a blue motorcycle has broken down, a little grey puff of steam rising from its engine, its rider sitting on the seat shrugging with open hands; right behind the motorcycle a big green farm tractor with large rear wheels is pushing the motorcycle forward to the left, the tractor front firmly pressed against the motorcycle rear wheel, several short curved motion speed lines behind the tractor and small motion swirls at the tractor wheels showing the tractor doing the pushing work, both rolling to the left. The green tractor behind is the active pusher, the blue motorcycle in front is the passive vehicle being pushed. One tractor and one motorcycle, two clearly separate whole vehicles touching only tractor front to motorcycle rear wheel, floating in pure white empty space, no ground, no road, no shadow, no scenery, no text, nothing else in the picture.

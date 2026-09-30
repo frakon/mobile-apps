@@ -1,0 +1,11 @@
+Image: budi_gram.png — Field 5.1 item „budi“, grammatical distractor (roles swapped) for „Tatínka budí holčička.“
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a father, an adult man with short dark hair in a green shirt, standing beside a simple bed, leaning over it and shaking with his hand the shoulder of a little girl with blonde pigtails, who lies asleep under a blue blanket in the bed, eyes closed, head on a pillow. The father is the active one waking her up, the sleeping girl is the passive one being woken. Two clearly separate whole people with correct realistic anatomy, bodies not touching except the father hand on the girl shoulder, one simple bed and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

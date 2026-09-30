@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned larger WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: a little boy in a red T-shirt and blue shorts with one arm raised high in a throwing follow-through has just thrown a red ball, the red ball is in the air directly above the wide open top of a round wicker basket, falling straight down into the basket opening. The ball is going into the basket. One boy, one ball and one basket with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

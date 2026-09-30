@@ -1,0 +1,10 @@
+svicka_target.png - TreninkPorozumeni field 5.3 (grammatical number), Svicka hori na dortu. (target - 1 horici svicka; round-2 decor-matched set)
+Date: 2026-09-30
+
+1. Service and parameters:
+   Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+   model=muse-image-1.0, size=1024x1024 (API returned 1600x1600 WebP)
+   Post-processing: Pillow, convert RGB + LANCZOS downscale to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a round birthday cake with smooth white frosting and pink decorations, decorated ONLY with a ring of small pink frosting rosettes around the top edge and small pink sprinkle dots scattered on top, with exactly one tall pink and white striped candle standing on top, the candle lit with one small yellow flame. There is exactly one candle, a single candle, no more, no fewer, nothing else on the cake, no garlands, no icing drips, no hearts, no flowers. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,5 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned larger WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Attempts used: 1
+Prompt (verbatim):
+Children's book watercolor illustration, front view: three people standing in a row holding hands, from left to right: a mother with long brown hair in a red dress on the left, a small boy in a striped shirt in the middle, and a father with short black hair and glasses in a blue sweater on the right. The small boy is in the middle between the mother and the father. Three clearly separate whole people with correct realistic anatomy, touching only by their held hands, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

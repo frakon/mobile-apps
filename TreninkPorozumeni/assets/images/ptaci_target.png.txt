@@ -1,0 +1,11 @@
+Image: ptaci_target.png — Field 5.3 (grammatical number), sentence „Ptáci sedí na větvi." — target picture (sentence true)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: three small blue birds sitting side by side on one single bare brown branch, each bird perched upright with folded wings. There are exactly three birds, no more, no fewer, clearly separate, none touching each other, all sitting on the branch. Only the branch and the birds, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

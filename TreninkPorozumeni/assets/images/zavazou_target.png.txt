@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned WEBP 1600x1600), converted to 512x512 PNG via Pillow (RGB, LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: a large blue vase standing on a small wooden table in the foreground, an orange cat sitting on the table directly behind the vase, the vase hiding most of the cat's body, only the cat's ears, the top of its head and its tail visible sticking out behind the vase. The cat is behind the vase, the vase partly hides the cat. Only the table, the vase and the cat, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

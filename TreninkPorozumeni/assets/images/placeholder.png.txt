@@ -1,0 +1,2 @@
+Not AI-generated. Code-generated gray 512x512 placeholder (PowerShell System.Drawing, solid #C8C8C8 with text "OBRÁZEK CHYBÍ").
+Purpose: temporary stand-in for the not-yet-generated lexical distractor images so the app runs in 4-image mode before assets land.

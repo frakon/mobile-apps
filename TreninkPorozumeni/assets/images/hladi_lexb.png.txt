@@ -1,0 +1,11 @@
+Image: hladi_lexb.png — Field 5.1 item „hladi“, lexical distractor B for „Holčičku hladí babička.“
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a mother, an adult woman with brown hair in a bun wearing a yellow dress, sitting on a low wooden stool, reaching out one hand and gently stroking the blonde hair on the head of a little girl with blonde pigtails in a red dress who stands in front of her, the girl arms hanging still at her sides. The seated mother is the active one stroking, the standing girl is the passive one being stroked. Two clearly separate whole people with correct realistic anatomy, bodies not touching except the mother hand on the girl head, one low wooden stool and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: psispi_gram.png — Field 5.3 (grammatical number), sentence „Psi spí na koberci." — grammatical-number distractor (count changed)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, viewed from slightly above: one brown puppy dog curled up fast asleep on one small oval red carpet, eyes closed, the dog curled into a ball. There is exactly one dog, a single dog, nothing else on the carpet, asleep on the carpet. Only the carpet and the dog, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

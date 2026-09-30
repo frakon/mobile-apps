@@ -1,0 +1,12 @@
+Image: tlacimotorku_gram.png — „Motorku tlačí auto." (gram distractor: roles swapped — motorcycle pushes car)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+- Blind test: 5/5 fresh opus evaluators + independent verifier PASS (round 1)
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, both vehicles level and facing left: a small red car has run out of fuel and rolls forward to the left, its calm driver relaxed at the wheel; a blue motorcycle right behind it is slowly and helpfully pushing the car forward, the front wheel of the motorcycle gently pressed against the car rear bumper, the friendly motorcycle rider leaning forward with effort; no crash, no accident, no damage, no dents, both vehicles perfectly intact and level on the same line, several short curved motion speed lines behind the motorcycle and small motion swirls at the motorcycle wheels showing the motorcycle doing the pushing work, both rolling to the left. The blue motorcycle behind is the active pusher, the small red car in front is the passive vehicle being pushed along. Two clearly separate whole vehicles touching only motorcycle front wheel to car rear bumper, floating in pure white empty space, no ground, no road, no shadow, no scenery, no text, nothing else in the picture.

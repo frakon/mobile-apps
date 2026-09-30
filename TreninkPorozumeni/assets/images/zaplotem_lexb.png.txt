@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned WEBP 1600x1600), converted to 512x512 PNG via Pillow (RGB, LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: a short garden picket fence with clearly separate vertical wooden pickets nailed to two horizontal rails, wide gaps of empty white space visible between the pickets, a boy with short brown hair wearing a blue t-shirt sitting on top of the fence, both his legs hanging down in front of the pickets, his hands holding the top rail. The boy is sitting on the fence, not on a box. Only the picket fence and the boy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

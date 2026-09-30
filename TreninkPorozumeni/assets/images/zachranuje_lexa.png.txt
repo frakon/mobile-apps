@@ -1,0 +1,12 @@
+Image: zachranuje_lexa.png — lexa distractor for „Princ zachraňuje princeznu.“ — prince rescues an ordinary boy instead of the princess („Tady princ zachraňuje kluka, ne princeznu.“)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+- Note: second sample of this prompt (first sample discarded at pre-screen: prince rendered airborne)
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a prince in royal blue clothes with a small gold crown standing firmly upright, leaning back and pulling a young boy up to safety by his hand; the boy with short brown hair in an ordinary plain t-shirt and shorts, no crown, is lower down, weak and in danger, reaching up to the prince with his free hand and a grateful face while being pulled up. The prince is the strong rescuer, the ordinary boy is the one being rescued. Two clearly separate whole people with correct realistic anatomy, touching only at their joined hands, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

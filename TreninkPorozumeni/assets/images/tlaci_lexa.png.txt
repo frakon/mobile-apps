@@ -1,0 +1,12 @@
+Image: tlaci_lexa.png — lexical distractor for „Medvěd tlačí lva." (lion replaced by wolf; repaired push composition)
+Generated: 2026-09-30 (repair regeneration; user visual review follow-up request 9 consistency extension)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+- Blind test: 5/5 fresh opus evaluators PASS (round 1)
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, both animals facing left: a brown bear positioned low directly behind a grey wolf, the bear leaning steeply forward in a diagonal pushing posture with its head and shoulders held low, both front paws pressed flat against the back of the wolf's hindquarters from behind, never on top of the wolf's back, the bear's hind legs stretched far back and digging in, its whole body straining forward with visible pushing effort; the grey wolf in front slides forward, all four paws braced stiffly against the push. The bear behind is the active pusher working hard, the wolf in front is passively being pushed forward. Two clearly separate whole animals with correct realistic anatomy, bodies touching only where the bear's front paws press against the rear of the wolf's hindquarters, a few short motion lines behind the bear showing effort, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,5 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned larger WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Round 2 (round-1 mother read as a 10-14-year-old girl by blind describers; emphasized adult age and height)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: three people standing in a row holding hands, from left to right: a small boy in a striped shirt on the left, his mother - a tall grown adult woman about 35 years old with long brown hair in a red dress, much taller than the boy - in the middle, and an old grandfather with gray hair, a gray mustache and a green vest on the right, as tall as the mother. The adult mother is in the middle between the boy and the grandfather. Three clearly separate whole people with correct realistic anatomy, touching only by their held hands, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

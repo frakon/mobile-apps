@@ -1,0 +1,11 @@
+Image: banany_lexb.png — lexical distractor: 3 bananas NEXT TO empty bowl (generation round 2)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a round light blue bowl that is completely empty, and exactly three yellow bananas lying flat on their sides next to the bowl, beside it, outside the bowl, with a clear visible gap between the bowl and the bananas, no banana touching the bowl, no more, no fewer, the three bananas clearly separate and each banana whole and fully visible. Only the bowl and the bananas, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

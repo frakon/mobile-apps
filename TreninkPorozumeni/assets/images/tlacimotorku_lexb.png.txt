@@ -1,0 +1,12 @@
+Image: tlacimotorku_lexb.png — „Motorku tlačí auto." (lex distractor: motorcycle replaced by bicycle)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+- Blind test: 5/5 fresh opus evaluators + independent verifier PASS (round 1)
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, both level and facing left: a child on a small green bicycle coasts forward to the left, the child sitting calm and relaxed on the saddle with feet resting still on the pedals; a small red car right behind the bicycle is slowly and helpfully pushing it forward, the flat front bumper of the car gently pressed against the bicycle rear wheel, the friendly car driver smiling and leaning forward; no crash, no accident, no damage, everything perfectly intact and level on the same line, several short curved motion speed lines behind the car and small motion swirls at the car wheels showing the car doing the pushing work, both rolling to the left. The red car behind is the active pusher, the green bicycle in front is the passive one being pushed along. Two clearly separate whole vehicles touching only car front bumper to bicycle rear wheel, floating in pure white empty space, no ground, no road, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,5 @@
+﻿Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Model: muse-image-1.0, size parameter: 1024x1024 (API returned larger WebP; decoded + LANCZOS-downscaled to 512x512 PNG via Pillow)
+Script: .claude/skills/image-generation/scripts/generate-muse-image.ps1 + Pillow convert
+Prompt (verbatim):
+Children's book watercolor illustration, side view: an empty white bathtub with four little feet and no water; a small brown dog sits inside the bathtub, its head and ears sticking up above the tub rim, body hidden inside the tub. The dog is inside the bathtub. Only the bathtub and the dog, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

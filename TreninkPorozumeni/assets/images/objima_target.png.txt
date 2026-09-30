@@ -1,0 +1,11 @@
+Image: objima_target.png â€” â€žBabiÄku objÃ­mÃ¡ holÄiÄka." (target)
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a little girl with blonde pigtails in a red dress stands and wraps both her arms around the neck of a grandmother, hugging her tightly; the grandmother, an old woman with grey hair in a bun, round glasses and a purple cardigan, sits on a simple wooden chair with both her own arms resting passively down at her sides, smiling but not hugging back. The girl is the active hugger, the grandmother is the passive one being hugged. Two clearly separate whole people with correct realistic anatomy, touching only through the girl's arms around the grandmother's neck, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,4 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned WEBP 1600x1600), converted to 512x512 PNG via Pillow (RGB, LANCZOS)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: a tree with a thick brown trunk and a round green leafy crown in the foreground, a boy with short brown hair wearing a red t-shirt standing calmly directly behind the tree trunk, the trunk hiding one half of his body, the other half of his body visible to the side of the trunk. The boy is behind the tree, the trunk partly hides the boy. Only the tree and the boy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,5 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned larger WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Attempts used: 1
+Prompt (verbatim):
+Children's book watercolor illustration, side view: on top of a small wooden table stand three objects in a row from left to right: a red ball on the left, a tall blue vase in the middle, and a closed green book standing upright on the right. The tall blue vase is in the middle between the ball and the book. Only the table, the vase, the ball and the book, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

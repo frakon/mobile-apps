@@ -1,0 +1,11 @@
+Image: okna_lexa.png - sentence: „Okna jsou otevřená.“ - lexical distractor A
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: exactly three identical brown wooden doors with round door handles, standing side by side in a row, all three doors wide open. There are exactly three doors and all three are open. Only the three doors, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

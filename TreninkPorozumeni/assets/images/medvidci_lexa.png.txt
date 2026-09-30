@@ -1,0 +1,11 @@
+Image: medvidci_lexa.png - sentence: „Medvídci sedí na posteli.“ - lexical distractor A
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: exactly three identical white plush bunny rabbits with long upright ears, no more, no fewer, clearly separate and not touching, sitting upright in a row on one child bed with a red blanket and one white pillow. There are exactly three plush rabbits on the bed. Only the bed and the plush rabbits, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
