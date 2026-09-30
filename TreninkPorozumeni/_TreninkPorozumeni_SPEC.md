@@ -5,21 +5,24 @@ User prompts behind the fields-123 structure: `_TreninkPorozumeni_Fields123_PROM
 
 ## App structure (Expo Router)
 
-- `app/index.tsx` — initial page: selection of the field to train (three buttons, fields never mixed) + settings icon link. Layout ("User follow-up request 18"): compact landscape layout — optional green "Pokračuj v testu" button full-width on top, the three field buttons side by side in one row below it — wrapped in a ScrollView that centers the content when it fits and scrolls only when it does not; the settings gear stays absolutely positioned outside the ScrollView.
-  - `5.1 Reverzibilní věty` (`field51`)
-  - `5.2 Předložky a prostor` (`field52`)
-  - `5.3 Jednotné a množné číslo` (`field53`)
-- `app/settings.tsx` — settings page. Setting #1: image regime `2 obrázky` vs `4 obrázky` (persisted via AsyncStorage, default 2).
-  - 2-image regime: Target + Grammatical Distractor (the original behavior).
-  - 4-image regime: adds the two Lexical Distractors (two columns of two pictures, landscape-safe).
-- `app/game.tsx` — game screen; takes the field as route param (`/game?field=field51`).
+- `app/index.tsx` — initial page: selection of the test to train (SIX buttons — "User follow-up request 21": each field is split into two sub-tests of 10; fields never mixed) + settings icon link. Layout ("User follow-up request 18", adjusted for request 21): compact landscape layout — optional green "Pokračuj v testu" button full-width on top, below it three field COLUMNS side by side, each stacking its two sub-test buttons ("<field label> 1" over "<field label> 2") — wrapped in a ScrollView that centers the content when it fits and scrolls only when it does not; the settings gear stays absolutely positioned outside the ScrollView.
+  - `5.1 Reverzibilní věty 1` / `5.1 Reverzibilní věty 2` (`field51`, parts 1/2)
+  - `5.2 Předložky a prostor 1` / `5.2 Předložky a prostor 2` (`field52`, parts 1/2)
+  - `5.3 Jednotné a množné číslo 1` / `5.3 Jednotné a množné číslo 2` (`field53`, parts 1/2)
+- `app/settings.tsx` — settings page.
+  - Setting #1: image regime `2 obrázky` vs `4 obrázky` (persisted via AsyncStorage, default 2).
+    - 2-image regime: Target + Grammatical Distractor (the original behavior).
+    - 4-image regime: adds the two Lexical Distractors (two columns of two pictures, landscape-safe).
+  - Setting #2 ("User follow-up request 21"): speech speed — a continuous slider (`@react-native-community/slider`) 60–150 % in integer steps (any value like 64 % or 90 % allowed), current value shown as "NN %", with five animal jump-to marks under the track (🐌 Šnek 60 %, 🐢 Želva 80 %, 🧍 Člověk 100 %, 🐇 Králík 120 %, 🐆 Gepard 150 %; tapping a mark jumps to its exact value). Persisted via AsyncStorage (`settings.speechSpeedPercent`, default 100, clamped integer).
+- `app/game.tsx` — game screen; takes the field AND sub-test part as route params (`/game?field=field51&part=2`; missing/invalid `part` falls back to part 1 — backward-safe for old deep links).
 - Entry: `expo-router/entry` (`package.json` main); `app.json` has the `expo-router` plugin and `scheme`.
 
 ## Game — "pictures, one sentence"
 
 - Each round: a Czech sentence audio plays automatically when the round starts; a replay icon button replays it.
+- Speech speed ("User follow-up request 21"): NO special mp3s — the existing mp3s play slower/faster. The persisted speed (percent / 100) is applied right after creating EVERY player — the sentence player and the explanation player — via expo-audio `player.shouldCorrectPitch = true` + `player.setPlaybackRate(rate, 'high')` (pitch-corrected: tempo changes, voice pitch stays natural). The game reads the setting ONCE at game start (same pattern as the image regime): a mid-game settings change applies only to the NEXT game. Unlike the regime, the speed does NOT invalidate a paused test (the round plan does not depend on it); a resume simply plays at the currently stored speed.
 - 2 images side by side (2-image regime) or 4 images in two columns of two (4-image regime), in random positions; exactly one (the target) matches the sentence.
-- Layout ("User follow-up request 15"): the controls — pause button, round counter ("1/20"), sentence-replay button — form a vertical column to the LEFT of the pictures (no top bar), so the pictures use the full screen height in landscape. In the 4-image regime the screen reads: controls column | pictures 1+2 | pictures 3+4. The left-column layout applies to BOTH regimes (the app is landscape-only; picture size is height-limited in the 2-image regime too).
+- Layout ("User follow-up request 15"): the controls — pause button, round counter ("n / 10" — 10 rounds per sub-test since "User follow-up request 21"), sentence-replay button — form a vertical column to the LEFT of the pictures (no top bar), so the pictures use the full screen height in landscape. In the 4-image regime the screen reads: controls column | pictures 1+2 | pictures 3+4. The left-column layout applies to BOTH regimes (the app is landscape-only; picture size is height-limited in the 2-image regime too).
 - Wrong picture tapped: the app SAYS why the picture is wrong (short child-friendly Czech explanation per distractor, spoken from `<id>_gram_why.mp3` / `<id>_lexa_why.mp3` / `<id>_lexb_why.mp3`); the red tint stays on the tapped picture for the whole explanation playback and a still-playing sentence audio is paused. If the explanation audio is missing (`null`) or fails: plain red tint for 500 ms, nothing spoken. The round then continues until the correct picture is tapped; scored wrong on the first mistake (unchanged).
 - GLOBAL SINGLE-AUDIO RULE ("User follow-up request 19"): at most ONE audio plays at any time. Starting ANY audio (sentence auto-play on round advance/restart/resume, sentence replay, explanation) first goes through a single central `stopAllAudio()` step that immediately stops whatever else is sounding (pauses + releases a running explanation, pauses the sentence player); the same step runs on correct tap, restart, pause/`beforeRemove` and unmount.
 - Tap rules DURING an explanation ("User follow-up request 19", replaces the blocking of request 7): EVERY picture is tappable at ALL times. A tap on ANOTHER wrong picture un-reds the former one, stops its speech and immediately turns the new picture red with its own explanation (safety cap + start watchdog re-armed per explanation). A re-tap of the SAME red picture restarts its explanation from the beginning. A tap on the CORRECT picture stops the explanation, clears the red tint, shows the green feedback and advances the round like a normal correct tap ("request 7"). The sentence-replay button also works during an explanation: it stops the explanation (the red tint clears with it) and replays the sentence. Scoring unchanged: the round is counted wrong on the FIRST mistake; further wrong taps do not re-score.
@@ -32,16 +35,17 @@ User prompts behind the fields-123 structure: `_TreninkPorozumeni_Fields123_PROM
 
 (Requested in `_TreninkPorozumeni_Fields123_PROMPTS.md`, "User follow-up request 4".)
 
-- The controls column has a pause-and-go-back button, shown as the "◀⏸" glyph pair (back arrow + pause; "User follow-up request 17" — pause alone did not evoke going back), accessibility label "Přestávka a zpět". Leaving a RUNNING test — pause button, iOS swipe-back or Android hardware back (all saved from the navigation `beforeRemove` event, so they behave identically) — does not stop the test, it PAUSES it: field, regime, the exact round plan (order included), round index, Správně/Špatně counts and the current-round mistake flag are saved to the in-memory store `src/pausedGame.ts`.
+- The controls column has a pause-and-go-back button, shown as the "◀⏸" glyph pair (back arrow + pause; "User follow-up request 17" — pause alone did not evoke going back), accessibility label "Přestávka a zpět". Leaving a RUNNING test — pause button, iOS swipe-back or Android hardware back (all saved from the navigation `beforeRemove` event, so they behave identically) — does not stop the test, it PAUSES it: field, sub-test part ("User follow-up request 21" — the paused-test identity is field + part), regime, the exact round plan (order included), round index, Správně/Špatně counts and the current-round mistake flag are saved to the in-memory store `src/pausedGame.ts`.
 - In-memory deliberately (module-level variable, NOT AsyncStorage): a paused test is not a saved test — a fresh app start simply has no paused test to continue.
-- The initial page then shows a green "Pokračuj v testu — <field label>" button (re-checked on every focus). It is shown only while a paused test exists AND the current image-regime setting equals the paused test's regime.
+- The initial page then shows a green "Pokračuj v testu — <field label> <part>" button naming the SUB-test, e.g. "Pokračuj v testu — 5.1 Reverzibilní věty 2" (re-checked on every focus). It is shown only while a paused test exists AND the current image-regime setting equals the paused test's regime. (The speech-speed setting does NOT invalidate a paused test.)
 - Invalidation (button disappears, store cleared) happens exactly when: (a) a new/another test is started (any field button), (b) incompatible settings are detected — the stored image-regime setting differs from the paused test's regime (checked on the initial page's focus, where the button is hidden synchronously until the async check passes, and re-checked in the game's resume path — a mismatch there means the paused test is discarded and a fresh test of that field starts), or (c) the test is actually continued (resume consumes the store). Otherwise the paused test persists — e.g. pause → settings without changing the regime → back: the button is still shown.
-- Resume opens `/game?field=<field>&resume=1`: the exact same rounds order, index, counts and mistake flag are restored; the current round's sentence auto-plays again (desired). Empty/mismatched store on resume → fresh start of that field.
+- Resume opens `/game?field=<field>&part=<part>&resume=1` (a paused part-2 test must never continue under a part-1 route — the game re-checks `paused.part === part` too): the exact same rounds order, index, counts and mistake flag are restored; the current round's sentence auto-plays again (desired). Empty/mismatched store on resume → fresh start of that field + part.
 - Edge cases: pausing mid-explanation stops the explanation cleanly (round stays current, mistake flag preserved); pausing during the 500 ms correct-feedback saves the already-scored advance (index + 1, fresh mistake flag) so the round cannot be scored twice, and all pending feedback/explanation timers are cancelled right after the snapshot so nothing (e.g. the next sentence's auto-play) fires during the exit animation; leaving the finished/score screen or an empty field creates NO paused test; "Hrát znovu" does not touch the store.
 
 ## Rounds
 
-- `buildRoundPlan(field, regime)` (`src/rounds.ts`): filters examples by field, shuffles, one round per example; image order shuffled per round.
+- Sub-tests of 10 ("User follow-up request 21"): each field's 20 examples form TWO tests — part 1 = examples 1–10, part 2 = examples 11–20, split DETERMINISTICALLY by the `src/items.ts` order (`examplesForTestPart` / `EXAMPLES_PER_TEST_PART` in `src/rounds.ts`). Shuffling happens only WITHIN the 10 of a part; the round counter therefore shows "n / 10". A sub-test with zero examples gets a disabled start-page button ("Zatím bez příkladů").
+- `buildRoundPlan(field, regime, part)` (`src/rounds.ts`): takes the part's examples, shuffles, one round per example; image order shuffled per round.
 - Asset prefetching ("User follow-up request 16"): on every round start (including plan build and resume), the game fire-and-forgets `expo-asset` `Asset.fromModule(...).downloadAsync()` for the assets of the current round and the NEXT TWO rounds — per round exactly what its regime can use: slot images (2 or 4), sentence mp3, and the explanation `_why` mp3s of the non-target slots present (2-image regime: `gram_why` only). `collectRoundAssetModules` in `src/rounds.ts` collects the module ids; a session-wide `Set` de-duplicates. Failures are silent — the lazy load + watchdog remain the fallback; in release builds assets are bundled and the download is an immediate no-op.
 
 ## Data model (`src/items.ts`)
@@ -69,7 +73,7 @@ export interface ComprehensionExample {
 
 - Rounds carry `slots: { image, kind }[]` (`kind`: `target` | `grammatical` | `lexicalA` | `lexicalB`) so a tapped wrong picture maps to its explanation (`explanationForSlot` in `src/rounds.ts`).
 
-- Settings persistence: `src/settings.ts` (AsyncStorage key `settings.imageRegime`).
+- Settings persistence: `src/settings.ts` (AsyncStorage keys `settings.imageRegime`, `settings.speechSpeedPercent`).
 
 ## Current examples
 
@@ -88,5 +92,6 @@ export interface ComprehensionExample {
 
 ## Technical notes
 
-- Audio library: `expo-audio` (current Expo SDK recommendation; `expo-av` is deprecated).
+- Audio library: `expo-audio` (current Expo SDK recommendation; `expo-av` is deprecated). Speech speed via `AudioPlayer.setPlaybackRate(rate, 'high')` + `shouldCorrectPitch`.
+- Speed slider: `@react-native-community/slider` (installed via `npx expo install`; works in Expo Go).
 - Static `require()` asset references; TypeScript strict.

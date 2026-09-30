@@ -6,8 +6,9 @@ import { useFocusEffect, useRouter } from 'expo-router';
 import React, { useCallback, useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
-import { comprehensionExamples, FieldId } from '../src/items';
+import { FieldId } from '../src/items';
 import { clearPausedGame, peekPausedGame } from '../src/pausedGame';
+import { examplesForTestPart, TestPart } from '../src/rounds';
 import { loadRegime } from '../src/settings';
 
 const FIELDS: { id: FieldId; label: string }[] = [
@@ -16,13 +17,24 @@ const FIELDS: { id: FieldId; label: string }[] = [
   { id: 'field53', label: '5.3 Jednotné a množné číslo' },
 ];
 
-// Example counts derived from the data — fields without examples get a visibly
-// disabled button (no fake "Hotovo!" games on empty fields).
-const exampleCountByField = new Map<FieldId, number>(
-  FIELDS.map((field) => [
-    field.id,
-    comprehensionExamples.filter((example) => example.field === field.id).length,
-  ])
+// Sub-tests of 10 ("User follow-up request 21" in _TreninkPorozumeni_Fields123_PROMPTS.md):
+// each field is split into two tests — "<field label> 1" (examples 1–10) and
+// "<field label> 2" (examples 11–20) — so the page shows 6 test buttons.
+const TEST_PARTS: TestPart[] = [1, 2];
+
+function testLabel(field: FieldId, part: TestPart): string {
+  return `${FIELDS.find((candidate) => candidate.id === field)?.label ?? ''} ${part}`;
+}
+
+// Example counts derived from the data — sub-tests without examples get a visibly
+// disabled button (no fake "Hotovo!" games on empty sub-tests).
+const exampleCountByTest = new Map<string, number>(
+  FIELDS.flatMap((field) =>
+    TEST_PARTS.map((part): [string, number] => [
+      `${field.id}:${part}`,
+      examplesForTestPart(field.id, part).length,
+    ])
+  )
 );
 
 export default function FieldSelectionScreen() {
@@ -36,7 +48,8 @@ export default function FieldSelectionScreen() {
   // image-regime setting still equals the paused test's regime. Re-checked on every focus, so
   // pause → settings (regime unchanged) → back keeps the button, while changing the regime in
   // settings makes it disappear (the incompatible paused test is cleared = invalidated).
-  const [pausedField, setPausedField] = useState<FieldId | null>(null);
+  // Paused-test identity is field + part ("User follow-up request 21").
+  const [pausedTest, setPausedTest] = useState<{ field: FieldId; part: TestPart } | null>(null);
 
   useFocusEffect(
     useCallback(() => {
@@ -46,7 +59,7 @@ export default function FieldSelectionScreen() {
       // check below passes: otherwise the button from the previous focus would stay tappable
       // for the AsyncStorage round-trip, allowing a resume of a test whose regime was just
       // changed in settings (the game re-validates too, but the window must not exist here).
-      setPausedField(null);
+      setPausedTest(null);
       const paused = peekPausedGame();
       if (paused === null) {
         return;
@@ -56,10 +69,10 @@ export default function FieldSelectionScreen() {
           return;
         }
         if (storedRegime === paused.regime) {
-          setPausedField(paused.field);
+          setPausedTest({ field: paused.field, part: paused.part });
         } else {
           clearPausedGame(); // incompatible settings → the paused test is invalidated for good
-          setPausedField(null);
+          setPausedTest(null);
         }
       });
       return () => {
@@ -94,44 +107,58 @@ export default function FieldSelectionScreen() {
         showsVerticalScrollIndicator={false}
       >
         <Text style={styles.title}>Co budeme trénovat?</Text>
-        {pausedField !== null && (
+        {pausedTest !== null && (
           <Pressable
             style={styles.resumeButton}
             onPress={() =>
               navigateOnce(() =>
                 // Resuming CONSUMES the paused store inside the game screen (resume: '1').
-                router.push({ pathname: '/game', params: { field: pausedField, resume: '1' } })
+                router.push({
+                  pathname: '/game',
+                  params: { field: pausedTest.field, part: String(pausedTest.part), resume: '1' },
+                })
               )
             }
           >
             <Text style={styles.resumeButtonLabel}>
-              Pokračuj v testu — {FIELDS.find((field) => field.id === pausedField)?.label ?? ''}
+              {/* Label names the SUB-test, e.g. "5.1 Reverzibilní věty 2" ("request 21"). */}
+              Pokračuj v testu — {testLabel(pausedTest.field, pausedTest.part)}
             </Text>
           </Pressable>
         )}
+        {/* 6 test buttons ("User follow-up request 21"): 3 columns (one per field) × 2 rows
+            (part 1 above part 2) — the request-18 compact landscape layout kept: width is
+            abundant, height is scarce, and the ScrollView below remains the safety net. */}
         <View style={styles.fieldButtonsRow}>
-        {FIELDS.map((field) => {
-          const hasExamples = (exampleCountByField.get(field.id) ?? 0) > 0;
-          return (
-            <Pressable
-              key={field.id}
-              style={[styles.fieldButton, !hasExamples && styles.fieldButtonDisabled]}
-              disabled={!hasExamples}
-              onPress={() =>
-                navigateOnce(() => {
-                  clearPausedGame(); // starting a new test invalidates any paused one
-                  setPausedField(null);
-                  router.push({ pathname: '/game', params: { field: field.id } });
-                })
-              }
-            >
-              <Text style={[styles.fieldButtonLabel, !hasExamples && styles.fieldButtonLabelDisabled]}>
-                {field.label}
-              </Text>
-              {!hasExamples && <Text style={styles.fieldButtonNote}>Zatím bez příkladů</Text>}
-            </Pressable>
-          );
-        })}
+          {FIELDS.map((field) => (
+            <View key={field.id} style={styles.fieldColumn}>
+              {TEST_PARTS.map((part) => {
+                const hasExamples = (exampleCountByTest.get(`${field.id}:${part}`) ?? 0) > 0;
+                return (
+                  <Pressable
+                    key={part}
+                    style={[styles.fieldButton, !hasExamples && styles.fieldButtonDisabled]}
+                    disabled={!hasExamples}
+                    onPress={() =>
+                      navigateOnce(() => {
+                        clearPausedGame(); // starting a new test invalidates any paused one
+                        setPausedTest(null);
+                        router.push({
+                          pathname: '/game',
+                          params: { field: field.id, part: String(part) },
+                        });
+                      })
+                    }
+                  >
+                    <Text style={[styles.fieldButtonLabel, !hasExamples && styles.fieldButtonLabelDisabled]}>
+                      {testLabel(field.id, part)}
+                    </Text>
+                    {!hasExamples && <Text style={styles.fieldButtonNote}>Zatím bez příkladů</Text>}
+                  </Pressable>
+                );
+              })}
+            </View>
+          ))}
         </View>
       </ScrollView>
       {/* Settings gear ("User follow-up request 20" in _TreninkPorozumeni_Fields123_PROMPTS.md):
@@ -209,7 +236,8 @@ const styles = StyleSheet.create({
     color: '#1E4620',
     textAlign: 'center',
   },
-  // The three field buttons side by side — landscape width is abundant, height is scarce.
+  // Three field COLUMNS side by side, each column stacking its two sub-test buttons
+  // ("request 21": 6 tests; landscape width is abundant, height is scarce).
   fieldButtonsRow: {
     flexDirection: 'row',
     gap: 14,
@@ -217,11 +245,15 @@ const styles = StyleSheet.create({
     maxWidth: 900,
     alignItems: 'stretch',
   },
-  fieldButton: {
+  fieldColumn: {
     flex: 1,
+    gap: 10,
+  },
+  fieldButton: {
+    flex: 1, // both buttons of a column share its height equally
     backgroundColor: '#FFB84D',
     borderRadius: 24,
-    paddingVertical: 16,
+    paddingVertical: 12, // was 16 — two stacked rows must still fit the landscape height
     paddingHorizontal: 12,
     alignItems: 'center',
     justifyContent: 'center',

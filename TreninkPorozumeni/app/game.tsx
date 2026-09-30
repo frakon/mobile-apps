@@ -12,6 +12,8 @@
 // tint + explanation to the newly tapped picture; the correct tap advances as before), and
 // a GLOBAL SINGLE-AUDIO RULE holds — at most one audio plays at any time, enforced by
 // stopAllAudio() invoked before EVERY audio start (sentence auto-play, replay, explanation).
+// Per "User follow-up request 21": the field is split into two sub-tests of 10 (route params
+// field + part), and every player plays at the persisted speech speed (setPlaybackRate).
 
 import { Asset } from 'expo-asset';
 import { createAudioPlayer, setAudioModeAsync } from 'expo-audio';
@@ -21,8 +23,8 @@ import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { FieldId } from '../src/items';
 import { clearPausedGame, consumePausedGame, savePausedGame } from '../src/pausedGame';
-import { buildRoundPlan, collectRoundAssetModules, explanationForSlot, GameRound, Regime } from '../src/rounds';
-import { loadRegime } from '../src/settings';
+import { buildRoundPlan, collectRoundAssetModules, explanationForSlot, GameRound, Regime, TestPart } from '../src/rounds';
+import { loadRegime, loadSpeechSpeedPercent } from '../src/settings';
 
 const FEEDBACK_DURATION_MILLISECONDS = 500;
 // Safety cap for the explanation playback: if the finish event never arrives (corrupt file,
@@ -45,10 +47,14 @@ const VALID_FIELDS: FieldId[] = ['field51', 'field52', 'field53'];
 export default function GameScreen() {
   const router = useRouter();
   const navigation = useNavigation();
-  const params = useLocalSearchParams<{ field?: string; resume?: string }>();
+  const params = useLocalSearchParams<{ field?: string; part?: string; resume?: string }>();
   const resumeRequested = !Array.isArray(params.resume) && params.resume === '1';
   const fieldIsValid = !Array.isArray(params.field) && VALID_FIELDS.includes(params.field as FieldId);
   const field: FieldId = fieldIsValid ? (params.field as FieldId) : 'field51';
+  // Sub-test part ("User follow-up request 21"): each field is split into two tests of 10.
+  // Backward-safe fallback: a missing/invalid part param (old deep link /game?field=...)
+  // plays part 1 — the first 10 examples, closest to the old behavior.
+  const part: TestPart = !Array.isArray(params.part) && params.part === '2' ? 2 : 1;
 
   // Invalid/missing field param (deep link like /game?field=xyz): go back to the field
   // selection instead of silently playing 5.1.
@@ -59,6 +65,24 @@ export default function GameScreen() {
   }, [fieldIsValid, router]);
 
   const [regime, setRegime] = useState<Regime | null>(null); // null until AsyncStorage read
+  // Speech speed ("User follow-up request 21"): read ONCE at game start (same pattern as the
+  // regime above — a settings change mid-game applies only to the NEXT game, mirroring the
+  // regime behavior; unlike the regime it does NOT invalidate a paused test, because the
+  // round plan does not depend on it — a resume simply picks up the current speed).
+  // null until AsyncStorage read: the sentence auto-play effect waits for it, so even the
+  // very first sentence plays at the selected speed.
+  const [speechRate, setSpeechRate] = useState<number | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    loadSpeechSpeedPercent().then((percent) => {
+      if (!cancelled) {
+        setSpeechRate(percent / 100);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
   const [roundPlan, setRoundPlan] = useState<GameRound[] | null>(null);
   const [roundIndex, setRoundIndex] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
@@ -171,7 +195,9 @@ export default function GameScreen() {
     let cancelled = false;
     if (resumeRequested) {
       const paused = consumePausedGame();
-      if (paused !== null && paused.field === field) {
+      // Paused-test identity is field + part ("User follow-up request 21"): a paused
+      // "5.1 ... 2" must never continue under a "5.1 ... 1" route (and vice versa).
+      if (paused !== null && paused.field === field && paused.part === part) {
         // Re-validate the regime here too: the initial page's own check is asynchronous, so a
         // tap on a momentarily stale "Pokračuj v testu" button (regime just changed in
         // settings) could otherwise resume an incompatible test. Mismatch → the paused test is
@@ -189,7 +215,7 @@ export default function GameScreen() {
             mistakeMadeThisRound.current = paused.mistakeMadeThisRound;
           } else {
             setRegime(storedRegime);
-            setRoundPlan(buildRoundPlan(field, storedRegime));
+            setRoundPlan(buildRoundPlan(field, storedRegime, part));
           }
         });
         return () => {
@@ -203,13 +229,13 @@ export default function GameScreen() {
     loadRegime().then((storedRegime) => {
       if (!cancelled) {
         setRegime(storedRegime);
-        setRoundPlan(buildRoundPlan(field, storedRegime));
+        setRoundPlan(buildRoundPlan(field, storedRegime, part));
       }
     });
     return () => {
       cancelled = true;
     };
-  }, [field, resumeRequested]);
+  }, [field, part, resumeRequested]);
 
   const finished = roundPlan !== null && roundIndex >= roundPlan.length;
   const currentRound = roundPlan === null || finished ? null : roundPlan[roundIndex];
@@ -273,14 +299,33 @@ export default function GameScreen() {
     };
   }, []);
 
-  // Auto-play the sentence audio whenever a new round starts (once the audio mode is applied).
+  // Speech speed ("User follow-up request 21"): the existing mp3s are played slower/faster —
+  // expo-audio AudioPlayer.setPlaybackRate(rate, 'high') (node_modules/expo-audio/build/
+  // AudioModule.types.d.ts) with the 'high' PitchCorrectionQuality; shouldCorrectPitch keeps
+  // the voice at its natural pitch while only the tempo changes. Applied right after creating
+  // EVERY player (sentence AND explanation).
+  const applySpeechRate = useCallback(
+    (player: ReturnType<typeof createAudioPlayer>) => {
+      try {
+        player.shouldCorrectPitch = true;
+        player.setPlaybackRate(speechRate ?? 1, 'high');
+      } catch {
+        // Rate is a nicety: if the native call fails, play at natural speed.
+      }
+    },
+    [speechRate]
+  );
+
+  // Auto-play the sentence audio whenever a new round starts (once the audio mode is applied
+  // and the speech-speed setting is loaded — so even the FIRST sentence plays at the set speed).
   useEffect(() => {
-    if (!currentRound || !audioModeReady) {
+    if (!currentRound || !audioModeReady || speechRate === null) {
       return;
     }
     stopAllAudio(); // single-audio rule ("request 19"): e.g. a still-running explanation must not sound under the new sentence
     const player = createAudioPlayer(currentRound.example.audio);
     playerRef.current = player;
+    applySpeechRate(player);
     player.play();
     return () => {
       playerRef.current = null;
@@ -291,7 +336,7 @@ export default function GameScreen() {
       }
       player.remove();
     };
-  }, [currentRound, audioModeReady, stopAllAudio]);
+  }, [currentRound, audioModeReady, speechRate, applySpeechRate, stopAllAudio]);
 
   const replayAudio = useCallback(async () => {
     const player = playerRef.current;
@@ -380,6 +425,7 @@ export default function GameScreen() {
             explanationPendingRef.current = true; // set AFTER stopAllAudio above (which resets it) and BEFORE anything can throw
             const explanationPlayer = createAudioPlayer(explanation.audio);
             explanationPlayerRef.current = explanationPlayer;
+            applySpeechRate(explanationPlayer); // speech-speed setting applies to explanations too ("request 21")
             explanationPlayer.addListener('playbackStatusUpdate', (status) => {
               if (explanationPlayerRef.current !== explanationPlayer) {
                 return; // stale listener of an already-released player
@@ -431,7 +477,7 @@ export default function GameScreen() {
         }
       }
     },
-    [currentRound, correctTapped, finishExplanation, stopExplanation, stopAllAudio, showPlainWrongTint]
+    [currentRound, correctTapped, applySpeechRate, finishExplanation, stopExplanation, stopAllAudio, showPlainWrongTint]
   );
 
   const restartGame = useCallback(() => {
@@ -446,14 +492,14 @@ export default function GameScreen() {
     roundAdvancePending.current = false;
     roundGeneration.current += 1; // restart also invalidates presses begun before it
     stopAllAudio(); // single-audio rule: nothing may keep sounding into the restarted game
-    setRoundPlan(regime === null ? null : buildRoundPlan(field, regime));
+    setRoundPlan(regime === null ? null : buildRoundPlan(field, regime, part));
     setRoundIndex(0);
     setCorrectCount(0);
     setWrongCount(0);
     setWrongTappedIndex(null);
     setCorrectTapped(false);
     mistakeMadeThisRound.current = false;
-  }, [field, regime, stopAllAudio]);
+  }, [field, part, regime, stopAllAudio]);
 
   // Back with a history guard: opened cold via deep link there is nothing to pop, so
   // replace with the field-selection page instead of a no-op (iOS) / app exit (Android).
@@ -486,6 +532,7 @@ export default function GameScreen() {
     }
     savePausedGame({
       field,
+      part, // sub-test identity ("User follow-up request 21")
       regime,
       roundPlan,
       roundIndex: effectiveRoundIndex,
@@ -527,7 +574,7 @@ export default function GameScreen() {
     goBackToSelection();
   }, [goBackToSelection, stopAllAudio]);
 
-  if (roundPlan === null || regime === null || !fieldIsValid) {
+  if (roundPlan === null || regime === null || speechRate === null || !fieldIsValid) {
     return <SafeAreaView style={styles.container} />; // brief blank while AsyncStorage loads (or while redirecting an invalid field param)
   }
 

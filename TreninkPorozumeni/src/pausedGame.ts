@@ -8,10 +8,13 @@
 // requested "paused" semantics (see _TreninkPorozumeni_SPEC.md, "Pause / resume").
 
 import { FieldId } from './items';
-import { GameRound, Regime } from './rounds';
+import { GameRound, Regime, TestPart } from './rounds';
 
 export interface PausedGame {
   field: FieldId;
+  // Sub-test part ("User follow-up request 21"): the paused-test identity is field + part —
+  // resume must reopen exactly the same sub-test (e.g. "5.1 Reverzibilní věty 2").
+  part: TestPart;
   regime: Regime; // regime the paused plan was built for; a differing regime setting invalidates the pause
   roundPlan: GameRound[]; // the EXACT rounds (order included) — resume continues the same shuffle
   roundIndex: number;

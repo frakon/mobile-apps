@@ -1,6 +1,7 @@
 // Round-plan building per field and regime (see _TreninkPorozumeni_SPEC.md, section "Rounds"
 // and _TreninkPorozumeni_Fields123_PROMPTS.md for the 2-image/4-image regime request):
-// filter examples by field, shuffle, one round per example; each round shows the target
+// filter examples by field, split into sub-test parts of 10 ("User follow-up request 21"),
+// shuffle within the part, one round per example; each round shows the target
 // plus the grammatical distractor (2-image regime) or plus all three distractors (4-image regime)
 // in random positions.
 
@@ -9,6 +10,21 @@ import { ComprehensionExample, comprehensionExamples, FieldId } from './items';
 import { ImageSourcePropType } from 'react-native';
 
 export type Regime = 2 | 4;
+
+// Sub-test part ("User follow-up request 21" in _TreninkPorozumeni_Fields123_PROMPTS.md:
+// "split the current tests to by 10 (not by 20). So make it 6 tests instead of 3"):
+// each field's examples are split DETERMINISTICALLY by their src/items.ts order into
+// part 1 = examples 1–10 and part 2 = examples 11–20; shuffling happens only WITHIN a part.
+export type TestPart = 1 | 2;
+
+export const EXAMPLES_PER_TEST_PART = 10;
+
+// The examples of one sub-test (field + part), in the fixed items.ts order (pre-shuffle).
+export function examplesForTestPart(field: FieldId, part: TestPart): ComprehensionExample[] {
+  const fieldExamples = comprehensionExamples.filter((example) => example.field === field);
+  const startIndex = (part - 1) * EXAMPLES_PER_TEST_PART;
+  return fieldExamples.slice(startIndex, startIndex + EXAMPLES_PER_TEST_PART);
+}
 
 // Which picture occupies a display slot — needed to map a tapped wrong picture to its
 // "why it is wrong" explanation (see _TreninkPorozumeni_Fields123_PROMPTS.md, section
@@ -106,7 +122,6 @@ function buildRound(example: ComprehensionExample, regime: Regime): GameRound {
   };
 }
 
-export function buildRoundPlan(field: FieldId, regime: Regime): GameRound[] {
-  const fieldExamples = comprehensionExamples.filter((example) => example.field === field);
-  return shuffled(fieldExamples).map((example) => buildRound(example, regime));
+export function buildRoundPlan(field: FieldId, regime: Regime, part: TestPart): GameRound[] {
+  return shuffled(examplesForTestPart(field, part)).map((example) => buildRound(example, regime));
 }
