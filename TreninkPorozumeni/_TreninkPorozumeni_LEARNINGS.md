@@ -80,14 +80,10 @@ Fix/rules: add an explicit end-to-end continuity clause — "one single continuo
 4. Pairs: identical style/side, only the critical element differs; roles encoded by pose/position, never emotion (E).
 5. Directionality of joint movement stated for both figures (D).
 6. Acceptance: blind test per `_ImageGenerationLearnings.md` protocol; minority-ambiguity remarks = FAIL (B).
-<<<<<<< HEAD
 7. EVERY future image change/improvement request from the user (User follow-up requests 11 + 24) → MUST be (a) archived under `ImageLearnings/<pictureFileBaseName>/` — the ORIGINAL (pre-repair) png + its `.txt`, `_user_comment.md` (the user's comment/request verbatim), `_repair_result.md` (how it was repaired in the end) — AND (b) PROJECTED into this file as a new fault-class rule (or an extension of an existing one). Both steps are mandatory; archiving without updating this file is incomplete.
-=======
-7. Any future user complaint about a picture → archive it under `ImageLearnings/<pictureFileBaseName>/` (original png + .txt + `_user_comment.md` + `_repair_result.md`) and extend this file.
 
 ## Audio playback learnings (User follow-up request 22)
 
 - Play every sound ONLY through `src/audioController.ts` ("latest request wins", play-token guarded continuations). Never call `createAudioPlayer` elsewhere.
 - expo-audio iOS: `pause()` without `keepAudioSessionActive` schedules `AVAudioSession.setActive(false)` 100 ms later if no player is in `.playing` state (`node_modules/expo-audio/ios/AudioModule.swift`, `deactivateSession`). A new player still loading is NOT `.playing` → pause-old + play-new deactivated the session under the new sound. That this made the new sound SILENT is a code-derived HYPOTHESIS, not confirmed on a device. Always create players with `keepAudioSessionActive: true`.
 - Keep: a FRESH player per play request (no re-use/seekTo replay: a stale didJustFinish could kill the replay); release = `pause()` → unsubscribe → `remove()` → `release()` (`remove()` only unregisters; `release()` frees the native player); screen cleanups stop only their own sound (`stopAudioIfOwnedBy`); 2.5 s start watchdog (explanation: fail → plain tint; sentence: one fresh-player retry) / 15 s safety cap acting only on the current token.
->>>>>>> ba02f31 (Claude: TreninkPorozumeni - central audio controller (latest play request wins; fresh player per sound, keepAudioSessionActive, owner-scoped cleanup, sentence start watchdog with one retry). Fixes silent sentence on new round / silent why-wrong after tap during intro (request 22).)
