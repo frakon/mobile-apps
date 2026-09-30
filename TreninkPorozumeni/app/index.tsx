@@ -81,17 +81,6 @@ export default function FieldSelectionScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Absolute offsets are measured from the padding-box, so SafeAreaView's inset padding
-          does not apply here — add the insets explicitly (landscape notch/Dynamic Island). */}
-      <View style={[styles.topBar, { top: 16 + insets.top, right: 24 + insets.right }]}>
-        <Pressable
-          style={styles.settingsButton}
-          accessibilityLabel="Nastavení"
-          onPress={() => navigateOnce(() => router.push('/settings'))}
-        >
-          <Text style={styles.settingsIcon}>⚙️</Text>
-        </Pressable>
-      </View>
       {/* Compact landscape layout + ScrollView safety net ("User follow-up request 18" in
           _TreninkPorozumeni_Fields123_PROMPTS.md): with the "Pokračuj v testu" button visible the
           old single-column layout overflowed the landscape screen height. The field buttons now sit
@@ -145,6 +134,22 @@ export default function FieldSelectionScreen() {
         })}
         </View>
       </ScrollView>
+      {/* Settings gear ("User follow-up request 20" in _TreninkPorozumeni_Fields123_PROMPTS.md):
+          MUST be rendered AFTER the full-screen ScrollView sibling. React Native hit-tests later
+          siblings first, so when this absolutely positioned gear came before the ScrollView
+          (request-18 rework), the ScrollView swallowed every touch on it — the settings button
+          stopped working. Absolute offsets are measured from the padding-box, so SafeAreaView's
+          inset padding does not apply here — add the insets explicitly (landscape notch/Dynamic
+          Island). */}
+      <View style={[styles.topBar, { top: 16 + insets.top, right: 24 + insets.right }]}>
+        <Pressable
+          style={styles.settingsButton}
+          accessibilityLabel="Nastavení"
+          onPress={() => navigateOnce(() => router.push('/settings'))}
+        >
+          <Text style={styles.settingsIcon}>⚙️</Text>
+        </Pressable>
+      </View>
     </SafeAreaView>
   );
 }
