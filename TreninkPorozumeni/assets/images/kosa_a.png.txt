@@ -1,0 +1,12 @@
+Image: kosa_a.png — „Jel s kosou.“
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+- HTTP retries: got HTTP 400 twice (transient); the identical request succeeded on attempt 3
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a young boy with short brown hair riding a bicycle toward the left, steering with one hand and holding a long farming scythe over his shoulder with the other hand, the scythe having a long straight wooden handle and one large curved metal blade at the top. One single whole boy on one bicycle with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

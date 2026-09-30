@@ -1,0 +1,11 @@
+Image: vysetruje_b.png — „Pacient vyšetřuje doktora.“
+Generated: 2026-09-30
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP (despite PNG/1024x1024 request)
+- Post-processing: WebP downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a young boy patient in striped pajamas standing and leaning forward, holding a large magnifying glass up in one hand and examining through it the chest of an adult doctor; the doctor in a white coat with a stethoscope around his neck sits calmly on a small stool with his hands resting in his lap, being examined. The boy is the active examiner, the doctor just sits still being examined. Two clearly separate whole people with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
