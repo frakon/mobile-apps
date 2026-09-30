@@ -12,15 +12,18 @@
 // tint + explanation to the newly tapped picture; the correct tap advances as before), and
 // a GLOBAL SINGLE-AUDIO RULE holds — at most one audio plays at any time, enforced by
 // stopAllAudio() invoked before EVERY audio start (sentence auto-play, replay, explanation).
+// Per "User follow-up request 22": every play goes through src/audioController.ts
+// ("latest request wins", play-token guarded async continuations).
 // Per "User follow-up request 21": the field is split into two sub-tests of 10 (route params
 // field + part), and every player plays at the persisted speech speed (setPlaybackRate).
 
 import { Asset } from 'expo-asset';
-import { createAudioPlayer, setAudioModeAsync } from 'expo-audio';
+import { setAudioModeAsync } from 'expo-audio';
 import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { playAudio, stopAllAudio, stopAudioIfOwnedBy } from '../src/audioController';
 import { FieldId } from '../src/items';
 import { clearPausedGame, consumePausedGame, savePausedGame } from '../src/pausedGame';
 import { buildRoundPlan, collectRoundAssetModules, explanationForSlot, GameRound, Regime, TestPart } from '../src/rounds';
@@ -39,8 +42,9 @@ const EXPLANATION_SAFETY_TIMEOUT_MILLISECONDS = 15000;
 // forever: NO error, NO didJustFinish — the old code then held the red tint and blocked taps
 // for the full 15 s. This watchdog checks shortly after play() whether playback truly started
 // (isLoaded && playing) and, if not, falls back to the plain 500 ms tint. The 15 s cap stays
-// as the last resort for audio that DID start but never reports finishing.
-const EXPLANATION_START_WATCHDOG_MILLISECONDS = 2500;
+// as the last resort for audio that DID start but never reports finishing. Since "User
+// follow-up request 22" the 2.5 s watchdog lives in src/audioController.ts
+// (START_WATCHDOG_MILLISECONDS) and only ever acts on the latest play token.
 
 const VALID_FIELDS: FieldId[] = ['field51', 'field52', 'field53'];
 
@@ -104,70 +108,17 @@ export default function GameScreen() {
   const pressStartGeneration = useRef(-1); // -1: no press seen yet
   const correctFeedbackTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const wrongFeedbackTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const playerRef = useRef<ReturnType<typeof createAudioPlayer> | null>(null);
-  // Wrong-answer explanation playback: the red tint stays on the tapped picture for the
-  // whole explanation. Per "User follow-up request 19" taps are NOT blocked while it runs:
-  // any other picture tap (or the replay button) first stops this explanation via
-  // stopAllAudio() and then proceeds — wrong tap switches the red + explanation, correct
-  // tap advances ("request 7"). explanationPendingRef marks "an explanation is active"
-  // synchronously (a ref, not state — readable mid-async, e.g. in replayAudio's post-await
-  // re-check, without waiting for a re-render).
-  const explanationPendingRef = useRef(false);
-  const explanationPlayerRef = useRef<ReturnType<typeof createAudioPlayer> | null>(null);
-  const explanationSafetyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const explanationStartWatchdogTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // ALL audio goes through the central controller src/audioController.ts ("User follow-up
+  // request 22 — every play: latest request wins"; single-audio rule of "request 19"): each
+  // playAudio() stops everything before it, stale async continuations are token-guarded.
+  // Wrong-answer explanation: the red tint stays on the tapped picture for the whole
+  // explanation; taps are NOT blocked while it runs ("request 19").
 
-  const stopExplanation = useCallback(() => {
-    explanationPendingRef.current = false;
-    if (explanationSafetyTimer.current !== null) {
-      clearTimeout(explanationSafetyTimer.current);
-      explanationSafetyTimer.current = null;
-    }
-    if (explanationStartWatchdogTimer.current !== null) {
-      clearTimeout(explanationStartWatchdogTimer.current);
-      explanationStartWatchdogTimer.current = null;
-    }
-    const explanationPlayer = explanationPlayerRef.current;
-    if (explanationPlayer !== null) {
-      explanationPlayerRef.current = null;
-      try {
-        // pause() BEFORE remove(): remove() only schedules the native release, so on iOS a
-        // playing AVPlayer could keep sounding for a moment — the user-reported overlap of
-        // an explanation under the next round's sentence ("User follow-up request 19").
-        explanationPlayer.pause();
-      } catch {
-        // Player may already be released; nothing to do.
-      }
-      try {
-        explanationPlayer.remove();
-      } catch {
-        // Player may already be released; nothing to do.
-      }
-    }
-  }, []);
-
+  // Red tint ends together with the explanation speech. Only ever invoked by the controller
+  // for the LATEST play (a superseded explanation never reports finishing).
   const finishExplanation = useCallback(() => {
-    stopExplanation();
-    setWrongTappedIndex(null); // red tint ends together with the explanation speech
-  }, [stopExplanation]);
-
-  // GLOBAL SINGLE-AUDIO RULE ("User follow-up request 19"): the ONE central "stop all
-  // audio" step, invoked before EVERY audio start (sentence auto-play on round advance /
-  // restart / resume, sentence replay, explanation start) and on pause/beforeRemove — at
-  // most one audio may ever sound at a time. Stops + releases a running explanation and
-  // pauses the sentence player (the sentence player itself is NOT released here: its
-  // lifecycle belongs to the auto-play effect, and replay reuses it via seekTo(0)).
-  const stopAllAudio = useCallback(() => {
-    stopExplanation();
-    const sentencePlayer = playerRef.current;
-    if (sentencePlayer !== null) {
-      try {
-        sentencePlayer.pause();
-      } catch {
-        // Player may already be released; nothing to do.
-      }
-    }
-  }, [stopExplanation]);
+    setWrongTappedIndex(null);
+  }, []);
 
   // Fallback when no explanation is (or will be) heard: the plain 500 ms red tint.
   const showPlainWrongTint = useCallback(() => {
@@ -180,11 +131,19 @@ export default function GameScreen() {
     }, FEEDBACK_DURATION_MILLISECONDS);
   }, []);
 
-  // If the child navigates away mid-audio, stop everything (the sentence player itself is
-  // additionally released by its own effect's cleanup).
+  // Owner identity of THIS screen instance's sounds: its unmount / round cleanups stop only its
+  // own sound, never a sound of another (e.g. resumed) game screen (_TreninkPorozumeni_Fields123_PROMPTS.md, "User follow-up request 22 (verbatim) — every play: latest request wins").
+  const audioOwner = useRef({}).current;
+  // Set by beforeRemove: no sentence may start during the exit animation ("request 22").
+  const leavingRef = useRef(false);
+  // Round index in which the child already requested audio (wrong tap / replay): the late
+  // sentence auto-play (audio mode not yet ready) must not override it ("request 22").
+  const userAudioRoundRef = useRef(-1);
+
+  // If the child navigates away mid-audio, stop this screen's sound.
   useEffect(() => {
-    return stopAllAudio;
-  }, [stopAllAudio]);
+    return () => stopAudioIfOwnedBy(audioOwner);
+  }, [audioOwner]);
 
   // Read the persisted regime, then build the round plan for the selected field — or, when
   // opened in resume mode ("Pokračuj v testu"), CONSUME the paused test and continue it with
@@ -302,73 +261,60 @@ export default function GameScreen() {
   // Speech speed ("User follow-up request 21"): the existing mp3s are played slower/faster —
   // expo-audio AudioPlayer.setPlaybackRate(rate, 'high') (node_modules/expo-audio/build/
   // AudioModule.types.d.ts) with the 'high' PitchCorrectionQuality; shouldCorrectPitch keeps
-  // the voice at its natural pitch while only the tempo changes. Applied right after creating
-  // EVERY player (sentence AND explanation).
-  const applySpeechRate = useCallback(
-    (player: ReturnType<typeof createAudioPlayer>) => {
-      try {
-        player.shouldCorrectPitch = true;
-        player.setPlaybackRate(speechRate ?? 1, 'high');
-      } catch {
-        // Rate is a nicety: if the native call fails, play at natural speed.
-      }
-    },
-    [speechRate]
-  );
+  // the voice at its natural pitch while only the tempo changes. Applied by the central audio
+  // controller to EVERY play (sentence AND explanation) via the `rate` option.
+
+  // Sentence key: identifies the sentence of THIS round (every play gets a fresh player).
+  const sentenceKey = `sentence:${roundIndex}`;
+  const playSentence = useCallback(() => {
+    if (!currentRound || leavingRef.current) {
+      return;
+    }
+    // Start watchdog + one fresh-player retry if not started within 2.5 s (_TreninkPorozumeni_Fields123_PROMPTS.md, "User follow-up request 22 (verbatim) — every play: latest request wins").
+    playAudio(currentRound.example.audio, {
+      key: sentenceKey,
+      rate: speechRate ?? 1,
+      owner: audioOwner,
+      startWatchdog: true,
+      retryOnceOnStartFailure: true,
+    });
+  }, [currentRound, sentenceKey, speechRate, audioOwner]);
 
   // Auto-play the sentence audio whenever a new round starts (once the audio mode is applied
   // and the speech-speed setting is loaded — so even the FIRST sentence plays at the set speed).
+  // playAudio stops everything else first (latest request wins, "request 22").
   useEffect(() => {
     if (!currentRound || !audioModeReady || speechRate === null) {
       return;
     }
-    stopAllAudio(); // single-audio rule ("request 19"): e.g. a still-running explanation must not sound under the new sentence
-    const player = createAudioPlayer(currentRound.example.audio);
-    playerRef.current = player;
-    applySpeechRate(player);
-    player.play();
-    return () => {
-      playerRef.current = null;
-      try {
-        player.pause(); // remove() alone does not stop sound (expo-audio only unregisters the player) — single-audio rule ("request 19")
-      } catch {
-        // already released
-      }
-      player.remove();
-    };
-  }, [currentRound, audioModeReady, speechRate, applySpeechRate, stopAllAudio]);
+    if (userAudioRoundRef.current !== roundIndex) {
+      playSentence(); // skipped when the child's own tap/replay in this round already won
+    }
+    return () => stopAudioIfOwnedBy(audioOwner); // leaving the round: nothing of it may keep sounding
+  }, [currentRound, audioModeReady, speechRate, playSentence, roundIndex, audioOwner]);
 
-  const replayAudio = useCallback(async () => {
-    const player = playerRef.current;
-    if (!player || roundAdvancePending.current) {
-      return; // no replay during the green-feedback window: the old sentence would keep sounding under the next round's sentence ("request 19")
+  const replayAudio = useCallback(() => {
+    if (!currentRound || roundAdvancePending.current || leavingRef.current) {
+      return; // leaving (exit animation, "request 22"): nothing may start; no replay during the green-feedback window: the old sentence would keep sounding under the next round's sentence ("request 19")
     }
-    // Single-audio rule ("request 19"): replay is an audio START, so it stops a running
-    // explanation first (the red tint ends with its speech, hence finishExplanation).
-    finishExplanation();
-    try {
-      await player.seekTo(0); // must complete before play(), otherwise iOS may play at end-of-item (silence)
-    } catch {
-      return; // player was likely removed meanwhile
-    }
-    if (playerRef.current === player && !explanationPendingRef.current && !roundAdvancePending.current) {
-      // the pending re-check guards a wrong tap made while seekTo was awaiting: the explanation
-      // has paused the sentence player and playing it now would overlap the explanation speech
-      player.play();
-    }
-  }, [finishExplanation]);
+    // Replay is an audio START: it supersedes a running explanation (the red tint ends with
+    // its speech); a fresh sentence player starts from the beginning ("request 22").
+    userAudioRoundRef.current = roundIndex;
+    setWrongTappedIndex(null);
+    playSentence();
+  }, [currentRound, playSentence, roundIndex]);
 
   const handlePictureTap = useCallback(
     (index: number) => {
       // roundAdvancePending is checked/set synchronously: React state (correctTapped) alone
       // cannot block two taps delivered before a re-render (double/two-finger taps by children).
-      if (!currentRound || correctTapped || roundAdvancePending.current) {
-        return;
+      if (!currentRound || correctTapped || roundAdvancePending.current || leavingRef.current) {
+        return; // leavingRef: no explanation may start during the exit animation ("request 22")
       }
       // "User follow-up request 19": while a "why it is wrong" speech runs, EVERY picture
       // stays tappable (blocking the wrong ones let the child find the correct picture by
       // elimination). A tap on ANOTHER wrong picture un-reds the former one, stops its
-      // explanation (stopAllAudio below) and starts the new red + explanation immediately;
+      // explanation (playAudio below) and starts the new red + explanation immediately;
       // a re-tap of the SAME red picture restarts its explanation from the beginning (same
       // code path — chosen over ignoring so the child can hear the explanation again); the
       // CORRECT picture stops the explanation and advances the round like a normal correct
@@ -407,11 +353,11 @@ export default function GameScreen() {
         }, FEEDBACK_DURATION_MILLISECONDS);
       } else {
         mistakeMadeThisRound.current = true; // scored wrong on FIRST mistake only; further wrong taps do not re-score ("request 19")
-        // Single-audio rule + tap switching ("request 19"): stop whatever sounds right now —
-        // the sentence, or the PREVIOUS red picture's explanation (its timers, watchdog and
-        // player included) — BEFORE this tap's own explanation starts. The former red clears
-        // via setWrongTappedIndex(index) replacing it (only one red at a time by design).
-        stopAllAudio();
+        // Single-audio rule + tap switching ("request 19"): the playAudio / stopAllAudio call
+        // below stops whatever sounds right now — the sentence, or the PREVIOUS red picture's
+        // explanation (its timers, watchdog and player included) — BEFORE this tap's own
+        // explanation starts ("request 22"). The former red clears via setWrongTappedIndex(index)
+        // replacing it (only one red at a time by design).
         setWrongTappedIndex(index);
         if (wrongFeedbackTimer.current !== null) {
           clearTimeout(wrongFeedbackTimer.current); // re-arm so a repeated wrong tap gets the full tint duration
@@ -419,65 +365,31 @@ export default function GameScreen() {
         // Spoken "why it is wrong" explanation: red tint stays for the whole playback; when
         // the audio is missing (null) or fails, fall back to the plain 500 ms tint.
         const explanation = explanationForSlot(currentRound.example, currentRound.slots[index].kind);
-        let explanationStarted = false;
         if (explanation !== null && explanation.audio !== null) {
-          try {
-            explanationPendingRef.current = true; // set AFTER stopAllAudio above (which resets it) and BEFORE anything can throw
-            const explanationPlayer = createAudioPlayer(explanation.audio);
-            explanationPlayerRef.current = explanationPlayer;
-            applySpeechRate(explanationPlayer); // speech-speed setting applies to explanations too ("request 21")
-            explanationPlayer.addListener('playbackStatusUpdate', (status) => {
-              if (explanationPlayerRef.current !== explanationPlayer) {
-                return; // stale listener of an already-released player
-              }
-              if (status.didJustFinish) {
-                finishExplanation();
-              } else if (status.error !== null && status.error !== undefined) {
-                // Asynchronous load/playback failure (missing/corrupt file): fall back to the
-                // old 500 ms tint instead of locking wrong taps until the 15 s safety timeout.
-                stopExplanation();
-                showPlainWrongTint();
-              }
-            });
-            explanationPlayer.play();
-            // Safety cap + start watchdog are RE-ARMED per explanation: the previous
-            // explanation's timers were cleared by stopAllAudio → stopExplanation above.
-            explanationSafetyTimer.current = setTimeout(finishExplanation, EXPLANATION_SAFETY_TIMEOUT_MILLISECONDS);
-            // "Must have started playing" watchdog ("User follow-up request 7"): a source that
-            // never finishes loading emits NEITHER didJustFinish NOR status.error (evidence in
-            // the constant's comment above), which used to leave the red tint + tap block for
-            // the whole 15 s with no speech. If playback has not truly started by now, give up
-            // and fall back to the plain 500 ms tint. `isLoaded && playing` are synchronous
-            // native properties (expo-audio AudioModule Property definitions); on Android
-            // `playing` mirrors the INTENDED state while buffering, but `isLoaded` is false
-            // until STATE_READY, so a stuck-buffering player is caught on both platforms.
-            explanationStartWatchdogTimer.current = setTimeout(() => {
-              explanationStartWatchdogTimer.current = null;
-              if (explanationPlayerRef.current !== explanationPlayer) {
-                return; // explanation already ended/stopped meanwhile
-              }
-              let startedPlaying = false;
-              try {
-                startedPlaying = explanationPlayer.isLoaded && explanationPlayer.playing;
-              } catch {
-                // native player already released → treat as not playing
-              }
-              if (!startedPlaying) {
-                stopExplanation();
-                showPlainWrongTint();
-              }
-            }, EXPLANATION_START_WATCHDOG_MILLISECONDS);
-            explanationStarted = true;
-          } catch {
-            stopExplanation(); // creation/playback failed → plain 500 ms tint below (also resets explanationPendingRef)
-          }
-        }
-        if (!explanationStarted) {
+          // Central controller ("request 22"): stops the sentence / previous explanation
+          // (pause, then remove), plays this one at the speech speed ("request 21"). Its
+          // callbacks fire ONLY while this play is still the latest request. Failure paths —
+          // creation throws, status.error (missing/corrupt file), or the 2.5 s "must have
+          // started playing" watchdog ("User follow-up request 7") — fall back to the plain
+          // 500 ms tint; the 15 s safety cap ends the tint if no finish ever arrives.
+          userAudioRoundRef.current = roundIndex;
+          playAudio(explanation.audio, {
+            key: `explanation:${roundIndex}:${index}`,
+            rate: speechRate ?? 1,
+            owner: audioOwner,
+            onFinish: finishExplanation,
+            onFailure: showPlainWrongTint,
+            startWatchdog: true,
+            safetyTimeoutMilliseconds: EXPLANATION_SAFETY_TIMEOUT_MILLISECONDS,
+          });
+        } else {
+          userAudioRoundRef.current = roundIndex;
+          stopAllAudio(); // no explanation audio: still, nothing else may keep sounding
           showPlainWrongTint();
         }
       }
     },
-    [currentRound, correctTapped, applySpeechRate, finishExplanation, stopExplanation, stopAllAudio, showPlainWrongTint]
+    [currentRound, correctTapped, roundIndex, speechRate, audioOwner, finishExplanation, showPlainWrongTint]
   );
 
   const restartGame = useCallback(() => {
@@ -491,6 +403,7 @@ export default function GameScreen() {
     }
     roundAdvancePending.current = false;
     roundGeneration.current += 1; // restart also invalidates presses begun before it
+    userAudioRoundRef.current = -1;
     stopAllAudio(); // single-audio rule: nothing may keep sounding into the restarted game
     setRoundPlan(regime === null ? null : buildRoundPlan(field, regime, part));
     setRoundIndex(0);
@@ -499,7 +412,7 @@ export default function GameScreen() {
     setWrongTappedIndex(null);
     setCorrectTapped(false);
     mistakeMadeThisRound.current = false;
-  }, [field, part, regime, stopAllAudio]);
+  }, [field, part, regime]);
 
   // Back with a history guard: opened cold via deep link there is nothing to pop, so
   // replace with the field-selection page instead of a no-op (iOS) / app exit (Android).
@@ -562,6 +475,7 @@ export default function GameScreen() {
   };
   useEffect(() => {
     return navigation.addListener('beforeRemove', () => {
+      leavingRef.current = true;
       pauseSnapshotRef.current();
       clearPendingTimersRef.current();
     });
@@ -572,7 +486,7 @@ export default function GameScreen() {
   const pauseAndGoBack = useCallback(() => {
     stopAllAudio();
     goBackToSelection();
-  }, [goBackToSelection, stopAllAudio]);
+  }, [goBackToSelection]);
 
   if (roundPlan === null || regime === null || speechRate === null || !fieldIsValid) {
     return <SafeAreaView style={styles.container} />; // brief blank while AsyncStorage loads (or while redirecting an invalid field param)

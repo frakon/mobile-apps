@@ -8,7 +8,7 @@ Full behavior spec: `_TreninkPorozumeni_SPEC.md`. All user prompts verbatim: `_T
 
 - `npx expo start` (device: Expo Go, same Wi-Fi; web preview: `npx expo start --web`).
 - Checks: `npx tsc --noEmit`, `npx expo export --platform ios`.
-- Key files: `app/` (Expo Router screens: `index.tsx` field selection, `settings.tsx`, `game.tsx`), `src/items.ts` (60 examples, static `require` assets), `src/rounds.ts` (round plans, prefetch), `src/settings.ts`, `src/pausedGame.ts`.
+- Key files: `app/` (Expo Router screens: `index.tsx` field selection, `settings.tsx`, `game.tsx`), `src/items.ts` (60 examples, static `require` assets), `src/rounds.ts` (round plans, prefetch), `src/settings.ts`, `src/pausedGame.ts`, `src/audioController.ts` (the ONLY place that plays audio: "latest request wins", see `_TreninkPorozumeni_SPEC.md`).
 - Assets naming contract (per example id): `assets/images/<id>_target|_gram|_lexa|_lexb.png` (+ provenance `.png.txt`), `assets/audio/<id>.mp3` and `<id>_gram_why|_lexa_why|_lexb_why.mp3` (Edge TTS cs-CZ).
 
 **Before creating any new example, explanation text, or image: read `_TreninkPorozumeni_LEARNINGS.md`** (user-derived quality rules for texts and images) and `_ImageGenerationLearnings.md` (generation pipeline + blind-test protocol). Rejected/repaired pictures are archived under `ImageLearnings/`.
