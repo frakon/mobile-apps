@@ -330,3 +330,15 @@ Note (not a user prompt): length-ladder samples (A: ~0.30/0.40/0.50 s + current 
 Use A_040 and B_040. But cut it sooner: currently it has almost 2 seconds, though it could be cut at about 600-700ms. So: find out where roughly the letter ends (its sound), use fade out for the last 50ms of the .mp3 record: there, where there is already almost no sound, but where it would do a "crack" noise if we just cut the .mp3 (because there is yet some noise: so fade out this noice by this short fade out). Then replace everywhere (for both vowels and consonants), commit, push, redeploy
 
 Note (not a user prompt): commit/push/redeploy handled by the master agent. Applied to all Czech letter audio (assets/audio/letters/) in LetterTraining and LetterPexeso: vowels rebuilt at a 0.40 s voiced core (A_040 recipe), consonant names' final vowel stretched to ~0.40 s (B_040 recipe) where clean, then every file trimmed at sound end + 50 ms with a 50 ms linear fade-out. letters_en untouched.
+
+## Follow-up prompt 19 — Skládání slov: arrow only for the first word, word-length range in settings (verbatim) (2026-10-01)
+Additional specification (record to prompts):
+Ad "Skládání slov" (both versions): 
+* keep the arrow only for the first word in the round. Do not show it at all for the second letter/word and nexts
+* add to settings of "Skládání slov" also range of how long the words can be (if it is from letters then in terms of letters count, and if it is from syllables: in terms of syllable count). Make it visually like a bar with minimum and maximum knots (the range) and show next to the bar how many words do satisfy the given range (how many usable words which the application has satisfy it). Set the possible minimum not to predefined constants 3-8 but according to all words that we have available (the shortest word will supply letter count lower bound and the longest word will supply letter max count for the range bar).
+
+### Q&A 19 (verbatim answer)
+Q: Arrow scope? A: "First letter of the first word only"
+Q: Default word-length range (full range vs old 3–8)? A: "Keep full range as default"
+
+Note (not a user prompt): the arrow appears exactly once per play — for the first tile placement of round 1 — and again after "Hrát znovu" (a new play). The range is stored per variant (letters: letter count, "ch" = one letter; syllables: syllable count); the fixed 3–8 / 2–5 limits are removed, bounds come from the eligible words of src/words.ts.

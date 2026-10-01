@@ -13,12 +13,16 @@ export type TileCase = 'upper' | 'lower';
 // "## Q&A 4": 10 rounds + results page.
 export const COMPOSE_ROUNDS_PER_PLAY = 10;
 
-// "## Q&A 4": letter variant 3–8 letters (one row, portrait). Evaluator default (Q&A 5, not objected): syllable
-// variant 2–5 syllables.
-export const MIN_LETTER_TILES = 3;
-export const MAX_LETTER_TILES = 8;
-export const MIN_SYLLABLE_TILES = 2;
-export const MAX_SYLLABLE_TILES = 5;
+// "## Follow-up prompt 19": the fixed 3–8 letters / 2–5 syllables limits are replaced by a per-variant length range
+// chosen in the settings, its bounds derived from the available words (composeLengthBounds). Only a structural floor
+// stays: a word needs at least 2 tiles (one tile cannot be composed / shuffled).
+export const MIN_COMPOSE_TILES = 2;
+
+// Word length range in the variant's unit (letters: letter count, "ch" = 1; syllables: syllable count), inclusive.
+export interface ComposeLengthRange {
+  readonly min: number;
+  readonly max: number;
+}
 
 export interface ComposeTile {
   // Index in the shuffled tiles row (stable identity of the tile within a round).
@@ -59,23 +63,106 @@ export function slotValues(word: WordEntry, variant: ComposeVariant): string[] {
   return variant === 'letters' ? splitLetters(word.word) : word.syllables.map((syllable) => syllable.toLocaleLowerCase('cs-CZ'));
 }
 
-// Words usable by a variant: letters 3–8 tiles; syllables 2–5 syllables, the syllables must spell the word, and words
-// with a disputed syllabification (excludeLevel2, e.g. ob-raz) are skipped (evaluator default in "## Q&A 5").
-// Only words of src/words.ts are used = only words with an ACCEPTED picture.
-export function composeEligibleWords(words: readonly WordEntry[], variant: ComposeVariant): WordEntry[] {
-  if (variant === 'letters') {
-    return words.filter((entry) => {
-      const count = splitLetters(entry.word).length;
-      return count >= MIN_LETTER_TILES && count <= MAX_LETTER_TILES;
-    });
+// Length of a word in the variant's unit: letters ("ch" = 1) or syllables.
+export function composeUnitCount(entry: WordEntry, variant: ComposeVariant): number {
+  return variant === 'letters' ? splitLetters(entry.word).length : entry.syllables.length;
+}
+
+// Words usable by a variant (before the settings length range): at least MIN_COMPOSE_TILES tiles; syllables variant:
+// the syllables must spell the word, and words with a disputed syllabification (excludeLevel2, e.g. ob-raz) are
+// skipped (evaluator default in "## Q&A 5"). Only words of src/words.ts are used = only words with an ACCEPTED picture.
+// `lengthRange` ("## Follow-up prompt 19"): when given, only words whose unit count lies in it (inclusive).
+export function composeEligibleWords(
+  words: readonly WordEntry[],
+  variant: ComposeVariant,
+  lengthRange: ComposeLengthRange | null = null
+): WordEntry[] {
+  return words.filter((entry) => {
+    const count = composeUnitCount(entry, variant);
+    if (count < MIN_COMPOSE_TILES) {
+      return false;
+    }
+    if (lengthRange !== null && (count < lengthRange.min || count > lengthRange.max)) {
+      return false;
+    }
+    return (
+      variant === 'letters' ||
+      (!entry.excludeLevel2 && entry.syllables.join('').toLocaleLowerCase('cs-CZ') === entry.word.toLocaleLowerCase('cs-CZ'))
+    );
+  });
+}
+
+// ---- Word length range ("## Follow-up prompt 19": settings bar with min/max knots + count of satisfying words) ----
+
+// Bounds of the range bar = shortest / longest eligible word of the variant; null when no word is eligible.
+export function composeLengthBounds(words: readonly WordEntry[], variant: ComposeVariant): ComposeLengthRange | null {
+  const counts = composeEligibleWords(words, variant).map((entry) => composeUnitCount(entry, variant));
+  return counts.length === 0 ? null : { min: Math.min(...counts), max: Math.max(...counts) };
+}
+
+// A (stored) range fitted into the bounds: each end clamped, min <= max; null / invalid -> the full bounds (default).
+export function clampComposeLengthRange(range: ComposeLengthRange | null, bounds: ComposeLengthRange): ComposeLengthRange {
+  if (range === null || !Number.isFinite(range.min) || !Number.isFinite(range.max)) {
+    return bounds;
   }
-  return words.filter(
-    (entry) =>
-      !entry.excludeLevel2 &&
-      entry.syllables.length >= MIN_SYLLABLE_TILES &&
-      entry.syllables.length <= MAX_SYLLABLE_TILES &&
-      entry.syllables.join('').toLocaleLowerCase('cs-CZ') === entry.word.toLocaleLowerCase('cs-CZ')
-  );
+  const clamp = (value: number) => Math.min(bounds.max, Math.max(bounds.min, Math.round(value)));
+  const min = clamp(range.min);
+  const max = clamp(range.max);
+  return min <= max ? { min, max } : bounds;
+}
+
+// Number of usable words satisfying the range (shown next to the bar).
+export function countComposeWordsInRange(words: readonly WordEntry[], variant: ComposeVariant, range: ComposeLengthRange): number {
+  return composeEligibleWords(words, variant, range).length;
+}
+
+export type RangeKnot = 'min' | 'max';
+
+// Integer value under a knot position on the bar (0..trackWidth), snapped to the nearest step.
+export function rangeValueAtPosition(position: number, trackWidth: number, bounds: ComposeLengthRange): number {
+  if (trackWidth <= 0 || bounds.max === bounds.min) {
+    return bounds.min;
+  }
+  const ratio = Math.min(1, Math.max(0, position / trackWidth));
+  return bounds.min + Math.round(ratio * (bounds.max - bounds.min));
+}
+
+// Position (0..trackWidth) of a value on the bar.
+export function rangePositionOfValue(value: number, trackWidth: number, bounds: ComposeLengthRange): number {
+  return bounds.max === bounds.min ? 0 : ((value - bounds.min) / (bounds.max - bounds.min)) * trackWidth;
+}
+
+// Moving one knot: it cannot pass the other one (min <= max; equal = one exact length).
+export function moveRangeKnot(range: ComposeLengthRange, knot: RangeKnot, value: number): ComposeLengthRange {
+  return knot === 'min' ? { min: Math.min(value, range.max), max: range.max } : { min: range.min, max: Math.max(value, range.min) };
+}
+
+// The knot a touch at `value` grabs: the nearer one; on a tie (also both knots on one value) the one the touch can
+// move (towards the smaller value -> min, otherwise max).
+export function nearestRangeKnot(range: ComposeLengthRange, value: number): RangeKnot {
+  const toMin = Math.abs(value - range.min);
+  const toMax = Math.abs(value - range.max);
+  if (toMin !== toMax) {
+    return toMin < toMax ? 'min' : 'max';
+  }
+  return value <= range.min ? 'min' : 'max';
+}
+
+// Knot actually moved during a drag: while both knots sit on one value, the drag direction decides (right -> max,
+// left -> min), so a grab exactly on coincident knots can move either way; otherwise the grabbed knot stays.
+export function resolveDragKnot(range: ComposeLengthRange, grabbed: RangeKnot, value: number): RangeKnot {
+  if (range.min !== range.max || value === range.min) {
+    return grabbed;
+  }
+  return value > range.max ? 'max' : 'min';
+}
+
+// Czech counting form of "slovo" for the usable-word count: 1 slovo, 2-4 slova, 0 / 5+ slov.
+export function czechWordCountLabel(count: number): string {
+  if (count === 1) {
+    return 'slovo';
+  }
+  return count >= 2 && count <= 4 ? 'slova' : 'slov';
 }
 
 // Shuffled tiles; the shuffled order differs from the word order whenever possible (otherwise the word would already
@@ -102,14 +189,16 @@ export function buildComposeRound(word: WordEntry, variant: ComposeVariant, rand
 }
 
 // 10 rounds of eligible words in random order (repeats only when there are fewer eligible words than rounds; never
-// the same word twice in a row when avoidable). Empty -> [].
+// the same word twice in a row when avoidable). Empty -> []. `lengthRange` ("## Follow-up prompt 19"): settings range
+// filter; a small pool (fewer words than rounds) keeps the 10 rounds and repeats words, a single word repeats every round.
 export function buildComposePlan(
   words: readonly WordEntry[],
   variant: ComposeVariant,
   random: RandomSource = Math.random,
-  roundCount: number = COMPOSE_ROUNDS_PER_PLAY
+  roundCount: number = COMPOSE_ROUNDS_PER_PLAY,
+  lengthRange: ComposeLengthRange | null = null
 ): ComposeRound[] {
-  const eligible = composeEligibleWords(words, variant);
+  const eligible = composeEligibleWords(words, variant, lengthRange);
   if (eligible.length === 0) {
     return [];
   }
@@ -295,6 +384,13 @@ export function arrowSourceTileId(
     (candidate) => candidate.value === round.slots[0] && candidate.id !== draggedTileId && !filledSlots.includes(candidate.id)
   );
   return tile === undefined ? null : tile.id;
+}
+
+// "## Follow-up prompt 19" / "### Q&A 19" ("First letter of the first word only"): the arrow is shown only for the first
+// tile placement of round 1 of a play - hidden once any box of word 1 is filled and in every later round; a new play
+// (roundIndex back to 0) shows it again.
+export function isPlacementArrowShown(roundIndex: number, filledSlots: readonly (number | null)[]): boolean {
+  return roundIndex === 0 && filledSlots.every((tileId) => tileId === null);
 }
 
 // The rectangle as drawn with a centred `scale` transform (verification compose R1 LOW: hit-test the visible tile).

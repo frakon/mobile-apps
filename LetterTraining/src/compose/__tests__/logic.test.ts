@@ -105,7 +105,8 @@ describe('tiles', () => {
 describe('eligible words', () => {
   const words = [
     word('pes', 'pes', ['pes']),
-    word('les', 'le', ['le']), // 2 letters -> too short
+    word('les', 'le', ['le']), // 2 letters ("## Follow-up prompt 19": no 3-8 limit, structural floor 2 tiles)
+    word('a', 'a', ['a']), // 1 tile -> never usable
     KOCKA,
     CHALUPA,
     word('lokomotiva', 'lokomotiva', ['lo', 'ko', 'mo', 'ti', 'va']), // 10 letters, 5 syllables
@@ -113,9 +114,9 @@ describe('eligible words', () => {
     word('chameleonek', 'chameleonek', ['cha', 'me', 'le', 'o', 'nek', 'x']),
   ];
 
-  test('letters: 3-8 tiles (ch counts once)', () => {
+  test('letters: at least 2 tiles, no fixed upper limit (ch counts once) - "## Follow-up prompt 19"', () => {
     const ids = composeEligibleWords(words, 'letters').map((entry) => entry.id);
-    expect(ids).toEqual(['pes', 'kocka', 'chalupa', 'obraz']);
+    expect(ids).toEqual(['pes', 'les', 'kocka', 'chalupa', 'lokomotiva', 'obraz', 'chameleonek']);
     expect(composeEligibleWords([word('chchch', 'chchchch', ['x'])], 'letters')).toHaveLength(1); // 4 tiles
   });
 

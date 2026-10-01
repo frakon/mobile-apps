@@ -5,7 +5,10 @@
 // Behaviour:
 // - picture + plain word speech on round start + 🔊 replay ("the same as in the první písmenko excercise");
 // - shuffled tiles row, one placeholder box per letter/syllable below it;
-// - arrow from a tile carrying the word's first letter/syllable to the first box, hidden once box 1 is filled;
+// - arrow from a tile carrying the word's first letter/syllable to the first box - "## Follow-up prompt 19" /
+//   "### Q&A 19": only for the first tile placement of round 1 of a play (isPlacementArrowShown), never later;
+// - "## Follow-up prompt 19": words limited by the per-variant length range of the settings (re-read on focus; a
+//   changed range starts a new play with it);
 // - drag start: the tile's letter name / syllable is spoken once ("## Q&A 4": at drag start);
 // - release with ANY intersection with an eligible (empty, same value) box: centred into it and locked (largest
 //   overlap wins; "## Q&A 11" "Keep out-of-order direct drops" - also a later box);
@@ -46,20 +49,25 @@ import {
   ComposeProgress,
   ComposeRound,
   ComposeShadeState,
+  ComposeLengthRange,
   ComposeVariant,
+  COMPOSE_ROUNDS_PER_PLAY,
   INITIAL_COMPOSE_PROGRESS,
   NO_COMPOSE_SHADES,
   Rectangle,
   TileCase,
   arrowSourceTileId,
   buildComposePlan,
+  clampComposeLengthRange,
   collectComposeArchives,
+  composeLengthBounds,
   collectComposePreloadArchives,
   completeRound,
   composeSelectionOutcome,
   composeShadesAfterPlacement,
   composeShadesAfterWrongSelection,
   computeLayout,
+  isPlacementArrowShown,
   isWordComplete,
   recordWrongDrop,
   resolveDrop,
@@ -67,7 +75,7 @@ import {
   tileAudioResource,
   tileLabel,
 } from '../src/compose/logic';
-import { loadTileCase } from '../src/compose/settings';
+import { loadComposeLengthRange, loadTileCase } from '../src/compose/settings';
 import { RED_SHADE_FADE_MILLISECONDS, configureSelectTap, configureWagonPan } from '../src/train/logic';
 import { ATTACH_MILLISECONDS } from '../src/train/motion';
 import { WordStartsDataset } from '../src/wordStarts/types';
@@ -109,7 +117,12 @@ export default function ComposeScreen() {
   const { variant: variantParam } = useLocalSearchParams<{ variant?: string }>();
   const variant = parseVariant(variantParam);
 
-  const [roundPlan, setRoundPlan] = useState<ComposeRound[]>(() => buildComposePlan(WORDS, variant));
+  // Range the current plan was built with ("## Follow-up prompt 19"); starts as the full range (default), replaced on
+  // focus by the stored one (a different stored range rebuilds the plan = new play).
+  const planRangeRef = useRef<ComposeLengthRange | null>(composeLengthBounds(WORDS, variant));
+  const [roundPlan, setRoundPlan] = useState<ComposeRound[]>(() =>
+    buildComposePlan(WORDS, variant, Math.random, COMPOSE_ROUNDS_PER_PLAY, planRangeRef.current)
+  );
   const [progress, setProgress] = useState<ComposeProgress>(INITIAL_COMPOSE_PROGRESS);
   const [filledSlots, setFilledSlots] = useState<(number | null)[]>(() => roundPlan[0]?.slots.map(() => null) ?? []);
   const [completed, setCompleted] = useState(false);
@@ -195,15 +208,25 @@ export default function ComposeScreen() {
   useFocusEffect(
     useCallback(() => {
       let cancelled = false;
-      loadTileCase().then((stored) => {
-        if (!cancelled) {
-          setTileCase(stored);
+      // Tile case and length range loaded together: tiles render only when both are known (no flash of a stale plan).
+      Promise.all([loadTileCase(), loadComposeLengthRange(variant)]).then(([storedCase, storedRange]) => {
+        if (cancelled) {
+          return;
         }
+        const bounds = composeLengthBounds(WORDS, variant);
+        const range = bounds === null ? null : clampComposeLengthRange(storedRange, bounds);
+        const planRange = planRangeRef.current;
+        if (range !== null && (planRange === null || planRange.min !== range.min || planRange.max !== range.max)) {
+          // "## Follow-up prompt 19": a changed range (settings) starts a new play limited to it.
+          planRangeRef.current = range;
+          restartRef.current();
+        }
+        setTileCase(storedCase);
       });
       return () => {
         cancelled = true;
       };
-    }, [])
+    }, [variant])
   );
 
   // Backend-archive preloading (`_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences",
@@ -292,13 +315,15 @@ export default function ComposeScreen() {
     stopAudioIfOwnedBy(owner);
     pendingTileSound.current = null;
     pendingCompletion.current = null;
-    const plan = buildComposePlan(WORDS, variant);
+    const plan = buildComposePlan(WORDS, variant, Math.random, COMPOSE_ROUNDS_PER_PLAY, planRangeRef.current);
     setRoundPlan(plan);
     setProgress(INITIAL_COMPOSE_PROGRESS);
     setFilledSlots(plan[0]?.slots.map(() => null) ?? []);
     setShades(NO_COMPOSE_SHADES);
     setCompleted(false);
   }, [clearTimers, owner, variant]);
+  const restartRef = useRef(restart);
+  restartRef.current = restart;
 
   // Drag start: speak the tile once ("every letter that is dragged ... shall be pronounced"; "## Q&A 4": at drag start).
   const handleDragStart = useCallback(
@@ -481,7 +506,10 @@ export default function ComposeScreen() {
     );
   }
 
-  const arrowTileId = arrowSourceTileId(currentRound, filledSlots, draggedTileId);
+  // "## Follow-up prompt 19" / "### Q&A 19": arrow only for the first tile of round 1 of a play.
+  const arrowTileId = isPlacementArrowShown(progress.roundIndex, filledSlots)
+    ? arrowSourceTileId(currentRound, filledSlots, draggedTileId)
+    : null;
 
   return (
     <SafeAreaView style={styles.container}>
@@ -496,7 +524,7 @@ export default function ComposeScreen() {
           {progress.roundIndex + 1}/{roundPlan.length}
         </Text>
         <Pressable
-          onPress={() => router.push('/compose-settings')}
+          onPress={() => router.push(`/compose-settings?variant=${variant}`)}
           accessibilityRole="button"
           accessibilityLabel="Nastavení"
           style={styles.settingsButton}
