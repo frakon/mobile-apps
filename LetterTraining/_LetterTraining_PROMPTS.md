@@ -301,3 +301,6 @@ In "Skládání slov - písmena" and "Skládání slov - slabiky": the tapping o
 Root cause: a Gesture Handler Pan activates only on a touch MOVE, even with minDistance(0); a release without movement
 fails the Pan, so onStart/onEnd never run. Repair: Pan raced with a Tap gesture (Gesture.Race) in compose AND train,
 the train's "## Follow-up prompt 10" tap-to-connect had the same latent defect.)
+
+## Specification change 14 — Začátky slov: no green check mark (verbatim) (2026-10-01)
+Specification change: in "Začátky slov" (all three levels): do not show the green check mark there: omit it. Keep the box getting slightly green, but do not show there the green check mark. Reason: it hides the letter(s) so the child cannot check/read/remember the correct answer because it is hidden under the green checkmark. So: do not show the green checkmark in these excercises at all.

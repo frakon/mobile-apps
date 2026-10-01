@@ -4,7 +4,7 @@
 // word with the first/last syllable separated - natural reading since "## Follow-up prompt 12").
 //
 // Feedback (same look as TreninkPorozumeni app/game.tsx):
-// - correct tap: the option gets a green tint rgba(70,190,90,0.35) + green ✓, the letter/syllable sound plays, and the
+// - correct tap: the option gets a green tint rgba(70,190,90,0.35) (no ✓ since "## Specification change 14"), the letter/syllable sound plays, and the
 //   next round shows after max(500 ms, end of that sound). DECISION (not user-specified): the request says both
 //   "green checkmark shows for 0.5 second and then the next round" AND "for the right answer also play the sound of the
 //   letter and go to the next round" - cutting the sound at 500 ms would make it unintelligible, so the round advances
@@ -366,11 +366,8 @@ export default function WordsScreen() {
                   {optionLabel(option)}
                 </Text>
                 {showRed && <View style={[styles.optionOverlay, styles.redOverlay]} />}
-                {showGreen && (
-                  <View style={[styles.optionOverlay, styles.greenOverlay]}>
-                    <Text style={styles.checkmark}>✓</Text>
-                  </View>
-                )}
+                {/* green tint only, no ✓ - it hid the letter(s): "## Specification change 14" */}
+                {showGreen && <View style={[styles.optionOverlay, styles.greenOverlay]} />}
               </Pressable>
             );
           })}
@@ -503,11 +500,6 @@ const styles = StyleSheet.create({
   },
   greenOverlay: {
     backgroundColor: 'rgba(70, 190, 90, 0.35)', // slight green tint on the correct tap (as TreninkPorozumeni)
-  },
-  checkmark: {
-    fontSize: 60,
-    color: '#1F8A3B',
-    fontWeight: 'bold',
   },
   scoreTitle: {
     fontSize: 44,
