@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:55:45 (LetterTraining batch 12 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, top three-quarter view: one single golden-brown breaded pork schnitzel on a plain white plate, a flat oval cutlet with a crispy golden breadcrumb crust, one lemon slice on top. One clearly identifiable breaded schnitzel with correct realistic structure, not a pancake, not a cookie, not a pizza, not a burger, no potatoes, no fries, no cutlery, no other food, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

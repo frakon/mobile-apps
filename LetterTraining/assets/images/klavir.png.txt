@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:40:40 (LetterTraining batch 07 round 3, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view from the keyboard side: one single big shiny black grand piano with three legs, the long curved wing-shaped body, the big lid propped open on its stick, a long keyboard at the front with accurate white keys and black keys in clearly alternating groups of two and three, a small pedal lyre with three golden pedals between the front legs, a music desk standing above the keys. The piano is complete: body, open lid, music desk, keyboard, three legs, pedals. One clearly identifiable whole grand piano for a concert, correct realistic structure, not an upright piano, not a toy keyboard, no stool, no person, no sheet music, no candles, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

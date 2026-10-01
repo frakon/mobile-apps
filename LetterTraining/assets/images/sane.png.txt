@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:01:49 (LetterTraining batch 12 round 3, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side three-quarter view: one single large old traditional wooden horse sleigh without a horse, a big wooden sleigh body with a high curved backrest and a comfortable seat for two people with a folded red blanket on it, high elegantly curled front runners, two long wooden runners with iron edges, a wooden drawbar pole at the front for a horse. The sleigh is complete. One clearly identifiable whole big sleigh with correct realistic structure, no horse, no reindeer, no Santa, no gifts, no person, no snow, no bells, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

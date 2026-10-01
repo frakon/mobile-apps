@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:45:49 (LetterTraining batch 10 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front three-quarter view: one single closed white paper envelope, a rectangular envelope with its triangular flap closed on the back side facing us, the folded paper edges forming a clear V shape, a red wax seal in the middle of the flap. One clearly identifiable envelope with correct realistic structure, no stamp, no address, no writing, no letter sticking out, not a book, not a box, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

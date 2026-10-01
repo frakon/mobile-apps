@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:46:08 (LetterTraining batch 10 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front three-quarter view: one single soft white rectangular bed pillow, plump and fluffy with four soft corners, a light blue pillowcase with small white dots, a slight dent in the middle. One clearly identifiable pillow with correct realistic structure, not a cushion with tassels, not a mattress, not a blanket, no bed, no duvet, no person, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

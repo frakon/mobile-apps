@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:10:28 (LetterTraining batch 03 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single grey bottlenose dolphin leaping in an arc, smooth grey skin with lighter belly, a curved dorsal fin, two side flippers, a horizontal tail fluke, a short beak-like snout, a friendly eye. The dolphin is complete: head, snout, dorsal fin, two flippers, tail fluke. One clearly identifiable whole dolphin with correct realistic anatomy, not a shark, no water, no splash, no waves, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

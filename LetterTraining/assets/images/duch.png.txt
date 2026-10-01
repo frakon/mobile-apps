@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:26:18 (LetterTraining batch 17 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single friendly see-through ghost spirit floating in the air, a pale bluish-white semi-transparent misty body with a round head, two dark oval eyes and a small smile, two thin misty arms, the lower body fading into a long wispy curling tail instead of legs, no sheet, no fabric folds. One clearly identifiable whole ghost spirit, not a bedsheet costume, not a cloud, not a marshmallow, no chains, no house, no moon, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:26:19 (LetterTraining batch 17 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single traditional Czech Christmas braided sweet bread loaf, ONE long oval loaf shaped like a bread loaf about thirty centimeters long with tapered ends, made of three braided layers stacked on top of each other: a wide bottom braid, a narrower middle braid, and a thin top braid, all baked together into one compact loaf, shiny golden brown egg-glazed crust, sprinkled with sliced almonds and a few raisins. The loaf is complete. One clearly identifiable whole braided loaf with correct realistic structure, not a pile, not a round bread, not a croissant, not a pretzel, no plate, no knife, no decorations, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

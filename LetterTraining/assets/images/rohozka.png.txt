@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:50:06 (LetterTraining batch 20 round 3, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, top three-quarter view: one single rectangular brown bristly coir doormat lying flat on a small piece of grey stone doorstep, directly in front of the bottom of a closed green front door, only the lowest strip of the door with its threshold is visible at the top edge of the picture, a pair of small red children's rubber boots standing on the tiled floor beside the mat. The doormat is the largest object and fills the middle of the picture. One clearly identifiable doormat in front of a door with correct realistic structure, blank mat with no words, no pattern, not a carpet rug, not a tray, not a cork board, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

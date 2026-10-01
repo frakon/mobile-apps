@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:33:59 (LetterTraining batch 07 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view: one single grey metal waste paper basket bin, a round open cylinder, empty, with a mesh pattern on the sides. The bin is complete: rim, sides, bottom. One clearly identifiable whole waste paper basket with correct realistic structure, not a flower pot, not a bucket, no handle, no lid, no paper, no rubbish, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

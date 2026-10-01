@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:36:48 (LetterTraining pilot round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single old grey stone arch bridge with three round arches, a flat walkway on top with a low stone railing, standing over a short strip of blue river water under the arches. The bridge is shown alone as a cut-out. One clearly identifiable stone bridge with correct realistic structure, no people, no cars, no houses, no trees, no towers, no boats, on pure white empty background, no sky, no text, no letters, no numbers, nothing else in the picture.

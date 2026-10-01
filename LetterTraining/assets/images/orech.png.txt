@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:45:39 (LetterTraining batch 10 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, close-up view: one single whole walnut in its shell, a round light brown wrinkled hard shell with a visible seam around it, shown big, plus next to it one half of a cracked walnut shell showing the walnut kernel inside. One clearly identifiable walnut with correct realistic structure, not a hazelnut, not a peanut, not a brain, not a stone, no leaves, no nutcracker, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

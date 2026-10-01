@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:55:46 (LetterTraining batch 12 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single whole fresh radish, a small round bright pink-red bulb with white bottom tip and one thin white root tail, short green leaves on top. Only one radish. One clearly identifiable whole radish with correct realistic structure, not a beetroot, not a tomato, not a cherry, not an apple, not a turnip, no other vegetables, not cut, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

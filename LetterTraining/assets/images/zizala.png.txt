@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:26:15 (LetterTraining batch 16 round 2b, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single earthworm stretched in a gentle S curve, a long smooth pinkish-red body with thin ring segments, exactly ONE pale swollen saddle band (clitellum) about one third from the head end, a rounded slightly thicker head end clearly different from the thin tapered tail end, no second band, no eyes, no face, no legs. The earthworm is complete. One clearly identifiable whole earthworm with correct realistic anatomy, not a snake, not a caterpillar, no soil, no apple, no hat, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:58:13 (LetterTraining batch 12 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view through an open car window frame: one single friendly adult man driver sitting in the driver's seat inside a small red car, both hands on the round black steering wheel in front of him, wearing a flat cap, looking forward, calm smile with mouth closed. The car is seen from the front, the windshield is clear so the driver behind the steering wheel is clearly visible, the man is the main subject and is big in the picture. One clearly identifiable car driver with correct realistic anatomy, exactly two hands, no other people, no road, no traffic, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

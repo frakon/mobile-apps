@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:15:22 (LetterTraining batch 03 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single ferret walking, long slim body, short legs, cream-white face with a dark brown bandit mask around the eyes, dark brown legs and tail, small round ears, long bushy tail. The ferret is complete: head, body, four legs, tail. One clearly identifiable whole ferret with correct realistic anatomy, not a weasel, not a cat, not a raccoon, no leash, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

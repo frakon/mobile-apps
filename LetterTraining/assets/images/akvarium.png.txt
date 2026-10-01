@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 10:59:39 (LetterTraining batch 01 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single rectangular glass fish tank filled with water, with green water plants, small pebbles on the bottom and three small colorful fish swimming inside. The tank is complete: four glass walls, black frame edges, water up to near the top. One clearly identifiable whole aquarium with correct realistic structure, not a round bowl, no table under it, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

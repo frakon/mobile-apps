@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:10:15 (LetterTraining batch 03 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single green chameleon sitting on a short thin brown twig, its long tail curled into a tight spiral, big bulging round eye with a small pupil, a crested head, rough bumpy skin. The chameleon is complete: head, one visible eye, body, four legs with grasping feet gripping the twig, spiral tail. One clearly identifiable whole chameleon with correct realistic anatomy, not a lizard, not an iguana, no leaves, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

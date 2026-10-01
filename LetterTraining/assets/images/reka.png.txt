@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:55:44 (LetterTraining batch 12 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, high bird's-eye view: one single blue river winding in gentle S curves from the top to the bottom of the picture, flowing water with small ripples, narrow green grassy banks on both sides of the river. One clearly identifiable river with correct realistic structure, not a lake, not a road, not a sea, no bridge, no boat, no houses, no people, no trees, shown as a cut-out strip on pure white empty background, no sky, no text, no letters, no numbers, nothing else in the picture.

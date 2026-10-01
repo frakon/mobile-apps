@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:55:46 (LetterTraining batch 12 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single adult brown tawny owl perched on a short branch, a round head with big round orange-yellow eyes facing forward, a small hooked beak, brown mottled feathers, wings folded, two feet with talons gripping the branch. The owl is complete. One clearly identifiable whole owl with correct realistic anatomy, exactly two legs, not an eagle, not a cat, not an owlet, only the one short branch, no leaves, no moon, no visible genitals, child-friendly, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 10:34:50 (LetterTraining pilot round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single carpenter's hammer lying diagonally, a grey steel head with a flat striking face on one side and a split claw on the other side, a long wooden handle. The hammer is complete: steel head, claw, wooden handle. One clearly identifiable whole hammer, floating in pure white empty space, no nails, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.

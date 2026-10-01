@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:36:22 (LetterTraining pilot round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single large triangular slice of watermelon, bright red juicy flesh with black seeds, a thin pale green and white rind band and a dark green striped skin edge at the bottom. One clearly identifiable watermelon slice with correct realistic structure, not a pizza slice, no plate, no bite marks, no other fruit, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

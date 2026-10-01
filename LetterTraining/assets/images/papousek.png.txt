@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:46:09 (LetterTraining batch 10 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single colorful macaw parrot perched on a short branch, bright red body feathers, blue and yellow wing feathers, a long tail, a large curved hooked beak, a white face patch, two feet with toes gripping the branch. The parrot is complete. One clearly identifiable whole parrot with correct realistic anatomy, exactly two legs, not a toucan, not a rooster, only the one short branch, no leaves, no cage, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

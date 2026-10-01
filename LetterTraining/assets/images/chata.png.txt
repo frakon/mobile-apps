@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:16:27 (LetterTraining batch 03 round 3b, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view: one single wooden mountain hut for hikers, a large A-frame triangular building whose steep dark wooden roof reaches down to the ground on both sides, the front triangular gable made of light wooden planks with a big wooden door and one balcony with a railing above it, stone base, a stack of firewood logs under the side of the roof. The hut is complete: roof, gable, door, balcony, window, stone base. One clearly identifiable whole big wooden mountain hut with correct realistic structure, not a small house, not a tent, no people, no trees, no snow, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

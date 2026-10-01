@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:02:10 (LetterTraining batch 01 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view: one single postal parcel wrapped in brown kraft wrapping paper with visible folded paper edges and creases, tied crosswise with a thin twine string knotted in a simple knot on top, flat rectangular shape like a parcel sent by post. The parcel is complete. One clearly identifiable whole wrapped parcel with correct realistic structure, no visible cardboard, no box flaps, no bow, no ribbon, no stamps, no labels, no writing, not a gift, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

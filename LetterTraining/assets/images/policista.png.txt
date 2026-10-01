@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:54:59 (LetterTraining batch 11 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single friendly adult policeman standing, a dark blue police uniform with a dark blue police cap with a shiny badge, a badge on the chest, a black belt, black shoes, arms by the sides, calm friendly face with mouth closed. The policeman is complete: head, body, two arms, two legs. One clearly identifiable whole police officer with correct realistic anatomy, exactly two hands, not a soldier, not a pilot, not a firefighter, no police car, no dog, no weapon, no writing on the uniform, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

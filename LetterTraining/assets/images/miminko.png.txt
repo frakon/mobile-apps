@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:45:36 (LetterTraining batch 09 round 1, HTTP attempts 3)
+Prompt (verbatim):
+Children's book watercolor illustration, front view, full figure: one single baby about six months old, sitting, wearing only a white diaper, chubby arms and legs, a little hair, big eyes. The baby is complete: head, two arms, two hands, two legs, two feet. One clearly identifiable whole baby with correct realistic anatomy, calm friendly face, mouth closed, no toys, no bottle, no pacifier, no adult, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

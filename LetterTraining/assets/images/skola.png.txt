@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:06:19 (LetterTraining batch 13 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single school building, a two-story yellow building with many identical rectangular windows in neat rows, a wide main entrance door with steps in the middle, a small clock on the front above the entrance, a small bell tower on the roof. The building is complete. One clearly identifiable school building with correct realistic structure, not a house, not a castle, not a church, no children, no trees, no fence, no flag, no sign, no writing on the building, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

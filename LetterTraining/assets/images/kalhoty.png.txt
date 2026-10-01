@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:40:19 (LetterTraining batch 07 round 2b, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single pair of long plain grey cloth dress trousers laid out flat, smooth woolen fabric with a sharp pressed crease down the middle of each leg, a plain waistband with belt loops, a hidden fly, two long straight legs down to the hems. The trousers are complete: waistband, two full legs, hems. One clearly identifiable whole pair of long trousers with correct realistic structure, not jeans, no denim, not blue, no rivets, no metal button, no visible stitching, no pockets visible, not shorts, not a skirt, no belt, no person, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

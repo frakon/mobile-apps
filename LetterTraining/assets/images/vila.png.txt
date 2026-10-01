@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:23:57 (LetterTraining batch 17 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single tiny fairy girl hovering in the air, with large transparent shimmering butterfly-like wings, a light pink dress, long hair, holding a small magic wand with a star tip, calm friendly face, mouth closed. The fairy is complete: head, body, arms, legs, wings. One clearly identifiable whole fairy with correct realistic anatomy, not a butterfly, not an angel, no feathered wings, no halo, no flowers, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

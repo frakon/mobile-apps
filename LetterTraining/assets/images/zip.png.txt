@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:19:59 (LetterTraining batch 16 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, close-up front view: one single long metal zipper on two strips of blue fabric tape, half opened in the middle, silver metal teeth clearly visible, a silver slider with a pull tab. The zipper is complete. One clearly identifiable whole zipper with correct realistic structure, no jacket, no bag, no clothes, no person, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

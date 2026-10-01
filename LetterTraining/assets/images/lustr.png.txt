@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:31:13 (LetterTraining batch 18 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single crystal chandelier hanging from a short chain, a golden central stem with six curved arms each holding a small candle-shaped bulb, many glittering glass crystal drops hanging down. The chandelier is complete. One clearly identifiable whole chandelier with correct realistic structure, no ceiling, no room, no glow, no light rays, not a table lamp, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

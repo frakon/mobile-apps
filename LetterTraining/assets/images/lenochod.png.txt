@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:36:22 (LetterTraining pilot round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single three-toed sloth hanging upside down from one short horizontal branch with its long arms and legs, long shaggy greyish-brown fur, a round face with dark eye patches and a gentle smile, long curved claws gripping the branch. The sloth is complete: head, body, four limbs. One clearly identifiable whole sloth with correct realistic anatomy, exactly four limbs, not a monkey, not a koala, no visible genitals, child-friendly, only the one short branch, no leaves, no tree trunk, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

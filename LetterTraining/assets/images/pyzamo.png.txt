@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:55:00 (LetterTraining batch 11 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single child's pajamas laid out flat: a long-sleeved light blue pajama top with buttons and a small white star pattern, and matching long pajama trousers with the same pattern directly below it. Only clothes, no person. One clearly identifiable pajama set with correct realistic structure, not a tracksuit, not a dress, no slippers, no bed, no pillow, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

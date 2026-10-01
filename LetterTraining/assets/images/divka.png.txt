@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:15:11 (LetterTraining batch 03 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view, full figure: one single young girl about ten years old standing, two long braided pigtails with ribbons, a simple red dress, white socks, brown shoes, arms relaxed at her sides. The girl is complete: head, two arms, two hands, two legs, two shoes. One clearly identifiable whole girl with correct realistic anatomy, calm friendly face, mouth closed, not a toddler, not a woman, no toys, no other people, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

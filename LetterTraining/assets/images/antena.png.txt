@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:31:05 (LetterTraining batch 18 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view: one single old-style TV roof antenna on a metal pole, a horizontal metal boom with many short parallel metal rods across it, standing on a small piece of red tiled roof ridge. One clearly identifiable whole television antenna with correct realistic structure, no house, no satellite dish, no birds, no cables in the air, no sky, the antenna and small roof piece floating in pure white empty space, no text, no letters, no numbers, nothing else in the picture.

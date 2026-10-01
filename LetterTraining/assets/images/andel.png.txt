@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 10:59:37 (LetterTraining batch 01 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single child-like angel in a long white robe, with two large white feathered wings on its back and a golden halo ring above its head, calm friendly face, mouth closed, hands folded. The angel is complete: head, halo, two wings, two arms, robe down to bare feet. One clearly identifiable whole angel with correct realistic anatomy, no harp, no clouds, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

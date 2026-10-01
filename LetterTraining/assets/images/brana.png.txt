@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:03:17 (LetterTraining batch 02 round 2b, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single grand ornate black wrought-iron entrance gate of a castle park, two tall iron gate wings with vertical bars and curly ornaments joined at the top into a high round arch, standing between two massive stone pillars with stone ball tops, clearly a big ceremonial gate (brana), not wooden barn doors. The gate is complete: two iron wings, arch, two stone pillars. One clearly identifiable whole gate with correct realistic structure, no fence continuing to the sides, no castle, no path, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:30:48 (LetterTraining batch 18 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single standard AA battery lying horizontally, a cylinder with a copper-gold coloured end and a black body, a small round metal plus terminal knob on one end, flat metal minus end. The battery is complete. One clearly identifiable whole battery with correct realistic structure, no symbols, no plus or minus signs, no labels, no brand, no device, no cable, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,94 @@
+# LetterTraining
+
+Expo Go app (Czech UI) for training the Czech alphabet with games of increasing difficulty.
+User intentions: `_LetterTraining_PROMPTS.md`.
+
+## Trainings
+
+The intro page (`app/index.tsx`) lists the trainings from the extensible registry `src/trainings.ts`:
+
+- **Pexeso** (`app/pexeso.tsx`) – the LetterPexeso game nested into this app (`src/pexeso/`). Only this screen is locked
+  to landscape (locked on enter, unlocked on leave); it has a back button and „Zpět na výběr" in its end overlay.
+  Settings route `app/pexeso-settings.tsx`; `src/pexeso/` is IDENTICAL to standalone LetterPexeso `src/` except
+  `pexesoPlatform.ts` (images = Level-1-eligible words of `src/words.ts`).
+  Settings (⚙ in the game header; persisted with AsyncStorage) - `_LetterPexeso_PROMPTS.md` / "Follow-up prompt 6", "Q&A 8", "Q&A 9",
+  "Follow-up prompt 7/8": háčky (on) / čárky incl. Ů (off) checkboxes, CH always; sizes 2x2 ... 4x10 (sizes needing more letters
+  than available are greyed); sound on/off (mutes letter + image cards only; ear "sound-only" cards always play); two columns
+  (card 1 / card 2) with letters / images / sound-only, VELKÁ / malá and tiskací / psací – nevázané (Comenia) / psací – tradiční vázané
+  (case + style active only for letters). Scoring: match = right; a mismatch is wrong only when the partner of either card was
+  already seen or either card is turned for the 3rd+ time; results show wrong tries and total tries.
+
+  **Psací fonts (bundled):** Comenia-Script style = **Playwrite FR Moderne**, tradiční vázané písmo = **Playwrite CZ**
+  (TypeTogether, https://github.com/TypeTogether/Playwrite; SIL Open Font License 1.1 - licence texts `assets/fonts/OFL_*.txt`).
+  Static Regular instances (fontTools instancer, full Czech coverage, calt joining kept) in `assets/fonts/`, loaded with
+  expo-font `useFonts` in the app root (app/_layout.tsx waits for them; on load error system italic fallback); family names in
+  `src/pexeso/components/letterFonts.ts`. Comenia Script itself is a paid font and is not used; the settings label "Psací – nevázané (Comenia)" means the unjoined Comenia-style script (rendered with the look-alike Playwrite FR Moderne).
+- **Začátky slov – úroveň 1 (písmena)** – picture + spoken word (🔊 replays it), choose the first letter out of 3
+  („ch" is one letter).
+- **Začátky slov – úroveň 2 (první slabika)** – choose the first syllable out of 4 (2 start with the word's first
+  letter incl. the correct one, 2 start with one other letter); only words with ≥ 2 syllables.
+- **Začátky slov – úroveň 3 (poslední slabika)** – the same with the last syllable.
+
+- **Skládání slov – písmena / slabiky** (`app/compose.tsx?variant=letters|syllables`, logic in `src/compose/`) – drag the
+  shuffled letter/syllable tiles into one box per letter/syllable (react-native-gesture-handler + reanimated). Arrow from
+  the first-letter tile to box 1 (hidden once filled); tile spoken at drag start; any overlap with an eligible box snaps
+  (duplicates interchangeable, larger overlap wins), else slides back in 0.5 s; ✓ then next round after
+  max(500 ms, sound end); 10 rounds + results (correct = no wrong drop). Letters: 3–8 tiles; syllables: 2–5 syllables,
+  `excludeLevel2` words skipped. Settings (⚙ in the game header, `app/compose-settings.tsx`): tile case CAPITALS /
+  lower_case, persisted with AsyncStorage.
+  Autonomous decisions (not user-specified, may be changed on request): default tile case CAPITALS; a release after
+  moving < 12 px is a tap (slides back, not a wrong drop); a release mostly (> 50 %) on the tile's own home spot is not a
+  wrong drop; completion waits at most 3000 ms for the last tile sound; the screen is locked to portrait; the ✓ is shown
+  directly above the last box (in the empty gap between the tiles row and the boxes row).
+
+- **Abecedový vlak** (`app/train.tsx`, logic in `src/train/`) – landscape; steam engine + attached wagons on top (train
+  end at ~60 % width), N waiting wagons (shuffled, slightly floating) in a row below; drag the next letter's wagon onto
+  the large drop zone at the train's end. Letter name spoken at drag start / tap (CZ voice, or EN voice
+  `assets/audio/letters_en/`). Correct → the wagon eases onto the train, the train shifts one wagon left (90 % in 1 s,
+  last 10 % over 10 s, smoothly retargeted on the next placement), the next letter appears at a random pool position
+  (neighbours ease apart, the new wagon grows from a point). Wrong → slides back + train wiggle, no sound. After the
+  last letter the train leaves in 1 s → „Hotovo" (Znovu / Zpět). Random engine per play, random wagon image per letter;
+  images + audio preloaded on open. Settings (⚙, `app/train-settings.tsx`, persisted): alphabet CZ (34 letters incl.
+  CH, háčky, no Ě / čárky / kroužky) / EN (26) with drawn flags, VELKÁ / malá, waiting wagons 4–8 (default 6).
+  Images: `assets/train/` + `manifest.json` → `src/train/assets.ts` is **GENERATED** by
+  `endgame2/AGENTS/Tasks/20261001_090718_LetterTraining/scripts/gen_train_ts.py` (re-run after image/audio changes);
+  without images, drawn placeholder engine/wagons are shown.
+  Autonomous decisions (not user-specified, may be changed on request): Q&A 6 says "35 letters" but lists 34 – the
+  list is used; default case CAPITALS; drop zone = 1 wagon width left of the train end to 1.5 widths right, 0.4 wagon
+  height above the train to 0.6 below, drawn as a dashed outline; the wiggle only for a wrong letter released in the
+  drop zone (elsewhere just slide back); the last wagon first eases onto the train (350 ms), then the 1 s exit
+  (ease-in); slide back 500 ms, make-space 350 ms, grow-in 350 ms, floating ±4 px with 2–4 s periods; a settings change
+  restarts the play; the settings page is landscape too.
+
+Word starts (`app/words.tsx?level=1|2|3`, logic in `src/wordStarts/`): 10 rounds per play, then a results page
+(„Správně: X/10", „Hrát znovu", „Zpět na výběr"). Assets of the current and the next 2 rounds are prefetched
+(same mechanism as TreninkPorozumeni). A round counts as correct only if the first tap is correct.
+
+Feedback:
+- correct tap → green tint + green ✓ on the option, the letter/syllable sound plays, and the next round shows after
+  **max(500 ms, end of the sound)** (decision: the sound is not cut at 500 ms; missing/failed sound = 500 ms).
+- wrong tap → red tint on the option while its letter/syllable sound plays (500 ms tint if there is no audio).
+
+## Dataset
+
+`src/words.ts` is **GENERATED** by `endgame2/AGENTS/Tasks/20261001_090718_LetterTraining/scripts/gen_words_ts.py` from
+the task `words.json` (re-run it after new pictures are accepted; never edit it by hand). It includes only words with
+an ACCEPTED picture (`assets/images/<id>.png` + accepted `assets/images/_blind_test_log/<id>.md`) and exports `WORDS`
+(word, syllables, firstLetter, alternativeNames, excludeLevel1/2/3, image, audio, audioFirst, audioLast),
+`LETTER_AUDIO`, `SYLLABLE_AUDIO` (real + synthetic syllables) and `REAL_SYLLABLES` (all words.json syllables).
+Level 1 plays the plain word, Level 2 the word with the first syllable emphasized (`audio/words_first/`), Level 3 with
+the last syllable emphasized (`audio/words_last/`). `excludeLevelN` words are skipped in that level; in Level 1 only
+letters with >= 3 eligible words can be the correct answer (a level without eligible words shows „Pro tuto úroveň
+zatím nejsou žádná slova."). `assets/placeholder/` is no longer used.
+
+## Development
+
+- `npx expo start` (Expo Go), `npx expo start --web --port 8082` (web preview)
+- Checks: `npx tsc --noEmit`, `npx jest`, `npx expo-doctor`, `npx expo export --platform ios --output-dir <dir>`
+
+## Deployment
+
+- Expo Go port: **8083** – the ONLY port to deploy this app on the EndgameServer (reserved in
+  `/apps/MobileApps/_expoGoPorts.md`; on conflict that file wins and this README is fixed).
+- Deploy ONLY via the `app-deployer` agent; on the server the app lives in `/apps/MobileApps/LetterTraining`.
+- iPhone: WireGuard hub tunnel on, open `exp://10.67.0.1:8083` in Expo Go.

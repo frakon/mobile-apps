@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:17:46 (LetterTraining batch 03 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view: one opened white paper envelope with its flap open, and a folded cream paper letter sheet pulled halfway out of it, the visible part of the sheet covered with rows of thin wavy blue ink scribble lines like handwriting but no readable letters, a small colorful postage stamp with a tiny flower picture on the envelope corner. The letter is complete: envelope, open flap, folded sheet, stamp. One clearly identifiable letter in its envelope with correct realistic structure, no pen, no readable text, no address, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 13:04:42 (LetterTraining batch 23 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, close-up side view: a white gauze bandage wrapped many times in neat overlapping spiral layers around a forearm, the wrapped bandage filling most of the frame, coarse woven mesh texture clearly visible, the bandage end simply tucked neatly under the last layer, plain fabric only. The hand is cropped out of the picture, only a little skin visible at the edges. No clip, no pin, no metal, no fastener, no tape, no bare palm, no fingers, no blood, no toilet paper roll, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

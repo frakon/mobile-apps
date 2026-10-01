@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:00:15 (LetterTraining batch 01 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single strong adult black bull standing, muscular body, broad neck hump, two short sharp curved horns pointing forward, a ring in its nose. The bull is complete: head, two horns, ears, body, four legs with hooves, tail with a tuft. One clearly identifiable whole bull with correct realistic anatomy, male, no udder, not a cow, no grass, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

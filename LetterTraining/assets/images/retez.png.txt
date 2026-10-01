@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:03:11 (LetterTraining batch 12 round 2b, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single short heavy grey steel chain hanging in a gentle shallow U-shaped sag between its two ends, both ends at the same height, about nine large oval metal links, each link one solid seamless closed ring, every link clearly interlocked with the next one at right angles, the chain does not form any letter, digit or symbol shape, no S curve, no loops, no crossing. One clearly identifiable metal chain with correct realistic structure, no lock, no padlock, no anchor, no hook, not a necklace, no rope, no posts, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:19:24 (LetterTraining batch 16 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single huge old bronze church bell hanging from a thick wooden beam, a wide flared golden-bronze bell with a heavy round clapper visible inside at the bottom, decorative rings around the bell. The bell is complete. One clearly identifiable whole large church bell with correct realistic structure, no church, no tower, no rope, not a small hand bell, not a doorbell, no ribbon, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

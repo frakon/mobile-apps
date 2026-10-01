@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 10:59:52 (LetterTraining batch 02 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter top view: one single milk chocolate bar partly unwrapped: a dark brown chocolate bar divided into square pieces, the lower half still in a plain red paper wrapper with silver foil peeled back. The chocolate bar is complete. One clearly identifiable whole chocolate bar with correct realistic structure, no label text, no logo, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.

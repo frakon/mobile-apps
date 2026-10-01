@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:29:36 (LetterTraining batch 05 round 2b, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view, full figure: one single firefighter man standing, red firefighter helmet, dark protective jacket and trousers with yellow reflective stripes, black boots, a neatly rolled-up flat red fire hose carried coiled on his shoulder like a round disc, the hose is one closed coil with both metal couplings tucked inside the coil, no loose ends. The firefighter is complete: head, two arms, two hands, two legs, two boots. One clearly identifiable whole firefighter with correct realistic anatomy, calm friendly face, mouth closed, no fire, no water, no truck, no hydrant, no badges with writing, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

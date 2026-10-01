@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:25:49 (LetterTraining pilot round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single red bicycle standing upright, two round wheels with thin spokes and black tires, a diamond-shaped frame, handlebars, a black saddle, pedals with a chain to the rear wheel. The bicycle is complete: two wheels, frame, handlebars, saddle, pedals, chain. One clearly identifiable whole bicycle with correct realistic structure, exactly two wheels, no rider, no basket, no motor, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

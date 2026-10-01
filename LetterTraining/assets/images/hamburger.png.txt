@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:23:09 (LetterTraining batch 05 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single big hamburger, a round sesame seed bun top and bottom, between them a brown beef patty, a slice of yellow cheese, green lettuce, red tomato slices. The hamburger is complete: top bun, fillings, bottom bun. One clearly identifiable whole hamburger with correct realistic structure, not a sandwich, no fries, no drink, no plate, no wrapper, no flag stick, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

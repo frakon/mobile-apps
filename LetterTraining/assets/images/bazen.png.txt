@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:23:37 (LetterTraining batch 17 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view from above: one single rectangular outdoor swimming pool, a pool basin with light tiled edges filled with clear blue water, a silver metal ladder at one side. The pool is complete. One clearly identifiable whole swimming pool with correct realistic structure, not a pond, not a bathtub, no people, no toys, no trees, no deck chairs, no grass, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

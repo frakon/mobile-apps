@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:05:09 (LetterTraining batch 01 round 2b, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter front view: one single big strong adult male ram standing proudly, head slightly lowered as if ready to butt, with two ENORMOUS thick heavy ridged horns curling in a full spiral circle around each ear, the horns are the most prominent part of the animal, short cream wool, muscular chest and neck. The ram is complete: head, two huge curled horns, ears, body, four legs with hooves, short tail. One clearly identifiable whole ram with correct realistic anatomy, clearly a male ram and not a female sheep, not a goat, no beard, no lamb, no grass, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

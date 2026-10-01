@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:46:13 (LetterTraining batch 10 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single blue ballpoint pen lying diagonally, a slim blue plastic barrel, a pointed metal tip at one end, a pocket clip near the other end, cap off. The pen is complete. One clearly identifiable whole pen with correct realistic structure, not a pencil, not a feather, not a fountain pen, no paper, no writing, no hand, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

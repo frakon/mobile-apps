@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:23:05 (LetterTraining batch 05 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view: one single open green pea pod split along its seam, showing a neat row of six round bright green peas inside. The pod is complete: both halves of the pod, the small stalk, six peas. One clearly identifiable open pea pod with peas, correct realistic structure, not a green bean, not edamame, no bowl, no spoon, no leaves, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

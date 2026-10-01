@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 10:59:38 (LetterTraining batch 02 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view, head and shoulders down to the waist: one single smiling old grandmother about seventy-five years old, grey hair in a bun, round glasses, wrinkles, wearing a knitted cardigan, clearly an elderly granny, calm friendly face. The woman is complete in this crop: head, hair, glasses, face, shoulders, cardigan. One clearly identifiable whole grandmother with correct realistic anatomy, no grandchild, no objects in hands, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.

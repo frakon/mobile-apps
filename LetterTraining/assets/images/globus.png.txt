@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:15:33 (LetterTraining batch 03 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view: one single world globe on a wooden stand, blue oceans and green and brown continents, a curved brass half-ring holding the tilted axis, a round wooden base. The globe is complete: sphere, axis, ring, stand, base. One clearly identifiable whole globe with correct realistic structure, not a ball, not a planet in space, no names, no labels, no writing, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

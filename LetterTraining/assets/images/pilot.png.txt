@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:23:36 (LetterTraining batch 17 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single friendly airline pilot standing upright in a dark blue pilot uniform with gold stripes on the sleeves, a pilot cap with golden wings badge, holding a headset, with a small white airplane parked behind him, the airplane much smaller than him, calm friendly face, mouth closed, The pilot is complete: head, body, arms, legs. One clearly identifiable whole pilot with correct realistic anatomy, not a policeman, not a captain of a ship, no airport, no runway, no sky, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

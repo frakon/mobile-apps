@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 10:37:10 (LetterTraining pilot round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single young farm chicken about three weeks old, a small half-grown chick, mostly fluffy yellow down with the first small white feathers starting on the wings and tail, short beak, no comb yet, standing on two orange legs. The chicken is complete: head, beak, eye, body, two wings, tail stub, two legs with feet. One clearly identifiable whole young chicken with correct realistic anatomy, no eggshell, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.

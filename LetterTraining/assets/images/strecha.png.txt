@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:06:06 (LetterTraining batch 13 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front three-quarter view: one single red tiled gable roof of a small house shown big, the triangular pitched roof with rows of red roof tiles and a small brick chimney, only the top edge of a plain white wall visible under the roof edge. The roof is the main subject and fills most of the picture. One clearly identifiable house roof with correct realistic structure, no windows, no door, no person, no trees, no sky, no birds, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:54:57 (LetterTraining batch 11 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single friendly cartoon pirate man standing, a black eye patch over one eye, a black tricorn pirate hat with a white skull symbol, a red and white striped shirt, a red bandana, a short black beard, a wooden sword in one hand, calm friendly face with mouth closed. The pirate is complete: head, body, two arms, two legs. One clearly identifiable whole pirate with correct realistic anatomy, exactly two hands, not a sailor, not a cowboy, no ship, no parrot, no treasure chest, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

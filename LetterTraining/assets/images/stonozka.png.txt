@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:05:45 (LetterTraining batch 13 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view from above: one single friendly centipede crawling to the right, a long thin segmented reddish-brown body with many segments, many short thin legs along both sides, one pair of legs per segment, two short antennae on the small head, calm friendly face. The centipede is complete. One clearly identifiable whole centipede with correct realistic anatomy, not a caterpillar, not a worm, not a snake, no shoes, no leaves, no ground, no visible genitals, child-friendly, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

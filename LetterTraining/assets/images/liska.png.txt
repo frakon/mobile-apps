@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:34:22 (LetterTraining batch 07 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single red fox standing, orange-red fur, white chest and white tip of the long bushy tail, black legs, pointed snout, pointed ears. The fox is complete: head, body, four legs, bushy tail. One clearly identifiable whole fox with correct realistic anatomy, calm friendly face, mouth closed, not a dog, not a cat, no grass, no forest, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

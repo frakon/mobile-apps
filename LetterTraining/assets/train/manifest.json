@@ -1,0 +1,257 @@
+{
+ "engines": {
+  "engine01": {
+   "file": "engines/engine01.png",
+   "width": 574,
+   "height": 360,
+   "aspect": 1.594,
+   "wheelBaselineY": 360
+  },
+  "engine02": {
+   "file": "engines/engine02.png",
+   "width": 691,
+   "height": 360,
+   "aspect": 1.919,
+   "wheelBaselineY": 360
+  },
+  "engine03": {
+   "file": "engines/engine03.png",
+   "width": 859,
+   "height": 360,
+   "aspect": 2.386,
+   "wheelBaselineY": 360
+  },
+  "engine04": {
+   "file": "engines/engine04.png",
+   "width": 742,
+   "height": 360,
+   "aspect": 2.061,
+   "wheelBaselineY": 360
+  },
+  "engine05": {
+   "file": "engines/engine05.png",
+   "width": 654,
+   "height": 360,
+   "aspect": 1.817,
+   "wheelBaselineY": 360
+  },
+  "engine06": {
+   "file": "engines/engine06.png",
+   "width": 583,
+   "height": 360,
+   "aspect": 1.619,
+   "wheelBaselineY": 360
+  },
+  "engine07": {
+   "file": "engines/engine07.png",
+   "width": 614,
+   "height": 360,
+   "aspect": 1.706,
+   "wheelBaselineY": 360
+  },
+  "engine08": {
+   "file": "engines/engine08.png",
+   "width": 843,
+   "height": 360,
+   "aspect": 2.342,
+   "wheelBaselineY": 360
+  },
+  "engine09": {
+   "file": "engines/engine09.png",
+   "width": 572,
+   "height": 360,
+   "aspect": 1.589,
+   "wheelBaselineY": 360
+  },
+  "engine10": {
+   "file": "engines/engine10.png",
+   "width": 635,
+   "height": 360,
+   "aspect": 1.764,
+   "wheelBaselineY": 360
+  }
+ },
+ "wagons": {
+  "wagon01": {
+   "file": "wagons/wagon01.png",
+   "width": 446,
+   "height": 300,
+   "aspect": 1.487,
+   "wheelBaselineY": 300,
+   "panel": {
+    "x": 124,
+    "y": 107,
+    "w": 223,
+    "h": 102
+   },
+   "panelColorRGB": [
+    253,
+    249,
+    232
+   ]
+  },
+  "wagon02": {
+   "file": "wagons/wagon02.png",
+   "width": 468,
+   "height": 300,
+   "aspect": 1.56,
+   "wheelBaselineY": 300,
+   "panel": {
+    "x": 116,
+    "y": 104,
+    "w": 252,
+    "h": 101
+   },
+   "panelColorRGB": [
+    253,
+    252,
+    202
+   ]
+  },
+  "wagon03": {
+   "file": "wagons/wagon03.png",
+   "width": 519,
+   "height": 300,
+   "aspect": 1.73,
+   "wheelBaselineY": 300,
+   "panel": {
+    "x": 110,
+    "y": 63,
+    "w": 320,
+    "h": 120
+   },
+   "panelColorRGB": [
+    250,
+    244,
+    220
+   ]
+  },
+  "wagon04": {
+   "file": "wagons/wagon04.png",
+   "width": 492,
+   "height": 300,
+   "aspect": 1.64,
+   "wheelBaselineY": 300,
+   "panel": {
+    "x": 139,
+    "y": 97,
+    "w": 215,
+    "h": 108
+   },
+   "panelColorRGB": [
+    254,
+    254,
+    252
+   ]
+  },
+  "wagon05": {
+   "file": "wagons/wagon05.png",
+   "width": 473,
+   "height": 300,
+   "aspect": 1.577,
+   "wheelBaselineY": 300,
+   "panel": {
+    "x": 103,
+    "y": 97,
+    "w": 272,
+    "h": 104
+   },
+   "panelColorRGB": [
+    254,
+    251,
+    244
+   ]
+  },
+  "wagon06": {
+   "file": "wagons/wagon06.png",
+   "width": 396,
+   "height": 300,
+   "aspect": 1.32,
+   "wheelBaselineY": 300,
+   "panel": {
+    "x": 86,
+    "y": 120,
+    "w": 228,
+    "h": 95
+   },
+   "panelColorRGB": [
+    240,
+    231,
+    245
+   ]
+  },
+  "wagon07": {
+   "file": "wagons/wagon07.png",
+   "width": 397,
+   "height": 300,
+   "aspect": 1.323,
+   "wheelBaselineY": 300,
+   "panel": {
+    "x": 90,
+    "y": 95,
+    "w": 226,
+    "h": 108
+   },
+   "panelColorRGB": [
+    245,
+    238,
+    221
+   ]
+  },
+  "wagon08": {
+   "file": "wagons/wagon08.png",
+   "width": 422,
+   "height": 300,
+   "aspect": 1.407,
+   "wheelBaselineY": 300,
+   "panel": {
+    "x": 109,
+    "y": 113,
+    "w": 205,
+    "h": 94
+   },
+   "panelColorRGB": [
+    222,
+    239,
+    245
+   ]
+  },
+  "wagon09": {
+   "file": "wagons/wagon09.png",
+   "width": 399,
+   "height": 300,
+   "aspect": 1.33,
+   "wheelBaselineY": 300,
+   "panel": {
+    "x": 82,
+    "y": 125,
+    "w": 236,
+    "h": 97
+   },
+   "panelColorRGB": [
+    253,
+    248,
+    230
+   ]
+  },
+  "wagon10": {
+   "file": "wagons/wagon10.png",
+   "width": 520,
+   "height": 300,
+   "aspect": 1.733,
+   "wheelBaselineY": 300,
+   "panel": {
+    "x": 140,
+    "y": 90,
+    "w": 246,
+    "h": 121
+   },
+   "panelColorRGB": [
+    228,
+    241,
+    228
+   ]
+  }
+ },
+ "_doc": "All images: RGBA PNG, background removed, trimmed. Bottom row (y = height = wheelBaselineY) is the wheel/rail baseline: align bottoms. Engines face left, height 360; wagons height 300. panel = letter overlay rectangle in image pixels (x,y,w,h, top-left origin); panelColorRGB = panel paint."
+}

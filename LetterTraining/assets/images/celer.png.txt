@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:31:24 (LetterTraining batch 18 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single whole celery root, a large round knobbly beige-brown bulb with small thin roots at the bottom and a bunch of short dark green leafy stalks on top. The celeriac is complete. One clearly identifiable whole celeriac root with correct realistic structure, not a potato, not a turnip, not a kohlrabi, not celery stalks only, no other vegetables, no knife, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:05:36 (LetterTraining batch 13 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view: one single small green camping tent, triangular A-shaped tent with the front door flaps open showing the dark inside, guy ropes and small pegs at the corners. The tent is complete. One clearly identifiable whole camping tent with correct realistic structure, not a house, not a circus tent, not a teepee, no person, no campfire, no trees, no grass, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

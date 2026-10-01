@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:45:51 (LetterTraining batch 10 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single small round sandy tropical island in the sea, light yellow sand, one green palm tree with a curved trunk and coconuts, surrounded by a narrow ring of turquoise sea water that fades out at the edges. One clearly identifiable small island with correct realistic structure, no people, no boats, no houses, no animals, no sun, no clouds, shown as a cut-out on pure white empty background, no sky, no text, no letters, no numbers, nothing else in the picture.

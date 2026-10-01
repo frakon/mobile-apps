@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:19:51 (LetterTraining batch 16 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: exactly one single acorn, a smooth glossy brown oval nut sitting in a textured scaly light-brown cup cap with a tiny stem on top. One clearly identifiable whole acorn with correct realistic structure, no oak leaf, no other acorns, not a hazelnut, not a chestnut, no squirrel, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

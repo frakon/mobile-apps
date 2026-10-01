@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:31:08 (LetterTraining batch 18 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single tall vending machine, a red metal cabinet with a large glass front showing rows of colourful drink bottles, cans and snack packets on spiral shelves, a small coin slot and button panel on the right, a dispensing flap at the bottom. The vending machine is complete. One clearly identifiable whole vending machine with correct realistic structure, no labels, no logos, no words, no people, not a fridge, not a shop shelf, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

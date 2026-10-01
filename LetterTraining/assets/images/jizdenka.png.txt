@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:52:29 (LetterTraining batch 21 round 3, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, top view slightly tilted: one single small thick cardboard train ticket, a plain beige rectangle with one small clipped notch at its edge made by a conductor's punch, a tiny train icon in one corner and colored stripes, no holes in the corners, no string. One clearly identifiable train ticket, no train, no hand, no money, not a tag, not a label, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

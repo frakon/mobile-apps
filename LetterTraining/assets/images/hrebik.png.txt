@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:22:48 (LetterTraining batch 05 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view, lying diagonally: one single shiny steel nail, a round flat head at the top, a long straight smooth shank and a sharp point at the bottom. The nail is complete: head, shank, point. One clearly identifiable whole nail with correct realistic structure, smooth shank with no thread, not a screw, no hammer, no wood, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:15:45 (LetterTraining batch 03 round 3, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view: one single thick soft fluffy wool blanket in warm light brown, loosely folded into a big soft rectangle with one corner turned back, a wide satin edge band around it, very plush and cozy, clearly thick fabric. One clearly identifiable whole bed blanket with correct realistic structure, painted in loose watercolor, no checkered pattern, no fringes, not a towel, not a tablecloth, no bed, no pillow, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

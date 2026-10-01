@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:23:06 (LetterTraining batch 05 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view, standing upright: one single brown wooden violin with its bow lying diagonally beside it, curved body with two f-shaped sound holes, four strings, a black fingerboard and a scroll at the top of the neck. The violin is complete: body, neck, scroll, pegs, strings, chin rest; the bow is one straight stick with white hair. One clearly identifiable whole violin with correct realistic structure, not a guitar, not a cello, no hands, no music notes, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

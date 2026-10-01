@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:35:44 (LetterTraining batch 19 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view from above: one single wooden drawer taken out of the furniture, shown alone: a shallow open-top wooden box with a slightly larger decorated front panel and one round wooden knob on the front, empty inside, visible wood grain. The drawer is complete. One clearly identifiable whole drawer with correct realistic structure, no cabinet, no chest of drawers, no furniture around it, not a crate, not a tray, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

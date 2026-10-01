@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:11:34 (LetterTraining batch 02 round 3b, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single soft fleece winter cap for a small child shaped like a cute bear head, with two small round bear ears on top and a soft chin strap, light brown, NO pompom, no ear flaps, no braids, clearly a warm hat to wear on the head, not a toy. The hat is complete. One clearly identifiable whole winter hat with correct realistic structure, no face inside, no person, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.

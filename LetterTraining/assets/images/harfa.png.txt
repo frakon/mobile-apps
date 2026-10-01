@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:29:23 (LetterTraining batch 05 round 2b, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single big golden wooden concert harp standing upright, a tall straight front pillar, a curved neck at the top, a slanted thick sound box running diagonally from the top of the pillar's opposite end down to the base, many strings of graduated length running from the curved neck down at an angle and ending on the slanted sound box, the shortest strings near the top, the longest near the pillar, no strings reaching the base, the pillar has no strings attached. The harp is complete: pillar, neck, sound box, base, strings. One clearly identifiable whole harp with correct realistic structure, not a lyre, not a guitar, no person, no music notes, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

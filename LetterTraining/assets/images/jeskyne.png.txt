@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:25:25 (LetterTraining pilot round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: the entrance of a cave, a large dark arched opening into a grey rocky hillside, the inside of the opening dark and deep, a few small stalactites hanging from the top of the opening, grey rock around the opening. The cave entrance is shown alone as one rocky formation. One clearly identifiable cave with correct realistic structure, no people, no animals, no bats, no torch, no trees, no river, set as a cut-out rock formation on pure white empty background, no sky, no text, no letters, no numbers, nothing else in the picture.

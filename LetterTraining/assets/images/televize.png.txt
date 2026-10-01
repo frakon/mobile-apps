@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 13:04:46 (LetterTraining batch 23 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single old-style family television set, a wide screen in a thick wooden-brown and black frame with a row of round knobs and buttons on the frame and a small red power light, standing on a low wide TV base with two short legs. The screen glows softly with simple abstract colorful blurry shapes and stripes only, nothing nameable on the screen, no animal, no person, no object. The television is complete. One clearly identifiable whole television with correct realistic structure, not a computer monitor, no keyboard, no mouse, not a framed painting, no easel, no cables, no remote, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:10:00 (LetterTraining batch 14 round 2b, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front three-quarter view: one single simple wooden table napkin holder filled with a neat upright stack of square white paper serviettes with a thin yellow border, the top paper napkin slightly fanned out, visible soft thin paper texture and embossed edge pattern. One clearly identifiable napkin holder with paper napkins with correct realistic structure, not a handkerchief, not a letter holder, not envelopes, not a book, no plate, no cutlery, no table, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:06:08 (LetterTraining batch 13 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single girl's dress hanging flat, a light blue one-piece dress with short puffed sleeves, a fitted top and a long flared skirt part to below the knee, small white polka dots, a thin belt at the waist. Only the dress, no person. One clearly identifiable dress with correct realistic structure, one single piece of clothing, not a skirt alone, not a shirt, no hanger, no legs, no shoes, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

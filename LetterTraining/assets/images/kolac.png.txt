@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:26:15 (LetterTraining pilot round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, top three-quarter view: one single round traditional Czech kolache pastry, about ten centimeters wide, a golden-brown soft yeast dough round with a raised edge, the center filled with a thick round dollop of dark plum jam surrounded by a white ring of sweet curd cheese, yellow crumble streusel on the edge. The pastry is complete and whole. One clearly identifiable whole kolache with correct realistic structure, not a pizza, not a large tart, not a donut, no plate, no other pastries, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

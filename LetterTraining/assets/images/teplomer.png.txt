@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:07:30 (LetterTraining batch 14 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single classic glass liquid thermometer standing vertically, a long thin clear glass tube with a red liquid column rising from a round red bulb at the bottom, short plain black tick marks along the tube without any numbers, a rounded top end. The thermometer is complete. One clearly identifiable whole thermometer with correct realistic structure, not a digital thermometer, no numbers, no digits, no letters, no scale labels, not a pencil, not a syringe, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

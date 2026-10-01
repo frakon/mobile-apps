@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:34:11 (LetterTraining batch 07 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view, full figure: one single cook man standing, tall white chef's hat, white double-breasted chef jacket, a white apron, dark trousers, holding a wooden spoon. The cook is complete: head, two arms, two hands, two legs, two shoes. One clearly identifiable whole cook with correct realistic anatomy, calm friendly face, mouth closed, no pots, no stove, no food, no kitchen, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

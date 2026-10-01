@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 13:04:33 (LetterTraining batch 23 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, close-up view of the back of one single child's hand pointing straight up: one single long extended index finger pointing upward in the center, big and dominant, filling the upper two thirds of the picture, with a natural fingernail at the tip; at the bottom the small curled knuckles of the other three fingers of the same hand, the thumb tucked in, the wrist ending softly at the bottom. Subtle natural thin knuckle lines, no rings, no circular creases. Exactly one hand in the picture, no second hand, no other fingers or fingertips anywhere, nothing cut off at the edges, clearly not a thumb, no thumbs-up, no glow, no light effects, no sleeve, no face, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

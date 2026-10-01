@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:51:07 (LetterTraining batch 09 round 2b, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view, standing upright point down: one single long knight's sword, a very long straight double-edged steel blade that is about five times longer than the hilt, a wide cross-shaped guard, a leather-wrapped grip long enough for two hands and a round pommel; clearly a big long sword, not a short one. The sword is complete: long blade, guard, grip, pommel, one solid piece. One clearly identifiable whole long sword with correct realistic structure, not a dagger, not a knife, not a short sword, no scabbard, no shield, no hand, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:30:58 (LetterTraining batch 18 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: a small round island of grey rocks with a tall waterfall: white foaming water falls vertically from a high rocky cliff edge down into a small blue pool at the bottom, a few green bushes on the rocks. One clearly identifiable waterfall, no river landscape beyond, no people, no animals, no bridge, not a fountain, not a shower, the whole rock island floating in pure white empty space around it, no sky, no text, no letters, no numbers, nothing else in the picture.

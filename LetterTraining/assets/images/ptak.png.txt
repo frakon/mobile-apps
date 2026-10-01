@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:48:01 (LetterTraining batch 10 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one simple generic small cute songbird standing on a short thin twig, an imaginary bird of no recognizable species, a round body in plain soft light blue with a lighter belly, a small pointed orange beak, one round black eye, two thin orange legs, folded wings, a short tail. Simple picture-book generic bird shape like the universal symbol of a bird. The bird is complete. One clearly identifiable whole bird with correct simple anatomy, exactly two legs, not a sparrow, not a tit, not a robin, not a budgie, not a chick, not a parrot, not an owl, only the one short twig, no leaves, no nest, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

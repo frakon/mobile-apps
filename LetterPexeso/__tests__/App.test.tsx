@@ -5,12 +5,32 @@ import { ReactNode } from 'react';
 import { Animated, Dimensions, StyleSheet } from 'react-native';
 import { act, create, ReactTestInstance, ReactTestRenderer } from 'react-test-renderer';
 
-import App from '../App';
+import PexesoGame from '../src/PexesoGame';
+import { DEFAULT_SETTINGS, PexesoSettings } from '../src/game/pexesoLogic';
+
+// The game under test with known settings (the async AsyncStorage load is mocked to never resolve).
+function App(props: { onBack?: () => void; initialSettings?: PexesoSettings }) {
+  return <PexesoGame initialSettings={DEFAULT_SETTINGS} {...props} />;
+}
+
+jest.mock('../src/pexesoSettingsStorage', () => ({
+  loadPexesoSettings: () => new Promise(() => undefined),
+  savePexesoSettings: () => Promise.resolve(),
+}));
+
+// Card sounds (`_LetterPexeso_PROMPTS.md` / "Q&A 9 — Pexeso improvements round 2": sound on flip only).
+jest.mock('../src/audioController', () => ({
+  playAudio: jest.fn(() => 1),
+  stopAllAudio: jest.fn(),
+  stopAudioIfOwnedBy: jest.fn(),
+}));
 
 // Runtime landscape lock (`_LetterPexeso_PROMPTS.md` / "Follow-up 1: landscape") - no native module in jest.
 jest.mock('expo-screen-orientation', () => ({
   OrientationLock: { LANDSCAPE: 5 },
   lockAsync: jest.fn(() => Promise.resolve()),
+  // The shared PexesoGame unlocks on unmount (needed in LetterTraining; standalone unmounts only at app exit).
+  unlockAsync: jest.fn(() => Promise.resolve()),
 }));
 
 jest.mock('react-native-safe-area-context', () => {
@@ -40,8 +60,9 @@ function cardInstances(): ReactTestInstance[] {
     .sort((first, second) => first.props.cardId - second.props.cardId);
 }
 
+// `letter` = the face text (default settings: capital printed letters on both cards of a pair).
 function cardInfos(): CardInfo[] {
-  return cardInstances().map((node) => node.props as CardInfo);
+  return cardInstances().map((node) => ({ ...(node.props as CardInfo), letter: node.props.face.text as string }));
 }
 
 function cardPressables(): ReactTestInstance[] {
@@ -323,7 +344,9 @@ test('full game via UI -> end overlay with stats; play again resets board and he
   expect(texts).toContain('Výborně!');
   expect(texts).toContain('Hrát znovu');
   expect(texts.find((text) => text.startsWith('Správně 9'))).toBeDefined();
-  expect(texts.find((text) => text.includes('Špatně 1'))).toBeDefined();
+  // The first blind mismatch is neutral (`_LetterPexeso_PROMPTS.md` / "Follow-up prompt 6"); total tries = 10.
+  expect(texts.find((text) => text.includes('Špatně 0'))).toBeDefined();
+  expect(texts.find((text) => text.includes('Pokusů 10'))).toBeDefined();
 
   const playAgain = root.root.findAll(
     (node) => typeof node.props.onPress === 'function' && node.props.accessibilityRole === 'button' && typeof node.type !== 'string'
@@ -337,4 +360,81 @@ test('full game via UI -> end overlay with stats; play again resets board and he
   const textsAfter = allTexts();
   expect(textsAfter).not.toContain('Výborně!');
   expect(textsAfter.find((text) => text.startsWith('Správně 0'))).toBeDefined();
+});
+
+// Card sounds - `_LetterPexeso_PROMPTS.md` / "Follow-up prompt 6" (sound setting mutes letters / images only) and
+// "Q&A 9 — Pexeso improvements round 2" (only on flip, not again on match).
+describe('card sounds', () => {
+  const { playAudio } = jest.requireMock('../src/audioController') as { playAudio: jest.Mock };
+  beforeEach(() => playAudio.mockClear());
+
+  test('sound on: every flip of a letter card plays once; the match does not replay', () => {
+    const { first, partner } = setup();
+    pressCard(first.cardId);
+    expect(playAudio).toHaveBeenCalledTimes(1);
+    pressCard(partner.cardId);
+    expect(playAudio).toHaveBeenCalledTimes(2);
+    advance(2000);
+    expect(playAudio).toHaveBeenCalledTimes(2);
+  });
+
+  test('sound off: letter cards are silent', () => {
+    act(() => {
+      root = create(<App initialSettings={{ ...DEFAULT_SETTINGS, soundOn: false }} />);
+    });
+    const grid = root.root.find((node) => typeof node.props.onLayout === 'function' && typeof node.type !== 'string');
+    act(() => {
+      grid.props.onLayout({ nativeEvent: { layout: { width: 347, height: 590 } } });
+    });
+    pressCard(cardInfos()[0].cardId);
+    expect(playAudio).not.toHaveBeenCalled();
+  });
+
+  test('sound off: sound-only cards still play', () => {
+    const soundColumn = { type: 'sound', letterCase: 'upper', letterStyle: 'print' } as const;
+    act(() => {
+      root = create(<App initialSettings={{ ...DEFAULT_SETTINGS, soundOn: false, columns: [soundColumn, soundColumn] }} />);
+    });
+    const grid = root.root.find((node) => typeof node.props.onLayout === 'function' && typeof node.type !== 'string');
+    act(() => {
+      grid.props.onLayout({ nativeEvent: { layout: { width: 347, height: 590 } } });
+    });
+    const ids = cardInstances().map((node) => node.props.cardId as number);
+    pressCard(ids[0]);
+    expect(playAudio).toHaveBeenCalledTimes(1);
+  });
+
+  test('sound vs sound: the second card waits until the first card finished (no cut-off)', () => {
+    const soundColumn = { type: 'sound', letterCase: 'upper', letterStyle: 'print' } as const;
+    act(() => {
+      root = create(<App initialSettings={{ ...DEFAULT_SETTINGS, columns: [soundColumn, soundColumn] }} />);
+    });
+    const grid = root.root.find((node) => typeof node.props.onLayout === 'function' && typeof node.type !== 'string');
+    act(() => {
+      grid.props.onLayout({ nativeEvent: { layout: { width: 347, height: 590 } } });
+    });
+    const ids = cardInstances().map((node) => node.props.cardId as number);
+    pressCard(ids[0]);
+    pressCard(ids[1]);
+    expect(playAudio).toHaveBeenCalledTimes(1); // queued
+    act(() => {
+      (playAudio.mock.calls[0][1] as { onFinish: () => void }).onFinish();
+    });
+    expect(playAudio).toHaveBeenCalledTimes(2);
+  });
+});
+
+test('4x10 board in a phone landscape window -> 40 cards in 10 x 4', () => {
+  setWindow(844, 390);
+  act(() => {
+    root = create(<App initialSettings={{ ...DEFAULT_SETTINGS, sizeId: '4x10' }} />);
+  });
+  const grid = root.root.find((node) => typeof node.props.onLayout === 'function' && typeof node.type !== 'string');
+  act(() => {
+    grid.props.onLayout({ nativeEvent: { layout: { width: 780, height: 330 } } });
+  });
+  expect(cardInstances()).toHaveLength(40);
+  // 10 columns, gap 4: (780 - 36) / 10 = 74.4 -> 74; 4 rows: (330 - 12) / 4 = 79.5 -> 79.
+  expect(cardInstances()[0].props.width).toBe(74);
+  expect(cardInstances()[0].props.height).toBe(79);
 });

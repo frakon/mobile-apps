@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 10:45:10 (LetterTraining pilot round 3c, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: close crop of only the upper part of one child's face, from the eyebrows up to the hairline, the smooth bare forehead filling most of the frame, a single fingertip of the child's own index finger touching the middle of the forehead, no headband, the mouth and chin are outside the frame. The forehead is clearly the subject of the picture. Correct realistic natural proportions, no glow, no light effects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.

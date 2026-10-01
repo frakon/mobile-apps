@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:08:26 (LetterTraining batch 02 round 2c, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front three-quarter view: one single girl's plain hair headband, a smooth curved horseshoe-shaped band of shiny light pink plastic covered in tiny sparkling glitter, NO bow, no ribbon, no flowers, shown alone, not worn. The headband is complete. One clearly identifiable whole headband with correct realistic shape, no head, no hair, no person, no comb, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.

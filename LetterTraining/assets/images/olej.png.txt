@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:46:14 (LetterTraining batch 20 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single tall glass bottle of golden yellow cooking oil tilted over a small shallow glass bowl, a thick glossy stream of golden oil pouring from the bottle into the bowl, the bowl already filled with shiny golden oil, a few golden oil drops. One clearly identifiable cooking oil being poured with correct realistic structure, blank bottle with no label, no brand, no food, no pan, not honey, not juice, not beer, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

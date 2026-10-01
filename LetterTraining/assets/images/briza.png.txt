@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:03:28 (LetterTraining batch 02 round 2b, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single young birch tree whose most striking feature is its bright snow-white trunk with many black horizontal stripes and black diamond-shaped marks, slender trunk clearly visible from the base up to the crown, thin drooping branches with small triangular serrated light green leaves and a few hanging catkins, clearly a birch (briza), the typical Czech white-bark tree. The tree is complete. One clearly identifiable whole birch with correct realistic structure, no other trees, no grass, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.

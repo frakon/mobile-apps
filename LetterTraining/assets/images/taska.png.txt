@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:07:10 (LetterTraining batch 14 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single reusable shopping bag made of sturdy fabric, a rectangular green cloth bag with two long carrying handles on top, standing upright, slightly filled, a few leafy vegetables and a baguette peeking out of the top. The bag is complete. One clearly identifiable whole shopping bag with correct realistic structure, not a handbag, not a backpack, not a suitcase, no logo, no person, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

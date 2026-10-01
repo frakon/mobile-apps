@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:30:46 (LetterTraining batch 18 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single classroom blackboard, a large dark green chalkboard surface with a light wooden frame and a wooden ledge at the bottom holding one white chalk stick and a sponge, the board surface empty. The blackboard is complete. One clearly identifiable whole school blackboard with correct realistic structure, nothing written or drawn on it, no classroom, no desks, no teacher, not a window, not a television, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

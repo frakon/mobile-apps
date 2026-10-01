@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:07:18 (LetterTraining batch 14 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single plain red plastic kitchen funnel standing with the wide cone opening at the top and the narrow tube spout at the bottom, a small handle loop on the rim. The funnel is complete. One clearly identifiable whole funnel with correct realistic structure, not a cup, not a lamp shade, not a megaphone, not a horn, not an ice cream cone, no liquid, no bottle, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

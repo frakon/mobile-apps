@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:34:10 (LetterTraining batch 07 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view, full figure: one single queen standing, a golden crown on her head, long hair, a long purple royal gown with white fur trim, holding a golden scepter. The queen is complete: head, two arms, two hands, gown down to her shoes. One clearly identifiable whole queen with correct realistic anatomy, clearly a grown-up woman, not a young princess, calm friendly face, mouth closed, no throne, no castle, no king, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

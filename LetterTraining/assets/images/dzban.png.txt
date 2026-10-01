@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:15:22 (LetterTraining batch 03 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view: one single traditional ceramic water jug pitcher, round bulging belly, narrow neck, a pouring spout at the rim and one big curved handle on the side, glazed blue and cream with a simple painted stripe. The jug is complete: body, neck, spout, one handle, flat base. One clearly identifiable whole jug with correct realistic structure, not a vase, not a mug, not a teapot, no lid, no water splash, no cup, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:36:25 (LetterTraining batch 07 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view from slightly above: one single big plain brown corrugated cardboard box, closed, a simple cube with straight flat sides and sharp straight edges, the two top flaps meet in a straight line in the middle and are sealed with one strip of brown tape, the front side is completely flat and plain with no folds and no creases. The box is complete: top, front side, right side, bottom edge. One clearly identifiable whole cardboard box with correct realistic structure, not a parcel wrapped in paper, not a gift, no string, no ribbon, no labels, no writing, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

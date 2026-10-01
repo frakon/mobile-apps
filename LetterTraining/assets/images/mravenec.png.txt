@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:47:21 (LetterTraining batch 09 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, exact side view: one single black ant walking, a body of three clearly separated parts (round head, narrow chest, big oval abdomen), two bent antennae and two small jaws on the head, a realistic small dark insect eye; exactly six thin jointed legs, all six attached to the chest, three on the near side and three on the far side, all six legs clearly visible touching the same level. The ant is complete: head, antennae, chest, abdomen, six legs. One clearly identifiable whole ant with correct realistic anatomy, no cartoon eyes, no tongue, no wings, not a spider, not a beetle, no leaf, no other ants, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

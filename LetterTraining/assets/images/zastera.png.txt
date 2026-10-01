@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:19:23 (LetterTraining batch 16 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single kitchen apron laid flat, a red and white checkered cotton apron with a bib top, a neck strap loop at the top, two long waist ties at the sides, one front pocket. The apron is complete. One clearly identifiable whole apron with correct realistic structure, no person wearing it, not a dress, not a shirt, no kitchen utensils, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

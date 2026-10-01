@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:42:14 (LetterTraining batch 20 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single round colourful hair elastic scrunchie tie, a soft pink fabric-covered elastic ring lying flat, round hole in the middle. The hair tie is complete. One clearly identifiable hair elastic with correct realistic structure, no hair, no person, no comb, not a bracelet, not a donut, not a ring, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

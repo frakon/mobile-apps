@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:33:22 (LetterTraining batch 18 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single very long wooden rowing-boat oar lying horizontally, a long straight round shaft with a plain straight cylindrical hand grip at the end (no T handle, no cross bar), a round black metal oarlock ring fitted on the shaft, and a long narrow slightly curved blade painted red and white at the other end. The oar is complete. One clearly identifiable whole rowing oar from a rowing boat with correct realistic structure, each part one solid seamless piece, no T grip, not a canoe paddle, not a kayak paddle, not a shovel, no boat, no water, no person, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

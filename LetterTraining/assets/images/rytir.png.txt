@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:55:35 (LetterTraining batch 12 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front three-quarter view: one single medieval knight standing, wearing full shining silver plate armour from head to toe, a closed helmet with a visor slit and a red plume, holding a long straight sword pointing down in one hand and a shield with a red cross in the other. The knight is complete: helmet, body, two arms, two legs. One clearly identifiable whole knight with correct realistic structure, not a robot, not a soldier, no horse, no castle, no blood, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

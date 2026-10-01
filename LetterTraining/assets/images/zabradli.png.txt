@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:46:25 (LetterTraining batch 20 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, close-up three-quarter view: one single long wooden stair handrail railing: a smooth polished wooden handrail on top of a long row of many evenly spaced turned wooden balusters, a thick carved newel post at the bottom end, the railing fills the picture, only the very edges of the steps visible under the balusters. The railing is the main subject. One clearly identifiable banister railing with correct realistic structure, no people, no wall, no house, not a garden fence, not a ladder, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

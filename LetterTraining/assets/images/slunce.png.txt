@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:58:12 (LetterTraining batch 12 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single large majestic realistic blazing sun, a huge bright golden-yellow fiery disc with a glowing orange edge, many long wavy flame-like golden rays radiating all around, powerful and bright, no face, no eyes, no smile, not cute. One clearly identifiable sun, not a flower, not an orange, not a sunflower, no clouds, no sky, no rainbow, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

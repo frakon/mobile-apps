@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:25:31 (LetterTraining pilot round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view: one single open white plastic yogurt cup full of thick white creamy yogurt, the peeled-back foil lid lifted at one side, a small silver teaspoon stuck in the yogurt, a few pink strawberry pieces on top of the white yogurt. The yogurt cup is complete. One clearly identifiable yogurt cup with correct realistic structure, not ice cream, not a glass of milk, no label, no printing, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

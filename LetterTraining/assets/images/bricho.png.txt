@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:08:27 (LetterTraining batch 02 round 2c, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side profile view: the round tummy of a small chubby child sticking out forward, the child stands sideways, cropped from the chest down to the hips, child wears a short yellow t-shirt that is too short so the bare round belly bulges out below it, and blue shorts, the belly button is NOT visible from this side angle, the big round belly curve is the clear main subject and fills the frame. Correct realistic anatomy, no hands on the belly, no face, no glow, no light effects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.

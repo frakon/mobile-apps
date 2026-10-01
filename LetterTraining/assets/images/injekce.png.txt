@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:28:34 (LetterTraining pilot round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, close-up side view: a nurse's gloved hand giving a vaccination injection, the thin needle of a small syringe gently pricking the bare upper arm of a child, a tiny drop of liquid at the needle, the syringe and the needle in the center of the picture are the main subject, only the part of the arm and the gloved hand visible, no faces. One clearly identifiable vaccination injection with correct realistic anatomy, no blood, no glow, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

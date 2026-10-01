@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:23:48 (LetterTraining batch 17 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, top view: one single brown-black scorpion with two big pincer claws in front, exactly eight legs, four on each side, and a long segmented tail curved up over its back ending in a stinger. The scorpion is complete. One clearly identifiable whole scorpion with correct realistic anatomy, not a crab, not a lobster, not a spider, no sand, no rocks, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

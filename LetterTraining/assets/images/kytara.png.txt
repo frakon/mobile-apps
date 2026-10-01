@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:25:58 (LetterTraining pilot round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, front view: one single acoustic guitar standing upright, a light wooden figure-eight-shaped body with a round sound hole, a long dark neck with frets, a headstock with tuning pegs, exactly six strings running from the bridge to the headstock. The guitar is complete. One clearly identifiable whole acoustic guitar with correct realistic structure, not a violin, not a ukulele, no strap, no hand, no music notes, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

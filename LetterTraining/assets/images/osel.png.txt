@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:48:19 (LetterTraining batch 10 round 2, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single big strong fully grown mature grey donkey standing on four legs, a large heavy adult body as tall as a pony, a big long head, grey coat with a dark stripe along the back and a dark cross stripe over the shoulders, very long upright ears, a short upright dark mane, a thin tail with a dark tuft. Realistic proportions of an old adult working donkey, serious neutral expression, not smiling, not cute, not a foal, not a baby donkey. The donkey is complete: head, body, four legs, tail. One clearly identifiable whole adult donkey with correct realistic anatomy, exactly four legs, not a horse, not a pony, not a mule, no saddle, no harness, no visible genitals, child-friendly, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:08:55 (LetterTraining batch 02 round 2d, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, top three-quarter view: one single wooden spoon heaped with dry lentils, plus a small loose pile of the same lentils spilled next to it; each lentil is a tiny flat round disc shaped like a lens, greenish-brown and orange-brown, matte, clearly dry raw lentils (pulses), not cereal, not chocolate, not beans, not coffee. All complete. One clearly identifiable spoon of lentils with correct realistic structure, no bowl, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.

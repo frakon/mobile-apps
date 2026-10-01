@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:34:11 (LetterTraining batch 07 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: one single table lamp, a round heavy base, a straight thin stand, a cone-shaped cream fabric lampshade on top. The lamp is complete: base, stand, shade. One clearly identifiable whole table lamp with correct realistic structure, the lamp is switched off, no glow, no light rays, no cable, no table, not a street lamp, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

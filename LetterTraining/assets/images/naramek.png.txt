@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 11:50:00 (LetterTraining batch 09 round 3, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, top view: one single small child's bracelet lying flat in a small closed circle, made of about twelve round beads in red, yellow, blue and green on a thin elastic cord, with one larger flat golden heart charm hanging from it; the circle is small, only the size of a child's wrist, clearly much too small to be a necklace. The bracelet is complete: closed ring of beads and the heart charm. One clearly identifiable whole bracelet with correct realistic structure, not a necklace, not a long string of beads, no hand, no wrist, no person, no other jewelry, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

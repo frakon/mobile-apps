@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 12:23:57 (LetterTraining batch 17 round 1, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, top view: one single dragonfly with a long thin straight blue-green segmented body, big round eyes, and exactly four long narrow transparent veined wings spread out flat, two on each side. Exactly six thin legs. The dragonfly is complete. One clearly identifiable whole dragonfly with correct realistic anatomy, not a butterfly, not a fly, not a bee, no plant, no water, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

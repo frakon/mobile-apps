@@ -1,0 +1,6 @@
+Service: Muse Spark (Meta Model API) POST https://api.meta.ai/v1/images/generations
+Parameters: model="muse-image-1.0", size="1024x1024" (requested); via .claude/skills/image-generation/scripts/generate-muse-image.ps1
+API returned: WEBP 1600x1600; post-processing: Pillow convert RGB, resize 512x512 LANCZOS, saved PNG
+Generated: 2026-10-01 10:52:16 (LetterTraining pilot round 4, HTTP attempts 1)
+Prompt (verbatim):
+Children's book watercolor illustration, three-quarter view from above: one single children's wooden xylophone with eight WOODEN bars of natural light wood with visible wood grain, not metal, each bar one solid seamless continuous piece of wood with no seams, no joints, no splits, no cracks and no lines across it, lying side by side on two straight wooden rails of a trapezoid wooden frame. The bars are clearly graduated in length like a staircase: the longest bar on the left is about twice as long as the shortest bar on the right, each bar shorter than its left neighbour. Two wooden mallets with round wooden heads lie in front of it. The xylophone is complete: frame, eight graduated seamless wooden bars, two mallets. One clearly identifiable whole wooden xylophone, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.
