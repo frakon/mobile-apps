@@ -1,7 +1,7 @@
 // "Začátky slov" training screen, levels 1-3 via the `level` route param - `_LetterTraining_PROMPTS.md` /
 // "## Initial request (2026-10-01)" (Word starts training: General notes, Level 1, Level 2, Level 3) and
 // "## Q&A (2026-10-01)" (L2/L3 wrong tap says the tapped syllable), "## Follow-up prompt 3 (verbatim)" (L2/L3 play the
-// word with the first/last syllable emphasized).
+// word with the first/last syllable separated - natural reading since "## Follow-up prompt 12").
 //
 // Feedback (same look as TreninkPorozumeni app/game.tsx):
 // - correct tap: the option gets a green tint rgba(70,190,90,0.35) + green ✓, the letter/syllable sound plays, and the
@@ -143,7 +143,7 @@ export default function WordsScreen() {
 
   const playWord = useCallback(
     (round: WordStartsRound) => {
-      // Level 1 plain word, level 2 first syllable emphasized, level 3 last syllable emphasized -
+      // Level 1 plain word, level 2 first syllable separated, level 3 last syllable separated (natural reading, "## Follow-up prompt 12") -
       // `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 3 (verbatim)". The mp3 is hot in memory (data URI from
       // the word's backend archive — "## Follow-up prompt 9").
       const source = archivesRef.current[wordArchivePath(round.word)]?.files[roundWordAudioFile(round)]?.dataUri;

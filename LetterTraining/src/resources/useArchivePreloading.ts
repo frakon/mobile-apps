@@ -68,6 +68,18 @@ export function useArchivePreloading(
       return;
     }
 
+    const acquired = new Map<string, UnpackedArchive>();
+    let failed = false;
+    // Mirrors the stale-run handling below: merely cancelled (screen alive) -> hold, so a newer run reusing the
+    // archive is not robbed (the unmount cleanup releases it later); otherwise release unless already held.
+    const disposeFailedRunArchive = (archivePath: string, archive: UnpackedArchive) => {
+      if (cancelled && !disposedRef.current) {
+        heldRef.current.set(archivePath, archive);
+      } else if (!heldRef.current.has(archivePath)) {
+        releaseUnpackedArchive(archivePath);
+      }
+    };
+
     const run = async () => {
       // One manifest refresh per screen visit (decision 1: a changed backend version replaces stale cached copies).
       // A failure here is not fatal: getUnpackedArchive refetches the manifest / falls back to the cached archives.
@@ -83,7 +95,20 @@ export function useArchivePreloading(
         if (required.some((archivePath) => !heldRef.current.has(archivePath))) {
           setState((previous) => (previous.status === 'loading' ? previous : { status: 'loading', archives: {} }));
         }
-        const unpacked = await Promise.all(required.map((archivePath) => getUnpackedArchive(archivePath)));
+        // Per-run acquisitions (Phase G low "mid-preload failure hold"): when the Promise.all below REJECTS (e.g. the
+        // VPN drops mid board load), archives this run already unpacked must not stay hot-but-unregistered.
+        const unpacked = await Promise.all(
+          required.map((archivePath) =>
+            getUnpackedArchive(archivePath).then((archive) => {
+              if (failed) {
+                disposeFailedRunArchive(archivePath, archive); // resolved after the run already failed
+              } else {
+                acquired.set(archivePath, archive);
+              }
+              return archive;
+            })
+          )
+        );
         if (cancelled || disposedRef.current) {
           // Mid-load cancellation (verification Phase C R1 M3): archives acquired by this stale run must not leak.
           // Disposed (screen left): release everything not already held — mirrors the prefetch disposal handling.
@@ -108,6 +133,11 @@ export function useArchivePreloading(
         });
         setState({ status: 'ready', archives });
       } catch {
+        failed = true;
+        for (const [archivePath, archive] of acquired) {
+          disposeFailedRunArchive(archivePath, archive);
+        }
+        acquired.clear();
         if (!cancelled && !disposedRef.current) {
           setState({ status: 'offline', archives: {} });
         }
@@ -137,7 +167,12 @@ export function useArchivePreloading(
     };
   }, [requiredKey, prefetchKey, retryToken]);
 
-  const retry = useCallback(() => setRetryToken((token) => token + 1), []);
+  // Phase G low "retry feedback": switch to 'loading' synchronously so the start animation replaces the offline
+  // screen immediately (the manifest fetch alone may take up to its 8 s timeout before the run sets 'loading').
+  const retry = useCallback(() => {
+    setState({ status: 'loading', archives: {} });
+    setRetryToken((token) => token + 1);
+  }, []);
 
   // Synchronous hot path (verification Phase C R1 M1): when the required archives swap (next round) and all of them
   // are already hot in resourceStore (they were prefetched), report 'ready' with those archives in the SAME render —

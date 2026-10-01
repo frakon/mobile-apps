@@ -250,9 +250,10 @@ export function resolveAudioSource(
   return dataUri === undefined ? undefined : { uri: dataUri };
 }
 
-// The word-audio entry a round plays (auto-play + replay button): level 1 the plain word, level 2 the word with the
-// FIRST syllable emphasized, level 3 with the LAST syllable emphasized (`_LetterTraining_PROMPTS.md` /
-// "## Follow-up prompt 3 (verbatim)"); falls back to the plain word when the emphasized mp3 is missing.
+// The word-audio entry a round plays (auto-play + replay button): level 1 the plain word, level 2 the word read with the
+// FIRST syllable separated, level 3 with the LAST syllable separated (`_LetterTraining_PROMPTS.md` /
+// "## Follow-up prompt 3 (verbatim)", natural reading per "## Follow-up prompt 12"); falls back to the plain word
+// when that mp3 is missing.
 export function roundWordAudioFile(round: WordStartsRound): string {
   switch (round.level) {
     case 1:

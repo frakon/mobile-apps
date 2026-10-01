@@ -58,10 +58,12 @@ The intro page (`app/index.tsx`) lists the trainings from the extensible registr
   permanent green shade on the correct wagon until it connects; no sound. After the last letter (no shift) the train
   leaves in 1 s, accelerating then at constant speed → „Hotovo" 150 ms later (Znovu / Zpět). All animations ignore the
   system Reduce Motion. Random engine per play, random wagon image per letter;
-  images + audio preloaded on open. Settings (⚙, `app/train-settings.tsx`, persisted): alphabet CZ (34 letters incl.
+  train pictures come from the backend archive `train/train.zip`, loaded hot during the start animation (EN/CZ
+  letter audio is bundled and warmed). Settings (⚙, `app/train-settings.tsx`, persisted): alphabet CZ (34 letters incl.
   CH, háčky, no Ě / čárky / kroužky) / EN (26) with drawn flags, VELKÁ / malá, waiting wagons 4–8 (default 6).
-  Images: `assets/train/` + `manifest.json` → `src/train/assets.ts` is **GENERATED** by
-  `endgame2/AGENTS/Tasks/20261001_090718_LetterTraining/scripts/gen_train_ts.py` (re-run after image/audio changes);
+  Images: `assets/train/` (packer source, not bundled) + `manifest.json` → `src/train/assets.ts` is **GENERATED** by
+  `endgame2/AGENTS/Tasks/20261001_090718_LetterTraining/scripts/gen_train_ts.py` (re-run after image/audio changes, then
+  re-apply endgame2 `AGENTS/Tasks/20261001_162724_LetterTrainingMobileAppsPreferences/scripts/transform_asset_maps_to_archives.js`);
   without images, drawn placeholder engine/wagons are shown.
   Autonomous decisions (not user-specified, may be changed on request): Q&A 6 says "35 letters" but lists 34 – the
   list is used; default case CAPITALS; drop zone = 1 wagon width left of the train end to 1.5 widths right, 0.4 wagon
@@ -89,12 +91,22 @@ Feedback:
   **max(500 ms, end of the sound)** (decision: the sound is not cut at 500 ms; missing/failed sound = 500 ms).
 - wrong tap → red tint on the option while its letter/syllable sound plays (500 ms tint if there is no audio).
 
+## Resources (mobile-apps-preferences)
+
+- **Backend-served:** word pictures + word audio (`words/<id>.zip`), syllable audio (`syllables/<char>.zip`) and train
+  pictures (`train/train.zip`) from the shared `ResourceBackend` (mobile-apps2 repo root; VPN-only static fileserver
+  `http://10.67.0.1:9080`, `manifest.json` with version + per-archive sha256). Offline with uncached archives → Czech
+  „Jejda!" message + „Zkusit znovu" retry; games with cached/bundled resources keep working.
+- **Device cache:** 200MB of compressed zips, last-used tracking, LRU eviction, checksum invalidation (`src/resources/`).
+- **Preload:** words/compose = current round + next 5 rounds; pexeso/train = everything for the play before it starts.
+- **Bundled:** letter audio, fonts, UI assets, downsized pexeso settings samples.
+
 ## Dataset
 
 `src/words.ts` is **GENERATED** by `endgame2/AGENTS/Tasks/20261001_090718_LetterTraining/scripts/gen_words_ts.py` from
 the task `words.json` (re-run it after new pictures are accepted; never edit it by hand). It includes only words with
 an ACCEPTED picture (`assets/images/<id>.png` + accepted `blind_test_data/_blind_test_log/<id>.md`) and exports `WORDS`
-(word, syllables, firstLetter, alternativeNames, excludeLevel1/2/3, image, audio, audioFirst, audioLast),
+(word, syllables, firstLetter, alternativeNames, excludeLevel1/2/3, hasAudioFirst, hasAudioLast; pictures/audio live in backend `words/<id>.zip`),
 `LETTER_AUDIO`, `SYLLABLE_AUDIO` (real + synthetic syllables) and `REAL_SYLLABLES` (all words.json syllables).
 Level 1 plays the plain word, Level 2 the word read naturally with the first syllable separated by a space ("no viny",
 `audio/words_first/`), Level 3 read with the last syllable separated ("novi ny", `audio/words_last/`) — one natural TTS

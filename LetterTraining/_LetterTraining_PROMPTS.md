@@ -280,3 +280,16 @@ bullet (audio wiring) is a SEPARATE later package, pending the user's listening 
 
 ## Follow-up prompt 12 — Začátky slov úroveň 2,3: natural first/last-syllable audio (verbatim) (2026-10-01)
 Ad the "Začátky slov - úroveň 2,3" - add to prompts: the .mp3s shall not be created by connecting separated syllables and by artificial emphasizing of some syllables (WHY: it sounds unnatural). Instead for the first syllables the texts like "no viny" and "u cho" shall be read, and for the last syllables the texts like "novi ny" and "u cho" shall be read. Appoint subagent(s) with regenerating all the words for the "Začátky slov" with sylables (úroveň 2 a 3; not úroveň 1 (which is read already normally)).
+
+## Closing work for "## Follow-up prompt 9" (Phases F+G, 2026-10-01) — no new user prompt
+
+Record only (no new user intention): the Phase G "low" findings deferred from the mobile-apps-preferences verification
+rounds (endgame2 `AGENTS/Tasks/20261001_162724_LetterTrainingMobileAppsPreferences/`) were closed:
+- Mid-preload failure hold: when a required load rejects (e.g. VPN drops during a 20-pair board load), the archives that
+  run already unpacked are released (held instead while a newer run of the same screen is alive) —
+  `src/resources/useArchivePreloading.ts`.
+- Retry feedback: "Zkusit znovu" switches to 'loading' synchronously, so the start animation replaces the offline screen
+  at once instead of after the up-to-8 s manifest timeout.
+- Docs: `src/words.ts` header (and its generator `gen_words_ts.py`) no longer describes emphasized first/last audio —
+  Level 2/3 audio is the natural separated-syllable reading per "## Follow-up prompt 12".
+Both shared `src/resources/` files are synced byte-identical to standalone LetterPexeso.

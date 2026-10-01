@@ -69,6 +69,11 @@ contract on the app side).
   sound is hot in memory before the round starts.
 - `base64.ts` — pure-JS base64/data-URI helpers.
 - `OfflineRetry.tsx` — child-friendly Czech error + "Zkusit znovu" retry component.
+- `useArchivePreloading.ts` — screen hook: REQUIRED archives (current round / whole play) loaded
+  hot before `'ready'`, PREFETCH archives (next 5 rounds) warmed fire-and-forget, archives that left
+  the window released; `'offline'` on failure (archives a failed run already unpacked are released),
+  `retry()` switches to `'loading'` immediately.
+- `warmBundledAudio.ts` — warms bundled (Metro) audio so it is hot before use.
 
 ## Intended integration (Phase C)
 

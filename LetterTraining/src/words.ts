@@ -4,14 +4,15 @@
 // ARCHIVE MODEL (Phase C, `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences (backend
 // resources, cache, preload)"): per-exercise pictures/audio are NOT bundled anymore — they come from the backend
 // archive `words/<id>.zip` (picture.png / word.mp3 / first.mp3 / last.mp3); hasAudioFirst/hasAudioLast record which
-// emphasized variants exist in that archive. SYLLABLE_AUDIO values are the mp3 entry names inside
+// Level 2/3 variants exist in that archive. SYLLABLE_AUDIO values are the mp3 entry names inside
 // `syllables/<firstFoldedChar>.zip`. Only LETTER_AUDIO stays bundled (user decision 2). Transformed from the previous
 // require-map by endgame2 AGENTS/Tasks/20261001_162724_LetterTrainingMobileAppsPreferences/scripts/
 // transform_asset_maps_to_archives.js — re-apply that transform after any regeneration.
 // `_LetterTraining_PROMPTS.md` / "## Initial request (2026-10-01)", "## Follow-up prompt 1 (verbatim)",
 // "## Q&A 2 (verbatim answers)", "## Follow-up prompt 2 (verbatim)", "## Q&A 3 (pilot)",
-// "## Follow-up prompt 3 (verbatim)" (audioFirst = first syllable emphasized for Level 2, audioLast = last
-// syllable emphasized for Level 3).
+// "## Follow-up prompt 3 (verbatim)" (audioFirst = Level 2 audio, audioLast = Level 3 audio); since
+// "## Follow-up prompt 12" the word is read naturally with the first ("no viny") / last ("novi ny") syllable
+// separated by a space - no emphasis.
 
 import { LetterAudioMap, SyllableAudioMap, WordEntry } from './wordStarts/types';
 
