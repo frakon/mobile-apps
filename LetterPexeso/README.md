@@ -55,6 +55,13 @@ npx expo start
 Scan the QR code with the iPhone camera (same Wi-Fi) to open the app in Expo Go.
 Expo Go requires a free Expo account signed in on BOTH sides: `npx expo login` on the CLI AND sign-in in the Expo Go app with the same account.
 
+## Deployment
+
+- Expo Go port: **8082** – the ONLY port to deploy this app on the EndgameServer (reserved in
+  `/apps/MobileApps/_expoGoPorts.md`; on conflict that file wins and this README is fixed).
+- Deploy ONLY via the `app-deployer` agent; on the server the app lives in `/apps/MobileApps/LetterPexeso`.
+- iPhone: WireGuard hub tunnel on, open `exp://10.67.0.1:8082` in Expo Go.
+
 ## Tests / checks
 ```bash
 npm test            # jest (jest-expo preset)
