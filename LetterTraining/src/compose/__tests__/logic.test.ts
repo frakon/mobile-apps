@@ -1,6 +1,6 @@
 // Unit tests of the pure "Skládání slov" logic - `_LetterTraining_PROMPTS.md` /
 // "## Follow-up prompt 4 — new game "Skládání slov" (verbatim)", "## Q&A 4 — Skládání slov round 1",
-// "## Q&A 5 — Skládání slov round 2".
+// "## Q&A 5 — Skládání slov round 2", "## Follow-up prompt 11" / "## Q&A 11" (tap-to-place).
 import { LETTER_AUDIO, REAL_SYLLABLES, SYLLABLE_AUDIO, WORDS } from '../../words';
 import { WordEntry, WordStartsDataset } from '../../wordStarts/types';
 import {
@@ -17,8 +17,13 @@ import {
   computeLayout,
   eligibleSlots,
   intersectionArea,
-  isReleasedOnHome,
   isWordComplete,
+  NO_COMPOSE_SHADES,
+  composeSelectionOutcome,
+  composeShadesAfterPlacement,
+  composeShadesAfterWrongSelection,
+  correctTileId,
+  firstEmptySlotIndex,
   recordWrongDrop,
   resolveDrop,
   scaleRectangle,
@@ -162,11 +167,17 @@ describe('drop resolution', () => {
     expect(resolveDrop(round, [null, null, null, 1, null], 4, box(180), slotRectangles)).toBeNull();
   });
 
-  test('tile overlapping two eligible boxes goes to the larger overlap', () => {
+  test('tile overlapping two eligible boxes: the first empty box wins (repair L1), otherwise the larger overlap', () => {
     const aa = fixedRound(word('aa', 'aaa', ['a']), ['a', 'a', 'a']);
     const rectangles = [0, 50, 100].map(box); // adjacent boxes
-    expect(resolveDrop(aa, [null, null, null], 0, { x: 30, y: 100, width: 50, height: 50 }, rectangles)).toBe(1); // 20 vs 30
-    expect(resolveDrop(aa, [null, null, null], 0, { x: 20, y: 100, width: 50, height: 50 }, rectangles)).toBe(0); // 30 vs 20
+    // Overlaps first-empty box 0 (20) and box 1 (30): box 0 although its overlap is smaller (Q&A 11 refinement).
+    expect(resolveDrop(aa, [null, null, null], 0, { x: 30, y: 100, width: 50, height: 50 }, rectangles)).toBe(0);
+    expect(resolveDrop(aa, [null, null, null], 0, { x: 20, y: 100, width: 50, height: 50 }, rectangles)).toBe(0);
+    // Box 0 filled -> first empty is box 1; a release over boxes 1 (20) and 2 (30) goes to box 1.
+    expect(resolveDrop(aa, [1, null, null], 0, { x: 80, y: 100, width: 50, height: 50 }, rectangles)).toBe(1);
+    // Neither overlapped box is the first empty one -> the larger overlap wins (box 0 empty, release over boxes 1 and 2).
+    expect(resolveDrop(aa, [null, null, null], 0, { x: 80, y: 100, width: 50, height: 50 }, rectangles)).toBe(2); // 20 vs 30
+    expect(resolveDrop(aa, [null, null, null], 0, { x: 70, y: 100, width: 50, height: 50 }, rectangles)).toBe(1); // 30 vs 20
   });
 
   test('completion', () => {
@@ -262,10 +273,112 @@ describe('verification compose R1 fixes', () => {
     expect(scaleRectangle({ x: 10, y: 10, width: 100, height: 50 }, 2)).toEqual({ x: -40, y: -15, width: 200, height: 100 });
   });
 
-  test('release mostly on own home spot is not a wrong drop', () => {
-    const home = { x: 0, y: 0, width: 50, height: 50 };
-    expect(isReleasedOnHome({ x: 10, y: 5, width: 50, height: 50 }, home)).toBe(true);
-    expect(isReleasedOnHome({ x: 40, y: 40, width: 50, height: 50 }, home)).toBe(false);
+  // The old "release mostly on own home spot is not a wrong drop" test was removed with isReleasedOnHome:
+  // superseded by "## Q&A 11" "Wrong tap counts too".
+});
+
+// "## Follow-up prompt 11" / "## Q&A 11": tap-to-place, out-of-order direct drops, wrong taps, train-style shades.
+describe('tap-to-place selection (Follow-up prompt 11)', () => {
+  const MAMA = word('mama', 'mama', ['ma', 'ma']);
+  const empty = [null, null, null, null];
+
+  test('first empty box value placed by tap / release anywhere, duplicates interchangeable (MAMA)', () => {
+    const round = fixedRound(MAMA, ['a', 'm', 'a', 'm']); // slots m a m a
+    expect(composeSelectionOutcome(round, empty, 1, null, true)).toEqual({ kind: 'place', slotIndex: 0, directHit: false });
+    expect(composeSelectionOutcome(round, empty, 3, null, true)).toEqual({ kind: 'place', slotIndex: 0, directHit: false });
+    expect(composeSelectionOutcome(round, [3, null, null, null], 0, null, true)).toEqual({ kind: 'place', slotIndex: 1, directHit: false });
+    expect(composeSelectionOutcome(round, [3, 0, null, null], 1, null, true)).toEqual({ kind: 'place', slotIndex: 2, directHit: false });
+  });
+
+  test('wrong tile tapped or released anywhere is a wrong selection', () => {
+    const round = fixedRound(MAMA, ['a', 'm', 'a', 'm']);
+    expect(composeSelectionOutcome(round, empty, 0, null, true)).toEqual({ kind: 'wrong' });
+    expect(composeSelectionOutcome(round, [1, null, null, null], 3, null, true)).toEqual({ kind: 'wrong' });
+  });
+
+  test('precise direct drop onto a matching LATER empty box fills that box (Keep out-of-order direct drops)', () => {
+    const round = fixedRound(KOCKA, ['a', 'k', 'o', 'č', 'k']); // slots k o č k a
+    const filled = [null, null, null, null, null];
+    // 'a' directly onto box 4 (later box) - placed there, not wrong.
+    expect(composeSelectionOutcome(round, filled, 0, 4, true)).toEqual({ kind: 'place', slotIndex: 4, directHit: true });
+    // 'k' directly onto box 3 (later duplicate) stays in box 3.
+    expect(composeSelectionOutcome(round, filled, 1, 3, true)).toEqual({ kind: 'place', slotIndex: 3, directHit: true });
+    // A non-eligible direct-hit slot is ignored as a hit: 'a' onto box 1 ('o') -> wrong.
+    expect(composeSelectionOutcome(round, filled, 0, 1, true)).toEqual({ kind: 'wrong' });
+  });
+
+  test('ignored when inactive, already placed or word complete', () => {
+    const round = fixedRound(MAMA, ['a', 'm', 'a', 'm']);
+    expect(composeSelectionOutcome(round, empty, 1, null, false)).toEqual({ kind: 'ignored' });
+    expect(composeSelectionOutcome(round, [1, null, null, null], 1, null, true)).toEqual({ kind: 'ignored' });
+    expect(composeSelectionOutcome(round, [1, 0, 3, 2], 1, null, true)).toEqual({ kind: 'ignored' });
+    expect(firstEmptySlotIndex([1, 0, 3, 2])).toBeNull();
+    expect(firstEmptySlotIndex([1, null, 3, null])).toBe(1);
+  });
+
+  // The screen wiring (wrong outcome -> recordWrongDrop) is pinned in composeScreenWiring.test.ts (repair test gap a).
+
+  test('resolveDrop + composeSelectionOutcome end-to-end with constructed rectangles (repair L1)', () => {
+    const box = (x: number) => ({ x, y: 100, width: 50, height: 50 });
+    const rectangles = [0, 50, 100, 150].map(box); // adjacent boxes: A N N A
+    const anna = fixedRound(word('anna', 'anna', ['an', 'na']), ['n', 'a', 'n', 'a']); // slots a n n a
+    const release = (filled: readonly (number | null)[], tileId: number, x: number) =>
+      composeSelectionOutcome(anna, filled, tileId, resolveDrop(anna, filled, tileId, { x, y: 100, width: 50, height: 50 }, rectangles), true);
+    const none = [null, null, null, null];
+    // 'n' sloppily over box 1 (first empty after A) and box 2: box 1.
+    expect(release([1, null, null, null], 0, 80)).toEqual({ kind: 'place', slotIndex: 1, directHit: true });
+    // 'n' precisely on box 2 only (box 1 not overlapped): out-of-order direct drop kept.
+    expect(release([1, null, null, null], 0, 100)).toEqual({ kind: 'place', slotIndex: 2, directHit: true });
+    // 'a' over box 0 (first empty) and nothing else: box 0; 'a' precisely on box 3: box 3.
+    expect(release(none, 1, 10)).toEqual({ kind: 'place', slotIndex: 0, directHit: true });
+    expect(release(none, 1, 150)).toEqual({ kind: 'place', slotIndex: 3, directHit: true });
+    // 'n' released over box 0 ('a', not eligible) only: no direct hit and 'n' is not box 0's value -> wrong.
+    expect(release(none, 0, 0)).toEqual({ kind: 'wrong' });
+    // 'a' released far away -> auto-placed into the first empty box.
+    expect(release(none, 3, 400)).toEqual({ kind: 'place', slotIndex: 0, directHit: false });
+  });
+
+  test('shades: wrong selection -> red serial + green on the correct tile; cleared on placement', () => {
+    const round = fixedRound(KOCKA, ['a', 'k', 'o', 'č', 'k']); // slots k o č k a
+    const filled = [null, null, null, null, null];
+    expect(correctTileId(round, filled)).toBe(1);
+    let shades = composeShadesAfterWrongSelection(NO_COMPOSE_SHADES, 0, round, filled);
+    expect(shades).toEqual({ green: 1, red: { tileId: 0, serial: 1 } });
+    shades = composeShadesAfterWrongSelection(shades, 0, round, filled);
+    expect(shades.red).toEqual({ tileId: 0, serial: 2 });
+    // Out-of-order direct drop of 'a' (tile 0) into box 4: red of tile 0 cleared, green on tile 1 stays (still correct).
+    const afterDirect = [null, null, null, null, 0];
+    shades = composeShadesAfterPlacement(shades, 0, round, afterDirect);
+    expect(shades).toEqual({ green: 1, red: null });
+    // The green tile placed -> green cleared.
+    expect(composeShadesAfterPlacement(shades, 1, round, [1, null, null, null, 0])).toEqual(NO_COMPOSE_SHADES);
+  });
+
+  test('shades: a duplicate filling the first box clears the green of the other duplicate (MAMA)', () => {
+    const round = fixedRound(MAMA, ['a', 'm', 'a', 'm']); // slots m a m a
+    const shades = composeShadesAfterWrongSelection(NO_COMPOSE_SHADES, 0, round, empty);
+    expect(shades.green).toBe(1);
+    // Tile 3 ('m') fills box 0; next expected 'a' -> tile 1 is no longer the correct one.
+    expect(composeShadesAfterPlacement(shades, 3, round, [3, null, null, null])).toEqual({ green: null, red: { tileId: 0, serial: 1 } });
+    expect(correctTileId(round, [3, null, null, null])).toBe(0);
+  });
+
+  test('shades: the green tile dropped into a LATER box -> green moves to the other duplicate (repair L2)', () => {
+    const round = fixedRound(MAMA, ['a', 'm', 'a', 'm']); // slots m a m a
+    let shades = composeShadesAfterWrongSelection(NO_COMPOSE_SHADES, 0, round, empty);
+    expect(shades).toEqual({ green: 1, red: { tileId: 0, serial: 1 } });
+    // Green tile 1 ('m') directly into box 2: box 0 still needs 'm' -> green on tile 3.
+    shades = composeShadesAfterPlacement(shades, 1, round, [null, null, 1, null]);
+    expect(shades).toEqual({ green: 3, red: { tileId: 0, serial: 1 } });
+    // A non-green tile ('a', tile 2) into later box 3: green stays on tile 3.
+    shades = composeShadesAfterPlacement(shades, 2, round, [null, null, 1, 2]);
+    expect(shades.green).toBe(3);
+    // Box 0 gets its value -> green cleared (red of tile 0 untouched until tile 0 is placed).
+    shades = composeShadesAfterPlacement(shades, 3, round, [3, null, 1, 2]);
+    expect(shades).toEqual({ green: null, red: { tileId: 0, serial: 1 } });
+    expect(composeShadesAfterPlacement(shades, 0, round, [3, 0, 1, 2])).toEqual(NO_COMPOSE_SHADES);
+    // No wrong selection in the round -> placements never create a green shade.
+    expect(composeShadesAfterPlacement(NO_COMPOSE_SHADES, 1, round, [null, null, 1, null])).toEqual(NO_COMPOSE_SHADES);
   });
 });
 

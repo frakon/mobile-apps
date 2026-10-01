@@ -31,14 +31,21 @@ The intro page (`app/index.tsx`) lists the trainings from the extensible registr
 
 - **Skládání slov – písmena / slabiky** (`app/compose.tsx?variant=letters|syllables`, logic in `src/compose/`) – drag the
   shuffled letter/syllable tiles into one box per letter/syllable (react-native-gesture-handler + reanimated). Arrow from
-  the first-letter tile to box 1 (hidden once filled); tile spoken at drag start; any overlap with an eligible box snaps
-  (duplicates interchangeable, larger overlap wins), else slides back in 0.5 s; ✓ then next round after
-  max(500 ms, sound end); 10 rounds + results (correct = no wrong drop). Letters: 3–8 tiles; syllables: 2–5 syllables,
+  the first-letter tile to box 1 (hidden once filled); tile spoken at drag start; any overlap with an eligible box fills
+  that box (duplicates interchangeable; the first empty box wins when overlapped, else the larger overlap; also a later
+  box - precise out-of-order direct drops kept); otherwise
+  the tile belonging to the first empty box slides there automatically (0.5 s) when tapped, moved a little or released
+  anywhere (`_LetterTraining_PROMPTS.md` "## Follow-up prompt 11"); any other tap / release is wrong: slides back in
+  0.5 s, red shade fading 2 s on it + green shade on the correct tile until the first empty box gets its value (moves to the other duplicate if
+  the green tile is dropped into a later box); ✓ when the last tile lands, then next round after max(500 ms, sound end)
+  counted from the landing; 10 rounds + results (correct = no wrong selection, taps included). Letters: 3–8 tiles; syllables: 2–5 syllables,
   `excludeLevel2` words skipped. Settings (⚙ in the game header, `app/compose-settings.tsx`): tile case CAPITALS /
   lower_case, persisted with AsyncStorage.
-  Autonomous decisions (not user-specified, may be changed on request): default tile case CAPITALS; a release after
-  moving < 12 px is a tap (slides back, not a wrong drop); a release mostly (> 50 %) on the tile's own home spot is not a
-  wrong drop; completion waits at most 3000 ms for the last tile sound; the screen is locked to portrait; the ✓ is shown
+  Autonomous decisions (not user-specified, may be changed on request): default tile case CAPITALS; direct-hit
+  placements also use the 0.5 s eased slide; a release overlapping the first empty box and a later matching box fills the
+  first empty box (refines "## Q&A 11" out-of-order drops to precise hits); a second wrong tile cuts the previous red fade
+  (as the train); green shade fades in/out in 250 ms (as the train); (the former "< 12 px tap"
+  and "release on own home spot" non-wrong rules are superseded by "## Q&A 11"); completion waits at most 3000 ms for the last tile sound; the screen is locked to portrait; the ✓ is shown
   directly above the last box (in the empty gap between the tiles row and the boxes row).
 
 - **Abecedový vlak** (`app/train.tsx`, logic in `src/train/`) – landscape; steam engine + attached wagons on top (train

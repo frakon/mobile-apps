@@ -244,3 +244,20 @@ Further specification of "Abecedový vlak":
 the jumping 1 s move - the device's Reduce Motion setting collapsing Reanimated animations - is an UNCONFIRMED
 HYPOTHESIS (all train animations now opt out of it anyway), pending one device run checking the Metro log line
 '[train] system Reduce Motion'.)
+
+## Follow-up prompt 11 — Skládání slov further specification + pronunciation (verbatim) (2026-10-01)
+Further specification of "Slož slovo z písmen (skládání slov - písmena)" and "Skládání slov - slabiky":
+* the correct next letter or syllable shall be placed into the box automatically also when just tapped or dragged and released anywhere (the letter/syllable which belongs to the first empty placeholder box from the left does not need to be dragged directly to that box: only small move or tapping is enough to place it there automatically)
+* the letters "A", "E", "O", "U" are pronounced shortly. They shall be pronounced like "Á" or "É" despite them being short. The "I" shall be pronounced "Í" and not "měkké I" (the "ííí" sound is ok and usual). The "á" shall not be read as "dlouhé á", but just "á" again (the same as "A" is read). The same for other similar: e,i,o,u. All the three "u" shall be read the same here: "u", "ů", "ú". These rules for pronounciation apply everywhere where it is not important to clearly distinguish between "A" and "á", or between "ú" and "ů". This does not hold for pexeso: in pexeso we need to distinguish between them, so we read it followingly: "A" reads as: "á", "Á" reads as "dlouhé á", "I" reads as "měkké í", "í" reads as "dlouhé měkké í", etc.
+
+## Q&A 11 — Skládání slov tap-to-place + pronunciation (user answers, verbatim labels)
+- Later-box direct drops: "Keep out-of-order direct drops" (a precise drop onto a matching later box still fills that box; tap/release-anywhere fills the first empty one).
+- Wrong tap: "Wrong tap counts too" (any wrong selection counts, like the train).
+- Wrong feedback: "Train-style red+green shades".
+- Pexeso ú/ů: "Keep current texts".
+- y/ý: "Keep ypsilon".
+- Pexeso E/O/U: "Yes, é/ó/ú".
+- Audio approval: "Pause for my listening approval first".
+
+(Status note, not a user prompt: only the first bullet (tap-to-place) is implemented in this package. The pronunciation
+bullet (audio wiring) is a SEPARATE later package, pending the user's listening approval of the new recordings.)

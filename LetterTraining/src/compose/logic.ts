@@ -202,6 +202,10 @@ export function eligibleSlots(round: ComposeRound, filledSlots: readonly (number
 
 // The box a released tile snaps into: among the eligible boxes with ANY (positive-area) intersection, the one with the
 // largest overlap (evaluator default in "## Q&A 5"); null = slide back.
+// DECISION (refines "## Q&A 11" "Keep out-of-order direct drops", repair L1): that answer is about PRECISE hits of a later
+// box, so when the overlapped eligible boxes include the FIRST EMPTY box (sloppy release over it and an adjacent duplicate
+// box - ANNA, MA-MA), the first empty box wins regardless of overlap size; a later box is filled only when the release
+// does not overlap the first empty box.
 export function resolveDrop(
   round: ComposeRound,
   filledSlots: readonly (number | null)[],
@@ -211,8 +215,12 @@ export function resolveDrop(
 ): number | null {
   let best: number | null = null;
   let bestArea = 0;
+  const firstEmpty = firstEmptySlotIndex(filledSlots);
   for (const slotIndex of eligibleSlots(round, filledSlots, tileId)) {
     const area = intersectionArea(tileRectangle, slotRectangles[slotIndex]);
+    if (area > 0 && slotIndex === firstEmpty) {
+      return slotIndex;
+    }
     if (area > bestArea) {
       bestArea = area;
       best = slotIndex;
@@ -296,12 +304,102 @@ export function scaleRectangle(rectangle: Rectangle, scale: number): Rectangle {
   return { x: rectangle.x - (width - rectangle.width) / 2, y: rectangle.y - (height - rectangle.height) / 2, width, height };
 }
 
-// A failed release lying mostly (> 50 % of the tile) on its own home spot is not a wrong drop (verification compose R1 LOW).
-export function isReleasedOnHome(tileRectangle: Rectangle, homeRectangle: Rectangle): boolean {
-  return intersectionArea(tileRectangle, homeRectangle) > 0.5 * homeRectangle.width * homeRectangle.height;
+// ---- Tap-to-place selection (`_LetterTraining_PROMPTS.md` / "## Follow-up prompt 11", "## Q&A 11") ----
+// SUPERSEDED old DECISIONS (removed): "a release after moving < 12 px is a tap (slides back, NOT a wrong drop)" and
+// "a release mostly (> 50 %) on the tile's own home spot is not a wrong drop" (isReleasedOnHome) - "## Q&A 11":
+// "Wrong tap counts too" (any wrong selection counts, like the train).
+
+// Index of the first empty box from the left, or null when every box is filled.
+export function firstEmptySlotIndex(filledSlots: readonly (number | null)[]): number | null {
+  const index = filledSlots.findIndex((tileId) => tileId === null);
+  return index < 0 ? null : index;
 }
 
-// ---- Scoring ("## Q&A 4": round correct only if there was no wrong drop) ----
+export type ComposeSelectionOutcome =
+  | { readonly kind: 'place'; readonly slotIndex: number; readonly directHit: boolean }
+  | { readonly kind: 'wrong' }
+  | { readonly kind: 'ignored' };
+
+// What a release (tap, small move or drag-and-release anywhere) of a tile does:
+// - "## Q&A 11" "Keep out-of-order direct drops": a release overlapping an eligible empty box (resolveDrop result,
+//   `directHitSlot`) fills THAT box, also a later one;
+// - "## Follow-up prompt 11": otherwise a tile whose value equals the value of the first empty box from the left is
+//   placed there automatically, wherever it was released (duplicates interchangeable);
+// - otherwise it is a wrong selection ("## Q&A 11": "Wrong tap counts too").
+export function composeSelectionOutcome(
+  round: ComposeRound,
+  filledSlots: readonly (number | null)[],
+  tileId: number,
+  directHitSlot: number | null,
+  active: boolean
+): ComposeSelectionOutcome {
+  const firstEmpty = firstEmptySlotIndex(filledSlots);
+  if (!active || firstEmpty === null || filledSlots.includes(tileId) || round.tiles[tileId] === undefined) {
+    return { kind: 'ignored' };
+  }
+  if (directHitSlot !== null && eligibleSlots(round, filledSlots, tileId).includes(directHitSlot)) {
+    return { kind: 'place', slotIndex: directHitSlot, directHit: true };
+  }
+  if (round.tiles[tileId].value === round.slots[firstEmpty]) {
+    return { kind: 'place', slotIndex: firstEmpty, directHit: false };
+  }
+  return { kind: 'wrong' };
+}
+
+// The correct tile = the first not yet placed tile whose value belongs to the first empty box (green shade target).
+export function correctTileId(round: ComposeRound, filledSlots: readonly (number | null)[]): number | null {
+  const firstEmpty = firstEmptySlotIndex(filledSlots);
+  if (firstEmpty === null) {
+    return null;
+  }
+  const tile = round.tiles.find((candidate) => candidate.value === round.slots[firstEmpty] && !filledSlots.includes(candidate.id));
+  return tile === undefined ? null : tile.id;
+}
+
+// "## Q&A 11" "Train-style red+green shades" (mirrors src/train/logic.ts ShadeState): a wrong selection flashes a red
+// shade on that tile (fading RED_SHADE_FADE_MILLISECONDS; the serial restarts the fade) and puts a permanent green
+// shade on the correct tile until it is placed.
+export interface ComposeShadeState {
+  readonly green: number | null; // tile id
+  readonly red: { readonly tileId: number; readonly serial: number } | null;
+}
+
+export const NO_COMPOSE_SHADES: ComposeShadeState = { green: null, red: null };
+
+export function composeShadesAfterWrongSelection(
+  shades: ComposeShadeState,
+  wrongTileId: number,
+  round: ComposeRound,
+  filledSlots: readonly (number | null)[]
+): ComposeShadeState {
+  return { green: correctTileId(round, filledSlots), red: { tileId: wrongTileId, serial: (shades.red?.serial ?? 0) + 1 } };
+}
+
+// After a placement (`filledSlotsAfter` already contains it): the placed tile loses its red shade. The green shade (active
+// only after a wrong selection) stays until the box it points to - the first empty box - gets its value placed (as the
+// train: green until the wagon is correctly connected): repair L2 - when the placement went into a LATER box (out-of-order
+// direct drop, possibly of the green tile itself, e.g. one A of ANNA), green is re-assigned to the current correct tile;
+// when the first empty box was filled (by any duplicate) or the word is complete, green is cleared.
+export function composeShadesAfterPlacement(
+  shades: ComposeShadeState,
+  placedTileId: number,
+  round: ComposeRound,
+  filledSlotsAfter: readonly (number | null)[]
+): ComposeShadeState {
+  const red = shades.red?.tileId === placedTileId ? null : shades.red;
+  if (shades.green === null) {
+    return { green: null, red };
+  }
+  const placedSlot = filledSlotsAfter.indexOf(placedTileId);
+  // The first empty box BEFORE this placement = the first box that is empty now or holds the just-placed tile.
+  const firstEmptyBefore = filledSlotsAfter.findIndex((tileId) => tileId === null || tileId === placedTileId);
+  if (placedSlot < 0 || placedSlot === firstEmptyBefore) {
+    return { green: null, red };
+  }
+  return { green: correctTileId(round, filledSlotsAfter), red };
+}
+
+// ---- Scoring ("## Q&A 4": round correct only if there was no wrong drop; "## Q&A 11": a wrong tap counts too) ----
 
 export interface ComposeProgress {
   readonly roundIndex: number;

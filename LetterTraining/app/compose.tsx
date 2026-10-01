@@ -8,12 +8,20 @@
 // - arrow from a tile carrying the word's first letter/syllable to the first box, hidden once box 1 is filled;
 // - drag start: the tile's letter name / syllable is spoken once ("## Q&A 4": at drag start);
 // - release with ANY intersection with an eligible (empty, same value) box: centred into it and locked (largest
-//   overlap wins); otherwise it slides back to its place in 500 ms and the round is scored wrong ("## Q&A 4");
+//   overlap wins; "## Q&A 11" "Keep out-of-order direct drops" - also a later box);
+// - "## Follow-up prompt 11" (tap-to-place): otherwise a tile belonging to the FIRST EMPTY box from the left - tapped,
+//   moved a little or released anywhere - slides into that box automatically (PLACE_MILLISECONDS, eased, never reduced);
+// - any other release (also a pure tap, "## Q&A 11" "Wrong tap counts too") is a wrong selection: slides back in
+//   500 ms, the round is scored wrong, red shade on it fading in 2 s + permanent green shade on the correct tile until
+//   it is placed ("## Q&A 11" "Train-style red+green shades"; logic: composeSelectionOutcome / composeShades*);
 // - word complete: green ✓ next to the word (directly above its last box, in the then-empty arrow gap) + green tiles,
-//   next round after max(500 ms, end of the last tile sound) ("## Q&A 5").
+//   next round after max(500 ms, end of the last tile sound) ("## Q&A 5"), counted from the moment the last tile LANDS in
+//   its box (repair M1: the ✓ appears with the complete word on screen, which then stays visible >= 500 ms).
+// - L3 (known, kept as the train): a second wrong selection while a red shade is fading cuts that fade (red moves on).
 // Autonomous decisions (NOT user-specified; listed in README.md):
-// - DECISION: a release after moving < 12 px is treated as a tap (slides back, NOT a wrong drop).
-// - DECISION: a release with > 50 % overlap of the tile's own home spot is NOT a wrong drop (softens "## Q&A 4").
+// - SUPERSEDED by "## Q&A 11" ("Wrong tap counts too"): the old DECISIONS "a release after moving < 12 px is a tap
+//   (slides back, NOT a wrong drop)" and "a release with > 50 % overlap of the tile's own home spot is NOT a wrong drop".
+// - DECISION: a direct-hit placement also uses the 0.5 s eased slide (was a 150 ms snap) - one placement animation.
 // - DECISION: completion waits at most 3000 ms for the last tile sound (COMPLETION_MAXIMUM_WAIT_MILLISECONDS).
 // - DECISION: the screen is locked to portrait while mounted.
 // - DECISION: tile case default CAPITALS (src/compose/settings.ts).
@@ -24,7 +32,7 @@ import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Image, LayoutChangeEvent, Pressable, StyleSheet, Text, View } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
-import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+import Animated, { Easing, ReduceMotion, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { playAudio, stopAudioIfOwnedBy } from '../src/audioController';
@@ -36,8 +44,10 @@ import {
   ComposeLayout,
   ComposeProgress,
   ComposeRound,
+  ComposeShadeState,
   ComposeVariant,
   INITIAL_COMPOSE_PROGRESS,
+  NO_COMPOSE_SHADES,
   Rectangle,
   TileCase,
   arrowSourceTileId,
@@ -45,8 +55,10 @@ import {
   collectComposeArchives,
   collectComposePreloadArchives,
   completeRound,
+  composeSelectionOutcome,
+  composeShadesAfterPlacement,
+  composeShadesAfterWrongSelection,
   computeLayout,
-  isReleasedOnHome,
   isWordComplete,
   recordWrongDrop,
   resolveDrop,
@@ -55,6 +67,8 @@ import {
   tileLabel,
 } from '../src/compose/logic';
 import { loadTileCase } from '../src/compose/settings';
+import { RED_SHADE_FADE_MILLISECONDS } from '../src/train/logic';
+import { ATTACH_MILLISECONDS } from '../src/train/motion';
 import { WordStartsDataset } from '../src/wordStarts/types';
 import { LETTER_AUDIO, REAL_SYLLABLES, SYLLABLE_AUDIO, WORDS } from '../src/words';
 
@@ -62,8 +76,15 @@ const DATASET: WordStartsDataset = { words: WORDS, letterAudio: LETTER_AUDIO, sy
 
 const FEEDBACK_DURATION_MILLISECONDS = 500;
 const SLIDE_BACK_MILLISECONDS = 500; // "sliding animation which shall last 0.5 seconds"
-const SNAP_MILLISECONDS = 150;
-const TAP_DISTANCE_PIXELS = 12;
+// "## Follow-up prompt 11": automatic slide into the box, consistent with the train's 0.5 s attach slide.
+const PLACE_MILLISECONDS = ATTACH_MILLISECONDS;
+// Repair M1: the completion feedback starts when the last tile's placement slide has landed.
+const COMPLETION_START_AFTER_RELEASE_MILLISECONDS = PLACE_MILLISECONDS;
+const GREEN_SHADE_MILLISECONDS = 250; // DECISION (as train.tsx): the green shade fades in / out quickly
+const EASE_IN_OUT = Easing.inOut(Easing.cubic);
+// As train.tsx NEVER_REDUCED: Reanimated's default ReduceMotion.System would jump straight to the end value when the
+// device's Reduce Motion setting is on; the placement slide must stay continuous.
+const NEVER_REDUCED = ReduceMotion.Never;
 const TILE_SOUND_SAFETY_TIMEOUT_MILLISECONDS = 5000;
 // DECISION (not user-specified): completion never waits longer than this for the last tile sound (verification compose R1 H1: no stuck round even if
 // the sound's end callback is lost).
@@ -98,6 +119,8 @@ export default function ComposeScreen() {
   const [boardWidth, setBoardWidth] = useState(0);
   // Tile currently dragged: the arrow skips it (verification compose R2 N4).
   const [draggedTileId, setDraggedTileId] = useState<number | null>(null);
+  // "## Q&A 11" "Train-style red+green shades" (reset per round; tiles are keyed per round, so they remount clean).
+  const [shades, setShades] = useState<ComposeShadeState>(NO_COMPOSE_SHADES);
   const mounted = useRef(true);
 
   const progressRef = useRef(progress);
@@ -111,6 +134,8 @@ export default function ComposeScreen() {
   const pendingTileSound = useRef<number | null>(null);
   const tileSoundCounter = useRef(0);
   const onTileSoundEnded = useRef<(() => void) | null>(null);
+  // Repair M1: completion start scheduled for the landing of the last tile (null when none pending).
+  const pendingCompletion = useRef<(() => void) | null>(null);
   const completedRef = useRef(completed);
   completedRef.current = completed;
   const advanceNow = useRef<(() => void) | null>(null);
@@ -142,10 +167,14 @@ export default function ComposeScreen() {
         clearTimers();
         stopAudioIfOwnedBy(owner);
         pendingTileSound.current = null;
-        if (completedRef.current) {
+        // A completing word whose last tile is still sliding (repair M1: its landing timer was just cleared) advances too.
+        const landingCompletion = pendingCompletion.current;
+        pendingCompletion.current = null;
+        if (completedRef.current || landingCompletion !== null) {
           // Deferred + mounted check: this cleanup also runs on unmount, where advancing is pointless (verification compose R2 N5).
           queueMicrotask(() => {
             if (mounted.current) {
+              landingCompletion?.();
               advanceNow.current?.();
             }
           });
@@ -261,10 +290,12 @@ export default function ComposeScreen() {
     clearTimers();
     stopAudioIfOwnedBy(owner);
     pendingTileSound.current = null;
+    pendingCompletion.current = null;
     const plan = buildComposePlan(WORDS, variant);
     setRoundPlan(plan);
     setProgress(INITIAL_COMPOSE_PROGRESS);
     setFilledSlots(plan[0]?.slots.map(() => null) ?? []);
+    setShades(NO_COMPOSE_SHADES);
     setCompleted(false);
   }, [clearTimers, owner, variant]);
 
@@ -314,6 +345,8 @@ export default function ComposeScreen() {
   );
 
   // Word complete: ✓ next to the word, next round after max(500 ms, end of the last tile sound) ("## Q&A 5").
+  // Repair M1: called when the last tile LANDS (PLACE_MILLISECONDS after its release, see handleRelease), so the ✓ appears
+  // with the word complete on screen and the completed word stays visible >= FEEDBACK_DURATION_MILLISECONDS.
   const startCompletion = useCallback(() => {
     setCompleted(true);
     generation.current += 1;
@@ -331,6 +364,7 @@ export default function ComposeScreen() {
       progressRef.current = next;
       setProgress(next);
       setCompleted(false);
+      setShades(NO_COMPOSE_SHADES);
       setFilledSlots(roundPlan[next.roundIndex]?.slots.map(() => null) ?? []);
     };
     const tryAdvance = () => {
@@ -349,30 +383,43 @@ export default function ComposeScreen() {
     );
   }, [clearTimers, roundPlan]);
 
-  // Release: returns the box index the tile snaps into, or null (slide back).
+  // Release (tap, small move or drag): returns the box index the tile slides into, or null (slide back).
+  // "## Follow-up prompt 11" / "## Q&A 11": direct hit on an eligible box -> that box; else the first-empty-box tile
+  // auto-places there; else a wrong selection (counts for the score, red + green shades).
   const handleRelease = useCallback(
-    (tileId: number, tileRectangle: Rectangle, movedDistance: number): number | null => {
-      if (currentRound === null || layout === null || completed) {
+    (tileId: number, tileRectangle: Rectangle): number | null => {
+      if (currentRound === null || layout === null) {
         return null;
       }
       const slotRectangles = layout.columnX.map((x) => ({ x, y: layout.slotsRowY, width: layout.tileWidth, height: layout.tileHeight }));
-      const slotIndex = resolveDrop(currentRound, filledRef.current, tileId, tileRectangle, slotRectangles);
-      if (slotIndex === null) {
-        const homeRectangle = { x: layout.columnX[tileId], y: layout.tilesRowY, width: layout.tileWidth, height: layout.tileHeight };
-        // DECISIONS (not user-specified): tap (< 12 px) and release on the own home spot are not wrong drops.
-        if (movedDistance >= TAP_DISTANCE_PIXELS && !isReleasedOnHome(tileRectangle, homeRectangle)) {
-          const next = recordWrongDrop(progressRef.current);
-          progressRef.current = next;
-          setProgress(next);
-        }
+      const directHitSlot = resolveDrop(currentRound, filledRef.current, tileId, tileRectangle, slotRectangles);
+      const outcome = composeSelectionOutcome(currentRound, filledRef.current, tileId, directHitSlot, !completed);
+      if (outcome.kind === 'ignored') {
         return null;
       }
+      if (outcome.kind === 'wrong') {
+        const next = recordWrongDrop(progressRef.current);
+        progressRef.current = next;
+        setProgress(next);
+        const filledNow = filledRef.current;
+        setShades((previous) => composeShadesAfterWrongSelection(previous, tileId, currentRound, filledNow));
+        return null;
+      }
+      const slotIndex = outcome.slotIndex;
       const nextFilled = [...filledRef.current];
       nextFilled[slotIndex] = tileId;
       filledRef.current = nextFilled;
       setFilledSlots(nextFilled);
+      setShades((previous) => composeShadesAfterPlacement(previous, tileId, currentRound, nextFilled));
       if (isWordComplete(nextFilled)) {
-        startCompletion();
+        // Repair M1: every placement slides PLACE_MILLISECONDS, so the completion window (✓ + max(500 ms, sound end),
+        // "## Q&A 5") starts at landing, not at release. Meanwhile further releases are ignored (no empty box left).
+        const landed = () => {
+          pendingCompletion.current = null;
+          startCompletion();
+        };
+        pendingCompletion.current = landed;
+        timers.current.push(setTimeout(landed, COMPLETION_START_AFTER_RELEASE_MILLISECONDS));
       }
       return slotIndex;
     },
@@ -501,6 +548,8 @@ export default function ComposeScreen() {
                     enabled={slotIndex < 0 && !completed}
                     completed={completed}
                     isSyllable={variant === 'syllables'}
+                    greenShade={shades.green === tile.id && slotIndex < 0}
+                    redShadeSerial={shades.red?.tileId === tile.id ? shades.red.serial : 0}
                     onDragStart={handleDragStart}
                     onDragEnd={handleDragEnd}
                     onRelease={handleRelease}
@@ -573,12 +622,16 @@ interface DraggableTileProps {
   enabled: boolean;
   completed: boolean;
   isSyllable: boolean;
+  // "## Q&A 11" train-style shades: permanent green (the correct tile after a wrong selection) and the red shade
+  // serial (> 0 and changed -> the red shade appears and fades out over RED_SHADE_FADE_MILLISECONDS).
+  greenShade: boolean;
+  redShadeSerial: number;
   onDragStart: (tileId: number) => void;
   onDragEnd: (tileId: number) => void;
-  onRelease: (tileId: number, tileRectangle: Rectangle, movedDistance: number) => number | null;
+  onRelease: (tileId: number, tileRectangle: Rectangle) => number | null;
 }
 
-function DraggableTile({ tileId, label, layout, homeColumn, placedColumn, enabled, completed, isSyllable, onDragStart, onDragEnd, onRelease }: DraggableTileProps) {
+function DraggableTile({ tileId, label, layout, homeColumn, placedColumn, enabled, completed, isSyllable, greenShade, redShadeSerial, onDragStart, onDragEnd, onRelease }: DraggableTileProps) {
   const homeX = layout.columnX[homeColumn];
   const homeY = layout.tilesRowY;
   const targetX = placedColumn === null ? homeX : layout.columnX[placedColumn];
@@ -588,11 +641,30 @@ function DraggableTile({ tileId, label, layout, homeColumn, placedColumn, enable
   const dragging = useSharedValue(0);
   const start = useRef({ x: 0, y: 0 });
 
-  // Placement (centre into the box) and layout changes (rotation / resize) move the tile to its target.
+  const greenOpacity = useSharedValue(greenShade ? 1 : 0);
+  const redOpacity = useSharedValue(0);
+
+  // Placement (slide into the box from wherever it was released - "## Follow-up prompt 11") and layout changes
+  // (rotation / resize) move the tile to its target.
   useEffect(() => {
-    positionX.value = withTiming(targetX, { duration: SNAP_MILLISECONDS });
-    positionY.value = withTiming(targetY, { duration: SNAP_MILLISECONDS });
+    positionX.value = withTiming(targetX, { duration: PLACE_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
+    positionY.value = withTiming(targetY, { duration: PLACE_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
   }, [targetX, targetY, positionX, positionY]);
+
+  // "## Q&A 11" (as train.tsx PoolWagon): green permanent while this is the correct tile after a wrong selection.
+  useEffect(() => {
+    greenOpacity.value = withTiming(greenShade ? 1 : 0, { duration: GREEN_SHADE_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
+  }, [greenShade, greenOpacity]);
+
+  // Red shade on a wrong selection, fading out in 2 s; a new serial restarts the fade.
+  useEffect(() => {
+    if (redShadeSerial > 0) {
+      redOpacity.value = 1;
+      redOpacity.value = withTiming(0, { duration: RED_SHADE_FADE_MILLISECONDS, easing: Easing.out(Easing.quad), reduceMotion: NEVER_REDUCED });
+    } else {
+      redOpacity.value = 0;
+    }
+  }, [redShadeSerial, redOpacity]);
 
   const callbacks = useRef({ onDragStart, onDragEnd, onRelease, homeX, homeY, layout });
   callbacks.current = { onDragStart, onDragEnd, onRelease, homeX, homeY, layout };
@@ -612,18 +684,19 @@ function DraggableTile({ tileId, label, layout, homeColumn, placedColumn, enable
           positionX.value = start.current.x + event.translationX;
           positionY.value = start.current.y + event.translationY;
         })
-        .onEnd((event) => {
+        .onEnd((_event, success) => {
           const current = callbacks.current;
           const rectangle = scaleRectangle(
             { x: positionX.value, y: positionY.value, width: current.layout.tileWidth, height: current.layout.tileHeight },
             DRAG_SCALE
           );
-          const moved = Math.sqrt(event.translationX * event.translationX + event.translationY * event.translationY);
-          const slotIndex = current.onRelease(tileId, rectangle, moved);
+          // Cancelled by the system: never a selection (as train.tsx). A tap / small move counts like a drag-and-release
+          // ("## Follow-up prompt 11"; the old 12 px free-tap rule is superseded by "## Q&A 11").
+          const slotIndex = success ? current.onRelease(tileId, rectangle) : null;
           if (slotIndex === null) {
             // "move it back to its original location by sliding animation which shall last 0.5 seconds"
-            positionX.value = withTiming(current.homeX, { duration: SLIDE_BACK_MILLISECONDS });
-            positionY.value = withTiming(current.homeY, { duration: SLIDE_BACK_MILLISECONDS });
+            positionX.value = withTiming(current.homeX, { duration: SLIDE_BACK_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
+            positionY.value = withTiming(current.homeY, { duration: SLIDE_BACK_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
           }
         })
         .onFinalize(() => {
@@ -637,6 +710,8 @@ function DraggableTile({ tileId, label, layout, homeColumn, placedColumn, enable
     transform: [{ translateX: positionX.value }, { translateY: positionY.value }, { scale: dragging.value === 1 ? DRAG_SCALE : 1 }],
     zIndex: dragging.value === 1 ? 10 : 1,
   }));
+  const greenStyle = useAnimatedStyle(() => ({ opacity: greenOpacity.value }));
+  const redStyle = useAnimatedStyle(() => ({ opacity: redOpacity.value }));
 
   return (
     <GestureDetector gesture={pan}>
@@ -644,6 +719,8 @@ function DraggableTile({ tileId, label, layout, homeColumn, placedColumn, enable
         accessibilityLabel={label}
         style={[styles.tile, { width: layout.tileWidth, height: layout.tileHeight }, placedColumn !== null && styles.tilePlaced, completed && styles.tileCompleted, animatedStyle]}
       >
+        <Animated.View pointerEvents="none" style={[styles.shade, styles.greenShade, greenStyle]} />
+        <Animated.View pointerEvents="none" style={[styles.shade, styles.redShade, redStyle]} />
         <Text style={[styles.tileText, isSyllable && styles.tileTextSyllable]} numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.4}>
           {label}
         </Text>
@@ -703,6 +780,10 @@ const styles = StyleSheet.create({
   tileCompleted: { borderColor: '#1F8A3B', backgroundColor: '#DDF5E1' },
   tileText: { fontSize: 34, fontWeight: '800', color: '#E0457B' },
   tileTextSyllable: { fontSize: 28 },
+  // "## Q&A 11" train-style shades (copied from train.tsx): soft halo around the tile (iOS glow, Android tint only).
+  shade: { position: 'absolute', left: -8, top: -8, right: -8, bottom: -8, borderRadius: 18, shadowOffset: { width: 0, height: 0 }, shadowOpacity: 0.9, shadowRadius: 10 },
+  greenShade: { backgroundColor: 'rgba(60, 200, 90, 0.45)', shadowColor: '#2EBD4F' },
+  redShade: { backgroundColor: 'rgba(235, 60, 60, 0.45)', shadowColor: '#E53935' },
   arrowLine: { position: 'absolute', height: 4, borderRadius: 2, backgroundColor: '#5B3E96' },
   arrowHead: {
     position: 'absolute',
