@@ -30,12 +30,13 @@ export function wagonGeometry(wagonIndex: number): VehicleGeometry {
   return image === undefined ? { aspect: PLACEHOLDER_WAGON_ASPECT, baseline: PLACEHOLDER_BASELINE } : image;
 }
 
-export function Engine({ engineIndex, width }: { engineIndex: number; width: number }) {
-  const image = ENGINE_IMAGES[engineIndex];
+// `imageUri` = hot in-memory data URI of the engine picture from the backend archive `train/train.zip`
+// (`_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences"); undefined -> drawn placeholder.
+export function Engine({ engineIndex, width, imageUri }: { engineIndex: number; width: number; imageUri?: string }) {
   const geometry = engineGeometry(engineIndex);
   const height = width / geometry.aspect;
-  if (image !== undefined) {
-    return <Image source={image.source} style={{ width, height }} resizeMode="stretch" />;
+  if (imageUri !== undefined) {
+    return <Image source={{ uri: imageUri }} style={{ width, height }} resizeMode="stretch" />;
   }
   // Placeholder steam engine (faces left): chimney, boiler, cabin, wheels.
   const wheel = height * 0.3;
@@ -52,7 +53,8 @@ export function Engine({ engineIndex, width }: { engineIndex: number; width: num
   );
 }
 
-export function Wagon({ wagonIndex, width, label, colorSeed }: { wagonIndex: number; width: number; label: string; colorSeed: number }) {
+// `imageUri` as in Engine: the wagon picture from `train/train.zip`; undefined -> drawn placeholder.
+export function Wagon({ wagonIndex, width, label, colorSeed, imageUri }: { wagonIndex: number; width: number; label: string; colorSeed: number; imageUri?: string }) {
   const image = WAGON_IMAGES[wagonIndex];
   const geometry = wagonGeometry(wagonIndex);
   const height = width / geometry.aspect;
@@ -68,10 +70,10 @@ export function Wagon({ wagonIndex, width, label, colorSeed }: { wagonIndex: num
       </Text>
     </View>
   );
-  if (image !== undefined) {
+  if (imageUri !== undefined) {
     return (
       <View style={{ width, height }}>
-        <Image source={image.source} style={{ width, height }} resizeMode="stretch" />
+        <Image source={{ uri: imageUri }} style={{ width, height }} resizeMode="stretch" />
         {letter}
       </View>
     );

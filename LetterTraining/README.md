@@ -61,8 +61,11 @@ The intro page (`app/index.tsx`) lists the trainings from the extensible registr
   restarts the play; the settings page is landscape too.
 
 Word starts (`app/words.tsx?level=1|2|3`, logic in `src/wordStarts/`): 10 rounds per play, then a results page
-(„Správně: X/10", „Hrát znovu", „Zpět na výběr"). Assets of the current and the next 2 rounds are prefetched
-(same mechanism as TreninkPorozumeni). A round counts as correct only if the first tap is correct.
+(„Správně: X/10", „Hrát znovu", „Zpět na výběr"). Word pictures/audio come from the resource backend as per-word
+zip archives: the current round's archives are hot in memory before the round shows and the **next 5 rounds are
+preloaded** ahead (downloaded, disk-cached, unpacked; past rounds released) — see `src/resources/README.md`
+(supersedes the earlier 2-rounds-ahead bundled-Asset prefetch). A round counts as correct only if the first tap
+is correct.
 
 Feedback:
 - correct tap → green tint + green ✓ on the option, the letter/syllable sound plays, and the next round shows after

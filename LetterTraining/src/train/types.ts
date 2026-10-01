@@ -10,7 +10,9 @@ export interface FractionRectangle {
 }
 
 export interface TrainImage {
-  readonly source: number;
+  // Entry name inside the backend archive `train/train.zip` (e.g. 'engines/engine01.png') — the screen resolves it to
+  // a data URI via the resource module (`_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences").
+  readonly file: string;
   // width / height of the (trimmed) image.
   readonly aspect: number;
   // Wheel baseline (rail contact) as a fraction of the image height from the top - used to align all wheels on one rail.

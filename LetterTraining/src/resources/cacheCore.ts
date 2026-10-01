@@ -89,6 +89,15 @@ export class ArchiveCache {
     return existing !== undefined && existing.sha256 === manifestEntry.sha256;
   }
 
+  // Removes exactly one archive from disk + index. Used when its cached bytes turned out unusable
+  // (e.g. a corrupt zip): without this, a retry would re-serve the same corrupt bytes forever.
+  async evictArchive(archivePath: string): Promise<void> {
+    const index = await this.loadIndex();
+    await this._fileSystem.deleteFile(cacheFileNameForArchivePath(archivePath));
+    this.removeEntry(index, archivePath);
+    await this.saveIndex();
+  }
+
   async totalCachedBytes(): Promise<number> {
     const index = await this.loadIndex();
     return index.entries.reduce((sum, entry) => sum + entry.bytes, 0);

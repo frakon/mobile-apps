@@ -6,13 +6,22 @@
 // LetterTraining) (verbatim)".
 
 import { useFocusEffect, useRouter } from 'expo-router';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import PexesoGame from '../src/pexeso/PexesoGame';
+import { warmBundledAudioModules } from '../src/resources/warmBundledAudio';
+import { LETTER_AUDIO } from '../src/words';
 
 export default function PexesoScreen() {
   const router = useRouter();
   const [settingsReloadToken, setSettingsReloadToken] = useState(0);
+  // Letter/sound card types play BUNDLED letter audio (decision 2) — warmed here (route level, so the shared
+  // PexesoGame.tsx needs no warm-up code of its own; its identity with the standalone app is restored by the
+  // Phase E sync) so the first card flip never waits on the Metro
+  // download in Expo Go (verification Phase C R1 M2). Image-card word audio comes hot from the backend archives.
+  useEffect(() => {
+    warmBundledAudioModules(Object.values(LETTER_AUDIO));
+  }, []);
   useFocusEffect(
     useCallback(() => {
       setSettingsReloadToken((token) => token + 1);

@@ -54,8 +54,16 @@ contract on the app side).
 - `expoFileSystemAdapter.ts` — `CacheFileSystem` over expo-file-system (SDK 57 `File`/`Directory`
   API, Expo Go-compatible), cache dir `<cache>/backendResourceCache/`.
 - `resourceStore.ts` — facade: `configureResourceBackend`, `refreshManifest`,
-  `getUnpackedArchive`, `releaseUnpackedArchive`, `releaseAllUnpackedArchives`,
-  `areArchivesAvailableOffline`, `ResourceUnavailableError`. Unzips with pure-JS `fflate`
+  `getUnpackedArchive`, `getUnpackedArchiveIfHot` (synchronous hot-map lookup — basis of the
+  no-flicker round swap in `useArchivePreloading`), `releaseUnpackedArchive`,
+  `releaseAllUnpackedArchives`, `areArchivesAvailableOffline`, `ResourceUnavailableError`.
+  `refreshManifest` always tries a fresh fetch (new backend version always replaces the old),
+  de-duplicates concurrent calls into one request, persists the last good manifest to
+  `lastManifest.json` in the cache directory, and on failure falls back to: manifest from this
+  run → persisted manifest (offline COLD start with cached zips keeps working) → error.
+  A corrupt zip is evicted from the disk cache and re-downloaded once; failing again it is
+  evicted too, so the user's retry starts clean (never re-serves corrupt cached bytes).
+  Unzips with pure-JS `fflate`
   (native zip modules do not run in Expo Go) and yields per-file `dataUri` (base64) usable
   directly as `<Image source={{ uri }}>` and as expo-audio `AudioSource` (`{ uri }`) — the whole
   sound is hot in memory before the round starts.
@@ -77,4 +85,7 @@ contract on the app side).
   (no cryptographic integrity check — VPN-only trusted backend).
 - In-memory unpacked data intentionally does NOT count toward the 200MB limit (per preferences).
 - The disk cache index lives in `cacheIndex.json` inside the cache directory; a corrupt index
-  resets to empty and orphaned zips get overwritten on next download.
+  resets to empty and orphaned zips get overwritten on next download. The last good manifest is
+  persisted next to it as `lastManifest.json` (fallback only — a reachable backend always wins).
+- Network fetches (manifest + archives) run under one timeout that covers connect AND body read
+  (aborting also cancels a hanging `arrayBuffer()`/`json()`).

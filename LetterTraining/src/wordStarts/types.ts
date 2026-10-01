@@ -18,23 +18,22 @@ export interface WordEntry {
   readonly excludeLevel1: boolean;
   readonly excludeLevel2: boolean;
   readonly excludeLevel3: boolean;
-  // Static require('...png') of the picture (Metro module id).
-  readonly image: number;
-  // Static require('...mp3') of the plainly spoken word (Level 1).
-  readonly audio: number;
-  // The word with the FIRST syllable emphasized (KOČ-ka, Level 2) / the LAST syllable emphasized (koč-KA, Level 3) -
-  // `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 3 (verbatim)". Only words with >= 2 syllables; missing -> `audio`.
-  readonly audioFirst?: number;
-  readonly audioLast?: number;
+  // The word's picture + audio live in the backend archive `words/<id>.zip` (entries picture.png / word.mp3 /
+  // first.mp3 / last.mp3) — `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences (backend
+  // resources, cache, preload)". hasAudioFirst/hasAudioLast say whether the emphasized variants (KOČ-ka for Level 2 /
+  // koč-KA for Level 3, "## Follow-up prompt 3 (verbatim)") exist in that archive; missing -> plain word.mp3.
+  readonly hasAudioFirst?: boolean;
+  readonly hasAudioLast?: boolean;
 }
 
 // Spoken letter name per lowercase Czech letter ("ch" is one letter), e.g. { a: require(...), ch: require(...) }.
 // Missing letters are tolerated (no sound, plain 500 ms feedback).
 export type LetterAudioMap = Readonly<Partial<Record<string, number>>>;
 
-// Spoken syllable per lowercase syllable, e.g. { koč: require(...), ka: require(...) }.
-// Missing syllables are tolerated; option generation prefers syllables that have audio.
-export type SyllableAudioMap = Readonly<Partial<Record<string, number>>>;
+// Spoken syllable per lowercase syllable — the value is the mp3 entry name (folded, e.g. 'kocx.mp3') inside the
+// backend archive `syllables/<first char of the value>.zip`. Missing syllables are tolerated; option generation
+// prefers syllables that have audio.
+export type SyllableAudioMap = Readonly<Partial<Record<string, string>>>;
 
 // 1 = first letter, 2 = first syllable, 3 = last syllable.
 export type WordStartsLevel = 1 | 2 | 3;

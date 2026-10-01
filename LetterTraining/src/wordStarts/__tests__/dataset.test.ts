@@ -6,20 +6,20 @@ import { WordStartsDataset } from '../types';
 
 const DATASET: WordStartsDataset = { words: WORDS, letterAudio: LETTER_AUDIO, syllableAudio: SYLLABLE_AUDIO, realSyllables: REAL_SYLLABLES };
 
-test('every word has picture + audio, L2/L3-eligible words have their emphasized variant', () => {
+test('every word has a valid archive id, L2/L3-eligible words have their emphasized variant', () => {
   expect(WORDS.length).toBeGreaterThan(0);
   expect(new Set(WORDS.map((entry) => entry.id)).size).toBe(WORDS.length);
   for (const entry of WORDS) {
-    expect(entry.image).toBeDefined();
-    expect(entry.audio).toBeDefined();
+    // The id names the backend archive `words/<id>.zip` (archive model, "## Follow-up prompt 9").
+    expect(entry.id).toMatch(/^[a-z0-9_]+$/);
     expect(entry.syllables.join('')).toBe(entry.word);
   }
   // Emphasized variants are generated only for words eligible in L2 (first) / L3 (last); gen_emphasis.py skips excluded levels.
   for (const entry of eligibleWords(WORDS, 2)) {
-    expect(entry.audioFirst).toBeDefined();
+    expect(entry.hasAudioFirst).toBe(true);
   }
   for (const entry of eligibleWords(WORDS, 3)) {
-    expect(entry.audioLast).toBeDefined();
+    expect(entry.hasAudioLast).toBe(true);
   }
 });
 

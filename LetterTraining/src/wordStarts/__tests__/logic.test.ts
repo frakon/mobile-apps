@@ -8,18 +8,23 @@ import {
   buildLetterOptions,
   buildRoundPlan,
   buildSyllableOptions,
-  collectRoundAssetModules,
+  collectPreloadWindowArchives,
+  collectRoundArchives,
   correctAnswer,
   eligibleWords,
   firstLetter,
-  optionAudio,
+  optionAudioResource,
   optionLabel,
-  roundWordAudio,
+  resolveAudioSource,
+  roundWordAudioFile,
   synthesizeSyllables,
+  wordArchivePath,
 } from '../logic';
 import { WordEntry, WordStartsDataset } from '../types';
 
-function word(id: string, text: string, syllables: string[], image: number, audio: number, extra: Partial<WordEntry> = {}): WordEntry {
+// The two unused numeric parameters kept the historic call sites unchanged when the dataset moved from Metro module
+// ids to backend archives (the picture/audio now live in `words/<id>.zip` — wordArchivePath).
+function word(id: string, text: string, syllables: string[], _image: number = 0, _audio: number = 0, extra: Partial<WordEntry> = {}): WordEntry {
   return {
     id,
     word: text,
@@ -29,8 +34,6 @@ function word(id: string, text: string, syllables: string[], image: number, audi
     excludeLevel1: false,
     excludeLevel2: false,
     excludeLevel3: false,
-    image,
-    audio,
     ...extra,
   };
 }
@@ -48,7 +51,8 @@ const WORDS: WordEntry[] = [
 const DATASET: WordStartsDataset = {
   words: WORDS,
   letterAudio: { k: 301, ch: 302, p: 303, a: 304, m: 305 },
-  syllableAudio: { koč: 401, ko: 402, ba: 403, da: 404 },
+  // Values = mp3 entry name inside `syllables/<first char>.zip` (folded names, see ResourceBackend/pack.js).
+  syllableAudio: { koč: 'kocx.mp3', ko: 'ko.mp3', ba: 'ba.mp3', da: 'da.mp3' },
 };
 
 // Deterministic pseudo-random source.
@@ -182,14 +186,14 @@ describe('buildSyllableOptions', () => {
   });
 
   test('never an option equal to the correct one; real syllables preferred over synthetic ones with audio', () => {
-    const synthAudio: Record<string, number> = {};
+    const synthAudio: Record<string, string> = {};
     for (const syllable of [...synthesizeSyllables('k'), ...synthesizeSyllables('m')]) {
-      synthAudio[syllable] = 900;
+      synthAudio[syllable] = `${syllable}.mp3`;
     }
     const dataset: WordStartsDataset = {
       words: [word('kocka', 'kočka', ['koč', 'ka'], 1, 2)],
       letterAudio: {},
-      syllableAudio: { ...synthAudio, kos: 501, mýd: 502, lo: 503, lí: 504 },
+      syllableAudio: { ...synthAudio, kos: 'kos.mp3', mýd: 'myyd.mp3', lo: 'lo.mp3', lí: 'lii.mp3' },
       realSyllables: ['koč', 'ka', 'kos', 'mýd', 'lo', 'lí'],
     };
     for (let seed = 1; seed < 100; seed++) {
@@ -250,27 +254,66 @@ describe('buildRoundPlan', () => {
   });
 });
 
-test('optionAudio and collectRoundAssetModules', () => {
+test('optionAudioResource, resolveAudioSource and collectRoundArchives (archive model)', () => {
   const round = { level: 2 as const, word: WORDS[0], options: ['koč', 'ko', 'da', 'dů'], correctIndex: 0 };
-  expect(optionAudio(round, 'koč', DATASET)).toBe(401);
-  expect(optionAudio(round, 'dů', DATASET)).toBeUndefined();
-  expect(collectRoundAssetModules(round, DATASET)).toEqual([101, 201, 401, 402, 404]);
+  expect(optionAudioResource(round, 'koč', DATASET)).toEqual({ kind: 'archive', archivePath: 'syllables/k.zip', fileName: 'kocx.mp3' });
+  expect(optionAudioResource(round, 'da', DATASET)).toEqual({ kind: 'archive', archivePath: 'syllables/d.zip', fileName: 'da.mp3' });
+  expect(optionAudioResource(round, 'dů', DATASET)).toBeUndefined();
+  // Round archives: the word's zip + the syllable-group zips of the options (deduplicated).
+  expect(wordArchivePath(WORDS[0])).toBe('words/kocka.zip');
+  expect(collectRoundArchives(round, DATASET)).toEqual(['words/kocka.zip', 'syllables/k.zip', 'syllables/d.zip']);
+  // Level 1: letter audio is BUNDLED -> only the word's archive.
   const letterRound = { level: 1 as const, word: WORDS[0], options: ['k', 'p', 'z'], correctIndex: 0 };
-  expect(collectRoundAssetModules(letterRound, DATASET)).toEqual([101, 201, 301, 303]);
+  expect(optionAudioResource(letterRound, 'k', DATASET)).toEqual({ kind: 'bundled', module: 301 });
+  expect(optionAudioResource(letterRound, 'z', DATASET)).toBeUndefined();
+  expect(collectRoundArchives(letterRound, DATASET)).toEqual(['words/kocka.zip']);
+  // resolveAudioSource: bundled module passes through; archive entries resolve to the hot data URI.
+  const archives = {
+    'syllables/k.zip': { archivePath: 'syllables/k.zip', files: { 'kocx.mp3': { bytes: new Uint8Array(0), dataUri: 'data:k' } } },
+  };
+  expect(resolveAudioSource({ kind: 'bundled', module: 301 }, archives)).toBe(301);
+  expect(resolveAudioSource(optionAudioResource(round, 'koč', DATASET), archives)).toEqual({ uri: 'data:k' });
+  expect(resolveAudioSource(optionAudioResource(round, 'da', DATASET), archives)).toBeUndefined(); // archive not hot
+  expect(resolveAudioSource(undefined, archives)).toBeUndefined();
 });
 
-test('roundWordAudio + prefetch use the emphasized variant (Follow-up prompt 3)', () => {
-  const emphasized = word('kocka', 'kočka', ['koč', 'ka'], 101, 201, { audioFirst: 601, audioLast: 602 });
+test('roundWordAudioFile uses the emphasized variant (Follow-up prompt 3)', () => {
+  const emphasized = word('kocka', 'kočka', ['koč', 'ka'], 101, 201, { hasAudioFirst: true, hasAudioLast: true });
   const level1 = { level: 1 as const, word: emphasized, options: ['k', 'p', 'a'], correctIndex: 0 };
   const level2 = { level: 2 as const, word: emphasized, options: ['koč', 'ko', 'da', 'dů'], correctIndex: 0 };
   const level3 = { level: 3 as const, word: emphasized, options: ['ka', 'ko', 'da', 'dů'], correctIndex: 0 };
-  expect(roundWordAudio(level1)).toBe(201);
-  expect(roundWordAudio(level2)).toBe(601);
-  expect(roundWordAudio(level3)).toBe(602);
-  expect(collectRoundAssetModules(level2, DATASET)).toEqual([101, 601, 401, 402, 404]);
-  expect(collectRoundAssetModules(level3, DATASET)).toEqual([101, 602, 402, 404]);
+  expect(roundWordAudioFile(level1)).toBe('word.mp3');
+  expect(roundWordAudioFile(level2)).toBe('first.mp3');
+  expect(roundWordAudioFile(level3)).toBe('last.mp3');
   // missing emphasized mp3 -> plain word
-  expect(roundWordAudio({ ...level3, word: WORDS[0] })).toBe(201);
+  expect(roundWordAudioFile({ ...level3, word: WORDS[0] })).toBe('word.mp3');
+});
+
+test('collectPreloadWindowArchives: current round + next 5, deduplicated, in round order (5-round preload)', () => {
+  const plan = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'].map((letter, index) => ({
+    level: 1 as const,
+    word: word(`w${letter}`, `${letter}ovo${index}`, [`${letter}o`, `vo${index}`]),
+    options: ['k', 'p', 'z'],
+    correctIndex: 0,
+  }));
+  // Round 0: rounds 0..5 (current + PRELOAD_ROUNDS_AHEAD = 5) — rounds 6/7 are NOT preloaded yet.
+  expect(collectPreloadWindowArchives(plan, 0, DATASET)).toEqual(
+    ['wa', 'wb', 'wc', 'wd', 'we', 'wf'].map((id) => `words/${id}.zip`)
+  );
+  // Round 2: rounds 2..7 — the archives of the passed rounds 0/1 are no longer in the window (they get released).
+  expect(collectPreloadWindowArchives(plan, 2, DATASET)).toEqual(
+    ['wc', 'wd', 'we', 'wf', 'wg', 'wh'].map((id) => `words/${id}.zip`)
+  );
+  // Near the end the window just clips to the plan.
+  expect(collectPreloadWindowArchives(plan, 6, DATASET)).toEqual(['wg', 'wh'].map((id) => `words/${id}.zip`));
+  // A repeated word is preloaded once; level-2 rounds add their syllable-group zips after the word zips of earlier rounds.
+  const level2Plan = [
+    { level: 2 as const, word: WORDS[0], options: ['koč', 'ko', 'da', 'dů'], correctIndex: 0 },
+    { level: 2 as const, word: WORDS[0], options: ['koč', 'ba', 'da', 'dů'], correctIndex: 0 },
+  ];
+  expect(collectPreloadWindowArchives(level2Plan, 0, DATASET)).toEqual(
+    ['words/kocka.zip', 'syllables/k.zip', 'syllables/d.zip', 'syllables/b.zip']
+  );
 });
 
 describe('scoring', () => {

@@ -2,6 +2,7 @@
 // `_LetterTraining_PROMPTS.md` / "## Initial request (2026-10-01)" (Word starts training: General notes, Level 1-3)
 // and "## Q&A (2026-10-01)". No React / native imports here so everything is unit-testable with jest.
 
+import type { UnpackedArchive } from '../resources/types';
 import { WordEntry, WordStartsDataset, WordStartsLevel, WordStartsRound } from './types';
 
 // "every play will have 10 rounds" - `_LetterTraining_PROMPTS.md` / "## Initial request (2026-10-01)".
@@ -202,42 +203,107 @@ export function buildRoundPlan(
   return sequence.slice(0, roundCount).map((word) => buildRound(word, level, dataset, random));
 }
 
-// Sound of an option: level 1 the letter name, levels 2/3 the syllable ("## Q&A (2026-10-01)": say the tapped
-// syllable like level 1). undefined = no audio available (tolerated).
-// The word audio a round plays (auto-play + replay button): level 1 the plain word, level 2 the word with the FIRST
-// syllable emphasized, level 3 with the LAST syllable emphasized (`_LetterTraining_PROMPTS.md` /
+// ---- Backend archives (`_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences (backend
+// resources, cache, preload)"): per-exercise pictures/audio come from backend zips; letter audio stays bundled. ----
+
+// Preferences skill: "While in a round, preload the next 5 rounds" — supersedes the earlier 2-rounds-ahead prefetch
+// ("## Follow-up prompt 9", user decision 3).
+export const PRELOAD_ROUNDS_AHEAD = 5;
+
+// Fixed entry names inside `words/<id>.zip` (ResourceBackend/pack.js; src/resources/README.md contract).
+export const WORD_PICTURE_FILE = 'picture.png';
+
+// An audio resource a screen can play: a bundled Metro module (letter names) or an entry of a backend archive
+// (word / syllable mp3s, hot in memory once the archive is unpacked).
+export type AudioResource =
+  | { readonly kind: 'bundled'; readonly module: number }
+  | { readonly kind: 'archive'; readonly archivePath: string; readonly fileName: string };
+
+// Backend archive of a word's picture + audio variants.
+export function wordArchivePath(word: WordEntry): string {
+  return `words/${word.id}.zip`;
+}
+
+// The syllable's mp3: SYLLABLE_AUDIO maps the syllable to its folded entry name; the archive is the per-first-character
+// group zip (ResourceBackend/pack.js groups syllable mp3s by the first character of the folded file name).
+export function syllableAudioResource(syllable: string, dataset: WordStartsDataset): AudioResource | undefined {
+  const fileName = dataset.syllableAudio[syllable];
+  if (fileName === undefined || fileName.length === 0) {
+    return undefined;
+  }
+  return { kind: 'archive', archivePath: `syllables/${fileName[0]}.zip`, fileName };
+}
+
+// Turns an AudioResource into something playAudio accepts: a bundled Metro module id, or the hot in-memory data URI
+// of the already-unpacked archive entry. undefined = no audio (missing resource or archive not hot) — tolerated.
+export function resolveAudioSource(
+  resource: AudioResource | undefined,
+  archives: Readonly<Record<string, UnpackedArchive>>
+): number | { uri: string } | undefined {
+  if (resource === undefined) {
+    return undefined;
+  }
+  if (resource.kind === 'bundled') {
+    return resource.module;
+  }
+  const dataUri = archives[resource.archivePath]?.files[resource.fileName]?.dataUri;
+  return dataUri === undefined ? undefined : { uri: dataUri };
+}
+
+// The word-audio entry a round plays (auto-play + replay button): level 1 the plain word, level 2 the word with the
+// FIRST syllable emphasized, level 3 with the LAST syllable emphasized (`_LetterTraining_PROMPTS.md` /
 // "## Follow-up prompt 3 (verbatim)"); falls back to the plain word when the emphasized mp3 is missing.
-export function roundWordAudio(round: WordStartsRound): number {
+export function roundWordAudioFile(round: WordStartsRound): string {
   switch (round.level) {
     case 1:
-      return round.word.audio;
+      return 'word.mp3';
     case 2:
-      return round.word.audioFirst ?? round.word.audio;
+      return round.word.hasAudioFirst === true ? 'first.mp3' : 'word.mp3';
     case 3:
-      return round.word.audioLast ?? round.word.audio;
+      return round.word.hasAudioLast === true ? 'last.mp3' : 'word.mp3';
   }
 }
 
-export function optionAudio(round: WordStartsRound, option: string, dataset: WordStartsDataset): number | undefined {
-  return round.level === 1 ? dataset.letterAudio[option] : dataset.syllableAudio[option];
+// Sound of an option: level 1 the letter name (bundled), levels 2/3 the syllable (backend archive) -
+// "## Q&A (2026-10-01)": say the tapped syllable like level 1. undefined = no audio available (tolerated).
+export function optionAudioResource(round: WordStartsRound, option: string, dataset: WordStartsDataset): AudioResource | undefined {
+  if (round.level === 1) {
+    const module = dataset.letterAudio[option];
+    return module === undefined ? undefined : { kind: 'bundled', module };
+  }
+  return syllableAudioResource(option, dataset);
 }
 
-// Prefetch support, identical mechanism to TreninkPorozumeni (src/rounds.ts collectRoundAssetModules): the Metro module
-// ids of EXACTLY the assets this round can use - picture, the word audio the level plays (roundWordAudio: plain /
-// first-emphasized / last-emphasized), and the audio of every option (letter names / syllables).
-export function collectRoundAssetModules(round: WordStartsRound, dataset: WordStartsDataset): number[] {
-  const moduleIds: number[] = [];
-  const addModule = (source: unknown) => {
-    if (typeof source === 'number') {
-      moduleIds.push(source);
-    }
-  };
-  addModule(round.word.image);
-  addModule(roundWordAudio(round));
+// EXACTLY the backend archives this round can use: the word's zip (picture + word audio) and, for levels 2/3, the
+// syllable-group zips of every option. Level-1 letter audio is bundled, so it needs no archive.
+export function collectRoundArchives(round: WordStartsRound, dataset: WordStartsDataset): string[] {
+  const archives: string[] = [wordArchivePath(round.word)];
   for (const option of round.options) {
-    addModule(optionAudio(round, option, dataset));
+    const resource = optionAudioResource(round, option, dataset);
+    if (resource !== undefined && resource.kind === 'archive' && !archives.includes(resource.archivePath)) {
+      archives.push(resource.archivePath);
+    }
   }
-  return moduleIds;
+  return archives;
+}
+
+// Archives of the preload window: the current round + the next `ahead` rounds (preferences skill: downloaded, cached
+// and unpacked hot in memory before their round comes). Deduplicated, in round order (current round's archives first).
+export function collectPreloadWindowArchives(
+  plan: readonly WordStartsRound[],
+  roundIndex: number,
+  dataset: WordStartsDataset,
+  ahead: number = PRELOAD_ROUNDS_AHEAD
+): string[] {
+  const archives: string[] = [];
+  for (let index = roundIndex; index <= roundIndex + ahead && index < plan.length; index++) {
+    for (const archivePath of collectRoundArchives(plan[index], dataset)) {
+      if (!archives.includes(archivePath)) {
+        archives.push(archivePath);
+      }
+    }
+  }
+  return archives;
 }
 
 // Scoring: a round counts as correct only when the FIRST tap is correct; after a miss the child continues until the

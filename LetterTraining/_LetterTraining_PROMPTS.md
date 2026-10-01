@@ -192,3 +192,41 @@ user wording preserved where it was given.)
 
 ### Code references (Phase B — shared resource module, 2026-10-01)
 - `src/resources/` (self-contained, copyable to standalone LetterPexeso): `cacheCore.ts` (200MB compressed LRU cache, last-used tracking, checksum invalidation — decisions 1, 8), `resourceStore.ts` (manifest fetch/compare, per-word zip download, fflate in-memory unpack, hot audio data URIs — decisions 1, 2, 5, 11), `expoFileSystemAdapter.ts` (expo-file-system storage), `OfflineRetry.tsx` (decision 7), `README.md` (manifest contract for the backend), tests `src/resources/__tests__/cacheCore.test.ts`.
+
+### Code references (Phase C — game-screen integration, 2026-10-01)
+- Dataset moved to the archive model (decision 2): `src/words.ts` / `src/train/assets.ts` lost their per-exercise
+  `require(...)` module ids (transform script: endgame2 `AGENTS/Tasks/20261001_162724_LetterTrainingMobileAppsPreferences/scripts/transform_asset_maps_to_archives.js`).
+  `WordEntry` now has `hasAudioFirst`/`hasAudioLast`; `SYLLABLE_AUDIO` maps syllable → mp3 entry name inside
+  `syllables/<char>.zip`; train entries carry `file` names inside `train/train.zip`. Only `LETTER_AUDIO`,
+  `EN_LETTER_AUDIO`, fonts, the pexeso ear and the downsized settings samples stay bundled.
+- 5-rounds-ahead preload + drop (decision 3, supersedes the 2-rounds-ahead prefetch of "## Initial request"):
+  `src/wordStarts/logic.ts` (`collectRoundArchives`, `collectPreloadWindowArchives`, `PRELOAD_ROUNDS_AHEAD = 5`,
+  `optionAudioResource`, `roundWordAudioFile`, `resolveAudioSource`), `src/compose/logic.ts`
+  (`collectComposeArchives`, `collectComposePreloadArchives`, `tileAudioResource`), consumed by `app/words.tsx` and
+  `app/compose.tsx` through `src/resources/useArchivePreloading.ts` (current round gated on 'ready'; next-5 warmed
+  fire-and-forget; archives that left the window are released from memory; disk cache stays).
+- No-round games preload everything for the play (decision 6): `app/train.tsx` gates on `train/train.zip` (+ bundled
+  letter audio warmed via expo-asset); pexeso's `src/pexeso/PexesoGame.tsx` `PreloadedGame` deals the deck first and
+  preloads every dealt image card's `words/<id>.zip` (pictures + word sounds hot) before the board shows; "Hrát znovu"
+  re-deals + re-preloads. Letters-only pexeso boards need no archives and work fully offline.
+- Offline (decision 7): all four game screens render `src/resources/OfflineRetry.tsx` when the backend is unreachable
+  AND a needed archive is not cached.
+- Pexeso settings previews (decision 9): `assets/images/pexeso_samples/` (auto/kocka/balon, half-resolution, ~60 KB
+  each — script `make_pexeso_samples.ps1` in the task's scripts folder), shown in `src/pexeso/PexesoSettingsScreen.tsx`
+  when a column's card type is "Obrázky"; exported via `PEXESO_SAMPLE_IMAGES` in `src/pexeso/pexesoPlatform.ts`.
+- The start animations (decision 4) are NOT part of Phase C — plain "Načítám…" placeholders until plan Phase D.
+- Bundle effect: `npx expo export --platform ios` dropped from ~123 MB of assets to ~5.3 MB total (1.6 MB assets).
+
+## Custom icon and welcome screen (2026-10-01)
+
+User instruction (verbatim):
+
+> a new custom icon and welcome screen shall be created based on the specified purpose of the app (WHY: because we have already mutiple Expo Go apps and each of them has the default icons and welcome screen; we need to be able to distinguish them also visually); create the icon(s) and the welcome screen by the image-generation skill. Instruct it to create decent welcome screen(s) for mobile/ipad apps with such and such functionality: try three different functionality specifications, every one with some concrete imaginable things. Then let three independent opus subagents consider the three pictures in random order and ask them which picture best reflects the app purpose. Choose that picture(s), based on that create smaller icon(s).
+
+Outcome:
+
+- 3 welcome-screen candidates were generated via Muse Spark (alphabet train / word-starts dog / pexeso + word tiles), each from a different concrete functionality specification. Candidates + prompts: endgame2 repo, `AGENTS/Tasks/20261001_162724_LetterTrainingMobileAppsPreferences/Temp/WelcomeScreens/LetterTraining/`.
+- 3 independent opus judges (random order) picked `welcome3_tiles_pexeso.png` unanimously (pexeso grid with flipped apple + letter-J cards, child composing a word from letter tiles).
+- All 3 judges flagged that the composed tiles spelled "JAM" (English); the winner was regenerated with the tiles spelling the Czech word "JABLKO" (matching the apple card) — correct on the first regeneration attempt (`welcome3_final.png`).
+- The app icon was derived from the winner motif: one yellow letter tile with a big bold blue "J" and a small red apple on the corner, same watercolor style (`icon_1024.png`, first attempt accepted).
+- Wired into the app: `assets/icon.png` (overwritten), new `assets/splash-welcome.png`, and an `expo.splash` entry in `app.json` (cover, cream background). Android adaptive icon files were left as the Expo defaults (not regenerated).

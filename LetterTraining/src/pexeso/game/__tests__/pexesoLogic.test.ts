@@ -59,7 +59,7 @@ function deckFromLetters(letters: string[]): Card[] {
 }
 
 function word(id: string, firstLetter: string): PexesoWord {
-  return { id, word: id, firstLetter, image: 1, audio: 2 };
+  return { id, word: id, firstLetter, archivePath: `words/${id}.zip` };
 }
 
 // b: 2 pictures, ch: 2 pictures, k: 1 picture, č: 2 pictures (háček), á: 1 picture (čárka).

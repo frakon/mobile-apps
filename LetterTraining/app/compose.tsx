@@ -18,7 +18,6 @@
 // - DECISION: the screen is locked to portrait while mounted.
 // - DECISION: tile case default CAPITALS (src/compose/settings.ts).
 
-import { Asset } from 'expo-asset';
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { setAudioModeAsync } from 'expo-audio';
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
@@ -29,6 +28,10 @@ import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-na
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { playAudio, stopAudioIfOwnedBy } from '../src/audioController';
+import { OfflineRetry } from '../src/resources/OfflineRetry';
+import { useArchivePreloading } from '../src/resources/useArchivePreloading';
+import { warmBundledAudioModules } from '../src/resources/warmBundledAudio';
+import { WORD_PICTURE_FILE, resolveAudioSource, wordArchivePath } from '../src/wordStarts/logic';
 import {
   ComposeLayout,
   ComposeProgress,
@@ -39,7 +42,8 @@ import {
   TileCase,
   arrowSourceTileId,
   buildComposePlan,
-  collectComposeAssetModules,
+  collectComposeArchives,
+  collectComposePreloadArchives,
   completeRound,
   computeLayout,
   isReleasedOnHome,
@@ -47,7 +51,7 @@ import {
   recordWrongDrop,
   resolveDrop,
   scaleRectangle,
-  tileAudio,
+  tileAudioResource,
   tileLabel,
 } from '../src/compose/logic';
 import { loadTileCase } from '../src/compose/settings';
@@ -172,28 +176,23 @@ export default function ComposeScreen() {
     }, [])
   );
 
-  // Prefetch current + next 2 rounds - same mechanism as app/words.tsx / TreninkPorozumeni ("every data which are needed
-  // in the next rounds of current training shall be pre-fetched 2 rounds in advance", "## Initial request (2026-10-01)").
-  const prefetchedModuleIdsRef = useRef<Set<number>>(new Set());
-  useEffect(() => {
-    for (let index = progress.roundIndex; index <= progress.roundIndex + 2 && index < roundPlan.length; index++) {
-      for (const moduleId of collectComposeAssetModules(roundPlan[index], DATASET)) {
-        if (prefetchedModuleIdsRef.current.has(moduleId)) {
-          continue;
-        }
-        prefetchedModuleIdsRef.current.add(moduleId);
-        try {
-          Asset.fromModule(moduleId)
-            .downloadAsync()
-            .catch(() => {
-              // Silent by design: the round will lazy-load the asset.
-            });
-        } catch {
-          // Unknown module id: equally silent.
-        }
-      }
-    }
-  }, [roundPlan, progress.roundIndex]);
+  // Backend-archive preloading (`_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences",
+  // user decision 3: 5 rounds ahead supersedes the earlier 2-rounds-ahead Asset prefetch): the CURRENT round's
+  // archives must be hot before the round shows; the next 5 rounds are warmed; passed rounds' archives are released.
+  const requiredArchives = useMemo(
+    () => (currentRound === null ? [] : collectComposeArchives(currentRound, DATASET)),
+    [currentRound]
+  );
+  const windowArchives = useMemo(
+    () => collectComposePreloadArchives(roundPlan, progress.roundIndex, DATASET),
+    [roundPlan, progress.roundIndex]
+  );
+  const { status: resourceStatus, archives, retry: retryResources } = useArchivePreloading(requiredArchives, windowArchives);
+  const archivesRef = useRef(archives);
+  archivesRef.current = archives;
+  // 'ready' can momentarily still refer to the PREVIOUS round while the hook swaps rounds — the round shows only
+  // when ITS archives are actually hot (usually instant: they were preloaded 5 rounds ahead).
+  const roundResourcesReady = resourceStatus === 'ready' && requiredArchives.every((archivePath) => archives[archivePath] !== undefined);
 
   useEffect(() => {
     setAudioModeAsync({ playsInSilentMode: true })
@@ -202,6 +201,15 @@ export default function ComposeScreen() {
       })
       .then(() => setAudioModeReady(true));
   }, []);
+
+  // Letters-variant tiles play BUNDLED letter audio (decision 2) — warm it on mount so the first drag never
+  // waits on the Metro download in Expo Go (verification Phase C R1 M2). The syllables variant plays from
+  // the backend archives, which the preloading hook already makes hot.
+  useEffect(() => {
+    if (variant === 'letters') {
+      warmBundledAudioModules(Object.values(LETTER_AUDIO));
+    }
+  }, [variant]);
 
   useEffect(() => {
     mounted.current = true;
@@ -216,8 +224,13 @@ export default function ComposeScreen() {
   const playWord = useCallback(
     (round: ComposeRound) => {
       releasePendingTileSound(); // the word supersedes (stops) any tile sound
-      // Evaluator default (Q&A 5, not objected): both variants play the plain word.
-      playAudio(round.word.audio, {
+      // Evaluator default (Q&A 5, not objected): both variants play the plain word — hot in memory from the word's
+      // backend archive ("## Follow-up prompt 9").
+      const source = archivesRef.current[wordArchivePath(round.word)]?.files['word.mp3']?.dataUri;
+      if (source === undefined) {
+        return; // archive not ready (never while the round is shown — rounds are gated on 'ready')
+      }
+      playAudio({ uri: source }, {
         key: `compose-word:${round.word.id}`,
         owner,
         rate: PLAYBACK_RATE,
@@ -230,10 +243,10 @@ export default function ComposeScreen() {
   );
 
   useEffect(() => {
-    if (currentRound !== null && audioModeReady && focused) {
+    if (currentRound !== null && audioModeReady && focused && roundResourcesReady) {
       playWord(currentRound);
     }
-  }, [currentRound, audioModeReady, focused, playWord]);
+  }, [currentRound, audioModeReady, focused, roundResourcesReady, playWord]);
 
   const goBackToSelection = useCallback(() => {
     if (router.canGoBack()) {
@@ -263,7 +276,8 @@ export default function ComposeScreen() {
       }
       setDraggedTileId(tileId);
       const value = currentRound.tiles[tileId].value;
-      const audio = tileAudio(variant, value, DATASET);
+      // Letter names play from the bundle; syllables from the hot in-memory archive entry ("## Follow-up prompt 9").
+      const audio = resolveAudioSource(tileAudioResource(variant, value, DATASET), archivesRef.current);
       // A new tile sound supersedes the previous one (latest-wins audio): the completion now waits for this one.
       tileSoundCounter.current += 1;
       const soundId = tileSoundCounter.current;
@@ -396,6 +410,28 @@ export default function ComposeScreen() {
     );
   }
 
+  if (resourceStatus === 'offline') {
+    // Backend unreachable AND the round's archives are not cached (decision 7: child-friendly Czech error + retry).
+    return (
+      <SafeAreaView style={styles.container}>
+        <OfflineRetry onRetry={retryResources} />
+        <Pressable style={[styles.homeButton, styles.homeButtonBottom]} onPress={goBackToSelection} accessibilityRole="button">
+          <Text style={styles.homeButtonLabel}>Zpět na výběr</Text>
+        </Pressable>
+      </SafeAreaView>
+    );
+  }
+
+  if (!roundResourcesReady) {
+    // Current round's resources are always hot before the round shows (preferences skill); themed start animation
+    // comes in a later step (plan Phase D).
+    return (
+      <SafeAreaView style={styles.centered}>
+        <Text style={styles.scoreLine}>Načítám obrázky a zvuky…</Text>
+      </SafeAreaView>
+    );
+  }
+
   const arrowTileId = arrowSourceTileId(currentRound, filledSlots, draggedTileId);
 
   return (
@@ -422,7 +458,12 @@ export default function ComposeScreen() {
       </View>
       <View style={styles.body}>
         <View style={styles.pictureRow}>
-          <Image source={currentRound.word.image} style={styles.picture} resizeMode="contain" />
+          <Image
+            // Hot in-memory picture from the word's backend archive ("## Follow-up prompt 9").
+            source={{ uri: archives[wordArchivePath(currentRound.word)]?.files[WORD_PICTURE_FILE]?.dataUri }}
+            style={styles.picture}
+            resizeMode="contain"
+          />
           <Pressable
             style={({ pressed }) => [styles.replayButton, pressed && styles.replayButtonPressed, completed && styles.replayButtonDisabled]}
             onPress={() => playWord(currentRound)}
@@ -680,5 +721,6 @@ const styles = StyleSheet.create({
   restartButton: { marginTop: 32, backgroundColor: '#FFB84D', borderRadius: 32, paddingHorizontal: 48, paddingVertical: 20 },
   restartButtonLabel: { fontSize: 28, fontWeight: 'bold', color: '#4C3000' },
   homeButton: { marginTop: 16, backgroundColor: '#FFE9A8', borderRadius: 28, paddingHorizontal: 40, paddingVertical: 14 },
+  homeButtonBottom: { alignSelf: 'center', marginBottom: 24 },
   homeButtonLabel: { fontSize: 22, fontWeight: 'bold', color: '#4C4536' },
 });

@@ -15,7 +15,7 @@ import { unzipSync } from 'fflate';
 import { bytesToDataUri } from './base64';
 import { ArchiveCache } from './cacheCore';
 import { createExpoCacheFileSystem } from './expoFileSystemAdapter';
-import { ResourceManifest, UnpackedArchive, UnpackedFile } from './types';
+import { CacheFileSystem, ResourceManifest, UnpackedArchive, UnpackedFile } from './types';
 
 // Backend base URL: EndgameServer reached VPN-only over WireGuard (10.67.0.1); port 9080 is the
 // reserved, conflict-checked backend port (see ResourceBackend/README.md and
@@ -23,18 +23,53 @@ import { ResourceManifest, UnpackedArchive, UnpackedFile } from './types';
 export const DEFAULT_RESOURCE_BACKEND_BASE_URL = 'http://10.67.0.1:9080';
 
 const MANIFEST_FETCH_TIMEOUT_MILLISECONDS = 8000;
+// Archives are up to a few hundred KB; the timeout covers connect + body read (the AbortController
+// signal also aborts a hanging body read, not only a hanging connect).
+const ARCHIVE_FETCH_TIMEOUT_MILLISECONDS = 20000;
+// Last good manifest, persisted in the cache directory: a cold start with no network must still be
+// able to play fully-cached games (verification Phase C R1 H1). Used ONLY as a fallback when the
+// fresh fetch fails — a reachable backend's manifest always wins ("new version always replaces old").
+const PERSISTED_MANIFEST_FILE_NAME = 'lastManifest.json';
 
 let baseUrl = DEFAULT_RESOURCE_BACKEND_BASE_URL;
 let manifest: ResourceManifest | null = null;
 let archiveCache: ArchiveCache | null = null;
+let cacheFileSystem: CacheFileSystem | null = null;
+// De-duplicates concurrent manifest refreshes (e.g. two screens mounting at once): one network hit.
+let pendingManifestRefresh: Promise<ResourceManifest> | null = null;
 // Hot in-memory unpacked archives (does NOT count toward the 200MB disk limit — that limit is
 // for compressed on-device files only). Entries are dropped by releaseUnpackedArchive.
 const unpackedArchives = new Map<string, UnpackedArchive>();
 // De-duplicates concurrent preloads of the same archive.
 const pendingUnpacks = new Map<string, Promise<UnpackedArchive>>();
 
-export function configureResourceBackend(options: { baseUrl: string }): void {
-  baseUrl = options.baseUrl.replace(/\/+$/, '');
+export function configureResourceBackend(options: { baseUrl?: string; fileSystem?: CacheFileSystem }): void {
+  if (options.baseUrl !== undefined) {
+    baseUrl = options.baseUrl.replace(/\/+$/, '');
+  }
+  if (options.fileSystem !== undefined) {
+    // Injectable filesystem for unit tests; on device the expo adapter is created lazily.
+    cacheFileSystem = options.fileSystem;
+    archiveCache = null;
+  }
+}
+
+// Unit-test hook: back to a pristine module state (module-level singletons otherwise leak between tests).
+export function resetResourceStoreForTests(): void {
+  baseUrl = DEFAULT_RESOURCE_BACKEND_BASE_URL;
+  manifest = null;
+  archiveCache = null;
+  cacheFileSystem = null;
+  pendingManifestRefresh = null;
+  unpackedArchives.clear();
+  pendingUnpacks.clear();
+}
+
+function fileSystem(): CacheFileSystem {
+  if (!cacheFileSystem) {
+    cacheFileSystem = createExpoCacheFileSystem();
+  }
+  return cacheFileSystem;
 }
 
 // Thrown when the backend is unreachable AND the resource is not cached — the screen then shows
@@ -46,11 +81,21 @@ export class ResourceUnavailableError extends Error {
   }
 }
 
-async function fetchWithTimeout(url: string): Promise<Response> {
+// One timeout window covers connect AND body read (aborting the controller also aborts a hanging
+// response.json()/arrayBuffer() — a stalled body must not hang a preload forever).
+async function fetchWithTimeout<T>(
+  url: string,
+  timeoutMilliseconds: number,
+  readBody: (response: Response) => Promise<T>
+): Promise<T> {
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), MANIFEST_FETCH_TIMEOUT_MILLISECONDS);
+  const timer = setTimeout(() => controller.abort(), timeoutMilliseconds);
   try {
-    return await fetch(url, { signal: controller.signal });
+    const response = await fetch(url, { signal: controller.signal });
+    if (!response.ok) {
+      throw new Error(`${url} HTTP ${response.status}`);
+    }
+    return await readBody(response);
   } finally {
     clearTimeout(timer);
   }
@@ -58,26 +103,65 @@ async function fetchWithTimeout(url: string): Promise<Response> {
 
 // Fetches the backend manifest. A changed global version/per-archive checksum automatically
 // invalidates stale cached copies on their next use (cacheCore compares sha256 per archive).
-// When the backend is unreachable but an older manifest was already fetched this app run, the
-// old manifest stays usable (cached archives keep working offline); with no manifest at all a
-// ResourceUnavailableError is thrown.
-export async function refreshManifest(): Promise<ResourceManifest> {
+// A fresh fetch is attempted on every call ("new version must always replace the old"); when the
+// backend is unreachable, the fallback order is: manifest from earlier in this run → the last good
+// manifest persisted on disk (so a cold start with no network can still play fully-cached games) →
+// ResourceUnavailableError. Concurrent calls share one in-flight request.
+export function refreshManifest(): Promise<ResourceManifest> {
+  if (pendingManifestRefresh) {
+    return pendingManifestRefresh;
+  }
+  const work = doRefreshManifest().finally(() => {
+    pendingManifestRefresh = null;
+  });
+  pendingManifestRefresh = work;
+  return work;
+}
+
+async function doRefreshManifest(): Promise<ResourceManifest> {
   try {
-    const response = await fetchWithTimeout(`${baseUrl}/manifest.json`);
-    if (!response.ok) {
-      throw new Error(`manifest.json HTTP ${response.status}`);
-    }
-    const fetched = (await response.json()) as ResourceManifest;
+    const fetched = (await fetchWithTimeout(
+      `${baseUrl}/manifest.json`,
+      MANIFEST_FETCH_TIMEOUT_MILLISECONDS,
+      (response) => response.json()
+    )) as ResourceManifest;
     if (typeof fetched.version !== 'string' || typeof fetched.archives !== 'object') {
       throw new Error('manifest.json has an unexpected shape');
     }
     manifest = fetched;
+    try {
+      // Best effort: the persisted copy only serves offline cold starts (verification Phase C R1 H1).
+      await fileSystem().writeText(PERSISTED_MANIFEST_FILE_NAME, JSON.stringify(fetched));
+    } catch {
+      // A failed persistence never fails the refresh.
+    }
     return fetched;
   } catch (error) {
     if (manifest) {
       return manifest; // Offline with a manifest from earlier in this run: keep using it.
     }
+    const persisted = await loadPersistedManifest();
+    if (persisted) {
+      manifest = persisted; // Offline cold start: last good manifest, cached archives keep working.
+      return persisted;
+    }
     throw new ResourceUnavailableError(`Backend manifest unavailable: ${String(error)}`);
+  }
+}
+
+async function loadPersistedManifest(): Promise<ResourceManifest | null> {
+  try {
+    const text = await fileSystem().readText(PERSISTED_MANIFEST_FILE_NAME);
+    if (!text) {
+      return null;
+    }
+    const parsed = JSON.parse(text) as ResourceManifest;
+    if (typeof parsed.version !== 'string' || typeof parsed.archives !== 'object') {
+      return null;
+    }
+    return parsed;
+  } catch {
+    return null; // Corrupt/unreadable persisted manifest behaves like none.
   }
 }
 
@@ -88,14 +172,11 @@ export function currentManifest(): ResourceManifest | null {
 function cache(): ArchiveCache {
   if (!archiveCache) {
     archiveCache = new ArchiveCache({
-      fileSystem: createExpoCacheFileSystem(),
-      download: async (archivePath: string) => {
-        const response = await fetchWithTimeout(`${baseUrl}/${archivePath}`);
-        if (!response.ok) {
-          throw new Error(`${archivePath} HTTP ${response.status}`);
-        }
-        return new Uint8Array(await response.arrayBuffer());
-      },
+      fileSystem: fileSystem(),
+      download: (archivePath: string) =>
+        fetchWithTimeout(`${baseUrl}/${archivePath}`, ARCHIVE_FETCH_TIMEOUT_MILLISECONDS, async (response) =>
+          new Uint8Array(await response.arrayBuffer())
+        ),
     });
   }
   return archiveCache;
@@ -134,7 +215,30 @@ async function unpackArchive(archivePath: string): Promise<UnpackedArchive> {
       archivePath
     );
   }
-  const unzipped = unzipSync(compressedBytes);
+  let unzipped: ReturnType<typeof unzipSync>;
+  try {
+    unzipped = unzipSync(compressedBytes);
+  } catch (unzipError) {
+    // Corrupt zip (bad cached bytes or a bad download): evict it from the disk cache and
+    // re-download ONCE — otherwise a retry would re-serve the same corrupt cached bytes forever
+    // (verification Phase C R1 M5).
+    await cache()
+      .evictArchive(archivePath)
+      .catch(() => undefined);
+    try {
+      compressedBytes = await cache().getArchiveBytes(archivePath, manifestEntry);
+      unzipped = unzipSync(compressedBytes);
+    } catch (retryError) {
+      // Also drop the re-downloaded bytes: the NEXT user retry starts from a clean cache again.
+      await cache()
+        .evictArchive(archivePath)
+        .catch(() => undefined);
+      throw new ResourceUnavailableError(
+        `Archive unusable even after evict + re-download: ${archivePath} (first: ${String(unzipError)}; retry: ${String(retryError)})`,
+        archivePath
+      );
+    }
+  }
   const files: Record<string, UnpackedFile> = {};
   for (const [fileName, bytes] of Object.entries(unzipped)) {
     if (bytes.length === 0) {
@@ -145,6 +249,13 @@ async function unpackArchive(archivePath: string): Promise<UnpackedArchive> {
   const archive: UnpackedArchive = { archivePath, files };
   unpackedArchives.set(archivePath, archive);
   return archive;
+}
+
+// Synchronous view of an already-hot archive (no promise, no IO): lets useArchivePreloading report
+// 'ready' in the SAME render when a round swaps to archives that were preloaded — no one-frame
+// loading flash between rounds (verification Phase C R1 M1).
+export function getUnpackedArchiveIfHot(archivePath: string): UnpackedArchive | undefined {
+  return unpackedArchives.get(archivePath);
 }
 
 // Drops the hot in-memory copy of a past round's archive (the compressed disk-cache copy stays,

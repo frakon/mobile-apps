@@ -2,7 +2,7 @@
 // "## Follow-up prompt 4 — new game "Skládání slov" (verbatim)", "## Q&A 4 — Skládání slov round 1" and
 // "## Q&A 5 — Skládání slov round 2". No React / native imports so everything is unit-testable with jest.
 
-import { RandomSource, shuffled } from '../wordStarts/logic';
+import { AudioResource, PRELOAD_ROUNDS_AHEAD, RandomSource, shuffled, syllableAudioResource, wordArchivePath } from '../wordStarts/logic';
 import { WordEntry, WordStartsDataset } from '../wordStarts/types';
 
 export type ComposeVariant = 'letters' | 'syllables';
@@ -129,25 +129,46 @@ export function tileLabel(value: string, tileCase: TileCase): string {
   return tileCase === 'upper' ? value.toLocaleUpperCase('cs-CZ') : value.toLocaleLowerCase('cs-CZ');
 }
 
-// Sound of a tile, spoken once at drag start ("## Q&A 4"): letter NAME (as Level 1) / the syllable.
-export function tileAudio(variant: ComposeVariant, value: string, dataset: WordStartsDataset): number | undefined {
-  return variant === 'letters' ? dataset.letterAudio[value] : dataset.syllableAudio[value];
+// Sound of a tile, spoken once at drag start ("## Q&A 4"): letter NAME (as Level 1, bundled) / the syllable (backend
+// archive) — archive model of `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences".
+export function tileAudioResource(variant: ComposeVariant, value: string, dataset: WordStartsDataset): AudioResource | undefined {
+  if (variant === 'letters') {
+    const module = dataset.letterAudio[value];
+    return module === undefined ? undefined : { kind: 'bundled', module };
+  }
+  return syllableAudioResource(value, dataset);
 }
 
-// Prefetch (same mechanism as Začátky slov / TreninkPorozumeni): picture, plain word audio, every tile sound.
-export function collectComposeAssetModules(round: ComposeRound, dataset: WordStartsDataset): number[] {
-  const moduleIds: number[] = [];
-  const add = (source: unknown) => {
-    if (typeof source === 'number' && !moduleIds.includes(source)) {
-      moduleIds.push(source);
-    }
-  };
-  add(round.word.image);
-  add(round.word.audio); // evaluator default (Q&A 5): both variants play the plain word
+// EXACTLY the backend archives a round can use: the word's zip (picture + plain word audio — evaluator default (Q&A 5):
+// both variants play the plain word) and, for the syllables variant, the syllable-group zips of every tile.
+export function collectComposeArchives(round: ComposeRound, dataset: WordStartsDataset): string[] {
+  const archives: string[] = [wordArchivePath(round.word)];
   for (const tile of round.tiles) {
-    add(tileAudio(round.variant, tile.value, dataset));
+    const resource = tileAudioResource(round.variant, tile.value, dataset);
+    if (resource !== undefined && resource.kind === 'archive' && !archives.includes(resource.archivePath)) {
+      archives.push(resource.archivePath);
+    }
   }
-  return moduleIds;
+  return archives;
+}
+
+// Preload window (preferences skill: current round + next 5 rounds hot in memory) — compose equivalent of
+// wordStarts/logic.ts collectPreloadWindowArchives.
+export function collectComposePreloadArchives(
+  plan: readonly ComposeRound[],
+  roundIndex: number,
+  dataset: WordStartsDataset,
+  ahead: number = PRELOAD_ROUNDS_AHEAD
+): string[] {
+  const archives: string[] = [];
+  for (let index = roundIndex; index <= roundIndex + ahead && index < plan.length; index++) {
+    for (const archivePath of collectComposeArchives(plan[index], dataset)) {
+      if (!archives.includes(archivePath)) {
+        archives.push(archivePath);
+      }
+    }
+  }
+  return archives;
 }
 
 // ---- Drop resolution ("## Follow-up prompt 4": any intersection counts; duplicates interchangeable) ----

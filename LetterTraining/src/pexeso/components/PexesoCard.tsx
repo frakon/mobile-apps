@@ -11,6 +11,9 @@ interface PexesoCardProps {
   // Face content per column type (letter / image / sound-only ear) - `_LetterPexeso_PROMPTS.md` / "Follow-up prompt 6 —
   // Pexeso improvements (standalone LetterPexeso + integrated in LetterTraining) (verbatim)".
   readonly face: CardFace;
+  // Hot in-memory data URI of an image face's picture (preloaded from the backend word archive before the play —
+  // `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences"); undefined for other faces.
+  readonly imageUri?: string;
   readonly isFaceUp: boolean;
   readonly isRemoved: boolean;
   readonly width: number;
@@ -20,7 +23,7 @@ interface PexesoCardProps {
 
 const FLIP_DURATION_MS = 160;
 
-function PexesoCardComponent({ cardId, face, isFaceUp, isRemoved, width, height, onTap }: PexesoCardProps) {
+function PexesoCardComponent({ cardId, face, imageUri, isFaceUp, isRemoved, width, height, onTap }: PexesoCardProps) {
   // Simple flip effect: the card "unfolds" horizontally whenever its face changes (content switches instantly,
   // so game logic never waits for the animation).
   const flip = useRef(new Animated.Value(1)).current;
@@ -73,7 +76,7 @@ function PexesoCardComponent({ cardId, face, isFaceUp, isRemoved, width, height,
         ]}
       >
         {isFaceUp ? (
-          <CardFaceContent face={face} width={width} height={height} />
+          <CardFaceContent face={face} imageUri={imageUri} width={width} height={height} />
         ) : (
           <Text allowFontScaling={false} style={[styles.back, { fontSize: minSide * 0.35 }]}>
             ?
@@ -84,10 +87,10 @@ function PexesoCardComponent({ cardId, face, isFaceUp, isRemoved, width, height,
   );
 }
 
-function CardFaceContent({ face, width, height }: { readonly face: CardFace; readonly width: number; readonly height: number }) {
+function CardFaceContent({ face, imageUri, width, height }: { readonly face: CardFace; readonly imageUri?: string; readonly width: number; readonly height: number }) {
   const minSide = Math.min(width, height);
   if (face.type === 'image') {
-    return <Image source={face.word.image} style={{ width: width * 0.86, height: height * 0.86 }} resizeMode="contain" />;
+    return <Image source={{ uri: imageUri }} style={{ width: width * 0.86, height: height * 0.86 }} resizeMode="contain" />;
   }
   if (face.type === 'sound') {
     // The same ear picture on every sound card - "Q&A 9 — Pexeso improvements round 2".

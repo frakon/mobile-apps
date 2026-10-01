@@ -40,6 +40,8 @@ import Animated, {
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { playAudio, stopAudioIfOwnedBy } from '../src/audioController';
+import { OfflineRetry } from '../src/resources/OfflineRetry';
+import { useArchivePreloading } from '../src/resources/useArchivePreloading';
 import { ENGINE_IMAGES, EN_LETTER_AUDIO, WAGON_IMAGES } from '../src/train/assets';
 import {
   Rectangle,
@@ -85,6 +87,10 @@ const ORIENTATION_LOCK_GRACE_MILLISECONDS = 500;
 const DRAG_SCALE_MILLISECONDS = 130; // verification round 2 M1: eased pick-up / put-down scale
 
 type Phase = 'playing' | 'leaving' | 'done';
+
+// The whole-play backend archive set of this no-round game (everything preloaded before the play, decision 6).
+const TRAIN_ARCHIVE_PATH = 'train/train.zip';
+const TRAIN_ARCHIVES: readonly string[] = [TRAIN_ARCHIVE_PATH];
 
 // Layout with the REAL wagon shapes (src/train/logic.ts computeTrainLayout guarantees the drop zone / pool gap).
 function computeTrainLayout(width: number, height: number, waitingWagons: number, engineIndex: number): TrainLayout {
@@ -193,11 +199,20 @@ export default function TrainScreen() {
     };
   }, [clearTimers, owner]);
 
-  // Preload all train images + letter audio on screen open (evaluation "Final decisions": "Preload images + audio at mount").
+  // Preload EVERYTHING the play can use before it starts (no rounds -> whole-play preload, preferences skill /
+  // `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences", user decision 6):
+  // - train pictures come from the backend archive `train/train.zip` (user decision 2) and must be hot before the
+  //   board shows (the screen is gated on 'ready' below);
+  // - letter audio stays BUNDLED (decision 2) and is only warmed via expo-asset here.
+  const { status: resourceStatus, archives, retry: retryResources } = useArchivePreloading(TRAIN_ARCHIVES);
+  const trainArchive = archives[TRAIN_ARCHIVE_PATH];
+  // Data URI of a train/train.zip entry; undefined -> the drawn placeholder vehicle.
+  const trainFileUri = useCallback(
+    (file: string | undefined) => (file === undefined ? undefined : trainArchive?.files[file]?.dataUri),
+    [trainArchive]
+  );
   useEffect(() => {
     const modules: number[] = [
-      ...ENGINE_IMAGES.map((image) => image.source),
-      ...WAGON_IMAGES.map((image) => image.source),
       ...Object.values(EN_LETTER_AUDIO),
       ...alphabetLetters('cz').map((letter) => LETTER_AUDIO[letter]).filter((module): module is number => module !== undefined),
     ];
@@ -452,6 +467,28 @@ export default function TrainScreen() {
     );
   }
 
+  if (resourceStatus === 'offline') {
+    // Backend unreachable AND train.zip not cached (decision 7: child-friendly Czech error + retry).
+    return (
+      <SafeAreaView style={styles.centered}>
+        <OfflineRetry onRetry={retryResources} />
+        <Pressable style={styles.homeButton} onPress={goBack} accessibilityRole="button">
+          <Text style={styles.homeButtonLabel}>Zpět</Text>
+        </Pressable>
+      </SafeAreaView>
+    );
+  }
+
+  if (resourceStatus !== 'ready') {
+    // Whole-play resources are ready before the play shows (preferences skill); the themed start animation is a
+    // separate later step (plan Phase D).
+    return (
+      <SafeAreaView style={styles.centered}>
+        <Text style={styles.loadingText}>Načítám vláčky…</Text>
+      </SafeAreaView>
+    );
+  }
+
   const poolSlots =
     layout !== null && play !== null ? poolSlotPositions(layout.width, play.game.pool.length, layout.wagonWidth, layout.gap) : [];
   const attachedLetters = play !== null ? play.game.letters.slice(0, placedCount) : [];
@@ -481,7 +518,7 @@ export default function TrainScreen() {
             <View pointerEvents="none" style={[styles.rail, { top: layout.trainRail }]} />
             <Animated.View pointerEvents="none" style={[styles.train, trainStyle]}>
               <View style={{ position: 'absolute', left: 0, top: layout.trainRail - engineGeometry(play.engineIndex).baseline * layout.engineHeight }}>
-                <Engine engineIndex={play.engineIndex} width={layout.engineWidth} />
+                <Engine engineIndex={play.engineIndex} width={layout.engineWidth} imageUri={trainFileUri(ENGINE_IMAGES[play.engineIndex]?.file)} />
               </View>
               {attachedLetters.map((letter, index) => (
                 <AttachedWagon
@@ -493,6 +530,7 @@ export default function TrainScreen() {
                   layout={layout}
                   slotX={layout.engineWidth + COUPLING_GAP_PIXELS + index * layout.pitch}
                   attachedFrom={play.attachedFrom?.letter === letter ? play.attachedFrom : null}
+                  imageUri={trainFileUri(WAGON_IMAGES[play.wagonImages[letter] ?? 0]?.file)}
                 />
               ))}
               {phase === 'playing' && (
@@ -524,6 +562,7 @@ export default function TrainScreen() {
                 enabled={phase === 'playing'}
                 onDragStart={speakLetter}
                 onRelease={handleRelease}
+                imageUri={trainFileUri(WAGON_IMAGES[play.wagonImages[letter] ?? 0]?.file)}
               />
             ))}
           </>
@@ -542,10 +581,12 @@ interface AttachedWagonProps {
   slotX: number;
   // x relative to the train offset (train-relative), y board-relative.
   attachedFrom: { x: number; y: number; scale: number } | null;
+  // Hot in-memory wagon picture from train/train.zip ("## Follow-up prompt 9"); undefined -> drawn placeholder.
+  imageUri?: string;
 }
 
 // Wagon on the train; a just-attached one eases from its release point onto the train's end.
-function AttachedWagon({ label, wagonIndex, colorSeed, layout, slotX, attachedFrom }: AttachedWagonProps) {
+function AttachedWagon({ label, wagonIndex, colorSeed, layout, slotX, attachedFrom, imageUri }: AttachedWagonProps) {
   const top = wagonTop(layout.trainRail, wagonIndex, layout.wagonWidth);
   // Initial offset/scale = the release point, already in the first rendered frame (no flash at the final slot).
   const [initial] = useState(() =>
@@ -569,7 +610,7 @@ function AttachedWagon({ label, wagonIndex, colorSeed, layout, slotX, attachedFr
   const style = useAnimatedStyle(() => ({ transform: [{ translateX: offsetX.value }, { translateY: offsetY.value }, { scale: scale.value }] }));
   return (
     <Animated.View style={[{ position: 'absolute', left: slotX, top }, style]}>
-      <Wagon wagonIndex={wagonIndex} width={layout.wagonWidth} label={label} colorSeed={colorSeed} />
+      <Wagon wagonIndex={wagonIndex} width={layout.wagonWidth} label={label} colorSeed={colorSeed} imageUri={imageUri} />
     </Animated.View>
   );
 }
@@ -587,13 +628,15 @@ interface PoolWagonProps {
   onDragStart: (letter: string) => void;
   // scale = the live drawn drag scale at release (verification round 3 L1).
   onRelease: (letter: string, rectangle: Rectangle, scale: number) => boolean;
+  // Hot in-memory wagon picture from train/train.zip ("## Follow-up prompt 9"); undefined -> drawn placeholder.
+  imageUri?: string;
 }
 
 function randomFloatTarget(): number {
   return (Math.random() * 2 - 1) * FLOAT_AMPLITUDE_PIXELS;
 }
 
-function PoolWagon({ letter, label, wagonIndex, colorSeed, x, y, width, grow, enabled, onDragStart, onRelease }: PoolWagonProps) {
+function PoolWagon({ letter, label, wagonIndex, colorSeed, x, y, width, grow, enabled, onDragStart, onRelease, imageUri }: PoolWagonProps) {
   const height = width / wagonGeometry(wagonIndex).aspect;
   const baseX = useSharedValue(x);
   const baseY = useSharedValue(y);
@@ -737,7 +780,7 @@ function PoolWagon({ letter, label, wagonIndex, colorSeed, x, y, width, grow, en
   return (
     <GestureDetector gesture={pan}>
       <Animated.View style={[styles.poolWagon, style]} accessibilityLabel={label}>
-        <Wagon wagonIndex={wagonIndex} width={width} label={label} colorSeed={colorSeed} />
+        <Wagon wagonIndex={wagonIndex} width={width} label={label} colorSeed={colorSeed} imageUri={imageUri} />
       </Animated.View>
     </GestureDetector>
   );
@@ -757,6 +800,7 @@ const styles = StyleSheet.create({
   train: { position: 'absolute', left: 0, top: 0, right: 0, bottom: 0 },
   dropHint: { position: 'absolute', borderWidth: 3, borderStyle: 'dashed', borderColor: '#B9A7DA', borderRadius: 12 },
   poolWagon: { position: 'absolute', left: 0, top: 0 },
+  loadingText: { fontSize: 28, fontWeight: '700', color: '#5B3E96' },
   doneTitle: { fontSize: 44, fontWeight: '900', color: '#5B3E96', marginBottom: 24 },
   doneButtons: { flexDirection: 'row', gap: 16 },
   restartButton: { backgroundColor: '#FFB23F', paddingHorizontal: 32, paddingVertical: 14, borderRadius: 20 },

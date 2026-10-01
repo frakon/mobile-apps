@@ -13,24 +13,30 @@
 //   plays (plain 500 ms tint when there is no audio). The round is scored wrong on the first miss; the child continues
 //   until the correct option is tapped.
 
-import { Asset } from 'expo-asset';
 import { setAudioModeAsync } from 'expo-audio';
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Image, Pressable, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { playAudio, stopAudioIfOwnedBy } from '../src/audioController';
+import { OfflineRetry } from '../src/resources/OfflineRetry';
+import { useArchivePreloading } from '../src/resources/useArchivePreloading';
+import { warmBundledAudioModules } from '../src/resources/warmBundledAudio';
 import {
   INITIAL_PROGRESS,
   PlayProgress,
+  WORD_PICTURE_FILE,
   advanceRound,
   applyTap,
   buildRoundPlan,
-  collectRoundAssetModules,
-  optionAudio,
+  collectPreloadWindowArchives,
+  collectRoundArchives,
+  optionAudioResource,
   optionLabel,
-  roundWordAudio,
+  resolveAudioSource,
+  roundWordAudioFile,
+  wordArchivePath,
 } from '../src/wordStarts/logic';
 import { WordStartsDataset, WordStartsLevel, WordStartsRound } from '../src/wordStarts/types';
 import { LETTER_AUDIO, REAL_SYLLABLES, SYLLABLE_AUDIO, WORDS } from '../src/words';
@@ -87,31 +93,22 @@ export default function WordsScreen() {
   const finished = progress.roundIndex >= roundPlan.length;
   const currentRound = finished ? null : roundPlan[progress.roundIndex];
 
-  // Prefetch of the upcoming rounds' assets - identical mechanism to TreninkPorozumeni app/game.tsx ("every data which
-  // are needed in the next rounds of current training shall be pre-fetched 2 rounds in advance",
-  // `_LetterTraining_PROMPTS.md` / "## Initial request (2026-10-01)"): on every round start fire-and-forget
-  // Asset.fromModule(id).downloadAsync() for rounds [roundIndex .. roundIndex + 2] (current + next two). Failures are
-  // ignored (lazy load stays the fallback); the Set de-duplicates per screen instance.
-  const prefetchedModuleIdsRef = useRef<Set<number>>(new Set());
-  useEffect(() => {
-    for (let index = progress.roundIndex; index <= progress.roundIndex + 2 && index < roundPlan.length; index++) {
-      for (const moduleId of collectRoundAssetModules(roundPlan[index], DATASET)) {
-        if (prefetchedModuleIdsRef.current.has(moduleId)) {
-          continue;
-        }
-        prefetchedModuleIdsRef.current.add(moduleId);
-        try {
-          Asset.fromModule(moduleId)
-            .downloadAsync()
-            .catch(() => {
-              // Silent by design: the round will lazy-load the asset.
-            });
-        } catch {
-          // fromModule threw synchronously (unknown module id): equally silent.
-        }
-      }
-    }
-  }, [roundPlan, progress.roundIndex]);
+  // Backend-archive preloading (`_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences
+  // (backend resources, cache, preload)", user decision 3: 5 rounds ahead supersedes the earlier 2-rounds-ahead
+  // Asset prefetch): the CURRENT round's archives (word zip + syllable zips of the options) must be hot in memory
+  // before the round shows; the next 5 rounds are warmed fire-and-forget; archives of passed rounds are released.
+  const requiredArchives = useMemo(
+    () => (currentRound === null ? [] : collectRoundArchives(currentRound, DATASET)),
+    [currentRound]
+  );
+  const windowArchives = useMemo(
+    () => collectPreloadWindowArchives(roundPlan, progress.roundIndex, DATASET),
+    [roundPlan, progress.roundIndex]
+  );
+  const { status: resourceStatus, archives, retry: retryResources } = useArchivePreloading(requiredArchives, windowArchives);
+  // 'ready' can momentarily still refer to the PREVIOUS round while the hook swaps rounds — the round shows only
+  // when ITS archives are actually hot (usually instant: they were preloaded 5 rounds ahead).
+  const roundResourcesReady = resourceStatus === 'ready' && requiredArchives.every((archivePath) => archives[archivePath] !== undefined);
 
   useEffect(() => {
     setAudioModeAsync({ playsInSilentMode: true })
@@ -120,6 +117,15 @@ export default function WordsScreen() {
       })
       .then(() => setAudioModeReady(true));
   }, []);
+
+  // Level-1 options play BUNDLED letter audio (decision 2) — warm it on mount so the first tap never
+  // waits on the Metro download in Expo Go (verification Phase C R1 M2). Levels 2/3 play syllables
+  // from the backend archives, which the preloading hook already makes hot.
+  useEffect(() => {
+    if (level === 1) {
+      warmBundledAudioModules(Object.values(LETTER_AUDIO));
+    }
+  }, [level]);
 
   // Leaving the screen: stop our sound and every pending continuation.
   useEffect(() => {
@@ -130,11 +136,20 @@ export default function WordsScreen() {
     };
   }, [clearTimers, owner]);
 
+  // Hot in-memory data URI of the current round's archives (all ready before the round shows).
+  const archivesRef = useRef(archives);
+  archivesRef.current = archives;
+
   const playWord = useCallback(
     (round: WordStartsRound) => {
       // Level 1 plain word, level 2 first syllable emphasized, level 3 last syllable emphasized -
-      // `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 3 (verbatim)".
-      playAudio(roundWordAudio(round), {
+      // `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 3 (verbatim)". The mp3 is hot in memory (data URI from
+      // the word's backend archive — "## Follow-up prompt 9").
+      const source = archivesRef.current[wordArchivePath(round.word)]?.files[roundWordAudioFile(round)]?.dataUri;
+      if (source === undefined) {
+        return; // archive not ready (never while the round is shown — rounds are gated on 'ready')
+      }
+      playAudio({ uri: source }, {
         key: `word:${round.level}:${round.word.id}`,
         owner,
         rate: PLAYBACK_RATE,
@@ -146,12 +161,13 @@ export default function WordsScreen() {
     [owner]
   );
 
-  // Auto-play the word on every round start ("a sound/speech with the word will be played").
+  // Auto-play the word on every round start ("a sound/speech with the word will be played") — only once the round's
+  // resources are hot ('ready'), so the sound never waits for a download.
   useEffect(() => {
-    if (currentRound !== null && audioModeReady) {
+    if (currentRound !== null && audioModeReady && roundResourcesReady) {
       playWord(currentRound);
     }
-  }, [currentRound, audioModeReady, playWord]);
+  }, [currentRound, audioModeReady, roundResourcesReady, playWord]);
 
   const goBackToSelection = useCallback(() => {
     if (router.canGoBack()) {
@@ -181,7 +197,8 @@ export default function WordsScreen() {
     const result = applyTap(progressRef.current, currentRound, index);
     setProgress(result.progress);
     progressRef.current = result.progress;
-    const audio = optionAudio(currentRound, currentRound.options[index], DATASET);
+    // Letter names play from the bundle; syllables from the hot in-memory archive entry ("## Follow-up prompt 9").
+    const audio = resolveAudioSource(optionAudioResource(currentRound, currentRound.options[index], DATASET), archivesRef.current);
     setFeedback({ kind: result.isCorrect ? 'correct' : 'wrong', index });
 
     if (result.isCorrect) {
@@ -278,6 +295,28 @@ export default function WordsScreen() {
     );
   }
 
+  if (resourceStatus === 'offline') {
+    // Backend unreachable AND the round's archives are not cached (decision 7: child-friendly Czech error + retry).
+    return (
+      <SafeAreaView style={styles.container}>
+        <OfflineRetry onRetry={retryResources} />
+        <Pressable style={[styles.homeButton, styles.homeButtonBottom]} onPress={goBackToSelection} accessibilityRole="button">
+          <Text style={styles.homeButtonLabel}>Zpět na výběr</Text>
+        </Pressable>
+      </SafeAreaView>
+    );
+  }
+
+  if (!roundResourcesReady) {
+    // Resources of the CURRENT round are always ready before the round shows (preferences skill). Plain waiting
+    // screen for now — the themed start animation is a separate later step (plan Phase D).
+    return (
+      <SafeAreaView style={styles.centered}>
+        <Text style={styles.scoreLine}>Načítám obrázky a zvuky…</Text>
+      </SafeAreaView>
+    );
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -293,7 +332,12 @@ export default function WordsScreen() {
       </View>
       <View style={[styles.body, isLandscape && styles.bodyLandscape]}>
         <View style={styles.pictureRow}>
-          <Image source={currentRound.word.image} style={styles.picture} resizeMode="contain" />
+          <Image
+            // Hot in-memory picture from the word's backend archive ("## Follow-up prompt 9").
+            source={{ uri: archives[wordArchivePath(currentRound.word)]?.files[WORD_PICTURE_FILE]?.dataUri }}
+            style={styles.picture}
+            resizeMode="contain"
+          />
           {/* "next to the picture will be also a button for play or play again" */}
           <Pressable
             style={({ pressed }) => [styles.replayButton, pressed && styles.replayButtonPressed]}
@@ -486,6 +530,10 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: 'bold',
     color: '#4C3000',
+  },
+  homeButtonBottom: {
+    alignSelf: 'center',
+    marginBottom: 24,
   },
   homeButton: {
     marginTop: 16,

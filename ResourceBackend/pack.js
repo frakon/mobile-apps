@@ -39,7 +39,10 @@ function listFiles(dir, extension) {
 
 function isExcluded(fileName) {
   // Decision 10: blind-test logs and .txt/.md files never reach the backend archives.
-  return fileName.endsWith('.txt') || fileName.endsWith('.md') || fileName.startsWith('_blind_test_log');
+  // pexeso_ear.png is a BUNDLED UI asset (sound-card face), not a word — it must not become a
+  // stray words/pexeso_ear.zip (verification Phase C R1 L5).
+  return fileName.endsWith('.txt') || fileName.endsWith('.md') || fileName.startsWith('_blind_test_log')
+    || fileName === 'pexeso_ear.png';
 }
 
 function sha256(buffer) {

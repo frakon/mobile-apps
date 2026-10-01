@@ -7,7 +7,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-import { getUnpackedArchive, refreshManifest, releaseUnpackedArchive } from './resourceStore';
+import { getUnpackedArchive, getUnpackedArchiveIfHot, refreshManifest, releaseUnpackedArchive } from './resourceStore';
 import { UnpackedArchive } from './types';
 
 export type ArchivePreloadStatus = 'loading' | 'ready' | 'offline';
@@ -85,6 +85,20 @@ export function useArchivePreloading(
         }
         const unpacked = await Promise.all(required.map((archivePath) => getUnpackedArchive(archivePath)));
         if (cancelled || disposedRef.current) {
+          // Mid-load cancellation (verification Phase C R1 M3): archives acquired by this stale run must not leak.
+          // Disposed (screen left): release everything not already held — mirrors the prefetch disposal handling.
+          // Merely cancelled (round swapped, screen alive): hold them instead — a newer run's window filter or the
+          // unmount cleanup releases the ones that left the window (releasing here could drop archives the newer
+          // run is just reusing).
+          required.forEach((archivePath, index) => {
+            if (disposedRef.current) {
+              if (!heldRef.current.has(archivePath)) {
+                releaseUnpackedArchive(archivePath);
+              }
+            } else {
+              heldRef.current.set(archivePath, unpacked[index]);
+            }
+          });
           return;
         }
         const archives: Record<string, UnpackedArchive> = {};
@@ -124,5 +138,26 @@ export function useArchivePreloading(
   }, [requiredKey, prefetchKey, retryToken]);
 
   const retry = useCallback(() => setRetryToken((token) => token + 1), []);
+
+  // Synchronous hot path (verification Phase C R1 M1): when the required archives swap (next round) and all of them
+  // are already hot in resourceStore (they were prefetched), report 'ready' with those archives in the SAME render —
+  // the async effect's state update lands a frame later and would otherwise unmount the board for >= 1 frame.
+  const stateCoversRequired =
+    state.status === 'ready' && requiredArchives.every((archivePath) => state.archives[archivePath] !== undefined);
+  if (!stateCoversRequired) {
+    const hotArchives: Record<string, UnpackedArchive> = {};
+    let allHot = true;
+    for (const archivePath of requiredArchives) {
+      const hot = getUnpackedArchiveIfHot(archivePath);
+      if (hot === undefined) {
+        allHot = false;
+        break;
+      }
+      hotArchives[archivePath] = hot;
+    }
+    if (allHot) {
+      return { status: 'ready', archives: hotArchives, retry };
+    }
+  }
   return { status: state.status, archives: state.archives, retry };
 }

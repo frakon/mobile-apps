@@ -9,7 +9,8 @@ import {
   INITIAL_COMPOSE_PROGRESS,
   buildComposePlan,
   buildComposeRound,
-  collectComposeAssetModules,
+  collectComposeArchives,
+  collectComposePreloadArchives,
   completeRound,
   composeEligibleWords,
   arrowSourceTileId,
@@ -24,7 +25,7 @@ import {
   shuffleTiles,
   slotValues,
   splitLetters,
-  tileAudio,
+  tileAudioResource,
   tileLabel,
 } from '../logic';
 
@@ -38,8 +39,6 @@ function word(id: string, text: string, syllables: string[], extra: Partial<Word
     excludeLevel1: false,
     excludeLevel2: false,
     excludeLevel3: false,
-    image: 100,
-    audio: 200,
     ...extra,
   };
 }
@@ -177,10 +176,28 @@ describe('drop resolution', () => {
   });
 });
 
-test('prefetch list: picture, plain word audio, tile sounds (deduplicated)', () => {
-  const dataset: WordStartsDataset = { words: [KOCKA], letterAudio: { k: 1, o: 2, č: 3, a: 4 }, syllableAudio: { koč: 5 } };
-  expect(collectComposeAssetModules(buildComposeRound(KOCKA, 'letters', seeded(1)), dataset).sort()).toEqual([1, 100, 2, 200, 3, 4].sort());
-  expect(collectComposeAssetModules(buildComposeRound(KOCKA, 'syllables', seeded(1)), dataset).sort()).toEqual([100, 200, 5].sort());
+test('round archives: the word zip + syllable-group zips (letters variant: letter audio is bundled)', () => {
+  const dataset: WordStartsDataset = {
+    words: [KOCKA],
+    letterAudio: { k: 1, o: 2, č: 3, a: 4 },
+    syllableAudio: { koč: 'kocx.mp3', ka: 'ka.mp3' },
+  };
+  // Letters variant: tile sounds are bundled letter names -> only the word archive is needed.
+  expect(collectComposeArchives(buildComposeRound(KOCKA, 'letters', seeded(1)), dataset)).toEqual(['words/kocka.zip']);
+  expect(tileAudioResource('letters', 'k', dataset)).toEqual({ kind: 'bundled', module: 1 });
+  // Syllables variant: the tiles' syllable-group zips are added (koč + ka both fold into the k group -> deduplicated).
+  expect(collectComposeArchives(buildComposeRound(KOCKA, 'syllables', seeded(1)), dataset)).toEqual(['words/kocka.zip', 'syllables/k.zip']);
+  expect(tileAudioResource('syllables', 'koč', dataset)).toEqual({ kind: 'archive', archivePath: 'syllables/k.zip', fileName: 'kocx.mp3' });
+  expect(tileAudioResource('syllables', 'xx', dataset)).toBeUndefined();
+});
+
+test('preload window: current + next 5 rounds, deduplicated (5-round preload, Follow-up prompt 9)', () => {
+  const dataset: WordStartsDataset = { words: [], letterAudio: {}, syllableAudio: {} };
+  const plan = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'].map((letter) =>
+    buildComposeRound(word(`w${letter}`, `${letter}ko`, [`${letter}ko`]), 'letters', seeded(1))
+  );
+  expect(collectComposePreloadArchives(plan, 0, dataset)).toEqual(['wa', 'wb', 'wc', 'wd', 'we', 'wf'].map((id) => `words/${id}.zip`));
+  expect(collectComposePreloadArchives(plan, 3, dataset)).toEqual(['wd', 'we', 'wf', 'wg', 'wh'].map((id) => `words/${id}.zip`));
 });
 
 describe('scoring and layout', () => {
@@ -262,7 +279,7 @@ describe('real dataset', () => {
       for (const entry of eligible) {
         const round = buildComposeRound(entry, variant);
         for (const tile of round.tiles) {
-          expect(tileAudio(variant, tile.value, dataset)).toBeDefined();
+          expect(tileAudioResource(variant, tile.value, dataset)).toBeDefined();
         }
       }
     }

@@ -78,3 +78,21 @@ Or actually: add there both options: commenia script and the tradiční vázané
 ## Q&A 11 — Pexeso scoring details
 - Q: Count mismatch as wrong when the SECOND card's partner was seen before? A: Only first card's partner (Recommended) — wrong only if the FIRST flipped card's partner was already seen.
 - Q: 3-flip rule — which flip counts as wrong? A: From the 3rd flip (this flip included).
+
+## Follow-up prompt 9 — mobile-apps-preferences (backend resources, cache, preload) (2026-10-01)
+Pexeso-side part of the task recorded in `../../_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences
+(backend resources, cache, preload) (2026-10-01)" (full task prompt + all 11 Q&A decisions there). Decisions applied to pexeso:
+- Decision 2 (archive model): `PexesoWord` carries `archivePath` (`words/<id>.zip`) instead of bundled `image`/`audio`
+  module ids; pictures and word sounds resolve to hot in-memory data URIs (`pexesoLogic.ts` WORD_PICTURE_FILE /
+  WORD_AUDIO_FILE, `PexesoCard.tsx` `imageUri` prop). Letter audio and the ear picture stay bundled.
+- Decision 6 (no rounds -> preload everything for the play): `PexesoGame.tsx` `PreloadedGame` deals the deck first,
+  then preloads EVERY dealt image card's archive (`collectDeckArchives`) before the board shows; "Hrát znovu" re-deals
+  and re-preloads. Letters-only boards need no archives and work fully offline.
+- Decision 7 (offline): `OfflineRetry` (child-friendly Czech message + "Zkusit znovu") when the backend is unreachable
+  and a needed archive is not cached.
+- Decision 9 (settings previews): a few BUNDLED, DOWNSIZED (half-resolution) sample pictures
+  (`assets/images/pexeso_samples/`, `PEXESO_SAMPLE_IMAGES` in `pexesoPlatform.ts`) shown in `PexesoSettingsScreen.tsx`
+  for the "Obrázky" card type. User verbatim:
+  > "BUT: the samples shall be converted to smaller sized pictures if smaller sizes are used: WHY: for everything directly in the bundle we must consider whether it is needed as whole, or if any smaller form of it exists (e.g. comprimation, or by images: whether e.g. two times smaller images would not be enough)"
+- Resource access of the shared pexeso files goes through `pexesoPlatform.ts` re-exports (the relative path to
+  `src/resources/` differs in the standalone LetterPexeso app). The themed start animation (decision 4) is a later step.
