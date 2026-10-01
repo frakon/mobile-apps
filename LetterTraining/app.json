@@ -7,6 +7,11 @@
     "scheme": "lettertraining",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-welcome.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#FBF6EC"
+    },
     "ios": {
       "supportsTablet": true
     },
