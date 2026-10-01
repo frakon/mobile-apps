@@ -24,7 +24,15 @@ import {
   pairCountOf,
 } from './game/pexesoLogic';
 import type { UnpackedArchive } from './pexesoPlatform';
-import { OfflineRetry, PEXESO_LETTER_AUDIO, PEXESO_WORDS, playAudio, stopAudioIfOwnedBy, useArchivePreloading } from './pexesoPlatform';
+import {
+  OfflineRetry,
+  PEXESO_LETTER_AUDIO,
+  PEXESO_WORDS,
+  StartAnimation,
+  playAudio,
+  stopAudioIfOwnedBy,
+  useArchivePreloading,
+} from './pexesoPlatform';
 import { loadPexesoSettings } from './pexesoSettingsStorage';
 import { colors } from './theme';
 
@@ -138,10 +146,11 @@ function PreloadedGame({ onBack, onOpenSettings, settings, boardSize }: Preloade
   // 'ready' can momentarily still refer to the PREVIOUS deck while a new one is dealt — the board shows only when
   // every archive of the CURRENT deck is actually hot.
   if (status !== 'ready' || neededArchives.some((archivePath) => archives[archivePath] === undefined)) {
-    // Plain waiting screen; the themed start animation is a separate later step (plan Phase D).
+    // Themed start animation while loading (cards fly onto the table, a pair matches, another turns back); cut
+    // immediately once the deck is hot — LetterTraining `_LetterTraining_PROMPTS.md` / "### Phase D — start animations".
     return (
-      <SafeAreaView style={[styles.root, styles.notPossible]}>
-        <Text style={styles.notPossibleText}>Načítám obrázky a zvuky…</Text>
+      <SafeAreaView style={styles.root}>
+        <StartAnimation scene="pexeso" />
       </SafeAreaView>
     );
   }

@@ -15,6 +15,8 @@ export { playAudio, stopAllAudio, stopAudioIfOwnedBy } from '../audioController'
 // differs in the standalone LetterPexeso app, so the glue re-exports it).
 export { OfflineRetry } from '../resources/OfflineRetry';
 export { useArchivePreloading } from '../resources/useArchivePreloading';
+// Shared themed start animation (Phase D) — same relative-path reason as above.
+export { StartAnimation } from '../startAnimation/StartAnimation';
 export type { UnpackedArchive } from '../resources/types';
 
 export const PEXESO_WORDS: readonly PexesoWord[] = WORDS.filter((entry) => !entry.excludeLevel1).map((entry) => ({

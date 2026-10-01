@@ -22,6 +22,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { playAudio, stopAudioIfOwnedBy } from '../src/audioController';
 import { OfflineRetry } from '../src/resources/OfflineRetry';
 import { useArchivePreloading } from '../src/resources/useArchivePreloading';
+import { StartAnimation } from '../src/startAnimation/StartAnimation';
 import { warmBundledAudioModules } from '../src/resources/warmBundledAudio';
 import {
   INITIAL_PROGRESS,
@@ -308,11 +309,12 @@ export default function WordsScreen() {
   }
 
   if (!roundResourcesReady) {
-    // Resources of the CURRENT round are always ready before the round shows (preferences skill). Plain waiting
-    // screen for now — the themed start animation is a separate later step (plan Phase D).
+    // Resources of the CURRENT round are always ready before the round shows (preferences skill). While they load the
+    // themed start animation plays; it is cut immediately (this branch stops rendering) once they are ready —
+    // `_LetterTraining_PROMPTS.md` / "### Phase D — start animations".
     return (
       <SafeAreaView style={styles.centered}>
-        <Text style={styles.scoreLine}>Načítám obrázky a zvuky…</Text>
+        <StartAnimation scene="words" />
       </SafeAreaView>
     );
   }

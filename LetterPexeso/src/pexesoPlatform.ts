@@ -13,6 +13,8 @@ export { PEXESO_LETTER_AUDIO, PEXESO_WORDS } from './pexesoWords';
 // differs between the two apps, so the glue re-exports it).
 export { OfflineRetry } from './resources/OfflineRetry';
 export { useArchivePreloading } from './resources/useArchivePreloading';
+// Shared themed start animation (Phase D) — same relative-path reason as above.
+export { StartAnimation } from './startAnimation/StartAnimation';
 export type { UnpackedArchive } from './resources/types';
 
 // One identical ear-with-sound picture on every sound card - "Q&A 9 — Pexeso improvements round 2".

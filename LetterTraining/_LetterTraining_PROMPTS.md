@@ -217,6 +217,22 @@ user wording preserved where it was given.)
 - The start animations (decision 4) are NOT part of Phase C — plain "Načítám…" placeholders until plan Phase D.
 - Bundle effect: `npx expo export --platform ios` dropped from ~123 MB of assets to ~5.3 MB total (1.6 MB assets).
 
+### Phase D — start animations
+(Implementation note, not a user prompt — no new prompt; realizes decision 4 "Animations: one themed animation per game"
+above + the mobile-apps-preferences skill's "Exercise start animation".)
+- `src/startAnimation/StartAnimation.tsx` (component, one master clock) + `startAnimationLogic.ts` (pure keyframe plans,
+  each ≤5 s; the last frame stays as the fixed screen with caption „Připravuji hru…"). Both files are shared byte-identical
+  with LetterPexeso (`src/startAnimation/`).
+- Scenes: words — 🍎 card pops in, 🔊 pulses, letters M/J/S pop in, J lights green (3.2 s); compose — 🐶 + 3 dashed boxes,
+  tiles P/E/S slide in one by one, boxes light green (3.5 s); train — red engine drives in, wagons A/B/C hook on in order,
+  steam puff (3.9 s); pexeso — 6 cards fly onto the table (all landed by 0.95 s), a circle pair flips + vanishes with ✨,
+  a square/diamond pair flips and turns back (4.2 s).
+- Shown only in the preload gates' loading branch (after the offline branch → OfflineRetry); when resources are ready the
+  gate renders the game instead, which unmounts the animation immediately (cut, at any beat).
+- Uses React Native core `Animated` (not Reanimated, deviation from the decision's wording "Reanimated/JS") so the same
+  file runs in LetterPexeso, which has no Reanimated dependency; core Animated ignores the system Reduce Motion setting
+  (same continuous-motion outcome as the train's NEVER_REDUCED). Pexeso imports it via `pexesoPlatform.ts`.
+
 ## Custom icon and welcome screen (2026-10-01)
 
 User instruction (verbatim):
@@ -261,3 +277,6 @@ Further specification of "Slož slovo z písmen (skládání slov - písmena)" a
 
 (Status note, not a user prompt: only the first bullet (tap-to-place) is implemented in this package. The pronunciation
 bullet (audio wiring) is a SEPARATE later package, pending the user's listening approval of the new recordings.)
+
+## Follow-up prompt 12 — Začátky slov úroveň 2,3: natural first/last-syllable audio (verbatim) (2026-10-01)
+Ad the "Začátky slov - úroveň 2,3" - add to prompts: the .mp3s shall not be created by connecting separated syllables and by artificial emphasizing of some syllables (WHY: it sounds unnatural). Instead for the first syllables the texts like "no viny" and "u cho" shall be read, and for the last syllables the texts like "novi ny" and "u cho" shall be read. Appoint subagent(s) with regenerating all the words for the "Začátky slov" with sylables (úroveň 2 a 3; not úroveň 1 (which is read already normally)).

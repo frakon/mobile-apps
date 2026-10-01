@@ -79,6 +79,11 @@ preloaded** ahead (downloaded, disk-cached, unpacked; past rounds released) — 
 (supersedes the earlier 2-rounds-ahead bundled-Asset prefetch). A round counts as correct only if the first tap
 is correct.
 
+Start animations (`src/startAnimation/`): while a game's resources load, a themed ≤5 s animation per game plays
+(words: picture + 🔊 + letter options; compose: tiles slide into boxes; train: wagons hook onto the engine; pexeso:
+cards dealt, pair matched, pair turned back), then holds its last frame („Připravuji hru…"); it is cut immediately when
+the resources are ready. RN core `Animated`, shared byte-identical with LetterPexeso.
+
 Feedback:
 - correct tap → green tint + green ✓ on the option, the letter/syllable sound plays, and the next round shows after
   **max(500 ms, end of the sound)** (decision: the sound is not cut at 500 ms; missing/failed sound = 500 ms).
@@ -91,8 +96,9 @@ the task `words.json` (re-run it after new pictures are accepted; never edit it 
 an ACCEPTED picture (`assets/images/<id>.png` + accepted `blind_test_data/_blind_test_log/<id>.md`) and exports `WORDS`
 (word, syllables, firstLetter, alternativeNames, excludeLevel1/2/3, image, audio, audioFirst, audioLast),
 `LETTER_AUDIO`, `SYLLABLE_AUDIO` (real + synthetic syllables) and `REAL_SYLLABLES` (all words.json syllables).
-Level 1 plays the plain word, Level 2 the word with the first syllable emphasized (`audio/words_first/`), Level 3 with
-the last syllable emphasized (`audio/words_last/`). `excludeLevelN` words are skipped in that level; in Level 1 only
+Level 1 plays the plain word, Level 2 the word read naturally with the first syllable separated by a space ("no viny",
+`audio/words_first/`), Level 3 read with the last syllable separated ("novi ny", `audio/words_last/`) — one natural TTS
+reading per file, no syllable concatenation or artificial emphasis ("## Follow-up prompt 12"). `excludeLevelN` words are skipped in that level; in Level 1 only
 letters with >= 3 eligible words can be the correct answer (a level without eligible words shows „Pro tuto úroveň
 zatím nejsou žádná slova."). `assets/placeholder/` is no longer used.
 

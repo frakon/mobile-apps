@@ -42,8 +42,10 @@ Requirements and decisions: `_LetterPexeso_PROMPTS.md`.
   (168 px) settings preview samples in `assets/images/pexeso_samples/`. Letters-only and sound-only boards work fully offline.
 - The old bundled word assets `assets/images/*.jpg|*.png` and `assets/audio/words/` are no longer referenced (kept in the
   repo, not bundled).
-- Start animation: not yet — the board shows a plain "Načítám obrázky a zvuky…" screen while loading (the themed
-  animation comes with the shared `PexesoGame.tsx` once LetterTraining gets it).
+- Start animation: while the board's archives load, a themed ≤5 s animation plays (6 cards fly onto the table within
+  1 s, a matching pair vanishes with a sparkle, a different pair turns back), then holds its last frame („Připravuji
+  hru…"); cut immediately when ready. `src/startAnimation/` is shared byte-identical with LetterTraining (RN core
+  `Animated`, no extra dependency).
 
 ## Run on iPhone (Expo Go)
 ```bash

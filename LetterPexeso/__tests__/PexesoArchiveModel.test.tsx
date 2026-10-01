@@ -111,7 +111,8 @@ test('image board: all dealt archives requested; board hidden while loading', ()
   for (const archivePath of required) {
     expect(archivePath).toMatch(/^words\/.+\.zip$/);
   }
-  expect(texts()).toContain('Načítám obrázky a zvuky…');
+  // Phase D: the themed start animation (its caption) replaces the plain "Načítám…" placeholder while loading.
+  expect(texts()).toContain('Připravuji hru…');
   expect(root!.root.findAll((node) => typeof node.props.imageUri === 'string')).toHaveLength(0);
 });
 

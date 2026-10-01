@@ -38,6 +38,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { playAudio, stopAudioIfOwnedBy } from '../src/audioController';
 import { OfflineRetry } from '../src/resources/OfflineRetry';
 import { useArchivePreloading } from '../src/resources/useArchivePreloading';
+import { StartAnimation } from '../src/startAnimation/StartAnimation';
 import { warmBundledAudioModules } from '../src/resources/warmBundledAudio';
 import { WORD_PICTURE_FILE, resolveAudioSource, wordArchivePath } from '../src/wordStarts/logic';
 import {
@@ -470,11 +471,12 @@ export default function ComposeScreen() {
   }
 
   if (!roundResourcesReady) {
-    // Current round's resources are always hot before the round shows (preferences skill); themed start animation
-    // comes in a later step (plan Phase D).
+    // Current round's resources are always hot before the round shows (preferences skill); the themed start animation
+    // plays meanwhile and is cut immediately once they are ready — `_LetterTraining_PROMPTS.md` / "### Phase D — start
+    // animations".
     return (
       <SafeAreaView style={styles.centered}>
-        <Text style={styles.scoreLine}>Načítám obrázky a zvuky…</Text>
+        <StartAnimation scene="compose" />
       </SafeAreaView>
     );
   }

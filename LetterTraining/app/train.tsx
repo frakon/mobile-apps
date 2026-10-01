@@ -50,6 +50,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { playAudio, stopAudioIfOwnedBy } from '../src/audioController';
 import { OfflineRetry } from '../src/resources/OfflineRetry';
 import { useArchivePreloading } from '../src/resources/useArchivePreloading';
+import { StartAnimation } from '../src/startAnimation/StartAnimation';
 import { warmBundledAudioModules } from '../src/resources/warmBundledAudio';
 import { ENGINE_IMAGES, EN_LETTER_AUDIO, WAGON_IMAGES } from '../src/train/assets';
 import {
@@ -554,11 +555,12 @@ export default function TrainScreen() {
   }
 
   if (resourceStatus !== 'ready') {
-    // Whole-play resources are ready before the play shows (preferences skill); the themed start animation is a
-    // separate later step (plan Phase D).
+    // Whole-play resources are ready before the play shows (preferences skill); the themed start animation plays
+    // meanwhile and is cut immediately once they are ready — `_LetterTraining_PROMPTS.md` / "### Phase D — start
+    // animations".
     return (
       <SafeAreaView style={styles.centered}>
-        <Text style={styles.loadingText}>Načítám vláčky…</Text>
+        <StartAnimation scene="train" />
       </SafeAreaView>
     );
   }
