@@ -304,3 +304,8 @@ the train's "## Follow-up prompt 10" tap-to-connect had the same latent defect.)
 
 ## Specification change 14 — Začátky slov: no green check mark (verbatim) (2026-10-01)
 Specification change: in "Začátky slov" (all three levels): do not show the green check mark there: omit it. Keep the box getting slightly green, but do not show there the green check mark. Reason: it hides the letter(s) so the child cannot check/read/remember the correct answer because it is hidden under the green checkmark. So: do not show the green checkmark in these excercises at all.
+
+## Change request 15 — Začátky slov úroveň 2,3: audio of complete unchanged words (verbatim) (2026-10-01)
+Another change request: in "Začátky slov" (first syllable and the last syllable variant: level 2 and 3): re-generate the .mp3s again. Neither the "no viny" style, nor the "novi ny" style does not work. On some words it works, but e.g. "do pis" is read as "do pé í es" and the "bros kev" is read as "bros kiev". That is completely wrong. Therefore: we will not try to invent or use any pronouncing with emphasize, nor do any editations. We will for now just generate the .mp3 from the complete and unchanged words ("dopis", "broskev", "noviny"). Regenerate it now for all and then commit, push, redeploy
+
+Note: commit/push/redeploy handled by the master agent; this supersedes "## Follow-up prompt 12"'s spaced-split style.
