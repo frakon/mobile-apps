@@ -29,6 +29,7 @@ import {
   PEXESO_LETTER_AUDIO,
   PEXESO_WORDS,
   StartAnimation,
+  enablePlaybackInSilentMode,
   playAudio,
   stopAudioIfOwnedBy,
   useArchivePreloading,
@@ -216,6 +217,12 @@ function GameScreen({ onBack, onOpenSettings, boardSize, cards, archives, soundO
   const queuedCardRef = useRef<Card | undefined>(undefined);
 
   // Leaving the game stops only this game's card sound (never another screen's sound).
+  // iOS: without setAudioModeAsync({ playsInSilentMode: true }) no session category is set and the iOS default
+  // .soloAmbient is muted by the ring/silent switch; the pexeso never set it -> silent card sounds (PexesoSoundFix).
+  // playAudio() also awaits it before the first play; this mount call just starts it early.
+  useEffect(() => {
+    void enablePlaybackInSilentMode();
+  }, []);
   useEffect(() => () => stopAudioIfOwnedBy(audioOwner), [audioOwner]);
 
   // Only a new reveal plays (revealToken changes on every card turned face-up).

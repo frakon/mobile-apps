@@ -20,6 +20,7 @@ jest.mock('../pexesoSettingsStorage', () => ({
 
 // Card sounds (`_LetterPexeso_PROMPTS.md` / "Q&A 9 — Pexeso improvements round 2": sound on flip only).
 jest.mock('../../audioController', () => ({
+  enablePlaybackInSilentMode: jest.fn(),
   playAudio: jest.fn(() => 1),
   stopAllAudio: jest.fn(),
   stopAudioIfOwnedBy: jest.fn(),
@@ -259,6 +260,14 @@ test('fast match, removed card is the SECOND card (tapped within its flip-down) 
   const scales = cardScales();
   expect(scales).toHaveLength(18);
   expect(scales).toEqual(new Array(18).fill(1));
+});
+
+// PexesoSoundFix regression: iOS silent switch mutes card sounds unless playsInSilentMode is enabled.
+test('mount enables playback in iOS silent mode', () => {
+  const { enablePlaybackInSilentMode } = jest.requireMock('../../audioController') as { enablePlaybackInSilentMode: jest.Mock };
+  enablePlaybackInSilentMode.mockClear();
+  setup();
+  expect(enablePlaybackInSilentMode).toHaveBeenCalledTimes(1);
 });
 
 test('renders 18 card Pressables after grid layout', () => {

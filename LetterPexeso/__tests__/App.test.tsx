@@ -20,6 +20,7 @@ jest.mock('../src/pexesoSettingsStorage', () => ({
 
 // Card sounds (`_LetterPexeso_PROMPTS.md` / "Q&A 9 — Pexeso improvements round 2": sound on flip only).
 jest.mock('../src/audioController', () => ({
+  enablePlaybackInSilentMode: jest.fn(),
   playAudio: jest.fn(() => 1),
   stopAllAudio: jest.fn(),
   stopAudioIfOwnedBy: jest.fn(),

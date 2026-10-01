@@ -17,7 +17,7 @@
 // a new one deactivated the session under the new player → HYPOTHESIS (code-derived, not
 // confirmed on a device): the new sound stayed silent.
 
-import { AudioSource, createAudioPlayer } from 'expo-audio';
+import { AudioSource, createAudioPlayer, setAudioModeAsync } from 'expo-audio';
 
 type AudioPlayerInstance = ReturnType<typeof createAudioPlayer>;
 
@@ -99,6 +99,35 @@ function releaseSound(sound: CurrentSound): void {
   } catch {
     // already released
   }
+}
+
+// iOS: until setAudioModeAsync({ playsInSilentMode: true }) runs, expo-audio sets no session category, so the
+// AVAudioSession stays at the iOS default .soloAmbient, which the ring/silent switch mutes (PexesoSoundFix: the
+// pexeso never called it -> silent card sounds). Called ONCE per app run (memoized promise): screens call it on
+// mount, and playAudio() awaits it before the first play, so no screen can forget it.
+let silentModePromise: Promise<void> | null = null;
+let silentModeSettled = false;
+
+export function enablePlaybackInSilentMode(): Promise<void> {
+  if (silentModePromise === null) {
+    silentModePromise = setAudioModeAsync({ playsInSilentMode: true }).then(
+      () => {
+        silentModeSettled = true;
+      },
+      (error: unknown) => {
+        // Not retried; playback proceeds anyway (audible at least with the switch on ring).
+        console.warn('audioController: setAudioModeAsync({ playsInSilentMode: true }) failed', error);
+        silentModeSettled = true;
+      }
+    );
+  }
+  return silentModePromise;
+}
+
+// Test-only: forget the memoized audio-mode call (jest module state survives between tests of one file).
+export function resetSilentModeForTests(): void {
+  silentModePromise = null;
+  silentModeSettled = false;
 }
 
 // Stops everything that sounds or is pending, and invalidates every pending continuation.
@@ -218,7 +247,8 @@ export function playAudio(source: AudioSource, options: PlayAudioOptions): numbe
   try {
     // keepAudioSessionActive: see the root-cause note at the top of this file.
     player = createAudioPlayer(source, { keepAudioSessionActive: true });
-  } catch {
+  } catch (error) {
+    console.warn(`audioController: createAudioPlayer for "${options.key}" failed`, error);
     if (options.retryOnceOnStartFailure === true) {
       // Same single retry as the other start failures (verification AudioFix R3-3).
       return playAudio(source, { ...options, retryOnceOnStartFailure: false, isStartFailureRetry: true });
@@ -247,13 +277,48 @@ export function playAudio(source: AudioSource, options: PlayAudioOptions): numbe
         }
       }
     });
-    player.play();
-    armTimers(sound);
-  } catch {
+  } catch (error) {
+    console.warn(`audioController: preparing "${options.key}" failed`, error);
     if (current === sound) {
       // the sentence retries once; others fail via onFailure
       return handleStartFailure(sound) ?? token;
     }
+    return token;
   }
+  if (silentModeSettled) {
+    return startPlayback(sound) ?? token;
+  }
+  // First play(s) of the app run: wait for the silent-mode audio session, then start unless a newer request won.
+  // Raced against a timeout: if setAudioModeAsync hangs, the first sound must still play (PexesoSoundFix).
+  let silentModeTimer: ReturnType<typeof setTimeout> | undefined;
+  const silentModeTimeout = new Promise<void>((resolve) => {
+    silentModeTimer = setTimeout(() => {
+      console.warn(`audioController: enabling silent-mode playback timed out after ${SILENT_MODE_WAIT_TIMEOUT_MS} ms; playing "${options.key}" anyway`);
+      resolve();
+    }, SILENT_MODE_WAIT_TIMEOUT_MS);
+  });
+  void Promise.race([enablePlaybackInSilentMode(), silentModeTimeout]).then(() => {
+    clearTimeout(silentModeTimer);
+    if (current === sound) {
+      startPlayback(sound);
+    }
+  });
   return token;
+}
+
+const SILENT_MODE_WAIT_TIMEOUT_MS = 1000;
+
+// play() + watchdog/safety timers. Returns the retry's token when a synchronous start-failure retry was started.
+function startPlayback(sound: CurrentSound): number | undefined {
+  try {
+    sound.player.play();
+    armTimers(sound);
+  } catch (error) {
+    console.warn(`audioController: play() of "${sound.options.key}" failed`, error);
+    if (current === sound) {
+      // the sentence retries once; others fail via onFailure
+      return handleStartFailure(sound);
+    }
+  }
+  return undefined;
 }

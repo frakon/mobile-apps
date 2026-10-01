@@ -10,7 +10,7 @@ import type { LetterAudioMap } from '../wordStarts/types';
 import { LETTER_AUDIO, WORDS } from '../words';
 import type { PexesoWord } from './game/pexesoLogic';
 
-export { playAudio, stopAllAudio, stopAudioIfOwnedBy } from '../audioController';
+export { enablePlaybackInSilentMode, playAudio, stopAllAudio, stopAudioIfOwnedBy } from '../audioController';
 // Backend-resource access for the shared pexeso files (they must not import ../resources directly: the relative path
 // differs in the standalone LetterPexeso app, so the glue re-exports it).
 export { OfflineRetry } from '../resources/OfflineRetry';

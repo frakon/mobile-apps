@@ -7,7 +7,7 @@
 // pictures/audio are backend-served (words/<id>.zip); only letter audio, the ear picture and the downsized settings
 // samples stay bundled.
 
-export { playAudio, stopAllAudio, stopAudioIfOwnedBy } from './audioController';
+export { enablePlaybackInSilentMode, playAudio, stopAllAudio, stopAudioIfOwnedBy } from './audioController';
 export { PEXESO_LETTER_AUDIO, PEXESO_WORDS } from './pexesoWords';
 // Backend-resource access for the shared pexeso files (they must not import resources/ directly: the relative path
 // differs between the two apps, so the glue re-exports it).

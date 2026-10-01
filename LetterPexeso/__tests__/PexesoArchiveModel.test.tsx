@@ -13,7 +13,7 @@ jest.mock('../src/pexesoSettingsStorage', () => ({
   loadPexesoSettings: () => new Promise(() => undefined),
   savePexesoSettings: () => Promise.resolve(),
 }));
-jest.mock('../src/audioController', () => ({ playAudio: jest.fn(() => 1), stopAllAudio: jest.fn(), stopAudioIfOwnedBy: jest.fn() }));
+jest.mock('../src/audioController', () => ({ enablePlaybackInSilentMode: jest.fn(), playAudio: jest.fn(() => 1), stopAllAudio: jest.fn(), stopAudioIfOwnedBy: jest.fn() }));
 jest.mock('expo-screen-orientation', () => ({
   OrientationLock: { LANDSCAPE: 5 },
   lockAsync: jest.fn(() => Promise.resolve()),
