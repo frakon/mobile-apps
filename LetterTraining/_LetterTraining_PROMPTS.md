@@ -230,3 +230,17 @@ Outcome:
 - All 3 judges flagged that the composed tiles spelled "JAM" (English); the winner was regenerated with the tiles spelling the Czech word "JABLKO" (matching the apple card) — correct on the first regeneration attempt (`welcome3_final.png`).
 - The app icon was derived from the winner motif: one yellow letter tile with a big bold blue "J" and a small red apple on the corner, same watercolor style (`icon_1024.png`, first attempt accepted).
 - Wired into the app: `assets/icon.png` (overwritten), new `assets/splash-welcome.png`, and an `expo.splash` entry in `app.json` (cover, cream background). Android adaptive icon files were left as the Expo defaults (not regenerated).
+
+## Follow-up prompt 10 — Abecedový vlak further specification (verbatim) (2026-10-01)
+Further specification of "Abecedový vlak":
+* the random moves of wagons shall be always by 1px only: even if we want to move it by 4px, we do it in four 1px steps so that it seems that it glides (not that it jumps 4px). Put between every 1px movement at least 0.5second space
+* the correct wagon (the wagon with letter now in order) does not need to be dragged to the target area: it is completely enough when it is touched (pressed and released or tapped): it will automatically by fast sliding animation (lasting 0.5 second) move behind the previous wagon
+* when a wrong wagon was selected (touched, dragged and released, tapped): the reddish shade shall show around it: the shade shall slowly vanish (in 2 seconds). And at the same time as the redish shade was established around the wrong one: a green share shall be established around the right one: the green one will be permanent until the wagon gots correctly connected behind the current last connected wagon (then it loses its shade)
+* the 1 second move after the correct wagon was connected (as specified before: check prompts) is not working: the train moves abruptly; the "1 second during which the train shall gradually increase its speed and gradually decrease its speed and to travel in total only the 90% of width of the just connected wagon" does not work, the 1 second is not there. The train jumps directly to the target position. Also at the end the train does not leave in regular speed: it immediatelly disappeards: please repair it.
+
+(Context: the referenced earlier spec is "## Follow-up prompt 5" — "The move is continuous and lasts from 90% 1 second: it quickly accelerates then slows down and the last 10% of the way it goes the next 10 seconds".)
+
+(Repair status note, not a user prompt: the exit bug is CONFIRMED and fixed - the old exit curve was ease-in (accelerating the whole time, never reaching regular speed) and the "Hotovo" overlay fired at exactly the exit duration, racing the last frame. The cause of
+the jumping 1 s move - the device's Reduce Motion setting collapsing Reanimated animations - is an UNCONFIRMED
+HYPOTHESIS (all train animations now opt out of it anyway), pending one device run checking the Metro log line
+'[train] system Reduce Motion'.)

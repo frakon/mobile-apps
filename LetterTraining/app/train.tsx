@@ -6,22 +6,28 @@
 // - landscape; steam engine + attached wagons across the top, the train's end at ~60 % of the width ("## Q&A 6");
 // - N waiting wagons (settings 4–8, default 6) shuffled in one row below, slightly floating (a few px, slowly, random);
 // - drag start / tap on a waiting wagon speaks its letter name (CZ or EN voice) ("## Q&A 7");
-// - release with any overlap of the large drop zone at the train's end: correct letter -> the wagon eases onto the
-//   train's end, the train shifts one wagon left (90 % in 1 s, last 10 % over 10 s, retargeted smoothly), the next
-//   letter appears at a random pool position (neighbours ease apart, the new wagon grows from a point);
-//   wrong letter -> slides back (eased) + the train wiggles, NO sound ("## Q&A 7");
-// - last letter placed -> the train leaves the screen in 1 s, then "Hotovo" with "Znovu" / "Zpět" ("## Q&A 6");
+// - "## Follow-up prompt 10": the correct wagon connects on a mere touch / tap / release ANYWHERE (0.5 s slide behind
+//   the last wagon); the train then shifts one wagon left (the 1 s part travels 90 % of the WAGON WIDTH, the rest of
+//   the pitch over 10 s, retargeted smoothly); the next letter appears at a random pool position (neighbours ease
+//   apart, the new wagon grows from a point);
+// - wrong letter (tap or release anywhere) -> slides back (eased), red shade on it fading in 2 s + permanent green
+//   shade on the correct wagon until it connects; the train wiggles only when released in the drop zone; NO sound;
+// - floating moves go in 1 px gliding steps, ONE axis at a time per wagon, >= 0.5 s pause between steps;
+// - last letter connected -> NO shift; after the 0.5 s attach slide the train leaves the screen in 1 s (accelerates,
+//   then constant speed, no slow-down), then "Hotovo" (+150 ms) with "Znovu" / "Zpět" ("## Q&A 6");
+// - all animations opt out of the system Reduce Motion (NEVER_REDUCED; see the hypothesis note there).
 // - random engine per play, random wagon image per letter; all images + letter audio preloaded on open.
 // Autonomous decisions (NOT user-specified; listed in README.md):
 // - DECISION: drop zone = 1 wagon width left of the train's end to 1.5 widths right of it, 0.4 wagon height above the
 //   train down to 0.6 wagon height below it (src/train/logic.ts dropZone), drawn as a dashed outline at the train's end.
 // - DECISION: the train wiggles only for a wrong letter released IN the drop zone; a release elsewhere just slides back.
-// - DECISION: the last wagon first eases onto the train (ATTACH_MILLISECONDS), then the 1 s exit starts (ease-in).
+// - DECISION: the last wagon first eases onto the train (ATTACH_MILLISECONDS), then the 1 s exit starts (constant
+//   acceleration for the first 30 % of the time, then constant speed); "Hotovo" 150 ms after the exit ended.
 // - DECISION: durations of the non-specified motions: slide back 500 ms, neighbours making space 350 ms, grow-in
-//   350 ms (after 120 ms), floating ±4 px with 2–4 s random periods, wiggle ~0.5 s.
+//   350 ms (after 120 ms), floating ±4 px in 1 px steps (350 ms glide + 0.5–1.2 s pause, random axis order), wiggle
+//   ~0.5 s, green shade fade in/out 250 ms; shades = soft halo (iOS coloured glow, Android tint only).
 // - DECISION: a settings change (⚙) restarts the play; letter case CAPITALS by default.
 
-import { Asset } from 'expo-asset';
 import { setAudioModeAsync } from 'expo-audio';
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { useFocusEffect, useRouter } from 'expo-router';
@@ -30,8 +36,10 @@ import { LayoutChangeEvent, Pressable, StyleSheet, Text, View } from 'react-nati
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Animated, {
   Easing,
+  ReduceMotion,
   cancelAnimation,
   useAnimatedStyle,
+  useReducedMotion,
   useSharedValue,
   withDelay,
   withSequence,
@@ -42,14 +50,19 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { playAudio, stopAudioIfOwnedBy } from '../src/audioController';
 import { OfflineRetry } from '../src/resources/OfflineRetry';
 import { useArchivePreloading } from '../src/resources/useArchivePreloading';
+import { warmBundledAudioModules } from '../src/resources/warmBundledAudio';
 import { ENGINE_IMAGES, EN_LETTER_AUDIO, WAGON_IMAGES } from '../src/train/assets';
 import {
+  NO_SHADES,
+  RED_SHADE_FADE_MILLISECONDS,
   Rectangle,
+  ShadeState,
   TrainGameState,
   TrainLayout,
   alphabetLetters,
   assignWagonImages,
   computeTrainLayout as computePureTrainLayout,
+  configureWagonPan,
   createTrainGame,
   dropZone,
   isDropHit,
@@ -59,8 +72,27 @@ import {
   placeLetter,
   poolSlotPositions,
   randomInt,
+  releaseReaction,
+  selectionOutcome,
+  shadesAfterConnect,
+  shadesAfterWrongSelection,
 } from '../src/train/logic';
-import { SHIFT_TOTAL_MILLISECONDS, ShiftMotion, retargetShift, sampleShift } from '../src/train/motion';
+import {
+  ATTACH_MILLISECONDS,
+  EXIT_MILLISECONDS,
+  FLOAT_REST,
+  FLOAT_STEP_GLIDE_MILLISECONDS,
+  SHIFT_TOTAL_MILLISECONDS,
+  ShiftMotion,
+  exitEasing,
+  finishTimeline,
+  floatStepInterval,
+  floatStepPause,
+  nextFloatStep,
+  retargetShift,
+  sampleShift,
+  shiftSlowDistance,
+} from '../src/train/motion';
 import { TrainSettings, loadTrainSettings } from '../src/train/settings';
 import { Engine, PLACEHOLDER_WAGON_ASPECT, Wagon, engineGeometry, wagonGeometry } from '../src/train/Vehicles';
 import { LETTER_AUDIO } from '../src/words';
@@ -69,15 +101,13 @@ const SLIDE_BACK_MILLISECONDS = 500;
 const MAKE_SPACE_MILLISECONDS = 350;
 const GROW_DELAY_MILLISECONDS = 120;
 const GROW_MILLISECONDS = 350;
-const ATTACH_MILLISECONDS = 350;
-const EXIT_MILLISECONDS = 1000; // "the train goes off the screen in 1 last second"
+// ATTACH_MILLISECONDS / EXIT_MILLISECONDS / finishTimeline: src/train/motion.ts ("## Follow-up prompt 10": 0.5 s attach
+// slide; the exit leaves at regular speed - exitEasing - and "Hotovo" comes only after the train is fully gone).
 const FLOAT_AMPLITUDE_PIXELS = 4; // "a few pixels"
 const DRAG_SCALE = 1.08;
 const COUPLING_GAP_PIXELS = 3;
 const TAIL_FRACTION = 0.6; // "## Q&A 6": the train's end at ~60 % of the width
 const LETTER_SOUND_SAFETY_TIMEOUT_MILLISECONDS = 5000;
-// Verification round 1 H1: a release counts as a drop only after a real drag (a tap only speaks the letter).
-const MINIMUM_DRAG_DISTANCE_PIXELS = 10;
 // Verification round 1 H1: guaranteed vertical gap between the drop zone and the pool row.
 const MINIMUM_POOL_GAP_PIXELS = 12;
 const EASE_IN_OUT = Easing.inOut(Easing.cubic);
@@ -85,6 +115,17 @@ const EASE_IN_OUT = Easing.inOut(Easing.cubic);
 // after that (lock done / failed / not honoured, e.g. web, iPad multitasking) any size is laid out.
 const ORIENTATION_LOCK_GRACE_MILLISECONDS = 500;
 const DRAG_SCALE_MILLISECONDS = 130; // verification round 2 M1: eased pick-up / put-down scale
+// "## Follow-up prompt 10" item 4 (train jumped to the target, 1 s move missing, end exit vanished).
+// UNCONFIRMED HYPOTHESIS: the jump was caused by the device's "Reduce Motion" accessibility setting. VERIFIED (in
+// Reanimated's source, react-native-reanimated/src/animation/util.ts getReduceMotionFromConfig): withTiming /
+// withDelay / withSequence default to ReduceMotion.System and jump straight to the end value when that setting is
+// on. NOT CONFIRMED: whether the user's device has it on - the dev log line '[train] system Reduce Motion' below
+// will tell on the next device run. Either way the user requires every move to be continuous, so all animations of
+// this game opt out of it. (Separately CONFIRMED and fixed: the old exit used Easing.in - accelerating the whole time,
+// never reaching regular speed - and "Hotovo" fired at exactly EXIT_MILLISECONDS, racing the last frame; exitEasing
+// now reaches constant speed after 30 % and "Hotovo" comes 150 ms after the train is off-screen.)
+const NEVER_REDUCED = ReduceMotion.Never;
+const GREEN_SHADE_MILLISECONDS = 250; // DECISION: the green shade fades in / out quickly
 
 type Phase = 'playing' | 'leaving' | 'done';
 
@@ -154,6 +195,8 @@ export default function TrainScreen() {
   const [settings, setSettings] = useState<TrainSettings | null>(null);
   const [play, setPlay] = useState<Play | null>(null);
   const [phase, setPhase] = useState<Phase>('playing');
+  // "## Follow-up prompt 10": red (fading) / green (permanent until connected) shades around waiting wagons.
+  const [shades, setShades] = useState<ShadeState>(NO_SHADES);
   const [boardSize, setBoardSize] = useState({ width: 0, height: 0 });
   // Verification round 2 H1: the last measured board size + whether the landscape lock has settled.
   const measuredSize = useRef({ width: 0, height: 0 });
@@ -168,6 +211,7 @@ export default function TrainScreen() {
   const motionTo = useSharedValue(0);
   const motionVelocity = useSharedValue(0);
   const motionAcceleration = useSharedValue(0);
+  const motionSlow = useSharedValue(0); // ShiftMotion.slowDistance (repair L3)
   const motionElapsed = useSharedValue(SHIFT_TOTAL_MILLISECONDS);
   const exitOffset = useSharedValue(0);
   const wiggle = useSharedValue(0);
@@ -212,20 +256,18 @@ export default function TrainScreen() {
     [trainArchive]
   );
   useEffect(() => {
-    const modules: number[] = [
-      ...Object.values(EN_LETTER_AUDIO),
-      ...alphabetLetters('cz').map((letter) => LETTER_AUDIO[letter]).filter((module): module is number => module !== undefined),
-    ];
-    for (const moduleId of modules) {
-      try {
-        Asset.fromModule(moduleId)
-          .downloadAsync()
-          .catch(() => undefined); // silent: lazy load later
-      } catch {
-        // Unknown module id: equally silent.
-      }
-    }
+    warmBundledAudioModules([...Object.values(EN_LETTER_AUDIO), ...alphabetLetters('cz').map((letter) => LETTER_AUDIO[letter])]);
   }, []);
+
+  // Diagnostic for "## Follow-up prompt 10" item 4: logs (dev only, Metro terminal) whether the device asks to reduce
+  // motion - UNCONFIRMED HYPOTHESIS that this setting made the train jump (see NEVER_REDUCED); this line confirms or
+  // refutes it on the next device run.
+  const systemReducedMotion = useReducedMotion();
+  useEffect(() => {
+    if (__DEV__) {
+      console.log(`[train] system Reduce Motion = ${systemReducedMotion} (train animations ignore it)`);
+    }
+  }, [systemReducedMotion]);
 
   // Settings re-read on focus (back from ⚙); a change restarts the play (DECISION).
   const settingsRef = useRef(settings);
@@ -265,19 +307,23 @@ export default function TrainScreen() {
       motionTo.value = offset;
       motionVelocity.value = 0;
       motionAcceleration.value = 0;
+      motionSlow.value = 0;
       motionElapsed.value = SHIFT_TOTAL_MILLISECONDS;
       exitOffset.value = 0;
       wiggle.value = 0;
     },
-    [motionElapsed, exitOffset, motionFrom, motionTo, motionVelocity, motionAcceleration, wiggle]
+    [motionElapsed, exitOffset, motionFrom, motionTo, motionVelocity, motionAcceleration, motionSlow, wiggle]
   );
 
   const startPlay = useCallback(
     (current: TrainSettings) => {
       clearTimers();
       stopAudioIfOwnedBy(owner);
+      // Repair L4: shades vanish instantly on a new play - the pool wagons are keyed by play id (remounted with the
+      // reset shades, no 250 ms green fade-out carried over from the previous play).
       setPlay(newPlay(current));
       setPhase('playing');
+      setShades(NO_SHADES);
     },
     [clearTimers, owner]
   );
@@ -299,36 +345,46 @@ export default function TrainScreen() {
   }, [layout?.width, layout?.height, layout?.engineWidth, layout?.pitch, play?.id]);
 
   // "the train moves by distance of 1 wagon to the left" - retargeted from the current position and velocity.
+  // Repair L3: the 1 s part travels exactly 90 % of the WAGON WIDTH (spec wording "90% of width of the just connected
+  // wagon"), the rest of the pitch (wagon width + coupling gap) goes over the 10 s.
   const shiftTrainTo = useCallback(
-    (target: number) => {
+    (target: number, slowDistance: number) => {
       const current: ShiftMotion = {
         from: motionFrom.value,
         to: motionTo.value,
         startVelocity: motionVelocity.value,
         startAcceleration: motionAcceleration.value,
+        slowDistance: motionSlow.value,
       };
       cancelAnimation(motionElapsed);
-      const next = retargetShift(current, motionElapsed.value, target);
+      const next = retargetShift(current, motionElapsed.value, target, slowDistance);
       motionFrom.value = next.from;
       motionTo.value = next.to;
       motionVelocity.value = next.startVelocity;
       motionAcceleration.value = next.startAcceleration;
+      motionSlow.value = slowDistance;
       motionElapsed.value = 0;
-      motionElapsed.value = withTiming(SHIFT_TOTAL_MILLISECONDS, { duration: SHIFT_TOTAL_MILLISECONDS, easing: Easing.linear });
+      motionElapsed.value = withTiming(SHIFT_TOTAL_MILLISECONDS, { duration: SHIFT_TOTAL_MILLISECONDS, easing: Easing.linear, reduceMotion: NEVER_REDUCED });
     },
-    [motionFrom, motionTo, motionVelocity, motionAcceleration, motionElapsed]
+    [motionFrom, motionTo, motionVelocity, motionAcceleration, motionSlow, motionElapsed]
   );
 
   // Displayed train offset incl. the wiggle (an attach during a wiggle starts exactly where the train is drawn).
   const currentTrainOffset = useCallback(
     () =>
       sampleShift(
-        { from: motionFrom.value, to: motionTo.value, startVelocity: motionVelocity.value, startAcceleration: motionAcceleration.value },
+        {
+          from: motionFrom.value,
+          to: motionTo.value,
+          startVelocity: motionVelocity.value,
+          startAcceleration: motionAcceleration.value,
+          slowDistance: motionSlow.value,
+        },
         motionElapsed.value
       ).position +
       exitOffset.value +
       wiggle.value,
-    [motionFrom, motionTo, motionVelocity, motionAcceleration, motionElapsed, exitOffset, wiggle]
+    [motionFrom, motionTo, motionVelocity, motionAcceleration, motionSlow, motionElapsed, exitOffset, wiggle]
   );
 
   const speakLetter = useCallback(
@@ -354,35 +410,46 @@ export default function TrainScreen() {
     }
     // Move the whole train (its end) past the left edge.
     const tailX = currentTrainOffset() + current.engineWidth + currentPlay.game.placedCount * current.pitch;
-    exitOffset.value = withTiming(exitOffset.value - tailX - current.gap, { duration: EXIT_MILLISECONDS, easing: Easing.in(Easing.cubic) });
-    timers.current.push(setTimeout(() => setPhase('done'), EXIT_MILLISECONDS));
+    exitOffset.value = withTiming(exitOffset.value - tailX - current.gap, { duration: EXIT_MILLISECONDS, easing: exitEasing, reduceMotion: NEVER_REDUCED });
+    timers.current.push(setTimeout(() => setPhase('done'), finishTimeline().doneAfterExitStartMilliseconds));
   }, [currentTrainOffset, exitOffset]);
 
-  // Release of a waiting wagon: true = attached to the train, false = slides back.
+  // Release (tap, touch or drag-and-release) of a waiting wagon: true = attached to the train, false = slides back.
+  // "## Follow-up prompt 10": the correct wagon connects on a mere touch/tap, wherever it is released (fast 0.5 s slide
+  // behind the last wagon, ATTACH_MILLISECONDS); a wrong one gets the fading red shade and the correct one the green.
   const handleRelease = useCallback(
     (letter: string, rectangle: Rectangle, releaseScale: number): boolean => {
       const current = layoutRef.current;
       const currentPlay = playRef.current;
-      if (current === null || currentPlay === null || phase !== 'playing') {
+      if (current === null || currentPlay === null) {
+        return false;
+      }
+      const outcome = selectionOutcome(currentPlay.game, letter, phase === 'playing');
+      if (outcome === 'ignored') {
         return false;
       }
       const offset = currentTrainOffset();
-      const tailX = offset + current.engineWidth + currentPlay.game.placedCount * current.pitch;
-      const zone = dropZone(tailX, current.trainTop, current.engineHeight, current.wagonWidth, current.wagonHeight);
-      if (!isDropHit(rectangle, zone)) {
+      if (outcome === 'wrong') {
+        setShades((previous) => shadesAfterWrongSelection(previous, letter, currentPlay.game.letters[currentPlay.game.placedCount] ?? null));
+        const tailX = offset + current.engineWidth + currentPlay.game.placedCount * current.pitch;
+        const zone = dropZone(tailX, current.trainTop, current.engineHeight, current.wagonWidth, current.wagonHeight);
+        if (releaseReaction(outcome, isDropHit(rectangle, zone), false).wiggle) {
+          // Wrong letter dropped at the train: the train shakes slightly, NO sound ("## Q&A 7").
+          wiggle.value = withSequence(
+            NEVER_REDUCED,
+            withTiming(-6, { duration: 90, easing: Easing.inOut(Easing.sin), reduceMotion: NEVER_REDUCED }),
+            withTiming(6, { duration: 150, easing: Easing.inOut(Easing.sin), reduceMotion: NEVER_REDUCED }),
+            withTiming(-4, { duration: 130, easing: Easing.inOut(Easing.sin), reduceMotion: NEVER_REDUCED }),
+            withTiming(0, { duration: 110, easing: Easing.inOut(Easing.sin), reduceMotion: NEVER_REDUCED })
+          );
+        }
         return false;
       }
       const result = placeLetter(currentPlay.game, letter, Math.random);
       if (result === null) {
-        // Wrong letter: the train shakes slightly, NO sound ("## Q&A 7").
-        wiggle.value = withSequence(
-          withTiming(-6, { duration: 90, easing: Easing.inOut(Easing.sin) }),
-          withTiming(6, { duration: 150, easing: Easing.inOut(Easing.sin) }),
-          withTiming(-4, { duration: 130, easing: Easing.inOut(Easing.sin) }),
-          withTiming(0, { duration: 110, easing: Easing.inOut(Easing.sin) })
-        );
         return false;
       }
+      setShades((previous) => shadesAfterConnect(previous, letter));
       const nextPlay: Play = {
         ...currentPlay,
         game: result.state,
@@ -397,11 +464,12 @@ export default function TrainScreen() {
       };
       playRef.current = nextPlay;
       setPlay(nextPlay);
-      if (isGameFinished(result.state)) {
+      // The last wagon: NO shift, the exit starts after the attach slide (releaseReaction / finishTimeline).
+      if (releaseReaction(outcome, false, isGameFinished(result.state)).follow === 'exit') {
         setPhase('leaving');
-        timers.current.push(setTimeout(startExit, ATTACH_MILLISECONDS));
+        timers.current.push(setTimeout(startExit, finishTimeline().exitStartMilliseconds));
       } else {
-        shiftTrainTo(targetOffset(current, result.state.placedCount));
+        shiftTrainTo(targetOffset(current, result.state.placedCount), shiftSlowDistance(current.pitch, current.wagonWidth));
       }
       return true;
     },
@@ -410,7 +478,13 @@ export default function TrainScreen() {
 
   const trainStyle = useAnimatedStyle(() => {
     const sample = sampleShift(
-      { from: motionFrom.value, to: motionTo.value, startVelocity: motionVelocity.value, startAcceleration: motionAcceleration.value },
+      {
+        from: motionFrom.value,
+        to: motionTo.value,
+        startVelocity: motionVelocity.value,
+        startAcceleration: motionAcceleration.value,
+        slowDistance: motionSlow.value,
+      },
       motionElapsed.value
     );
     return { transform: [{ translateX: sample.position + exitOffset.value + wiggle.value }] };
@@ -550,7 +624,7 @@ export default function TrainScreen() {
             </Animated.View>
             {play.game.pool.map((letter, index) => (
               <PoolWagon
-                key={letter}
+                key={`${play.id}:${letter}`}
                 letter={letter}
                 label={letterLabel(letter, settings.letterCase)}
                 wagonIndex={play.wagonImages[letter] ?? 0}
@@ -559,6 +633,8 @@ export default function TrainScreen() {
                 y={wagonTop(layout.poolRail, play.wagonImages[letter] ?? 0, layout.wagonWidth)}
                 width={layout.wagonWidth}
                 grow={play.grownLetter === letter}
+                greenShade={shades.green === letter}
+                redShadeSerial={shades.red?.letter === letter ? shades.red.serial : 0}
                 enabled={phase === 'playing'}
                 onDragStart={speakLetter}
                 onRelease={handleRelease}
@@ -599,10 +675,10 @@ function AttachedWagon({ label, wagonIndex, colorSeed, layout, slotX, attachedFr
   const scale = useSharedValue(initial.scale);
   useEffect(() => {
     if (attachedFrom !== null) {
-      offsetX.value = withTiming(0, { duration: ATTACH_MILLISECONDS, easing: EASE_IN_OUT });
-      offsetY.value = withTiming(0, { duration: ATTACH_MILLISECONDS, easing: EASE_IN_OUT });
+      offsetX.value = withTiming(0, { duration: ATTACH_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
+      offsetY.value = withTiming(0, { duration: ATTACH_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
       // Release scale (dragged, up to 1.08) -> 1, eased.
-      scale.value = withTiming(1, { duration: ATTACH_MILLISECONDS, easing: EASE_IN_OUT });
+      scale.value = withTiming(1, { duration: ATTACH_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
     }
     // Only on mount (attach moment).
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -624,6 +700,10 @@ interface PoolWagonProps {
   y: number;
   width: number;
   grow: boolean;
+  // "## Follow-up prompt 10": permanent green shade (this is the correct wagon after a wrong selection) and the red
+  // shade serial (> 0 and changed -> the red shade appears and fades out over RED_SHADE_FADE_MILLISECONDS).
+  greenShade: boolean;
+  redShadeSerial: number;
   enabled: boolean;
   onDragStart: (letter: string) => void;
   // scale = the live drawn drag scale at release (verification round 3 L1).
@@ -632,11 +712,7 @@ interface PoolWagonProps {
   imageUri?: string;
 }
 
-function randomFloatTarget(): number {
-  return (Math.random() * 2 - 1) * FLOAT_AMPLITUDE_PIXELS;
-}
-
-function PoolWagon({ letter, label, wagonIndex, colorSeed, x, y, width, grow, enabled, onDragStart, onRelease, imageUri }: PoolWagonProps) {
+function PoolWagon({ letter, label, wagonIndex, colorSeed, x, y, width, grow, greenShade, redShadeSerial, enabled, onDragStart, onRelease, imageUri }: PoolWagonProps) {
   const height = width / wagonGeometry(wagonIndex).aspect;
   const baseX = useSharedValue(x);
   const baseY = useSharedValue(y);
@@ -651,39 +727,64 @@ function PoolWagon({ letter, label, wagonIndex, colorSeed, x, y, width, grow, en
   // Float frozen while dragged (the wagon stays under the finger).
   const frozenFloatX = useSharedValue(0);
   const frozenFloatY = useSharedValue(0);
-  const gestureState = useRef({ grabX: 0, grabY: 0, maximumDistance: 0, attached: false });
+  const gestureState = useRef({ grabX: 0, grabY: 0, attached: false });
+  const greenOpacity = useSharedValue(greenShade ? 1 : 0);
+  const redOpacity = useSharedValue(0);
+
+  // "## Follow-up prompt 10": green shade permanent while this is the correct wagon after a wrong selection.
+  useEffect(() => {
+    greenOpacity.value = withTiming(greenShade ? 1 : 0, { duration: GREEN_SHADE_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
+  }, [greenShade, greenOpacity]);
+
+  // "## Follow-up prompt 10": "the reddish shade shall show around it: the shade shall slowly vanish (in 2 seconds)".
+  useEffect(() => {
+    if (redShadeSerial > 0) {
+      redOpacity.value = 1;
+      redOpacity.value = withTiming(0, { duration: RED_SHADE_FADE_MILLISECONDS, easing: Easing.out(Easing.quad), reduceMotion: NEVER_REDUCED });
+    }
+  }, [redShadeSerial, redOpacity]);
 
   // Grow from a point at its new place, after the neighbours started making space.
   useEffect(() => {
     if (grow) {
-      scale.value = withDelay(GROW_DELAY_MILLISECONDS, withTiming(1, { duration: GROW_MILLISECONDS, easing: EASE_IN_OUT }));
+      scale.value = withDelay(
+        GROW_DELAY_MILLISECONDS,
+        withTiming(1, { duration: GROW_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED }),
+        NEVER_REDUCED
+      );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Neighbours "make space" / close the gap: ease to the new slot.
   useEffect(() => {
-    baseX.value = withTiming(x, { duration: MAKE_SPACE_MILLISECONDS, easing: EASE_IN_OUT });
-    baseY.value = withTiming(y, { duration: MAKE_SPACE_MILLISECONDS, easing: EASE_IN_OUT });
+    baseX.value = withTiming(x, { duration: MAKE_SPACE_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
+    baseY.value = withTiming(y, { duration: MAKE_SPACE_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
   }, [x, y, baseX, baseY]);
 
-  // "slightly floating: slowly moving left and right and up and down a few pixels randomly".
+  // "slightly floating: slowly moving left and right and up and down a few pixels randomly"; "## Follow-up prompt 10":
+  // always by 1 px only (a larger move = several 1 px steps, src/train/motion.ts planFloatSteps), each step glides,
+  // and at least 0.5 s pause between consecutive 1 px steps (floatStepInterval). Repair M1: ONE scheduler per wagon,
+  // ONE axis per step (nextFloatStep) - X and Y steps never overlap.
   useEffect(() => {
-    const handles: ReturnType<typeof setTimeout>[] = [];
+    let handle: ReturnType<typeof setTimeout> | undefined;
     let active = true;
-    const loop = (axis: typeof floatX) => {
+    const loop = (state: typeof FLOAT_REST) => {
       if (!active) {
         return;
       }
-      const duration = 2000 + Math.random() * 2000;
-      axis.value = withTiming(randomFloatTarget(), { duration, easing: Easing.inOut(Easing.sin) });
-      handles.push(setTimeout(() => loop(axis), duration));
+      const step = nextFloatStep(state, FLOAT_AMPLITUDE_PIXELS, Math.random);
+      const axis = step.axis === 'x' ? floatX : floatY;
+      axis.value = withTiming(step.position, { duration: FLOAT_STEP_GLIDE_MILLISECONDS, easing: Easing.inOut(Easing.sin), reduceMotion: NEVER_REDUCED });
+      handle = setTimeout(() => loop(step.state), floatStepInterval(Math.random));
     };
-    loop(floatX);
-    loop(floatY);
+    // Random phase so the wagons do not step in sync.
+    handle = setTimeout(() => loop(FLOAT_REST), floatStepPause(Math.random));
     return () => {
       active = false;
-      handles.forEach(clearTimeout);
+      if (handle !== undefined) {
+        clearTimeout(handle);
+      }
       cancelAnimation(floatX);
       cancelAnimation(floatY);
     };
@@ -699,16 +800,12 @@ function PoolWagon({ letter, label, wagonIndex, colorSeed, x, y, width, grow, en
       dragX.value = dragX.value + frozenFloatX.value - floatX.value;
       dragY.value = dragY.value + frozenFloatY.value - floatY.value;
       dragging.value = 0;
-      dragScale.value = withTiming(1, { duration: DRAG_SCALE_MILLISECONDS, easing: EASE_IN_OUT });
+      dragScale.value = withTiming(1, { duration: DRAG_SCALE_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
       // "returns to its original position" - eased slide back.
-      dragX.value = withTiming(0, { duration: SLIDE_BACK_MILLISECONDS, easing: EASE_IN_OUT });
-      dragY.value = withTiming(0, { duration: SLIDE_BACK_MILLISECONDS, easing: EASE_IN_OUT });
+      dragX.value = withTiming(0, { duration: SLIDE_BACK_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
+      dragY.value = withTiming(0, { duration: SLIDE_BACK_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
     };
-    return Gesture.Pan()
-      .runOnJS(true)
-      .enabled(enabled)
-      .minDistance(0)
-      .maxPointers(1)
+    return configureWagonPan(Gesture.Pan(), enabled)
       .onBegin(() => {
         // Letter name at touch-down: covers both a tap and a drag start, exactly once ("## Q&A 7").
         callbacks.current.onDragStart(letter);
@@ -719,22 +816,21 @@ function PoolWagon({ letter, label, wagonIndex, colorSeed, x, y, width, grow, en
         cancelAnimation(dragY);
         state.grabX = dragX.value;
         state.grabY = dragY.value;
-        state.maximumDistance = 0;
         state.attached = false;
         frozenFloatX.value = floatX.value;
         frozenFloatY.value = floatY.value;
         dragging.value = 1;
-        dragScale.value = withTiming(DRAG_SCALE, { duration: DRAG_SCALE_MILLISECONDS, easing: EASE_IN_OUT });
+        dragScale.value = withTiming(DRAG_SCALE, { duration: DRAG_SCALE_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
       })
       .onUpdate((event) => {
         dragX.value = state.grabX + event.translationX;
         dragY.value = state.grabY + event.translationY;
-        state.maximumDistance = Math.max(state.maximumDistance, Math.hypot(event.translationX, event.translationY));
       })
       .onEnd((_event, success) => {
         const current = callbacks.current;
-        // Cancelled by the system, or a tap / tiny move: never a drop (verification round 1 H1, L1).
-        if (!success || state.maximumDistance < MINIMUM_DRAG_DISTANCE_PIXELS) {
+        // Cancelled by the system: never a selection. A tap / touch counts like a drag-and-release ("## Follow-up
+        // prompt 10" - supersedes verification round 1 H1 "a tap never attaches").
+        if (!success) {
           slideBack();
           return;
         }
@@ -777,9 +873,14 @@ function PoolWagon({ letter, label, wagonIndex, colorSeed, x, y, width, grow, en
     };
   });
 
+  const greenStyle = useAnimatedStyle(() => ({ opacity: greenOpacity.value }));
+  const redStyle = useAnimatedStyle(() => ({ opacity: redOpacity.value }));
+
   return (
     <GestureDetector gesture={pan}>
       <Animated.View style={[styles.poolWagon, style]} accessibilityLabel={label}>
+        <Animated.View pointerEvents="none" style={[styles.shade, styles.greenShade, greenStyle]} />
+        <Animated.View pointerEvents="none" style={[styles.shade, styles.redShade, redStyle]} />
         <Wagon wagonIndex={wagonIndex} width={width} label={label} colorSeed={colorSeed} imageUri={imageUri} />
       </Animated.View>
     </GestureDetector>
@@ -800,6 +901,10 @@ const styles = StyleSheet.create({
   train: { position: 'absolute', left: 0, top: 0, right: 0, bottom: 0 },
   dropHint: { position: 'absolute', borderWidth: 3, borderStyle: 'dashed', borderColor: '#B9A7DA', borderRadius: 12 },
   poolWagon: { position: 'absolute', left: 0, top: 0 },
+  // "## Follow-up prompt 10" shades: a soft halo around the wagon (iOS: coloured shadow glow; Android: the tint only).
+  shade: { position: 'absolute', left: -8, top: -8, right: -8, bottom: -8, borderRadius: 18, shadowOffset: { width: 0, height: 0 }, shadowOpacity: 0.9, shadowRadius: 10 },
+  greenShade: { backgroundColor: 'rgba(60, 200, 90, 0.45)', shadowColor: '#2EBD4F' },
+  redShade: { backgroundColor: 'rgba(235, 60, 60, 0.45)', shadowColor: '#E53935' },
   loadingText: { fontSize: 28, fontWeight: '700', color: '#5B3E96' },
   doneTitle: { fontSize: 44, fontWeight: '900', color: '#5B3E96', marginBottom: 24 },
   doneButtons: { flexDirection: 'row', gap: 16 },

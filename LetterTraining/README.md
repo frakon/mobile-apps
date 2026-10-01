@@ -42,12 +42,15 @@ The intro page (`app/index.tsx`) lists the trainings from the extensible registr
   directly above the last box (in the empty gap between the tiles row and the boxes row).
 
 - **Abecedový vlak** (`app/train.tsx`, logic in `src/train/`) – landscape; steam engine + attached wagons on top (train
-  end at ~60 % width), N waiting wagons (shuffled, slightly floating) in a row below; drag the next letter's wagon onto
-  the large drop zone at the train's end. Letter name spoken at drag start / tap (CZ voice, or EN voice
-  `assets/audio/letters_en/`). Correct → the wagon eases onto the train, the train shifts one wagon left (90 % in 1 s,
-  last 10 % over 10 s, smoothly retargeted on the next placement), the next letter appears at a random pool position
-  (neighbours ease apart, the new wagon grows from a point). Wrong → slides back + train wiggle, no sound. After the
-  last letter the train leaves in 1 s → „Hotovo" (Znovu / Zpět). Random engine per play, random wagon image per letter;
+  end at ~60 % width), N waiting wagons (shuffled, slightly floating in 1 px gliding steps, one axis at a time, ≥ 0.5 s
+  pause between steps) in a row below; touch / tap (or drag and release anywhere) the next letter's wagon. Letter name
+  spoken at touch-down (CZ voice, or EN voice `assets/audio/letters_en/`). Correct → the wagon slides behind the last
+  wagon in 0.5 s, the train shifts one wagon left (the 1 s part travels 90 % of the wagon width, the rest of the pitch
+  over 10 s, smoothly retargeted on the next placement), the next letter appears at a random pool position
+  (neighbours ease apart, the new wagon grows from a point). Wrong → slides back, red shade on it fading in 2 s +
+  permanent green shade on the correct wagon until it connects; no sound. After the last letter (no shift) the train
+  leaves in 1 s, accelerating then at constant speed → „Hotovo" 150 ms later (Znovu / Zpět). All animations ignore the
+  system Reduce Motion. Random engine per play, random wagon image per letter;
   images + audio preloaded on open. Settings (⚙, `app/train-settings.tsx`, persisted): alphabet CZ (34 letters incl.
   CH, háčky, no Ě / čárky / kroužky) / EN (26) with drawn flags, VELKÁ / malá, waiting wagons 4–8 (default 6).
   Images: `assets/train/` + `manifest.json` → `src/train/assets.ts` is **GENERATED** by
@@ -56,9 +59,11 @@ The intro page (`app/index.tsx`) lists the trainings from the extensible registr
   Autonomous decisions (not user-specified, may be changed on request): Q&A 6 says "35 letters" but lists 34 – the
   list is used; default case CAPITALS; drop zone = 1 wagon width left of the train end to 1.5 widths right, 0.4 wagon
   height above the train to 0.6 below, drawn as a dashed outline; the wiggle only for a wrong letter released in the
-  drop zone (elsewhere just slide back); the last wagon first eases onto the train (350 ms), then the 1 s exit
-  (ease-in); slide back 500 ms, make-space 350 ms, grow-in 350 ms, floating ±4 px with 2–4 s periods; a settings change
-  restarts the play; the settings page is landscape too.
+  drop zone (elsewhere just slide back); the last wagon first slides onto the train (500 ms), then the 1 s exit
+  (constant acceleration for 30 % of the time, then constant speed), „Hotovo" +150 ms; slide back 500 ms, make-space
+  350 ms, grow-in 350 ms, floating ±4 px in 1 px steps (350 ms glide + 0.5–1.2 s pause, random axis order), green shade
+  fade 250 ms, shades = soft halo (iOS glow, Android tint only); a settings change restarts the play (shades reset
+  instantly); the settings page is landscape too.
 
 Word starts (`app/words.tsx?level=1|2|3`, logic in `src/wordStarts/`): 10 rounds per play, then a results page
 („Správně: X/10", „Hrát znovu", „Zpět na výběr"). Word pictures/audio come from the resource backend as per-word

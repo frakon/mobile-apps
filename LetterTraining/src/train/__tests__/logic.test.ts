@@ -19,6 +19,12 @@ import {
   letterLabel,
   placeLetter,
   poolSlotPositions,
+  NO_SHADES,
+  selectionOutcome,
+  shadesAfterConnect,
+  shadesAfterWrongSelection,
+  configureWagonPan,
+  releaseReaction,
 } from '../logic';
 import { parseTrainSettings } from '../settings';
 
@@ -195,5 +201,79 @@ describe('shouldDeferBoardSize (verification round 2 H1)', () => {
   it('lays out any size once the lock settled (portrait fallback)', () => {
     expect(shouldDeferBoardSize(400, 800, true)).toBe(false);
     expect(shouldDeferBoardSize(800, 400, true)).toBe(false);
+  });
+});
+
+// "## Follow-up prompt 10": connect on touch/tap, red/green shades.
+describe('selection on touch / tap ("## Follow-up prompt 10")', () => {
+  const game = createTrainGame(['a', 'b', 'c', 'd', 'e'], 4, () => 0.3);
+  test('the expected letter connects, others are wrong, nothing when not playing', () => {
+    expect(selectionOutcome(game, 'a', true)).toBe('connect');
+    expect(selectionOutcome(game, 'c', true)).toBe('wrong');
+    expect(selectionOutcome(game, 'a', false)).toBe('ignored');
+  });
+});
+
+describe('shades ("## Follow-up prompt 10")', () => {
+  test('wrong selection: red on the wrong wagon (new serial each time) + green on the correct one', () => {
+    const first = shadesAfterWrongSelection(NO_SHADES, 'c', 'a');
+    expect(first).toEqual({ green: 'a', red: { letter: 'c', serial: 1 } });
+    const again = shadesAfterWrongSelection(first, 'c', 'a');
+    expect(again.red).toEqual({ letter: 'c', serial: 2 });
+    expect(again.green).toBe('a');
+  });
+
+  test('green stays until the correct wagon connects, then it is removed', () => {
+    const shades = shadesAfterWrongSelection(NO_SHADES, 'c', 'a');
+    expect(shadesAfterConnect(shades, 'a').green).toBeNull();
+    expect(shadesAfterConnect(shades, 'a').red).toEqual({ letter: 'c', serial: 1 });
+    expect(shadesAfterConnect(NO_SHADES, 'a')).toEqual(NO_SHADES);
+  });
+});
+
+describe('release reaction wiring (repair M3)', () => {
+  test('wrong: wiggle only in the drop zone, never a train move', () => {
+    expect(releaseReaction('wrong', true, false)).toEqual({ wiggle: true, follow: 'none' });
+    expect(releaseReaction('wrong', false, false)).toEqual({ wiggle: false, follow: 'none' });
+  });
+
+  test('connect: shift, except for the last wagon (exit, no shift); released anywhere', () => {
+    expect(releaseReaction('connect', false, false)).toEqual({ wiggle: false, follow: 'shift' });
+    expect(releaseReaction('connect', true, false)).toEqual({ wiggle: false, follow: 'shift' });
+    expect(releaseReaction('connect', false, true)).toEqual({ wiggle: false, follow: 'exit' });
+    expect(releaseReaction('ignored', true, false)).toEqual({ wiggle: false, follow: 'none' });
+  });
+});
+
+describe('wagon pan configuration (repair M3)', () => {
+  class FakePan {
+    readonly calls: [string, unknown][] = [];
+    runOnJS(value: boolean): FakePan {
+      this.calls.push(['runOnJS', value]);
+      return this;
+    }
+    enabled(value: boolean): FakePan {
+      this.calls.push(['enabled', value]);
+      return this;
+    }
+    minDistance(value: number): FakePan {
+      this.calls.push(['minDistance', value]);
+      return this;
+    }
+    maxPointers(value: number): FakePan {
+      this.calls.push(['maxPointers', value]);
+      return this;
+    }
+  }
+
+  test('activates on a mere touch (minDistance 0) so a tap is a release; one finger; JS callbacks', () => {
+    const pan = configureWagonPan(new FakePan(), true);
+    expect(pan.calls).toEqual([
+      ['runOnJS', true],
+      ['enabled', true],
+      ['minDistance', 0],
+      ['maxPointers', 1],
+    ]);
+    expect(configureWagonPan(new FakePan(), false).calls).toContainEqual(['enabled', false]);
   });
 });

@@ -243,3 +243,67 @@ export function computeTrainLayout(
     pitch: wagonWidth + options.couplingGap,
   };
 }
+
+// "## Follow-up prompt 10": shades around waiting wagons. A wrong selection (tap, touch or drag-and-release) flashes a
+// reddish shade around that wagon (fades out over 2 s - the serial restarts the fade) and at the same time a green
+// shade appears around the correct wagon, permanent until that wagon gets connected.
+export const RED_SHADE_FADE_MILLISECONDS = 2000;
+
+export interface ShadeState {
+  // Letter of the waiting wagon with the permanent green shade, or null.
+  readonly green: string | null;
+  // Latest wrong selection; `serial` grows with every wrong selection (also of the same wagon).
+  readonly red: { readonly letter: string; readonly serial: number } | null;
+}
+
+export const NO_SHADES: ShadeState = { green: null, red: null };
+
+export function shadesAfterWrongSelection(shades: ShadeState, wrongLetter: string, expected: string | null): ShadeState {
+  return { green: expected, red: { letter: wrongLetter, serial: (shades.red?.serial ?? 0) + 1 } };
+}
+
+export function shadesAfterConnect(shades: ShadeState, connectedLetter: string): ShadeState {
+  return { green: shades.green === connectedLetter ? null : shades.green, red: shades.red?.letter === connectedLetter ? null : shades.red };
+}
+
+export type SelectionOutcome = 'connect' | 'wrong' | 'ignored';
+
+// "## Follow-up prompt 10": "the correct wagon ... does not need to be dragged to the target area: it is completely
+// enough when it is touched (pressed and released or tapped)" - any release of the expected letter connects it,
+// wherever it was released; any release of another letter is a wrong selection.
+export function selectionOutcome(state: TrainGameState, letter: string, playing: boolean): SelectionOutcome {
+  if (!playing || isGameFinished(state)) {
+    return 'ignored';
+  }
+  return letter === expectedLetter(state) ? 'connect' : 'wrong';
+}
+
+// What the train does after a release (repair M3: the wiring decisions of train.tsx handleRelease, testable).
+// - wrong: wiggle ONLY when released in the drop zone (DECISION, "## Q&A 7"), the wagon slides back;
+// - connect, not the last letter: the train shifts one wagon left;
+// - connect, the last letter: NO shift - the exit starts after the attach slide (finishTimeline in motion.ts).
+export type TrainReaction = { readonly wiggle: boolean; readonly follow: 'none' | 'shift' | 'exit' };
+
+export function releaseReaction(outcome: SelectionOutcome, releasedInDropZone: boolean, finishedAfterConnect: boolean): TrainReaction {
+  if (outcome === 'wrong') {
+    return { wiggle: releasedInDropZone, follow: 'none' };
+  }
+  if (outcome === 'connect') {
+    return { wiggle: false, follow: finishedAfterConnect ? 'exit' : 'shift' };
+  }
+  return { wiggle: false, follow: 'none' };
+}
+
+// Pan configuration of a waiting wagon (repair M3: testable without the gesture handler). minDistance(0) makes the
+// pan activate on a mere touch, so a tap reaches onEnd as a successful release ("## Follow-up prompt 10": touch /
+// tap selects); maxPointers(1): one finger per wagon.
+export interface WagonPanConfigurable<T> {
+  runOnJS(value: boolean): T;
+  enabled(value: boolean): T;
+  minDistance(value: number): T;
+  maxPointers(value: number): T;
+}
+
+export function configureWagonPan<T extends WagonPanConfigurable<T>>(gesture: T, enabled: boolean): T {
+  return gesture.runOnJS(true).enabled(enabled).minDistance(0).maxPointers(1);
+}
