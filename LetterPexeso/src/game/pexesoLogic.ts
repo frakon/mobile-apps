@@ -105,9 +105,26 @@ export interface PexesoWord {
   readonly word: string;
   // Lowercase key ("ch" for ch-words).
   readonly firstLetter: string;
-  // Metro module ids (require(...)).
-  readonly image: number;
-  readonly audio: number;
+  // Backend archive with the word's picture.png + word.mp3 (mobile-apps-preferences archive model,
+  // `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9"); the app preloads every archive of the board before the
+  // play starts and resolves data URIs from it.
+  readonly archivePath: string;
+}
+
+// Fixed entry names inside a word archive (ResourceBackend/pack.js contract).
+export const WORD_PICTURE_FILE = 'picture.png';
+export const WORD_AUDIO_FILE = 'word.mp3';
+
+// The backend archives a dealt board can use: every picture that can be turned over and every image-card sound
+// (preferences skill: a no-round game preloads everything usable in the play). Letter / sound-card audio is bundled.
+export function collectDeckArchives(cards: readonly Card[]): string[] {
+  const archives: string[] = [];
+  for (const card of cards) {
+    if (card.face.type === 'image' && !archives.includes(card.face.word.archivePath)) {
+      archives.push(card.face.word.archivePath);
+    }
+  }
+  return archives;
 }
 
 // Alphabet filtered by the diacritics checkboxes - "Q&A 8".

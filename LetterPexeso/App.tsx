@@ -6,6 +6,8 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import PexesoGame from './src/PexesoGame';
 import PexesoSettingsScreen from './src/PexesoSettingsScreen';
+import { PEXESO_LETTER_AUDIO } from './src/pexesoPlatform';
+import { warmBundledAudioModules } from './src/resources/warmBundledAudio';
 import { colors } from './src/theme';
 import {
   CURSIVE_COMENIA_FONT_FAMILY,
@@ -43,6 +45,13 @@ export default function App() {
     });
     return () => subscription.remove();
   }, [isSettingsOpen, closeSettings]);
+  // Letter/sound card types play BUNDLED letter audio (letter audio stays bundled) — warmed at app level (so the shared
+  // PexesoGame.tsx needs no warm-up code of its own, LetterTraining does the same in app/pexeso.tsx) so the first card
+  // flip never waits on the Metro download in Expo Go. Image-card word audio comes hot from the backend archives -
+  // `_LetterPexeso_PROMPTS.md` / "## Phase E — mobile-apps-preferences in the standalone app".
+  useEffect(() => {
+    warmBundledAudioModules(Object.values(PEXESO_LETTER_AUDIO));
+  }, []);
   // Nothing renders until the fonts finished loading; on load error the cursive styles fall back to system italic.
   const [areFontsLoaded, fontLoadError] = useFonts(LETTER_FONT_SOURCES);
   if (!areFontsLoaded && fontLoadError === null) {

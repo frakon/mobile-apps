@@ -24,9 +24,26 @@ Requirements and decisions: `_LetterPexeso_PROMPTS.md`.
 - `src/PexesoGame.tsx`, `src/PexesoSettingsScreen.tsx`, `src/pexesoSettingsStorage.ts`, `src/game/pexesoLogic.ts` (pure logic:
   letter pools, deck, reducer, scoring), `src/components/` — IDENTICAL to LetterTraining `src/pexeso/` (keep in sync).
 - `src/pexesoPlatform.ts` — the only app-specific glue (audio + word data); `src/audioController.ts` copied from LetterTraining.
-- `src/pexesoWords.ts` + `assets/images`, `assets/audio/{words,letters}` — GENERATED / copied from LetterTraining by endgame2
+- `src/pexesoWords.ts` + `assets/audio/letters` — GENERATED / copied from LetterTraining by endgame2
   `AGENTS/Tasks/20261001_090718_LetterTraining/scripts/pexeso/gen_pexeso_words.py` (Level-1-eligible words only; re-run after
-  LetterTraining `src/words.ts` changes).
+  LetterTraining `src/words.ts` changes), then converted to the archive model by endgame2
+  `AGENTS/Tasks/20261001_162724_LetterTrainingMobileAppsPreferences/scripts/phaseE_transform_pexeso_words.js` (re-run it after
+  the generator).
+- `src/resources/` — backend resource module, copied byte-identical from LetterTraining `src/resources/` (keep in sync;
+  details and manifest contract in `src/resources/README.md`).
+
+## Resources (mobile-apps-preferences)
+- **Backend-served:** image-card word pictures + word audio come from the shared `ResourceBackend` (mobile-apps2 repo root;
+  VPN-only static fileserver `http://10.67.0.1:9080`, `manifest.json` + per-word `words/<id>.zip`, the same archives as
+  LetterTraining). Every archive of the dealt board is downloaded, cached and unpacked hot in memory BEFORE the board shows
+  (one round per play: preload everything for the play). Offline with uncached archives → Czech "Jejda!" message + retry.
+- **Device cache:** 200MB of compressed zips for this app, last-used tracking, LRU eviction, manifest checksum invalidation.
+- **Bundled:** letter audio (warmed at app start in `App.tsx`), fonts, the ear picture, UI assets and three downsized
+  (168 px) settings preview samples in `assets/images/pexeso_samples/`. Letters-only and sound-only boards work fully offline.
+- The old bundled word assets `assets/images/*.jpg|*.png` and `assets/audio/words/` are no longer referenced (kept in the
+  repo, not bundled).
+- Start animation: not yet — the board shows a plain "Načítám obrázky a zvuky…" screen while loading (the themed
+  animation comes with the shared `PexesoGame.tsx` once LetterTraining gets it).
 
 ## Run on iPhone (Expo Go)
 ```bash

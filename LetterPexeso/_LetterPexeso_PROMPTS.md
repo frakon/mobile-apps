@@ -86,3 +86,21 @@ Or actually: add there both options: commenia script and the tradiční vázané
 - 3 welcome-screen candidates were generated (Muse Spark); 3 independent judges unanimously chose welcome1_letter_picture_pair.png (pexeso board of star-backed cards, two flipped revealing letter "M" and a mouse, sparkles, watercolor, no text).
 - App icon derived from the winner's motif (two flipped cards "M" + mouse with sparkles, same watercolor style) — accepted on generation attempt 1; provenance in AGENTS/Tasks/20261001_162724_LetterTrainingMobileAppsPreferences/Temp/AppIcon/LetterPexeso/ (endgame2 repo).
 - Wired in: assets/icon.png (1024x1024), assets/splash.png (winner, 1280x1920), android adaptive foreground/background/monochrome and favicon regenerated from the icon; app.json got a splash block (contain, background #F9F2E5 sampled from the splash edges) and adaptiveIcon backgroundColor #F9F2E5.
+
+## Phase E — mobile-apps-preferences in the standalone app (2026-10-01)
+User request + all Q&A answers are recorded verbatim in `LetterTraining/_LetterTraining_PROMPTS.md` /
+"## Follow-up prompt 9 — mobile-apps-preferences (backend resources, cache, preload) (2026-10-01)" (not duplicated here).
+Scope answer for this app: the user chose the answer option labeled "Per app; also update LetterPexeso" (exact option label from the clarification question; decision 8: cache per app, 200MB each; the
+standalone LetterPexeso gets the same treatment).
+
+### Implementation note
+- `src/resources/` copied byte-identical from LetterTraining (expo-file-system ~57.0.7 + fflate ^0.8.3 added, same versions).
+- `src/PexesoGame.tsx`, `src/components/PexesoCard.tsx`, `src/game/pexesoLogic.ts`, `src/PexesoSettingsScreen.tsx` synced
+  byte-identical from LetterTraining `src/pexeso/` (identity invariant restored; `src/pexesoPlatform.ts` stays the only
+  app-specific glue and re-exports the resource module).
+- Image cards: picture + word audio from backend `words/<id>.zip` (decisions 2, 5, 11 — the same ResourceBackend archives as
+  LetterTraining); every archive of the dealt board preloaded hot before the board shows (decision 6); offline → Czech
+  retry (decision 7); letters/sound-only boards need no archives. Letter audio stays bundled and is warmed in `App.tsx`.
+- Settings preview: three bundled 168 px samples (decision 9), copies of LetterTraining's `assets/images/pexeso_samples`.
+- `src/pexesoWords.ts` no longer `require`s word images/audio (they stay in `assets/` unreferenced, not bundled).
+- Start animation (decision 4): not part of this step — arrives with the shared `PexesoGame.tsx` from LetterTraining Phase D.

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useReducer, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import { LayoutChangeEvent, Platform, Pressable, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -10,7 +10,10 @@ import {
   Card,
   MISMATCH_HIDE_DELAY_MS,
   PexesoSettings,
+  WORD_AUDIO_FILE,
+  WORD_PICTURE_FILE,
   availableLetters,
+  collectDeckArchives,
   createDeck,
   createInitialState,
   effectiveBoardSize,
@@ -20,7 +23,8 @@ import {
   isMismatchShown,
   pairCountOf,
 } from './game/pexesoLogic';
-import { PEXESO_LETTER_AUDIO, PEXESO_WORDS, playAudio, stopAudioIfOwnedBy } from './pexesoPlatform';
+import type { UnpackedArchive } from './pexesoPlatform';
+import { OfflineRetry, PEXESO_LETTER_AUDIO, PEXESO_WORDS, playAudio, stopAudioIfOwnedBy, useArchivePreloading } from './pexesoPlatform';
 import { loadPexesoSettings } from './pexesoSettingsStorage';
 import { colors } from './theme';
 
@@ -97,10 +101,10 @@ export default function PexesoGame({ onBack, onOpenSettings, settingsReloadToken
     );
   }
   // Keyed by the settings content: changed settings mount a fresh game.
-  return <GameScreen key={JSON.stringify(settings)} onBack={onBack} onOpenSettings={onOpenSettings} settings={settings} boardSize={boardSize} />;
+  return <PreloadedGame key={JSON.stringify(settings)} onBack={onBack} onOpenSettings={onOpenSettings} settings={settings} boardSize={boardSize} />;
 }
 
-interface GameScreenProps extends PexesoGameProps {
+interface PreloadedGameProps extends PexesoGameProps {
   readonly settings: PexesoSettings;
   readonly boardSize: BoardSize;
 }
@@ -109,14 +113,76 @@ function newDeck(settings: PexesoSettings, boardSize: BoardSize): Card[] {
   return createDeck(settings, PEXESO_WORDS, pairCountOf(boardSize));
 }
 
+// Preload gate (mobile-apps-preferences, `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9"): pexeso has one round
+// per play, so BEFORE the board shows, every picture that can be turned over and every image-card sound of the dealt
+// deck is downloaded + cached + unpacked hot in memory. Letters-only boards need no archives and work fully offline.
+// "Hrát znovu" deals a new deck, which re-runs the gate (usually instant: archives stay hot / disk-cached).
+function PreloadedGame({ onBack, onOpenSettings, settings, boardSize }: PreloadedGameProps) {
+  const [deck, setDeck] = useState<readonly Card[]>(() => newDeck(settings, boardSize));
+  const neededArchives = useMemo(() => collectDeckArchives(deck), [deck]);
+  const { status, archives, retry } = useArchivePreloading(neededArchives);
+  const dealNewDeck = useCallback(() => setDeck(newDeck(settings, boardSize)), [settings, boardSize]);
+  if (status === 'offline') {
+    // Backend unreachable AND the board's archives not cached (decision 7: child-friendly Czech error + retry).
+    return (
+      <SafeAreaView style={[styles.root, styles.notPossible]}>
+        <OfflineRetry onRetry={retry} />
+        {onBack !== undefined && (
+          <Pressable onPress={onBack} accessibilityRole="button" style={[styles.backButton, styles.notPossibleButton]}>
+            <Text style={styles.backButtonText}>‹ Zpět</Text>
+          </Pressable>
+        )}
+      </SafeAreaView>
+    );
+  }
+  // 'ready' can momentarily still refer to the PREVIOUS deck while a new one is dealt — the board shows only when
+  // every archive of the CURRENT deck is actually hot.
+  if (status !== 'ready' || neededArchives.some((archivePath) => archives[archivePath] === undefined)) {
+    // Plain waiting screen; the themed start animation is a separate later step (plan Phase D).
+    return (
+      <SafeAreaView style={[styles.root, styles.notPossible]}>
+        <Text style={styles.notPossibleText}>Načítám obrázky a zvuky…</Text>
+      </SafeAreaView>
+    );
+  }
+  return (
+    <GameScreen
+      onBack={onBack}
+      onOpenSettings={onOpenSettings}
+      boardSize={boardSize}
+      cards={deck}
+      archives={archives}
+      soundOn={settings.soundOn}
+      onPlayAgain={dealNewDeck}
+    />
+  );
+}
+
+interface GameScreenProps extends PexesoGameProps {
+  readonly boardSize: BoardSize;
+  readonly soundOn: boolean;
+  readonly cards: readonly Card[];
+  // Hot in-memory word archives of the dealt deck (picture.png / word.mp3 data URIs), keyed by archive path.
+  readonly archives: Readonly<Record<string, UnpackedArchive>>;
+  readonly onPlayAgain: () => void;
+}
+
 // Sound of a card turned face-up (only on flip, not again on match - "Q&A 9"). Letter + image cards are muted by the
-// sound setting; sound-only cards always play - "Follow-up prompt 6".
+// sound setting; sound-only cards always play - "Follow-up prompt 6". Image cards play the word mp3 hot from the
+// preloaded archive; letter / sound cards play the bundled letter audio.
 // `onDone` runs when the sound finished or failed (not when it was stopped by a newer sound); returns whether a sound started.
-function playCardSound(card: Card, soundOn: boolean, owner: object, onDone?: () => void): boolean {
+function playCardSound(
+  card: Card,
+  archives: Readonly<Record<string, UnpackedArchive>>,
+  soundOn: boolean,
+  owner: object,
+  onDone?: () => void
+): boolean {
   if (card.face.type !== 'sound' && !soundOn) {
     return false;
   }
-  const source = card.face.type === 'image' ? card.face.word.audio : PEXESO_LETTER_AUDIO[card.letter];
+  const wordAudioUri = card.face.type === 'image' ? archives[card.face.word.archivePath]?.files[WORD_AUDIO_FILE]?.dataUri : undefined;
+  const source = card.face.type === 'image' ? (wordAudioUri === undefined ? undefined : { uri: wordAudioUri }) : PEXESO_LETTER_AUDIO[card.letter];
   if (source === undefined) {
     return false;
   }
@@ -124,8 +190,15 @@ function playCardSound(card: Card, soundOn: boolean, owner: object, onDone?: () 
   return true;
 }
 
-function GameScreen({ onBack, onOpenSettings, settings, boardSize }: GameScreenProps) {
-  const [state, dispatch] = useReducer(gameReducer, undefined, () => createInitialState(newDeck(settings, boardSize)));
+function GameScreen({ onBack, onOpenSettings, boardSize, cards, archives, soundOn, onPlayAgain }: GameScreenProps) {
+  const [state, dispatch] = useReducer(gameReducer, undefined, () => createInitialState([...cards]));
+  // A newly dealt (preloaded) deck from the gate starts a new game; tokens stay monotonic (see gameReducer newGame).
+  const firstDeckRef = useRef(cards);
+  useEffect(() => {
+    if (firstDeckRef.current !== cards) {
+      dispatch({ type: 'newGame', cards });
+    }
+  }, [cards]);
   const [gridSize, setGridSize] = useState({ width: 0, height: 0 });
   const audioOwner = useRef({}).current;
   // True while the sound of a sound-only FIRST card of an attempt is playing; the second card's sound then waits for it
@@ -151,12 +224,12 @@ function GameScreen({ onBack, onOpenSettings, settings, boardSize }: GameScreenP
     queuedCardRef.current = undefined;
     const isSoundCard = revealedCard.face.type === 'sound';
     soundCardPlayingRef.current = false;
-    const started = playCardSound(revealedCard, settings.soundOn, audioOwner, () => {
+    const started = playCardSound(revealedCard, archives, soundOn, audioOwner, () => {
       soundCardPlayingRef.current = false;
       const queued = queuedCardRef.current;
       queuedCardRef.current = undefined;
       if (queued !== undefined) {
-        playCardSound(queued, settings.soundOn, audioOwner);
+        playCardSound(queued, archives, soundOn, audioOwner);
       }
     });
     soundCardPlayingRef.current = started && isSoundCard && !isSecondCardOfAttempt;
@@ -176,7 +249,7 @@ function GameScreen({ onBack, onOpenSettings, settings, boardSize }: GameScreenP
 
   const onTapCard = useCallback((cardId: number) => dispatch({ type: 'tapCard', cardId }), []);
   const onTapBackground = useCallback(() => dispatch({ type: 'tapBackground' }), []);
-  const onPlayAgain = useCallback(() => dispatch({ type: 'newGame', cards: newDeck(settings, boardSize) }), [settings, boardSize]);
+  // "Hrát znovu" deals (and preloads) a new deck in PreloadedGame; the effect above then dispatches newGame.
 
   const onGridLayout = useCallback((event: LayoutChangeEvent) => {
     const { width, height } = event.nativeEvent.layout;
@@ -237,6 +310,8 @@ function GameScreen({ onBack, onOpenSettings, settings, boardSize }: GameScreenP
                     <PexesoCard
                       cardId={card.id}
                       face={card.face}
+                      // Hot in-memory picture from the preloaded word archive ("## Follow-up prompt 9").
+                      imageUri={card.face.type === 'image' ? archives[card.face.word.archivePath]?.files[WORD_PICTURE_FILE]?.dataUri : undefined}
                       isFaceUp={isCardFaceUp(state, card.id)}
                       isRemoved={card.isRemoved}
                       width={cardWidth}

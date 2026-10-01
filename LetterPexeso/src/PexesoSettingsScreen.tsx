@@ -5,7 +5,7 @@
 // IDENTICAL file in LetterPexeso/src/PexesoSettingsScreen.tsx and LetterTraining/src/pexeso/PexesoSettingsScreen.tsx.
 
 import { ReactNode, useEffect, useRef, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { letterStyleTextStyle } from './components/letterFonts';
@@ -21,7 +21,7 @@ import {
   effectiveBoardSize,
   isSizeAvailable,
 } from './game/pexesoLogic';
-import { PEXESO_WORDS } from './pexesoPlatform';
+import { PEXESO_SAMPLE_IMAGES, PEXESO_WORDS } from './pexesoPlatform';
 import { loadPexesoSettings, savePexesoSettings } from './pexesoSettingsStorage';
 import { colors } from './theme';
 
@@ -131,6 +131,16 @@ export default function PexesoSettingsScreen({ onBack }: PexesoSettingsScreenPro
                 {TYPE_CHOICES.map((choice) => (
                   <Choice key={choice.value} label={choice.label} selected={column.type === choice.value} onPress={() => updateColumn(columnIndex, { type: choice.value })} wide />
                 ))}
+                {column.type === 'image' && (
+                  // Preview of the "Obrázky" card type: a few BUNDLED, DOWNSIZED sample pictures (the real board
+                  // pictures are backend-served) — user decision 9 in `_LetterTraining_PROMPTS.md` /
+                  // "## Follow-up prompt 9 — mobile-apps-preferences (backend resources, cache, preload)".
+                  <View style={styles.sampleRow}>
+                    {PEXESO_SAMPLE_IMAGES.map((sample, sampleIndex) => (
+                      <Image key={sampleIndex} source={sample} style={styles.sampleImage} resizeMode="contain" />
+                    ))}
+                  </View>
+                )}
                 <Text style={[styles.subTitle, lettersOnly && styles.disabledText]}>Velikost písmen</Text>
                 {CASE_CHOICES.map((choice) => (
                   <Choice key={choice.value} label={choice.label} selected={column.letterCase === choice.value} disabled={lettersOnly} onPress={() => updateColumn(columnIndex, { letterCase: choice.value })} wide />
@@ -220,6 +230,8 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
   choiceWide: { marginBottom: 6 },
+  sampleRow: { flexDirection: 'row', gap: 8, marginTop: 2, marginBottom: 6 },
+  sampleImage: { width: 56, height: 56, borderRadius: 10, backgroundColor: colors.panel },
   choiceSelected: { borderColor: colors.cardFaceBorder, backgroundColor: '#FFF0D0' },
   choiceDisabled: { opacity: 0.4 },
   choiceLabel: { fontSize: 17, fontWeight: '700', color: colors.title },

@@ -1,7 +1,6 @@
-// App-specific glue of the pexeso (the one pexeso file INTENDED to differ between LetterTraining and LetterPexeso;
-// the other pexeso files are meant to be kept identical — TEMPORARILY UNTRUE: PexesoGame.tsx, components/PexesoCard.tsx,
-// game/pexesoLogic.ts and PexesoSettingsScreen.tsx carry the archive model here and await the Phase E sync to the
-// standalone LetterPexeso). LetterTraining variant: words + letter audio from the generated src/words.ts.
+// App-specific glue of the pexeso (the ONLY pexeso file that differs between LetterTraining and LetterPexeso; every
+// other pexeso file is kept identical — restored by the Phase E sync of the archive model to the standalone app).
+// LetterTraining variant: words + letter audio from the generated src/words.ts.
 // Image cards use Level-1-eligible words only - `_LetterPexeso_PROMPTS.md` / "Follow-up prompt 6 — Pexeso improvements
 // (standalone LetterPexeso + integrated in LetterTraining) (verbatim)" + "Q&A 8 — Pexeso improvements round 1".
 // Archive model (`_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences"): word pictures/audio
