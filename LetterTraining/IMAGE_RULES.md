@@ -174,7 +174,7 @@ Text marked **Adaptation (proposal for user review)** is NOT from the sources �
 ### S6 lines 31-83 — image fault classes A-G and cross-cutting checklist
 > ## Image learnings (per fault-class)
 > 
-> For every class: the user quote is in the matching `ImageLearnings/<name>/_user_comment.md`; the exact repair prompt in `_repair_result.md` and the installed `assets/images/*.png.txt`.
+> For every class: the user quote is in the matching `ImageLearnings/<name>/_user_comment.md`; the exact repair prompt in `_repair_result.md` and the installed `blind_test_data/images_txt/*.png.txt` (moved out of `assets/` so Metro and the resource-backend packer ignore them).
 > 
 > ### A. "kolem / past" = same level as the object, mid-pass (request 5; `kolem_target`, `kolem_gram`)
 > Rejected: boy read as "already ran along" on one picture and "going towards" on the other — ambiguous pair; plus a leg rendered inside the tree.
@@ -301,7 +301,7 @@ Children's book watercolor illustration, <viewpoint>: one single <object> <typic
 Source: task `endgame:AGENTS/Tasks/20261001_090718_LetterTraining/image_pipeline_pilot.md`. Adopted for the batch run:
 - **Early stop (adopted):** a round stops after trial A if it gives a wrong word or a concrete defect; trials B/C are skipped and the image is regenerated with a fixed prompt. Accepted images always get the full 3/3 + verifier.
 - **Batched verifiers (adopted):** one verifier agent may judge several images (about 5), but every image is judged by exactly one fresh verifier.
-- **Condensed logs (adopted):** `assets/images/_blind_test_log/<id>.md` holds condensed per-trial answers, per-round verdicts, verifier verdict and final status (not verbatim answers); exact prompts stay in the task folder.
+- **Condensed logs (adopted):** `blind_test_data/_blind_test_log/<id>.md` (moved out of `assets/`) holds condensed per-trial answers, per-round verdicts, verifier verdict and final status (not verbatim answers); exact prompts stay in the task folder.
 - **No glyph/text words:** words whose picture is a written glyph, digit, letter or text (otaznik, abeceda, osmicka; check ctverec, znacka, dopis, cedule) are removed from the word list — no prompt can fix them.
 - **Round cap:** 3 failed rounds → replace the word with another word of the same first letter. **Exception X/W (user Q&A 3):** "Allow 3 extra rounds and then take the picture which have had the best performance in tests (even despite it maybe did not fulfil the requirements fully)" — i.e. up to 6 rounds; if none passes, keep the best-performing candidate (fewest/least severe defects) and record why in its blind-test log.
 Prompt learnings (add to the 6.2 template as relevant):

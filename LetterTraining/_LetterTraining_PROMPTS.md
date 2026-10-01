@@ -163,3 +163,32 @@ Or actually: add there both options: commenia script and the tradiční vázané
 ## Q&A 11 — Pexeso scoring details
 - Q: Count mismatch as wrong when the SECOND card's partner was seen before? A: Only first card's partner (Recommended) — wrong only if the FIRST flipped card's partner was already seen.
 - Q: 3-flip rule — which flip counts as wrong? A: From the 3rd flip (this flip included).
+
+## Follow-up prompt 9 — mobile-apps-preferences (backend resources, cache, preload) (2026-10-01)
+
+Task: apply the `mobile-apps-preferences` skill properly to LetterTraining (and the standalone
+LetterPexeso): bundled resources only for settings/options/regular panes; large per-exercise
+resources served by a backend API as compressed archives; 200MB compressed device cache with
+last-used tracking and LRU eviction; themed exercise start animation (≤5 s, cut when resources
+ready); preloading of at least the next 5 rounds (downloaded + cached + unpacked in memory,
+sounds hot in memory), dropping past rounds' resources; for no-round games preload everything
+usable in the play. (Decisions below were collected in 3 clarification Q&A rounds; verbatim
+user wording preserved where it was given.)
+
+### Q&A decisions
+1. Backend: build on EndgameServer (same host as Expo Go deploys, reached via WireGuard at 10.67.0.1), serving compressed archives. User verbatim:
+   > "Just ensure that: the backend does not conflict with currently running applications on EndgameServer (chartviewer dev vs prod, fileserver app, etc.), and also ensure that they are not public (ensure that they are accessible only through VPN). Also: add there some backend last updated timestamp or other timestamp or checksum: so that the files downloaded to frontend do not stay there cached if the backend has already new version. New version must always replace the old cached version."
+2. What moves to backend: "Everything per-exercise incl. train" — word images, word audio (incl. first/last variants), syllable audio, AND train images/audio. Only letter audio, fonts and UI assets stay bundled.
+3. Preload depth: 5 rounds ahead (preferences skill wins over the previously recorded 2-rounds-ahead spec in "## Initial request (2026-10-01)" — that spec is hereby superseded, recorded as a change, not rewritten). Preload = downloaded, cached, unpacked in memory, sounds hot; drop past rounds' resources.
+4. Animations: one themed animation per game — four short programmatic (Reanimated/JS) animations, each briefly showing the activity's principle, ending on a fixed screen until resources are loaded.
+5. Archive granularity: per-word archives — one small zip per word (its picture + its audio variants). Cache deduplicates across games/levels; a round fetches its ~4–8 word archives in parallel.
+6. No-round games (Pexeso, Abecedový vlak): preload everything for the play before it starts (during the start animation).
+7. Offline behaviour: child-friendly Czech error message + retry button; games whose resources are fully cached/bundled still work.
+8. Cache: per app, 200MB each; scope also includes the standalone LetterPexeso app (TreninkPorozumeni NOT in scope).
+9. Pexeso settings previews: bundled samples for settings; backend for boards. User verbatim:
+   > "BUT: the samples shall be converted to smaller sized pictures if smaller sizes are used: WHY: for everything directly in the bundle we must consider whether it is needed as whole, or if any smaller form of it exists (e.g. comprimation, or by images: whether e.g. two times smaller images would not be enough)"
+10. Blind-test logs/.txt files under `assets/images`: exclude from both the app bundle and the backend archives (keep in repo only, moved out of `assets/`).
+11. Backend form: static fileserver + manifest — pre-built per-word zips generated at deploy time, plus a `manifest.json` with version/checksum per file; served VPN-only (bind to 10.67.0.1 / firewalled).
+
+### Code references (Phase B — shared resource module, 2026-10-01)
+- `src/resources/` (self-contained, copyable to standalone LetterPexeso): `cacheCore.ts` (200MB compressed LRU cache, last-used tracking, checksum invalidation — decisions 1, 8), `resourceStore.ts` (manifest fetch/compare, per-word zip download, fflate in-memory unpack, hot audio data URIs — decisions 1, 2, 5, 11), `expoFileSystemAdapter.ts` (expo-file-system storage), `OfflineRetry.tsx` (decision 7), `README.md` (manifest contract for the backend), tests `src/resources/__tests__/cacheCore.test.ts`.

@@ -73,7 +73,7 @@ Feedback:
 
 `src/words.ts` is **GENERATED** by `endgame2/AGENTS/Tasks/20261001_090718_LetterTraining/scripts/gen_words_ts.py` from
 the task `words.json` (re-run it after new pictures are accepted; never edit it by hand). It includes only words with
-an ACCEPTED picture (`assets/images/<id>.png` + accepted `assets/images/_blind_test_log/<id>.md`) and exports `WORDS`
+an ACCEPTED picture (`assets/images/<id>.png` + accepted `blind_test_data/_blind_test_log/<id>.md`) and exports `WORDS`
 (word, syllables, firstLetter, alternativeNames, excludeLevel1/2/3, image, audio, audioFirst, audioLast),
 `LETTER_AUDIO`, `SYLLABLE_AUDIO` (real + synthetic syllables) and `REAL_SYLLABLES` (all words.json syllables).
 Level 1 plays the plain word, Level 2 the word with the first syllable emphasized (`audio/words_first/`), Level 3 with
