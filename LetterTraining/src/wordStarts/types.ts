@@ -20,8 +20,10 @@ export interface WordEntry {
   readonly excludeLevel3: boolean;
   // The word's picture + audio live in the backend archive `words/<id>.zip` (entries picture.png / word.mp3 /
   // first.mp3 / last.mp3) — `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 9 — mobile-apps-preferences (backend
-  // resources, cache, preload)". hasAudioFirst/hasAudioLast say whether the emphasized variants (KOČ-ka for Level 2 /
-  // koč-KA for Level 3, "## Follow-up prompt 3 (verbatim)") exist in that archive; missing -> plain word.mp3.
+  // resources, cache, preload)". hasAudioFirst/hasAudioLast say whether the syllable variants exist in that archive
+  // (naturally read with the syllable separated by a space: "koč ka" for Level 2 / "koč ka" for Level 3 — one TTS
+  // reading, no emphasis, "## Follow-up prompt 12"; originally emphasized per "## Follow-up prompt 3 (verbatim)",
+  // superseded); missing -> plain word.mp3.
   readonly hasAudioFirst?: boolean;
   readonly hasAudioLast?: boolean;
 }
