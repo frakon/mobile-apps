@@ -295,8 +295,9 @@ export function releaseReaction(outcome: SelectionOutcome, releasedInDropZone: b
 }
 
 // Pan configuration of a waiting wagon (repair M3: testable without the gesture handler). minDistance(0) makes the
-// pan activate on a mere touch, so a tap reaches onEnd as a successful release ("## Follow-up prompt 10": touch /
-// tap selects); maxPointers(1): one finger per wagon.
+// pan activate on the FIRST touch move; maxPointers(1): one finger per wagon. A pure tap (no move) never activates a
+// Pan ("## Bug report 13": RNPanHandler.m checks activation only in interactionsMoved; on touch-up a non-active pan
+// FAILS, so onEnd never runs) - the tap is handled by a raced Tap gesture, configureSelectTap below.
 export interface WagonPanConfigurable<T> {
   runOnJS(value: boolean): T;
   enabled(value: boolean): T;
@@ -306,4 +307,19 @@ export interface WagonPanConfigurable<T> {
 
 export function configureWagonPan<T extends WagonPanConfigurable<T>>(gesture: T, enabled: boolean): T {
   return gesture.runOnJS(true).enabled(enabled).minDistance(0).maxPointers(1);
+}
+
+// Tap half of "tap OR drag" on one element ("## Bug report 13", "## Follow-up prompt 10/11"): used as
+// Gesture.Race(pan, tap) - any move activates the pan (which cancels the tap), a release without move activates the
+// tap. maxDuration: the Gesture Handler default (500 ms) would fail a slower press-and-release, which must select too.
+export const SELECT_TAP_MAX_DURATION_MILLISECONDS = 60_000;
+
+export interface SelectTapConfigurable<T> {
+  runOnJS(value: boolean): T;
+  enabled(value: boolean): T;
+  maxDuration(duration: number): T;
+}
+
+export function configureSelectTap<T extends SelectTapConfigurable<T>>(gesture: T, enabled: boolean): T {
+  return gesture.runOnJS(true).enabled(enabled).maxDuration(SELECT_TAP_MAX_DURATION_MILLISECONDS);
 }

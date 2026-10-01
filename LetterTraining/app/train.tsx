@@ -64,6 +64,7 @@ import {
   assignWagonImages,
   computeTrainLayout as computePureTrainLayout,
   configureWagonPan,
+  configureSelectTap,
   createTrainGame,
   dropZone,
   isDropHit,
@@ -807,7 +808,7 @@ function PoolWagon({ letter, label, wagonIndex, colorSeed, x, y, width, grow, gr
       dragX.value = withTiming(0, { duration: SLIDE_BACK_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
       dragY.value = withTiming(0, { duration: SLIDE_BACK_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
     };
-    return configureWagonPan(Gesture.Pan(), enabled)
+    const drag = configureWagonPan(Gesture.Pan(), enabled)
       .onBegin(() => {
         // Letter name at touch-down: covers both a tap and a drag start, exactly once ("## Q&A 7").
         callbacks.current.onDragStart(letter);
@@ -859,6 +860,28 @@ function PoolWagon({ letter, label, wagonIndex, colorSeed, x, y, width, grow, gr
           slideBack();
         }
       });
+    // "## Bug report 13": a release WITHOUT movement never activates the Pan (its onEnd never runs) - the raced Tap
+    // selects at the wagon's live drawn place ("## Follow-up prompt 10": touch / tap selects). Nothing was dragged or
+    // frozen, so a wrong tap needs no slide back.
+    const tap = configureSelectTap(Gesture.Tap(), enabled).onEnd((_event, success) => {
+      const current = callbacks.current;
+      if (!success || dragging.value === 1) {
+        return;
+      }
+      const releaseScale = dragScale.value;
+      const scaledWidth = current.width * releaseScale;
+      const scaledHeight = current.height * releaseScale;
+      const rectangle: Rectangle = {
+        x: baseX.value + dragX.value + floatX.value - (scaledWidth - current.width) / 2,
+        y: baseY.value + dragY.value + floatY.value - (scaledHeight - current.height) / 2,
+        width: scaledWidth,
+        height: scaledHeight,
+      };
+      if (current.onRelease(letter, rectangle, releaseScale)) {
+        state.attached = true;
+      }
+    });
+    return Gesture.Race(drag, tap);
   }, [enabled, letter, baseX, baseY, dragX, dragY, floatX, floatY, frozenFloatX, frozenFloatY, dragging, dragScale]);
 
   const style = useAnimatedStyle(() => {

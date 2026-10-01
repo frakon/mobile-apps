@@ -24,6 +24,8 @@ import {
   shadesAfterConnect,
   shadesAfterWrongSelection,
   configureWagonPan,
+  configureSelectTap,
+  SELECT_TAP_MAX_DURATION_MILLISECONDS,
   releaseReaction,
 } from '../logic';
 import { parseTrainSettings } from '../settings';
@@ -266,7 +268,7 @@ describe('wagon pan configuration (repair M3)', () => {
     }
   }
 
-  test('activates on a mere touch (minDistance 0) so a tap is a release; one finger; JS callbacks', () => {
+  test('activates on the first move (minDistance 0); one finger; JS callbacks', () => {
     const pan = configureWagonPan(new FakePan(), true);
     expect(pan.calls).toEqual([
       ['runOnJS', true],
@@ -275,5 +277,34 @@ describe('wagon pan configuration (repair M3)', () => {
       ['maxPointers', 1],
     ]);
     expect(configureWagonPan(new FakePan(), false).calls).toContainEqual(['enabled', false]);
+  });
+});
+
+describe('select tap configuration ("## Bug report 13")', () => {
+  class FakeTap {
+    readonly calls: [string, unknown][] = [];
+    runOnJS(value: boolean): FakeTap {
+      this.calls.push(['runOnJS', value]);
+      return this;
+    }
+    enabled(value: boolean): FakeTap {
+      this.calls.push(['enabled', value]);
+      return this;
+    }
+    maxDuration(value: number): FakeTap {
+      this.calls.push(['maxDuration', value]);
+      return this;
+    }
+  }
+
+  test('JS callbacks, follows enabled, a slow press-and-release still selects (not the 500 ms default)', () => {
+    const tap = configureSelectTap(new FakeTap(), true);
+    expect(tap.calls).toEqual([
+      ['runOnJS', true],
+      ['enabled', true],
+      ['maxDuration', SELECT_TAP_MAX_DURATION_MILLISECONDS],
+    ]);
+    expect(SELECT_TAP_MAX_DURATION_MILLISECONDS).toBeGreaterThan(500);
+    expect(configureSelectTap(new FakeTap(), false).calls).toContainEqual(['enabled', false]);
   });
 });

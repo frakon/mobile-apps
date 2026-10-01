@@ -8,7 +8,7 @@
 //
 // Remaining VISUAL-ONLY behaviours (not testable here, device-unverified): the real smoothness of the 1 px glides,
 // the shade look (iOS glow / Android tint), the 0.5 s attach slide path, the 1 s shift feel, the exit leaving the
-// screen, and whether a tap on the device really reaches onEnd with success (Gesture Handler runtime).
+// screen, and whether a tap on the device really reaches the raced Tap's onEnd with success (Gesture Handler runtime).
 
 // The project has no Node type definitions (Expo app tsconfig) - minimal local typings for the jest (Node) runtime.
 declare const __dirname: string;
@@ -33,6 +33,12 @@ test('every withTiming opts out of the system Reduce Motion, and so do withDelay
 
 test('the screen uses the tested helpers', () => {
   expect(source).toContain('configureWagonPan(Gesture.Pan(), enabled)');
+  // "## Bug report 13": a pure tap never activates a Pan - a raced Tap selects (Follow-up prompt 10 tap-to-connect).
+  expect(source).toContain('const tap = configureSelectTap(Gesture.Tap(), enabled).onEnd(');
+  // The tap body must release at the wagon's LIVE position (incl. the floating offset), not frozen values.
+  expect(source).toContain('current.onRelease(letter, rectangle, releaseScale)');
+  expect(source).toContain('return Gesture.Race(drag, tap);');
+  expect(source).toContain('<GestureDetector gesture={pan}>');
   expect(source).toContain('releaseReaction(outcome, isDropHit(rectangle, zone), false).wiggle');
   expect(source).toContain("releaseReaction(outcome, false, isGameFinished(result.state)).follow === 'exit'");
   expect(source).toContain('finishTimeline().exitStartMilliseconds');

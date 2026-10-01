@@ -293,3 +293,11 @@ rounds (endgame2 `AGENTS/Tasks/20261001_162724_LetterTrainingMobileAppsPreferenc
 - Docs: `src/words.ts` header (and its generator `gen_words_ts.py`) no longer describes emphasized first/last audio —
   Level 2/3 audio is the natural separated-syllable reading per "## Follow-up prompt 12".
 Both shared `src/resources/` files are synced byte-identical to standalone LetterPexeso.
+
+## Bug report 13 — Skládání slov: pure tap still does not place (verbatim) (2026-10-01) — refers to "## Follow-up prompt 11"
+In "Skládání slov - písmena" and "Skládání slov - slabiky": the tapping of a letter (without letter moving) still does not work: investigate why, repair it, verify it, commit, push, redeploy
+
+(Note, not a user prompt: the commit / push / redeploy parts are handled by the master agent, not by the repair agent.
+Root cause: a Gesture Handler Pan activates only on a touch MOVE, even with minDistance(0); a release without movement
+fails the Pan, so onStart/onEnd never run. Repair: Pan raced with a Tap gesture (Gesture.Race) in compose AND train,
+the train's "## Follow-up prompt 10" tap-to-connect had the same latent defect.)

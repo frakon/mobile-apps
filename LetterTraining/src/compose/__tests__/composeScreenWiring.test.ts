@@ -57,3 +57,17 @@ test('shades reset on a new round and on a new play (repair test gap d)', () => 
   expect(source).toMatch(/const restart = useCallback\(\(\) => \{[\s\S]*?setShades\(NO_COMPOSE_SHADES\);[\s\S]*?\}, \[/);
   expect(source).toMatch(/const advance = \(\) => \{[\s\S]*?setShades\(NO_COMPOSE_SHADES\);[\s\S]*?\};/);
 });
+
+test('tap OR drag: a pure tap (no move) selects via a raced Tap; sound at touch-down ("## Bug report 13")', () => {
+  // A Pan activates only on a move (RNPanHandler.m interactionsMoved), so a tap without move needs the Tap gesture.
+  expect(source).toContain('const drag = configureWagonPan(Gesture.Pan(), enabled)');
+  expect(source).toContain('const tap = configureSelectTap(Gesture.Tap(), enabled).onEnd(');
+  expect(source).toContain('return Gesture.Race(drag, tap);');
+  expect(source).toMatch(/const tap = [\s\S]*?if \(success\) \{\s*release\(true, 1\);/);
+  // The tile sound starts at touch-down (onBegin fires for a tap AND a drag), not at pan activation.
+  expect(source).toMatch(/\.onBegin\(\(\) => \{[\s\S]*?callbacks\.current\.onDragStart\(tileId\);/);
+  expect(count(/onDragStart\(tileId\)/g)).toBe(1);
+  // Both the drag release and the tap go through the one release path (-> handleRelease, wrong-tap counting).
+  expect(source).toContain('.onEnd((_event, success) => release(success, DRAG_SCALE))');
+  expect(count(/current\.onRelease\(tileId, rectangle\)/g)).toBe(1);
+});

@@ -68,7 +68,7 @@ import {
   tileLabel,
 } from '../src/compose/logic';
 import { loadTileCase } from '../src/compose/settings';
-import { RED_SHADE_FADE_MILLISECONDS } from '../src/train/logic';
+import { RED_SHADE_FADE_MILLISECONDS, configureSelectTap, configureWagonPan } from '../src/train/logic';
 import { ATTACH_MILLISECONDS } from '../src/train/motion';
 import { WordStartsDataset } from '../src/wordStarts/types';
 import { LETTER_AUDIO, REAL_SYLLABLES, SYLLABLE_AUDIO, WORDS } from '../src/words';
@@ -671,42 +671,49 @@ function DraggableTile({ tileId, label, layout, homeColumn, placedColumn, enable
   const callbacks = useRef({ onDragStart, onDragEnd, onRelease, homeX, homeY, layout });
   callbacks.current = { onDragStart, onDragEnd, onRelease, homeX, homeY, layout };
 
-  const pan = useMemo(
-    () =>
-      Gesture.Pan()
-        .runOnJS(true)
-        .enabled(enabled)
-        .minDistance(0)
-        .onStart(() => {
-          start.current = { x: positionX.value, y: positionY.value };
-          dragging.value = 1;
-          callbacks.current.onDragStart(tileId);
-        })
-        .onUpdate((event) => {
-          positionX.value = start.current.x + event.translationX;
-          positionY.value = start.current.y + event.translationY;
-        })
-        .onEnd((_event, success) => {
-          const current = callbacks.current;
-          const rectangle = scaleRectangle(
-            { x: positionX.value, y: positionY.value, width: current.layout.tileWidth, height: current.layout.tileHeight },
-            DRAG_SCALE
-          );
-          // Cancelled by the system: never a selection (as train.tsx). A tap / small move counts like a drag-and-release
-          // ("## Follow-up prompt 11"; the old 12 px free-tap rule is superseded by "## Q&A 11").
-          const slotIndex = success ? current.onRelease(tileId, rectangle) : null;
-          if (slotIndex === null) {
-            // "move it back to its original location by sliding animation which shall last 0.5 seconds"
-            positionX.value = withTiming(current.homeX, { duration: SLIDE_BACK_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
-            positionY.value = withTiming(current.homeY, { duration: SLIDE_BACK_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
-          }
-        })
-        .onFinalize(() => {
-          dragging.value = 0;
-          callbacks.current.onDragEnd(tileId);
-        }),
-    [enabled, tileId, positionX, positionY, dragging]
-  );
+  const pan = useMemo(() => {
+    // Cancelled by the system: never a selection (as train.tsx). A tap / small move counts like a drag-and-release
+    // ("## Follow-up prompt 11"; the old 12 px free-tap rule is superseded by "## Q&A 11").
+    const release = (success: boolean, scale: number) => {
+      const current = callbacks.current;
+      const rectangle = scaleRectangle(
+        { x: positionX.value, y: positionY.value, width: current.layout.tileWidth, height: current.layout.tileHeight },
+        scale
+      );
+      const slotIndex = success ? current.onRelease(tileId, rectangle) : null;
+      if (slotIndex === null) {
+        // "move it back to its original location by sliding animation which shall last 0.5 seconds"
+        positionX.value = withTiming(current.homeX, { duration: SLIDE_BACK_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
+        positionY.value = withTiming(current.homeY, { duration: SLIDE_BACK_MILLISECONDS, easing: EASE_IN_OUT, reduceMotion: NEVER_REDUCED });
+      }
+    };
+    const drag = configureWagonPan(Gesture.Pan(), enabled)
+      .onBegin(() => {
+        // Tile sound at touch-down: covers both a tap and a drag start, exactly once (as train.tsx, "## Q&A 4").
+        callbacks.current.onDragStart(tileId);
+      })
+      .onStart(() => {
+        start.current = { x: positionX.value, y: positionY.value };
+        dragging.value = 1;
+      })
+      .onUpdate((event) => {
+        positionX.value = start.current.x + event.translationX;
+        positionY.value = start.current.y + event.translationY;
+      })
+      .onEnd((_event, success) => release(success, DRAG_SCALE))
+      .onFinalize(() => {
+        dragging.value = 0;
+        callbacks.current.onDragEnd(tileId);
+      });
+    // "## Bug report 13": a release WITHOUT movement never activates the Pan (onEnd never runs) - the raced Tap
+    // handles it as a release at the tile's home position (not scaled: the tile never grew).
+    const tap = configureSelectTap(Gesture.Tap(), enabled).onEnd((_event, success) => {
+      if (success) {
+        release(true, 1);
+      }
+    });
+    return Gesture.Race(drag, tap);
+  }, [enabled, tileId, positionX, positionY, dragging]);
 
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ translateX: positionX.value }, { translateY: positionY.value }, { scale: dragging.value === 1 ? DRAG_SCALE : 1 }],
