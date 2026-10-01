@@ -78,3 +78,11 @@ Or actually: add there both options: commenia script and the tradiční vázané
 ## Q&A 11 — Pexeso scoring details
 - Q: Count mismatch as wrong when the SECOND card's partner was seen before? A: Only first card's partner (Recommended) — wrong only if the FIRST flipped card's partner was already seen.
 - Q: 3-flip rule — which flip counts as wrong? A: From the 3rd flip (this flip included).
+
+## Follow-up prompt 9 (verbatim) — custom icon and welcome screen
+"a new custom icon and welcome screen shall be created based on the specified purpose of the app (WHY: because we have already mutiple Expo Go apps and each of them has the default icons and welcome screen; we need to be able to distinguish them also visually); create the icon(s) and the welcome screen by the image-generation skill. Instruct it to create decent welcome screen(s) for mobile/ipad apps with such and such functionality: try three different functionality specifications, every one with some concrete imaginable things. Then let three independent opus subagents consider the three pictures in random order and ask them which picture best reflects the app purpose. Choose that picture(s), based on that create smaller icon(s)."
+
+### Outcome
+- 3 welcome-screen candidates were generated (Muse Spark); 3 independent judges unanimously chose welcome1_letter_picture_pair.png (pexeso board of star-backed cards, two flipped revealing letter "M" and a mouse, sparkles, watercolor, no text).
+- App icon derived from the winner's motif (two flipped cards "M" + mouse with sparkles, same watercolor style) — accepted on generation attempt 1; provenance in AGENTS/Tasks/20261001_162724_LetterTrainingMobileAppsPreferences/Temp/AppIcon/LetterPexeso/ (endgame2 repo).
+- Wired in: assets/icon.png (1024x1024), assets/splash.png (winner, 1280x1920), android adaptive foreground/background/monochrome and favicon regenerated from the icon; app.json got a splash block (contain, background #F9F2E5 sampled from the splash edges) and adaptiveIcon backgroundColor #F9F2E5.
