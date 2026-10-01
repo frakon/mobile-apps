@@ -319,3 +319,14 @@ Note (not a user prompt): this activates the pronunciation bullet of "## Follow-
 And to be more precise: replace the pronanciation of A/a as long "á" ("a:") truly everywhere: also in pexeso, in the train, everywhere. And the same for other vowels. And be careful that "á" is said in the same way or as "dlouhé 'á'", where the 'á' must be said also long. And the same for other vowels.
 
 Note (not a user prompt): pexeso keeps its separate distinguishing map, but every vowel it plays — the short-letter readings AND the vowel inside "dlouhé á", "měkké í", "dlouhé měkké í", "ú s čárkou", "ů s kroužkem" etc. — must be clearly long (same ≥0.45 s voiced-duration bar, measured from the decoded mp3); the train uses the general long-vowel map.
+
+## Follow-up prompt 17 — Vowels now too long, pick a middle length (verbatim) (2026-10-01) — refines "## Follow-up prompt 16"
+
+Now the vowels are yet too long. It shall be something in the middle. Give me samples of "A" and "B" letters and I will tell you which to use.
+
+Note (not a user prompt): length-ladder samples (A: ~0.30/0.40/0.50 s + current ~0.68 s + old ~0.12 s; B: current + é ~0.30/0.40/0.50 s) being prepared in AGENTS/Tasks/20261001_162724_LetterTrainingMobileAppsPreferences/audio_samples/length_ladder/ of the endgame2 repo; selection pending.
+
+## Follow-up prompt 18 — Use A_040/B_040, trim to ~600-700 ms with 50 ms fade-out (verbatim) (2026-10-01) — resolves "## Follow-up prompt 17"
+Use A_040 and B_040. But cut it sooner: currently it has almost 2 seconds, though it could be cut at about 600-700ms. So: find out where roughly the letter ends (its sound), use fade out for the last 50ms of the .mp3 record: there, where there is already almost no sound, but where it would do a "crack" noise if we just cut the .mp3 (because there is yet some noise: so fade out this noice by this short fade out). Then replace everywhere (for both vowels and consonants), commit, push, redeploy
+
+Note (not a user prompt): commit/push/redeploy handled by the master agent. Applied to all Czech letter audio (assets/audio/letters/) in LetterTraining and LetterPexeso: vowels rebuilt at a 0.40 s voiced core (A_040 recipe), consonant names' final vowel stretched to ~0.40 s (B_040 recipe) where clean, then every file trimmed at sound end + 50 ms with a 50 ms linear fade-out. letters_en untouched.
