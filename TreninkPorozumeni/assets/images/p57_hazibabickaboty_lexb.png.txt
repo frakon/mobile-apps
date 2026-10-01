@@ -1,0 +1,11 @@
+Image: hazibabickaboty_lexb.png
+Generated: 2026-10-01
+Candidate: P9 R1 repair (lex vs why-text) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A clown with a red nose and a colourful suit (the clown wears bright red boots on its feet) throws a red ball toward a princess with long golden hair in a long pink gown, a small golden tiara on her head, clearly a fairy-tale princess (the princess has bare feet with no shoes or boots); the ball flies in the air halfway between them; the princess stands a few steps away with both hands open, ready to catch it. ONLY the clown wears bright red boots on its feet; the princess has bare feet with no shoes or boots. Exactly two clearly separate whole people with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no grandmother anywhere in the picture.

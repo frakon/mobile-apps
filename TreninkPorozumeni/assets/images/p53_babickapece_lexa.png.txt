@@ -1,0 +1,13 @@
+Image: p53_babickapece_lexab.png
+Generated: 2026-10-01
+Candidate: P5 batch_07 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one white kitchen oven, front view, its closed door has a big glass window, and through the window one round cake is clearly visible baking inside on the lit shelf. Beside the oven stands exactly one grandfather with a grey moustache and glasses in a brown vest and oven mitts, on the left of the oven, whole body visible, bending slightly and watching the cake bake through the glass. No woman anywhere. Correct realistic anatomy, calm friendly faces, no fused or hybrid animals, simple minimal scene on a plain white background, no text, no letters, no patterns, nothing else in the picture.
+
+3. Blind test (P5 batch_07, 2026-10-01): accepted in round 4; target-vs-gram forced choice 10/10 correct (5 v1 + 5 swapped sentence), counts reported correctly; lex check: matches only its intended sentence set, fresh opus headless evaluators.

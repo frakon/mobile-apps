@@ -1,0 +1,11 @@
+Image: p55_klukneuklizihracky_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_12 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one round blue rug on the floor; a few toys (a red toy car, a teddy bear, three wooden blocks, a ball) lie scattered on the rug; one open wooden toy box stands empty at the edge of the rug; one little boy (about 7 years old) with short brown hair, a blue T-shirt and dark blue shorts lies on his back on the rug with his hands behind his head, both legs stretched out, looking up and resting, not touching any toy. The boy is resting, not tidying up the toys. Correct realistic anatomy, every figure and object complete and fully visible, both arms and both legs of every person visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

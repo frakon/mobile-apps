@@ -1,0 +1,13 @@
+Image: p54_krmenopice_target.png
+Generated: 2026-10-01
+Candidate: P6 strict audit repair (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a brown monkey with a long tail sits on its bottom on the right, facing left, wearing a white bib, mouth wide open, its hands resting on its knees, holding nothing. a grey elephant with a trunk and a simple thin tail with a small plain tuft STANDS on all four legs on the left, pure side profile facing right, its four thick legs all visible and separate like pillars; the elephant holds one spoon curled in the tip of its trunk and the trunk is stretched forward so the spoon with porridge is INSIDE the monkey's open mouth, feeding it. There is no bowl anywhere. The elephant is the active one feeding; the monkey is the passive one being fed. Only the elephant holds the spoon, only the monkey wears a bib. Two clearly separate whole figures with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification (P6 strict audit 2026-10-01): replaced previous asset after strict re-test remarks; final set blind forced-choice (4 shuffled pictures) 5/5 per sentence with fresh headless opus, lex/real-world check: no faults. Details: TF/Temp/P6/strict_audit/report.md

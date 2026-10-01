@@ -1,0 +1,13 @@
+Image: p54_objimanlev_lexb.png
+Generated: 2026-10-01
+Candidate: P6 batch_13 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: a lion with a big golden mane and a long tail with a tuft stands upright on its hind legs in front, facing the viewer, its own two front legs hanging straight down at its sides, both clearly visible, not hugging, calm, just being hugged. a big brown bear with a very short stubby bear tail stands upright close directly BEHIND the lion, its head peeking out beside the lion's head, and hugs the lion from behind: both of its front legs wrap around the lion's belly from behind and its two front paws are clasped together on the front of the lion's belly, clearly visible. The bear's front legs and front paws have the bear's own colour. Each figure has exactly two front legs and two front paws. The bear is the active one hugging; the lion is the passive one being hugged. Two clearly separate whole animals standing on hind legs with correct realistic anatomy, the hugged front figure fully visible, the figure behind partly behind it, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture. The figure behind stands on its own two feet on the same ground level, its legs visible behind.
+
+3. Verification: P6 batch_13 final set r2; blind trials 10/10 (v1->target 5/5, v2->gram 5/5, fresh opus sessions, no remarks) and lex/real-world check clean (fresh opus session), 2026-10-01.

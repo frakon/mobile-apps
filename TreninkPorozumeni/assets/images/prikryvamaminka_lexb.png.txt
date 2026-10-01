@@ -1,0 +1,13 @@
+Image: prikryvamaminka_lexb.png
+Generated: 2026-09-30
+Candidate: batch_14 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a grandmother with grey hair tied in a bun, round glasses, a lavender cardigan sits calmly in a comfortable fully upholstered red armchair with two soft rounded red upholstered armrests (no wooden armrests) and four short wooden legs clearly visible on the RIGHT, facing left toward the other person, eyes half closed, sleepy, her head and face fully visible. a little girl with two blonde pigtails in a yellow dress stands upright on the LEFT in front of the armchair, whole body visible from head to toe, leaning slightly forward, and with both hands spreads a big blue checked blanket over the seated grandmother: the blanket clearly COVERS the seated grandmother's lap, legs and body from the chest down to the ankles, only her head, shoulders and both shoes below the blanket's edge are visible; the standing little girl still holds the top edge of the blanket with both hands near the seated grandmother's chest, tucking it in. The standing little girl is the active one covering, the seated grandmother is the passive one being covered and holds nothing; her arms are under the blanket. There is exactly one blanket, one single piece of cloth with no loose strips. The armchair is complete with armrests and four legs. The little girl is small, a child. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg and foot complete and fully visible, not hidden behind anything, exactly two arms, two hands and two legs per person, no extra arms, no extra hands, no extra legs, no third hand anywhere, calm friendly faces with mouths closed, no fused figures, simple pose, the standing figure's feet at the same level as the chair legs, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (batch_14, 2026-09-30): forced choice target vs gram r5 10/10 (5 v1 + 5 swapped), no ambiguity or glitch remarks; lex/real-world check r5: A->target only, B->gram only, faults none. Evaluators = fresh headless claude -p --model opus sessions.

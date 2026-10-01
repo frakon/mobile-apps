@@ -1,0 +1,14 @@
+Image: olizujekozapes_target.png
+Generated: 2026-09-30
+Candidate: batch_13 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: a white goat with two small horns and a small white beard stands on all four legs on the left, facing right, stretching its neck forward, its small pink tongue tip out and clearly touching the cheek of the dog. a brown dog with long floppy ears stands on all four legs on the right, facing the goat and the viewer, completely still, both eyes closed, its own mouth closed and no tongue visible. The tongue is short and natural-sized: only the small tip of the tongue sticks out of the mouth and touches the cheek. Only the goat has its tongue out; the dog does not lick. The goat is the active one licking, the dog is the passive one being licked. The two bodies stand apart side by side with a small gap, touching only where the goat's tongue touches the dog's cheek; each tail hangs behind its own body. All four legs of each animal clearly visible. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, foot, paw, hoof, wing and tail complete and fully visible, not hidden behind anything, exactly two arms and two legs per person, exactly four legs per four-legged animal, exactly two legs and two wings per bird, no extra arms, no extra hands, no extra legs, calm friendly faces with mouths closed, no fused or hybrid figures, simple pose, all standing feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+Final selection: batch_13 r2 candidate (working file Temp/P3/batch_13/r2/olizujekozapes_target.png)
+Blind test / verification: target-vs-gram forced choice, 5 fresh headless opus trials per sentence (variant 1 + swapped), 10/10 correct, no ambiguity/glitch remarks (round r2); independent fresh opus lex + real-world check (round r2): lex pictures match neither sentence, no faults.

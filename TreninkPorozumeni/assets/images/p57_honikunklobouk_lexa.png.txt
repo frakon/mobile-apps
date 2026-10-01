@@ -1,0 +1,11 @@
+Image: honikunklobouk_lexa.png
+Generated: 2026-10-01
+Candidate: P9 R1 repair (lex vs why-text) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: Both figures run toward the RIGHT side of the picture, one behind the other. On the RIGHT, in front, a brown horse (the horse wears a big yellow straw hat on its head) gallops away to the right, its head pointing right, its tail toward the boy. On the LEFT, behind the horse, a boy with short brown hair in a green T-shirt (the boy has nothing on his head, no hat, no cap) runs after the horse to the right, facing right toward the horse's tail, one arm reaching forward toward the horse. The boy is the chaser; the horse is the one being chased and runs in front of him. All feet and hooves at one ground level. ONLY the horse wears a big yellow straw hat on its head; the boy has nothing on his head, no hat, no cap. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no girl anywhere in the picture.

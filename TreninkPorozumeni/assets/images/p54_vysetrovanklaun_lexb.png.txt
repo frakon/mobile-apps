@@ -1,0 +1,13 @@
+Image: p54_vysetrovanklaun_lexb.png
+Generated: 2026-10-01
+Candidate: P6 batch_10 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a doctor (adult man, brown hair) in a long white coat stands on the left, facing right, wearing a doctor's stethoscope with the earpieces in its ears; with one hand it holds the round stethoscope chest piece pressed against the chest of a clown (grown-up adult man) with a round red nose and curly orange hair, a colourful polka-dot suit and big shoes. The clown sits upright on a simple white examination bench with four legs on the right, facing left toward the doctor, calm, hands resting on the knees, not wearing or holding anything medical. The doctor is the active doctor examining, the clown is the passive patient being examined. Only the doctor has a stethoscope. The only contact is the chest piece on the clown's chest. Two clearly separate whole figures with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, the bench legs and the standing figure's feet at exactly the same bottom level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification (P6 batch_10, final set r1): blind forced-choice trials 5/5 per sentence (fresh headless opus), lex + real-world check by fresh opus session: no faults, no ambiguity remarks.

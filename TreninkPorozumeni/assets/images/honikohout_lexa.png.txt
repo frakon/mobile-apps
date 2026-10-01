@@ -1,0 +1,13 @@
+Image: honikohout_lexa.png
+Generated: 2026-09-30
+Candidate: audit_repair_A round a3b (audit round 2 = budget round 3/3)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a proud red rooster is chasing a small mallard drake duck. Both birds run toward the left. The duck is in front on the left, running away as fast as it can: wings raised and flapping in a hurry, long running strides, head and body pointing left, fleeing. The rooster is behind on the right, clearly pursuing: body leaning far forward, neck stretched out forward toward the duck, wings spread wide, one foot lifted in a big running stride, its beak aimed at the duck's tail feathers with a small empty gap between them (not touching). The rooster is the active chaser, the duck is the one being chased and running away. Both heads look forward to the left; nobody looks back, nobody faces right. Calm faces, beaks closed. The duck is unmistakably a small duck, not a goose: a short neck, a shiny dark green head, a white neck ring, a flat wide yellow duck bill, a chestnut brown chest and grey body, about half the size of the rooster. A red rooster is clearly a rooster: large tall red comb, red wattles, and a long arching tail of green and orange sickle feathers. Two clearly separate whole birds with correct realistic bird anatomy, each has exactly two legs with the knee joints bending backward like real birds, both feet complete, both birds at the same height level, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result (audit_repair_A, 2026-09-30): lex/real-world check of all 4 pictures: MATCH_A target only, MATCH_B gram only, FAULTS none (this lexa read unambiguously as a mallard duck). Target/gram pair 5/5 + 5/5 again, 0 remarks. Replaces batch_07 r2 lexa (its brown duck could be read as a goose). See AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P3/audit_repair_A/honikohout/item_report.md

@@ -1,0 +1,11 @@
+Image: p58_bezelzaautobusem_target.png
+Generated: 2026-10-01
+Candidate: P10 batch08 (type 5.8) round 6
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: an adult man about 35 years old with very short dark hair and a short beard, wearing a checked shirt and trousers runs after a leaving bus, one arm raised. He is unmistakably a man: short hair, beard and trousers. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The bus is a real full-size yellow city bus, about four times longer than the person and much taller than the person, with exactly two wheels visible on its side (one front wheel, one rear wheel) and windows, drawn at the same scale as the person, seen from the side, its front with the driver's window at the RIGHT end, clearly driving away to the right with small motion lines and a little exhaust puff at its rear; the bus is on the right half of the picture; the man is on the left half, completely separate from the bus, never overlapping it, running to the right towards the bus's rear, chasing it, a clear white gap of about one step between him and the bus, one arm raised waving at the bus. No letters, numbers or writing anywhere. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

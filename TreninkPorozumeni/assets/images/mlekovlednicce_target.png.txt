@@ -1,0 +1,18 @@
+Image: mlekovlednicce_target.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_10 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a tall white fridge seen from the front with its door swung wide open to the side, the inside visible with three glass shelves. one big white-and-blue milk carton with a drawing of a white drop on it stands INSIDE the fridge on the middle shelf, clearly visible. All other shelves are empty. Nothing is on top of the fridge. The milk is clearly in the fridge, not on it. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+Post-processing (r4): near-white watercolor splatter dots right of the fridge door (x>=415, all channels >150) set to pure white with Pillow; content unchanged.
+
+Post-processing (r5): every pixel outside the fridge bounding box (129-415 x 59-463) set to pure white with Pillow (removes stray paint specks); content unchanged.
+Post-processing (r5b): region x312-415, y420-469 (white space below the open door, right of the fridge base) set to pure white to remove remaining specks.
+
+3. Blind-test result (P4 batch_10, installed from r5): pair r3 10/10 no remarks; lex L5b clean except nit 'open door no visible handle'; target speck cleanup r4/r5. Fresh headless claude -p --model opus evaluator per trial.

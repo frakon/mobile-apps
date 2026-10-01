@@ -1,0 +1,13 @@
+Image: p54_objimanklaun_lexb.png
+Generated: 2026-10-01
+Candidate: P6 batch_07 (type 5.4) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: a clown (adult man) with a round red nose, curly orange hair, a colourful polka-dot suit and big shoes stands in front, facing the viewer, upright, its own two arms hanging straight down at its sides, both clearly visible, not hugging, calm, just being hugged. a silver robot with a boxy head and two arms stands close directly BEHIND the clown, its head peeking out beside the clown's head, and hugs the clown from behind: both of its arms wrap around the clown's belly from behind and its two hands are clasped together on the front of the clown's belly, clearly visible. The robot's arms and hands have the robot's own colour. Each figure has exactly two arms and two hands. The robot is the active one hugging; the clown is the passive one being hugged. Two clearly separate whole figures with correct realistic anatomy, the hugged front figure fully visible, the figure behind partly behind it, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: accepted set r4 (P6 batch_07). Blind forced-choice target vs gram 5/5 per sentence variant (10/10, no ambiguity remarks) by fresh headless opus sessions; lex + real-world check (fresh opus, both sentences) clean. Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P6/batch_07/

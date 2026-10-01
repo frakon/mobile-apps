@@ -1,0 +1,11 @@
+Image: p58_silasaty_target.png
+Generated: 2026-10-01
+Candidate: P10 batch10 (type 5.8) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grandmother with grey hair in a bun, wearing a long green skirt and a cardigan sits at a sewing machine sewing a blue dress. She is unmistakably an old woman: grey hair bun and a long skirt. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The sewing machine stands on a complete wooden table with four legs; the figure sits on a wooden chair with four legs; on the table lies a small blue girl's dress spread out flat and clearly shaped like a dress (collar, two short sleeves and a wide flared skirt clearly visible), its skirt hem under the needle, both hands guiding it. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

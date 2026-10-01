@@ -1,0 +1,14 @@
+Image: p55_policistanepiska_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_05 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a police officer, a man about thirty-five, in a dark blue police uniform and a dark blue police cap, stands upright facing the viewer, the whole figure visible, waving hello with his right hand raised high above his head, his left arm hanging down at his side; a small silver whistle hangs on a cord around his neck on his chest, far from his mouth; his mouth is closed and smiling, he is not blowing anything. He is clearly not whistling. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.
+
+Installed as p55_policistanepiska_target.png from P7 batch_05 folder r1 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2 sentence) with no ambiguity remark in the final pair round; lex check (4 shuffled pictures, both sentences) only target~v1 and gram~v2 matched. Logs: Temp/P7/batch_05/bt_results.jsonl, lex_results.jsonl.

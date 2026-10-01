@@ -1,0 +1,13 @@
+Image: obvazujehasic_lexa.png
+Generated: 2026-09-30
+Candidate: batch_12 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: a cowboy in a brown cowboy hat, a checked shirt and jeans sits on a small wooden stool with four sturdy legs clearly visible on the right, facing left, holding his left forearm straight out forward toward the firefighter; his right hand rests on his knee, both feet under the stool. a firefighter in a shiny red helmet and a dark blue uniform with yellow stripes stands on the left, facing right, and wraps a white bandage around the cowboy's outstretched forearm: in his right hand he holds a white bandage roll, one short continuous white strip runs taut straight from the roll to the cowboy's forearm, which is already neatly wound several times with the bandage, no loose hanging strips; his left hand rests flat on top of the bandaged forearm, holding the bandage in place. There is exactly ONE bandage roll in the whole picture. The two people do not shake hands: the cowboy's hand is open and relaxed, the firefighter's hands are busy with the bandage. The firefighter is the active one bandaging, the cowboy is the passive one being bandaged. Only the cowboy's arm has a bandage; the firefighter has no bandage. Both arms of each person clearly visible. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw, hoof and tail complete and fully visible, not hidden behind anything, exactly two arms and two legs per person, exactly four legs per four-legged animal, no extra arms, no extra hands, no extra legs, calm friendly faces, no fused or hybrid figures, simple pose, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind test (batch_12, fresh headless claude -p --model opus sessions, forced choice both sentences, 5+5 trials; no ambiguity remarks): target/gram 10/10 (trial round F, after repair rounds r2,r3,r4); lex+real-world check clean (tags r2,r4oa)

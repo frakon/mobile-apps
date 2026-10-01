@@ -13,8 +13,10 @@ import { GameRound, Regime, TestPart } from './rounds';
 export interface PausedGame {
   field: FieldId;
   // Sub-test part ("User follow-up request 21"): the paused-test identity is field + part —
-  // resume must reopen exactly the same sub-test (e.g. "5.1 Reverzibilní věty 2").
-  part: TestPart;
+  // resume must reopen exactly the same sub-test (e.g. "5.1 Reverzibilní věty 11–20").
+  part: TestPart; // group 1..10 since "User request 25"
+  // Each round of roundPlan stores its drawn variant ("User request 25"), so resuming keeps
+  // the same sentences / correct pictures; only a new start or restart re-draws.
   regime: Regime; // regime the paused plan was built for; a differing regime setting invalidates the pause
   roundPlan: GameRound[]; // the EXACT rounds (order included) — resume continues the same shuffle
   roundIndex: number;
@@ -29,7 +31,7 @@ export function savePausedGame(state: PausedGame): void {
   pausedGame = state;
 }
 
-// Non-destructive read — the initial page peeks to decide whether to show "Pokračuj v testu".
+// Non-destructive read — the start page and the sets page peek (src/pausedTestOffer.tsx) to decide whether to show "Pokračuj v testu".
 export function peekPausedGame(): PausedGame | null {
   return pausedGame;
 }

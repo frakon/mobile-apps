@@ -1,0 +1,11 @@
+Image: p55_pesnelezivpelisku_gram.png
+Generated: 2026-10-01
+Candidate: P7 batch_07 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one round red dog bed with a soft raised rim, lying flat on the floor; one brown dog with floppy ears lies curled up inside the bed, its whole body resting in the bed, head on the rim, eyes closed, sleeping. The dog is lying in the bed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

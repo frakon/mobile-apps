@@ -1,0 +1,13 @@
+Image: hladiopice_lexa.png
+Generated: 2026-09-30
+Candidate: batch_07 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a brown monkey and a lion with a big mane sit side by side facing each other, both sitting on the same level. The monkey reaches out exactly one paw and gently strokes the top of the head of the lion; the monkey's other front paw rests relaxed in its lap or on the floor. The lion sits still with eyes closed, enjoying it, not touching the monkey at all. The monkey is the active one stroking, the lion is the passive one being stroked. Two clearly separate whole figures with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person clearly visible, exactly two arms and two legs per person, exactly four legs per four-legged animal, calm friendly faces, no fused or hybrid animals, the only contact is the monkey's one stroking hand or paw on the lion's head, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (batch_07): target/gram pair 5/5 forced choice for both sentences (variant 1 + swapped), no ambiguity remark requiring repair; lex check: matches neither/only own sentence, no real-world faults. Accepted round: r1. See AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P3/batch_07/report.md

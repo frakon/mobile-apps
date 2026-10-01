@@ -3,39 +3,15 @@
 // "User request", initial-page bullet).
 
 import { useFocusEffect, useRouter } from 'expo-router';
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useRef } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
-import { FieldId } from '../src/items';
-import { clearPausedGame, peekPausedGame } from '../src/pausedGame';
-import { examplesForTestPart, TestPart } from '../src/rounds';
-import { loadRegime } from '../src/settings';
+import { FIELDS } from '../src/items';
+import { ResumeTestButton, usePausedTestOffer } from '../src/pausedTestOffer';
 
-const FIELDS: { id: FieldId; label: string }[] = [
-  { id: 'field51', label: '5.1 Reverzibilní věty' },
-  { id: 'field52', label: '5.2 Předložky a prostor' },
-  { id: 'field53', label: '5.3 Jednotné a množné číslo' },
-];
-
-// Sub-tests of 10 ("User follow-up request 21" in _TreninkPorozumeni_Fields123_PROMPTS.md):
-// each field is split into two tests — "<field label> 1" (examples 1–10) and
-// "<field label> 2" (examples 11–20) — so the page shows 6 test buttons.
-const TEST_PARTS: TestPart[] = [1, 2];
-
-function testLabel(field: FieldId, part: TestPart): string {
-  return `${FIELDS.find((candidate) => candidate.id === field)?.label ?? ''} ${part}`;
-}
-
-// Example counts derived from the data — sub-tests without examples get a visibly
-// disabled button (no fake "Hotovo!" games on empty sub-tests).
-const exampleCountByTest = new Map<string, number>(
-  FIELDS.flatMap((field) =>
-    TEST_PARTS.map((part): [string, number] => [
-      `${field.id}:${part}`,
-      examplesForTestPart(field.id, part).length,
-    ])
-  )
-);
+// "User request 25" in _TreninkPorozumeni_Fields123_PROMPTS.md: the start page offers exactly
+// the 15 test types 5.1–5.15; a tapped type opens app/sets.tsx (its test sets 1–10, 11–20, …).
+// Types without items stay tappable — the sets page shows the empty state.
 
 export default function FieldSelectionScreen() {
   const router = useRouter();
@@ -43,41 +19,13 @@ export default function FieldSelectionScreen() {
   // Synchronous navigation guard: a child's double-tap (or 5.1 + 5.2 tapped quickly) must
   // not push two game screens. Re-armed whenever this screen regains focus.
   const navigationPendingRef = useRef(false);
-  // Paused test offer ("Pokračuj v testu" — see _TreninkPorozumeni_Fields123_PROMPTS.md,
-  // "User follow-up request 4"): shown only when a paused test exists AND the current stored
-  // image-regime setting still equals the paused test's regime. Re-checked on every focus, so
-  // pause → settings (regime unchanged) → back keeps the button, while changing the regime in
-  // settings makes it disappear (the incompatible paused test is cleared = invalidated).
-  // Paused-test identity is field + part ("User follow-up request 21").
-  const [pausedTest, setPausedTest] = useState<{ field: FieldId; part: TestPart } | null>(null);
+  // Paused test offer ("Pokračuj v testu" — "User follow-up request 4"): regime check and
+  // focus re-check shared with app/sets.tsx in src/pausedTestOffer.tsx.
+  const pausedTest = usePausedTestOffer();
 
   useFocusEffect(
     useCallback(() => {
       navigationPendingRef.current = false;
-      let cancelled = false;
-      // Hide the button SYNCHRONOUSLY on every focus and show it only after the async regime
-      // check below passes: otherwise the button from the previous focus would stay tappable
-      // for the AsyncStorage round-trip, allowing a resume of a test whose regime was just
-      // changed in settings (the game re-validates too, but the window must not exist here).
-      setPausedTest(null);
-      const paused = peekPausedGame();
-      if (paused === null) {
-        return;
-      }
-      loadRegime().then((storedRegime) => {
-        if (cancelled) {
-          return;
-        }
-        if (storedRegime === paused.regime) {
-          setPausedTest({ field: paused.field, part: paused.part });
-        } else {
-          clearPausedGame(); // incompatible settings → the paused test is invalidated for good
-          setPausedTest(null);
-        }
-      });
-      return () => {
-        cancelled = true;
-      };
     }, [])
   );
 
@@ -96,8 +44,8 @@ export default function FieldSelectionScreen() {
     <SafeAreaView style={styles.container}>
       {/* Compact landscape layout + ScrollView safety net ("User follow-up request 18" in
           _TreninkPorozumeni_Fields123_PROMPTS.md): with the "Pokračuj v testu" button visible the
-          old single-column layout overflowed the landscape screen height. The field buttons now sit
-          side by side in ONE ROW (landscape width is abundant, height is scarce), the title and
+          old single-column layout overflowed the landscape screen height. The type buttons now sit
+          in a 5-column grid (landscape width is abundant, height is scarce — "User request 25"), the title and
           paddings are smaller, and everything scrollable content-wise is wrapped in a ScrollView
           whose content centers when it fits (flexGrow) — scrolling only kicks in when it does not.
           The settings gear stays absolutely positioned OUTSIDE the ScrollView, unchanged. */}
@@ -108,8 +56,8 @@ export default function FieldSelectionScreen() {
       >
         <Text style={styles.title}>Co budeme trénovat?</Text>
         {pausedTest !== null && (
-          <Pressable
-            style={styles.resumeButton}
+          <ResumeTestButton
+            pausedTest={pausedTest}
             onPress={() =>
               navigateOnce(() =>
                 // Resuming CONSUMES the paused store inside the game screen (resume: '1').
@@ -119,45 +67,26 @@ export default function FieldSelectionScreen() {
                 })
               )
             }
-          >
-            <Text style={styles.resumeButtonLabel}>
-              {/* Label names the SUB-test, e.g. "5.1 Reverzibilní věty 2" ("request 21"). */}
-              Pokračuj v testu — {testLabel(pausedTest.field, pausedTest.part)}
-            </Text>
-          </Pressable>
+          />
         )}
-        {/* 6 test buttons ("User follow-up request 21"): 3 columns (one per field) × 2 rows
-            (part 1 above part 2) — the request-18 compact landscape layout kept: width is
-            abundant, height is scarce, and the ScrollView below remains the safety net. */}
-        <View style={styles.fieldButtonsRow}>
+        {/* 15 type buttons ("User request 25"): 5 columns × 3 rows — landscape width is
+            abundant, height is scarce (request 18); the ScrollView remains the safety net on
+            a landscape iPhone. Opening the sets page does NOT clear the paused test — only
+            starting a set does (app/sets.tsx / app/game.tsx). */}
+        <View style={styles.fieldButtonsGrid}>
           {FIELDS.map((field) => (
-            <View key={field.id} style={styles.fieldColumn}>
-              {TEST_PARTS.map((part) => {
-                const hasExamples = (exampleCountByTest.get(`${field.id}:${part}`) ?? 0) > 0;
-                return (
-                  <Pressable
-                    key={part}
-                    style={[styles.fieldButton, !hasExamples && styles.fieldButtonDisabled]}
-                    disabled={!hasExamples}
-                    onPress={() =>
-                      navigateOnce(() => {
-                        clearPausedGame(); // starting a new test invalidates any paused one
-                        setPausedTest(null);
-                        router.push({
-                          pathname: '/game',
-                          params: { field: field.id, part: String(part) },
-                        });
-                      })
-                    }
-                  >
-                    <Text style={[styles.fieldButtonLabel, !hasExamples && styles.fieldButtonLabelDisabled]}>
-                      {testLabel(field.id, part)}
-                    </Text>
-                    {!hasExamples && <Text style={styles.fieldButtonNote}>Zatím bez příkladů</Text>}
-                  </Pressable>
-                );
-              })}
-            </View>
+            <Pressable
+              key={field.id}
+              style={styles.fieldButton}
+              onPress={() =>
+                navigateOnce(() => router.push({ pathname: '/sets', params: { field: field.id } }))
+              }
+            >
+              <Text style={styles.fieldButtonNumber}>{field.number}</Text>
+              <Text style={styles.fieldButtonLabel} numberOfLines={2} adjustsFontSizeToFit>
+                {field.name}
+              </Text>
+            </Pressable>
           ))}
         </View>
       </ScrollView>
@@ -219,60 +148,35 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: 'center',
   },
-  // Resume button prominent at the top, full row width above the field buttons.
-  resumeButton: {
-    backgroundColor: '#8FD08F', // green — visually distinct from the orange new-test buttons
-    borderRadius: 24,
-    paddingVertical: 14,
-    paddingHorizontal: 24,
-    alignItems: 'center',
-    width: '100%', // width + maxWidth (not alignSelf stretch) so the parent's alignItems centers it
-    maxWidth: 720,
-    marginBottom: 16,
-  },
-  resumeButtonLabel: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    color: '#1E4620',
-    textAlign: 'center',
-  },
-  // Three field COLUMNS side by side, each column stacking its two sub-test buttons
-  // ("request 21": 6 tests; landscape width is abundant, height is scarce).
-  fieldButtonsRow: {
+  // 15 type buttons wrapped 5 per row ("User request 25"): width 18% + gap 10 keeps 5 per row
+  // from a landscape iPhone (~650 pt usable) up to the 1000 pt iPad cap.
+  fieldButtonsGrid: {
     flexDirection: 'row',
-    gap: 14,
-    width: '100%',
-    maxWidth: 900,
-    alignItems: 'stretch',
-  },
-  fieldColumn: {
-    flex: 1,
+    flexWrap: 'wrap',
+    justifyContent: 'center',
     gap: 10,
+    width: '100%',
+    maxWidth: 1000,
   },
   fieldButton: {
-    flex: 1, // both buttons of a column share its height equally
+    width: '18%',
+    minHeight: 76,
     backgroundColor: '#FFB84D',
-    borderRadius: 24,
-    paddingVertical: 12, // was 16 — two stacked rows must still fit the landscape height
-    paddingHorizontal: 12,
+    borderRadius: 20,
+    paddingVertical: 8,
+    paddingHorizontal: 8,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  fieldButtonDisabled: {
-    backgroundColor: '#EFE6D4',
+  fieldButtonNumber: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#4C3000',
   },
   fieldButtonLabel: {
-    fontSize: 20, // was 26 — the buttons share one row now, labels wrap to two lines
+    fontSize: 14,
     fontWeight: 'bold',
     color: '#4C3000',
     textAlign: 'center',
-  },
-  fieldButtonLabelDisabled: {
-    color: '#A79C87',
-  },
-  fieldButtonNote: {
-    marginTop: 4,
-    fontSize: 16,
-    color: '#A79C87',
   },
 });

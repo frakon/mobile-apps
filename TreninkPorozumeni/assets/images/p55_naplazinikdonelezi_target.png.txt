@@ -1,0 +1,11 @@
+Image: p55_naplazinikdonelezi_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_11 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one big red-and-white striped beach towel spread flat on the floor, completely empty, nothing and nobody on it; one adult mother about 35 years old with shoulder-length brown hair in a one-piece yellow swimsuit stands upright on the floor beside the towel, not touching it, holding a colourful beach ball in both hands. Nobody lies on the towel. The whole person from head to shoes is fully inside the picture, both arms and both hands visible. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

@@ -1,0 +1,14 @@
+Image: p53_traktorypole_lexb.png
+Generated: 2026-10-01
+Candidate: P5 batch_13 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a farmyard: one red barn with a closed door standing on flat green grass ground; the same continuous green grass ground covers the whole lower half of the picture from the left edge to the right edge, the barn and the tractors all standing on it. In front of the barn exactly two empty green tractors parked facing left, one at the left side and one at the right side, a wide gap between them, not touching, standing still. Each tractor is a simple classic tractor with exactly one exhaust pipe, one steering wheel, one seat, two big rear wheels and two small front wheels. No brown field, no people, no text, no letters, nothing else in the picture.
+
+3. Blind test (P5 batch_13 strict repair, 2026-10-01): lex check: matches neither sentence; real-world check no fault (previous remark: duplicate exhaust / floating grass patch fixed).
+Accepted into assets 2026-10-01 by P5 (type 5.3) batch_13; previous version moved to Temp/P5/batch_13/old/.

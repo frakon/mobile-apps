@@ -1,0 +1,13 @@
+Image: levmezizebrou_gram.png (candidate folder r2)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_08 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: exactly three animals standing on all four legs in one straight horizontal row, all facing left, with small equal empty gaps between them, not touching, all hooves and paws at exactly the same bottom level; each tail hangs down behind its own animal's back legs. From left to right: a golden lion with a big brown mane, then a black-and-white striped zebra in the MIDDLE, then a tall spotted giraffe. Every animal has correct realistic anatomy (a four-legged animal has exactly four legs and one tail, a bird exactly two wings and two legs), no fused or hybrid animals, calm friendly face with mouth closed. Everything shown whole, with correct realistic anatomy and plausible sizes, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram repair round 1 (r2) pair 10/10 (0 remarks); lex/real-world check L3 clean (target~s1, gram~s2 only; no faults). Accepted into assets 2026-09-30 by P4 batch_08.

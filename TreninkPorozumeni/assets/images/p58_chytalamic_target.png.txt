@@ -1,0 +1,11 @@
+Image: p58_chytalamic_target.png
+Generated: 2026-10-01
+Candidate: P10 batch08 (type 5.8) round 6
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails tied with ribbons, wearing a pink dress catches a red ball flying towards the hands, arms stretched out. She is unmistakably a girl: long pigtails and a pink dress. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. A dashed curved flight line comes from the upper RIGHT edge of the picture down in an arc and ends at the child's hands; a red ball at the end of this line is landing into the child's two open cupped hands, fingers closing around it; the child leans slightly back absorbing the catch, eyes on the ball; both feet stand on the same level. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,14 @@
+Image: lampavedlekresla_lexb.png
+Generated: 2026-09-30
+Candidate: batch_11 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: a big brown upholstered armchair seen straight from the front: a very tall wide backrest, two thick armrests, a seat cushion, and a fabric skirt reaching down to the floor so no legs or gap under the chair are visible; a tall green leafy plant in a big brown flower pot stands right BESIDE the armchair, to the right of it with a clear gap, the pot bottom and the bottom of the armchair at the same level. There is no lamp anywhere. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, objects have no faces, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_11, source folder r6):
+5 repair rounds (r2 base under chair, r3 floating base, r4 pole out of backrest 1/10, r5 offset read as beside); final r6: skirted armchair, lamp centred behind. Pair r6 10/10 no doubt remarks; lex L6 clean.

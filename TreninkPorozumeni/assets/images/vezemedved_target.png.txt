@@ -1,0 +1,13 @@
+Image: vezemedved_target.png
+Generated: 2026-09-30
+Candidate: batch_06 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big brown bear walks toward the right behind a wheelbarrow, holding its two handles with both front paws and pushing it forward; a small brown hare with long ears sits inside the tub of the wheelbarrow, only its head, shoulders and front paws above the rim, front paws resting on the rim, riding calmly. The wheelbarrow is complete: one front wheel, a deep metal tub, two long wooden handles at the back and two short back legs. The bear walks upright on two hind legs behind the wheelbarrow and is the active one who pushes and drives; the hare is the passive passenger who sits in the wheelbarrow and does nothing. Only the hare is inside the wheelbarrow, the bear is outside it. Any bear has only a tiny stubby tail hidden in its fur, never a fluffy tuft. Both handles clearly visible in the pusher's two paws. Two clearly separate whole animals with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person and every animal clearly visible, calm friendly faces with mouths closed, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (batch_06, 2026-09-30): forced choice r2s 10/10, no glitch remarks (only notes that a small hare pushing a bear is intended); lex/real-world r2s: faults none. Evaluators = fresh headless claude -p --model opus sessions.

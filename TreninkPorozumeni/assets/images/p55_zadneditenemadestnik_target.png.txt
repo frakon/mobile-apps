@@ -1,0 +1,11 @@
+Image: p55_zadneditenemadestnik_target.png
+Generated: 2026-10-01
+Candidate: P7 retest g4 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean: three children standing side by side in a row with small gaps between them, front view, full length: a girl in a yellow raincoat with yellow rubber boots, a boy in a green raincoat with green rubber boots and a girl in a blue raincoat with blue rubber boots (each child's boots exactly the same colour as the raincoat); blue raindrops falling evenly all over the picture; each child keeps both hands in the raincoat pockets, hoods up; there is NO umbrella anywhere in the picture. None of the children has an umbrella. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

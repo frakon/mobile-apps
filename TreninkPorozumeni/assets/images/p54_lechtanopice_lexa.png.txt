@@ -1,0 +1,13 @@
+Image: p54_lechtanopice_lexa.png
+Generated: 2026-10-01
+Candidate: P6 batch_06 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a black-and-white panda lies on its back on the ground level on the right, belly up, all four legs bent up in the air, eyes squeezed shut, giggling, holding nothing. a brown kangaroo (no baby in its pouch) stands upright on its hind legs on the left, facing right, bending over the panda, holding one long white feather in one front paw; the feather tip touches the panda's belly, tickling it. The kangaroo is the active one tickling, the panda is the passive one lying on its back being tickled. Only the kangaroo holds the feather. The only contact is the feather on the panda's belly. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, the standing animal's feet on the same ground line as the lying animal's back, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: P6 batch_06 tested set r5; blind forced-choice 10/10 (v1->target 5/5, v2->gram 5/5, fresh opus sessions, no ambiguity remark); lex/real-world check (fresh opus): no faults, lex pictures match neither sentence.

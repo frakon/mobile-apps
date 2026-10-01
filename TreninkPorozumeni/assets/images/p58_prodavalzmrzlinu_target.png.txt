@@ -1,0 +1,11 @@
+Image: p58_prodavalzmrzlinu_target.png
+Generated: 2026-10-01
+Candidate: P10 batch08 (type 5.8) round 6
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a bald grandfather with a big grey moustache, wearing brown trousers and a vest stands behind a small ice cream cart handing an ice cream cone over the counter. He is unmistakably an old man: bald head, moustache and trousers. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The ice cream cart is a complete small white box cart standing on four equal small wheels, one at each bottom corner; a striped sunshade sits on a straight pole that is firmly fixed into the top corner of the cart and a counter with tubs of colourful ice cream; side view, the cart on the right and the seller on the left standing at the cart's back side (the seller's working side, where the scoop and tubs are), wearing a white apron and a small white seller's cap over the head, holding an ice cream scoop in one hand and with the other hand holding a cone out across the top of the cart towards the right, to a customer outside the picture; clearly the seller, not a customer. No letters, numbers or writing anywhere. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

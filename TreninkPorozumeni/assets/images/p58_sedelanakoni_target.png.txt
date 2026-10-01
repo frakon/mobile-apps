@@ -1,0 +1,11 @@
+Image: p58_sedelanakoni_target.png
+Generated: 2026-10-01
+Candidate: P10 batch13 (type 5.8) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails tied with ribbons, wearing a pink dress sits on the back of a brown horse. She is unmistakably a girl: long pigtails and a pink dress. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Sitting astride in the saddle on the horse's back, one leg on each side of the horse, the visible foot in the stirrup, both hands holding the reins. The horse is one complete brown horse standing calmly on all four legs with all four hooves on a small patch of green grass, a dark mane and long dark tail, a brown leather saddle with stirrups and reins. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

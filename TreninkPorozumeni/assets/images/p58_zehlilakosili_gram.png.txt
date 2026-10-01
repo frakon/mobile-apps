@@ -1,0 +1,11 @@
+Image: p58_zehlilakosili_gram.png
+Generated: 2026-10-01
+Candidate: P10 batch09 (type 5.8) round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: an adult man about 35 years old with very short dark hair and a short beard, wearing a checked shirt and trousers irons a white shirt on an ironing board. He is unmistakably a man: short hair, beard and trousers. This picture is the mirrored twin of a paired picture: exactly the same action, pose, objects, composition and style; the ONLY difference is that the figure is man, not woman. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The ironing board is complete with its folding legs standing on the same level as the feet; the iron is held by its handle and rests flat on the white shirt lying on the board. The garment is clearly a classic white men's dress shirt (košile), laid flat on the board front side up: a stiff pointed collar at the top, a vertical row of small round buttons down the middle front, and a chest pocket; both long sleeves end in plain buttoned cuffs (no ribbing). Nothing hangs off the board. It is not a T-shirt, not a sweatshirt, not a cloth. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

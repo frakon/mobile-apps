@@ -1,0 +1,14 @@
+Image: myjemedved_gram.png (candidate myjemedved_gram_c2.png
+Generated: 2026-09-30
+Candidate: batch_15 round 4c
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view, both figures standing: a brown bear stands still on all four legs on the right in a plain side view, its head and its whole body both facing right, the same direction, its back turned up toward the sky, eyes closed, calm, its back covered in white soap bubbles. a grey hippo rears up on its two short hind legs on the left like a friendly cartoon hippo, close beside the bear's side, facing right, and holds a big yellow soapy sponge with both front paws, BOTH front legs clearly visible, the near front leg and the far front leg each pressing on the sponge, the far front leg not hidden; the sponge is pressed flat against the bear's back and clearly TOUCHES the fur/skin, scrubbing it. The hippo has no bubbles on it and is dry. The hippo is the active washer holding the sponge, the bear is the passive one being washed. Bodies not touching except the sponge on the bear's back. The bear has exactly four legs, the hippo has exactly two arms and two legs. The bear has only a tiny short stubby round bear tail, no long tail. Two clearly separate whole animals with correct realistic anatomy, every leg, paw and tail complete and fully visible, not hidden behind anything, no extra legs, calm friendly faces with mouths closed, no fused or hybrid animals, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+Final selection: batch_15 working file Temp/P3/batch_15/r4/myjemedved_gram.png
+Blind test / verification: target-vs-gram forced choice, 5 fresh headless opus trials per sentence (variant 1 + swapped), 10/10 correct, no ambiguity/glitch remarks (trials round r4, lex round r4); independent fresh opus lex + real-world check: lex pictures match neither sentence, no faults.

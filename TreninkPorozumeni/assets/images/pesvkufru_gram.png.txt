@@ -1,0 +1,14 @@
+Image: pesvkufru_gram.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_15 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one big brown hard suitcase, CLOSED, lying flat on its wide side, with a carry handle on its front narrow side and two metal clasps; seen from a slightly elevated three-quarter front view. one small brown dog with floppy ears SITS ON TOP of the closed suitcase, in the middle of its flat top surface, its whole body, all four legs and its tail visible, high above the floor. The dog is clearly ON the suitcase, not in it and not beside it. Every animal has correct realistic anatomy (a mammal has exactly four legs and one tail, a bird has exactly two wings and two legs), no fused or hybrid animals, calm friendly face with mouth closed. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Selected: batch_15 folder r1
+4. Blind-test result: target+lexb regenerated r2 (hinge/clasp placement, missing handle); pair r2 BT 10/10 (no remarks, one style note); lex L2 clean

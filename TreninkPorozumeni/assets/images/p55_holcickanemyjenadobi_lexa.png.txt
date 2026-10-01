@@ -1,0 +1,11 @@
+Image: p55_holcickanemyjenadobi_lexa.png
+Generated: 2026-10-01
+Candidate: P7 retest g2 (type 5.5) round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a white kitchen sink cabinet with two doors with small knobs on its front and a tap; on the left half of the counter next to the basin stands a small stack of exactly two dirty plates, clearly dirty with brown food leftovers and red sauce smears on them; the whole person is fully visible from head to feet; one little boy with short brown hair in a blue T-shirt and shorts stands next to the sink, his body turned away from the sink, holding a small bowl of red strawberries in one hand and eating a strawberry with the other hand; his hands are nowhere near the sink, the tap is off and dry. No girl. Calm friendly face, mouth closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, floating in pure white empty space, no ground, no grass, no shadow, no scenery, no decorations, nothing else in the picture.

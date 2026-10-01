@@ -1,0 +1,11 @@
+Image: p55_holcickanespi_lexa.png
+Generated: 2026-10-01
+Candidate: P7 batch_10 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one single wooden bed with four legs, a white pillow and a light blue blanket; one little boy (about 7 years old) with short brown hair in blue pyjamas sits upright in the bed, his legs under the blanket, eyes wide open, holding an open picture book in both hands and reading it. No girl anywhere. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

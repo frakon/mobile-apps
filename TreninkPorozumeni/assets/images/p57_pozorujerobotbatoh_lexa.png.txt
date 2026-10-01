@@ -1,0 +1,11 @@
+Image: pozorujerobotbatoh_lexa.png
+Generated: 2026-10-01
+Candidate: P9 batch_02 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A friendly silver robot with a round head, round eyes and one short antenna (the robot carries a blue backpack on its back) looks at a small white puppy (the puppy carries no backpack and no bag) through binoculars held with both hands, standing still with both feet flat at the same ground level as the puppy (not walking, not floating); the puppy stands some distance away, facing sideways, not looking back. ONLY the robot carries a blue backpack on its back; the puppy carries no backpack and no bag. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no kitten anywhere in the picture.

@@ -1,0 +1,11 @@
+Image: p55_kluknestavihrad_gram.png
+Generated: 2026-10-01
+Candidate: P7 batch_09 (type 5.5) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a small flat patch of yellow sand; a red toy bucket stands upright on the sand; one boy with short brown hair in a blue T-shirt and shorts kneels on the sand, whole figure, both arms clearly visible: he holds the only small blue spade firmly in his right hand and pats a tall sandcastle with two towers in front of him with it, his left hand smooths the castle wall, clearly building it; there is only ONE spade in the whole picture; no watermelon. Calm friendly faces, mouths closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

@@ -1,0 +1,13 @@
+Image: traktorpredstromem_lexa.png
+Generated: 2026-09-30
+Candidate: P4 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, soft colours: one small arched grey stone bridge: a stone arch with its two stone feet standing at the bottom, solid stone walls, a flat top roadway, the whole bridge resting on its two stone feet at one level (the bridge is complete and stands firmly by itself). one small green farm tractor with a big rear wheel, a small front wheel and a cabin, seen exactly from the side stands ON TOP of the bridge on its flat roadway, both wheels on the bridge. No tree anywhere. The tractor is on the bridge, not under the arch. Everything complete and anatomically correct, calm friendly face. Only these things in the picture, floating in pure white empty space, no ground, no floor line, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30): P4 batch_02, final candidate set r3. Blind forced-choice target vs gram 10/10 (5 per variant), fresh opus headless sessions, no ambiguity/glitch remark; lex check (4 shuffled pictures, one fresh session): only target~sentence1 and gram~sentence2; real-world fault check clean.

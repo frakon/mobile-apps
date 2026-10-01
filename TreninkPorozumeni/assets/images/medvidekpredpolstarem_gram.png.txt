@@ -1,0 +1,17 @@
+Image: medvidekpredpolstarem_gram.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_07 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one big square red cushion standing upright on the floor level, facing the viewer; it is a very thick firm cushion, as thick as a small mattress, so it stands stably on its wide flat bottom side by itself; its top edge is as high as the sitting teddy bear's belly. One brown teddy bear SITS upright on the floor level directly BEHIND the cushion, farther from the viewer than the cushion, in a typical sitting teddy pose: the teddy bear's whole head, ears, shoulders, both arms and round upper belly are clearly visible above the top edge of the cushion; the opaque cushion hides only the teddy's bottom and legs. The teddy bear sits behind the cushion, not in front of it, not on it. Everything shown whole, with correct realistic anatomy and plausible sizes, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+Selected candidate: medvidekpredpolstarem_gram_c1 (pre-screen pick)
+
+3. Acceptance:
+- Installed 2026-09-30 from P4 batch_07 work folder r5
+- Blind test: pair accepted after repair round 2 (folder r3) 10/10 no remarks; lexa regenerated round 3 (r4), lexb regenerated round 4 (r5); final lex L5 clean

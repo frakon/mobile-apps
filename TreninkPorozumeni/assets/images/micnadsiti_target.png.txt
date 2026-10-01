@@ -1,0 +1,15 @@
+Image: micnadsiti_target.png
+Generated: 2026-09-30
+Candidate: P4 batch_05 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one volleyball net stretched tight between two upright poles standing on the floor at the left and right; the net is a horizontal band hung HIGH at the top of the poles, with a large open empty space between the bottom edge of the net and the floor. The net is complete: two poles and the net between them. one white-and-blue volleyball with short motion lines is flying HIGH ABOVE the net, in the middle, with a clear empty gap between the ball and the top edge of the net. The ball is above the net, not under it and not touching it. Everything shown whole, with correct realistic anatomy and plausible sizes, every leg, paw, wing and tail complete and not merged with anything, calm friendly faces, no fused or hybrid animals, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance:
+- Accepted: P4 batch_05, file taken from folder r1 (its candidate round is stated above); installed 2026-09-30
+- Blind test: pair r1 10/10, no remarks; lex L1 clean

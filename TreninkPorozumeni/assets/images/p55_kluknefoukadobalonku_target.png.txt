@@ -1,0 +1,11 @@
+Image: p55_kluknefoukadobalonku_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_10 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one little boy (about 7 years old) with short brown hair, a blue T-shirt, dark blue shorts and white sneakers stands next to a small square wooden table with four legs, all four legs visible and eats a long bread roll held in one hand, biting it; one flat, empty, completely deflated red balloon (a small limp rubber skin) lies on the table top, untouched, far from his face. The boy is eating, not blowing up the balloon. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

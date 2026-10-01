@@ -1,0 +1,13 @@
+Image: pomerancmezicitronem_lexb.png (candidate folder r2)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_14 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: exactly three separate whole realistic fruits lying side by side in one straight horizontal row with equal small gaps, not touching, all resting at the same bottom level, with their real natural sizes: the lemon, the orange and the apple are about the same size, the strawberry is clearly smaller, about half as big as the lemon, left to right: one yellow lemon, one round green apple with a short stem in the middle, one red strawberry with a green top. Realistic fruits without faces, eyes, arms or legs. Nothing else, no plate, no table. Everything shown whole, with correct realistic anatomy and plausible sizes, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, no letters, no signs with writing, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram repair round 2 (r3) pair 10/10 (0 remarks); lex/real-world check L3 clean (target~s1, gram~s2 only; no faults). Accepted into assets 2026-09-30 by P4 batch_14.

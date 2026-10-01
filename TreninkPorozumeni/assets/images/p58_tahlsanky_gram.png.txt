@@ -1,0 +1,11 @@
+Image: p58_tahlsanky_gram.png
+Generated: 2026-10-01
+Candidate: P10 batch07 (type 5.8) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails tied with ribbons (no hat), wearing a pink winter coat with a wide skirt-like hem flaring out like a dress, white tights, a scarf, mittens and winter boots walks to the LEFT, leaning forward with effort, pulling an empty wooden sled on a rope; the sled is BEHIND the child, trailing on the right side of the picture, its curled front end pointing toward the child; the rope goes from the child's hand held behind the back, taut and straight, to the curled front of the sled. The child faces away from the sled. She is unmistakably a girl: long pigtails and a pink dress-like coat. This picture is the mirrored twin of a paired picture: exactly the same action, pose, objects, composition and style; the ONLY difference is that the figure is girl, not boy. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The sled is a complete small wooden sled with two runners; the rope is one single continuous unbroken line from the child's hand to the front of the sled, no breaks, no loose ends. The child walks on a small flat patch of white snow, the sled sliding behind on the same snow. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

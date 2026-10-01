@@ -1,0 +1,11 @@
+Image: p58_vrtaladozdi_gram.png
+Generated: 2026-10-01
+Candidate: P10 batch01 (type 5.8) round 7
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: cutaway side view of one small room of a house, like an open dollhouse room seen from the side: a wooden floor along the bottom, a white ceiling along the top, and the room's thick plastered side wall on the right, drawn in cross-section as a WIDE light blue band (about a quarter of the picture wide) joined to the floor and to the ceiling, so floor, wall and ceiling clearly form the corner of a room; a ceiling lamp hangs from the ceiling; a clearly adult young man with very short dark hair and a short beard, wearing a checked shirt and dark trousers stands on the floor inside the room in side profile facing right toward the wall, holding a yellow cordless electric drill horizontally with both hands at chest height; the drill points straight right and its drill bit goes INTO the wall, perpendicular to the wall surface, a small hole and a puff of white dust where the bit enters the wall. He is unmistakably an adult man: very short hair, short beard and trousers. The wall is smooth and uniform: one plain light blue plastered band with clean straight vertical edges, no bricks, no stones, no blocks, no cracks, no broken plaster anywhere; the only mark on the wall is the small drill hole with the dust puff. Calm friendly face, mouth closed. Exactly one person with correct realistic anatomy, only the described person and objects, the room cutaway on a pure white background, no shadow, nothing outside the room, no text, nothing else in the picture. The whole figure is visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing is cut off by the picture edge; the figure is drawn small enough to fit completely. This picture is the mirrored twin of a paired picture: exactly the same pose, objects, composition and style; the only difference is the person.

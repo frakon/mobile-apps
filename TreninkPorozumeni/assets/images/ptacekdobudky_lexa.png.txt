@@ -1,0 +1,15 @@
+Image: ptacekdobudky_lexa.png
+Generated: 2026-09-30
+Candidate: P4 batch_05 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one wooden birdhouse with one simple symmetrical pointed roof (a single roof, two equal slopes), seen in three-quarter view, its front wall with one BIG round entrance hole turned to the RIGHT and toward the viewer, the hole clearly visible and wider than the bird's body; the birdhouse is mounted on top of a straight wooden post that stands on a small flat square wooden foot plate on the floor. The birdhouse is complete: walls, roof, round hole, post and foot plate. One small blue bird with an orange breast, wings folded, sits still on the top of the roof of the birdhouse, feet on the roof, not flying.  No faces on objects. Everything shown whole, with correct realistic anatomy and plausible sizes, every leg, paw, wing and tail complete and not merged with anything, calm friendly faces, no fused or hybrid animals, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance:
+- Accepted: P4 batch_05, file taken from folder r5 (its candidate round is stated above); installed 2026-09-30
+- Blind test: pair r5 10/10, no remarks; lex L5 clean (repair rounds 4)

@@ -1,0 +1,13 @@
+Image: p53_dedecekkytky_lexb.png
+Generated: 2026-10-01
+Candidate: P5 (type 5.3) batch_02 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a grandfather with white hair, white moustache, glasses and a brown cardigan stands on a flat ground line next to a small flat garden bed of brown soil on the same line and PICKS red tulips: he holds a small bunch of three freshly picked red tulips in his left hand and pulls one more red tulip out of the soil with his right hand. No watering can, no flower pots, no water. He is the only person. Everything shown whole. Every person and animal has correct realistic anatomy with all limbs complete and visible, calm friendly faces; houses, vehicles, plants and objects are ordinary realistic things with NO faces, NO arms and NO legs. Everything that stands rests on one common flat ground line at the same level. floating in pure white empty space, no ground drawn except what is described, no shadow, no extra scenery, no text, no patterns, nothing else in the picture.
+
+3. Blind test result: final pair r1: 5/5 + 5/5, counts 4 vs 1 correct 10/10; lex L2 target~A gram~B only (minor soil-bed scenery in lexb). Accepted into assets 2026-10-01 by P5 (type 5.3) batch_02.

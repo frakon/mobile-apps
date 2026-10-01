@@ -1,0 +1,14 @@
+Image: p55_autonesviti_gram.png
+Generated: 2026-10-01
+Candidate: P7 batch_03 (type 5.5) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, one small blue family car seen straight from the front: two round headlights, two small side mirrors, windscreen, grille, a blank number plate, and ONLY its two front wheels visible at the bottom left and right corners (no extra wheels). Both headlights are switched ON: each lamp shines very bright yellow-white and is surrounded by a round soft yellow glowing halo right around the lamp itself; short rays of light radiate outward from each lamp like a shining star. The glow stays around the lamps only, nothing painted over the grille, bumper or wheels. Nobody inside. Everything shown whole and structurally complete, no faces on objects, no people, no hands, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Acceptance:
+- Installed 2026-10-01 from P7 batch_03 (image generated in round 3); pair blind test 10/10 forced choice, lex+real-world check done (see Temp/P7/batch_03/result + batch03_result.md)

@@ -1,0 +1,11 @@
+Image: obvazujeklaunbatoh_gram.png
+Generated: 2026-10-01
+Candidate: P9 batch_11 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A clown with a red nose, curly orange hair, a big red bow tie, a yellow-and-blue suit with big buttons and big red shoes (the clown carries no backpack and no bag) stands upright and is in the middle of wrapping a white bandage around one arm/front leg of a green frog (the frog carries a blue backpack on its back): the clown holds a small narrow white gauze roll (not toilet paper) in one hand, one continuous strip of bandage runs from the roll to the half-wrapped limb, the wrapping is clearly still in progress; the frog sits calmly on its back legs like a real frog, holding only ONE front leg slightly forward, exactly four legs. ONLY the frog carries a blue backpack on its back; the clown carries no backpack and no bag. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, small and centered with a wide white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

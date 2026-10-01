@@ -1,0 +1,13 @@
+Image: pespodlavici_lexb.png
+Generated: 2026-09-30
+Candidate: P4 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, soft colours: one long wooden park bench seen from the front: a flat plank seat, a backrest of horizontal slats running along the WHOLE length of the seat, and four sturdy wooden legs clearly visible (the bench is a complete piece of furniture: seat, full-length backrest and four legs). One white rabbit with long ears is lying asleep with eyes closed UNDER the bench, in the open space beneath the seat between the bench legs, at the same level as the bottom of the legs. The seat above is empty. No dog anywhere. The rabbit is clearly under the bench, not on it. Everything complete and anatomically correct, calm friendly face. Only these things in the picture, floating in pure white empty space, no ground, no floor line, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30): P4 batch_02, final candidate set r3. Blind forced-choice target vs gram 10/10 (5 per variant), fresh opus headless sessions, no ambiguity/glitch remark; lex check (4 shuffled pictures, one fresh session): only target~sentence1 and gram~sentence2; real-world fault check clean.

@@ -1,0 +1,14 @@
+Image: micvedlekbeliku_lexb.png
+Generated: 2026-09-30
+Candidate: batch_04 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small red toy shovel with a short handle lies flat on the ground right BESIDE a big upright opaque blue plastic bucket with a thin handle, its open top rim facing up, to the right of the bucket with a small clear gap; the bottom of the shovel and the bottom of the bucket at the same level. There is no ball anywhere. Every thing is complete and fully visible with correct realistic proportions; every person and animal has correct anatomy with all arms, legs, paws and tail complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_04, source folder r4):
+Blind forced choice target vs gram (fresh opus per trial, randomized mapping) r4: 5/5 sentence v1 + 5/5 swapped, no ambiguity/glitch remarks. Lex check L2 (fresh opus, 4 shuffled pictures): only target~A, gram~B; faults none.

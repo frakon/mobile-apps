@@ -1,0 +1,11 @@
+Image: p55_motylnesedinakvetine_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_07 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one big blue flower with a long green stem and two leaves, standing upright; one big yellow butterfly with four open wings flies high in the air far above and to the side of the flower, a big empty gap between the butterfly and the flower; nothing sits on the flower. The butterfly is flying, not sitting on the flower. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

@@ -6,24 +6,56 @@
 // in random positions.
 
 import { AudioSource } from 'expo-audio';
-import { ComprehensionExample, comprehensionExamples, FieldId } from './items';
+import { ComprehensionExample, comprehensionExamples, FieldId, SwappedVariant } from './items';
 import { ImageSourcePropType } from 'react-native';
 
 export type Regime = 2 | 4;
 
-// Sub-test part ("User follow-up request 21" in _TreninkPorozumeni_Fields123_PROMPTS.md:
-// "split the current tests to by 10 (not by 20). So make it 6 tests instead of 3"):
+// Test group (test set) of 10 ("User follow-up request 21", generalised by "User request 25"
+// in _TreninkPorozumeni_Fields123_PROMPTS.md: up to 100 items per type, groups 1–10 … 91–100):
 // each field's examples are split DETERMINISTICALLY by their src/items.ts order into
-// part 1 = examples 1–10 and part 2 = examples 11–20; shuffling happens only WITHIN a part.
-export type TestPart = 1 | 2;
+// group 1 = examples 1–10, group 2 = 11–20, …; shuffling happens only WITHIN a group.
+// A group number is 1-based; the number of groups is derived from the item count.
+export type TestPart = number;
 
 export const EXAMPLES_PER_TEST_PART = 10;
+export const MAX_TEST_PARTS = 10;
+
+function examplesForField(field: FieldId): ComprehensionExample[] {
+  return comprehensionExamples.filter((example) => example.field === field);
+}
+
+// Number of existing groups of a field (0 = empty type), capped at 10 (items 1–100).
+export function testPartCount(field: FieldId): number {
+  return Math.min(MAX_TEST_PARTS, Math.ceil(examplesForField(field).length / EXAMPLES_PER_TEST_PART));
+}
+
+// "1–10", "11–20", … — the last group shows its real end when it is not full.
+export function testPartRangeLabel(field: FieldId, part: TestPart): string {
+  const first = (part - 1) * EXAMPLES_PER_TEST_PART + 1;
+  const last = first - 1 + examplesForTestPart(field, part).length;
+  return `${first}–${last}`;
+}
 
 // The examples of one sub-test (field + part), in the fixed items.ts order (pre-shuffle).
 export function examplesForTestPart(field: FieldId, part: TestPart): ComprehensionExample[] {
-  const fieldExamples = comprehensionExamples.filter((example) => example.field === field);
+  if (!Number.isInteger(part) || part < 1 || part > MAX_TEST_PARTS) {
+    return [];
+  }
   const startIndex = (part - 1) * EXAMPLES_PER_TEST_PART;
-  return fieldExamples.slice(startIndex, startIndex + EXAMPLES_PER_TEST_PART);
+  return examplesForField(field).slice(startIndex, startIndex + EXAMPLES_PER_TEST_PART);
+}
+
+// Variant chosen for one play of an example ("User request 25"): 1 = the base fields,
+// 2 = example.swappedVariant (target and grammatical-distractor PICTURES exchanged).
+export type VariantNumber = 1 | 2;
+
+// 50/50 per example among the variants it has; `random` injectable for sanity checks.
+export function pickVariant(example: ComprehensionExample, random: () => number = Math.random): VariantNumber {
+  if (example.swappedVariant === undefined) {
+    return 1;
+  }
+  return random() < 0.5 ? 1 : 2;
 }
 
 // Which picture occupies a display slot — needed to map a tapped wrong picture to its
@@ -38,16 +70,29 @@ export interface RoundSlot {
 
 export interface GameRound {
   example: ComprehensionExample;
+  // Drawn once when the plan is built; stored in the plan so pause/resume keeps it.
+  variant: VariantNumber;
   // Slots in display order (length 2 or 4); the correct (target) image is at correctIndex.
   slots: RoundSlot[];
   correctIndex: number;
 }
 
-// Explanation (text + optional audio) for a tapped wrong slot; null for the target slot.
+// Sentence audio of the round's chosen variant ("User request 25").
+export function sentenceAudioForRound(round: GameRound): AudioSource {
+  return round.variant === 2 && round.example.swappedVariant !== undefined
+    ? round.example.swappedVariant.audio
+    : round.example.audio;
+}
+
+// Explanation (text + optional audio) for a tapped wrong slot of the round's chosen variant;
+// null for the target slot. Slot kinds are relative to the variant (in variant 2 the
+// 'grammatical' slot shows the base target picture and gets the variant-2 explanation).
 export function explanationForSlot(
-  example: ComprehensionExample,
+  round: GameRound,
   kind: SlotKind
 ): { text: string; audio: AudioSource | null } | null {
+  const example: ComprehensionExample | SwappedVariant =
+    round.variant === 2 && round.example.swappedVariant !== undefined ? round.example.swappedVariant : round.example;
   switch (kind) {
     case 'grammatical':
       return {
@@ -84,10 +129,10 @@ export function collectRoundAssetModules(round: GameRound): number[] {
       moduleIds.push(source);
     }
   };
-  addModule(round.example.audio);
+  addModule(sentenceAudioForRound(round));
   for (const slot of round.slots) {
     addModule(slot.image);
-    const explanation = explanationForSlot(round.example, slot.kind);
+    const explanation = explanationForSlot(round, slot.kind);
     if (explanation !== null) {
       addModule(explanation.audio);
     }
@@ -104,24 +149,38 @@ function shuffled<T>(source: readonly T[]): T[] {
   return result;
 }
 
-function buildRound(example: ComprehensionExample, regime: Regime): GameRound {
+function buildRound(example: ComprehensionExample, regime: Regime, variant: VariantNumber): GameRound {
+  // Variant 2 ("User request 25"): the base grammatical-distractor picture is the target and
+  // the base target picture is the grammatical distractor; lexA/lexB pictures stay.
+  const targetImage = variant === 2 ? example.grammaticalDistractorImage : example.targetImage;
+  const grammaticalImage = variant === 2 ? example.targetImage : example.grammaticalDistractorImage;
   const distractors: RoundSlot[] =
     regime === 2
-      ? [{ image: example.grammaticalDistractorImage, kind: 'grammatical' }]
+      ? [{ image: grammaticalImage, kind: 'grammatical' }]
       : [
-          { image: example.grammaticalDistractorImage, kind: 'grammatical' },
+          { image: grammaticalImage, kind: 'grammatical' },
           { image: example.lexicalDistractorAImage, kind: 'lexicalA' },
           { image: example.lexicalDistractorBImage, kind: 'lexicalB' },
         ];
-  const slots = shuffled<RoundSlot>([{ image: example.targetImage, kind: 'target' }, ...distractors]);
+  const slots = shuffled<RoundSlot>([{ image: targetImage, kind: 'target' }, ...distractors]);
   return {
     example,
+    variant,
     slots,
     // By kind, not by image identity — robust even if an example ever reuses an asset.
     correctIndex: slots.findIndex((slot) => slot.kind === 'target'),
   };
 }
 
-export function buildRoundPlan(field: FieldId, regime: Regime, part: TestPart): GameRound[] {
-  return shuffled(examplesForTestPart(field, part)).map((example) => buildRound(example, regime));
+// Called on every start AND restart of a test, so every play re-draws each example's variant
+// independently ("User request 25"); a resumed game reuses the stored plan instead.
+export function buildRoundPlan(
+  field: FieldId,
+  regime: Regime,
+  part: TestPart,
+  random: () => number = Math.random
+): GameRound[] {
+  return shuffled(examplesForTestPart(field, part)).map((example) =>
+    buildRound(example, regime, pickVariant(example, random))
+  );
 }

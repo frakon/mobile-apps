@@ -1,0 +1,11 @@
+Image: p58_ridilautobus_gram.png
+Generated: 2026-10-01
+Candidate: P10 batch12 (type 5.8) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: an adult woman about 35 years old with long brown hair in a ponytail, wearing a long red dress sits in the driver seat of a big yellow bus, hands on the steering wheel, clearly visible through the big front side window. She is unmistakably a woman: long hair and a long dress. This picture is the mirrored twin of a paired picture: exactly the same action, pose, objects, composition and style; the ONLY difference is that the figure is woman, not man. A simple classic yellow city bus seen exactly from its left side, facing left, the whole bus visible from front bumper to rear bumper, nothing cut off; exactly two wheels visible: one front wheel under the driver and one rear wheel near the back, no extra axles; one row of evenly spaced passenger windows, one closed door in the middle; at the very front left end of the bus a large open driver side window shows the driver sitting upright facing left, both hands on a simple round steering wheel directly in front of the chest; no dashboard clutter, no other seats visible in the driver window, no other people in the bus. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

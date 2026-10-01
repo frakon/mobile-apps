@@ -1,0 +1,13 @@
+Image: hodinynaddvermi_lexa.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_10 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a wide rectangular section of light beige wall with a thin brown floor line along its bottom edge; standing on the floor line, fully inside the wall's width, a wooden single bed with a headboard, a white pillow, a blue blanket and four legs standing on the floor line. a big round white wall clock with a black frame, twelve black hour marks and two black hands hangs on the wall high above the headboard of the bed, fully inside the wall area. There is no door anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result (P4 batch_10, installed from r4): pair r1 10/10 no remarks; lex L4 clean (lexa regenerated r2-r4). Fresh headless claude -p --model opus evaluator per trial.

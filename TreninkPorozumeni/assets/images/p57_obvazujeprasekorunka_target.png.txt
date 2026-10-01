@@ -1,0 +1,11 @@
+Image: obvazujeprasekorunka_target.png
+Generated: 2026-10-01
+Candidate: P9 batch_05 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A clearly adult middle-aged mother about 40 years old with brown hair in a bun, a knee-length blue dress, her legs and feet fully visible and a white apron (the mother has nothing on its head, no crown, no hat) stands upright and is in the middle of wrapping a white bandage around one arm/front leg of a pink pig (the pig wears a big shiny golden crown, clearly visible on its head): the mother holds one small narrow white gauze bandage roll in one hand (a medical bandage, not toilet paper), and one continuous strip of bandage unrolls from that roll straight to the half-wrapped limb, connected without a break, the wrapping is clearly still in progress; the pig stands calmly in its natural posture (an animal on all four legs, body horizontal), holding only ONE front leg slightly forward while its other three legs stand; the pig has exactly four legs in total, only one leg bandaged. ONLY the pig wears a big shiny golden crown, clearly visible on its head; the mother has nothing on its head, no crown, no hat. Both figures are shown whole from head to toe, small and centered with a wide white margin around them. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

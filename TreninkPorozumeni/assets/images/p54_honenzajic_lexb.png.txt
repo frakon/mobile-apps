@@ -1,0 +1,13 @@
+Image: p54_honenzajic_lexb.png
+Generated: 2026-10-01
+Candidate: P6 batch_09 (type 5.4) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, pure flat side profile view: A chase from left to right. Both run to the RIGHT, both facing RIGHT. In FRONT on the RIGHT side of the picture: a brown hare with long ears, running away to the right, mid-stride, its head, nose and eyes pointing straight ahead to the RIGHT, NOT looking back. BEHIND it on the LEFT side of the picture: a grey wolf, running to the right after the hare, mid-stride, leaning forward, stretched out running fast on all four legs, eyes fixed on the one in front. The hare is on the right, the wolf is on the left. The wolf is the active chaser behind, the hare is the passive one being chased in front. A small gap of white space between them, their bodies do not overlap or touch. Two clearly separate whole figures with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, focused serious faces, simple clear pose, all feet at the same ground level, exactly two arms and two legs per person and four legs per animal (two legs per bird), floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: P6 batch_09 tested set r3 (tested round 3); blind forced-choice 10/10 (v1->target 5/5, v2->gram 5/5, fresh opus sessions, no ambiguity remark); lex/real-world check (fresh opus): no faults, lex pictures match neither sentence.

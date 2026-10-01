@@ -1,0 +1,13 @@
+Image: sanitkaprednemocnici_target.png (candidate folder r4)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_14 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one small white hospital building made of one simple rectangular block with a neat grey flat roof edge, two rows of square blue windows, one big red cross on the wall between the window rows, and one tall narrow front door in the middle of its bottom edge; the building is about three times as wide as the ambulance and stands alone. One white ambulance van with a red stripe along its side and one single blue light in the middle of its roof, seen exactly from the side, facing left, a normal short van with a complete body, exactly two round black wheels visible on its side in two round wheel arches: one front wheel and one rear wheel is parked IN FRONT of the building, centered, closer to the viewer: the ambulance body overlaps and covers the lower part of the door and the lower part of the wall, the upper half of the tall door still visible above the ambulance's roof, its wheels a little lower in the picture than the bottom edge of the building, and the building's wall visible on BOTH sides of the ambulance and above it. The ambulance stands in front of the hospital, not beside it. Everything shown whole, with correct realistic anatomy and plausible sizes, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, no letters, no signs with writing, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram repair round 3 (r4) pair 10/10 (0 remarks); lex/real-world check L4 clean (road strip under lexa is intended content) (target~s1, gram~s2 only; no faults). Accepted into assets 2026-09-30 by P4 batch_14.

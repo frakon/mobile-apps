@@ -1,0 +1,14 @@
+Image: myjeopice_gram.png
+Generated: 2026-09-30
+Candidate: batch_01 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+The whole elephant including its tail and all four legs fits inside the picture with white margin on every side, nothing cut off by the edge. Children's book watercolor illustration, side view: a big grey elephant stands on the left and holds a big yellow soapy sponge in the curled tip of its trunk, actively scrubbing the side of a small brown monkey standing on its hind legs with both arms raised up and spread wide to the sides, both open hands clearly visible far away from the sponge who stands on the right. The monkey stands still and is covered in white soap bubbles; the elephant has no bubbles on it and is completely dry and clean. Both animals have all limbs clearly visible. Any bear has a very short stubby bear tail hidden in its fur, never a long or curly tail. The elephant is the active washer holding the sponge, the monkey is the passive one being washed. Bodies not touching except the sponge against the monkey's side. Two clearly separate whole animals with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person and every animal clearly visible, slight three-quarter view so the far arm also shows and is not hidden behind any body, calm friendly faces with mouths closed, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result:
+- pair forced-choice blind 10/10 (r5 pair): 5/5 for sentence variant 1 and 5/5 for swapped variant (fresh opus sessions); real-world fault check passed (fresh opus session).

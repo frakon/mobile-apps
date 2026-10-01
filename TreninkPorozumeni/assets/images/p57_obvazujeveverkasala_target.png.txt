@@ -1,0 +1,11 @@
+Image: obvazujeveverkasala_target.png
+Generated: 2026-10-01
+Candidate: P9 batch_07 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A boy with short brown hair in a green T-shirt (the boy has nothing around its neck, no scarf) stands upright and is in the middle of wrapping a white bandage around one arm/front leg of a red squirrel (the squirrel wears a long blue-and-white striped scarf around its neck): the boy holds a white bandage roll in one hand, a strip of bandage runs from the roll to the half-wrapped limb, the wrapping is clearly still in progress; the squirrel stands calmly in its natural posture (an animal on all four legs, body horizontal), holding that arm/front leg slightly forward. ONLY the squirrel wears a long blue-and-white striped scarf around its neck; the boy has nothing around its neck, no scarf. Both figures are shown whole from head to toe, small and centered with a wide white margin around them, all feet inside the picture. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

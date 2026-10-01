@@ -1,0 +1,14 @@
+Image: babickadestnik_gram.png
+Generated: 2026-10-01
+Candidate: P8 batch09 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grey-haired grandmother with her hair in a bun, wearing no glasses, in a purple cardigan and a long purple skirt stands calmly; a small grey rain cloud floats above her head with a few blue raindrops falling down; a closed, tightly folded red umbrella hangs by its curved handle from her bent forearm, pointing down, not opened at all; she holds out her other hand palm up to feel the raindrops and looks up at the cloud. It is clearly the moment BEFORE starting: nothing has been done yet, everything lies ready and untouched, nobody is working. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_babickadestnik_gram.png from P8 batch09 folder r3 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 in final pair round (batch folder r4) (5 x v1 + 5 x v2 sentence, fresh headless opus per trial, neutral names), only cosmetic consistency notes in that round; lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched; remaining real-world remarks minor/cosmetic only (logged in Temp/P8/batch09_result.md). Logs: Temp/P8/batch_09/bt_results.jsonl, lex_results.jsonl.

@@ -1,0 +1,13 @@
+Image: p53_klukkastany_lexa.png
+Generated: 2026-10-01
+Candidate: P5 batch_03 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean: a boy in a green sweater and blue jeans standing, seen from the front at full height with both shoes fully visible and white space below his feet, holding his right hand at chest height, palm open and held flat and horizontal like a tray, the hand drawn at natural realistic size for a child with five normal fingers, not enlarged, not foreshortened; in his open palm lie four grey stones about the size of walnuts, clearly stones, well apart. No chestnuts anywhere, no trees. Correct realistic anatomy, every figure complete and fully visible, no fused or hybrid animals, no text, no letters, no numbers, plain white background with only the few scene elements described, no patterns, no decorations, nothing else in the picture.
+
+3. Blind test (P5 batch_03): target-vs-gram forced choice 10/10 correct (5/5 per sentence variant, fresh headless opus per trial), pair tested in round r3; evaluator counts matched the intended counts in all trials; lex/real-world check (fresh opus, 4 shuffled pictures) passed: lex pictures matched neither sentence, no blocking faults. Logs: TF\Temp\P5atch_03t_results.jsonl, lex_results.jsonl.

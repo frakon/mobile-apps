@@ -1,0 +1,14 @@
+Image: klukzparezu_target.png
+Generated: 2026-09-30
+Candidate: batch_06 round 6
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a wide low tree stump with visible roots at its bottom and a flat light cut top with rings, the stump about as tall as the boy's knees on the left; a boy with short brown hair in a blue T-shirt, blue jeans and red sneakers jumps DOWN OFF the stump to the right: the toes of his back foot are still pressing on the flat top of the stump, clearly standing on the top surface, while his body already flies forward in the air beyond the stump, leaning forward and downward, facing RIGHT away from the stump, his front foot reaching down toward the ground far below, arms raised, looking down at the ground below. No lines, no arrows. The boy jumps down from the stump, not onto it. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_06, source folder r6):
+Pair 10/10 (repair round 4), no remarks; lex L6 correct, faults none.

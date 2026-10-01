@@ -1,0 +1,16 @@
+Image: kozavedlesudu_target.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_09 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a big brown wooden barrel with dark metal hoops, standing upright, its flat round closed wooden top lid visible, seen from a slightly elevated three-quarter view. a big adult white goat with two small curved horns and a little beard, the goat's back reaching up to about two thirds of the barrel's height is standing on all four legs BESIDE the barrel. The goat stands to the RIGHT of the barrel with a clear empty gap between them, not touching it; the bottom of the goat's feet is exactly at the same level as the bottom edge of the barrel; the goat is clearly BESIDE the barrel, not on top of it, not in front of it, not behind it. The whole goat is visible. Nothing is on the barrel. Every animal has correct realistic anatomy: exactly four legs and one tail each (a bird has exactly two wings and two legs), no fused or hybrid animals, calm friendly face with mouth closed. floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result (P4 batch_09, accepted at test round r2):
+- Forced choice target vs gram: 10/10 correct (5 trials sentence v1 + 5 trials swapped sentence), fresh headless claude -p --model opus per trial, no ambiguity/glitch remarks.
+- Lex session L2: sentence A matched only target, sentence B only gram, lexa/lexb matched neither; real-world fault check: none.
+- Image generated in round folder r2; tested date 2026-09-30.

@@ -1,0 +1,13 @@
+Image: capnakomine_lexb.png (tested set folder r2; see Candidate line for generation round)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_13 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one small whole cottage with white walls, one door, one window and a red tiled roof, and one short sturdy square red brick chimney rising from the right half of the roof, the chimney about as tall as the door, in normal proportion to the house, the chimney's flat top clearly visible. One black crow STANDS ON the flat TOP of the chimney, both feet placed on the chimney's top edge, the crow high above the roof. There is no stork anywhere. Every animal and person has correct realistic anatomy, all limbs complete, calm friendly face. Everything shown whole and complete, with plausible realistic sizes, floating in pure white empty space, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram repair round 1 (r2) pair 10/10 (0 remarks); lex/real-world check L2 clean (only intended meadow patch in lexa) (target~s1, gram~s2 only; no faults). Accepted into assets 2026-09-30 by P4 batch_13.

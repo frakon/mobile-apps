@@ -1,0 +1,13 @@
+Image: p54_mytkrava_lexb.png
+Generated: 2026-10-01
+Candidate: P6 batch_12 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: A big low round wooden tub full of white soap foam on the right. a black-and-white spotted cow sits inside the tub, its legs hidden under the foam, soap bubbles on its back. a camel with one hump stands on all four legs on the left outside the tub, facing right, holding a scrubbing brush in its mouth and scrubbing the cow's back with it. The camel is the active one washing and is completely dry with no foam; the cow is the passive one being washed in the tub. Only the camel holds the brush. Two clearly separate whole animals with correct realistic anatomy, the standing animal's four legs and tail fully visible, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+Verification: P6 batch_12 final set r1; blind forced-choice 10/10 (5 v1->target, 5 v2->gram), fresh opus sessions, no ambiguity/glitch remarks; lex+real-world check clean (fresh opus).

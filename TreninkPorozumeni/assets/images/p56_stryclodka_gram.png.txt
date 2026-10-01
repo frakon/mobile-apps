@@ -1,0 +1,14 @@
+Image: stryclodka_gram.png
+Generated: 2026-10-01
+Candidate: P8 batch06 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a tall man about forty years old with curly black hair and a thick black moustache in an orange sweater and trousers stands next to a small wooden rowing boat lying on the ground with one big dark round hole in the side planks in the middle of the outer side of its hull, seen from the outside, and a loose new light-coloured board lying beside it, a hammer lying in an open toolbox on the ground, his hands empty and relaxed at his sides, not working yet. The boat is drawn whole, seen exactly from the side, standing upright on its flat bottom, with a pointed front and a flat back; the man stands a clear step away from the front end of the boat, his whole body beside it and not overlapping it, both legs fully visible. It is clearly the moment BEFORE starting: nothing has been done yet, everything lies ready and untouched, nobody is working. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_stryclodka_gram.png from P8 batch06 folder r4 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 in the final pair round (folder r5; 5 x v1 + 5 x v2 sentence, fresh headless opus per trial, neutral names), no remark that a picture could read as another tense/state (strict wave-2 rule; cosmetic notes logged in Temp/P8/batch06_result.md); lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched, no blocking real-world faults. Logs: Temp/P8/batch_06/bt_results.jsonl, lex_results.jsonl.

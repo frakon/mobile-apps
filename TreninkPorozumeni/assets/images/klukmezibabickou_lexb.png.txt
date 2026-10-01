@@ -1,0 +1,15 @@
+Image: klukmezibabickou_lexb.png
+Generated: 2026-09-30
+Candidate: P4 batch_03 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three people standing side by side in one straight horizontal row, facing the viewer, small equal gaps between them, not touching. From left to right: first a grandmother with grey hair in a bun, a lilac dress and glasses; second, standing exactly in the MIDDLE between the other two, a small girl with two pigtails in a pink dress; third a grandfather with a short white beard, a flat cap and a brown cardigan. The girl is clearly the one in the middle. Each person stands on both feet, arms hanging relaxed at the sides, both hands visible. All standing things rest at one common invisible floor level. Exactly three people, nobody else. Everything shown whole, with correct realistic anatomy and plausible sizes, every leg, paw, wing and tail complete and not merged with anything, calm friendly faces, no fused or hybrid animals, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance:
+- Accepted candidate: P4 batch_03 round r2; installed 2026-09-30
+- Blind test: pair r2 10/10, no remarks; lex r2 only target~A gram~B, faults none

@@ -1,0 +1,14 @@
+Image: klukpapir_target.png
+Generated: 2026-10-01
+Candidate: P8 batch06 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a boy about seven years old with short brown hair in a blue T-shirt and dark shorts and white sneakers sits on a small wooden chair at a small complete wooden table with four legs, a sheet of white paper lying flat on the table, and draws a sun with a yellow crayon right now: the yellow circle is drawn but only three rays, the crayon tip touching the paper at the end of the third ray, his other hand resting flat on the paper. It is clearly the MIDDLE of the activity: the work is only half done and it is being done right now. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_klukpapir_target.png from P8 batch06 folder r2 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 in the final pair round (folder r2; 5 x v1 + 5 x v2 sentence, fresh headless opus per trial, neutral names), no remark that a picture could read as another tense/state (strict wave-2 rule; cosmetic notes logged in Temp/P8/batch06_result.md); lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched, no blocking real-world faults. Logs: Temp/P8/batch_06/bt_results.jsonl, lex_results.jsonl.

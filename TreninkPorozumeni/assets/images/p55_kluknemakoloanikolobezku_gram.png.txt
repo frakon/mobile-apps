@@ -1,0 +1,14 @@
+Image: p55_kluknemakoloanikolobezku_gram.png
+Generated: 2026-10-01
+Candidate: P7 batch_03 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one small boy with short brown hair in a blue T-shirt, dark blue shorts and white sneakers stands on both feet between one red children's bicycle standing upright (two wheels, frame, pedals, handlebar, saddle) on his left side and one blue kick scooter standing upright (deck, two small wheels, tall handlebar) on his right side; his left hand holds the bicycle's handlebar and his right hand holds the scooter's handlebar. Both the bicycle and the scooter clearly belong to him. All wheels rest at one common floor level. Everything shown whole, with correct realistic anatomy and plausible sizes, every arm, hand, leg, paw, wing and tail complete and not merged with anything, calm friendly faces on people and animals only, no faces on objects, no fused or hybrid animals, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Acceptance:
+- Installed 2026-10-01 from P7 batch_03 (image generated in round 1); pair blind test 10/10 forced choice, lex+real-world check done (see Temp/P7/batch_03/result + batch03_result.md)

@@ -1,0 +1,11 @@
+Image: p58_plavalvbazenu_lexa.png
+Generated: 2026-10-01
+Candidate: P10 pilot (type 5.8) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little boy with very short cropped hair (no swim cap), bare shoulders and bare chest, wearing blue swim trunks sits on the tiled edge of a small rectangular blue swimming pool with white tiled edges seen as a cut-away box, only his feet dangling in the water, his body completely dry and out of the water, not swimming. He is unmistakably a boy: very short hair, bare chest, swim trunks. Calm friendly face, mouth closed. Exactly one figure with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: strihaprinceznasala_lexb.png
+Generated: 2026-10-01
+Candidate: P9 batch_05 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A pirate with a black beard, a black bandana tied on his head, a red-white striped shirt and brown trousers (the pirate has nothing around its neck, no scarf) stands behind a lion with a mane (the lion wears a long plain bright green scarf around its neck) holding scissors and trimming the mane of the lion, the scissors gripped by her fingers, her other arm visible; the lion sits still on a low wooden stool with four legs clearly visible, no cape. ONLY the lion wears a long plain bright green scarf around its neck; the pirate has nothing around its neck, no scarf. Both figures are shown whole from head to toe, small and centered with a wide white margin around them. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no princess anywhere in the picture.

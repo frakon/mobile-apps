@@ -1,0 +1,11 @@
+Image: krmipiratboty_target.png
+Generated: 2026-10-01
+Candidate: P9 strict audit (5.7) repair round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A pirate with light fair skin, a black beard, a black bandana tied on his head, a red-white striped shirt with no suspenders and brown trousers (the pirate wears bright red boots on his feet) holds a small bowl in one hand and with the other hand holds a spoon to the open mouth of a grey cat (the cat has four bare paws with no shoes or boots); the cat STANDS tall on all four straight legs with its head raised up to the spoon in side view (two front legs and two hind legs clearly separate) and eats from the spoon, its open mouth on the spoon. ONLY the pirate wears bright red boots on his feet; the cat has four bare paws with no shoes or boots. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, both figures large, the pirate filling most of the picture height, shown whole from head to toe with all feet inside the picture, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

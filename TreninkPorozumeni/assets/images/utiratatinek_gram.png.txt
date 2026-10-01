@@ -1,0 +1,14 @@
+Image: utiratatinek_gram.png
+Generated: 2026-09-30
+Candidate: batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small boy (about 5 years old) with short hair in a red-and-white striped T-shirt and jeans, standing on a small stool so he can reach stands on the left and holds a big fluffy pink towel with both hands, rubbing the head and shoulders of a father (adult man) with a short brown beard in blue swimming shorts, kneeling who is on the right. The father kneels still, wet, with water drops dripping from the hair; the boy is completely dry. The boy is the active one drying with the towel, the father is the passive one being dried. Bodies not touching except through the towel. Two clearly separate whole people with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, calm friendly faces with mouths closed, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result:
+- pair forced-choice blind 10/10 (r1 pair): 5/5 for sentence variant 1 and 5/5 for swapped variant (fresh opus sessions); real-world fault check passed (fresh opus session).

@@ -1,0 +1,13 @@
+Image: p53_vranapole_target.png
+Generated: 2026-10-01
+Candidate: P5 batch_11 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a big flat brown ploughed field seen from slightly above at a three-quarter angle, the field fills almost the whole picture, soft thin furrow lines running into the distance. exactly ONE black crow (a single one only), no other black crow anywhere in the picture. The crow stands on the soil in the very middle of the field, with field soil visible above and below it, clearly walking mid-stride with one leg lifted forward and the other on the soil, wings folded, side view. No other birds. Correct realistic anatomy, calm friendly faces, no fused or hybrid animals, simple minimal scene on a plain white background, no text, no letters, no patterns, nothing else in the picture.
+
+3. Blind test (P5 batch_11, 2026-10-01): item accepted in round 4; target-vs-gram forced choice 10/10 correct (5 v1 + 5 swapped sentence), counts reported correctly, no glitch/ambiguity remarks on the final pair; lex check: each picture matches only its intended sentence set, no faults; fresh opus headless evaluators.

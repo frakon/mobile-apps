@@ -1,0 +1,14 @@
+Image: p53_lampacesta_lexb.png
+Generated: 2026-10-01
+Candidate: P5 batch_13 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: bright sunny daytime, light blue sky at the top; below it a green grass meadow seen from slightly above, and across the lower part of the meadow a flat sandy light-brown dirt path with grass on both sides of it, clearly a flat ground path, the meadow continuing behind the path up to a soft dark-green hill line. On the grass just behind the path, not on the path, exactly ONE black street lamp with a straight upright pole and a lantern head on top, switched OFF, its glass dark and unlit, no glow (a single one only), no other lamp anywhere. Ordinary realistic objects with NO faces, NO arms and NO legs. No text, no letters, nothing else in the picture.
+
+3. Blind test (P5 batch_13 strict repair, 2026-10-01): lex check: matches neither sentence, FAULTS none.
+Accepted into assets 2026-10-01 by P5 (type 5.3) batch_13; previous version moved to Temp/P5/batch_13/old/.

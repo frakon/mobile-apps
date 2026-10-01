@@ -1,0 +1,11 @@
+Image: p58_zraloseno_lexb.png
+Generated: 2026-10-01
+Candidate: P10 batch05 (type 5.8) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a big adult brown-and-white cow with horns and an udder eats a big orange carrot. It is clearly a big fully grown adult cow, not a baby animal. Whole animal visible including all legs, hooves or feet and the tail, nothing cut off, with a clear white margin around; drawn small enough to fit. Standing on all four legs, holding one big orange carrot in the mouth, no hay anywhere. The adult cow has a big clearly visible pink udder with teats under her belly and two short curved horns; clearly a mother cow. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

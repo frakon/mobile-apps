@@ -1,0 +1,11 @@
+Image: lechtarobotsala_target.png
+Generated: 2026-10-01
+Candidate: P9 strict audit 2 (5.7) repair round 7
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A friendly silver robot as tall as the calf, with a small round head (smaller than its body), round eyes and one short antenna (the robot wears a long scarf with simple wide horizontal red and white stripes (only stripes, no checks, no plaid) around its neck) holds a long white feather in one hand, its fluffy tip visibly touching and pressed into the soft fur of the calf's tummy, no gap between the feather and the calf, and reaches under and tickles the side of the belly of a small light brown young male calf (a bull calf: NO udder, no teats, smooth plain belly) (the calf has nothing around its neck, no scarf) with it; the calf stands on all four legs like a real calf, hornless, laughing happily because it is ticklish, with its four hooves on the same level; the calf's long thin tail with a dark tuft at its end hangs down clearly visible behind its hind legs. ONLY the robot wears a long scarf with simple wide horizontal red and white stripes (only stripes, no checks, no plaid) around its neck; the calf has nothing around its neck, no scarf. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, drawn large, together filling about two thirds of the picture width, centered with a white margin around them, floating on a pure white (not grey) background, in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

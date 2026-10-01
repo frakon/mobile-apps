@@ -1,0 +1,13 @@
+Image: kotezkosiku_lexa.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a big round wicker basket without any handle, with opaque tightly woven sides and an open top, standing upright, seen from a slightly elevated three-quarter view so the open top is visible. A small ginger kitten is sitting still on the floor level BESIDE the basket, to the right of the basket with a small empty gap between them, its paws at the same level as the bottom of the basket. It does not touch the basket. It is clearly beside the basket, not in it, not on it, not jumping. All legs, paws and the tail of the animal are complete and clearly visible, not hidden behind anything. Every animal has correct realistic anatomy: exactly four legs and one tail each (a bird has exactly two wings and two legs), no fused or hybrid animals, calm friendly face with mouth closed. floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (P4 batch_01, 2026-09-30): final set folder r2, repair rounds used for item: 1. Blind test (fresh opus headless sessions, neutral names, randomized mapping): target vs gram forced choice 10/10 (5 with sentence v1 + 5 with swapped sentence), no ambiguity/glitch remark (pair round r1 pair / r2 lex); lex check (all 4 shuffled, one fresh session): only target matches v1, only gram matches v2, no real-world faults.

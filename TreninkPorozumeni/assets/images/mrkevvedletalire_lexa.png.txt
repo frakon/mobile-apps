@@ -1,0 +1,13 @@
+Image: mrkevvedletalire_lexa.png (candidate folder r1)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_08 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one big brown wicker basket with a handle standing upright. One big orange carrot with green leaves lies INSIDE the basket: only its green leaves and the thick top of the carrot stick up above the rim, the rest hidden inside. There is no plate anywhere. Everything shown whole, with correct realistic anatomy and plausible sizes, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram round 1 pair 10/10 (only style notes); lex/real-world check L1 clean (target~s1, gram~s2 only; no faults). Accepted into assets 2026-09-30 by P4 batch_08.

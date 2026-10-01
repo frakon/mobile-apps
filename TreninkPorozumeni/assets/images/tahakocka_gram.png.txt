@@ -1,0 +1,14 @@
+Image: tahakocka_gram.png
+Generated: 2026-09-30
+Candidate: audit_repair_B round 1 candidate c2 (replaces the batch_05 version, which the strict audit flagged: doubled/thickened tail tip, stray stub under the paws, rope-like tail)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned a WebP; decoded and downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small grey tabby cat with a normal cat tail stands on all four legs on the left, facing left, and turns its head back over its shoulder with a surprised look. a brown-and-white dog with floppy ears and a normal short dog tail sits on its bent hind legs close behind it on the right at the same ground level, only a short gap between them, leaning backward, and holds the tip of the cat's tail with both front paws, pulling it backward. The cat's tail keeps its natural length and natural thickness, fur-covered like a real tail, one single tail growing from the cat's rump to the dog's paws; the very tip of the tail ends inside the closed paws, nothing hangs below or sticks out from the paws. The dog is the active one who pulls the tail; the cat is the passive one whose tail is being pulled. Nobody pulls the dog's tail. Calm playful mood, no anger, no pain. Two clearly separate whole animals with correct realistic anatomy, every leg, paw and tail complete and fully visible, no fused or hybrid animals, all paws at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+Final selection: Temp/P3/audit_repair_B/tahakocka/r1/gram_c2.png
+Blind test / verification: target-vs-gram forced choice, 5 fresh opus trials per sentence (variant 1 + swapped), 10/10 correct, no ambiguity or glitch remarks; fresh opus lex + real-world check of all 4 pictures: MATCH_A=target only, MATCH_B=gram only, FAULTS none.

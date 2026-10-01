@@ -1,0 +1,13 @@
+Image: p54_vezenklaun_target_c1.png
+Generated: 2026-09-30
+Candidate: P6 batch_01 round 2c
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: a prince (grown-up young man) with a small golden crown, a blue tunic and white trousers walks on the left behind a wooden wheelbarrow, pushing it forward to the right, leaning slightly forward: his LEFT hand grips the LEFT handle and his RIGHT hand grips the RIGHT handle, two separate handles, both arms fully visible. The wheelbarrow is complete: one front wheel, two long handles, two short back legs, a deep wooden tub. a clown (grown-up adult man) with a round red nose, curly orange hair and a white suit with big colourful polka dots sits deep INSIDE the tub, knees bent up, both feet resting on the floor of the tub inside it, both hands holding the front rim of the tub, riding. The prince is the active one pushing and walking; the clown is the passive one carried in the wheelbarrow. Only the clown is in the wheelbarrow. The pusher's feet and the wheel stand on the same ground level. Two clearly separate whole figures with correct realistic anatomy, slight three-quarter view so that the far arm and far leg of every figure are also visible and not hidden behind any body; every figure has exactly two arms with two visible hands (or the correct number of legs for an animal), no extra limbs, no fused or hybrid figures, calm friendly faces with mouths closed, simple clear pose, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (P6 batch_01): t2: forced choice 10/10 (v1 5/5, v2 5/5), no remarks; lex/real-world check clean except 1 minor note (robot feet slightly higher, lexb)

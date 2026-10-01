@@ -1,0 +1,14 @@
+Image: brylenaknize_gram.png
+Generated: 2026-09-30
+Candidate: batch_11 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter view from slightly above: one big thick closed book with a red cover, lying flat on its back cover, its white page edges visible on the side, nothing on its cover; a pair of black-framed reading glasses with both earpieces unfolded lie right BESIDE the book, to the right of it with a clear empty gap, at the same level as the bottom of the book, not touching it. The glasses are next to the book, not on it. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, objects have no faces, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_11, source folder r1):
+Pair r1 10/10, no remarks; lex L1 clean, no faults.

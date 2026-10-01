@@ -1,0 +1,13 @@
+Image: obvazujehasic_lexb.png
+Generated: 2026-09-30
+Candidate: batch_12 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: a police officer in a blue peaked police cap and a blue police uniform sits on a small wooden stool with four sturdy legs clearly visible on the right, facing left, holding his left forearm straight out forward toward the doctor; his right hand rests on his knee, both feet under the stool. a doctor in a white coat with a stethoscope around the neck stands on the left, facing right, and wraps a white bandage around the police officer's outstretched forearm: in his right hand he holds a white bandage roll, one continuous white strip runs from the roll and is already wound several times around the police officer's forearm; his left hand gently holds the police officer's wrist. The doctor is the active one bandaging, the police officer is the passive one being bandaged. Only the police officer's arm has a bandage; the doctor has no bandage. Both arms of each person clearly visible. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw, hoof and tail complete and fully visible, not hidden behind anything, exactly two arms and two legs per person, exactly four legs per four-legged animal, no extra arms, no extra hands, no extra legs, calm friendly faces, no fused or hybrid figures, simple pose, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind test (batch_12, fresh headless claude -p --model opus sessions, forced choice both sentences, 5+5 trials; no ambiguity remarks): target/gram 10/10 (trial round F, after repair rounds r2,r3,r4); lex+real-world check clean (tags r2,r4oa)

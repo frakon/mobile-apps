@@ -4,6 +4,10 @@ Czech speech-comprehension trainer for children (Expo / React Native, landscape,
 
 Full behavior spec: `_TreninkPorozumeni_SPEC.md`. All user prompts verbatim: `_TreninkPorozumeni_Fields123_PROMPTS.md`.
 
+## New or reworked test type — MUST load first
+
+When implementing a new test type or reworking an existing one, FIRST load `_TestTypeScopeRule.md`. It covers the web scope explorer step, the 32–34% minority-form share per played sentence, the mixing and contrast rules, and the retroactive rework (User request 25, follow-up 5).
+
 ## Develop
 
 - `npx expo start` (device: Expo Go, same Wi-Fi; web preview: `npx expo start --web`).

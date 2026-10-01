@@ -1,0 +1,13 @@
+Image: p54_tazenpirat_lexa.png
+Generated: 2026-10-01
+Candidate: P6 batch_10 (type 5.4) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: A simple wooden sled with two runners, standing on nothing (no snow drawn). a knight (adult man) in shiny silver armour, with no helmet so his face with short brown hair is visible walks in front on the right, facing right, leaning forward, one arm stretched straight BACK down behind him, that hand firmly gripping the end of a single short rope inside his closed fist, the rope ENDS inside his fist, nothing hangs below his hand; there is exactly ONE rope, pulled taut, and runs as one straight continuous line diagonally down from his hand to a ring on the front of the sled, and ends there. His other arm swings at his side. a magician (adult man) in a tall black top hat and a long dark blue robe with small silver stars sits on the sled behind him, facing right, both hands holding the sides of the sled, both legs stretched forward on the sled, riding, not touching the rope. The knight is the active one walking and pulling the sled, the magician is the passive one sitting and being pulled. Only the knight holds the rope. Only the magician is on the sled. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, the walker's feet on the same ground line as the sled runners, floating in pure white empty space, no ground, no shadow, no snow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification (P6 batch_10, final set r3): blind forced-choice trials 5/5 per sentence (fresh headless opus), lex + real-world check by fresh opus session: no faults, no ambiguity remarks.

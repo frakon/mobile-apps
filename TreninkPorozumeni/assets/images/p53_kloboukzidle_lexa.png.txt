@@ -1,0 +1,13 @@
+Image: p53_kloboukzidle_lexa.png
+Generated: 2026-10-01
+Candidate: P5 batch_11 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one simple wooden chair with a backrest and four legs, side-front view, the whole chair visible. Exactly one red knitted woolly winter cap with a pompom lies on the seat of the chair. No brimmed hat anywhere. Simple minimal scene on a plain white background, no text, no letters, no patterns, nothing else in the picture.
+
+3. Blind test (P5 batch_11, 2026-10-01): item accepted in round 2; target-vs-gram forced choice 10/10 correct (5 v1 + 5 swapped sentence), counts reported correctly, no glitch/ambiguity remarks on the final pair; lex check: each picture matches only its intended sentence set, no faults; fresh opus headless evaluators.

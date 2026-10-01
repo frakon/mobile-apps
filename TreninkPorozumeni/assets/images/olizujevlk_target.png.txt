@@ -1,0 +1,13 @@
+Image: olizujevlk_target.png
+Generated: 2026-09-30
+Candidate: batch_03 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a grey wolf stands on the left facing right, stretching its neck forward, its long pink tongue out and touching the cheek of a red fox with a bushy tail. The fox stands on the right, facing the viewer, completely still, with both eyes squeezed shut, its own mouth closed and no tongue visible. Only the wolf has its tongue out; the fox does not lick. The wolf is the active one licking, the fox is the passive one being licked. Bodies touching only where the wolf's tongue touches the fox's cheek. Both animals stand on all four legs.Any bear has a very short stubby bear tail hidden in its fur, never a long or curly tail.  Two clearly separate whole animals with correct realistic anatomy, every arm, leg, paw, wing and tail complete and fully visible, not hidden behind anything, calm friendly faces, no fused or hybrid animals, all standing feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result (batch_03, 2026-09-30): forced choice r2 10/10 (target/gram unchanged since r1); lex/real-world check r3 (lexa regenerated r3): no faults. Blind evaluators = fresh headless claude -p --model opus sessions.

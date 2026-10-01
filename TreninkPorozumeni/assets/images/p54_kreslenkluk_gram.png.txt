@@ -1,0 +1,13 @@
+Image: p54_kreslenkluk_gram.png
+Generated: 2026-10-01
+Candidate: P6 batch_05 (type 5.4) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: On the left, a boy (about 7 years old) with a red cap, a blue T-shirt and blue short trousers sits on a stool facing right and holds a drawing board with a sheet of paper, drawing on it with a pencil; the paper is turned toward the viewer and shows a simple pencil sketch portrait of the girl with the same two pigtails, yellow dress. On the right, a girl (about 7 years old) in a yellow dress with two pigtails tied with yellow bows sits on a stool facing left toward the boy, posing still for the portrait, hands empty. The boy is the active artist drawing, the girl is the passive model being drawn. Only the boy has pencil and paper. Two clearly separate whole figures with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, two stools, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: P6 batch_05 blind forced-choice trials (fresh opus sessions) v1->target 5/5, v2->gram 5/5 clean; lex/real-world check (fresh opus) no match to either sentence for lex pictures, no faults. ACCEPTED.

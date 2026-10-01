@@ -1,0 +1,11 @@
+Image: budipiratsala_gram.png
+Generated: 2026-10-01
+Candidate: P9 batch_11 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A pirate with a black beard, a black bandana tied on his head, a red-white striped shirt and brown trousers (the pirate has nothing around its neck, no scarf) lies asleep on the back on top of a complete wooden bed (headboard, footboard, mattress and four legs all visible) the headboard on the LEFT side of the picture and the footboard on the right, the sleeper's head on a white pillow at the left headboard end and the feet to the right, eyes closed, sleeping, just beginning to stir, no blanket, barefoot; a clearly adult middle-aged mother, about 40 years old, with brown hair in a bun, a white apron over a knee-length blue dress and brown shoes (the mother wears a plain bright green scarf around its neck) stands awake at the far LEFT of the picture, just left of the headboard, beside the sleeper's head, facing right, bending forward over the headboard with one hand placed firmly ON the sleeper's shoulder (clearly touching the shoulder, not the pillow, not the head), gently shaking the shoulder to wake up the pirate. The waker's other hand is raised beside her open mouth as she calls out loudly 'wake up!' (mouth open, calling, not whispering, not shushing); both arms of the waker fully visible. ONLY the mother wears a plain bright green scarf around its neck; the pirate has nothing around its neck, no scarf. Exactly two clearly separate whole people with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, small and centered with a wide white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

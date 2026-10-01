@@ -1,0 +1,13 @@
+Image: sprchujepirat_lexa.png
+Generated: 2026-09-30
+Candidate: batch_12 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: a pirate with a black eye patch, a red bandana and a black-and-white striped shirt, with two normal hands and two normal legs (no hook, no peg leg) stands on the left, facing right toward the cook, holding a short green garden hose with both hands: his right hand holds the metal spray nozzle pointed at the cook, his left hand holds the hose a little further back; from his left hand the hose runs down in one single continuous unbroken curve to a small metal garden water tap mounted on a short wooden post standing just behind him, and the hose is firmly screwed onto that tap, no loose ends, no extra loops. A strong stream of water shoots from the nozzle and clearly HITS the cook's chest. a cook in a tall white chef hat and a white chef jacket stands on the right, facing left toward the pirate, dripping wet with water drops splashing off him, both arms held a little away from his body, both hands empty. The pirate is the active one spraying water with the hose, the cook is the passive one being showered. Both arms of each person clearly visible, the two people standing apart, touching only by the water stream. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw, hoof and tail complete and fully visible, not hidden behind anything, exactly two arms and two legs per person, exactly four legs per four-legged animal, no extra arms, no extra hands, no extra legs, cheerful playful faces, no fused or hybrid figures, simple pose, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind test (batch_12, fresh headless claude -p --model opus sessions, forced choice both sentences, 5+5 trials; no ambiguity remarks): target/gram 10/10 (trial round F, after repair rounds r2,r4,r5); lex+real-world check clean (tags r2,r5sd)

@@ -1,0 +1,11 @@
+Image: p55_maminkanevari_gram.png
+Generated: 2026-10-01
+Candidate: P7 batch_07 (type 5.5) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one adult mother about 35 years old, a grown-up woman with shoulder-length brown hair tied in a low ponytail, wearing a yellow dress and a white kitchen apron stands at a small white kitchen stove (four black burners on top, an oven door with a handle in front) with four clearly visible control knobs on its front and an open pot of hot soup on top, steam rising from the pot, facing the pot, stirring the soup in the pot with a big wooden spoon held in her hand; no phone anywhere. She is clearly cooking soup. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

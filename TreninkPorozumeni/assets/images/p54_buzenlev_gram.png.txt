@@ -1,0 +1,13 @@
+Image: p54_buzenlev_gram.png
+Generated: 2026-10-01
+Candidate: P6 batch_11 (type 5.4) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: A small simple bed with four legs, headboard on the LEFT. a black-and-white striped zebra with a short mane lies asleep on its back in the bed, head on the pillow near the headboard, eyes closed; its whole body, ALL its legs, feet and its tail are completely hidden under a smooth blanket up to the neck, nothing at all sticks out from under the blanket, only the head is outside. a lion with a big golden mane and a long tail with a tuft stands on all four legs on the floor level on the far LEFT, beside and slightly in front of the headboard, clearly separated from the bed with a small white gap, facing right toward the sleeper's head, wide awake with eyes open, and leans its head over the headboard: pushes the sleeper's shoulder with its nose, nudging it, short curved motion lines next to the shaken shoulder. All four legs of the standing animal are fully visible, nothing hides them. The lion is the active one who is waking the zebra up; the zebra is the passive one being woken, lying in the bed. Only the zebra is in the bed. The bed is complete: headboard, mattress and four legs clearly visible, the bed legs and the lion's feet at exactly the same bottom level. Two clearly separate whole animals with correct realistic anatomy, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: P6 batch_11 set r3 (target/gram/lexb from r2, lexa regenerated r3); blind forced-choice on r2 target/gram 10/10 (v1->target 5/5, v2->gram 5/5, fresh headless opus sessions, no remarks); lex/real-world check r3 (fresh opus): only target~v1, gram~v2, no faults.

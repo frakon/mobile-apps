@@ -1,0 +1,13 @@
+Image: p53_tatinekkufr_lexa.png
+Generated: 2026-10-01
+Candidate: P5 (type 5.3) batch_02 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a father with short brown hair, blue shirt and grey trousers walks to the left carrying EXACTLY ONE green backpack held by its top handle in his right hand, his left arm swinging free. No suitcase anywhere. He is the only person. Everything shown whole with correct realistic anatomy, every arm, leg and hand complete and visible, calm friendly faces, floating in pure white empty space, no ground drawn except what is described, no shadow, no extra scenery, no text, no patterns, nothing else in the picture.
+
+3. Blind test result: final pair round r4f: v1 5/5, v2 5/5, counts 1 vs 4 correct in 10/10; residual remark: each hand grips two handles (awkward, not ambiguous) in 7/10; lex L4: target~A, gram~B only. Accepted into assets 2026-10-01 by P5 (type 5.3) batch_02.

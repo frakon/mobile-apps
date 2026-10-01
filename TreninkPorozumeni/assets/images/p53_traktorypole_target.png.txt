@@ -1,0 +1,13 @@
+Image: p53_traktorypole_targetb.png
+Generated: 2026-10-01
+Candidate: P5 batch_07 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a wide brown ploughed field seen from a raised angle, filling the lower two thirds of the picture, and driving IN the middle of the field exactly TWO green tractors (2 in total, no more, no fewer), all the same size, side by side, clearly separated with space between them, not overlapping, each whole and fully visible and easy to count, no other green tractors anywhere, no background repeats. The left tractor has a farmer in a red cap, the right one a farmer in a straw hat, both drive to the right along the furrows, wheels in the soil. Simple minimal scene on a plain white background, no text, no letters, no patterns, nothing else in the picture.
+
+3. Blind test (P5 batch_07, 2026-10-01): accepted in round 3; target-vs-gram forced choice 10/10 correct (5 v1 + 5 swapped sentence), counts reported correctly; lex check: matches only its intended sentence set, fresh opus headless evaluators.

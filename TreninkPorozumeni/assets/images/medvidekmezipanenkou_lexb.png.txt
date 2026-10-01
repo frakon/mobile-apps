@@ -1,0 +1,14 @@
+Image: medvidekmezipanenkou_lexb.png
+Generated: 2026-09-30
+Candidate: batch_04 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three toys sitting side by side in one straight horizontal row with small equal gaps, all the same size, all bottoms at the same level. From left to right: a doll with blond hair in a pink dress on the LEFT, a white toy bunny with long ears in the MIDDLE, a silver toy robot with a small antenna on the RIGHT. There is no teddy bear anywhere. Every thing is complete and fully visible with correct realistic proportions; every person and animal has correct anatomy with all arms, legs, paws and tail complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_04, source folder r1):
+Blind forced choice r1: 5/5 + 5/5, no remarks. Lex check L1: only target~A, gram~B; faults none.

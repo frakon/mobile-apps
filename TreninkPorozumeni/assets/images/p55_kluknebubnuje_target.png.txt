@@ -1,0 +1,11 @@
+Image: p55_kluknebubnuje_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_09 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one boy with short brown hair in a blue T-shirt and shorts stands, whole figure, eating a yellow pear held in his hand, the pear at his mouth with a bite taken; beside him one red toy drum with white rims stands on the floor with two drumsticks lying crossed on top of it, he does not touch the drum. Calm friendly faces, mouths closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

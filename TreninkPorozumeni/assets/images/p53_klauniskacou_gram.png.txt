@@ -1,0 +1,13 @@
+Image: p53_klauniskacou_gram.png
+Generated: 2026-10-01
+Candidate: P5 batch_11 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one big round blue trampoline with a black mat and short sturdy legs standing on the ground. exactly ONE clown (a single one only), no other clown anywhere in the picture. The single clown in a yellow suit with a red nose is jumping high in the air above the middle of the trampoline, feet off the mat, arms up, whole with two arms and two legs. Nobody else. Correct realistic anatomy, calm friendly faces, no fused or hybrid animals, simple minimal scene on a plain white background, no text, no letters, no patterns, nothing else in the picture.
+
+3. Blind test (P5 batch_11, 2026-10-01): item accepted in round 1; target-vs-gram forced choice 10/10 correct (5 v1 + 5 swapped sentence), counts reported correctly, no glitch/ambiguity remarks on the final pair; lex check: each picture matches only its intended sentence set, no faults; fresh opus headless evaluators.

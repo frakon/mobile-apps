@@ -1,0 +1,11 @@
+Image: p58_stavelasnehulaka_lexa.png
+Generated: 2026-10-01
+Candidate: P10 batch12 (type 5.8) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails tied with ribbons, wearing a pink winter coat-dress reaching to the knees, white tights and pink boots, no hat, two pigtails tied with ribbons clearly visible lies on the back in the snow, resting. She is unmistakably a girl: long pigtails and a pink dress. It must be clearly visible that the girl is NOT doing this: builds a snowman, putting the head on top. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Everything stands on one small flat patch of white snow at the same level as the feet; a few white snowflakes fall. She lies on her back on the snow, arms and legs spread, resting, looking up at the sky; no snowman, no snowballs anywhere. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

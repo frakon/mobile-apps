@@ -1,0 +1,13 @@
+Image: pesvedlepostele_lexa.png
+Generated: 2026-09-30
+Candidate: P4 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, soft colours: one wooden bed with a mattress, a pillow and a blue blanket, standing on exactly four wooden legs, one at each corner, with open empty space beneath (the bed is complete: frame, mattress and exactly four corner legs, no other legs). a brown dog with floppy ears (exactly four legs and one tail) is lying on its belly UNDER the bed, in the open space beneath the mattress between the four legs, its paws at the same level as the bottom of the bed legs; the whole dog visible, no part of it cut by a leg. The top of the bed is empty. The dog is under the bed, not on it and not beside it. Everything complete and anatomically correct, calm friendly face. Only these things in the picture, floating in pure white empty space, no ground, no floor line, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30): P4 batch_02, final candidate set r3. Blind forced-choice target vs gram 10/10 (5 per variant), fresh opus headless sessions, no ambiguity/glitch remark; lex check (4 shuffled pictures, one fresh session): only target~sentence1 and gram~sentence2; real-world fault check clean.

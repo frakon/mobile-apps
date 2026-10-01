@@ -1,0 +1,15 @@
+Image: ptacekzhnizda_gram.png
+Generated: 2026-09-30
+Candidate: P4 batch_03 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one round brown twig bird's nest with three small eggs in it, resting at floor level on the left side of the picture. one small blue bird with an orange breast is flying down INTO the nest: a thin dotted flight-path line comes from the upper right corner and curves down, ending at the bird's tail, showing the way the bird came from far away. The bird hovers just above the nest, its head and beak pointing down toward the nest, wings raised high to brake, both feet stretched down into the nest, about to land on the eggs. The bird is arriving into the nest, not leaving it. Everything shown whole, with correct realistic anatomy and plausible sizes, every leg, paw, wing and tail complete and not merged with anything, calm friendly faces, no fused or hybrid animals, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance:
+- Accepted candidate: P4 batch_03 round r3; installed 2026-09-30
+- Blind test: pair r3 10/10 (one note: small gap in dotted trail, no ambiguity); lex r3 clean

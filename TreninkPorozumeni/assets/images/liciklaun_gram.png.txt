@@ -1,0 +1,14 @@
+Image: liciklaun_gram.png
+Generated: 2026-09-30
+Candidate: batch_13 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: a clown (adult man) with a round red clown nose on the middle of his face, curly orange hair and a colourful polka-dot suit, with a plain unpainted face sits upright on a small wooden stool with four sturdy legs clearly visible on the right, his body and face turned toward the viewer (front view of his face, the red nose clearly on the middle of his face), both hands resting on his knees, both feet in shoes flat on the floor level in front of the stool, both feet clearly visible, eyes closed, holding still. a little girl with two pigtails in a yellow dress stands on the left beside him, facing right, holding a small paintbrush in her right hand; the brush tip clearly TOUCHES the clown's left cheek, painting a colourful star on it; her left hand holds a small round paint box. The girl is the active one painting the face, the clown is the passive one having his face painted and holds nothing. Only the girl holds a brush. The stool is complete: seat and four legs. The only contact is the brush tip on the clown's cheek. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw, hoof, wing and tail complete and fully visible, not hidden behind anything, exactly two arms and two legs per person, exactly four legs per four-legged animal, exactly two legs and two wings per bird, no extra arms, no extra hands, no extra legs, calm friendly faces with mouths closed, no fused or hybrid figures, simple pose, all standing feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+Final selection: batch_13 r3 candidate (working file Temp/P3/batch_13/r3/liciklaun_gram_c1.png)
+Blind test / verification: target-vs-gram forced choice, 5 fresh headless opus trials per sentence (variant 1 + swapped), 10/10 correct, no ambiguity/glitch remarks (round r3); independent fresh opus lex + real-world check (round r3): lex pictures match neither sentence, no faults.

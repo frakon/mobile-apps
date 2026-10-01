@@ -1,0 +1,11 @@
+Image: davarobotboty_lexb.png
+Generated: 2026-10-01
+Candidate: P9 batch_07 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A boy with short brown hair in a green T-shirt (the boy has bare feet/paws with no shoes or boots) hands a small wrapped gift box to a adult mother (a grown-up woman) with brown hair tied in a bun, a white apron over a blue dress (the mother wears bright red boots on its feet): the boy holds it out with one hand, the mother reaches out to take it. ONLY the mother wears bright red boots on its feet; the boy has bare feet/paws with no shoes or boots. Both figures are shown whole from head to toe, small and centered with a wide white margin around them, all feet inside the picture. Exactly two clearly separate whole people with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no robot anywhere in the picture.

@@ -1,0 +1,11 @@
+Image: p58_krmilptacky_gram.png
+Generated: 2026-10-01
+Candidate: P10 batch01 (type 5.8) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grandmother with grey hair in a bun, wearing glasses, a long green skirt and a cardigan stands next to a small wooden bird feeder (a little house-shaped tray on a single wooden post), pouring sunflower seeds from a small paper bag into the feeder with one hand; three little brown sparrows sit on the feeder eating the seeds. She is unmistakably an old woman: grey hair bun, glasses and a long skirt. Calm friendly face, mouth closed. Exactly one person with correct realistic anatomy, only the described person and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. The whole figure is visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing is cut off by the picture edge; the figure is drawn small enough to fit completely. This picture is the mirrored twin of a paired picture: exactly the same pose, objects, composition and style; the only difference is the person.

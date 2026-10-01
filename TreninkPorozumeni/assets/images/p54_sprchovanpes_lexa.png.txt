@@ -1,0 +1,13 @@
+Image: p54_sprchovanpes_lexa_c1.png
+Generated: 2026-10-01
+Candidate: P6 batch_01 round 2c
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: A small square white shower tray on the right. a small ginger kitten stands in the shower tray, soaking wet, water dripping, eyes closed, standing still, holding nothing. a father (grown-up adult man) with a short brown beard, bare-chested, wearing only blue swimming trunks, barefoot stands on the left outside the shower tray, completely dry, holding a silver hand shower and spraying water from it onto the kitten; a silver flexible hose runs from the hand shower as one continuous unbroken tube straight down to a small tap on the near edge of the shower tray, no loops, no loose ends. The father is the active one showering; the kitten is the passive one being showered. Only the father holds the hand shower. Every animal has four separate clearly visible legs and a tail. Two clearly separate whole figures with correct realistic anatomy, slight three-quarter view so that the far arm and far leg of every figure are also visible and not hidden behind any body; every figure has exactly two arms with two visible hands (or the correct number of legs for an animal), no extra limbs, no fused or hybrid figures, calm friendly faces with mouths closed, simple clear pose, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (P6 batch_01): t2: forced choice 10/10, no remarks; lex/real-world check: no faults

@@ -1,0 +1,13 @@
+Image: kotezkosiku_lexb.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_01 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a big round wicker basket without any handle, with opaque tightly woven sides and an open top, standing upright, seen from a slightly elevated three-quarter view so the open top is visible, standing perfectly level and upright on its flat bottom, not tilted. A small brown bunny is caught mid-leap jumping OUT OF the basket to the right side: its hind paws are still inside the basket, pushing off from inside, its body arcs up and out over the rim, its head and front paws stretched forward away from the basket, reaching toward the floor level to the right of the basket. It faces away from the basket. Curved motion lines behind it show it moving OUT of the basket. It is clearly jumping out, not jumping in. There is no kitten or cat anywhere. Every animal has correct realistic anatomy: exactly four legs and one tail each (a bird has exactly two wings and two legs), no fused or hybrid animals, calm friendly face with mouth closed. floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (P4 batch_01, 2026-09-30): final set folder r2, repair rounds used for item: 1. Blind test (fresh opus headless sessions, neutral names, randomized mapping): target vs gram forced choice 10/10 (5 with sentence v1 + 5 with swapped sentence), no ambiguity/glitch remark (pair round r1 pair / r2 lex); lex check (all 4 shuffled, one fresh session): only target matches v1, only gram matches v2, no real-world faults.

@@ -1,0 +1,11 @@
+Image: hrajeopicesteneklobouk_lexa.png
+Generated: 2026-10-01
+Candidate: P9 batch_01 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A brown monkey (the monkey wears a big yellow straw hat on its head) and a brown hare with long ears (the hare has nothing on its head, no hat, no cap) play together with a ball: the monkey rolls a blue ball on the floor toward the hare, the hare reaches for it. ONLY the monkey wears a big yellow straw hat on its head; the hare has nothing on its head, no hat, no cap. The monkey has both arms fully visible and one long curled tail clearly visible. Exactly two clearly separate whole animals with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no puppy anywhere in the picture.

@@ -1,0 +1,14 @@
+Image: miminkovpostylce_lexa.png
+Generated: 2026-09-30
+Candidate: batch_11 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a mother with long brown hair in a red dress and black shoes stands and holds a small baby in a light blue sleepsuit with closed eyes, sleeping peacefully in her arms against her chest. There is no cot anywhere. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, objects have no faces, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_11, source folder r1):
+Pair r1 10/10 (5 v1 + 5 swapped), no remarks; lex L1 clean (A=target, B=gram), no real-world faults.

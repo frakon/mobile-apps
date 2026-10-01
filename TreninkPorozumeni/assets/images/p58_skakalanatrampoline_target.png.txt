@@ -1,0 +1,11 @@
+Image: p58_skakalanatrampoline_target.png
+Generated: 2026-10-01
+Candidate: P10 batch01 (type 5.8) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails tied with pink ribbons, wearing a pink dress and pink shoes is jumping high in the air directly above the middle of a small round trampoline with a black mat, a blue padded rim, springs and short legs; both feet are clearly off the mat, arms up, mid-jump. She is unmistakably a girl: pigtails with ribbons and a pink dress. Calm friendly face, mouth closed. Exactly one person with correct realistic anatomy, only the described person and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. The whole figure is visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing is cut off by the picture edge; the figure is drawn small enough to fit completely.

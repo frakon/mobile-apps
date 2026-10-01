@@ -1,0 +1,14 @@
+Image: p55_vbazenunikdoneplave_lexb.png
+Generated: 2026-10-01
+Candidate: P7 batch_05 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one small rectangular outdoor swimming pool with a light grey tiled edge all around, filled with clear light blue water, seen from the side at a slightly raised angle so the water surface and the tiled edge are both visible, a small metal ladder at one end; a little girl about eight years old with brown hair in two pigtails in a red swimsuit swims in the middle of the pool, her body in the water doing front crawl, her head and one arm above the water, small splashes; nobody stands on the edge. No boy. Calm friendly face, mouth closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.
+
+Installed as p55_vbazenunikdoneplave_lexb.png from P7 batch_05 folder r1 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2 sentence) with no ambiguity remark in the final pair round; lex check (4 shuffled pictures, both sentences) only target~v1 and gram~v2 matched. Logs: Temp/P7/batch_05/bt_results.jsonl, lex_results.jsonl.

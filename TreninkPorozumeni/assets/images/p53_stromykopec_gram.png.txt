@@ -1,0 +1,13 @@
+Image: p53_stromykopec_gram.png
+Generated: 2026-10-01
+Candidate: P5 batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one round green hill; on top of the hill exactly ONE green leafy tree (a single one only), no other green leafy tree anywhere in the picture. Objects, buildings, plants and vehicles are ordinary realistic things with NO faces, NO arms and NO legs. Simple minimal scene on a plain white background, no text, no letters, no patterns, nothing else in the picture.
+
+3. Blind test result: r1: 5/5 + 5/5, counts 2 vs 1 correct, 0 remarks; lexb repaired r2, lex r5 no faults. Accepted into assets 2026-10-01 by P5 (type 5.3) batch_09.

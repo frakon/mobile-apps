@@ -1,0 +1,14 @@
+Image: nesemedved_gram.png
+Generated: 2026-09-30
+Candidate: batch_01 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big grey wolf walks on all four legs to the left and carries a young brown bear, smaller than the wolf but not a tiny cub on its back. The bear lies on top of the wolf's back, both of its front paws resting flat on top of the wolf's shoulders (not wrapped around the neck, nothing under the wolf's chin), all of the bear's paws off the ground. The wolf is the active one who carries, the bear is the passive one being carried and is smaller than the wolf. The bear lies flat on top of the wolf's back like a rug, all four of the bear's legs draped over the top of the wolf's back and shoulders, no leg of the bear hangs below the wolf's belly line. The wolf has exactly four legs and its own tail at its rear end; the bear has exactly four legs and its own tail at its rear end. Only the wolf's four paws are at ground level. Any bear has a very short stubby bear tail hidden in its fur, never a long or curly tail.  Two clearly separate whole animals with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, calm friendly faces with mouths closed, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result:
+- pair forced-choice blind 10/10 (r3 pair): 5/5 for sentence variant 1 and 5/5 for swapped variant (fresh opus sessions); real-world fault check passed (fresh opus session).

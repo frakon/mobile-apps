@@ -1,0 +1,13 @@
+Image: p53_snekleze_gram.png
+Generated: 2026-10-01
+Candidate: P5 batch_04 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one big natural oval green leaf with a pointed tip lying flat, seen from above at an angle, the leaf fills most of the picture, and exactly FOUR real garden snails with brown spiral shells, soft grey bodies and two eye stalks each, no faces, no arms, no hands (4 in total, no more, no fewer), all the same size, clearly separated with space between them, not overlapping, each fully visible and easy to count, no other real garden snails with brown spiral shells, soft grey bodies and two eye stalks each, no faces, no arms, no hands anywhere, no background repeats. All four snails crawl on the leaf, each snail's whole body and shell fully inside the leaf outline, well apart from each other and from the leaf edge. Correct realistic anatomy, every leg, arm, paw and tail complete and fully visible, calm friendly faces, no fused or hybrid animals, simple minimal scene on a plain white background, no text, no letters, no patterns, nothing else in the picture.
+
+3. Blind test (P5 batch_04): forced choice target vs gram, both sentences, fresh opus sessions: r3 10/10 correct, evaluators reported counts; lex+real-world check (lex_r3 session): lex pictures matched neither sentence. Final set taken from folder r3.

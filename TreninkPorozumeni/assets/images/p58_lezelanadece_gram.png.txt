@@ -1,0 +1,11 @@
+Image: p58_lezelanadece_gram.png
+Generated: 2026-10-01
+Candidate: P10 batch08 (type 5.8) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little boy with very short hair, wearing a blue T-shirt and long dark trousers lies on the back on a picnic blanket. He is unmistakably a boy: very short hair and trousers. This picture is the mirrored twin of a paired picture: exactly the same action, pose, objects, composition and style; the ONLY difference is that the figure is boy, not girl. Whole figure visible from head to both feet, nothing cut off by the image edge; drawn small enough to fit. The picnic blanket is a red-and-white checked rectangle lying completely flat, spread out under the whole body; the child lies relaxed on it, head on the blanket, arms at the sides. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

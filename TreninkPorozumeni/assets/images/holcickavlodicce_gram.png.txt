@@ -1,0 +1,14 @@
+Image: holcickavlodicce_gram.png
+Generated: 2026-09-30
+Candidate: batch_04 round 8
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a little girl with two pigtails, one on each side of her head, in a yellow dress sits on the ground right BESIDE a simple small wooden rowing boat with two identical gently upturned pointed ends, front and back (no posts, no masts, no seats visible) resting upright on its flat bottom, its high solid wooden sides opaque, right next to the boat on its right side, close to it with only a small gap about the width of her hand between her feet and the boat, nothing of her touches the boat; her whole body fully visible outside the boat, both legs stretched forward, both hands in her lap. The boat stands alone with no water and is empty. She sits next to the boat, not in it. Every thing is complete and fully visible with correct realistic proportions; every person and animal has correct anatomy with all arms, legs, paws and tail complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_04, source folder r8):
+Blind forced choice r8 (repair round 4; used because round 3 had only a single mild gap remark): 5/5 + 5/5; no relation doubt; residual style notes: girl small relative to boat (3/10), braid vs pigtail asymmetry (1/10). Lex check L5: only target~A, gram~B; faults none.

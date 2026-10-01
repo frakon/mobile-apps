@@ -1,0 +1,13 @@
+Image: p53_hasicizebrik_target.png
+Generated: 2026-10-01
+Candidate: P5 (type 5.3) batch_02 round 3x
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: side view: one tall wooden ladder, whole and fully visible, leans with its top resting against the top edge of a tall plain brick wall and its feet on the ground line; three ADULT grown-up firefighter men with different faces (one with a moustache), in red helmets and dark blue uniforms, climb up the ladder one above another with clear gaps between them, all on the near side of the ladder in front of it, hands gripping the rungs and feet on the rungs, both legs and both arms of each firefighter visible, no limb passing through the ladder. EXACTLY THREE firefighters (3), no more and no fewer, no other firefighters anywhere in the picture; the three firefighters are all the same size, clearly separated with gaps between them, not overlapping, each fully visible and easy to count. No other people. Everything shown whole. Every person and animal has correct realistic anatomy with all limbs complete and visible, calm friendly faces; houses, vehicles, plants and objects are ordinary realistic things with NO faces, NO arms and NO legs. Everything that stands rests on one common flat ground line at the same level. floating in pure white empty space, no ground drawn except what is described, no shadow, no extra scenery, no text, no patterns, nothing else in the picture.
+
+3. Blind test result: final pair r3: 5/5 + 5/5, counts 3 vs 1 correct 10/10, 0 remarks; lex L3 target~A gram~B only. Accepted into assets 2026-10-01 by P5 (type 5.3) batch_02.

@@ -1,0 +1,15 @@
+Image: myskapodposteli_target.png
+Generated: 2026-09-30
+Candidate: P4 batch_03 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, one small wooden child's bed seen from the side: a wooden frame with four straight wooden legs clearly visible, a mattress with a blue blanket and a white pillow, a wide open empty space between the floor and the bed frame. The bed is a complete piece of furniture: frame, headboard, mattress and four legs. one cute grey mouse with round ears and a thin tail, drawn fairly large so it is easy to see sits on the floor UNDER the bed, in the open space between the bed legs, directly beneath the mattress, its whole body fully visible below the bed frame. The mouse is under the bed, not on top of it and not beside it. All standing things rest at one common invisible floor level.  Everything shown whole, with correct realistic anatomy and plausible sizes, every leg, paw, wing and tail complete and not merged with anything, calm friendly faces, no fused or hybrid animals, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance:
+- Accepted candidate: P4 batch_03 round r2; installed 2026-09-30
+- Blind test: pair r2 10/10, no remarks; lex r2 clean

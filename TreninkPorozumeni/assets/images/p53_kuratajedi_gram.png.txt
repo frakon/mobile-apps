@@ -1,0 +1,13 @@
+Image: p53_kuratajedi_gram.png
+Generated: 2026-10-01
+Candidate: P5 batch_10 round 1a
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one fluffy yellow chick stands on a thin brown ground line; in front of the chick lies one small low heap of golden grain grains on the ground, and the chick bends forward with its beak clearly touching and picking grain from the heap, eyes open. Both orange feet stand on bare ground beside the heap, fully visible. Exactly one chick in the whole picture, no other chick anywhere. Correct realistic anatomy, every leg, paw, wing, arm, hand and tail complete and fully visible, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, floating in pure white empty space, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind test result: P5 batch_10 strict re-test round r2: v1 5/5, v2 5/5, counts 4 vs 1 correct 10/10; lex r2: target~A, gram~B only, faults none. Residual non-defect remark (7/10): target chicks sit low in frame with empty space above. Installed 2026-10-01 by P5 batch_10.

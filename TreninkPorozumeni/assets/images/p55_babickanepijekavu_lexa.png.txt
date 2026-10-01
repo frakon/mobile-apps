@@ -1,0 +1,11 @@
+Image: p55_babickanepijekavu_lexa.png
+Generated: 2026-10-01
+Candidate: P7 batch_09 (type 5.5) round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a small round wooden table with four legs, on it a white plate with ONE slice of chocolate cake that has one small bite missing from its tip, and exactly ONE white coffee cup full of dark coffee on a saucer (only one cup in the whole picture); one grandfather with grey hair, a grey moustache, a brown vest and brown trousers sits on a wooden chair at the table, whole figure with both feet visible, both arms clearly visible: his right hand holds a small fork, his left hand rests on the table top, the fork with a small bite of cake at his mouth; the only coffee cup stands untouched on its saucer on the table, far from his hands. No woman. Calm friendly faces, mouths closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

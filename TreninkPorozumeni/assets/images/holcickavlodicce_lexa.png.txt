@@ -1,0 +1,14 @@
+Image: holcickavlodicce_lexa.png
+Generated: 2026-09-30
+Candidate: batch_04 round 7
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a little girl with two pigtails, one on each side of her head, in a yellow dress sits ON the seat of a simple wooden park bench seen straight from the front: a flat seat, a backrest directly behind the seat, and four sturdy legs, two at the front and two at the back, all four legs clearly visible and complete; her legs hang down in front of the seat, both hands in her lap. The bench is a complete piece of furniture: seat, backrest and four legs. There is no boat anywhere. Every thing is complete and fully visible with correct realistic proportions; every person and animal has correct anatomy with all arms, legs, paws and tail complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_04, source folder r8):
+Blind forced choice r8 (repair round 4; used because round 3 had only a single mild gap remark): 5/5 + 5/5; no relation doubt; residual style notes: girl small relative to boat (3/10), braid vs pigtail asymmetry (1/10). Lex check L5: only target~A, gram~B; faults none.

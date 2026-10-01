@@ -1,0 +1,14 @@
+Image: micvedlekbeliku_gram.png
+Generated: 2026-09-30
+Candidate: batch_04 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a red and white striped ball lies INSIDE a big upright opaque blue plastic bucket with a thin curved handle attached to BOTH sides of the rim (left and right attachment points both visible), its open top rim facing up: the bucket is opaque, the lower half of the ball is hidden inside the bucket and only the upper half of the ball sticks out above the rim, the ball fits snugly in the bucket opening. The ball is in the bucket, not beside it and not lying on the ground. Every thing is complete and fully visible with correct realistic proportions; every person and animal has correct anatomy with all arms, legs, paws and tail complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_04, source folder r4):
+Blind forced choice target vs gram (fresh opus per trial, randomized mapping) r4: 5/5 sentence v1 + 5/5 swapped, no ambiguity/glitch remarks. Lex check L2 (fresh opus, 4 shuffled pictures): only target~A, gram~B; faults none.

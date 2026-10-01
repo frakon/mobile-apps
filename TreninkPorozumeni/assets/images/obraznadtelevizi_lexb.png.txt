@@ -1,0 +1,13 @@
+Image: obraznadtelevizi_lexb.png (accepted from folder r3)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_12 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one wide flat rectangular section of pale beige wall filling most of the picture, with a white margin around it. One flat modern television with a plain silver frame around a dark glossy screen with a soft light-blue reflection streak, no logo, no letters, a tiny red power light at the bottom edge, mounted flat on the wall in the lower middle of the wall. One round white wall clock with a black rim, twelve short black hour marks without any numbers and two black hands hangs on the wall DIRECTLY ABOVE the television, centred over it, with a clear gap of bare wall between them. There is no painting anywhere. Everything shown whole, with correct realistic anatomy and plausible sizes, on pure white empty space, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram r2 pair 10/10 (0 remarks); lex/real-world check L3 clean (target~s1, gram~s2 only). Accepted into assets 2026-09-30 by P4 batch_12.

@@ -1,0 +1,14 @@
+Image: ucidedecek_lexa.png
+Generated: 2026-09-30
+Candidate: batch_04 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a grandfather (old man) with a white moustache and round glasses in a brown cardigan stands on the left next to a small green chalkboard on a wooden easel, pointing at the chalkboard with a thin stick held in one hand, the tip of the stick touching the star drawn on the chalkboard. On the chalkboard there are only three simple white chalk drawings: a circle, a triangle and a star (no letters, no numbers, no writing). a little girl (about 6 years old) with two pigtails in a pink dress sits on the right at a small wooden school desk with a chair, facing the grandfather and the chalkboard, both hands resting on the desk top, listening. The grandfather is the active teacher, the girl is the pupil who listens. The easel has three legs, the desk has four legs and the chair has four legs, all complete. Two clearly separate whole people with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person and every animal clearly visible, slight three-quarter view so the far arm also shows and is not hidden behind any body, calm friendly faces with mouths closed, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result:
+- pair forced-choice blind 10/10 (final pair of r2, batch_04): 5/5 for sentence variant 1 and 5/5 for swapped variant (fresh opus sessions, no ambiguity remark); lex/real-world check (fresh opus session, 4 shuffled pictures): lex pictures match neither sentence, no drawing faults.

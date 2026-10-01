@@ -1,0 +1,11 @@
+Image: p58_schovavalsezastromem_target.png
+Generated: 2026-10-01
+Candidate: P10 batch13 (type 5.8) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little boy with short brown hair (clearly visible brown hair, not bald), wearing a blue T-shirt and long dark trousers hides behind a tree trunk, peeking out from the side. He is unmistakably a boy: short brown hair and trousers. Playing hide-and-seek: the figure stands directly behind a very thick tree trunk, the trunk between the figure and the viewer, most of the body hidden by the trunk, the head and one shoulder leaning out sideways past the trunk edge, peeking out curiously, one hand gripping the trunk's edge; the legs and both feet completely hidden behind the trunk, nothing of the body showing on the other side of the trunk; only the head, one shoulder and one hand show at one side edge of the trunk. The tree is one complete small tree with a thick brown trunk, its roots on a small patch of green grass, a round green leafy crown and a few sturdy low side branches; the whole tree including its crown fits inside the picture. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

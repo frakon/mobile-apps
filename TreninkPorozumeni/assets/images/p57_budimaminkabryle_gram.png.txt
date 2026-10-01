@@ -1,0 +1,11 @@
+Image: budimaminkabryle_gram.png
+Generated: 2026-10-01
+Candidate: P9 strict audit (5.7) repair round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A adult mother (a grown-up woman) with brown hair tied in a bun, a white apron over a blue dress (the mother wears no glasses) lies asleep on her back on top of a complete wooden bed (headboard, footboard, mattress and four bed legs all visible, a white pillow under the head) with eyes closed (no blanket), barefoot with no shoes; a boy with short brown hair in a green T-shirt (the boy wears big round black glasses) stands on the floor level right next to the headboard end of the bed, beside the sleeper's head, far away from the footboard, his whole body visible and not hidden behind the bed, awake and has his hand resting on the shoulder of and gently shakes the mother. ONLY the boy wears big round black glasses; the mother wears no glasses. Both figures are shown whole from head to toe, small and centered with a wide white margin around them, all feet inside the picture. A simple wooden bed with a tall wooden headboard on the LEFT and a lower wooden footboard on the right; the mother lies on her back with her head on a white pillow at the left end, blue dress and white apron, barefoot; the boy stands at the left end right in front of the headboard, facing the mother, green T-shirt, blue shorts, barefoot, leaning toward her with his hand clearly resting on her shoulder, gently shaking it. Exactly two clearly separate whole people with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

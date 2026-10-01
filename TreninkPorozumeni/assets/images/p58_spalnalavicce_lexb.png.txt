@@ -1,0 +1,11 @@
+Image: p58_spalnalavicce_lexb.png
+Generated: 2026-10-01
+Candidate: P10 batch07 (type 5.8) round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grandmother with grey hair in a bun, wearing a long green skirt and a cardigan lies whole-body in a complete wooden bed, legs and feet under the blanket, no shoes, sleeps with four legs, head on a pillow, under a blanket, eyes closed. She is unmistakably an old woman: grey hair bun and a long skirt. The whole bed is visible with a white margin; nothing cut off; drawn small enough to fit. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

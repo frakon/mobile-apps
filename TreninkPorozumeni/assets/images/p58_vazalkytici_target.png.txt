@@ -1,0 +1,11 @@
+Image: p58_vazalkytici_target.png
+Generated: 2026-10-01
+Candidate: P10 batch05 (type 5.8) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a bald grandfather with a big grey moustache, wearing brown trousers and a vest stands at a small table tying a bunch of flowers together with a ribbon. He is unmistakably an old man: bald head, moustache and trousers. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The table is a complete small wooden table with four sturdy legs standing on the same level as the feet; every object rests on the tabletop. The ribbon is one continuous ribbon wrapped around the flower stems, both ends in the hands. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

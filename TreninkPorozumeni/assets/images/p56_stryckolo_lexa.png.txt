@@ -1,0 +1,14 @@
+Image: stryckolo_lexa.png
+Generated: 2026-10-01
+Candidate: P8 batch06 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grey-haired grandfather with a grey moustache in a brown waistcoat and trousers stands next to a complete correct blue men's bicycle with a diamond frame (frame, saddle, handlebars, pedals, chain) and a side kickstand folded down to the ground standing upright on its kickstand on both wheels, the front wheel firmly mounted in the fork; he gives a happy thumbs up with one oily hand, the other hand resting on the saddle; an OPEN toolbox stands beside with the wrench put back inside it, and the old punctured inner tube lies coiled next to the toolbox. No tall man anywhere. It is clearly AFTER the activity: the work is completely finished and nobody is working on it any more, the tools are put down. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_stryckolo_lexa.png from P8 batch06 folder r3 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 in the final pair round (folder r5; 5 x v1 + 5 x v2 sentence, fresh headless opus per trial, neutral names), no remark that a picture could read as another tense/state (strict wave-2 rule; cosmetic notes logged in Temp/P8/batch06_result.md); lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched, no blocking real-world faults. Logs: Temp/P8/batch_06/bt_results.jsonl, lex_results.jsonl.

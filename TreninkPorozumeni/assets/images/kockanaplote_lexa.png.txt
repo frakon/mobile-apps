@@ -1,0 +1,14 @@
+Image: kockanaplote_lexa.png
+Generated: 2026-09-30
+Candidate: batch_06 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a simple wooden park bench with a flat plank seat, a backrest of horizontal planks held by two upright posts that connect it to the seat, and four complete legs; a grey cat with one single tail sits ON TOP of the bench seat, all four paws on the seat, its one tail curled around its paws. There is no fence anywhere. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_06, source folder r3):
+Pair 10/10 (repair round 5, ranch fence), no remarks; lex L7 correct, faults none.

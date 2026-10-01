@@ -1,0 +1,11 @@
+Image: tancibabickasala_target.png
+Generated: 2026-10-01
+Candidate: P9 pilot round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A brown bear (the bear has nothing around its neck, no scarf) and a grandmother with grey hair in a bun, wearing NO glasses, and a purple dress (the grandmother wears a long red-and-white striped scarf around its neck) dance together, facing each other and holding both hands/paws with each other, both arms of each figure fully visible. ONLY the grandmother wears a long red-and-white striped scarf around its neck; the bear has nothing around its neck, no scarf. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

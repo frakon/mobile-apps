@@ -1,0 +1,13 @@
+Image: vrtulniknadvezi_gram.png (accepted from folder r6)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_12 round 6
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one tall narrow grey stone castle tower standing in the lower part of the picture, with one smooth simple pointed red cone roof on top (no spikes, no battlements), its bottom resting on a thin grey ground line, the tower on the left third of the picture. One small red helicopter with a main rotor on top, a tail with a small tail rotor and two landing skids FLIES far to the RIGHT of the tower, BESIDE it, at the height of the middle of the tower walls, well below the roof, with a wide empty gap between the helicopter's tail and the tower as wide as the helicopter itself. The air above the tower is empty. The helicopter flies beside the tower, not above it. Everything shown whole, with correct realistic anatomy and plausible sizes, on pure white empty space, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram r6 pair 10/10 (0 remarks); lex/real-world check L6 clean (target~s1, gram~s2 only). Accepted into assets 2026-09-30 by P4 batch_12.

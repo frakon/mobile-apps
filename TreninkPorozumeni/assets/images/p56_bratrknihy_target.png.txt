@@ -1,0 +1,14 @@
+Image: bratrknihy_target.png
+Generated: 2026-10-01
+Candidate: P8 batch03 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean,  an older boy about twelve years old in a grey hoodie and jeans stands next to a tall simple wooden bookcase drawn flat and straight from the front like a box with three horizontal shelves, a solid back panel and two solid side panels, standing upright to the right of him with its open front facing the viewer, all three shelves completely empty; about fifteen colorful books lie stacked in three loose piles on the floor beside it, next to an open cardboard moving box, ready to be put on the shelves, his hands empty and relaxed, not touching any tool. It is clearly the moment BEFORE starting: nothing has been done yet, everything lies ready and untouched, nobody is working. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_bratrknihy_target.png from P8 batch_03 folder r4 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2 sentence) in the final pair round, remarks only cosmetic or restating the tense design; lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched, no real-world faults. Logs: Temp/P8/batch_03/bt_results.jsonl, lex_results.jsonl.

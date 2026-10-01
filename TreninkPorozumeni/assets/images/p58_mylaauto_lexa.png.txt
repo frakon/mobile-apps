@@ -1,0 +1,11 @@
+Image: p58_mylaauto_lexa.png
+Generated: 2026-10-01
+Candidate: P10 retestA (type 5.8) round 6
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view of a real full-size small red family car with four wheels, all doors closed, the car body complete and solid from the roof down to the wheels. Inside, in the driver seat, sits a clearly adult grown-up woman about 35 years old (clearly a mother, not a girl) with long brown hair in a ponytail, adult face, a red dress; only her head, shoulders and hands on the steering wheel are visible through the open side window of the front door; the rest of her body is hidden inside the closed car, nothing of her sticks out below or outside the car. She is unmistakably a woman: long hair in a ponytail. She is dry, no sponge, no bucket, no foam; she is NOT washing the car. Calm friendly face, mouth closed. Only the car and the woman inside, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,13 @@
+Image: kockapodstolem_target_c1.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_01 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: side view, a wide brown wooden table seen from the side, much wider than the cat, with a flat rectangular tabletop and four straight wooden legs, all four legs complete from the tabletop down to the floor level. The table is a complete piece of furniture: tabletop and four legs. A small plain grey cat without stripes is lying UNDER the table on the floor level. The cat is small compared to the table and lies curled up in the exact middle of the open space beneath the tabletop, far away from every table leg, with a clear empty gap between the cat and each leg and a clear empty gap between the cat's back and the underside of the tabletop. No part of the cat, not even the tail or a paw, touches or overlaps any table leg. The cat is clearly UNDER the table, not on top of it, not beside it. The cat has exactly one tail attached at its rear end, the tail lies along its own body at the back, never next to the head. Every animal has correct realistic anatomy: exactly four legs and one tail each (a bird has exactly two wings and two legs), no fused or hybrid animals, calm friendly face with mouth closed. floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (P4 batch_01, 2026-09-30): final set folder r3, repair rounds used for item: 3. Blind test (fresh opus headless sessions, neutral names, randomized mapping): target vs gram forced choice 10/10 (5 with sentence v1 + 5 with swapped sentence), no ambiguity/glitch remark (pair round r3); lex check (all 4 shuffled, one fresh session): only target matches v1, only gram matches v2, no real-world faults.

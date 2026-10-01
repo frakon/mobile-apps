@@ -1,0 +1,11 @@
+Image: p58_spalnalavicce_lexa.png
+Generated: 2026-10-01
+Candidate: P10 retestA (type 5.8) round 7
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a bald grandfather with a big grey moustache, wearing brown trousers and a vest sits awake on a park bench reading a book. He is unmistakably an old man: bald head, moustache and trousers. It must be clearly visible that the grandfather is NOT doing this: sleeps lying on a park bench with eyes closed. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The bench is a complete piece of furniture: seat, backrest and four sturdy wooden legs clearly visible holding it up. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. The bench is a classic wooden park bench whose backrest runs along the WHOLE length of the seat, exactly as long as the seat, with four legs.

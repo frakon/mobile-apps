@@ -1,0 +1,13 @@
+Image: malujerytir_gram.png
+Generated: 2026-09-30
+Candidate: batch_06 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a friendly green dragon with small wings and a long tail stands on the LEFT and paints: the dragon holds a thin paintbrush in the right hand, touching the canvas with it, and a round wooden paint palette in the left hand. In the middle stands a wooden painting easel with three legs holding a canvas; the canvas faces the viewer and shows a simple portrait of the knight's head and shoulders that is an exact copy of the seated knight: the same face, hair, headwear and clothes, with no beard, hat, stains or details that the seated knight does not have. The dragon stands beside the easel, whole body visible, not hidden behind the easel. a knight in shiny silver armor with an open helmet showing his face sits still on a small wooden stool on the RIGHT, facing the dragon, posing, hands resting on the knees, holding nothing. The dragon is the active painter, the knight is the passive model being painted. Only the dragon holds a brush and a palette. The stool has three complete wooden legs, the easel has three complete wooden legs. Two clearly separate whole figures with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person and every animal clearly visible, calm friendly faces with mouths closed, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (batch_06, 2026-09-30): forced choice r2s 10/10 (v1 5/5, v2 5/5), no remarks (r1s 10/10 but portrait-mismatch remarks -> gram/lexb regenerated); lex/real-world r2s: faults none. Evaluators = fresh headless claude -p --model opus sessions.

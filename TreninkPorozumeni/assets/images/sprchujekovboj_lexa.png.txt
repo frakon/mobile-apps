@@ -1,0 +1,14 @@
+Image: sprchujekovboj_lexa.png
+Generated: 2026-09-30
+Candidate: batch_05 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a cowboy (adult man) in a brown cowboy hat, a blue shirt, a leather vest and brown boots stands on the left and holds the nozzle of a green garden hose with both hands, aiming it at a knight (adult man) in shiny silver armor without a helmet who stands on the right. A stream of water shoots from the nozzle in an arc and splashes all over the knight; the knight is soaking wet with water dripping down, eyes squeezed shut, standing still. The hose is one single continuous unbroken green tube from the nozzle down and back to a neat coil lying behind the cowboy's feet, no breaks, no loose ends. The cowboy is the active one who sprays the water and is completely dry; the knight is the passive one being sprayed and holds nothing.  Two clearly separate whole people with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person and every animal clearly visible, slight three-quarter view so the far arm also shows and is not hidden behind any body, cheerful faces with mouths closed, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+Final selection: batch_05 r1 candidate (working file Temp/P3/batch_05/r1/sprchujekovboj_lexa.png)
+Blind test / verification: target-vs-gram forced choice, 5 fresh opus trials per sentence (variant 1 + swapped), 10/10 correct, no ambiguity remarks (round r1); independent fresh opus lex + real-world check (round r1): lex pictures match neither sentence, no blocking faults.

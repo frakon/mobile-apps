@@ -1,0 +1,15 @@
+Image: zajicpreskosik_lexa.png
+Generated: 2026-09-30
+Candidate: P4 batch_03 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one big round brown wicker basket without a handle, open at the top, standing upright on the left. one brown hare with long ears sits still on all four paws on the floor next to the basket, on its right side with a clear gap, not touching the basket, not in it and not above it. All standing things rest at one common invisible floor level.  Everything shown whole, with correct realistic anatomy and plausible sizes, every leg, paw, wing and tail complete and not merged with anything, calm friendly faces, no fused or hybrid animals, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance:
+- Accepted candidate: P4 batch_03 round r2; installed 2026-09-30
+- Blind test: pair r2 10/10, no remarks; lex r2 clean

@@ -1,0 +1,11 @@
+Image: p55_kluknekopedomice_gram.png
+Generated: 2026-10-01
+Candidate: P7 batch_07 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one little boy (about 7 years old) with short brown hair, a blue T-shirt and dark blue shorts swings one leg forward and kicks one black-and-white football with his foot, the ball flying away from his foot through the air with small motion lines; the other foot on the floor; both arms out to the sides for balance, no waving. The boy is clearly kicking the ball. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

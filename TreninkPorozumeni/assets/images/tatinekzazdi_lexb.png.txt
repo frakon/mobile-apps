@@ -1,0 +1,13 @@
+Image: tatinekzazdi_lexb.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) repair R1 (verifier M: previous mother looked like a teen girl; old file kept in Temp/P4/repair_R1/tatinekzazdi_lexb_old.png)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG (candidate lexb_new8 of 8 generated over 3 prompt versions)
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a long straight free-standing red brick wall seen straight from the front, low and made of many small solid opaque red bricks, much wider than a person, a complete short wall segment with flat top and two clean ends. Directly BEHIND the wall, further from the viewer, stands a young mum about 30 years old, a clearly grown-up woman with a friendly adult face, adult body proportions, broad shoulders, as tall as an adult man, shoulder-length wavy chestnut brown hair, wearing a red cardigan over a white blouse and a simple necklace. The wall reaches only up to her waist: her whole upper body from the waist up is visible above the wall, both her hands rest on the top bricks. She looks exactly like a typical mother of small children in a picture book, not a girl, not a teenager, not a grandmother, no grey hair, no wrinkles. There is no man and no child anywhere. Correct realistic anatomy: two arms, two hands with five fingers, calm friendly face with mouth closed. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Lex check: 3 fresh headless claude -p --model opus sessions, 4 pictures shuffled + both sentences: 3/3 target=S1, gram=S2, lexB described as adult woman / mother, no remark on lexB (attempt 3; attempts 1-2 had a "mother or grandmother" hedge).

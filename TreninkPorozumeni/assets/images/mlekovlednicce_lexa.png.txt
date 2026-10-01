@@ -1,0 +1,13 @@
+Image: mlekovlednicce_lexa.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_10 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a wooden kitchen table seen from a slightly elevated front three-quarter view, with a flat tabletop and four straight legs, all four legs clearly visible. one white-and-blue milk carton of realistic size, with a drawing of a white drop on it, small compared with the table, stands on the tabletop. There is no fridge anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result (P4 batch_10, installed from r5): pair r3 10/10 no remarks; lex L5b clean except nit 'open door no visible handle'; target speck cleanup r4/r5. Fresh headless claude -p --model opus evaluator per trial.

@@ -1,0 +1,11 @@
+Image: p55_klukneuklizihracky_gram.png
+Generated: 2026-10-01
+Candidate: P7 batch_12 (type 5.5) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one round blue rug on the floor; one little boy (about 7 years old) with short brown hair, a blue T-shirt and dark blue shorts kneels on the rug facing the viewer, one open wooden toy box on the rug directly in front of his knees; front view, both his arms stretched forward in front of his body and fully visible: his right hand drops a red toy car into the box and his left hand drops a small teddy bear into the box; the box holds only one big red ball; one yellow block and one green block still lie on the rug beside. The boy is clearly putting the toys away into the box. Correct realistic anatomy, every figure and object complete and fully visible, both arms and both legs of every person visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

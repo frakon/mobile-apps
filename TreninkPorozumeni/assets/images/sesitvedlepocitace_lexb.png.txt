@@ -1,0 +1,13 @@
+Image: sesitvedlepocitace_lexb.png (tested set folder r4; see Candidate line for generation round)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_13 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side-front view: one wide light wooden table with a big flat top and four complete legs; on the table lies one CLOSED silver laptop computer, its lid shut, lying flat, the whole laptop well inside the table top, not reaching any table edge. One white coffee cup STANDS ON the TABLE NEXT TO the laptop, to its right, with a small gap. Nothing is on the laptop. There is no notebook anywhere. Everything shown whole and complete, with plausible realistic sizes, floating in pure white empty space, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram repair round 3 (r4) pair 10/10 (0 remarks); lex/real-world check L4 clean (target~s1, gram~s2 only; no faults). Accepted into assets 2026-09-30 by P4 batch_13.

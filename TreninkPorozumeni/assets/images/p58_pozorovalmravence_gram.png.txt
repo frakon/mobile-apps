@@ -1,0 +1,11 @@
+Image: p58_pozorovalmravence_gram.png
+Generated: 2026-10-01
+Candidate: P10 batch12 (type 5.8) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails tied with ribbons, wearing a pink dress kneels looking through a big magnifying glass at a few ants on a small anthill. She is unmistakably a girl: long pigtails and a pink dress. This picture is the mirrored twin of a paired picture: exactly the same action, pose, objects, composition and style; the ONLY difference is that the figure is girl, not boy. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Everything is on one small patch of green grass at the same level as the feet. The figure kneels on the grass bending forward and holds a big round magnifying glass in one hand close above a small brown anthill on the grass, looking through the glass at it; several clearly visible black ants walk on the anthill and in a line on the grass toward it. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

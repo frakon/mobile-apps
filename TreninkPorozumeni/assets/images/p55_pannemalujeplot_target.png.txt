@@ -1,0 +1,14 @@
+Image: p55_pannemalujeplot_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_05 (type 5.5) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one short low wooden picket fence, seen straight from the front: a thick square wooden post at the LEFT end and a thick square wooden post at the RIGHT end, and between them eight upright pointed planks nailed onto two horizontal wooden rails; the rails run only from the left post to the right post and end exactly at the posts, nothing sticks out beyond the posts; the fence stands on a short strip of green grass; the four LEFT planks are freshly painted white, the four RIGHT planks are still bare brown wood; one small metal paint bucket full of white paint stands on the grass in front of the fence with a wide paint brush lying on its rim; a man about forty with short dark hair, wearing a brown jacket and blue jeans, the whole figure from head to shoes visible, standing on the grass in FRONT of the fence, a step to the right of the bucket, turned slightly toward the viewer, drinking water from a clear plastic water bottle held to his mouth with his right hand, his left arm hanging down empty at his side; his hands are far from the brush and from the fence. He is resting, not painting. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.
+
+Installed as p55_pannemalujeplot_target.png from P7 batch_05 folder r3 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2 sentence) with no ambiguity remark in the final pair round; lex check (4 shuffled pictures, both sentences) only target~v1 and gram~v2 matched. Logs: Temp/P7/batch_05/bt_results.jsonl, lex_results.jsonl.

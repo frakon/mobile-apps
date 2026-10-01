@@ -1,0 +1,11 @@
+Image: p58_tlacilakocarek_lexa.png
+Generated: 2026-10-01
+Candidate: P10 batch08 (type 5.8) round 9
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails tied with ribbons, wearing a pink dress sits on the ground next to a doll pram, not touching it. She is unmistakably a girl: long pigtails and a pink dress. It must be clearly visible that the girl is NOT doing this: walks pushing a doll pram by its handle. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The doll pram is a complete small pram with four wheels, a hood and a handle, the folding hood at the handle end, a doll lying inside with its head under the hood; she sits on the ground beside it, hands in her lap, not touching it. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

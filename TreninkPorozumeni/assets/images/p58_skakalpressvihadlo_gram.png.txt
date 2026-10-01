@@ -1,0 +1,11 @@
+Image: p58_skakalpressvihadlo_gram.png
+Generated: 2026-10-01
+Candidate: P10 batch02 (type 5.8) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little girl with shoulder-length hair in two short pigtails tied with pink ribbons, wearing a pink dress, white socks and pink shoes jumps over a skipping rope, both feet in the air above the rope, holding one handle in each hand; the rope is one single continuous unbroken smooth curve from the handle in the left hand down under the feet and up to the handle in the right hand, with no breaks, no gaps, no loose ends. She is unmistakably a girl: pigtails with ribbons and a pink dress. The whole figure is visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Calm friendly face, mouth closed. Exactly one person with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. This picture is the mirrored twin of a paired picture: exactly the same pose, objects, composition and style; the only difference is the person.

@@ -1,0 +1,13 @@
+Image: obraznadtelevizi_lexa.png (accepted from folder r3)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_12 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one framed painting with a golden wooden frame showing green hills and a blue sky STANDS on its bottom edge on a thin grey floor line, slightly tilted back and leaning against the front of one low closed brown wooden chest standing on the same floor line. There is no television anywhere. Everything shown whole, with correct realistic anatomy and plausible sizes, on pure white empty space, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram r2 pair 10/10 (0 remarks); lex/real-world check L3 clean (target~s1, gram~s2 only). Accepted into assets 2026-09-30 by P4 batch_12.

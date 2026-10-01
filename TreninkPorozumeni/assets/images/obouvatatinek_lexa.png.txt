@@ -1,0 +1,13 @@
+Image: obouvatatinek_lexa.png
+Generated: 2026-09-30
+Candidate: batch_12 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: a grandmother with grey hair in a bun, round glasses and a purple dress sits on a short wooden bench with four sturdy legs clearly visible under the seat; the bench is a complete piece of furniture: seat and four legs, on the right side of the picture, facing left, her hands resting on the bench beside her hips. Her right foot already wears a brown shoe and stands on the floor level under the bench; her left leg is stretched forward with only a white sock on the foot. a father with short brown hair and a short brown beard in a green shirt and jeans stands on the left, facing right, bending forward at the waist (standing on both feet, not kneeling), and with both hands pushes a brown shoe onto the grandmother's stretched socked left foot; his two hands clearly hold the shoe on the foot. The father is the active one putting the shoe on, the grandmother is the passive one having a shoe put on. Both arms and both legs of each person clearly visible. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw, hoof and tail complete and fully visible, not hidden behind anything, exactly two arms and two legs per person, exactly four legs per four-legged animal, no extra arms, no extra hands, no extra legs, calm friendly faces, no fused or hybrid figures, simple pose, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind test (batch_12, fresh headless claude -p --model opus sessions, forced choice both sentences, 5+5 trials; no ambiguity remarks): target/gram 10/10 first pass (round 1); lex+real-world check clean (tag r1)

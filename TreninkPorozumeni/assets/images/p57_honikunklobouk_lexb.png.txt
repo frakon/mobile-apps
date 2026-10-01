@@ -1,0 +1,11 @@
+Image: p57_honikunklobouk_lexb.png
+Generated: 2026-10-01
+Candidate: P9 batch_03 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A girl with brown pigtails in a yellow dress (the girl wears a big yellow straw hat on its head) runs after a white goat with small horns (the goat has nothing on its head, no hat, no cap); the goat runs away in front, the girl close behind, both mid-stride in the same direction, all feet at one ground level. ONLY the girl wears a big yellow straw hat on its head; the goat has nothing on its head, no hat, no cap. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no horse anywhere in the picture.

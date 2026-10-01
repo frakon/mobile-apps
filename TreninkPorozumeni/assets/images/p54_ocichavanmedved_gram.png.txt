@@ -1,0 +1,13 @@
+Image: p54_ocichavanmedved_gram.png
+Generated: 2026-10-01
+Candidate: P6 batch_09 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, pure flat side profile view: Wide picture with a white margin all around, both animals completely inside the picture. a grey wolf stands still on all four legs on the RIGHT, facing right, head up looking straight ahead, calm, its tail at its rear on the left side. a brown bear with a very short stubby tail stands on all four legs on the LEFT, behind the wolf with a clear gap of white space between their bodies, facing right, neck stretched forward, head lowered, only the tip of its nose touching the wolf's rear side, sniffing it. The bear is the active one sniffing; the wolf is the passive one being sniffed. The two bodies do not overlap; only the nose tip touches. Both animals are realistic in size relative to each other. Two clearly separate whole animals with correct realistic anatomy, pure flat side profile view like a frieze, both animals on the very same baseline, all four legs of each visible and separate, each tail at the rear end of its own body, no extra legs, calm friendly faces with mouths closed, no fused or hybrid animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: P6 batch_09 tested set r1 (tested round 1); blind forced-choice 10/10 (v1->target 5/5, v2->gram 5/5, fresh opus sessions, no ambiguity remark); lex/real-world check (fresh opus): no faults, lex pictures match neither sentence.

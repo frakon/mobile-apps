@@ -1,0 +1,13 @@
+Image: mlekovlednicce_lexb.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_10 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a tall white fridge seen from the front with its door swung wide open to the side, the inside visible with three glass shelves. One big wedge of yellow cheese with holes lies INSIDE the fridge on the middle shelf. All other shelves are empty. There is no milk anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result (P4 batch_10, installed from r5): pair r3 10/10 no remarks; lex L5b clean except nit 'open door no visible handle'; target speck cleanup r4/r5. Fresh headless claude -p --model opus evaluator per trial.

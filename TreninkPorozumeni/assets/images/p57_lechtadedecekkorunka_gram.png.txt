@@ -1,0 +1,11 @@
+Image: lechtadedecekkorunka_gram.png
+Generated: 2026-10-01
+Candidate: P9 strict audit (5.7) repair round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A grandfather with a white moustache in a brown vest, wearing no glasses (the grandfather has nothing on its head, no crown, no hat) holds a long white feather and tickles the belly of a grey cat (the cat wears a big shiny golden crown, clearly visible on its head) with it, his other arm fully visible hanging at his side; the cat sits on its hind legs and smiles. ONLY the cat wears a big shiny golden crown, clearly visible on its head; the grandfather has nothing on its head, no crown, no hat. Both figures are shown whole from head to toe, small and centered with a wide white margin around them. The grandfather has white hair, a FULL white beard covering his chin together with a white moustache, a cream shirt, a brown vest, brown trousers and brown shoes. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

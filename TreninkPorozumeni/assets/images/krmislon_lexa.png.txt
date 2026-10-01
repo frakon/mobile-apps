@@ -1,0 +1,13 @@
+Image: krmislon_lexa.png
+Generated: 2026-09-30
+Candidate: batch_06 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big grey elephant with two small white tusks stands on the LEFT and holds a red apple curled in the tip of its trunk, bringing it right to the open mouth of a small boy with short brown hair in a red-and-white striped T-shirt and blue shorts who stands on the RIGHT facing the elephant; the apple is whole with no bite marks yet, and the boy's open lips are touching the apple, just biting into it; the boy stands in a slight three-quarter view so both arms are visible, both hands hanging down along the body, holding nothing. The elephant is the active one feeding, the boy is the passive one being fed. Only the trunk holds the apple. Two clearly separate whole figures with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person and every animal clearly visible, calm friendly faces with mouths closed, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (batch_06, 2026-09-30): forced choice r3s 10/10, one non-ambiguity note (shoe colour differs); lex/real-world r3s: faults none. Evaluators = fresh headless claude -p --model opus sessions.

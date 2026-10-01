@@ -1,0 +1,11 @@
+Image: krmiliskaklobouk_lexb.png
+Generated: 2026-10-01
+Candidate: P9 batch_11 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A grandfather with a white moustache and no beard, bald on top, in a brown vest, grey trousers and black shoes, wearing no glasses (the grandfather wears an ordinary yellow straw sun hat with a round crown and a flat brim, sitting on top of his head and covering the top of his head completely, no flaps, no hood) kneels on one knee, holds a small bowl in one hand and with the other hand holds a spoon to the open mouth of a grey cat (the cat has nothing on its head, no hat, no cap); the cat sits on its haunches like a real animal, all four legs visible, and eats from the spoon. ONLY the grandfather wears an ordinary yellow straw sun hat with a round crown and a flat brim, sitting on top of his head and covering the top of his head completely, no flaps, no hood; the cat has nothing on its head, no hat, no cap. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, small and centered with a wide white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no fox anywhere in the picture.

@@ -1,0 +1,14 @@
+Image: neselev_target.png
+Generated: 2026-09-30
+Candidate: batch_01 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big adult lion with a golden mane walks on all four legs to the left and carries a young striped orange tiger on its back. The tiger lies on top of the lion's back, its front paws around the lion's neck, all of the tiger's paws off the ground. The lion is the active one who carries, the tiger is the passive one being carried and is smaller than the lion. The tiger lies flat on top of the lion's back like a rug, all four of the tiger's legs draped over the top of the lion's back and shoulders, no leg of the tiger hangs below the lion's belly line. The lion has exactly four legs and its own tail at its rear end; the tiger has exactly four legs and its own tail at its rear end. Only the lion's four paws are at ground level. Any bear has a very short stubby bear tail, never a long tail.  Two clearly separate whole animals with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, calm friendly faces with mouths closed, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result:
+- pair forced-choice blind 10/10 (r3 pair): 5/5 for sentence variant 1 and 5/5 for swapped variant (fresh opus sessions); real-world fault check passed (fresh opus session).

@@ -1,0 +1,14 @@
+Image: klukpolevka_lexa.png
+Generated: 2026-10-01
+Candidate: P8 batch05 round k1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a father with short dark hair and a short beard in a green checked shirt and jeans sits close to a small complete wooden table with four legs on a wooden chair with a backrest and four legs; in front of him stands a white soup bowl filled to the brim with hot orange soup with steam rising, the spoon lies clean and untouched next to the bowl, his hands resting on the table. No boy anywhere. It is clearly the moment BEFORE starting: nothing has been done yet, everything lies ready and untouched, nobody is working. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_klukpolevka_lexa.png from P8 batch05 folder rk1 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 in final pair round 7 (item round 2) (5 x v1 + 5 x v2 sentence, fresh headless opus per trial, neutral names), only cosmetic consistency notes in that round; lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched, no real-world faults. Logs: Temp/P8/batch_05/bt_results.jsonl, lex_results.jsonl.

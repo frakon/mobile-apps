@@ -1,0 +1,11 @@
+Image: p55_zadneoknonesviti_lexa.png
+Generated: 2026-10-01
+Candidate: P7 batch_09 (type 5.5) round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one small simple house seen straight from the front, white walls, a simple triangular gable red roof (narrow triangle shape) with a small red brick chimney on the right slope (no smoke), a brown front door on the left, and exactly THREE plain square single-pane windows without crossbars in one row to the right of the door, standing on a thin strip of green grass; pure white sky, nothing above or behind the roof; ONLY the middle window glows bright warm yellow with light inside; the left window and the right window are completely dark black inside. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

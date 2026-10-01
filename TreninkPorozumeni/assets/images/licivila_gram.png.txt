@@ -1,0 +1,13 @@
+Image: licivila_gram.png
+Generated: 2026-09-30
+Candidate: batch_10 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a princess with blonde hair, a small silver tiara and a long pink dress stands on the left facing right and holds a big soft pink makeup brush in her right hand; the brush tip clearly TOUCHES the fairy's cheek, painting it pink. a fairy girl with short green hair, shiny transparent butterfly wings on her back and a light green dress stands on the right facing left, still, with her eyes closed and her chin slightly raised, both hands folded in front of her. The princess is the active one putting make-up on, the fairy is the passive one being made up. Three-quarter side view, both arms of each person clearly visible. Two clearly separate whole people with correct realistic anatomy, every arm, leg, paw, hoof and tail complete and fully visible, not hidden behind anything, exactly two arms and two legs per person or ape, exactly four legs per four-legged animal, calm friendly faces, no fused or hybrid animals, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result: batch_10 accepted; target-vs-gram forced choice 10/10 (5 per sentence variant, fresh headless opus sessions) with no ambiguity remarks in the accepted round; lex/real-world check by fresh opus session: matches only intended picture for each sentence, no faults (round 1)

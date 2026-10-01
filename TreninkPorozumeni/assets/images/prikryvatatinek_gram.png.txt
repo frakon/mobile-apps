@@ -1,0 +1,7 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned 1600x1600 WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Candidate: c1 (batch_02 working file prikryvatatinek_gram_c1.png)
+Date: 2026-09-30
+Blind test / verification: target-vs-gram forced choice 5/5 fresh opus trials, both sentences (variant 1 + swapped) correct; independent verifier PASS (lex wrong for both sentences, real-world fault classes OK) (lexb regenerated once: legs hidden behind bed; re-verified PASS)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: a little girl with two blonde pigtails in a yellow dress stands upright next to a simple wooden bed and with both hands spreads a blue blanket over a young father with a short black beard in a blue shirt. A young father with a short black beard in a blue shirt lies in the bed on the back with the head on a white pillow, eyes closed, calmly going to sleep, the head and face fully visible above the blanket. The standing one holding the blanket is the active one covering; the one lying in bed is the passive one being covered. The bed is complete with four legs clearly visible; the standing figure's feet are on the same level as the bed legs. Two clearly separate whole figures with correct realistic anatomy, the standing figure's limbs complete and visible. Both have calm friendly faces with mouths closed. floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

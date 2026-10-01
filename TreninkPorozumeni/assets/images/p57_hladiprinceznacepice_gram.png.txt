@@ -1,0 +1,11 @@
+Image: hladiprinceznacepice_gram.png
+Generated: 2026-10-01
+Candidate: P9 batch_04 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A little princess with long golden hair in a long pink royal ball gown with puffy sleeves, a short red royal cape with white ermine trim on her shoulders and a golden necklace (the princess has nothing on its head, no cap, no hat) gently strokes the head of a small ginger kitten (the kitten wears a red knitted winter cap on its head; the cap is pulled down over the kitten's head and fully covers both its ears, no ears visible) with one hand; the princess kneels on both knees on the same ground level as the kitten (no chair, no seat); the kitten sits still on the ground right next to the princess. ONLY the kitten wears a red knitted winter cap on its head; the princess has nothing on its head, no cap, no hat. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

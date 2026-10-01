@@ -1,0 +1,13 @@
+Image: p53_peskost_lexa.png
+Generated: 2026-10-01
+Candidate: P5 batch_03 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean: side view, a brown dog standing on all four legs next to a wide shallow red food bowl on the floor; inside the bowl lies one pink sausage, clearly visible. No bones anywhere. Correct realistic anatomy, every figure complete and fully visible, no fused or hybrid animals, no text, no letters, no numbers, plain white background with only the few scene elements described, no patterns, no decorations, nothing else in the picture.
+
+3. Blind test (P5 batch_03): target-vs-gram forced choice 10/10 correct (5/5 per sentence variant, fresh headless opus per trial), pair tested in round r3; evaluator counts matched the intended counts in all trials; lex/real-world check (fresh opus, 4 shuffled pictures) passed: lex pictures matched neither sentence, no blocking faults. Logs: TF\Temp\P5atch_03t_results.jsonl, lex_results.jsonl.

@@ -1,0 +1,11 @@
+Image: p55_hasicnestrikavodu_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_10 (type 5.5) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one adult firefighter in a red helmet and a dark blue firefighter uniform with yellow reflective stripes and black boots stands still and eats a big red apple held in one hand, taking a bite, the other hand relaxed at his side; a rolled-up flat fire hose lying in a neat round coil on the floor next to his feet, with its metal nozzle resting on the coil; no water anywhere. The firefighter is eating an apple, not spraying water. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

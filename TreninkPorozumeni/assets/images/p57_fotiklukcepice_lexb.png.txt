@@ -1,0 +1,11 @@
+Image: fotiklukcepice_lexb.png
+Generated: 2026-10-01
+Candidate: P9 batch_06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A girl with brown pigtails in a yellow dress (the girl has nothing on its head, no cap, no hat) holds a camera with both hands up to its eye, pointed at a grey mouse (the mouse wears a red knitted winter cap pulled down on its head, fully covering both ears); the mouse stands posing in front of the camera a few steps away. ONLY the mouse wears a red knitted winter cap pulled down on its head, fully covering both ears; the girl has nothing on its head, no cap, no hat. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, both figures shown whole from head to toe with all feet inside the picture, small and centered with a wide white margin all around, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no boy anywhere in the picture.

@@ -1,0 +1,13 @@
+Image: p54_vysetrovandoktor_lexb.png
+Generated: 2026-09-30
+Candidate: P6 batch_02 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a doctor (adult man) in a long white coat with short dark hair sits calmly on a simple white examination bed with four legs, facing left. a female teacher (adult woman) with glasses, brown hair in a ponytail, a red cardigan and a grey skirt stands on the left in front of the doctor, wearing a stethoscope with the ear tips in its own ears, holding the round end of the stethoscope against the doctor's chest. The teacher is the active examiner with the stethoscope; the doctor is the passive patient being examined and wears no stethoscope. The stethoscope tube is one continuous unbroken line from the examiner's ears to the round end. The examination bed is complete with four legs at the same level as the standing figure's feet. Two clearly separate whole people with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms of every person and every animal clearly visible, slight three-quarter view so the far arm also shows, calm friendly faces, no fused or hybrid animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: final pair from round folder r3; forced choice target vs gram 5/5 (variant-1 sentence) + 5/5 (variant-2 sentence), fresh opus sessions; lex/real-world check (4 shuffled pictures, both sentences): only target~v1, gram~v2, no blocking faults. Accepted into assets 2026-10-01 by P6 batch_02.

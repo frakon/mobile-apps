@@ -1,0 +1,11 @@
+Image: p55_kouzelniknemaklobouk_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_08 (type 5.5) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one magician, a man with a short dark beard, in a long-sleeved dark blue robe (both arms fully covered by long sleeves) and a long dark blue cloak with small golden stars, the cloak has no hood, holding a black magic wand with a white tip in his raised right hand, his left hand visible holding the edge of the cloak, black leather boots on his feet, standing, whole figure; his head is completely bare with short dark hair, NO hat, no cap, no hood; there is no hat anywhere in the picture. Calm friendly faces, mouths closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

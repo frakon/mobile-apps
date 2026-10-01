@@ -1,0 +1,16 @@
+Image: hrochvbazenku_gram.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a round blue inflatable kiddie pool with thick puffy blue inflatable walls, filled with clear light-blue water, seen from a slightly elevated three-quarter view so the water surface inside is visible. A big grey hippo is lying on its belly to the RIGHT of the pool, outside it, with a clear empty gap between the hippo and the pool wall, all four short legs and its small tail visible, its belly at the same level as the bottom of the pool. The pool contains only water. The hippo is clearly BESIDE the pool, not in it and not on it. Every animal has correct realistic anatomy: exactly four legs and one tail each (a bird has exactly two wings and two legs), no fused or hybrid animals, calm friendly face with mouth closed. floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result (P4 batch_09, accepted at test round r2):
+- Forced choice target vs gram: 10/10 correct (5 trials sentence v1 + 5 trials swapped sentence), fresh headless claude -p --model opus per trial, no ambiguity/glitch remarks.
+- Lex session L2: sentence A matched only target, sentence B only gram, lexa/lexb matched neither; real-world fault check: none.
+- Image generated in round folder r1; tested date 2026-09-30.

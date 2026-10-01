@@ -1,0 +1,13 @@
+Image: autickopresmost_gram.png (candidate folder r2)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_08 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one wide arched grey stone bridge standing alone, about four times as long as the car, with one smooth curved road surface running over the top from end to end, one simple low stone wall along the road, and one big open empty arch underneath, taller than the car; both ends of the bridge rest at the same bottom level, the ends simple and smooth. One small red car with four black wheels DRIVES UNDER the bridge, through the middle of the big open arch, its wheels on a thin grey road line drawn through the arch at the same bottom level as the bridge's ends, the stone arch clearly above the car's roof, short motion lines behind it. The road on top of the bridge is empty. The car drives under the bridge, not over it. Everything shown whole, with correct realistic anatomy and plausible sizes, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram repair round 1 (r2) pair 10/10 (0 remarks); lex/real-world check L2 clean (target~s1, gram~s2 only; no faults). Accepted into assets 2026-09-30 by P4 batch_08.

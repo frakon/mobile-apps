@@ -1,0 +1,13 @@
+Image: p53_holcickastromky_lexa.png
+Generated: 2026-10-01
+Candidate: P5 batch_08 (type 5.3) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one small young tree (a thin sapling with a few leaves) grows from a strip of brown soil; a boy with short hair in blue shorts and a T-shirt with a red watering can stands next to it, pouring water onto its roots. No girl anywhere. There is exactly one young tree in the whole picture, only one, no second young tree anywhere, no reflections, no patterns. Correct realistic anatomy, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, plain white background with only the few scene elements named, no text, no letters, nothing else in the picture.
+
+3. Verification: accepted (P5 batch_08, final set; this image generated in round 1). Blind forced-choice target vs gram 5/5 per sentence variant (10/10, counts reported correctly by all evaluators) by fresh headless opus sessions; lex + real-world check (fresh opus). Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P5/batch_08/

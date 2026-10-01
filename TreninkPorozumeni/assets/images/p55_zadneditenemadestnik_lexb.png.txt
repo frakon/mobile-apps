@@ -1,0 +1,11 @@
+Image: p55_zadneditenemadestnik_lexb.png
+Generated: 2026-10-01
+Candidate: P7 retest g4 (type 5.5) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean: three tall grown-up adults standing side by side in a row with small gaps between them, front view, full length, all three clearly adults about twice the height of a child, with adult faces and adult body proportions: a man with a dark beard in a yellow raincoat, a middle-aged woman in a green raincoat and a grey-haired man with a moustache in a blue raincoat, all with rubber boots matching their raincoats; blue raindrops falling evenly all over the picture; each adult keeps both hands in the raincoat pockets, hoods down so faces and hair are clearly visible; there is NO umbrella anywhere in the picture. No children anywhere. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

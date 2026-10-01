@@ -1,0 +1,13 @@
+Image: kolacvtroube_lexa.png (tested set folder r1; see Candidate line for generation round)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_13 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one small wooden table with four complete legs; on the table stands one round brown cake in a round metal baking tin, one triangular slice cut out and missing. There is no stove and no oven anywhere. Everything shown whole and complete, with plausible realistic sizes, floating in pure white empty space, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram round 1 pair 10/10 (only a note that the tin sits between hot plates); lex/real-world check L1 clean (target~s1, gram~s2 only; no faults). Accepted into assets 2026-09-30 by P4 batch_13.

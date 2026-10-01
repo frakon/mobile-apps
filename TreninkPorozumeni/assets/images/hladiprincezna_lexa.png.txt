@@ -1,0 +1,13 @@
+Image: hladiprincezna_lexa.png
+Generated: 2026-09-30
+Candidate: batch_12 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: a brown horse with a black mane stands calmly on all four legs on the right, facing left, its head lowered a little and its eyes half closed, looking content. a princess with long blonde hair, a golden crown and a long pink dress stands on the left, facing right, and gently lays her right hand flat ON TOP of the horse's head, stroking it; her left hand hangs relaxed at her side. The princess is the active one stroking, the horse is the passive one being stroked. Both arms of the princess clearly visible, all four legs of the horse clearly visible. Two clearly separate whole figures with correct realistic anatomy, every arm, hand, leg, foot, paw, hoof and tail complete and fully visible, not hidden behind anything, exactly two arms and two legs per person, exactly four legs per four-legged animal, no extra arms, no extra hands, no extra legs, calm friendly faces, no fused or hybrid figures, simple pose, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind test (batch_12, fresh headless claude -p --model opus sessions, forced choice both sentences, 5+5 trials; no ambiguity remarks): target/gram 10/10 first pass (round 1); lex+real-world check clean (tag r1)

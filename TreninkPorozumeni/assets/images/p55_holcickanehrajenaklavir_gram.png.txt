@@ -1,0 +1,11 @@
+Image: p55_holcickanehrajenaklavir_gram.png
+Generated: 2026-10-01
+Accepted candidate: P7 batch_04 (type 5.5) round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one classic brown upright piano: a tall closed rectangular wooden cabinet standing flat on the floor on its own solid base, the keyboard with black and white keys sticking out at the front, two small pedals at the bottom front centre of the cabinet, the whole piano fully inside the picture, seen from the front at a slight angle so the keyboard faces the viewer; a little girl about six years old with brown hair in two pigtails in a red dress sits on a round piano stool right in front of the keyboard, seen from behind at an angle, facing the piano, both legs and feet visible, both hands on the keys, playing; a few simple music notes float above the piano. No glass. She is clearly playing the piano. Calm friendly face, mouth closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

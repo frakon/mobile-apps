@@ -1,0 +1,11 @@
+Image: davarobotboty_gram.png
+Generated: 2026-10-01
+Candidate: P9 strict audit (5.7) repair round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A friendly silver robot with a round head, round eyes and one short antenna (the robot has plain silver metal feet with no shoes or boots) holds out a small wrapped gift box with both metal hands, both robot arms stretched forward and fully visible, toward a adult mother (a grown-up woman) with brown hair tied in a bun, a white apron over a blue dress (the mother wears bright red boots on its feet): the mother's open hands reach toward the box but do not touch it yet, a small gap between her hands and the box; the robot is the giver, the mother is the receiver. ONLY the mother wears bright red boots on its feet; the robot has plain silver metal feet with no shoes or boots. Both figures are shown whole from head to toe, small and centered with a wide white margin around them, all feet inside the picture. The robot has a big round silver head with one antenna; the gift is a small brown box tied with a red ribbon bow. Exactly two clearly separate whole people with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

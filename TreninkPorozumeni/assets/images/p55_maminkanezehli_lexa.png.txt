@@ -1,0 +1,11 @@
+Image: p55_maminkanezehli_lexa.png
+Generated: 2026-10-01
+Candidate: P7 batch_07 (type 5.5) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one adult father with short dark hair and a short dark beard in a red-and-white checked shirt and blue trousers stands behind one ironing board with a white shirt spread on it, and a cordless steam iron (no cable at all) standing upright on its heel at the narrow end of the board; both his hands hold a white teacup at his mouth and he drinks tea; nobody touches the iron. No woman anywhere. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

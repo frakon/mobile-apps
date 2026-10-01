@@ -1,0 +1,11 @@
+Image: p55_maminkanezehli_gram.png
+Generated: 2026-10-01
+Candidate: P7 retest g3 (type 5.5) r_b
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one adult mother about 35 years old, clearly a grown-up woman with a mature adult face and figure, shoulder-length brown hair tied back in a low ponytail, in a knee-length yellow dress with a white apron, bare lower legs and brown shoes, stands a little to the side of and behind one ironing board standing on its two crossed X-shaped metal legs, both legs clearly visible, with a white shirt spread on it, holding a cordless steam iron (no cable at all) by its handle in one hand and pressing it flat on the shirt, sliding it over the shirt; no cup anywhere. She is clearly ironing. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture. Both of the person's arms and hands are visible. Her whole figure from head to shoes is inside the picture; both her lower legs and both shoes are clearly visible standing on the ground, not hidden by the dress or by the board.

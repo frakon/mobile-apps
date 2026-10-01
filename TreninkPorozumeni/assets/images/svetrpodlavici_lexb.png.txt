@@ -1,0 +1,13 @@
+Image: svetrpodlavici_lexb.png (accepted from folder r3)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_12 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one long LOW wooden park bench without backrest: one long thick flat seat plank at knee height, the bench about four times as long as it is high, and four short sturdy wooden legs, two at each end, all four legs complete and standing at one level on a thin grey floor line, a low empty space under the seat between the legs. One small red school backpack with two straps LIES on the floor line DIRECTLY UNDER the middle of the bench, between its legs, the seat plank clearly above it. The seat is empty. There is no sweater anywhere. Everything shown whole, with correct realistic anatomy and plausible sizes, on pure white empty space, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram r3 pair 10/10 (0 remarks); lex/real-world check L3 clean (only note: backpack strap ends, normal) (target~s1, gram~s2 only). Accepted into assets 2026-09-30 by P4 batch_12.

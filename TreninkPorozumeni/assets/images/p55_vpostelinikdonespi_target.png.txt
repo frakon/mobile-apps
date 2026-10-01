@@ -1,0 +1,11 @@
+Image: p55_vpostelinikdonespi_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_06 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one single wooden bed with a white pillow and a light blue blanket; the bed is completely EMPTY and neatly made: the pillow is smooth and the blanket lies flat and smooth, nobody in the bed and nothing under the blanket; one father with short dark hair and a short dark beard in blue-and-white striped pyjamas stands on his feet next to the bed, wide awake with open eyes, stretching his arms up. Nobody is sleeping in the bed. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

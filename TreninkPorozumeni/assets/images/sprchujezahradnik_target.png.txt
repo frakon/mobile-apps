@@ -1,0 +1,14 @@
+Image: sprchujezahradnik_target.png (candidate sprchujezahradnik_target_c4.png
+Generated: 2026-09-30
+Candidate: batch_15 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view, both figures standing: a gardener (grown-up adult man) in green overalls and a straw hat stands on the left, facing right, and holds the nozzle end of a green garden hose with both hands, aiming it at a cook (grown-up adult man) in a white chef jacket, white trousers and a tall white chef hat who stands on the right a few steps away, facing the gardener. A small metal garden water tap on a short post stands behind the gardener on the ground level; one end of the green hose is screwed tightly onto the tap's spout at the top of the post; the green hose is one single continuous unbroken tube running from the tap spout down to the ground, along the ground and up to the nozzle in the gardener's hands, forming one single small loop on the ground only between the tap and the gardener's own boots (the hose stays entirely on the gardener's left side of the picture, it never reaches the cook), and ENDS at the nozzle: the nozzle is the very end of the hose, nothing continues beyond the nozzle, no hose on the far side of the picture, no hose near the other person, no breaks, no loose ends, no second hose. A stream of water shoots from the nozzle in an arc and splashes over the cook; the cook is soaking wet with water dripping down, eyes squeezed shut, arms hanging at the sides, standing still, holding nothing. The gardener is the active one who sprays the water and is completely dry; the cook is the passive one being sprayed. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, slight three-quarter view so the far arm also shows and is not hidden behind any body, exactly two arms and two legs per person, no extra arms, no extra hands, no extra legs, cheerful faces with mouths closed, no fused or hybrid figures, simple pose, all standing feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+Final selection: batch_15 working file Temp/P3/batch_15/r3/sprchujezahradnik_target.png
+Blind test / verification: target-vs-gram forced choice, 5 fresh headless opus trials per sentence (variant 1 + swapped), 10/10 correct, no ambiguity/glitch remarks (trials round r3, lex round r3); independent fresh opus lex + real-world check: lex pictures match neither sentence, no faults.

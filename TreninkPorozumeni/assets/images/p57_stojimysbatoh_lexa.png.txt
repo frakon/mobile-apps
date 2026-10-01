@@ -1,0 +1,11 @@
+Image: stojimysbatoh_lexa.png
+Generated: 2026-10-01
+Candidate: P9 batch_12 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A grey mouse (the mouse carries a blue backpack on its back) and a father with a short brown beard in a blue checked shirt, brown trousers and brown shoes (the father carries no backpack and no bag) stand side by side next to each other, both facing the viewer, with a clear small white gap between them; the small figure stands upright on its two hind legs and is only knee-high to the other. ONLY the mouse carries a blue backpack on its back; the father carries no backpack and no bag. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, small and centered with a wide white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no robot anywhere in the picture.

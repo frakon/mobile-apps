@@ -1,0 +1,11 @@
+Image: p57_mavazajickorunka_target.png
+Generated: 2026-10-01
+Candidate: P9 batch_03 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A brown hare with long ears (the hare wears a big shiny golden crown, clearly visible on its head) stands and waves one raised hand/paw toward a mother, a clearly adult middle-aged woman about forty years old, mature adult face, brown hair tied in a neat low bun, wearing a white kitchen apron over her long blue dress (the mother has nothing on its head, no crown, no hat); the mother stands a few steps away facing the hare with its arms/paws down. ONLY the hare wears a big shiny golden crown, clearly visible on its head; the mother has nothing on its head, no crown, no hat. The mother wears an ankle-length dress with both feet in shoes clearly visible below the hem. Both whole figures from head to feet are well inside the picture with a wide white margin on all sides; nothing is cut off by the picture edge. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

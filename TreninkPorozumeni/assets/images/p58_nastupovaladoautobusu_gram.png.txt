@@ -1,0 +1,11 @@
+Image: p58_nastupovaladoautobusu_gram.png
+Generated: 2026-10-01
+Candidate: P10 batch09 (type 5.8) round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a bald grandfather with a big grey moustache, wearing brown trousers and a vest steps up into the open door of a bus. He is unmistakably an old man: bald head, moustache and trousers. This picture is the mirrored twin of a paired picture: exactly the same action, pose, objects, composition and style; the ONLY difference is that the figure is grandfather, not grandmother. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The whole bus fits (not cut off at any edge) completely inside the picture with a white margin on all sides: a complete modern city bus (low floor, big windscreen, not a school bus), painted light blue, seen from the side, front of the bus on the left, wheels, windows and a wide open folding door in the middle of the bus. The person stands OUTSIDE in front of the open door, seen from behind in three-quarter rear view, whole body and face turned TOWARD the inside of the bus, walking INTO the bus: front foot raised and placed on the bus door step, back foot still standing flat on the same level as the bottom of the wheels, both feet complete and attached, legs anatomically correct, one hand reaching forward to hold the rail inside the door. The person is clearly getting ON the bus, going in, not getting off. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

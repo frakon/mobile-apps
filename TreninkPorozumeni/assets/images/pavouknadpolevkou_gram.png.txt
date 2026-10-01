@@ -1,0 +1,13 @@
+Image: pavouknadpolevkou_gram.png (accepted from folder r1)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_12 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one small round wooden table with a flat top and one thick central leg on a round foot, standing in the lower part of the picture; on the middle of the table top stands one white bowl full of orange soup, the table on the left half of the picture. One small black spider with exactly eight thin legs hanging on one single thin straight silk thread; the thread runs straight up from the spider's back and continues unbroken up to the top edge of the picture. The spider hangs to the RIGHT of the table, far out beside it in empty air, at exactly the same height as the bowl, with a wide empty gap between the spider and the bowl and the table edge. The air above the bowl is completely empty. The spider hangs beside the soup, not above it. Everything shown whole, with correct realistic anatomy and plausible sizes, on pure white empty space, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram r2 pair 10/10 (0 remarks); lex/real-world check L5 clean (only note: bush/soil support of web in lexa, intended) (target~s1, gram~s2 only). Accepted into assets 2026-09-30 by P4 batch_12.

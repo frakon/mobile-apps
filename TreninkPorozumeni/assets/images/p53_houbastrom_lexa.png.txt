@@ -1,0 +1,13 @@
+Image: p53_houbastrom_lexa.png
+Generated: 2026-10-01
+Candidate: P5 r2_repair round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Soft children's book watercolor illustration, simple, no text, no letters. One big green leafy tree standing on a small strip of grass on a plain white background. Under the tree next to the trunk grows exactly one big blue flower with a green stem and leaves, the flower is large and clearly visible, about a quarter of the tree height. No mushroom anywhere, no other flowers, nothing else.
+
+3. Check (P5 R2 repair, 2026-10-01): lex check by 2 fresh headless opus evaluators (t3+t4, 4 shuffled pictures): lexa matched neither sentence in both; described as intended (1 blue flower ~70 px (candidate a rejected: oversized flower)); real-world faults: none.

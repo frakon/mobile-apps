@@ -1,0 +1,13 @@
+Image: p54_strihankluk_lexa.png
+Generated: 2026-10-01
+Candidate: P6 batch_07 (type 5.4) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a pirate (adult man) with a black eye patch, shaggy black hair, a black beard and a striped shirt sits calmly on a simple wooden stool on the right, facing right, wearing a short plain white hairdresser's cape that ends at the waist, both legs in black trousers and both boots clearly visible below it, hands resting on the knees, holding nothing, hair on the head. a clown (adult man) with a round red nose, curly orange hair, a colourful polka-dot suit and big shoes stands right next to and slightly behind the seated pirate, whole body and both legs fully visible, holding a pair of silver scissors in one hand with the open blades closing on a lock of the pirate's hair held between the fingers of the other hand, clearly cutting it, a few cut hairs falling. The clown is the active hairdresser with the scissors and wears no cape; the pirate is the passive one getting a haircut. The stool is complete with seat and three legs, the stool legs and the standing figure's feet at exactly the same bottom level. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: accepted set r2 (P6 batch_07). Blind forced-choice target vs gram 5/5 per sentence variant (10/10, no ambiguity remarks) by fresh headless opus sessions; lex + real-world check (fresh opus, both sentences) clean. Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P6/batch_07/

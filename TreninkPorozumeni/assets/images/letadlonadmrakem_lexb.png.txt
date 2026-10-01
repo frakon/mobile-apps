@@ -1,0 +1,13 @@
+Image: letadlonadmrakem_lexb.png
+Generated: 2026-09-30
+Candidate: P4 batch_02 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, soft colours: one single big white fluffy cloud with a soft grey outline in the lower half of the picture. One small blue bird with both wings spread flying high ABOVE the cloud in the upper part of the picture, with a large empty white gap between the bird and the cloud. No airplane anywhere. Nothing else. Everything complete and anatomically correct, calm friendly face. Only these things in the picture, floating in pure white empty space, no ground, no floor line, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30): P4 batch_02, final candidate set r3. Blind forced-choice target vs gram 10/10 (5 per variant), fresh opus headless sessions, no ambiguity/glitch remark; lex check (4 shuffled pictures, one fresh session): only target~sentence1 and gram~sentence2; real-world fault check clean.

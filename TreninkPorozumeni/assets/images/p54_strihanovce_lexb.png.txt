@@ -1,0 +1,13 @@
+Image: p54_strihanovce_lexb.png
+Generated: 2026-10-01
+Candidate: P6 batch_11 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a white woolly sheep with a black face and black legs stands calmly on all four legs on the right, facing right, wearing a plain white hairdresser's cape tied around its neck, holding nothing. a grey donkey with long ears stands on all four legs on the left right behind it, facing right, holding the handles of a pair of big silver scissors in its mouth, the open blades snipping the hair on the top of the sheep's head, a few cut tufts falling. The donkey is the active hairdresser with the scissors and wears no cape; the sheep is the passive one getting a haircut. Only the donkey has scissors. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: P6 batch_11 tested set r1; blind forced-choice 10/10 (v1->target 5/5, v2->gram 5/5, fresh headless opus sessions, no drawing-glitch remarks); lex/real-world check (fresh opus, 4 shuffled pictures, both sentences): only target~v1, gram~v2, no faults.

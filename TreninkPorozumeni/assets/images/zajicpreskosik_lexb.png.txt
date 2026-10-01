@@ -1,0 +1,15 @@
+Image: zajicpreskosik_lexb.png
+Generated: 2026-09-30
+Candidate: P4 batch_03 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one big round brown wicker basket without a handle, open at the top, standing upright in the middle. One red squirrel with a big bushy tail (no hare anywhere) is leaping OVER the basket in a high jump from left to right: the squirrel is in mid-air HIGH ABOVE the basket with a large empty gap between its belly and the basket, front paws stretched forward, hind legs back. It does not touch the basket and is not going into it. Everything shown whole, with correct realistic anatomy and plausible sizes, every leg, paw, wing and tail complete and not merged with anything, calm friendly faces, no fused or hybrid animals, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance:
+- Accepted candidate: P4 batch_03 round r2; installed 2026-09-30
+- Blind test: pair r2 10/10, no remarks; lex r2 clean

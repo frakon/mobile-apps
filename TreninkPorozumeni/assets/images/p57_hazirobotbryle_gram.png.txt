@@ -1,0 +1,11 @@
+Image: hazirobotbryle_gram.png
+Generated: 2026-10-01
+Candidate: P9 strict audit (5.7) repair round 6
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A friendly silver robot with a round head, round eyes and one short antenna (the robot wears no glasses) has just thrown a red ball with one arm still stretched forward after the throw, the hand open and empty, the ball just released from that hand and flying in a clear arc away from the thrower toward a girl with brown pigtails in a yellow dress (the girl wears big round black glasses); the ball flies in the air halfway between them; the girl stands a few steps away with both hands open, ready to catch it, the catcher's hands still empty; the thrower is clearly the one who threw the ball. ONLY the girl wears big round black glasses; the robot wears no glasses. The girl has brown hair tied in ONE single ponytail at the back of her head with one small yellow bow (no braids, no pigtails), a yellow dress and dark brown shoes (not yellow shoes). Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, both figures shown whole from head to toe with all feet inside the picture, small and centered with a wide white margin all around, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, no paint splatters or dots, nothing else in the picture.

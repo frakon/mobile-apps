@@ -1,0 +1,13 @@
+Image: p53_vlakymost_lexa.png
+Generated: 2026-10-01
+Candidate: P5 r2_repair round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Soft children's book watercolor illustration, simple, no text, no letters. One long grey stone arch bridge over a light blue river, seen from the side, filling the picture width, plain white sky. On top of the bridge exactly two big cars, one red and one blue, each car about one quarter of the picture width, clearly visible side views, far apart, both driving to the right. No train anywhere, no rails, no other vehicles, nothing else.
+
+3. Check (P5 R2 repair, 2026-10-01): lex check by 2 fresh headless opus evaluators (t1+t2, 4 shuffled pictures): lexa matched neither sentence in both; described as intended (2 cars red+blue ~120 px); real-world faults: none.

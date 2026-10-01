@@ -1,0 +1,11 @@
+Image: p57_honikunklobouk_target.png
+Generated: 2026-10-01
+Candidate: P9 batch_03 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A girl with brown pigtails in a yellow dress (the girl has nothing on its head, no hat, no cap) chases a brown horse (the horse wears a big yellow straw hat on its head); both face and run toward the left: the horse is FRONT-LEFT galloping away toward the left, the girl is BEHIND it on the right, a clear gap of empty space between the girl and the horse's tail, the girl reaching one hand forward toward the horse's tail; the girl is the chaser, the horse is fleeing ahead of her, all feet at one ground level. ONLY the horse wears a big yellow straw hat on its head; the girl has nothing on its head, no hat, no cap. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

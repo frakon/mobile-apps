@@ -1,0 +1,11 @@
+Image: p55_zadneditenemadestnik_gram.png
+Generated: 2026-10-01
+Candidate: P7 retest g4 (type 5.5) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean: three children standing side by side in a row with small gaps between them, front view, full length: a girl in a yellow raincoat with yellow rubber boots, a boy in a green raincoat with green rubber boots and a girl in a blue raincoat with blue rubber boots (each child's boots exactly the same colour as the raincoat); blue raindrops falling evenly all over the picture; each of the three children holds one small open colourful umbrella just above his or her own head; each umbrella is a classic short umbrella with a curved J-shaped handle held in the child's closed fist, a short shaft that goes up only to the underside of the dome-shaped canopy and ends there, with only a tiny tip on top of the canopy; nothing sticks out above the canopies; three umbrellas in total, the raindrops landing on top of the umbrellas. Raindrops fall ONLY outside and above the umbrellas; the space under each umbrella canopy around the child's head is completely dry with no raindrops at all. Every child has an umbrella. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

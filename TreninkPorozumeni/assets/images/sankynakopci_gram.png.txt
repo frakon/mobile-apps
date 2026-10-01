@@ -1,0 +1,14 @@
+Image: sankynakopci_gram.png
+Generated: 2026-09-30
+Candidate: batch_11 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one snowy hill drawn small enough to fit completely inside the picture with wide white margins on the left, right and top: a broad smooth snow-covered hill with gentle slopes on both sides, a rounded summit, a few small bare rocks peeking out of the snow, the hill about five times as wide and twice as tall as the sled, the hill placed in the left part of the picture, its summit empty; a small wooden children's sled with two curved red metal runners and a slatted wooden seat stands on a flat level stretch of snow at the very FOOT of the hill on its right side, just beyond the end of the right slope where the ground is already flat, standing perfectly level, the runners at the same level as the base of the hill, far below the summit. The sled is at the bottom of the hill, not on top of it. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, objects have no faces, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_11, source folder r2):
+Hill enlarged r2 (r1 read as snow pile, cut off). Pair r2 10/10 (one descriptive note: sled beside the hill base = at the bottom, no doubt); lex L2 clean (tree in lexA is content-required).

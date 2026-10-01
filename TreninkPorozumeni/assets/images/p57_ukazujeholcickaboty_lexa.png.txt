@@ -1,0 +1,11 @@
+Image: ukazujeholcickaboty_lexa.png
+Generated: 2026-10-01
+Candidate: P9 batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A clearly adult middle-aged mother, about 40 years old, with brown hair in a bun and a white apron over a blue dress (the mother is barefoot, bare feet with no shoes, no boots, no socks) holds up a small framed picture with both hands, its painted side (a yellow sun) turned toward the viewer and toward the other figure, showing it to a girl with brown pigtails tied with plain brown hair ties (no bows), in a plain yellow dress (the girl wears bright red knee-high rubber boots on both feet); the girl stands facing the mother with both arms relaxed at her sides and looks at the picture. ONLY the girl wears bright red knee-high rubber boots on both feet; the mother is barefoot, bare feet with no shoes, no boots, no socks. Exactly two clearly separate whole people with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, small and centered with a wide white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no pirate anywhere in the picture.

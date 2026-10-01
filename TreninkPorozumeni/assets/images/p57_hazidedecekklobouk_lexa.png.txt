@@ -1,0 +1,11 @@
+Image: hazidedecekklobouk_lexa.png
+Generated: 2026-10-01
+Candidate: P9 batch_12 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A grandfather with a white moustache and no beard, bald on top, in a brown vest, grey trousers and black shoes, wearing no glasses (the grandfather wears a big yellow straw hat on its head) stands on the left facing right and has JUST thrown a red ball toward a pink pig (the pig has nothing on its head, no hat, no cap); his throwing arm is still stretched forward after the throw, his other arm hangs at his side in front of his body, fully visible; the ball flies in the air halfway between them; the pig stands on all four legs a few steps away on the right, facing the thrower, looking up at the ball, ready to catch it with its snout. ONLY the grandfather wears a big yellow straw hat on its head; the pig has nothing on its head, no hat, no cap. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, small and centered with a wide white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no monkey anywhere in the picture.

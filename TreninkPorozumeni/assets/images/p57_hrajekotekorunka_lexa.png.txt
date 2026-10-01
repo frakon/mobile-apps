@@ -1,0 +1,11 @@
+Image: p57_hrajekotekorunka_lexa.png
+Generated: 2026-10-01
+Candidate: P9 batch_03 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A grandfather with a white moustache in a brown vest, wearing no glasses (the grandfather has nothing on its head, no crown, no hat) and a small ginger kitten (the kitten wears a big shiny golden crown, clearly visible on its head) play together with a ball: the grandfather rolls a blue ball on the floor toward the kitten, the kitten reaches for it. ONLY the kitten wears a big shiny golden crown, clearly visible on its head; the grandfather has nothing on its head, no crown, no hat. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no clown anywhere in the picture.

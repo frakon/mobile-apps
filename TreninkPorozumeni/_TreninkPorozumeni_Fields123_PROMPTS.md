@@ -141,3 +141,78 @@ Result: request 8 (with its application summary) was added above in this file; `
 > Ensure that the instruction that every image change/improvement request shall be stored into the image learnings folder and projected to the learnings file: put this original instruction to the Prompts file and ensure it is also in the learnings file.
 
 Result: the original instruction (User follow-up request 11, second paragraph) was added verbatim above in this file together with the applied folder convention; `_TreninkPorozumeni_LEARNINGS.md` cross-cutting checklist item 7 states the full obligation: archive every user-commented picture under `ImageLearnings/<pictureFileBaseName>/` (original png + .txt + `_user_comment.md` + `_repair_result.md`) AND project it into the learnings file as a new/updated fault-class rule.
+
+## User request 25 (verbatim) — 15 test types, test-set list page, two variants per item, 100 sets per type
+
+Context: /delegate-1-ops request after the audio fix (request 22); master managed the run, clarification in two AskUserQuestion rounds.
+
+```
+I want you to be a manager of the following large changes:
+* Every four pictures set (1 test question (set)) shall have two variants of test: "Lev tlačí medvěda" vs "Medvěd tlačí lva". Currently in the test set there is always only one of those variants. I want every four pictures to have two variants and in the 10 test question set always exactly one of the two variants shall be tested (which one is tested is chosen randomly). It means that for every pair of responses: "Target"-"Grammatical Distractor" a sentense which will make the "Grammatical Distractor" from "Target" and "Target" from "Grammatical Distractor" shall be invented. WHY all this: it is needed when chilren play the same 10 test question set again: if we do not do this, they just remember which image is the correct one. Only when we randomize for each set of pictures the actual question sentence and its output: they will have to listen to every sentence (because the correct picture could be different than the last time). But it also means that for the second option 4 different mp3 recordings will need to be made (1 for the question itself - the intro sentence itself and 3 for the wrong answers). But: the images will not need to be regenerated. And the Lexical Distractors stay the same. So: for every every existing test set of 4 pictures create an alternative question variant + alternative mp3s.
+* I want you to manage subagents changing the intro page: there shall be instead of 3 x 2 types of tests (5.1,5.2,5.3 x 2) exactly 15 selectable types of tests (5.1 - 5.15) and when a test type is selected, a page with list of test sets for the given test shall be show. Currently it would be empty for everything 5.4 - 5.15, and the 5.1,5.2,5.3 would have 2 test sets each (test set 1-10 and test set 11-20). There shall be a "go back" button and if clicking on a test set: it shall start (so e.g. clicking on 1-10 button it will start this test set for the currently selected test type).
+* Explore the Documentation folder: there are three .md files where the 5.1 - 5.15 types of questions are described. I want you to manage subagents to incorporate every of 5.1 - 5.15 test types and for every test type to create 100 test sets (grouped by 10: 1-10, 11-20, ..., 91-100). Every test set:
+   * shall be tested for czech language correctness of the sentence and of the "wrong answer" texts
+   * shall get its own 4 images created by /image-generation skill:
+      * the images shall go through blind test rounds until it is completely clear what the pictures wanted to say
+      * the images shall be also tested for real-world correctness (explore the ImageLearnings folder what to verify in the images)
+   * and every test set shall have two variants (and each variant having a different correct answer picture: keep the rule of switching "Grammatical Distractor" and "Target").
+Do the test sets consequentially (first full 5.1, then full 5.2, etc.). After every 5.1 set is finished: run verify-improve-rounds, and after it is finished: deploy the new app to the EndgameServer, do not commit, and go to the next set.
+
+Explore and ask clarification questions now. You need to ask everything beforehand because I will not be here to answer your questions later. But collect the open questions if any.
+```
+
+Q&A (verbatim, AskUserQuestion round 1):
+- Q: "100 test sets" per type = 100 picture-items (each with 4 images), grouped as 1–10 … 91–100. For 5.1/5.2/5.3, should the existing 20 items become sets 1–20 (then create 80 new each), or create 100 completely new items?
+  A: Reuse as 1–20 (Recommended) — Existing 20 blind-tested/user-repaired items become sets 1–20; create 80 new per type for 5.1–5.3 (they also get the swapped variant).
+- Q: Several types don't swap Target↔Grammatical-Distractor naturally (5.4 passive: gram pictures are often absurd; 5.6 tenses and 5.15 aspect: "during" vs "finished" ambiguity; 5.10/5.12 quantifiers; 5.11 pronouns: hardly picturable; 5.14 instrumental: animated tools). How should they be handled?
+  A: Constrain items (Recommended) — For each type, only invent items where both sentences are natural Czech and both pictures are clearly depictable (e.g. 5.4 only reversible animate pairs, 5.9 only comparatives). Items that can't meet this are not created. Record the decisions in open_questions.md.
+- Q: Some types in the docs (5.6, 5.10, 5.11–5.15) use 2 grammatical distractors or a 'semantic/absence' third distractor instead of 2 lexical ones. How should the 4 pictures be filled?
+  A: Follow doc per type — Allow a second grammatical/semantic distractor in the lexA/lexB slots where the doc defines it (explanations adapted).
+- Q: This is roughly 90–110 h of unattended agent work with 6000+ Muse Spark images. The workflow is: after each full TYPE (5.1, then 5.2, …) run verify-improve-rounds, then deploy, with no commit. Is that the intended reading of "after every 5.1 set is finished", and is this scale and budget OK?
+  A: Yes, per type, go (Recommended) — verify-improve-rounds plus deploy after each completed type (15 cycles); run everything; no commits.
+
+Q&A (verbatim, AskUserQuestion round 2):
+- Q: With 'constrain items', some types (e.g. 5.11 pronouns, 5.14 instrumental) may not yield 100 items that are clearly depictable AND swappable. What should happen then?
+  A: Always reach 100 (Recommended) — Keep inventing new constrained items until there are 100 good ones, even if they become more repetitive in structure.
+- Q: An item's image keeps failing the blind test or the real-world check. How many repair/regeneration rounds before giving up on it?
+  A: 3 rounds, then replace — Faster: replace the item after 3 failed rounds.
+- Q: For a swapped variant, an existing lexical-distractor picture might accidentally also fit (or nearly fit) the new sentence. Since you said images are not regenerated and lexical distractors stay the same: what then?
+  A: Regenerate that lex image (Recommended) — Exception to the 'no new images' rule: regenerate only the conflicting lexical picture so it is wrong for BOTH sentences, blind-test it again and log it.
+- Q: If Muse Spark is throttled or out of quota for a long time (hours), or the EndgameServer deploy fails while you're away, what should happen?
+  A: Wait and retry (Recommended) — Back off and retry for up to ~2 h per outage, meanwhile continue non-image work (texts, audio, reviews). If it still fails, log it to open_questions.md and continue with what's possible; send a Discord notification.
+
+### User request 25 — follow-up (verbatim)
+"Let every 5.x type of test be managed by a separate level-1 subagent (by that way you spare your context and will be able to finish the task properly)"
+
+### User request 25 — follow-up 2 (verbatim)
+"I am permitting 3-5 repair rounds (increasing limit from 3: for cases when we are close to be OK after the third round)"
+
+### User request 25 — follow-up 3 (verbatim)
+"One more specific and general instruction: For the plural vs singular (5.3  test type): use random plural count (2-4), do NOT use fixed count as it was now (everything was 3). Mix the current 1-20 among 1-100 randomly (so that the first 20 are not all 3). Apply the same principle to all: try to differentiate on multiple fronts for every test type. Use different objects, different verbs, different prepositions, etc. Make the tests rich in diversity while keeping the words mostly among 2000 most frequent word in the language."
+
+### User request 25 — follow-up 4 (verbatim)
+"Run three test types parallelly - at the same time (to make the execution faster): each by its own level-1 subagent. No need to run it in sequence. The test types are kind of independent, so we can speed up the generation by parallellisation."
+
+
+### User request 25 — 5.3 coordinator decisions (for the verbatim 5.3 instruction above)
+- Sentences use a bare plural without numerals (e.g. "Hrušky leží na talíři."); singular->plural swaps also bare plural.
+- Plural counts are random 2-4 and appear only in the pictures and in the grammatical why-texts (80 new items: 27x2 / 27x3 / 26x4).
+- Order of all 100 5.3 items (src/items/field53.ts) = Python random.Random(530053).shuffle(old 20 + 80 new), script p5_integrate.py; old 20 land at positions 3,6,7,8,14,15,19,25,27,29,50,51,55,59,61,64,71,75,76,82.
+
+### User request 25 — follow-up 5 (verbatim) — test-type scope rule
+"Another strong instruction to remember and follow from now on (also in every future development; write to README.md): before every test type implementer starts: run explorers with permission to use web to find out exactly what the given test type is about and what everything belongs to it. We need to not only follow a strict test type example, but to test everything what grammatically or in other way belongs to the given test type. Example: The 5.4 section "Slovesný rod" uses for everything "trpný rod (pasivum)", but the test purpose is to check whether children understand correctly "trpný rod", since the "rod činný" is more frequent and it is supposed that they already understand it (because: more normally used "rod" is "rod činný (aktivum)"). But if all the test questions are in "trpný rod", the children will just learn during the training app to "switch against how it normally works" - that "switched against normal is the correct answer", and they will not fully grasp the difference nor to understand quickly if the two "rod"s are used in normal spoken language. Therefore it is highly advantages to dedicate a minority of test questions (e.g. 1/3 of test questions in the test type) also to other forms of the given grammar/problematic. In this case it would be to dedicate roughly 1/3 of questions also to "rod činný" and to questions to contain "rod činný". These shall be mixed among the "rod trpný" questions proportionally and randomly (definitelly it shall not be so that there are 20 consecutive questions with "rod trpný" and then 10 consecutive questions with "rod činný"). They shall be reasonably mixed. And in this case the mix can be also such that in one test set of 4 images when we have two variants pointing to different correct image result: one variant can be in "rod trpný" and another in "rod činný". In this case we can do the mixing also in this way.
+
+Launch a fresh evaluation subagent of this rule. Let him propose repeated clarification questions (if needed) of this rule (you have quite long context already, so letting it consider a new agent would be better): for future agents to understand the rule properly and use it correctly.
+
+Then add this new rule to the prompts file and to a dedicated .md file which will be referenced by README.md with instruction to load it when a new test type is implemented."
+
+#### Q&A (verbatim) — follow-up 5
+1. Q: Should already-finished types be reworked to follow the new rule? (5.4 is now 100% passive; 5.1 and 5.7 each use a single construction; 5.3 and 5.5 already mix through their swapped variant.) — A: "Rework, text+audio only (Recommended)"
+2. Q: What about the types in progress (5.6 tenses, 5.8 gender, 5.9 comparison)? — A: "Apply now (Recommended)"
+3. Q: How should the 'roughly 1/3' be counted? — A: "Per played sentence. Over all 200 variant sentences of a type, the target is 32–34% minority form, and every group of 10 has at least 3 minority sentences in expectation (the variant is picked 50/50 at play time)."
+4. Q: How should the minority be mixed in? — A: "Prefer mixed-variant items (Recommended)"
+5. Q: Must minority items still test the type's grammatical contrast? — A: "Yes, same contrast (Recommended)"
+6. Q: Who decides each type's list of 'other forms' (majority vs minority)? — A: "Explorer + coordinator (Recommended)"
+7. Q: What are the web explorer's limits and where does its output go? — A: "Read-only Czech sources, saved in app (Recommended)"
+8. Q: Does this rule override 'Follow doc per type' and per-type feasibility constraints (e.g. 5.9 comparatives only)? — A: "Yes, where depictable (Recommended)"
+Rule file: _TestTypeScopeRule.md (referenced from README.md).

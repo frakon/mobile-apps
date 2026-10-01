@@ -1,0 +1,11 @@
+Image: p58_hralasismickem_lexb.png
+Generated: 2026-10-01
+Candidate: P10 pilot (type 5.8) round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a tiny newborn white baby goat kid, clearly a baby GOAT and not a lamb: short smooth sleek white hair (not woolly, not fluffy), long upright pointed goat ears sticking out sideways, tiny horn buds, slender goat face, wobbly long thin legs, about a quarter of the size of an adult goat, playfully pushing a small grey metal bucket lying on its side with its nose, the bucket has one single simple wire handle; no ball anywhere. Calm friendly face, mouth closed. Exactly one figure with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. The whole animal is visible from the head down to all four hooves, with a clear white margin around it; nothing is cut off by the picture edge; the animal is drawn small enough to fit completely.

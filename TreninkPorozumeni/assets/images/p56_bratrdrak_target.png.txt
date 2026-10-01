@@ -1,0 +1,14 @@
+Image: bratrdrak_target.png
+Generated: 2026-10-01
+Candidate: P8 batch_01 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: an older boy about twelve years old with short brown hair in a grey hoodie, jeans and black sneakers stands next to a low complete wooden workbench standing on four sturdy legs, all four legs fully visible and the whole bench inside the picture; on the bench top lie a few flat wooden boards, a small box of nails and a hammer, ready and untouched; nothing is built yet, his hands empty and relaxed at his sides, not touching any tool. It is clearly the moment BEFORE starting: nothing has been done yet, everything lies ready and untouched, nobody is working. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_bratrdrak_target.png from P8 batch_01 folder r2 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2 sentence) with no ambiguity remark beyond cosmetic notes in the final pair round; lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched, no real-world faults. Logs: Temp/P8/batch_01/bt_results.jsonl, lex_results.jsonl.

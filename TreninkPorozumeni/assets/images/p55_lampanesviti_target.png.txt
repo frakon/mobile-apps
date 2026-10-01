@@ -1,0 +1,11 @@
+Image: p55_lampanesviti_target.png
+Generated: 2026-10-01
+Accepted candidate: P7 batch_04 (type 5.5) round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one table lamp made of a round wooden base, a thin straight wooden stem and a wide drum-shaped light blue fabric lampshade (a short wide cylinder, flat top and bottom edge), no visible power cord, stands on a small round wooden side table with three legs; the lamp is switched OFF: the lampshade is dull and unlit, with no glow, no light rays, no light beams, no glow anywhere. The lamp clearly does not shine. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

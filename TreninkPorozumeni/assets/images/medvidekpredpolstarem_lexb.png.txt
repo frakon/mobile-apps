@@ -1,0 +1,17 @@
+Image: medvidekpredpolstarem_lexb.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_07 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one big square red cushion standing upright on the floor level, facing the viewer; it is a very thick firm cushion, as thick as a small mattress, so it stands stably on its wide flat bottom side by itself; its top edge is as high as the sitting teddy bear's belly. One white toy bunny with long ears SITS upright on the floor level directly IN FRONT of the cushion, closer to the viewer than the cushion, facing the viewer, legs stretched forward, with a small gap between the bunny's back and the cushion; the bunny's bottom and the bottom of the cushion are on the same floor level. The bunny's whole body is visible and overlaps the lower part of the cushion, the top edge of the cushion is visible behind the bunny's shoulders on both sides. The bunny sits in front of the cushion, not behind it, not on it. Everything shown whole, with correct realistic anatomy and plausible sizes, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture. There is no teddy bear anywhere. The toy bunny has one small round fluffy tail at the very back of its body, hidden behind it, not visible at its side. Clean pure white background without any paint splatters, dots or specks.
+
+Selected candidate: medvidekpredpolstarem_lexb_c2 (pre-screen pick)
+
+3. Acceptance:
+- Installed 2026-09-30 from P4 batch_07 work folder r5
+- Blind test: pair accepted after repair round 2 (folder r3) 10/10 no remarks; lexa regenerated round 3 (r4), lexb regenerated round 4 (r5); final lex L5 clean

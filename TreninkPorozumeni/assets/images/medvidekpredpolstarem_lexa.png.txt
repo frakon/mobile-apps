@@ -1,0 +1,17 @@
+Image: medvidekpredpolstarem_lexa.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_07 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one big thick square red cushion lying flat on the floor level. One brown teddy bear LIES stretched out on its back ON TOP of the flat cushion, its whole body resting on the cushion's upper surface. The teddy bear is on the cushion, not in front of it, not behind it. Everything shown whole, with correct realistic anatomy and plausible sizes, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture. The teddy bear has a normal cute teddy face: two round ears on top, two eyes, and one nose on its short muzzle in the middle of the face.
+
+Selected candidate: medvidekpredpolstarem_lexa_c2 (pre-screen pick)
+
+3. Acceptance:
+- Installed 2026-09-30 from P4 batch_07 work folder r5
+- Blind test: pair accepted after repair round 2 (folder r3) 10/10 no remarks; lexa regenerated round 3 (r4), lexb regenerated round 4 (r5); final lex L5 clean

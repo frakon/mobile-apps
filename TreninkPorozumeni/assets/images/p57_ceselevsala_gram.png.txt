@@ -1,0 +1,11 @@
+Image: ceselevsala_gram.png
+Generated: 2026-10-01
+Candidate: P9 batch_06 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A girl with brown pigtails in a yellow dress (the girl wears a long bright blue scarf around its neck) stands at the head of a lion with a mane (the lion has nothing around its neck, no scarf), her whole body including both legs and both feet fully visible in front of the white background, no part of her hidden behind the animal, a small gap between her body and the animal, firmly gripping the handle of a big comb with the fingers of one hand and combing the mane of the lion; the other arm of the girl hangs relaxed at its side, fully visible, not touching the lion; the lion stands still on all four legs, all four legs visible, no stool, no seat. ONLY the girl wears a long bright blue scarf around its neck; the lion has nothing around its neck, no scarf. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, both figures shown whole from head to toe with all feet inside the picture, small and centered with a wide white margin all around, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

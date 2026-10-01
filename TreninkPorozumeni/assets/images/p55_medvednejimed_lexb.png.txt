@@ -1,0 +1,13 @@
+Image: p55_medvednejimed_lexb.png
+Generated: 2026-10-01
+Candidate: P7 batch_02 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a red fox sits on its bottom holding a round clay pot full of golden honey in its lap, licking golden honey from one front paw, honey dripping; there is no fish anywhere. One single whole figure with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, no extra limbs, calm friendly face with mouth closed, only the objects named here, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind test: accepted in P7 batch_02 - forced choice target vs gram 5/5 (v1) + 5/5 (v2) in final configuration, lex/real-world check (fresh opus session, 4 shuffled pictures, both sentences): only target~v1, gram~v2; no faults remaining. Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P7/batch_02/

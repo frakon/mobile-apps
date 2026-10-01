@@ -1,0 +1,13 @@
+Image: p54_malovankuchar_lexb.png
+Generated: 2026-10-01
+Candidate: P6 batch_12 (type 5.4) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a policeman (adult man) in a dark blue police uniform with a blue police cap, clean-shaven stands on the left, facing right, in front of a wooden easel with three complete legs; he or she holds a paintbrush in one hand touching the canvas. The canvas on the easel is turned toward the viewer and shows a colourful painted portrait of the cook with a tall white chef hat and a small black moustache. a cook (adult man) in a tall white chef hat and a white chef jacket, with a small black moustache sits still on a simple chair on the right, facing left toward the painter, posing as a model, hands resting in the lap, holding nothing. The policeman is the active painter, the cook is the passive model being painted. The painted face on the canvas is an exact likeness of the seated model: the same hair, the same hat or no hat, the same moustache or no moustache. The painter's both arms are visible, one holding the brush, the other holding a palette. Only the policeman holds a brush. The painting on the canvas clearly shows the cook. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, the chair complete with four legs, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+Verification: P6 batch_12 final set r2; blind forced-choice 10/10 (5 v1->target, 5 v2->gram), fresh opus sessions, no ambiguity/glitch remarks; lex+real-world check clean (fresh opus).

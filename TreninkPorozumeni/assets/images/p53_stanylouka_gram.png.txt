@@ -1,0 +1,13 @@
+Image: p53_stanylouka_gram.png
+Generated: 2026-10-01
+Candidate: P5 batch_12 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a small oval patch of green meadow grass, and standing on the meadow exactly ONE green camping tent (a single one only), no other green camping tent anywhere in the picture. The tent is a complete triangular tent standing in the middle of the grass. Simple minimal scene on a plain white background, no people, no animals, no text, no letters, no patterns, nothing else in the picture.
+
+3. Blind test (P5 batch_12, round 1): target vs gram forced choice 5/5 for both sentences (fresh headless opus), counts reported correctly, no ambiguity/glitch remarks; lex/real-world check passed (MATCH_A/B only target/gram, FAULTS none) — logs Temp/P5/batch_12/bt_*.log, lex_*.log.

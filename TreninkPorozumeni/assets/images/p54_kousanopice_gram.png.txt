@@ -1,0 +1,13 @@
+Image: p54_kousanopice_gram.png
+Generated: 2026-10-01
+Candidate: P6 batch_03 (type 5.4) round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a light golden dog with two upright pointed ears (not floppy) sits upright on its haunches on the right, side view, facing right, calm, mouth closed, all its legs fully visible, with its two upright pointed ears on top of its head. a brown monkey with a long tail and a pale face standing on its hind legs on the ground stands on the left behind the dog's head, facing right, and playfully bites the dog's ear: the monkey's jaws are firmly CLOSED on the dog's ear with its teeth visibly biting down on it, the ear clearly caught between the monkey's teeth, a real playful bite (not a whisper, not a kiss). The monkey is the active biter, the dog is the passive one being bitten on the ear. The dog bites nothing. The bitten animal has EXACTLY TWO ears and no more: the bitten ear is one of those two ears, its near ear, bent slightly down toward the biter; the other ear stays in its normal place. No third ear, no extra flap. The only contact is the monkey's teeth on the dog's ear. All feet of both animals stand on ONE same horizontal ground line, nobody floats higher. Each animal has exactly one tail attached at its rear end. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: accepted set r5 (P6 batch_03). Blind forced-choice target vs gram 5/5 per sentence variant (10/10, no ambiguity remarks) by fresh headless opus sessions; lex + real-world check (fresh opus) clean. Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P6/batch_03/

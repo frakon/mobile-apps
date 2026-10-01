@@ -1,0 +1,14 @@
+Image: sankynakopci_lexa.png
+Generated: 2026-09-30
+Candidate: batch_11 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one small flat patch of snow; a small snowy green pine tree stands on the snow patch and a small wooden children's sled with two curved red metal runners and a slatted wooden seat stands on the same flat snow patch right BESIDE the tree, to the right of it with a clear gap. There is no hill anywhere. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, objects have no faces, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_11, source folder r2):
+Hill enlarged r2 (r1 read as snow pile, cut off). Pair r2 10/10 (one descriptive note: sled beside the hill base = at the bottom, no doubt); lex L2 clean (tree in lexA is content-required).

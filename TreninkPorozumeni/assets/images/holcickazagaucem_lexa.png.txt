@@ -1,0 +1,15 @@
+Image: holcickazagaucem_lexa.png
+Generated: 2026-09-30
+Candidate: P4 batch_03 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one big green sofa seen from the front, with a high backrest, two armrests, seat cushions and four short legs; the sofa is a complete piece of furniture. one girl with two brown pigtails in a pink dress sits ON the sofa seat, her back against the backrest, her whole body visible, her legs hanging down over the front of the seat. The girl sits on the sofa, not behind it and not standing in front of it. Everything shown whole, with correct realistic anatomy and plausible sizes, every leg, paw, wing and tail complete and not merged with anything, calm friendly faces, no fused or hybrid animals, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance:
+- Accepted candidate: P4 batch_03 round r3; installed 2026-09-30
+- Blind test: pair r3 10/10 (style note only); lex r3 clean

@@ -1,0 +1,14 @@
+Image: krmikuchar_gram.png
+Generated: 2026-09-30
+Candidate: batch_05 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a cook (adult man) in a tall white chef hat and a white chef jacket sits on a small wooden stool on the right, wearing a white bib tied around the neck, mouth open, both hands resting on the knees, holding nothing. a clown (adult man) with a red round nose, curly orange hair and colourful baggy clothes stands on the left, holds a small bowl in one hand and with the other hand holds a spoon with food to the cook's open mouth. The clown is the active one who feeds; the cook is the passive one being fed with the spoon. Only the cook wears a bib; the clown wears no bib and does not eat. The stool is complete: round seat and three wooden legs clearly visible, standing at the same level as the standing figure's feet. Bodies not touching except the spoon at the mouth. Two clearly separate whole people with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person and every animal clearly visible, slight three-quarter view so the far arm also shows and is not hidden behind any body, calm friendly faces, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+Final selection: batch_05 r1 candidate (working file Temp/P3/batch_05/r1/krmikuchar_gram.png)
+Blind test / verification: target-vs-gram forced choice, 5 fresh opus trials per sentence (variant 1 + swapped), 10/10 correct, no ambiguity remarks (round r2); independent fresh opus lex + real-world check (round r2): lex pictures match neither sentence, no blocking faults.

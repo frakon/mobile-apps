@@ -1,0 +1,14 @@
+Image: p55_autonesviti_lexa.png
+Generated: 2026-10-01
+Candidate: P7 batch_03 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, one red motorbike seen straight from the front, with one round headlight, handlebars, mirrors and its front wheel; no rider (no car anywhere). Its headlight is switched OFF: dark grey and dull, no glow, no light beam. Parked, standing upright on its stand. Everything shown whole and structurally complete, no faces on objects, no people, no hands, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Acceptance:
+- Installed 2026-10-01 from P7 batch_03 (image generated in round 1); pair blind test 10/10 forced choice, lex+real-world check done (see Temp/P7/batch_03/result + batch03_result.md)

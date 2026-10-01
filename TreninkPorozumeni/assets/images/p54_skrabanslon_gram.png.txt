@@ -1,0 +1,13 @@
+Image: p54_skrabanslon_gram.png
+Generated: 2026-10-01
+Candidate: P6 batch_07 (type 5.4) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a camel with one hump stands still on all four legs on the right, side view, facing right, eyes half closed, content. a grey elephant with a trunk and big ears stands firmly on all four legs (all four feet on the ground) on the left behind the camel, facing right, holding the lower end of the stick curled firmly in the tip of its trunk (no stick part beyond the trunk grip) a long wooden back-scratcher stick with a small hand-shaped end; the hand-shaped end rubs the middle of the camel's back. The elephant is the active one scratching, the camel is the passive one being scratched on its back. Only the elephant holds the back-scratcher. The only contact is the back-scratcher on the camel's back. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: accepted set r3 (P6 batch_07). Blind forced-choice target vs gram 5/5 per sentence variant (10/10, no ambiguity remarks) by fresh headless opus sessions; lex + real-world check (fresh opus, both sentences) clean. Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P6/batch_07/

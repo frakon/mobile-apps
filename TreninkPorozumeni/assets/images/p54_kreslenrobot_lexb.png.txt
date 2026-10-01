@@ -1,0 +1,13 @@
+Image: p54_kreslenrobot_lexb.png
+Generated: 2026-10-01
+Candidate: P6 strict audit repair (type 5.4) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: On the left, a firefighter (adult man) in a yellow helmet and dark uniform sits on a stool facing right and holds a drawing board with a sheet of paper, drawing on it with a pencil; the paper is turned toward the viewer and shows a simple pencil sketch of the robot sitting. On the right, a silver robot with a square head with one single short antenna, two round eyes, two arms and two legs sits on a stool facing left toward the firefighter, posing still for the portrait, hands empty on its knees. The firefighter is the active artist drawing, the robot is the passive model being drawn. Only the firefighter has pencil and paper. Two stools. Two clearly separate whole figures with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification (P6 strict audit 2026-10-01): replaced previous asset after strict re-test remarks; final set blind forced-choice (4 shuffled pictures) 5/5 per sentence with fresh headless opus, lex/real-world check: no faults. Details: TF/Temp/P6/strict_audit/report.md

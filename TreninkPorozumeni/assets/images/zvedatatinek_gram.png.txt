@@ -1,0 +1,13 @@
+Image: zvedatatinek_gram.png
+Generated: 2026-09-30
+Candidate: batch_09 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small boy with short brown hair in a red-and-white striped T-shirt and blue shorts stands firmly on both feet on the ground and holds both arms stretched straight up like a weightlifter; on his two raised hands he holds a father with short brown hair and a short brown beard in a green shirt and jeans lying flat horizontally high above the boy's head, like a plank, both of the father's arms stretched forward to the left like a flying superhero, both arms and both hands clearly visible. The father's whole body is above the boy's head: his head sticks out far to the left, his legs stick out far to the right, nothing of the father overlaps the boy's body. The small boy is magically strong like a superhero. The boy is the active one lifting, the father is the passive one being lifted. Two clearly separate whole people with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person clearly visible, exactly two arms and two legs per person, exactly four legs per four-legged animal, calm friendly faces with mouths closed, no fused or hybrid animals, the only contact is the boy's two hands under the father's back, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (batch_09): target/gram pair 5/5 forced choice for both sentences (variant 1 + swapped); lex check: each picture matches only its own sentence or neither, no real-world faults. Final round folder: r4. See AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P3/batch_09/report.md

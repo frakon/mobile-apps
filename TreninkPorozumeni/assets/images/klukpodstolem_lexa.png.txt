@@ -1,0 +1,14 @@
+Image: klukpodstolem_lexa.png
+Generated: 2026-09-30
+Candidate: batch_06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a brown wooden table with a flat rectangular top and four straight sturdy legs, all four legs clearly visible and complete down to their feet, the open space under the table top between the legs clearly visible; the table is a complete piece of furniture: top and four legs; a boy with short brown hair in a blue T-shirt, blue jeans and red sneakers stands on the ground right BESIDE the table, to the right of it with a clear empty gap, his sneakers and the table's feet at the same level. The boy is next to the table, not on it and not under it. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_06, source folder r1):
+Pair 10/10 correct (round 1), no remarks; lex check L1: A->target, B->gram, faults none.

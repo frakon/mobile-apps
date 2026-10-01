@@ -1,0 +1,13 @@
+Image: pespodlavici_gram.png
+Generated: 2026-09-30
+Candidate: P4 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, soft colours: one long wooden park bench seen from the front: a flat plank seat, a backrest of horizontal slats running along the WHOLE length of the seat, and four sturdy wooden legs clearly visible (the bench is a complete piece of furniture: seat, full-length backrest and four legs). a brown dog with floppy ears (exactly four legs and one tail) is lying curled up asleep with eyes closed ON TOP of the bench seat, resting on the seat planks in front of the backrest. The space under the bench is empty. The dog is clearly on the bench, not under it and not beside it. Everything complete and anatomically correct, calm friendly face. Only these things in the picture, floating in pure white empty space, no ground, no floor line, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30): P4 batch_02, final candidate set r3. Blind forced-choice target vs gram 10/10 (5 per variant), fresh opus headless sessions, no ambiguity/glitch remark; lex check (4 shuffled pictures, one fresh session): only target~sentence1 and gram~sentence2; real-world fault check clean.

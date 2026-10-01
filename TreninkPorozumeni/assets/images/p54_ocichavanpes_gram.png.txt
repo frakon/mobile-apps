@@ -1,0 +1,13 @@
+Image: p54_ocichavanpes_gram_c1.png
+Generated: 2026-10-01
+Candidate: P6 batch_01 round 3c
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: Wide picture with a white margin all around, both animals completely inside the picture. a red fox stands still on all four legs on the RIGHT, side view, facing right, head up looking straight ahead, calm, its tail at its rear on the left side. a short-haired brown dog with a thin tail stands on all four legs on the LEFT, behind the fox with a clear gap of white space between their bodies, facing right, neck stretched forward, head lowered, only the tip of its nose touching the fox's tail end, sniffing it. The dog is the active one sniffing; the fox is the passive one being sniffed. The two bodies do not overlap; only the nose tip touches. Both animals are realistic in size relative to each other. Two clearly separate whole animals with correct realistic anatomy, slight three-quarter view so all four legs of each are visible and separate, each tail at the rear end of its own body, no extra legs, calm friendly faces with mouths closed, no fused or hybrid animals, all eight paws standing exactly on one and the same horizontal ground line, neither animal higher than the other, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (P6 batch_01): t4: forced choice 10/10, no remarks; lex/real-world check t5: no faults

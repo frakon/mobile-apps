@@ -1,0 +1,13 @@
+Image: p53_kachnaplave_lexa.png
+Generated: 2026-10-01
+Candidate: P5 batch_01 (type 5.3) round 1b
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one grey goose with a long black neck and a white cheek patch swimming on a flat oval blue pond, its body floating low in the water, belly and feet hidden under the water surface, small ripples around it. No duck anywhere. There is exactly one goose in the whole picture, no reflections. Correct realistic anatomy, calm friendly face, floating in pure white empty space, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: accepted (P5 batch_01, final set from folder r2). Blind forced-choice target vs gram 5/5 per sentence variant (10/10, counts reported correctly by all evaluators) by fresh headless opus sessions; lex + real-world check (fresh opus). Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P5/batch_01/

@@ -1,0 +1,13 @@
+Image: p54_vezenovce_gram.png
+Generated: 2026-10-01
+Candidate: P6 batch_11 (type 5.4) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a white woolly sheep with a black face and black legs walks upright on its hind legs on the left behind a wooden wheelbarrow, facing right, leaning slightly forward: one front leg grips the left handle and the other front leg grips the right handle, pushing it forward. The wheelbarrow is complete and oriented correctly: the single wheel is at the FRONT end on the right, far away from the sheep; the two handles point back to the left toward the sheep; the two short back legs are under the tub near the handles; one front wheel, two long handles, two short back legs, a deep wooden tub. a pink pig with a curly tail sits deep INSIDE the tub, all its legs inside the tub, only its head and shoulders above the rim, riding; its tail and hind legs are hidden inside the opaque wooden tub, nothing pokes through the tub walls. The sheep is the active one pushing and walking, the pig is the passive one carried in the wheelbarrow. Only the pig is in the wheelbarrow. The pusher's feet and the wheel stand on the same ground level. Two clearly separate whole animals with correct realistic anatomy, the pusher's legs complete and fully visible, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: P6 batch_11 tested set r2; blind forced-choice 10/10 (v1->target 5/5, v2->gram 5/5, fresh headless opus sessions, no remarks); lex/real-world check (fresh opus, 4 shuffled pictures, both sentences): only target~v1, gram~v2, no faults.

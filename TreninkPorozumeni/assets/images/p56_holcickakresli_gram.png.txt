@@ -1,0 +1,14 @@
+Image: holcickakresli_gram.png
+Generated: 2026-10-01
+Candidate: P8 batch08 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a girl about six years old with exactly two blond pigtails, one on each side of her head, tied with small red bows hanging at both sides of her head, in a short-sleeved red dress and red shoes sits on a small wooden chair with a backrest and four legs, pulled up close to a small complete wooden table with four legs, facing the table, her right hand drawing a grey cat with a grey crayon right now, her left hand resting flat on the table: the cat's head with pointed ears and whiskers and its body are drawn, the legs and the tail are still missing, an open box of coloured crayons with a grey gap on the table. It is clearly the MIDDLE of the activity: the work is only half done and it is being done right now. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_holcickakresli_gram.png from P8 batch08 folder r3 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 in final pair round 3 (3b) (5 x v1 + 5 x v2 sentence, fresh headless opus per trial, neutral names), only cosmetic consistency notes in that round; lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched, no real-world faults. Logs: Temp/P8/batch_08/bt_results.jsonl, lex_results.jsonl.

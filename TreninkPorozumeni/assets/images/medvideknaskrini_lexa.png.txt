@@ -1,0 +1,14 @@
+Image: medvideknaskrini_lexa.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_15 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one wooden bed with four legs, a white pillow and a blue blanket, seen from a slightly elevated three-quarter side view. One brown teddy bear SITS on the bed on top of the blanket, its whole body visible. The teddy is on the bed. There is no wardrobe anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Selected: batch_15 folder r1
+4. Blind-test result: pair r1 BT 10/10 (no remarks); lex L1 correct (A=target, B=gram), notes only: open doors without knobs, paint specks

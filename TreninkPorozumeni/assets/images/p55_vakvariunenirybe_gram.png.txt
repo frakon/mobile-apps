@@ -1,0 +1,14 @@
+Image: vakvariunenirybe_gram.png
+Generated: 2026-10-01
+Candidate: P7 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one rectangular glass aquarium full of clear light-blue water, with green water plants and small pebbles on its bottom, standing on a small wooden cabinet. Exactly one bright orange goldfish swims clearly visible in the middle of the aquarium water. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, floating in pure white empty space, only the elements described, no scenery, no decorations, nothing else in the picture.
+
+Installed as p55_vakvariunenirybe_gram.png from P7 batch_01 folder r1 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2 sentence) with no ambiguity remark in the final pair round; lex check (4 shuffled pictures, both sentences) only target~v1 and gram~v2 matched. Logs: Temp/P7/batch_01/bt_results.jsonl, lex_results.jsonl.

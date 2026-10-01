@@ -1,0 +1,11 @@
+Image: hrajeopiceklobouk_lexb.png
+Generated: 2026-10-01
+Candidate: P9 batch_01 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A boy with short brown hair in a green T-shirt (the boy wears a big yellow straw hat on its head) and a small ginger kitten (the kitten has nothing on its head, no hat, no cap) play together with a ball: the boy rolls a blue ball on the floor toward the kitten, the kitten reaches for it. ONLY the boy wears a big yellow straw hat on its head; the kitten has nothing on its head, no hat, no cap. Both arms of each figure fully visible, none hidden behind a body. Both figures shown completely from head to toe, feet fully inside the picture, small and centered with white margin all around. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no monkey anywhere in the picture.

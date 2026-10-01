@@ -1,0 +1,13 @@
+Image: p54_obvazovandoktor_lexa.png
+Generated: 2026-10-01
+Candidate: P6 batch_08 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a brown dog with floppy ears stands on three legs on the right, facing left, and lifts one front leg a little forward with the knee bent naturally; several white bandage turns already wrap that front leg. a boy (about 8 years old) with a red cap, a red T-shirt and blue trousers stands on the left, facing right, pressing a small roll of white bandage directly against the dog's front leg with one hand, the roll touching the front leg, no loose strip or hanging end anywhere, and winding the bandage around the dog's outstretched front leg with the other hand. The boy is the active one bandaging and holds the bandage roll; the dog is the passive one being bandaged; the boy has no bandage on itself. Two clearly separate whole figures with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture. There is no stool, no chair and no furniture anywhere in the picture.
+
+3. Verification: ACCEPTED P6 batch_08 round 1 - blind trials 10/10 (5 v1->target, 5 v2->gram, fresh opus, no ambiguity remarks); lex/real-world check (fresh opus): only target~A, gram~B, no faults.

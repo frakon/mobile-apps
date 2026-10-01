@@ -1,0 +1,13 @@
+Image: p53_holcickadestniky_target.png
+Generated: 2026-10-01
+Candidate: P5 (type 5.3) batch_06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a little girl with brown pigtails in a yellow dress walking to the right, front view, carrying exactly TWO closed yellow umbrellas (2 in total, no more, no fewer), all the same size, side by side in one row, clearly separated with space between them, not overlapping, each fully visible and easy to count, no other closed yellow umbrellas anywhere, no background repeats. She holds one closed umbrella in each hand by its handle, one on her left side and one on her right side. Every person and animal has correct realistic anatomy with complete limbs, calm friendly faces, no fused or hybrid animals; objects, buildings and plants are ordinary realistic things with NO faces, NO arms and NO legs. Everything shown whole, nothing cut off by the picture edge. Simple minimal scene on a plain white background, no text, no letters, no patterns, nothing else in the picture.
+
+3. Blind test result: r1 10/10, counts 2 vs 1 seen 10/10, 0 glitch remarks; lex L1 target~A gram~B only, faults none. Accepted into assets 2026-10-01 by P5 (type 5.3) batch_06.

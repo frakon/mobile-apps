@@ -1,0 +1,11 @@
+Image: obvazujeovcekorunka_target.png
+Generated: 2026-10-01
+Candidate: P9 pilot round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A friendly silver robot with a round head, round eyes and one short antenna (the robot has nothing on its head, no crown, no hat) stands upright on both straight legs (both legs fully visible) and is in the middle of wrapping a white bandage around one front leg of a white woolly sheep (the sheep wears a big shiny golden crown, clearly visible on its head); the sheep stands calmly on all four legs like a real sheep (body horizontal, never upright on hind legs), exactly four legs all clearly visible: two hind legs on the ground, one front leg on the ground and one front leg slightly lifted forward toward the robot; the robot holds a white bandage roll in one hand, a strip of bandage runs from the roll to the half-wrapped leg, the wrapping is clearly still in progress. ONLY the sheep wears a big shiny golden crown, clearly visible on its head; the robot has nothing on its head, no crown, no hat. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,14 @@
+Image: myskavhrnku_gram.png
+Generated: 2026-09-30
+Candidate: batch_06 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big red cylindrical ceramic mug with straight parallel walls and one handle, much bigger than the mouse standing upright; a small grey mouse with round ears and a long thin pink tail sits ON the mug: perched on top of the rim edge of the mug, balancing on the rim with all four paws on the rim, its whole body, legs and tail fully visible ABOVE the rim, outside the mug, its tail hanging down along the outside of the mug wall away from the handle. The mouse sits on the mug, not inside it. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_06, source folder r5):
+Pair 10/10 (repair round 4: gram = mouse perched on the rim of upright mug), no remarks; lex L5 correct, faults none.

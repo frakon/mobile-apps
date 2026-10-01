@@ -1,0 +1,11 @@
+Image: p58_piskalanapistalku_target.png
+Generated: 2026-10-01
+Candidate: P10 batch13 (type 5.8) round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails tied with ribbons, wearing a pink dress blows a small wooden whistle held in the mouth. She is unmistakably a girl: long pigtails and a pink dress. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Standing, one hand holding  a small classic light-wooden whistle: one thin round straight wooden tube about as long and as thick as a child's finger, with a cut mouthpiece at one end and one small notch on top, no finger holes; exactly the same whistle shape in every picture with its mouthpiece between the lips, cheeks puffed, blowing hard; three short curved sound lines come out of the whistle's notch; the other arm relaxed at the side. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

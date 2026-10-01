@@ -1,0 +1,14 @@
+Image: jablkomezihruskou_gram.png
+Generated: 2026-09-30
+Candidate: batch_06 round 1b
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: exactly three plain realistic fruits (no faces, no eyes, no arms, no legs, not cartoon characters) lying in one straight horizontal row with clear equal gaps, all bottoms at the same level, all about the same size. From left to right: a round red apple on the LEFT, a yellow-green pear in the MIDDLE, a curved yellow banana on the RIGHT. The pear lies between the apple and the banana. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_06, source folder r1b):
+Pair 10/10 (round 1b and again with r2 target, repair round 1), no glitch remarks; lex L2: A->target, B->gram, faults none.

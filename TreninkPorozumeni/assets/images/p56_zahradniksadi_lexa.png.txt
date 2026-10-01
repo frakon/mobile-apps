@@ -1,0 +1,14 @@
+Image: zahradniksadi_lexa.png
+Generated: 2026-10-01
+Candidate: P8 batch_01 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: an adult woman with a blond bob haircut in a light blue dress and white shoes kneels at one long low strip of dark brown garden soil lying flat, planting tulips right now: with both hands she is setting one young red tulip plant with its root ball of soil (just taken out of a small black plastic plant pot) down into a small hole in the soil, the root ball going into the hole; two red tulip plants already stand planted upright in the soil next to it, and three more red tulip plants still sit in their small black plastic pots on the ground beside her waiting; one empty pot lies beside them. No man anywhere. It is clearly the MIDDLE of the activity: the work is only half done and it is being done right now. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_zahradniksadi_lexa.png from P8 batch_01 folder r5 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2 sentence) with no ambiguity remark beyond cosmetic notes in the final pair round; lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched, no real-world faults. Logs: Temp/P8/batch_01/bt_results.jsonl, lex_results.jsonl.

@@ -1,0 +1,13 @@
+Image: ucitelpodhodinami_target.png (accepted from folder r2)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_12 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one wide flat rectangular section of pale blue classroom wall filling most of the picture, with a thin grey floor line at its bottom. One round white wall clock with a black rim, twelve short black hour marks without any numbers and two black hands hangs high on the wall in the horizontal middle. One tall man, a teacher with short grey hair and glasses, in a brown jacket, beige trousers and brown shoes, holding a thick blue book under his left arm, standing upright facing the viewer, both feet on the floor line, in the horizontal middle, DIRECTLY UNDER the clock, the clock right above his head with a small gap of wall between. The teacher stands under the clock, not beside it. Every person has exactly two arms, two hands with five fingers, two legs and two feet, all fully visible, calm friendly face. Everything shown whole, with correct realistic anatomy and plausible sizes, on pure white empty space, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram r2 pair 10/10 (0 remarks); lex/real-world check L3 clean (only notes: wall panel, intended) (target~s1, gram~s2 only). Accepted into assets 2026-09-30 by P4 batch_12.

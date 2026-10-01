@@ -1,0 +1,11 @@
+Image: p55_zaknepiseukol_target.png
+Generated: 2026-10-01
+Accepted candidate: P7 batch_04 (type 5.5) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one small school desk with four legs and a chair; on the desk lies one open exercise book with lined pages and one yellow pencil, the space under the desk open; a schoolboy about eight years old with short brown hair in a green sweater and grey trousers sits on the chair at the desk, his legs and shoes clearly visible under the desk, raising his right hand high above his head as if to answer a question; his left hand rests flat on the desk; the pencil lies untouched on the desk next to the open book, he does not hold it. He is clearly not writing. Calm friendly face, mouth closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

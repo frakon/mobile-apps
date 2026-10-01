@@ -1,0 +1,13 @@
+Image: hodinynaddvermi_lexb.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_10 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one closed brown wooden door with a golden handle, set in a rectangular section of light beige wall, the wall section much wider and taller than the door, seen straight from the front. A square framed picture of one red flower hangs on the wall high ABOVE the door, centred over it. There is no clock anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result (P4 batch_10, installed from r4): pair r1 10/10 no remarks; lex L4 clean (lexa regenerated r2-r4). Fresh headless claude -p --model opus evaluator per trial.

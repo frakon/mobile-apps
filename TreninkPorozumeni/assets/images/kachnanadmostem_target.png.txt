@@ -1,0 +1,17 @@
+Image: kachnanadmostem_target.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_07 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one small humpback stone footbridge: a thick curved stone arch whose walkway on top is itself gently arched, with no towers, no pillars and no posts sticking up; both ends of the bridge rest firmly on the floor level, one big open semicircular arch opening beneath it, the space under the arch empty. One small white duck, seen from the side, flying to the right with both wings spread, FLIES high ABOVE the bridge, its wingspan only about one fifth of the bridge's length, with a large empty gap between the duck and the top of the bridge. The duck does not touch the bridge. The space under the arch is empty. The duck flies above the bridge, not under it. Every animal has correct realistic anatomy: exactly four legs and one tail each (a bird has exactly two wings and two legs), no fused or hybrid animals, calm friendly face with mouth closed. Everything shown whole, with correct realistic anatomy and plausible sizes, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+Selected candidate: kachnanadmostem_target_c2 (pre-screen pick)
+
+3. Acceptance:
+- Installed 2026-09-30 from P4 batch_07 work folder r4
+- Blind test: pair accepted after repair round 3 (folder r4) 10/10 no remarks; lex L4 clean

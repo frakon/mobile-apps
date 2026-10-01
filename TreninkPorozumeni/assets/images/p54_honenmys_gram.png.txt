@@ -1,0 +1,13 @@
+Image: p54_honenmys_gram.png
+Generated: 2026-10-01
+Candidate: P6 batch_10 (type 5.4) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a brown hedgehog with spines runs away on the right, facing right, mid-stride, its head and eyes facing forward to the right in the running direction, frightened. a grey mouse with a long thin tail runs right behind it on the left, facing right, mid-stride, eager, clearly chasing it. Both run in the same direction to the right with a small gap between them, bodies not touching. The mouse is the active chaser behind; the hedgehog is the passive one being chased, in front. Two clearly separate whole small animals with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification (P6 batch_10, final set r2): blind forced-choice trials 5/5 per sentence (fresh headless opus), lex + real-world check by fresh opus session: no faults, no ambiguity remarks.

@@ -1,0 +1,11 @@
+Image: pozorujetatinekcepice_target.png
+Generated: 2026-10-01
+Candidate: P9 strict audit 2 (5.7) repair round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A father with a short brown beard, in a red-and-black checked shirt and khaki trousers (the father wears a red knitted winter cap on its head, resting directly on the head) looks at a green frog (the frog has nothing on its head, no cap, no hat) through binoculars held with both hands, both eyepieces pressed right against his eyes; he lies flat on his belly on the floor level, propped up on both elbows, legs stretched out behind him, so that the binoculars are low, horizontal and exactly at the height of the frog's head, both lenses pointing straight and level at the frog, looking THROUGH them directly at the frog, not above it; the frog sits crouched on all four legs like a real frog some distance away, facing sideways, not looking back. ONLY the father wears a red knitted winter cap on its head; the frog has nothing on its head, no cap, no hat. The father and the frog are on the same floor level. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, small and centered with a wide white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

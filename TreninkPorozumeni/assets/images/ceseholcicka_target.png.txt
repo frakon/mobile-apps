@@ -1,0 +1,13 @@
+Image: ceseholcicka_target.png
+Generated: 2026-09-30
+Candidate: batch_11 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: a clown with a red round nose, curly orange hair, white face and a colourful polka-dot costume sits upright on a small wooden stool with four visible legs, facing left in profile, hands on the lap, sitting still with a calm face, both legs visible. a little girl with two brown pigtails in a pink dress stands upright behind the clown, a little apart to the right of the stool, facing left, holding a big comb in her right hand; the teeth of the comb are pushed deep INTO the clown's hair at the back of the head, the comb half buried in the hair and pulling a lock of hair straight, clearly combing it, no gap between the comb and the hair. The girl is the active one combing hair, the clown is the passive one having the hair combed. Both arms and both legs of each figure clearly visible, the standing figure not hidden behind the sitting one. Two clearly separate whole people with correct realistic anatomy, every arm, leg, paw, hoof, wing and tail complete and fully visible, not hidden behind anything, exactly two arms and two legs per person, exactly two legs and two wings per bird, exactly four legs per four-legged animal, calm friendly faces, no fused or hybrid animals, all feet at the same ground level, both whole figures fully inside the picture with white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result: batch_11 accepted (round 3); target-vs-gram forced choice 10/10 (5 per sentence variant, fresh headless opus sessions) with no ambiguity remarks in the accepted round; lex/real-world check by fresh opus session: each sentence matches only its intended picture, no faults (round 3)

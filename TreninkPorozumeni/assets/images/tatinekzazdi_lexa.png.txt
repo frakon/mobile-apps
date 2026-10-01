@@ -1,0 +1,13 @@
+Image: tatinekzazdi_lexa.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_10 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a long straight free-standing red brick wall seen straight from the front, as tall as a man's waist, much wider than a man, made of solid opaque red bricks, the wall is a complete short wall segment with flat top and two clean ends. a father with short brown hair and a short brown beard, wearing a green sweater, blue jeans and brown shoes SITS ON TOP of the wall, in the middle of its flat top, his lower legs hanging down in front of the wall, his hands resting on the wall top beside him. He is clearly sitting on the wall, not standing. Every person has correct realistic anatomy: two arms, two hands with five fingers, two legs, calm friendly face with mouth closed. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result (P4 batch_10, installed from r3): pair r3 10/10 no remarks; lex L3 clean. Fresh headless claude -p --model opus evaluator per trial.

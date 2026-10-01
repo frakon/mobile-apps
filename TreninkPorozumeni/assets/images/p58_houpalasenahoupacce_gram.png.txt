@@ -1,0 +1,11 @@
+Image: p58_houpalasenahoupacce_gram.png
+Generated: 2026-10-01
+Candidate: P10 batch08 (type 5.8) round 6
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little boy of about six with short brown hair clearly visible (not bald, a normal boy's haircut), wearing a blue T-shirt and long dark trousers swings high on a playground swing hanging from a wooden frame, holding the ropes. He is unmistakably a boy: very short hair and trousers. This picture is the mirrored twin of a paired picture: exactly the same action, pose, objects, composition and style; the ONLY difference is that the figure is boy, not girl. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Three-quarter front view. The swing frame is complete and symmetric: a LEFT A-shaped pair of wooden legs and a RIGHT A-shaped pair of wooden legs, both standing on the same level, joined at the top by one horizontal top bar resting on both A-shapes; the swing hangs in the middle between them; the swing seat hangs on two ropes, each rope one single continuous unbroken straight line from the top bar down to the seat, no breaks, no loose ends; the child sits on the seat, each hand firmly gripping one rope at shoulder height, fingers closed around the rope, the ropes running at the outer sides of the body, the child sitting fully on the seat, the seat hanging level and centred under the top bar, the swing tilted forward mid-swing with legs stretched forward. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

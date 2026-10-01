@@ -1,0 +1,13 @@
+Image: konmeziosly_gram.png (candidate folder r1)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_14 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: exactly three separate whole animals standing on all four legs, all facing left, all hooves at the same bottom level, side by side in one straight horizontal row with clear equal gaps, not touching, left to right: a big brown horse with a black mane, clearly taller than the donkey, a small grey donkey with long upright ears in the middle, a small pink pig with a curly tail. Each animal is complete with four legs, one head and one tail. Every animal has correct realistic anatomy (a four-legged animal has exactly four legs and one tail, a bird exactly two wings and two legs), no fused or hybrid animals, calm friendly face with mouth closed. Everything shown whole, with correct realistic anatomy and plausible sizes, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, no letters, no signs with writing, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram round 1 pair 10/10 (0 remarks); lex/real-world check L1 clean (target~s1, gram~s2 only; no faults). Accepted into assets 2026-09-30 by P4 batch_14.

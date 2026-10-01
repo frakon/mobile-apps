@@ -1,0 +1,14 @@
+Image: koupebabicka_gram.png
+Generated: 2026-09-30
+Candidate: audit_repair_A round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one white bathtub standing on four short curved metal feet, all four feet clearly visible, the tub full of white soap foam. The old grandmother with grey hair in a bun and round glasses (bare shoulders) sits inside the bathtub in the foam at the LEFT end of the tub, close to the boy, only her head, shoulders and both arms above the foam, her two hands resting relaxed on the tub rim right next to her own shoulders, arms bent and short, not reaching out. A small boy with short brown hair in a red-and-white striped T-shirt and blue shorts kneels on both knees on the floor beside the tub on the left, fully dressed, completely dry, leaning over the rim and with one hand pressing a yellow sponge directly onto the grandmother's bare shoulder and back, the sponge clearly touching her skin and scrubbing her, soap bubbles on her shoulder; his other hand rests on the rim. The boy is the active one who washes the grandmother; the grandmother is the passive one being washed and holds nothing. The boy is outside the bathtub. The kneeling boy's knees are at the same level as the bathtub feet. Two clearly separate whole people with correct realistic anatomy and normal arm lengths, every arm and leg complete and fully visible, both arms and both hands of both people clearly visible, calm friendly faces with mouths closed, a light playful mood, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+Final selection: audit_repair_A round 1, candidate c4 of 4 (working file Temp/P3/audit_repair_A/koupebabicka/r1/koupebabicka_gram_c4.png); replaces batch_05 r1 gram (strict audit: sponge not touching grandmother; grandmother's arm too long).
+Blind test / verification (2026-09-30): installed target vs this gram, forced choice, 5 fresh headless opus trials per sentence (variant 1 + swapped), 10/10 correct, all AMBIGUITY remarks 'none' (no glitches); independent fresh opus lex + real-world check of all 4 pictures: MATCH_A: target only, MATCH_B: gram only, FAULTS: none.

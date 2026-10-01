@@ -1,0 +1,11 @@
+Image: p55_holcickaneotviradarek_lexb.png
+Generated: 2026-10-01
+Candidate: P7 batch_11 (type 5.5) round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a square box made of stiff blue cardboard printed with small white stars (a gift box with smooth straight sides, no paper flaps) stands on a small square wooden table with four legs; one old grandmother with grey hair in a bun, wearing a green cardigan and a long grey skirt stands beside the table lifting the box's star-patterned blue lid, which has a big red bow on top, up off the box with both hands, inside the open box colourful tissue paper is visible. No girl anywhere. The whole person from head to shoes is fully inside the picture, both arms and both hands visible. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture. The lid is a separate matching star-patterned square lid; the box's top edge is straight and clean.

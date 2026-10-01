@@ -1,0 +1,14 @@
+Image: lampavedlekresla_gram.png
+Generated: 2026-09-30
+Candidate: batch_11 round 6
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: a big brown upholstered armchair seen straight from the front: a very tall wide backrest, two thick armrests, a seat cushion, and a fabric skirt reaching down to the floor so no legs or gap under the chair are visible, in the foreground; a tall floor lamp: a round flat black base, one long thin straight black pole and a big yellow cone-shaped lampshade on top, the lamp about one and a half times as tall as the armchair stands on the floor exactly centred BEHIND the middle of the armchair, further from the viewer and drawn a little smaller because it is further away: the tall backrest completely hides the lamp base and the lower pole; a long piece of the thin black pole is visible above the backrest, and a small sliver of white empty space is visible on both sides of the pole just above the backrest top, making clear the pole is a separate object behind the chair, not attached to it; the yellow shade is high above. The lamp stands behind the armchair, not beside it and not on it. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, objects have no faces, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_11, source folder r6):
+5 repair rounds (r2 base under chair, r3 floating base, r4 pole out of backrest 1/10, r5 offset read as beside); final r6: skirted armchair, lamp centred behind. Pair r6 10/10 no doubt remarks; lex L6 clean.

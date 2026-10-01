@@ -1,0 +1,13 @@
+Image: p53_kluklodicky_lexa.png
+Generated: 2026-10-01
+Candidate: P5 batch_08 (type 5.3) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a boy in a red T-shirt crouching on the grassy left bank of a wide calm blue stream that fills the lower part of the picture; three yellow rubber ducks float on the water in a horizontal row in front of him, far apart; his hands are empty. No boat anywhere. There are exactly three rubber ducks in the whole picture, no more and no fewer, no other rubber ducks anywhere, no reflections, no patterns. The three rubber ducks are the same size, spaced well apart side by side, clearly separated, not touching, not overlapping, not stacked, none cut off at the edge, each one complete and fully visible and easy to count. Correct realistic anatomy, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, plain white background with only the few scene elements named, no text, no letters, nothing else in the picture.
+
+3. Verification: accepted (P5 batch_08, final set; this image generated in round 1). Blind forced-choice target vs gram 5/5 per sentence variant (10/10, counts reported correctly by all evaluators) by fresh headless opus sessions; lex + real-world check (fresh opus). Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P5/batch_08/

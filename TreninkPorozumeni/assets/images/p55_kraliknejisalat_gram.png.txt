@@ -1,0 +1,11 @@
+Image: p55_kraliknejisalat_gram.png
+Generated: 2026-10-01
+Candidate: P7 batch_08 (type 5.5) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one loose-leaf lettuce head with frilly light-green open leaves (clearly lettuce, not cabbage) and one orange carrot with green leaves lie on the ground a short distance apart; one white rabbit with long upright ears sits right next to the lettuce, awake with eyes open, holding a torn green lettuce leaf in its mouth and chewing it, clearly eating the lettuce; the carrot is whole and untouched. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

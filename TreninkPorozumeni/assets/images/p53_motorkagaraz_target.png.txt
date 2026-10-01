@@ -1,0 +1,13 @@
+Image: p53_motorkagaraz_target.png
+Generated: 2026-10-01
+Candidate: P5 batch_12 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one wide open garage seen from the front, a plain empty rectangular opening with no door visible at all, simple flat concrete roof, plain grey floor and walls inside, and standing inside the garage exactly ONE red motorcycle with a fuel tank, in realistic life size, as tall as a person's waist compared with the garage opening (a single one only), no other red motorcycle with a fuel tank, in realistic life size, as tall as a person's waist compared with the garage opening anywhere in the picture. The motorcycle stands parked in side view in the middle of the floor, two wheels, nobody on it. Simple minimal scene on a plain white background, no people, no animals, no text, no letters, no patterns, nothing else in the picture.
+
+3. Blind test (P5 batch_12, round 5): target vs gram forced choice 5/5 for both sentences (fresh headless opus), counts reported correctly, no ambiguity/glitch remarks; lex/real-world check passed (MATCH_A/B only target/gram, FAULTS none) — logs Temp/P5/batch_12/bt_*.log, lex_*.log.

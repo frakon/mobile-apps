@@ -1,0 +1,13 @@
+Image: p54_buzenprincezna_target_c2.png
+Generated: 2026-10-01
+Candidate: P6 batch_01 round 5c
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: A complete simple wooden bed with four legs, a white pillow and a light blue blanket, the whole bed and both figures fully visible. a princess (young woman) with long blond hair, a small tiara and a pink dress lies asleep in the bed on the right, head on the pillow, eyes closed, the blanket covering the body up to the chest and the feet hidden under the blanket at the far end of the bed, both arms outside on top of the blanket. a fairy (clearly a young woman, feminine face) with long dark hair in one braid, a light green dress and two big transparent butterfly wings on her back stands on the floor on the LEFT in front of the bed's footboard, standing clearly BESIDE the bed at the left (not behind it), whole body with both legs and both feet visible on the floor, wide awake with eyes wide open, leaning over the bed and clearly SHAKING the sleeper by the shoulder: her/his ONE hand grips the sleeper's upper arm and shoulder (on top of the pajama sleeve, not on the blanket), little motion lines next to that hand; the other arm hangs relaxed at the side, no hand near the face, no finger at the lips; the mouth is open saying 'wake up'. The fairy is the active one waking the other up; the princess is the passive one still sleeping. Only the princess is in the bed. Not tucking in, waking up. Two clearly separate whole figures with correct realistic anatomy, slight three-quarter view so that the far arm and far leg of every figure are also visible and not hidden behind any body; every figure has exactly two arms with two visible hands (or the correct number of legs for an animal), no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture. Exactly two hands per figure; the sleeper's own two hands lie on the blanket. The fairy's hand clearly touches the princess's shoulder, not only the bed or blanket.
+
+3. Blind-test result (P6 batch_01): t5 (repair round 4): forced choice 10/10, no remarks; lex/real-world check: no faults

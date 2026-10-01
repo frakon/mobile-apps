@@ -1,0 +1,13 @@
+Image: p54_fotografovanholcicka_target.png
+Generated: 2026-10-01
+Candidate: P6 batch_06 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a cook (grown-up adult man) in a tall white chef hat, a white chef jacket and black trousers stands on the left, facing right, holding a black camera up to the eye with both hands, taking a photo of a girl (about 7 years old) in a yellow dress with two pigtails. The girl stands on the right, facing the camera, smiling and posing, holding nothing, NOT holding a camera. A wide empty gap between them. The cook is the active photographer, the girl is the passive one being photographed. Only the cook has a camera. Two clearly separate whole figures with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: P6 batch_06 tested set r1; blind forced-choice 10/10 (v1->target 5/5, v2->gram 5/5, fresh opus sessions, no ambiguity remark); lex/real-world check (fresh opus): no faults, lex pictures match neither sentence.

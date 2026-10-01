@@ -1,0 +1,14 @@
+Image: konvicenastole_target.png
+Generated: 2026-09-30
+Candidate: batch_04 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small red teapot with a spout, a handle and a lid, realistically sized: the teapot is only about one fifth as wide as the table top stands ON TOP of a brown wooden table with a flat rectangular top and four straight sturdy legs, all four legs clearly visible and complete down to their feet; the table is a complete piece of furniture: top and four legs, resting in the middle of the table top; the open space under the table is empty. The teapot is on the table, not under it and not beside it. Every thing is complete and fully visible with correct realistic proportions; every person and animal has correct anatomy with all arms, legs, paws and tail complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_04, source folder r2):
+Blind forced choice r2: 5/5 + 5/5, no remarks. Lex check L1: only target~A, gram~B; faults none.

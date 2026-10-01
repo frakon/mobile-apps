@@ -1,0 +1,14 @@
+Image: klukpredtabuli_gram.png
+Generated: 2026-09-30
+Candidate: batch_06 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: a big green school chalkboard with a thick brown wooden frame all around, standing on two sturdy wooden legs fixed to the left and right sides of the frame, each leg with a flat foot, the green board part reaching from the boy's waist height up to above his head, the legs complete down to their feet; a boy with short brown hair in a blue T-shirt, blue jeans and red sneakers stands directly BEHIND the chalkboard, clearly further from the viewer, facing the viewer: the opaque green board covers the boy's whole body from his waist down to his knees, only his head, shoulders and chest show above the top edge of the frame; below the board his lower legs and sneakers are visible far back, drawn smaller and standing clearly higher in the picture than the chalkboard's front feet, the chalkboard's legs overlapping in front of his shins. The boy is behind the chalkboard, not in front of it. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_06, source folder r3):
+Pair 10/10 in all rounds; gram regenerated twice (frameless board, feet depth remarks); final pair (repair round 2) 10/10 no remarks; lex L3 correct, faults none.

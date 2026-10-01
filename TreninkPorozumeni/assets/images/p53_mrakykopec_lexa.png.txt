@@ -1,0 +1,13 @@
+Image: p53_mrakykopec_lexa.png
+Generated: 2026-10-01
+Candidate: P5 r2_repair round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Soft children's book watercolor illustration, simple, no text, no letters. Pale light-blue watercolor sky filling the picture, one big round green hill at the bottom. Exactly three big dark swallow birds flying in the sky above the hill, each bird with wide open wings about one fifth of the picture width, clearly visible, far apart. No cloud anywhere, no other birds, nothing else.
+
+3. Check (P5 R2 repair, 2026-10-01): lex check by 2 fresh headless opus evaluators (t1+t2, 4 shuffled pictures): lexa matched neither sentence in both; described as intended (3 swallows ~100-120 px wingspan, no clouds); real-world faults: none.

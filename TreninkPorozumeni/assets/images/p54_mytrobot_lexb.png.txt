@@ -1,0 +1,13 @@
+Image: p54_mytrobot_lexb.png
+Generated: 2026-10-01
+Candidate: P6 batch_13 (type 5.4) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: A low round wooden bathtub with solid opaque wooden staves all around, the tub walls completely opaque so nothing inside is visible through them, full of white soap foam. a silver robot with a boxy head, two arms and two legs sits inside the bathtub, only the head, shoulders and arms above the foam, calm, not holding anything. a young princess with long blond hair, a small golden tiara and a long pink dress stands on the floor level next to the bathtub, outside it, whole body and both legs fully visible, bending slightly and scrubbing the back of the robot with a yellow soapy sponge held in one hand; soap bubbles around the sponge. The princess is the active one washing, standing outside the tub, dry; the robot is the passive one being washed inside the tub. Only the princess has the sponge. Two clearly separate whole figures with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture. Side view: the one in the tub faces right in profile, face clearly visible, both arms resting on the tub rim, both hands visible. The sponge is pressed firmly on the upper back of the one in the tub, clearly touching it. Nothing else in or beside the tub. The robot's legs are hidden inside the tub. The robot is drawn in clean side view: its boxy head is turned in the same direction as its body, with its one simple face (two round eyes and a small smile) on the side of the head that faces the other figure; no second face, no lens. The robot has exactly one left arm and one right arm attached at its two shoulders, one on each side of its body. Both robot hands rest on the tub rim, one on each side of its body.
+
+3. Verification: P6 batch_13 final set r4; blind trials 10/10 (v1->target 5/5, v2->gram 5/5, fresh opus sessions, no remarks) and lex/real-world check clean (fresh opus session), 2026-10-01.

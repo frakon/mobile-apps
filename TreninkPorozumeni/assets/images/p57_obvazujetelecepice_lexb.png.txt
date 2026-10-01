@@ -1,0 +1,11 @@
+Image: obvazujetelecepice_lexb.png
+Generated: 2026-10-01
+Candidate: P9 batch_07 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A girl with brown pigtails in a yellow dress (the girl wears a red knitted winter cap on its head, pulled down so it fully covers both ears) stands upright and is in the middle of wrapping a white bandage around one arm/front leg of a hedgehog (the hedgehog has nothing on its head, no cap, no hat): the girl holds a white bandage roll in one hand, one single continuous strip of bandage runs from the roll in her hand directly to the half-wrapped front leg, no loose ends, the wrapping is clearly still in progress; the hedgehog stands calmly in its natural posture (an animal on all four legs, body horizontal), holding that arm/front leg slightly forward. ONLY the girl wears a red knitted winter cap on its head, pulled down so it fully covers both ears; the hedgehog has nothing on its head, no cap, no hat. Both figures are shown whole from head to toe, small and centered with a wide white margin around them, all feet inside the picture. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no calf anywhere in the picture.

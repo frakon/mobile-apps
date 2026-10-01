@@ -1,0 +1,11 @@
+Image: p55_holcickanicnenese_gram.png
+Generated: 2026-10-01
+Candidate: P7 batch_06 (type 5.5) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one girl with two pigtails in a red dress walks forward, seen from the side, carrying one bright blue shopping bag by its handles in one hand, the bag clearly visible in front of her dress; no backpack. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure and object complete and fully visible from top to bottom including feet, shoes and all furniture legs, with a white margin around everything so nothing touches or is cut off by the picture edge, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

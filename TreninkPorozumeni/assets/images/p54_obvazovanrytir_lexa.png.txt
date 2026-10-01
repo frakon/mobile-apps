@@ -1,0 +1,13 @@
+Image: p54_obvazovanrytir_lexa.png
+Generated: 2026-10-01
+Candidate: P6 batch_07 (type 5.4) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a brown horse with a black mane stands on the right on three legs, facing left, lifting one front leg a little forward with the knee bent naturally; several white bandage turns wrap that front leg below the knee. a young prince with a small golden crown, a blue tunic and a red cape stands on the left, facing right, holding a roll of white bandage in one hand; one short tight white bandage strip runs straight from the roll to the turns on the horse's leg, no loose hanging ends, and his other hand wraps it. The prince is the active one bandaging; the horse is the passive one being bandaged; the prince has no bandage on himself. Two clearly separate whole figures with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, no furniture, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: accepted set r4 (P6 batch_07). Blind forced-choice target vs gram 5/5 per sentence variant (10/10, no ambiguity remarks) by fresh headless opus sessions; lex + real-world check (fresh opus, both sentences) clean. Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P6/batch_07/

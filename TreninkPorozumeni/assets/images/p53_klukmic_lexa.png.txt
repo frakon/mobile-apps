@@ -1,0 +1,13 @@
+Image: p53_klukmic_lexa.png
+Generated: 2026-10-01
+Candidate: P5 batch_01 (type 5.3) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a boy with short brown hair in a blue T-shirt and shorts walking to the right, carrying one big green striped watermelon held in front of his chest with both arms. No ball anywhere. There is exactly one watermelon in the whole picture, only one, no second watermelon anywhere, no reflections, no patterns. Correct realistic anatomy, every leg, paw, wing, arm, hand and tail complete and fully visible, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, floating in pure white empty space, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: accepted (P5 batch_01, final set from folder r2). Blind forced-choice target vs gram 5/5 per sentence variant (10/10, counts reported correctly by all evaluators) by fresh headless opus sessions; lex + real-world check (fresh opus). Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P5/batch_01/

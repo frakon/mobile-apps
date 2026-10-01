@@ -1,0 +1,13 @@
+Image: p54_malovanopice_target_c1.png
+Generated: 2026-10-01
+Candidate: P6 batch_01 round 2c
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: a brown bear standing upright stands on the LEFT beside a complete wooden painting easel with three wooden legs all visible, holding a canvas that faces the viewer; the bear holds a paintbrush in the near hand and the brush tip clearly TOUCHES the canvas surface; the other arm hangs relaxed and visible. The canvas shows a clean simple colourful painted portrait (head and shoulders) of the monkey, an exact likeness with the same colours: brown monkey. a small brown monkey sits still on the RIGHT on a complete small wooden stool with four visible legs, facing the bear, posing, both hands resting on the knees, holding nothing.  The bear has only a tiny short stubby round bear tail, no long tail. The bear is the active painter; the monkey is the passive model being painted. Only the bear holds a brush. The bear stands beside the easel, not behind it. Two clearly separate whole figures with correct realistic anatomy, slight three-quarter view so that the far arm and far leg of every figure are also visible and not hidden behind any body; every figure has exactly two arms with two visible hands (or the correct number of legs for an animal), no extra limbs, no fused or hybrid figures, calm friendly faces with mouths closed, simple clear pose, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (P6 batch_01): t3: forced choice 10/10, no remarks; lex/real-world check: no faults

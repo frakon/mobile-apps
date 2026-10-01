@@ -1,0 +1,16 @@
+Image: detizeskoly_gram.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a small cream-coloured school building with a red pointed roof, a small golden bell in a little bell tower on the roof ridge, two windows and a big wide-open front door in the middle, seen straight from the front. Three children with colourful school backpacks, one girl with pigtails, one boy with a red cap and one boy with curly hair, are RUNNING INTO the school: seen from BEHIND, their backs and the backpacks facing the viewer, their faces not visible, they run toward the open door, the first child is just stepping through the doorway into the dark inside. They are entering the school, not coming out. Every person has correct anatomy: one head, two arms, two hands, two legs and two feet each, all limbs complete, calm friendly faces with mouths closed. floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result (P4 batch_09, accepted at test round r1):
+- Forced choice target vs gram: 10/10 correct (5 trials sentence v1 + 5 trials swapped sentence), fresh headless claude -p --model opus per trial, no ambiguity/glitch remarks.
+- Lex session L1: sentence A matched only target, sentence B only gram, lexa/lexb matched neither; real-world fault check: none.
+- Image generated in round folder r1; tested date 2026-09-30.

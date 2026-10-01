@@ -1,0 +1,13 @@
+Image: honikohout_lexb.png
+Generated: 2026-09-30
+Candidate: batch_07 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a brown dog runs fast toward the left, chasing a white goose; the goose runs away further to the left, clearly in front of the dog, fleeing. Both bodies AND both heads face and look toward the left; nobody looks back, nobody faces right. Both run in the same direction toward the left, one behind the other, with a clear empty gap between them. The dog is clearly behind and is the chaser, the goose is clearly in front and is the one being chased and running away. Two clearly separate whole animals with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person clearly visible, exactly two arms and two legs per person, exactly four legs per four-legged animal, calm friendly faces with mouths closed, no fused or hybrid animals, bodies not touching, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (batch_07): target/gram pair 5/5 forced choice for both sentences (variant 1 + swapped), no ambiguity remark requiring repair; lex check: matches neither/only own sentence, no real-world faults. Accepted round: r2. See AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P3/batch_07/report.md

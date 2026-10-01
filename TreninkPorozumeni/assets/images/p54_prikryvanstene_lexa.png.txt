@@ -1,0 +1,13 @@
+Image: p54_prikryvanstene_lexa.png
+Generated: 2026-10-01
+Candidate: P6 batch_07 (type 5.4) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: A low round pet bed (a soft cushion basket) on the right. a small ginger kitten lies curled up asleep inside the pet bed, eyes closed, head resting on the rim, its body and legs under a blue blanket up to the neck, only its head outside the blanket. a pink pig with a curly tail stands on all four legs on the floor level on the left beside the bed, facing right, holding the top edge of the blue blanket in its mouth and pulling it up over the kitten. The pig is the active one covering with the blanket, awake and standing outside the bed; the kitten is the passive one being covered, lying in the bed. The blanket is one continuous piece. Two clearly separate whole animals with correct realistic anatomy, the standing animal's four legs and tail fully visible, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: accepted set r2 (P6 batch_07). Blind forced-choice target vs gram 5/5 per sentence variant (10/10, no ambiguity remarks) by fresh headless opus sessions; lex + real-world check (fresh opus, both sentences) clean. Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P6/batch_07/

@@ -1,0 +1,14 @@
+Image: myskavhrnku_lexb.png
+Generated: 2026-09-30
+Candidate: batch_06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big red ceramic mug with one handle, much bigger than the mouse standing upright with its open top up; a small green frog sits INSIDE the mug: the opaque mug walls hide the frog's whole lower body, only the frog's head and front feet on the rim show above the rim. There is no mouse anywhere. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_06, source folder r1):
+Pair 10/10 (repair round 4: gram = mouse perched on the rim of upright mug), no remarks; lex L5 correct, faults none.

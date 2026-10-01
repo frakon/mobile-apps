@@ -1,0 +1,14 @@
+Image: opicevedlebubnu_target.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_15 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one big red drum standing upright on the floor line, short and wide (wider than tall), its white drum skin on top with a golden rim, yellow zigzag cords around its side, about as tall as the sitting monkey, seen from the side at eye level. one brown monkey with a long curly tail SITS on the floor line right BESIDE the drum, to the right of it with a small empty gap, not touching it, its bottom and feet at exactly the same level as the bottom of the drum, its whole body visible. Nothing is on the drum. The monkey is clearly BESIDE the drum, not on it, not in front of it, not behind it. The monkey sits on its bottom like a person sitting on the floor, back upright, knees up, hands resting on its knees, tail curled on the floor behind it. Every animal has correct realistic anatomy (a mammal has exactly four legs and one tail, a bird has exactly two wings and two legs), no fused or hybrid animals, calm friendly face with mouth closed. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Selected: batch_15 folder r2
+4. Blind-test result: target r2 (r1 'crouching rather than sitting' remark), lexa r3 (tendril-like tail); pair r2 BT 10/10 (no remarks); lex L3 correct, notes: target far arm mostly hidden behind knee (borderline), gram tail fluffy (minor)

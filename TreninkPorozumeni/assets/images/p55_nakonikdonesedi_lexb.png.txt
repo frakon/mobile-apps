@@ -1,0 +1,11 @@
+Image: p55_nakonikdonesedi_lexb.png
+Generated: 2026-10-01
+Accepted candidate: P7 batch_04 (type 5.5) round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one big leafy tree with a straight trunk and one thick straight horizontal branch; a swing hangs from that branch: one wooden seat on two ropes tied around the branch, each rope one continuous unbroken straight line from the branch down to the seat; a little boy about six years old with short hair in a blue T-shirt and blue shorts sits on the swing seat facing the viewer, the two ropes on either side of his body, each hand gripping its rope at shoulder height, feet off the ground. No girl. Calm friendly face, mouth closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

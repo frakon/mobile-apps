@@ -1,0 +1,11 @@
+Image: honizabacepice_lexb.png
+Generated: 2026-10-01
+Candidate: P9 R1 repair (lex vs why-text) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: Both animals run toward the RIGHT side of the picture, one behind the other. On the RIGHT, in front, a brown hedgehog (the hedgehog wears a red knitted winter cap on its head) runs away to the right, its nose pointing right, its back turned to the squirrel. On the LEFT, behind it, a red squirrel with a bushy tail (the squirrel has nothing on its head, no cap, no hat) runs after the hedgehog to the right, its nose pointing right toward the hedgehog's back, front paws reaching toward the hedgehog. The squirrel is the chaser; the hedgehog is the one being chased. All feet at one ground level. ONLY the hedgehog wears a red knitted winter cap on its head; the squirrel has nothing on its head, no cap, no hat. Exactly two clearly separate whole animals with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no frog anywhere in the picture.

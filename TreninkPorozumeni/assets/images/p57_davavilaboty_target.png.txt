@@ -1,0 +1,11 @@
+Image: davavilaboty_target.png
+Generated: 2026-10-01
+Candidate: P9 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A father with a short beard in a checked shirt (the father has bare feet/paws with no shoes or boots) hands one yellow banana to a fairy with small transparent wings in a light green dress (the fairy wears bright red boots on its feet): only the father holds the banana, gripping it in one outstretched hand and offering it; the fairy holds her open empty palm up just below the banana, not yet touching it; the father's other arm hangs freely at his side, both his arms fully visible. The father is the giver, the fairy is the receiver. ONLY the fairy wears bright red boots on its feet; the father has bare feet/paws with no shoes or boots. Both whole figures from head to feet fit completely inside the picture with a white margin around them, nothing cut off at the edges. Exactly two clearly separate whole people with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

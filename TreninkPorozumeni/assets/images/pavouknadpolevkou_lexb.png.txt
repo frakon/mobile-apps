@@ -1,0 +1,13 @@
+Image: pavouknadpolevkou_lexb.png (accepted from folder r5)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_12 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one small round wooden table with a flat top and one thick central leg standing on a wide heavy round wooden foot, standing in the lower part of the picture; on the middle of the table top stands one white bowl full of orange soup. One small black housefly, about as big as a thumb, clearly drawn with two transparent wings, big red eyes and exactly six thin black legs, FLIES high DIRECTLY ABOVE the middle of the bowl, with a big empty gap between the fly and the soup. The fly is much smaller than the bowl. There is no spider and no thread anywhere. Everything shown whole, with correct realistic anatomy and plausible sizes, on pure white empty space, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram r2 pair 10/10 (0 remarks); lex/real-world check L5 clean (only note: bush/soil support of web in lexa, intended) (target~s1, gram~s2 only). Accepted into assets 2026-09-30 by P4 batch_12.

@@ -1,0 +1,11 @@
+Image: strihapesbatoh_lexb.png
+Generated: 2026-10-01
+Candidate: P9 R1 repair (lex vs why-text) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A girl with brown pigtails in a yellow dress (the girl carries a blue backpack on its back) stands next to the rear end of a white woolly sheep, a clear gap between her body and the sheep, her whole body and both legs fully visible beside the sheep, not hidden behind it, (the sheep carries no backpack and no bag) reaching forward with open scissors whose blades are pressed into the wool on the sheep's rump, cutting off a tuft of wool that falls down; the scissors clearly touch the sheep; the sheep stands still on all four legs, body horizontal, like a real sheep, never sitting, no stool, no cape. ONLY the girl carries a blue backpack on its back; the sheep carries no backpack and no bag. Both figures are shown whole from head to toe, small and centered with a wide white margin. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no dog anywhere in the picture.

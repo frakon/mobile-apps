@@ -1,0 +1,11 @@
+Image: budizajicklobouk_target.png
+Generated: 2026-10-01
+Candidate: P9 strict audit 2 (5.7) repair round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A brown hare with long ears (the hare wears a big yellow straw hat on its head, resting directly on the head, its long ears folded down flat along its back under the brim) lies on top of a complete wooden bed (headboard, footboard, mattress and four short legs visible); it lies asleep stretched out on its belly along the mattress, its long body and hind legs stretched out behind it, front paws forward, its head raised with the chin resting on a white pillow at the headboard end, eyes closed (no blanket); the straw hat sits firmly and straight on top of the hare's head, tied under its chin with a yellow ribbon, clearly worn, not touching the pillow; a brown monkey (the monkey has nothing on its head, no hat, no cap) stands on its feet on the floor level beside the headboard, awake with eyes open, its whole body visible in front of the bed, and gently shakes the hare: the monkey's one hand rests clearly on the hare's furry shoulder (on its body, not on the pillow or the bed), its other arm hangs at its side; the monkey's long curled tail is clearly visible. ONLY the hare wears a big yellow straw hat on its head; the monkey has nothing on its head, no hat, no cap. Exactly two clearly separate whole animals with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, small and centered with a wide white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

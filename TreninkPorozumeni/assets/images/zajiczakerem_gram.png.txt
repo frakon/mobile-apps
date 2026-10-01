@@ -1,0 +1,14 @@
+Image: zajiczakerem_gram.png
+Generated: 2026-09-30
+Candidate: batch_06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big round dense green leafy bush, twice as tall as the hare in the background; a brown hare with long upright ears sits on its haunches directly IN FRONT of the bush, closer to the viewer, the hare's whole body with all four paws fully visible, the hare overlapping the lower middle of the bush; the bottom of the hare and the bottom of the bush at the same level. The hare is in front of the bush, not behind it. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_06, source folder r1):
+Pair 10/10 correct (round 1), no ambiguity/glitch remarks; lex check L1: A->target only, B->gram only, faults none.

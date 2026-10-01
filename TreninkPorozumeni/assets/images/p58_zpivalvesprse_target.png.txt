@@ -1,0 +1,11 @@
+Image: p58_zpivalvesprse_target.png
+Generated: 2026-10-01
+Candidate: P10 batch06 (type 5.8) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grandfather with short grey hair on the sides of his head and a big grey moustache, bare chest, wearing long blue swimming shorts stands on the platform under a shower and sings happily with a wide open mouth, a few musical notes floating near his mouth. He is unmistakably an old man: grey moustache, grey hair, male bare chest. Whole figure visible from the top of the head down to both bare feet (barefoot, no shoes, no sandals, toes visible), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The shower is a complete free-standing garden shower: one tall metal pole standing on a small square wooden platform, a round shower head on top, water drops falling from the shower head onto the person. Calm friendly face. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

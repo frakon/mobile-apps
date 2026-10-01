@@ -1,0 +1,14 @@
+Image: miminkovpostylce_lexb.png
+Generated: 2026-09-30
+Candidate: batch_11 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a white wooden baby cot seen straight from the side: a rectangular frame on four short complete legs, a low side made of evenly spaced vertical white bars, a flat light mattress inside the cot at the height of the lower third of the bars; a small brown teddy bear lies on its back ON the mattress INSIDE the cot, clearly visible behind the white bars. There is no baby anywhere. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, objects have no faces, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_11, source folder r1):
+Pair r1 10/10 (5 v1 + 5 swapped), no remarks; lex L1 clean (A=target, B=gram), no real-world faults.

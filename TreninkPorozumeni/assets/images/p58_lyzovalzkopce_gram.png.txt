@@ -1,0 +1,11 @@
+Image: p58_lyzovalzkopce_gram.png
+Generated: 2026-10-01
+Candidate: P10 retestA (type 5.8) round 7
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a clearly adult young woman with a long brown ponytail hanging down her back from under a pink knitted hat, wearing a pink ski jacket, a short pink ski skirt over dark ski trousers and ski boots skis fast down a big steep snowy hillside: a large white snow slope that fills the lower part of the picture, rising high at the left behind the skier and falling steeply down to the right, clearly a long hill and not a small mound; she is halfway down the slope, skis parallel pointing DOWNHILL along the slope to the right, one ski pole in each hand, the two poles parallel to each other and not crossing, each pole held at its top grip and tucked under the arm along the side of the body, pole tips pointing straight back behind her above the snow, knees bent, body leaning forward going downhill. She is unmistakably a woman: long ponytail and a ski skirt. The whole figure is visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Exactly one person in the picture. Calm friendly face, mouth closed. Correct realistic anatomy, only the described figures and objects, floating in pure white empty space, no shadow, no other scenery, no text, nothing else in the picture. This picture is the mirrored twin of a paired picture: exactly the same pose, objects, composition and style; the only difference is the person.

@@ -1,0 +1,11 @@
+Image: p55_pesnenesevetev_lexa.png
+Generated: 2026-10-01
+Candidate: P7 batch_06 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one grey cat lies resting on its belly with its head raised, mouth closed; one small wooden tree branch with a few green leaves lies flat on the ground in front of its front paws, not in its mouth. No dog anywhere. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

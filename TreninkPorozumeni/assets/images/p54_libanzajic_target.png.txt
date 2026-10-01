@@ -1,0 +1,13 @@
+Image: p54_libanzajic_target.png
+Generated: 2026-10-01
+Candidate: P6 batch_08 (type 5.4) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, view: a brown hare with very long ears lies low on its belly with its head lowered near the ground level, so its cheek is at the height of the small animal on the right, its head and face turned FRONTALLY toward the viewer, eyes closed, mouth closed and far away from the other animal, calm, only receiving. a small red squirrel with a bushy tail stands on its hind legs on the left in pure profile facing right and presses its closed mouth onto the lower side of the hare's round cheek, below the eye and beside the nose, far from the ears and forehead, clearly a kiss on the cheek, NOT nose to nose and NOT mouth to mouth; one small red heart floats above. The squirrel is the active one kissing; the hare is the passive one being kissed on the cheek. The only contact is the squirrel's mouth on the hare's cheek; their noses and mouths never meet. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: ACCEPTED P6 batch_08 final set r4 - blind trials 10/10 clean (fresh opus, 5 v1->target, 5 v2->gram, no remarks); lex/real-world check (fresh opus): only target~A, gram~B, no faults.

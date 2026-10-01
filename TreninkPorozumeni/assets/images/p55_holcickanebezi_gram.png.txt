@@ -1,0 +1,11 @@
+Image: p55_holcickanebezi_gram.png
+Generated: 2026-10-01
+Accepted candidate: P7 batch_04 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one wooden park bench with a seat, a backrest and four sturdy legs stands in the background on the left; a little girl about six years old with two pigtails in a red dress and white sneakers runs fast to the right, in front of and away from the bench, one leg stretched forward and the other back, both feet off the ground mid-stride, arms swinging, pigtails flying. She is clearly running. Calm friendly face, mouth closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

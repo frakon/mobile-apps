@@ -1,0 +1,13 @@
+Image: p53_holcickastromky_gram.png
+Generated: 2026-10-01
+Candidate: P5 batch_08 (type 5.3) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: four small young trees (thin saplings with a few leaves) planted in the ground, trunks going straight into the soil, no roots visible stand in one short row close together with small gaps, on one flat strip of brown soil; a girl in a green dress, side view facing right, standing on the ground, full body with feet visible, holding a red watering can high with both hands, both arms visible; the long spout of the can sprays a wide fan-shaped shower of water drops that falls over all four saplings at the same time. There are exactly four young trees in the whole picture, no more and no fewer, no other young trees anywhere, no reflections, no patterns. The four young trees are the same size, spaced well apart side by side, clearly separated, not touching, not overlapping, not stacked, none cut off at the edge, each one complete and fully visible and easy to count. Correct realistic anatomy, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, plain white background with only the few scene elements named, no text, no letters, nothing else in the picture.
+
+3. Verification: accepted (P5 batch_08, final set; this image generated in round 3). Blind forced-choice target vs gram 5/5 per sentence variant (10/10, counts reported correctly by all evaluators) by fresh headless opus sessions; lex + real-world check (fresh opus). Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P5/batch_08/

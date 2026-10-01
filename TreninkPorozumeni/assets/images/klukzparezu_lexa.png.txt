@@ -1,0 +1,14 @@
+Image: klukzparezu_lexa.png
+Generated: 2026-09-30
+Candidate: batch_06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a wide low tree stump with visible roots at its bottom and a flat light cut top with rings, the stump about as tall as the boy's knees; a boy with short brown hair in a blue T-shirt, blue jeans and red sneakers stands still on the ground right BESIDE the stump, to the right of it with a clear gap, arms relaxed at his sides, his sneakers and the bottom of the stump at the same level. The boy is not jumping. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_06, source folder r1):
+Pair 10/10 (repair round 4), no remarks; lex L6 correct, faults none.

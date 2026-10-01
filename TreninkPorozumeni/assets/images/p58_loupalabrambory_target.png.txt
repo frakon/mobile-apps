@@ -1,0 +1,11 @@
+Image: p58_loupalabrambory_target.png
+Generated: 2026-10-01
+Candidate: P10 batch13 (type 5.8) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grandmother with grey hair in a bun, wearing a long green skirt and a cardigan sits peeling a potato with a small knife over a bowl. She is unmistakably an old woman: grey hair bun and a long skirt. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The table is a complete small wooden table with four legs standing on the same level as the feet. The figure sits on a complete wooden chair with four legs and a backrest, both feet on the same level as the chair legs. Sitting at the table, one hand holds a raw brown potato and the other hand peels it with a small kitchen knife, a long thin brown peel curling down into a white bowl on the table; two peeled pale yellow potatoes lie in the bowl and three unpeeled brown potatoes lie on the table beside it. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

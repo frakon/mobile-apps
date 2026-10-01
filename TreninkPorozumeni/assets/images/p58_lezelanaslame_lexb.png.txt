@@ -1,0 +1,11 @@
+Image: p58_lezelanaslame_lexb.png
+Generated: 2026-10-01
+Candidate: P10 batch05 (type 5.8) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a small young brown-and-white calf without horns lies resting in the shade of a small tree. It is clearly a tiny baby animal, much smaller than an adult cow. Whole animal visible including all legs, hooves or feet and the tail, nothing cut off, with a clear white margin around; drawn small enough to fit. Lying on its belly, legs folded under the body, on green grass under a small tree, no straw anywhere. The calf is a newborn baby calf about one third the size of an adult cow, with a short round muzzle, big eyes, short smooth coat, no horns at all, no udder, a gentle baby face; clearly a baby, nothing else. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

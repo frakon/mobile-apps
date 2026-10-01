@@ -1,0 +1,13 @@
+Image: p54_polevanklaun_lexb.png
+Generated: 2026-10-01
+Candidate: P6 batch_10 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a clown (grown-up adult man) with a round red nose and curly orange hair, a colourful polka-dot suit and big shoes stands still on the right, facing left, arms hanging at the sides, holding nothing, soaking wet, water dripping from hair and clothes. a cook (grown-up adult man) in a tall white chef hat, a white chef jacket and black trousers stands on the left, facing right, completely dry, holding a green watering can high above the other one's head so the spout points straight down onto the TOP of the head, the water stream lands on the head of the clown and falls downward. The cook is the active one pouring; the clown is the passive one being watered. Only the cook holds the watering can. Both are the same body height. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification (P6 batch_10, final set r1): blind forced-choice trials 5/5 per sentence (fresh headless opus), lex + real-world check by fresh opus session: no faults, no ambiguity remarks.

@@ -1,0 +1,14 @@
+Image: vcelkadoulu_lexb.png
+Generated: 2026-09-30
+Candidate: batch_06 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big wooden beehive box standing upright on four short legs: a honey-yellow wooden box with a sloped roof and one single big round dark entrance hole in the middle of its right side wall, facing right; a big yellow butterfly with four wide wings flies from the right toward the hive, facing LEFT toward the hive, its head at the round entrance hole, wings open; a dotted flight path line comes from the far right and ends at the hole with an arrowhead pointing INTO the hole. There is no bee anywhere. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_06, source folder r2):
+Pair 10/10 (repair round 1), no glitch remarks; lex L2: A->target, B->gram, faults none.

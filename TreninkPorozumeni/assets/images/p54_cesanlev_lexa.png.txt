@@ -1,0 +1,13 @@
+Image: p54_cesanlev_lexa.png
+Generated: 2026-09-30
+Candidate: P6 batch_03 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: an orange striped tiger (no mane) sits calmly on the ground level on the right, facing right, eyes half closed, holding still, holding nothing. a brown monkey stands upright on its hind legs directly behind the tiger, facing right, and holds a big red comb in one front paw; the comb's teeth are pulled through the tiger's head fur. The monkey is the active one combing, the tiger is the passive one being combed. Only the monkey holds the comb. The only contact is the comb in the tiger's head fur. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: accepted set r2 (P6 batch_03). Blind forced-choice target vs gram 5/5 per sentence variant (10/10, no ambiguity remarks) by fresh headless opus sessions; lex + real-world check (fresh opus) clean. Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P6/batch_03/

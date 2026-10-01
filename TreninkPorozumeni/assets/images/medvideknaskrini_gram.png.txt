@@ -1,0 +1,14 @@
+Image: medvideknaskrini_gram.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_15 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one tall wooden wardrobe standing on four short legs, seen from the front at eye level, much taller than wide, with a flat top board; the teddy is small, about one fifth of the wardrobe's height, with its two doors swung WIDE OPEN to both sides so the inside is clearly visible: empty wooden inside with one shelf across the middle. one small brown teddy bear SITS INSIDE the wardrobe on that shelf, surrounded by the wardrobe's side walls, back wall and top, its whole body visible. Nothing is on top of the wardrobe. The teddy is clearly IN the wardrobe, not on top of it. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Selected: batch_15 folder r1
+4. Blind-test result: pair r1 BT 10/10 (no remarks); lex L1 correct (A=target, B=gram), notes only: open doors without knobs, paint specks

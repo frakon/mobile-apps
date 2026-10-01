@@ -1,0 +1,11 @@
+Image: ceseovcebatoh_gram.png
+Generated: 2026-10-01
+Candidate: P9 batch_08 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A clown with a red nose and a colourful suit (the clown carries a blue backpack on its back) stands behind a white woolly sheep (the sheep carries no backpack and no bag), firmly gripping the handle of a big comb with the fingers of one hand and combing the hair/fur of the sheep; the other arm of the clown hangs relaxed at its side, fully visible, not touching the sheep; the sheep stands still on all four legs, all four legs visible, no stool. ONLY the clown carries a blue backpack on its back; the sheep carries no backpack and no bag. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, small and centered with a wide white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

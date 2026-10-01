@@ -1,0 +1,11 @@
+Image: libakoteskvrna_lexa.png
+Generated: 2026-10-01
+Candidate: P9 batch_04 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A light brown dog (the dog has plain one-coloured fur/skin with no spots at all) standing on all four legs, bends its head down and gives a gentle kiss with its closed mouth on the top of the head of a small ginger kitten (the kitten has one big round black spot on its side, otherwise plain one-coloured fur); the kitten stands still on all four paws with its eyes OPEN, looking straight ahead, not kissing back, it only receives the kiss; both whole animals fully inside the picture, nothing cut off at the edges. ONLY the kitten has one big round black spot on its side, otherwise plain one-coloured fur; the dog has plain one-coloured fur/skin with no spots at all. Exactly two clearly separate whole animals with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no bear anywhere in the picture.

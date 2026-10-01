@@ -1,0 +1,13 @@
+Image: p54_polevanzirafa_target_c1.png
+Generated: 2026-09-30
+Candidate: P6 batch_01 round 2c
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: a grey-brown hippo stands on the left, holding a green metal watering can, tilting it and pouring a stream of water from the spout onto the head of a spotted giraffe who stands on the right on all four legs, facing left. The giraffe bends its long neck down so its head is low, right in front of the pourer. The hippo stands upright on its two hind legs and holds the can with both front legs, both front legs clearly visible. The giraffe is wet, water dripping down its head and body, eyes closed, standing still. The hippo is completely dry. Both animals have their tails. Both stand on the same ground level. The hippo is the active one pouring the water; the giraffe is the passive one being watered. Only the hippo holds the watering can. Two clearly separate whole animals with correct realistic anatomy, slight three-quarter view so all four legs of each animal are visible and separate, no fused legs, no extra legs, calm friendly faces with mouths closed, no fused or hybrid animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (P6 batch_01): t3: forced choice 10/10 (1 remark: giraffe upright holding can odd but readable); lex/real-world check: no faults

@@ -1,0 +1,11 @@
+Image: p55_nikdozklukunejejablko_lexa.png
+Generated: 2026-10-01
+Candidate: P7 batch_06 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: exactly three boys stand side by side, well apart from each other, not touching: a boy in a blue T-shirt, a boy in a green T-shirt and a boy in a yellow T-shirt, all with dark shorts; only the middle boy holds his red apple to his open mouth and bites into it (white bite mark); the two outer boys hold one whole red apple each hanging down at the hip, far from the mouth, mouths closed. Exactly one boy is eating. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

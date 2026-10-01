@@ -87,3 +87,7 @@ Fix/rules: add an explicit end-to-end continuity clause — "one single continuo
 - Play every sound ONLY through `src/audioController.ts` ("latest request wins", play-token guarded continuations). Never call `createAudioPlayer` elsewhere.
 - expo-audio iOS: `pause()` without `keepAudioSessionActive` schedules `AVAudioSession.setActive(false)` 100 ms later if no player is in `.playing` state (`node_modules/expo-audio/ios/AudioModule.swift`, `deactivateSession`). A new player still loading is NOT `.playing` → pause-old + play-new deactivated the session under the new sound. That this made the new sound SILENT is a code-derived HYPOTHESIS, not confirmed on a device. Always create players with `keepAudioSessionActive: true`.
 - Keep: a FRESH player per play request (no re-use/seekTo replay: a stale didJustFinish could kill the replay); release = `pause()` → unsubscribe → `remove()` → `release()` (`remove()` only unregisters; `release()` frees the native player); screen cleanups stop only their own sound (`stopAudioIfOwnedBy`); 2.5 s start watchdog (explanation: fail → plain tint; sentence: one fresh-player retry) / 15 s safety cap acting only on the current token.
+
+## Audio generation settings
+
+- All sentence and why-wrong mp3s: edge-tts voice `cs-CZ-VlastaNeural`, rate `-10%` (keep identical for new/regenerated audio).

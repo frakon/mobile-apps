@@ -1,0 +1,11 @@
+Image: p55_holcickanekresli_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_10 (type 5.5) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one little girl (about 6 years old) with exactly two short brown pigtails, a red dress, white socks and red shoes sits on a small wooden chair at a small square wooden table with four legs, all four legs visible, holding a white cup with both hands at her mouth and drinking tea; on the table in front of her lie one white sheet of paper, completely blank, and three crayons lying separately side by side with gaps, all untouched, her hands nowhere near them. The girl is drinking, not drawing. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

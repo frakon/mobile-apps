@@ -1,0 +1,14 @@
+Image: kreslicarodejnice_lexa.png
+Generated: 2026-09-30
+Candidate: batch_15 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view, both figures standing: a witch (grown-up adult woman) in a pointed black hat, a long purple dress and black shoes, no broom stands on the LEFT, whole body visible, beside a wooden drawing easel with three complete wooden legs holding a big sheet of white paper; the witch holds a pencil in the right hand and its tip clearly TOUCHES the paper, the left hand hangs relaxed. The paper faces the viewer and shows a simple pencil drawing of the king, whole figure, an exact copy of the king: golden crown, red cloak. a king (grown-up adult man) with a golden crown, a red cloak ending at the knees and a white shirt stands still on the RIGHT, facing the witch, posing, both arms hanging at the sides, holding nothing. The witch is the active artist drawing, the king is the passive model being drawn. Only the witch holds a pencil. The witch stands beside the easel, not behind it. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, slight three-quarter view so the far arm also shows and is not hidden behind any body, exactly two arms and two legs per person, no extra arms, no extra hands, no extra legs, calm friendly faces with mouths closed, no fused or hybrid figures, simple pose, all standing feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+Final selection: batch_15 working file Temp/P3/batch_15/r3/kreslicarodejnice_lexa.png
+Blind test / verification: target-vs-gram forced choice, 5 fresh headless opus trials per sentence (variant 1 + swapped), 10/10 correct, no ambiguity/glitch remarks (trials round r3, lex round r3); independent fresh opus lex + real-world check: lex pictures match neither sentence, no faults.

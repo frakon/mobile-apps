@@ -1,0 +1,14 @@
+Image: holcickamezimaminkou_lexa.png
+Generated: 2026-09-30
+Candidate: batch_11 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three people standing in one straight horizontal row facing the viewer, small equal gaps between them, all feet at the same level, not holding hands. From left to right: a mother with long brown hair in a red dress and black shoes on the LEFT, a tall father with short dark hair and a short beard in a green sweater, blue trousers and brown shoes in the MIDDLE, a small girl with two blond pigtails in a yellow dress and white shoes, reaching only to the adults' waists on the RIGHT. The father stands between the mother and the girl. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, objects have no faces, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_11, source folder r1):
+Pair r1 10/10, no ambiguity remarks (style notes only: mother sleeve length); lex L1 clean, no faults.

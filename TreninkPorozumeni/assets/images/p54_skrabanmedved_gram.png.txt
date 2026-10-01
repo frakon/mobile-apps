@@ -1,0 +1,13 @@
+Image: p54_skrabanmedved_gram.png
+Generated: 2026-10-01
+Candidate: P6 batch_10 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a pink pig with a curly tail sits on its haunches on the right, facing right, with its back turned toward the bear, eyes half closed, content. a brown bear with a very short stubby tail stands on the left behind the pig, facing right, standing upright on its hind legs, holding a long wooden back-scratcher stick in both front paws; the small hand-shaped end of the stick rubs the middle of the pig's back. The bear is the active one scratching, the pig is the passive one being scratched on its back. Only the bear holds the back-scratcher. The only contact is the back-scratcher on the pig's back. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification (P6 batch_10, final set r4): blind forced-choice trials 5/5 per sentence (fresh headless opus), lex + real-world check by fresh opus session: no faults, no ambiguity remarks.

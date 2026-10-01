@@ -1,0 +1,11 @@
+Image: p55_kralnemakorunu_gram.png
+Generated: 2026-10-01
+Candidate: P7 batch_07 (type 5.5) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one old king with a long grey beard and short grey hair, wearing a long red royal cloak with white fur trim over a golden robe, holding a golden sceptre, standing next to a big golden royal throne with red cushion; a normal-sized shiny golden crown fitting snugly with points and red jewels sits on his head. The king wears a crown. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture. Front three-quarter view, both arms and both hands clearly visible in front of the body, both shoes visible below the hem.

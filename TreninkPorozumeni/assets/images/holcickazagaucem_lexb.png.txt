@@ -1,0 +1,15 @@
+Image: holcickazagaucem_lexb.png
+Generated: 2026-09-30
+Candidate: P4 batch_03 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one big green sofa seen from the front, with a LOW backrest, two armrests, seat cushions and four short legs; the sofa is a complete piece of furniture. one boy with short brown hair in a blue T-shirt (no girl anywhere) STANDS upright on the floor BEHIND the sofa, farther from the viewer than the sofa, on the far side of the low backrest: his whole upper body from the hips up is visible above the top of the backrest, standing straight, both arms relaxed with both hands resting on top of the backrest; his legs are hidden behind the sofa. No feet are visible under the sofa. The seat of the sofa in front is empty. The child stands behind the sofa, not sitting on it and not in front of it. Everything shown whole, with correct realistic anatomy and plausible sizes, every leg, paw, wing and tail complete and not merged with anything, calm friendly faces, no fused or hybrid animals, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance:
+- Accepted candidate: P4 batch_03 round r3; installed 2026-09-30
+- Blind test: pair r3 10/10 (style note only); lex r3 clean

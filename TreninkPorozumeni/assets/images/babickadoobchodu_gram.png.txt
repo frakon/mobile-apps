@@ -1,0 +1,16 @@
+Image: babickadoobchodu_gram.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_09 round 3b
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a small shop building with ONE single green and white striped awning spanning the whole front, a big glass shop window on the left with bread loaves and red apples on shelves behind the glass, and a wide-open glass door on the right, the door opening dark inside, seen straight from the front. an elderly grandmother with grey hair in a bun, a purple cardigan and a long blue skirt, holding a wicker basket FULL of bread and red apples, is WALKING OUT OF the shop toward the viewer: she is already two steps OUTSIDE in front of the shop, clearly out of the doorway, her face and front clearly visible, the open door behind her back, walking away from the shop. She is leaving the shop, not going in. Every person has correct anatomy: one head, two arms, two hands, two legs and two feet each, all limbs complete, calm friendly faces with mouths closed. floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result (P4 batch_09, accepted at test round r3):
+- Forced choice target vs gram: 10/10 correct (5 trials sentence v1 + 5 trials swapped sentence), fresh headless claude -p --model opus per trial, no ambiguity/glitch remarks.
+- Lex session L3: sentence A matched only target, sentence B only gram, lexa/lexb matched neither; real-world fault check: none.
+- Image generated in round folder r3b; tested date 2026-09-30.

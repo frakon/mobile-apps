@@ -1,0 +1,14 @@
+Image: cepicenastolicce_lexb.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_15 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one round wooden stool seen from the side at eye level, with a thick round flat seat and three long straight wooden legs spreading slightly outward, all three legs complete down to the floor line, tall, with a big empty open space under the seat. one pair of red knitted mittens (two mittens side by side) LIES flat ON TOP of the round seat of the stool, in the middle of the seat. The space under the stool is empty. The pair of mittens is clearly ON the stool, not under it and not beside it. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no hat anywhere.
+
+3. Selected: batch_15 folder r1
+4. Blind-test result: target regenerated at r1 pre-screen (first hat looked like mittens); pair r1 BT 10/10 (no remarks); lex L1 clean

@@ -1,0 +1,14 @@
+Image: stryckrabice_target.png
+Generated: 2026-10-01
+Candidate: P8 batch02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a middle-aged man about fifty with short grey hair and a grey moustache in an orange sweater and trousers stands next to a full cardboard box with its flaps still open, a roll of brown tape lying flat on the floor beside the box, his whole body visible from head to shoes with white space below his feet, his hands empty and relaxed at his sides, not taping yet. It is clearly the moment BEFORE starting: nothing has been done yet, everything lies ready and untouched, nobody is working. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_stryckrabice_target.png from P8 batch02 folder r3 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2 sentence) in final round 3 with no tense-ambiguity remark beyond logged notes (none); lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched. Logs: Temp/P8/batch_02/bt_results.jsonl, lex_results.jsonl.

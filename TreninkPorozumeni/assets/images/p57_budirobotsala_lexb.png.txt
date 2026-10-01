@@ -1,0 +1,11 @@
+Image: budirobotsala_lexb.png
+Generated: 2026-10-01
+Candidate: P9 batch_02 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A pink pig (the pig wears a long red-and-white striped scarf around its neck) lies asleep on top of a bed with eyes closed (no blanket); a father with a short beard in a checked shirt (the father has nothing around its neck, no scarf) stands at the bed awake and gently shakes the shoulder of the pig. ONLY the pig wears a long red-and-white striped scarf around its neck; the father has nothing around its neck, no scarf. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no robot anywhere in the picture.

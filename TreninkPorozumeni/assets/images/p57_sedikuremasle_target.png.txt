@@ -1,0 +1,11 @@
+Image: sedikuremasle_target.png
+Generated: 2026-10-01
+Candidate: P9 batch_12 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A lion with a mane (the lion has nothing on its head, no bow, no hat) and a small yellow chick (the chick has a big pink bow resting directly on top of its head) sit side by side next to each other on their haunches (the lion's normal-length tail curls around the front of its own feet, fully visible with its dark tuft at the tip, not reaching the chick; the chick sits on its bottom with both little feet stretched forward), both facing the viewer, with a clear small white gap between them; the small figure is tiny, only as high as the other one's front paws. ONLY the chick has a big pink bow on top of its head; the lion has nothing on its head, no bow, no hat. Exactly two clearly separate whole animals with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, small and centered with a wide white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

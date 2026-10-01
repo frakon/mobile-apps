@@ -1,0 +1,14 @@
+Image: kluknemacepicianisalu_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, front view: one boy about eight years old with short brown hair, wearing a zipped red winter jacket, blue trousers and black winter boots, standing and facing the viewer. His head is BARE: no cap, no hat, no hood, his brown hair clearly visible. His neck is BARE: no scarf, the jacket collar open. No cap and no scarf anywhere in the picture. Calm friendly face, mouth closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, floating in pure white empty space, only the elements described, no scenery, no decorations, nothing else in the picture.
+
+Installed as p55_kluknemacepicianisalu_target.png from P7 batch_01 folder r2 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2 sentence) with no ambiguity remark in the final pair round; lex check (4 shuffled pictures, both sentences) only target~v1 and gram~v2 matched. Logs: Temp/P7/batch_01/bt_results.jsonl, lex_results.jsonl.

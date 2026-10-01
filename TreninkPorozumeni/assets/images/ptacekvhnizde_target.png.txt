@@ -1,0 +1,15 @@
+Image: ptacekvhnizde_target.png
+Generated: 2026-09-30
+Candidate: P4 batch_03 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one round brown twig bird's nest resting at floor level. one small blue bird with an orange breast sits down INSIDE the nest like a hen brooding, its belly sunk deep into the nest bowl, its feet and legs completely out of sight inside the nest, its head, breast, folded wings and tail visible above the rim. The bird is in the nest, not beside it. Everything shown whole, with correct realistic anatomy and plausible sizes, every leg, paw, wing and tail complete and not merged with anything, calm friendly faces, no fused or hybrid animals, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance:
+- Accepted candidate: P4 batch_03 round r3; installed 2026-09-30
+- Blind test: pair r2 10/10 (target/gram unchanged since r2/r3); lex r4alt (frog lexB) clean; original chick lexB failed lex (chick could be called ptacek)

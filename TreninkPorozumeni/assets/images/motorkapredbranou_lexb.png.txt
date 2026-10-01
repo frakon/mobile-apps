@@ -1,0 +1,13 @@
+Image: motorkapredbranou_lexb.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_10 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: a wide closed black metal garden gate, much wider than a motorbike, one single gate wing made of a top rail, a bottom rail and ten thin straight vertical bars with wide gaps between them, hung on two black hinges on the LEFT brick pillar only, with a small latch touching the RIGHT brick pillar; the two square red brick pillars stand at its sides; a thin grey ground line runs along the bottom of both pillars and the gate, and continues a little behind the gate, seen straight from the front. A flat light-grey paved ground area, seen from slightly above, lies under the whole scene: it spreads in front of the gate and continues behind the gate on its far side. A blue bicycle with two thin wheels, pedals and a chain, leaning on its clearly drawn metal side kickstand that touches the ground, seen exactly from its side, stands on the ground IN FRONT of the gate, fully visible, not touching the gate. There is no motorbike anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result (P4 batch_10, installed from r4): pair r4 10/10 no remarks; lex L4 clean. Fresh headless claude -p --model opus evaluator per trial.

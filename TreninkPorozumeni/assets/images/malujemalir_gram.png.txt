@@ -1,0 +1,14 @@
+Image: malujemalir_gram.png
+Generated: 2026-09-30
+Candidate: batch_05 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a painter (adult man) with a black beret, a small moustache and a white smock with paint stains sits still on a simple wooden chair with four legs on the right, hands in the lap, posing, holding nothing, facing the painter. a king (adult man) with a big golden crown and a red robe with white fur trim stands on the left in front of a wooden easel with three legs, holding a paintbrush in one hand touching the canvas and a wooden paint palette in the other hand. The canvas is turned so that the viewer can see it: it shows an unfinished painted portrait of the painter's head with the black beret (no crown in the portrait). The king is the active one who paints; the painter is the passive one posing for the portrait and has no brush and no palette. The chair and the easel are complete with all their legs visible, standing at the same level as the painter's feet. Two clearly separate whole people with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person and every animal clearly visible, slight three-quarter view so the far arm also shows and is not hidden behind any body, calm friendly faces with mouths closed, a light playful mood, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+Final selection: batch_05 r1 candidate (working file Temp/P3/batch_05/r1/malujemalir_gram.png)
+Blind test / verification: target-vs-gram forced choice, 5 fresh opus trials per sentence (variant 1 + swapped), 10/10 correct, no ambiguity remarks (round r1); independent fresh opus lex + real-world check (round r1): lex pictures match neither sentence, no blocking faults.

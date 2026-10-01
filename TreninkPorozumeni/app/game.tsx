@@ -24,9 +24,18 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { playAudio, stopAllAudio, stopAudioIfOwnedBy } from '../src/audioController';
-import { FieldId } from '../src/items';
+import { FIELDS, FieldId } from '../src/items';
 import { clearPausedGame, consumePausedGame, savePausedGame } from '../src/pausedGame';
-import { buildRoundPlan, collectRoundAssetModules, explanationForSlot, GameRound, Regime, TestPart } from '../src/rounds';
+import {
+  buildRoundPlan,
+  collectRoundAssetModules,
+  explanationForSlot,
+  GameRound,
+  Regime,
+  sentenceAudioForRound,
+  TestPart,
+  testPartCount,
+} from '../src/rounds';
 import { loadRegime, loadSpeechSpeedPercent } from '../src/settings';
 
 const FEEDBACK_DURATION_MILLISECONDS = 500;
@@ -46,7 +55,8 @@ const EXPLANATION_SAFETY_TIMEOUT_MILLISECONDS = 15000;
 // follow-up request 22" the 2.5 s watchdog lives in src/audioController.ts
 // (START_WATCHDOG_MILLISECONDS) and only ever acts on the latest play token.
 
-const VALID_FIELDS: FieldId[] = ['field51', 'field52', 'field53'];
+// All 15 types ("User request 25" in _TreninkPorozumeni_Fields123_PROMPTS.md).
+const VALID_FIELDS: FieldId[] = FIELDS.map((info) => info.id);
 
 export default function GameScreen() {
   const router = useRouter();
@@ -55,10 +65,14 @@ export default function GameScreen() {
   const resumeRequested = !Array.isArray(params.resume) && params.resume === '1';
   const fieldIsValid = !Array.isArray(params.field) && VALID_FIELDS.includes(params.field as FieldId);
   const field: FieldId = fieldIsValid ? (params.field as FieldId) : 'field51';
-  // Sub-test part ("User follow-up request 21"): each field is split into two tests of 10.
+  // Sub-test part ("User follow-up request 21"): each type is split into groups of 10 (1–10, 11–20, … — "User request 25").
   // Backward-safe fallback: a missing/invalid part param (old deep link /game?field=...)
   // plays part 1 — the first 10 examples, closest to the old behavior.
-  const part: TestPart = !Array.isArray(params.part) && params.part === '2' ? 2 : 1;
+  // "User request 25": groups 1..10 (1–10 … 91–100); a missing/invalid group or one the field
+  // does not have falls back to group 1 (an empty type then shows the empty state).
+  const requestedPart = Array.isArray(params.part) ? NaN : Number(params.part);
+  const part: TestPart =
+    Number.isInteger(requestedPart) && requestedPart >= 1 && requestedPart <= testPartCount(field) ? requestedPart : 1;
 
   // Invalid/missing field param (deep link like /game?field=xyz): go back to the field
   // selection instead of silently playing 5.1.
@@ -271,7 +285,7 @@ export default function GameScreen() {
       return;
     }
     // Start watchdog + one fresh-player retry if not started within 2.5 s (_TreninkPorozumeni_Fields123_PROMPTS.md, "User follow-up request 22 (verbatim) — every play: latest request wins").
-    playAudio(currentRound.example.audio, {
+    playAudio(sentenceAudioForRound(currentRound), {
       key: sentenceKey,
       rate: speechRate ?? 1,
       owner: audioOwner,
@@ -364,7 +378,7 @@ export default function GameScreen() {
         }
         // Spoken "why it is wrong" explanation: red tint stays for the whole playback; when
         // the audio is missing (null) or fails, fall back to the plain 500 ms tint.
-        const explanation = explanationForSlot(currentRound.example, currentRound.slots[index].kind);
+        const explanation = explanationForSlot(currentRound, currentRound.slots[index].kind);
         if (explanation !== null && explanation.audio !== null) {
           // Central controller ("request 22"): stops the sentence / previous explanation
           // (pause, then remove), plays this one at the speech speed ("request 21"). Its
@@ -426,7 +440,7 @@ export default function GameScreen() {
 
   // Pause on leave (see _TreninkPorozumeni_Fields123_PROMPTS.md, "User follow-up request 4"):
   // leaving a RUNNING test does not stop it, it pauses it — the state is saved to the
-  // module-level store (src/pausedGame.ts) so the initial page can offer "Pokračuj v testu".
+  // module-level store (src/pausedGame.ts) so the start page and the sets page can offer "Pokračuj v testu".
   // Saved from the navigation 'beforeRemove' event, so the pause button, the iOS swipe-back
   // gesture and the Android hardware back all pause identically. The snapshot lives in a ref
   // (re-assigned every render) so a single listener always sees the latest state.
@@ -482,7 +496,7 @@ export default function GameScreen() {
   }, [navigation]);
 
   // Pause button handler: a running explanation is stopped cleanly (the round stays current,
-  // the mistake flag is preserved by the snapshot above), then pop back to the field selection.
+  // the mistake flag is preserved by the snapshot above), then pop back to the sets page (app/sets.tsx).
   const pauseAndGoBack = useCallback(() => {
     stopAllAudio();
     goBackToSelection();
@@ -553,7 +567,7 @@ export default function GameScreen() {
       <View style={styles.gameRow}>
         <View style={styles.controlsColumn}>
           {/* Pause-and-go-back button (not a stop): saves the running test and returns to the
-              field selection, which then shows "Pokračuj v testu" — see
+              sets page (app/sets.tsx), which then shows "Pokračuj v testu" — see
               _TreninkPorozumeni_Fields123_PROMPTS.md, "User follow-up request 4". Shown as a
               back arrow + pause glyph pair so it reads "go back AND pause", not pause alone
               ("User follow-up request 17"). */}

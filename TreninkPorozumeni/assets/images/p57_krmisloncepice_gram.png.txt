@@ -1,0 +1,11 @@
+Image: krmisloncepice_gram.png
+Generated: 2026-10-01
+Candidate: P9 strict audit 2 (5.7) repair round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A grandmother with grey hair in a bun and a purple dress, wearing no glasses (the grandmother wears a red knitted winter cap on its head, resting directly on the head) holds a small bowl in one hand and with the other hand holds a spoon to the open mouth of a young grey elephant with no tusks at all, about twice as tall as the grandmother (the elephant has nothing on its head, no cap, no hat); the elephant stands on all four legs like a real elephant, its trunk raised up out of the way, and eats from the spoon. ONLY the grandmother wears a red knitted winter cap on its head; the elephant has nothing on its head, no cap, no hat. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, drawn large, together filling about two thirds of the picture width, centered with a white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

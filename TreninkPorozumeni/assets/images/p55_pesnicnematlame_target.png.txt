@@ -1,0 +1,14 @@
+Image: p55_pesnicnematlame_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_03 (type 5.5) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, one brown dog with floppy ears standing on all four paws, seen from the side, head on the right, head in clear profile with ONE single floppy ear visible hanging down, clean simple anatomy. Its mouth is CLOSED and EMPTY: nothing is in its mouth, nothing lies near it. Only the dog. Everything shown whole, with correct realistic anatomy and plausible sizes, every arm, hand, leg, paw, wing and tail complete and not merged with anything, calm friendly faces on people and animals only, no faces on objects, no fused or hybrid animals, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Acceptance:
+- Installed 2026-10-01 from P7 batch_03 (image generated in round 3); pair blind test 10/10 forced choice, lex+real-world check done (see Temp/P7/batch_03/result + batch03_result.md)

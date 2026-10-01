@@ -1,0 +1,11 @@
+Image: p55_pesnekousebotu_gram.png
+Generated: 2026-10-01
+Candidate: P7 batch_09 (type 5.5) round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one big brown dog with floppy ears lies on its belly in side view, head to the right: its two front legs stretch forward on the floor with one red sneaker with short neatly tied white laces (a small tidy bow, no loose strings) between the two front paws; its two hind legs are folded at its back end, its tail lies straight out BEHIND its body on the left; the dog bites the toe of the sneaker, the sneaker clearly in its mouth. Exactly four legs, natural anatomy. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

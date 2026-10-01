@@ -1,0 +1,11 @@
+Image: p55_lampanesviti_lexb.png
+Generated: 2026-10-01
+Accepted candidate: P7 batch_04 (type 5.5) round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one white candle in a simple brass candle holder stands on a small round wooden side table with three legs; the candle is lit and burning with one single calm teardrop-shaped orange flame on the wick and a soft warm glow, no sparks, no floating wisps. No lamp anywhere. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

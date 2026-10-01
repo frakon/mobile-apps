@@ -1,0 +1,11 @@
+Image: p58_smazilpalacinky_target.png
+Generated: 2026-10-01
+Candidate: P10 batch03 (type 5.8) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a clearly adult young man (about 30 years old) with very short dark hair and a short beard, wearing a checked shirt, dark trousers and shoes stands at a small free-standing white kitchen stove with four legs and a cooking plate on top, frying a thin round pale yellow pancake that lies flat inside a frying pan held by its handle on the cooking plate, the pancake resting in the pan touching its bottom, the other hand holding a spatula whose tip touches the pancake edge; nothing in the air; a plate with a stack of thin pancakes stands on the stove next to the pan. He is unmistakably a man: short hair, beard and trousers. The whole figure is visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Exactly one person in the picture. Calm friendly face, mouth closed. Correct realistic anatomy, only the described figures and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

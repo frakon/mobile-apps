@@ -1,0 +1,13 @@
+Image: p54_objimankote_lexb_c1.png
+Generated: 2026-10-01
+Candidate: P6 batch_01 round 3c
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: Both animals stand upright on their hind legs, facing each other, similar size. a brown hare with long ears on the left hugs a small ginger kitten: its two front legs go around the other's shoulders and its two paws are visible only BEHIND the other's back/neck; no paw in front of the other's face or chest. The kitten on the right stands straight with its own two front legs hanging straight down at its sides, both clearly visible along its body, not hugging back, just being hugged. Each animal has exactly two front legs and two hind legs, no extra paws anywhere. The hare is the active one hugging; the kitten is the passive one being hugged. Two clearly separate whole animals with correct realistic anatomy, a tail each, calm friendly faces with mouths closed, no fused or hybrid animals, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (P6 batch_01): t4: forced choice 10/10 (1 minor remark: pale paw behind neck, no ambiguity); lex/real-world check: no faults

@@ -1,0 +1,11 @@
+Image: p58_spalnalavicce_gram.png
+Generated: 2026-10-01
+Candidate: P10 retestA (type 5.8) round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grandmother with grey hair in a bun, wearing a long green skirt and a cardigan sleeps lying along a park bench with eyes closed, her whole body resting flat on the seat, her long skirt lying neatly on her legs and ending at her ankles, the skirt does not hang down over the edge of the seat. She is unmistakably an old woman: grey hair bun and a long skirt. This picture is the mirrored twin of a paired picture: exactly the same action, pose, objects, composition and style; the ONLY difference is that the figure is grandmother, not grandfather. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The bench is a long classic wooden park bench seen from the front-side, with a slatted backrest running along its WHOLE length behind her, the same bench as in the paired picture; she lies on her side facing the viewer with her head on one armrest end and her knees slightly bent. The bench is a complete piece of furniture: seat, backrest and four sturdy wooden legs clearly visible holding it up. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

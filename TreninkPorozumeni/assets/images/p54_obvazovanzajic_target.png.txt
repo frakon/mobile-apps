@@ -1,0 +1,13 @@
+Image: p54_obvazovanzajic_target.png
+Generated: 2026-09-30
+Candidate: P6 batch_02 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a brown hare with very long ears sits calmly on the right and holds one arm/front leg straight forward. a small black mole with pink paws, standing upright on its hind legs stands on the left in front of the hare, holding a roll of white bandage and wrapping the bandage around the hare's outstretched arm/front leg; the hare's arm already has several white bandage turns on it. The mole is the active one bandaging and holds the bandage roll; the hare is the passive one being bandaged and has the bandage on its arm; the mole has no bandage on itself. Any bear has a very short stubby bear tail hidden in its fur, never a long or curly tail.  Two clearly separate whole animals with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms of every person and every animal clearly visible, slight three-quarter view so the far arm also shows, calm friendly faces, no fused or hybrid animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: final pair from round folder r2; forced choice target vs gram 5/5 (variant-1 sentence) + 5/5 (variant-2 sentence), fresh opus sessions; lex/real-world check (4 shuffled pictures, both sentences): only target~v1, gram~v2, no blocking faults. Accepted into assets 2026-10-01 by P6 batch_02.

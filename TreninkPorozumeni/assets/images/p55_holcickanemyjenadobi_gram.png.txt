@@ -1,0 +1,11 @@
+Image: p55_holcickanemyjenadobi_gram.png
+Generated: 2026-10-01
+Candidate: P7 retest g2 (type 5.5) round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a white kitchen sink cabinet with two doors with small knobs on its front and a tap; on the left half of the counter next to the basin stands a small stack of exactly two dirty plates, clearly dirty with brown food leftovers and red sauce smears on them; the whole person is fully visible from head to feet; one little girl with two blond pigtails in a red dress stands right at the sink, close to it, facing it; she holds a third dirty plate directly under the running water of the tap, above the basin, and scrubs it with a yellow sponge, white soap foam on that plate, the water falls onto the plate; no strawberries. Calm friendly face. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, floating in pure white empty space, no ground, no grass, no shadow, no scenery, no decorations, nothing else in the picture.

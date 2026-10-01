@@ -1,0 +1,13 @@
+Image: automeziautobusem_lexb.png (candidate folder r1)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_08 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: exactly three vehicles standing in one straight horizontal row, all facing left, with small equal empty gaps between them, all wheels at exactly the same bottom level. From left to right: a long yellow bus, then a blue motorbike in the MIDDLE, then a green tractor with a big back wheel. Each vehicle complete with all its wheels. No people, no other vehicles. Everything shown whole, with correct realistic anatomy and plausible sizes, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram round 1 pair 10/10 (0 remarks); lex/real-world check L1 clean (target~s1, gram~s2 only; no faults). Accepted into assets 2026-09-30 by P4 batch_08.

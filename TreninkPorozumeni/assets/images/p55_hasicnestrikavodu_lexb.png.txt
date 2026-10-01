@@ -1,0 +1,11 @@
+Image: p55_hasicnestrikavodu_lexb.png
+Generated: 2026-10-01
+Candidate: P7 batch_10 (type 5.5) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one adult cook in a tall white chef hat and a white chef jacket stands with legs apart holding with both hands a fire hose: one small red fire hydrant stands behind him and the hose runs from the hydrant in one continuous unbroken line, with no loose ends, to the metal nozzle in his hands, and a strong straight stream of water shoots out of the nozzle forward; no apple, no bottle anywhere. No firefighter anywhere. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture. Both of the cook's black shoes are clearly drawn on his feet, the whole figure from hat to shoes visible.

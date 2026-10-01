@@ -1,0 +1,13 @@
+Image: p53_capikomin_lexb.png
+Generated: 2026-10-01
+Candidate: P5 batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one red house roof with one wide brick chimney; high in the sky above the roof exactly four white storks with black wing tips flying with spread wings, side by side, far from the chimney. People and animals have correct realistic anatomy with complete visible limbs and calm friendly faces. Simple minimal scene on a plain white background, no text, no letters, no patterns, nothing else in the picture.
+
+3. Blind test result: r5: 5/5 + 5/5, counts 4 vs 1 correct, 0 remarks; lex r5 no faults. Accepted into assets 2026-10-01 by P5 (type 5.3) batch_09.

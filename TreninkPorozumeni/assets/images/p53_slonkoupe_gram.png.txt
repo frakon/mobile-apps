@@ -1,0 +1,13 @@
+Image: p53_slonkoupe_gram.png
+Generated: 2026-10-01
+Candidate: P5 batch_03 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean: side view, four grey elephants stand side by side in a row with clear gaps between them in a calm blue river that flows between two green grassy river banks visible at the top and bottom edges, water up to the knees, each elephant spraying a fountain of water over its back from its raised trunk, bathing. There are exactly four elephants in the whole picture (four, not more, not fewer), no other elephants anywhere, not in the background, not partly hidden. The four elephants are the same size, clearly separated with space between them, not overlapping, not touching, each one fully visible and easy to count.  Correct realistic anatomy, every figure complete and fully visible, no fused or hybrid animals, no text, no letters, no numbers, plain white background with only the few scene elements described, no patterns, no decorations, nothing else in the picture.
+
+3. Blind test (P5 batch_03): target-vs-gram forced choice 10/10 correct (5/5 per sentence variant, fresh headless opus per trial), pair tested in round r2; evaluator counts matched the intended counts in all trials; lex/real-world check (fresh opus, 4 shuffled pictures) passed: lex pictures matched neither sentence, no blocking faults. Logs: TF\Temp\P5atch_03t_results.jsonl, lex_results.jsonl.

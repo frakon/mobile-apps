@@ -1,0 +1,13 @@
+Image: p54_fotografovanucitelka_gram.png
+Generated: 2026-10-01
+Candidate: P6 batch_12 (type 5.4) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a teacher (adult woman) with round glasses, brown hair in a ponytail, a yellow cardigan and a grey skirt, with a red school book held tightly under her left upper arm against her side (no hand on the book) stands on the left, facing right, holding a black camera with both hands up to one eye, pointing the camera at the policeman. a policeman (adult man) in a dark blue police uniform with a blue police cap stands on the right, facing left toward the camera, posing for the photo with a smile, arms hanging at the sides, holding nothing. The teacher is the active photographer, the policeman is the passive one being photographed. The teacher has exactly two hands, both holding the camera. Only the teacher holds a camera. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+Verification: P6 batch_12 final set r3; blind forced-choice 10/10 (5 v1->target, 5 v2->gram), fresh opus sessions, no ambiguity/glitch remarks; lex+real-world check clean (fresh opus).

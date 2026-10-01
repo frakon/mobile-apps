@@ -1,0 +1,13 @@
+Image: kvetinynadoknem_target.png (accepted from folder r9)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_12 round 9
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one flat rectangular section of a house wall painted in one even plain yellow colour with no lines, bands or stripes, filling most of the picture, with a white margin around it; in the middle of the wall one closed window with white frames and four glass panes and a narrow white windowsill under it. One long narrow brown wooden flower box full of bright red flowers with green leaves, standing on top of two chunky brown wooden triangular support brackets; each bracket is a solid wooden right triangle whose vertical side is fixed flat against the wall and whose top side carries the bottom of the box, the brackets clearly holding the box up from below; the box is DIRECTLY ABOVE the window, higher than the top of the window frame, with a wide strip of bare yellow wall between the brackets and the window frame. The windowsill is attached directly to the bottom of the window frame, and the wall under the windowsill is bare and empty. The flowers are above the window, not below it. Everything shown whole, with correct realistic anatomy and plausible sizes, on pure white empty space, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram r9 pair 10/10 (0 ambiguity/glitch remarks); lex/real-world check L9 clean (target~s1, gram~s2 only). Accepted into assets 2026-09-30 by P4 batch_12.

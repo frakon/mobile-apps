@@ -1,0 +1,14 @@
+Image: kockanaplote_target.png
+Generated: 2026-09-30
+Candidate: batch_06 round 7
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: a brown wooden ranch fence section seen straight from the front: two thick upright square posts, one at each end, and three wide horizontal boards nailed between them, the top board forming a wide flat top edge, the fence about as tall as the cat sitting up, the fence stands on its own, both posts complete down to their bottoms; a grey cat sits ON TOP of the fence on the wide flat top board in the middle, sitting like a normal cat with its front paws together and hind legs tucked under its body, its tail curled around its paws on top of the board, the whole fence below the cat visible. The cat is on the fence, not in front of it. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_06, source folder r7):
+Pair 10/10 (repair round 5, ranch fence), no remarks; lex L7 correct, faults none.

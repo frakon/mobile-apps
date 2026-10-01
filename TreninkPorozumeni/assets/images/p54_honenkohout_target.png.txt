@@ -1,0 +1,13 @@
+Image: p54_honenkohout_target.png
+Generated: 2026-10-01
+Candidate: P6 batch_08 (type 5.4) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: Wide picture with a white margin all around, both animals completely inside the picture. BOTH animals face RIGHT and run to the right. a rooster with a red comb and a colourful tail runs away fast on the RIGHT, its head pointing forward to the right, away from the pursuer, fleeing. a white goat with two curved horns runs fast on the LEFT close behind it, head pointing right toward the rooster, chasing it; a clear gap of white space between their bodies; a few short motion lines only on the LEFT side behind each animal. The goat is the active one chasing; the rooster is the passive one being chased and fleeing. Both mid-stride in the same direction, both animals realistic in size relative to each other. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: ACCEPTED P6 batch_08 final set r3 - blind trials 10/10 clean (fresh opus, 5 v1->target, 5 v2->gram, no remarks); lex/real-world check (fresh opus): only target~A, gram~B, no faults.

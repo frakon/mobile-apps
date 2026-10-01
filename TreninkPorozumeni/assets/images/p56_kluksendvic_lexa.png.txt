@@ -1,0 +1,14 @@
+Image: kluksendvic_lexa.png
+Generated: 2026-10-01
+Candidate: P8 batch02 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a young woman with long red hair in a ponytail, in a light blue blouse and trousers, sits on a wooden chair pulled close to a small complete rectangular wooden dining table with four legs, her hands resting on the edge of the table, in front of her an empty flat white dinner plate with only a few small brown bread crumbs on it, all the bread eaten up, no bread left at all, the plate dry and clean otherwise; nothing else on the table. No boy anywhere. It is clearly AFTER the activity: the work is completely finished and nobody is working on it any more. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_kluksendvic_lexa.png from P8 batch02 folder r4 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2 sentence) in final round 4 with no tense-ambiguity remark beyond logged notes (notes that 'finished' is read from crumbs only); lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched. Logs: Temp/P8/batch_02/bt_results.jsonl, lex_results.jsonl.

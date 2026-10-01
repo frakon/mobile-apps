@@ -1,0 +1,14 @@
+Image: myskavhrnku_lexa.png
+Generated: 2026-09-30
+Candidate: batch_06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big red ceramic mug with one handle, much bigger than the mouse standing upright; a small grey mouse with round ears and a long thin pink tail sits on the ground right BESIDE the mug, to the right of it with a clear empty gap, its whole body fully visible, the mouse's paws and the bottom of the mug at the same level. The mouse is next to the mug, not in it and not on it. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_06, source folder r1):
+Pair 10/10 (repair round 4: gram = mouse perched on the rim of upright mug), no remarks; lex L5 correct, faults none.

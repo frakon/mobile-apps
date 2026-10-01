@@ -1,0 +1,7 @@
+Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+Parameters: model=muse-image-1.0, size=1024x1024 (API returned 1600x1600 WebP; converted+downscaled to 512x512 PNG via Pillow LANCZOS)
+Candidate: c1 (batch_02 working file obouvamaminka_lexa_c1.png)
+Date: 2026-09-30
+Blind test / verification: target-vs-gram forced choice 5/5 fresh opus trials, both sentences (variant 1 + swapped) correct; independent verifier PASS (lex wrong for both sentences, real-world fault classes OK)
+Prompt (verbatim):
+Children's book watercolor illustration, side view: a young mother with a long brown ponytail in a green blouse kneels on one knee on the floor level in front of a young father with a short black beard in a blue shirt and with both hands slides a red shoe onto the seated one's bare foot. A young father with a short black beard in a blue shirt sits calmly on a simple wooden bench with four legs clearly visible, one foot stretched out toward the kneeling helper, the other foot already wearing a red shoe. The kneeling one is the active helper putting the shoe on; the seated one is the passive one getting the shoe on. The kneeling one wears shoes of their own. Two clearly separate whole figures with correct realistic anatomy, all limbs complete and visible, the whole bench complete, the kneeling knee and the bench legs on the same level. Both have calm friendly faces with mouths closed. floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

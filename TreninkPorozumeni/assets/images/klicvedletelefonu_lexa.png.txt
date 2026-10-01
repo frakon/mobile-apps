@@ -1,0 +1,14 @@
+Image: klicvedletelefonu_lexa.png
+Generated: 2026-09-30
+Candidate: batch_11 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter view from slightly above, showing depth: one neat open brown leather bifold wallet lying flat, opened like a book into two equal neat rectangular halves with straight edges and card slots; one big shiny thick golden metal door key with a round ring head and a toothed blade lies INSIDE the open wallet, on its right half. There is no phone anywhere. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, objects have no faces, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_11, source folder r4):
+r1 top-down key read as printed on screen -> r2 3/4 view; r2 phone read as slab -> r3 phone details; lexA wallet redrawn r4. Pair r3 10/10 no remarks; lex L4 clean.

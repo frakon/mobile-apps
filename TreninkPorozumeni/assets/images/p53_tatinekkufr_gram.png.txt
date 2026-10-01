@@ -1,0 +1,13 @@
+Image: p53_tatinekkufr_gram.png
+Generated: 2026-10-01
+Candidate: P5 (type 5.3) batch_02 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a father with short brown hair, blue shirt and grey trousers walks to the left carrying EXACTLY FOUR (4) small brown suitcases: TWO small suitcases in his right hand and TWO small suitcases in his left hand; in each hand his fingers pass clearly through BOTH handles of the two suitcases, the two handles side by side in his fist, and the two suitcases of each hand hang down next to each other with a small gap, not overlapping; arms hanging down at his sides. Count: 2 + 2 = 4 suitcases, not 3, not 5. No other suitcase anywhere. He is the only person. Everything shown whole. Every person and animal has correct realistic anatomy with all limbs complete and visible, calm friendly faces; houses, vehicles, plants and objects are ordinary realistic things with NO faces, NO arms and NO legs. Everything that stands rests on one common flat ground line at the same level. floating in pure white empty space, no ground drawn except what is described, no shadow, no extra scenery, no text, no patterns, nothing else in the picture.
+
+3. Blind test result: final pair round r4f: v1 5/5, v2 5/5, counts 1 vs 4 correct in 10/10; residual remark: each hand grips two handles (awkward, not ambiguous) in 7/10; lex L4: target~A, gram~B only. Accepted into assets 2026-10-01 by P5 (type 5.3) batch_02.

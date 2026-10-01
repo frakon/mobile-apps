@@ -1,0 +1,13 @@
+Image: p54_sprchovankuchar_target.png
+Generated: 2026-10-01
+Candidate: P6 batch_13 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: A very low flat square white shower tray on the right, just a few centimetres high; at its near left corner a short silver water pipe rises from the tray floor with a small silver tap on top of the pipe. a cook (grown-up adult man) in a tall white chef hat, a white chef jacket and black trousers, fully dressed, his clothes and face covered in white flour dust after an accident in the kitchen, the water rinsing the flour off, stands in the shower tray, both feet flat on the tray floor and fully visible, soaking wet, eyes closed, arms hanging at the sides, holding nothing. a pirate (adult man) with a black eye patch, a red bandana, a black beard and a striped shirt stands on the left outside the shower tray, fully dressed and completely dry, stretching one arm high up, holding a silver hand shower HIGH ABOVE the top of the cook's head, the shower head facing straight down. A single cone of water spray comes ONLY out of the shower head's face and falls straight down directly onto the cook's head and shoulders; all water lands inside the tray, no water anywhere else in the air. The dry person's feet and the tray bottom are at exactly the same floor level. A silver flexible hose hangs from the bottom of the hand shower handle down as one continuous smooth tube to the tap and ends there, attached to the tap; no loops, no loose ends. The pirate is the active one showering; the cook is the passive one being showered. Only the pirate holds the hand shower. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: P6 batch_13 final set r1; blind trials 10/10 (v1->target 5/5, v2->gram 5/5, fresh opus sessions, no remarks) and lex/real-world check clean (fresh opus session), 2026-10-01.

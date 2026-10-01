@@ -1,0 +1,11 @@
+Image: p55_tatineknevesiobraz_lexb.png
+Generated: 2026-10-01
+Candidate: P7 batch_12 (type 5.5) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one wide section of plain light beige wall filling the back of the picture from left to right, flat and seen straight from the front, with one small nail sticking out of the middle of the wall surface at head height; one old grandfather with short grey hair and a grey moustache, in a brown vest and grey trousers with a bald head, stands in front of the wall, back three-quarter view, and holds one framed picture of a yellow sunflower in a wooden frame flat against the wall with both hands, hanging its string on the nail; the frame lies flat on the wall surface; no bread anywhere. No young man anywhere. Correct realistic anatomy, every figure and object complete and fully visible, both arms and both legs of every person visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

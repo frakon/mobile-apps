@@ -1,0 +1,11 @@
+Image: p55_klaunnemanosaniklobouk_lexa.png
+Generated: 2026-10-01
+Candidate: P7 batch_08 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one circus clown, a man in a colourful polka-dot suit with a big ruffled collar, big buttons and big red shoes, standing, whole figure, white face paint around the mouth; he wears a big round bright red clown nose, but his head is completely bald and shiny (NO wig, no hair, no hat). Calm friendly faces, mouths closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

@@ -1,0 +1,14 @@
+Image: ucisova_target.png
+Generated: 2026-09-30
+Candidate: batch_04 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a brown owl with round glasses standing on the ground stands on the left next to a small green chalkboard on a wooden easel, pointing at the chalkboard with a long thin stick held in one hand. On the chalkboard there are only three simple white chalk drawings: a circle, a triangle and a star (no letters, no numbers, no writing). a small brown hedgehog sits on the right at a small wooden school desk with a chair, facing the owl and the chalkboard, both hands resting on the desk top, listening. The owl is the active teacher, the hedgehog is the pupil who listens. The easel has three legs, the desk has four legs and the chair has four legs, all complete. Two clearly separate whole animals with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person and every animal clearly visible, slight three-quarter view so the far arm also shows and is not hidden behind any body, calm friendly faces with mouths closed, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result:
+- pair forced-choice blind 10/10 (final pair of r2, batch_04): 5/5 for sentence variant 1 and 5/5 for swapped variant (fresh opus sessions, no ambiguity remark); lex/real-world check (fresh opus session, 4 shuffled pictures): lex pictures match neither sentence, no drawing faults.

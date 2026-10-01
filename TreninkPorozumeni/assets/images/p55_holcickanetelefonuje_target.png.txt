@@ -1,0 +1,11 @@
+Image: p55_holcickanetelefonuje_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_09 (type 5.5) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a small wooden table with four legs; one little girl with two blond pigtails in a red dress sits on a wooden chair at the table facing it, whole figure with both feet visible, drawing one single yellow sun with a crayon on a sheet of paper on the table, looking at the paper; a black mobile phone lies screen-down on the far edge of the table, untouched, her hands far from it. Calm friendly faces, mouths closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

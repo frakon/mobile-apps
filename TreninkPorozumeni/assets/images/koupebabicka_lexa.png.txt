@@ -1,0 +1,14 @@
+Image: koupebabicka_lexa.png
+Generated: 2026-09-30
+Candidate: batch_05 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one white bathtub standing on four short curved metal feet, all four feet clearly visible, the tub full of white soap foam. a brown-and-white dog with floppy ears sits completely inside the bathtub in the foam, only its head, neck and two front paws above the foam, the two front paws resting on the rim of the tub; its hind legs and tail are hidden under the foam inside the tub, nothing of the dog sticks out through the side or under the tub, the white side of the tub is solid and closed. a grandmother (old woman) with grey hair in a bun, round glasses and a purple cardigan kneels on both knees on the floor level beside the tub on the left, fully dressed, completely dry, leaning over the rim and with one hand scrubbing the dog's back with a yellow sponge, the other hand resting on the rim. The grandmother is the active one who washes; the dog is the passive one being bathed and holds nothing. The grandmother is outside the bathtub. The kneeling figure's knees are at the same level as the bathtub feet. Two clearly separate whole figures (one person, one dog) with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person and every animal clearly visible, slight three-quarter view so the far arm also shows and is not hidden behind any body, calm friendly faces with mouths closed, a light playful mood, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+Final selection: batch_05 r2 candidate (working file Temp/P3/batch_05/r2/koupebabicka_lexa.png)
+Blind test / verification: target-vs-gram forced choice, 5 fresh opus trials per sentence (variant 1 + swapped), 10/10 correct, no ambiguity remarks (round r1); independent fresh opus lex + real-world check (round r1b): lex pictures match neither sentence, no blocking faults.

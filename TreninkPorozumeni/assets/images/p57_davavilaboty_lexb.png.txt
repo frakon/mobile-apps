@@ -1,0 +1,11 @@
+Image: davavilaboty_lexb.png
+Generated: 2026-10-01
+Candidate: P9 R1 repair (lex vs why-text) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A father with a short beard in a checked shirt (the father wears bright red boots on its feet) gives one yellow banana to a pirate with a black beard, a black bandana tied on his head, a red-white striped shirt and brown trousers (the pirate has bare feet/paws with no shoes or boots): the father firmly holds the banana in his outstretched hand, his other arm hanging freely at his side; the pirate stands a step away with one EMPTY open palm held up under the banana, not yet touching it, his other arm at his side. The father is the giver who holds the banana; the pirate is the receiver whose hand is still empty. ONLY the father wears bright red boots on its feet; the pirate has bare feet/paws with no shoes or boots. Exactly two clearly separate whole people with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no fairy anywhere in the picture.

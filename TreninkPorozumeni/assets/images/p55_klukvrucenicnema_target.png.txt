@@ -1,0 +1,14 @@
+Image: p55_klukvrucenicnema_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_05 (type 5.5) round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little boy about six years old with short brown hair in a blue T-shirt and blue shorts stands facing the viewer, the whole figure visible, both arms bent at the elbows with the forearms held forward and both SMALL hands open with palms facing up at waist height close to his body, fingers together, not spread; his hands are small child-sized hands in correct proportion, much smaller than his face; both open hands are completely EMPTY, nothing in them; nothing else anywhere in the picture. Calm friendly face, mouth closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.
+
+Installed as p55_klukvrucenicnema_target.png from P7 batch_05 folder r4 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2 sentence) with no ambiguity remark in the final pair round; lex check (4 shuffled pictures, both sentences) only target~v1 and gram~v2 matched. Logs: Temp/P7/batch_05/bt_results.jsonl, lex_results.jsonl.

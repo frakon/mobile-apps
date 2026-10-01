@@ -1,0 +1,11 @@
+Image: p55_babickanepletesalu_gram.png
+Generated: 2026-10-01
+Candidate: P7 retest g3 (type 5.5) r_a
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one grey-haired grandmother with her hair in a bun, round glasses, a green cardigan and a mid-calf brown skirt, thick brown stockings and black shoes sits upright in one cosy red armchair standing on four short visible wooden legs, awake with open eyes, busily knitting: she holds two knitting needles in her hands with a half-knitted blue-and-white striped scarf hanging down from the needles, a wool thread runs from the needles to a ball of blue wool in a small wicker basket on the floor beside the armchair. She is clearly knitting a scarf. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture. Both of the seated person's lower legs and both shoes are clearly visible, resting on the ground in front of the armchair. The basket holds exactly ONE single ball of blue wool.

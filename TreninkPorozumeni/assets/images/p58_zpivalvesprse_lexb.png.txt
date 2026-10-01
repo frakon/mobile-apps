@@ -1,0 +1,11 @@
+Image: p58_zpivalvesprse_lexb.png
+Generated: 2026-10-01
+Candidate: P10 retestA (type 5.8) round 6
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, front view: a grandmother with grey hair in a bun and round glasses, wearing a long green skirt and a cardigan stands singing with an open mouth next to a complete ordinary upright wooden piano seen straight from the front (one solid wooden cabinet, the keyboard with white and black keys facing the viewer, resting on two front legs under the keyboard, with two small brass pedals clearly visible at the bottom center, closed lid; a complete piano), the grandmother standing to the right of the piano facing the viewer standing on the same level as her feet, a few musical notes floating near her mouth, no shower anywhere. She is unmistakably an old woman: grey hair bun and a long skirt. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

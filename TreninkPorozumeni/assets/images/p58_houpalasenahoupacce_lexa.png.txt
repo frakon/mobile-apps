@@ -1,0 +1,11 @@
+Image: p58_houpalasenahoupacce_lexa.png
+Generated: 2026-10-01
+Candidate: P10 batch08 (type 5.8) round 9
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails tied with ribbons, wearing a pink dress stands on the ground next to an empty playground swing hanging from a wooden frame. She is unmistakably a girl: long pigtails and a pink dress. It must be clearly visible that the girl is NOT doing this: swings high on a playground swing hanging from a wooden frame, holding the ropes. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Three-quarter front view. The swing frame is complete and symmetric: a LEFT A-shaped pair of wooden legs and a RIGHT A-shaped pair of wooden legs, both standing on the same level, joined at the top by one horizontal top bar resting on both A-shapes; the empty seat hangs still on two continuous unbroken ropes; she stands beside it, both feet on the ground, hands at her sides. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

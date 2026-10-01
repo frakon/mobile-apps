@@ -1,0 +1,11 @@
+Image: p57_budirobotsala_target.png
+Generated: 2026-10-01
+Candidate: P9 R2 repair (limbs visible, layout as gram) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: on the LEFT side of the picture a friendly silver robot with a round head, round eyes and one short antenna (the robot wears a long red-and-white striped scarf around its neck) stands upright facing right, awake, next to the head end of a simple complete wooden bed (a headboard and a footboard of the same height, four legs, the bed seen slightly from the front so both ends are clearly complete). On the bed, on the RIGHT side of the picture, a pink pig (the pig has nothing around its neck, no scarf) lies asleep on its belly with eyes closed (no blanket), its HEAD toward the LEFT, close to the robot, its curly tail toward the right; both front legs of the pig are stretched forward on the mattress in front of its chest and both hind legs stick out behind, all four pig legs with hooves clearly visible. The robot reaches out its near arm and gently pats the top of the pig's head with its hand; its other arm hangs at its side, both robot arms fully visible. ONLY the robot wears a long red-and-white striped scarf around its neck; the pig has nothing around its neck, no scarf. The robot is large: from its antenna near the top edge to its feet near the bottom edge it fills most of the picture height; the bed is as long as half the picture width. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,13 @@
+Image: tetamezistrycem_lexa.png (candidate folder r2)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_14 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one long green three-seat sofa with a backrest, two armrests and four short wooden legs clearly visible. Exactly three people sit on the sofa side by side facing the viewer, one on each seat with small gaps, not touching, hands in their laps, feet on the same level, left to right: a middle-aged man with short black hair and a big black moustache in a blue shirt, an old grandmother with grey hair in a bun and round glasses in a purple cardigan in the middle seat, an adult woman of about forty, as tall as the man, with shoulder-length wavy red hair and a grown-up face, wearing a yellow dress and earrings. Every person has correct realistic anatomy: two arms, two legs, five fingers on each hand, all limbs complete and visible, calm friendly faces with mouths closed. Everything shown whole, with correct realistic anatomy and plausible sizes, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, no letters, no signs with writing, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram repair round 1 (r2) pair 10/10 (0 remarks); lex/real-world check L2 clean (target~s1, gram~s2 only; no faults). Accepted into assets 2026-09-30 by P4 batch_14.

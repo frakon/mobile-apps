@@ -1,0 +1,11 @@
+Image: p58_michalatesto_gram.png
+Generated: 2026-10-01
+Candidate: P10 pilot (type 5.8) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a bald grandfather with a big grey moustache, wearing brown trousers and a vest stands beside a big mixing bowl standing firmly on a small wooden kitchen table with four legs, one hand steadying the rim of the bowl and the other hand stirring thick sticky pale yellow cake dough in the bowl with a wooden spoon. He is unmistakably an old man: bald head, moustache and trousers. Calm friendly face, mouth closed. Exactly one figure with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. The whole figure is visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing is cut off by the picture edge; the figure is drawn small enough to fit completely. This picture is the mirrored twin of a paired picture: exactly the same pose, objects, composition and style; the only difference is the person.

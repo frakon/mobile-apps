@@ -1,0 +1,11 @@
+Image: stojiopicecepice_target.png
+Generated: 2026-10-01
+Candidate: P9 strict audit (5.7) repair round 11
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A grey donkey (the donkey has nothing on its head, no cap, no hat) and a brown monkey (the monkey wears a red knitted winter cap on its head) both STAND side by side right next to each other, a small gap between them: the donkey stands on its four legs, the monkey stands upright on its two hind legs (it is not sitting), all feet at one ground level. ONLY the monkey wears a red knitted winter cap on its head; the donkey has nothing on its head, no cap, no hat. The donkey is shown in strict side profile facing right, like a side-view photo. The monkey is small: standing upright, the top of its head reaches only up to the donkey's chest; the monkey stands UPRIGHT on its two hind legs, body vertical like a small person, to the right of the donkey and faces LEFT: its face, chest and belly are turned toward the donkey, its tail behind it on the right, its eyes looking at the donkey's face. The monkey's red knitted cap has a round red pompom on top. Exactly two clearly separate whole animals with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

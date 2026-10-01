@@ -1,0 +1,15 @@
+Image: zabkapodtrampolinou_lexa.png
+Generated: 2026-09-30
+Candidate: P4 batch_05 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one small round children's trampoline with a black jumping mat and a blue padded rim, standing on four short straight metal legs; a wide open empty space between the floor and the mat. The trampoline is complete: mat, rim and four legs. one small green frog, much smaller than the trampoline, about as tall as one third of the trampoline's legs sits on the floor BESIDE the trampoline, to its right with a clear gap, outside of it. The space under the trampoline is empty and nothing is on it. The frog is next to the trampoline. Everything that stands rests at one common invisible floor level; nothing floats.  No faces on objects. Everything shown whole, with correct realistic anatomy and plausible sizes, every leg, paw, wing and tail complete and not merged with anything, calm friendly faces, no fused or hybrid animals, floating in pure white empty space, no ground drawn, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance:
+- Accepted: P4 batch_05, file taken from folder r2 (its candidate round is stated above); installed 2026-09-30
+- Blind test: pair r2 10/10 (one positional note 'near front edge, clearly under'); lex L2 clean

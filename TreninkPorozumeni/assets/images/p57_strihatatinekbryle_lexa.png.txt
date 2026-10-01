@@ -1,0 +1,11 @@
+Image: strihatatinekbryle_lexa.png
+Generated: 2026-10-01
+Candidate: P9 R1 repair (lex vs why-text) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A father, a grown-up man with a short brown beard in a blue checked shirt and dark trousers (the father wears big round black glasses), sits still on a low wooden stool with four legs clearly visible, both of his hands resting on his knees, his hands empty, both feet on the floor level. A small boy with short brown hair in a green T-shirt (the boy wears no glasses) stands right behind the seated father and is cutting the father's hair: the BOY holds a pair of scissors in his right hand at the top of the father's head, snipping the father's hair, the boy's other arm free and fully visible. The boy is the active hairdresser who cuts; the father is the passive customer whose hair is being cut; the father holds nothing. ONLY the father wears big round black glasses; the boy wears no glasses. Exactly two clearly separate whole people with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, small and centered with a wide white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no grandmother anywhere in the picture.

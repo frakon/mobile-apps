@@ -1,0 +1,11 @@
+Image: p55_snehulaknemahrnecanikoste_target.png
+Generated: 2026-10-01
+Accepted candidate: P7 batch_04 (type 5.5) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one snowman made of three white snowballs stacked on top of each other, with a carrot nose, two black coal eyes and a coal smile, and NO arms; the top of its head is bare round snow with nothing on it; nothing stands beside it: no pot, no hat, no broom, no stick anywhere. Only the plain snowman. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

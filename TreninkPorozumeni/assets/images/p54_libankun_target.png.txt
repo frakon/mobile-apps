@@ -1,0 +1,13 @@
+Image: p54_libankun_target.png
+Generated: 2026-10-01
+Candidate: P6 batch_13 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: a brown horse with a black mane stands still on all four legs on the right, its body in side view facing left, but its head turned FRONTALLY toward the viewer, eyes closed, mouth closed, calm, only receiving. a black-and-white striped zebra with a short mane stands on all four legs on the left in pure profile facing right, stretches its neck and presses its closed mouth onto the lower side of the horse's round cheek, below the eye, far from the ears, clearly a kiss on the cheek, NOT nose to nose and NOT mouth to mouth; one small red heart floats above. The zebra is the active one kissing; the horse is the passive one being kissed on the cheek. The only contact is the zebra's mouth on the horse's cheek; their noses and mouths never meet. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: P6 batch_13 final set r1; blind trials 10/10 (v1->target 5/5, v2->gram 5/5, fresh opus sessions, no remarks) and lex/real-world check clean (fresh opus session), 2026-10-01.

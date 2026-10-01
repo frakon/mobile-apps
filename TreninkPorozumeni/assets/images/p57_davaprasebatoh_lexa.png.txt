@@ -1,0 +1,11 @@
+Image: davaprasebatoh_lexa.png
+Generated: 2026-10-01
+Candidate: P9 batch_04 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A fairy with small transparent wings in a light green dress (the fairy carries no backpack and no bag) hands a white mug to a pink pig (the pig carries a blue backpack on its back): the fairy stands with both legs apart and both feet visible, holds the mug out with one hand while the other arm hangs down fully visible at the side of the body in front of the body, not hidden; the pig stands on all four legs on the ground (exactly four pig legs, all on the ground) and stretches its snout toward the mug to take it. ONLY the pig carries a blue backpack on its back; the fairy carries no backpack and no bag. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no pirate anywhere in the picture.

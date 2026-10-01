@@ -1,0 +1,11 @@
+Image: hrajeopiceklobouk_target.png
+Generated: 2026-10-01
+Candidate: P9 batch_01 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A boy with short brown hair in a green T-shirt (the boy has nothing on its head, no hat, no cap) and a brown monkey (the monkey wears a big yellow straw hat on its head) play together with a ball: the boy rolls a blue ball on the floor toward the monkey, the monkey reaches for it. ONLY the monkey wears a big yellow straw hat on its head; the boy has nothing on its head, no hat, no cap. Both figures are shown completely from head to toe with feet and shoes fully inside the picture, small and centered with white margin all around. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

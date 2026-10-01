@@ -1,0 +1,13 @@
+Image: p55_holcickanebrusli_target.png
+Generated: 2026-10-01
+Candidate: P7 batch_02 (type 5.5) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a complete wooden bench with a backrest and four full-length legs standing on a small patch of snow; beside it lies a small flat thin sheet of pale blue ice, perfectly flat and level with the snow like a frozen puddle, not a raised disc; a girl (about seven years old) with two pigtails, a red winter jacket, dark blue trousers and white ice skates on both feet sits still on the bench, resting, both skates resting on the snow in front of the bench, hands in the lap; she is NOT skating and the ice is empty. One single whole figure with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, no extra limbs, calm friendly face with mouth closed, only the objects named here, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind test: accepted in P7 batch_02 - forced choice target vs gram 5/5 (v1) + 5/5 (v2) in final configuration, lex/real-world check (fresh opus session, 4 shuffled pictures, both sentences): only target~v1, gram~v2; no faults remaining. Logs: AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P7/batch_02/

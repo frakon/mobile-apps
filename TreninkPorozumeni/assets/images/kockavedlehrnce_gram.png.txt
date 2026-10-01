@@ -1,0 +1,13 @@
+Image: kockavedlehrnce_gram.png
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: side view, a big silver metal cooking pot with two small side handles, no lid, standing upright. A grey cat is sitting INSIDE the pot; the opaque metal sides hide the cat's legs and lower body, only the cat's head, ears, shoulders and front paws resting on the rim show above the rim. The cat is clearly inside the pot, not beside it, not on the lid. Every animal has correct realistic anatomy: exactly four legs and one tail each (a bird has exactly two wings and two legs), no fused or hybrid animals, calm friendly face with mouth closed. floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (P4 batch_01, 2026-09-30): final set folder r3, repair rounds used for item: 1. Blind test (fresh opus headless sessions, neutral names, randomized mapping): target vs gram forced choice 10/10 (5 with sentence v1 + 5 with swapped sentence), no ambiguity/glitch remark (pair round r1 pair / r3 lex); lex check (all 4 shuffled, one fresh session): only target matches v1, only gram matches v2, no real-world faults.

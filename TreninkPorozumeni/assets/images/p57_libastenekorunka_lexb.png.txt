@@ -1,0 +1,11 @@
+Image: libastenekorunka_lexb.png
+Generated: 2026-10-01
+Candidate: P9 batch_08 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A clearly adult middle-aged mother, about 40 years old, with brown hair in a bun and a white apron over a blue dress (the mother wears a big shiny golden crown, clearly visible on its head, resting directly on the head) bends down beside and presses her lips onto the side of the cheek (not the nose, not the mouth) of a small ginger kitten (the kitten has nothing on its head, no crown, no hat); the kitten stands on all four paws with its head turned toward the viewer, eyes open, calmly receiving the kiss, not kissing back; both of the kisser's arms visible, resting on her knees. ONLY the mother wears a big shiny golden crown, clearly visible on its head; the kitten has nothing on its head, no crown, no hat. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, both figures shown whole from head to toe, small and centered with a wide white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no puppy anywhere in the picture.

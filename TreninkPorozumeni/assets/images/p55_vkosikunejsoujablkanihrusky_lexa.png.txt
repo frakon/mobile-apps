@@ -1,0 +1,11 @@
+Image: p55_vkosikunejsoujablkanihrusky_lexa.png
+Generated: 2026-10-01
+Candidate: P7 batch_11 (type 5.5) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: one round wicker basket with a tall arched handle, seen slightly from above so the inside is visible; the basket is holds exactly five round red apples resting down on the bottom inside the basket, all five clearly visible, the fruit sits deep inside the basket below the rim; no pears at all, nothing else. Correct realistic anatomy, every figure and object complete and fully visible, no text, no letters, no numbers, plain white background with only the few scene elements described, no scenery, no decorations, nothing else in the picture.

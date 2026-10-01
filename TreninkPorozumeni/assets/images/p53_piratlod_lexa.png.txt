@@ -1,0 +1,13 @@
+Image: p53_piratlod_lexa.png
+Generated: 2026-10-01
+Candidate: P5 batch_05 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration: one wooden sailing ship on calm sea, side view, flat wooden deck with low railing, one mast with one white sail, and exactly one big colourful parrot standing on the deck railing. No person and no pirate anywhere. Correct realistic anatomy, complete hands and limbs, calm friendly faces, no fused or hybrid figures, simple minimal scene, uncluttered plain background, no text, no letters, no patterns, nothing else in the picture.
+
+3. Blind test (P5 batch_05, trials round 1): target vs gram forced choice 10/10 (5/5 sentence, 5/5 swapped), counts reported correctly by all evaluators, no glitch remarks; lex check: each lex picture matches neither sentence, no real-world faults. ACCEPTED 2026-10-01.

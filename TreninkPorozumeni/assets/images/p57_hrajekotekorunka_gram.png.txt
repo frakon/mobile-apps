@@ -1,0 +1,11 @@
+Image: p57_hrajekotekorunka_gram.png
+Generated: 2026-10-01
+Candidate: P9 batch_03 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A clown with a red nose and a colourful suit (the clown wears a big shiny golden crown, clearly visible on its head) and a small ginger kitten (the kitten has nothing on its head, no crown, no hat) play together with a ball: the clown rolls a blue ball on the floor toward the kitten, the kitten reaches for it. ONLY the clown wears a big shiny golden crown, clearly visible on its head; the kitten has nothing on its head, no crown, no hat. Both arms of the clown are fully visible, one hand rolling the ball, the other resting on its knee. Every arm and every leg of both figures is fully visible, no limb hidden behind a body or object, nothing cut off by the picture edge. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,13 @@
+Image: p54_ocichavanjezek_gram.png
+Generated: 2026-10-01
+Candidate: P6 batch_08 (type 5.4) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, pure flat side profile view: Wide picture with a white margin all around, both animals completely inside the picture. a black mole with velvety black fur, a pink pointed snout, big pink digging front paws and no visible ears stands still on all four legs on the RIGHT, facing right, head up looking straight ahead, calm. a small brown hedgehog with spines on its back stands on all four legs on the LEFT, behind the mole with a clear gap of white space between their bodies, facing right, head stretched forward and lowered, eyes closed, only the tip of its nose touching the mole's rear side, sniffing it. The hedgehog is the active one sniffing; the mole is the passive one being sniffed. The two bodies do not overlap; only the nose tip touches. Both animals are similar small size. Two clearly separate whole animals with correct realistic anatomy, pure flat side profile view like a frieze, both animals on the very same baseline, all four legs of each visible and separate, no extra legs, calm friendly faces with mouths closed, no fused or hybrid animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: ACCEPTED P6 batch_08 round 1 - blind trials 10/10 (5 v1->target, 5 v2->gram, fresh opus, no ambiguity remarks); lex/real-world check (fresh opus): only target~A, gram~B, no faults.

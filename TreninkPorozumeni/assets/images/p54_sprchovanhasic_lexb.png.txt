@@ -1,0 +1,13 @@
+Image: p54_sprchovanhasic_lexb.png
+Generated: 2026-10-01
+Candidate: P6 batch_10 (type 5.4) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: A very low flat square white shower tray on the right, just a few centimetres high; at its near left corner a short silver water pipe rises from the tray floor with a small silver tap on top of the pipe. a firefighter (grown-up adult man) with a yellow firefighter helmet with a wide back brim and a small badge on the front, just back from a fire, fully dressed in his dark firefighter uniform with yellow reflective stripes, boots and helmet, the uniform smeared with black soot, both boots standing flat on the tray floor and fully visible; the water rinses the black soot off his helmet and uniform (firefighters rinse their gear like this after a fire), stands in the shower tray, soaking wet, eyes closed, arms hanging at the sides, holding nothing. a policeman (grown-up adult man) in a blue police uniform and a blue police cap stands on the left outside the shower tray, fully dressed and completely dry, holding a silver hand shower in one raised hand above the other one's head, pointing down. A single cone of water spray comes ONLY out of the shower head's face and falls straight down directly onto the firefighter's helmet and shoulders, hitting him; all water lands inside the tray, no water anywhere else in the air. The dry person's feet and the tray bottom are at exactly the same floor level. A silver flexible hose hangs from the bottom of the hand shower handle down as one continuous smooth tube to the tap and ends there, attached to the tap; no loops, no loose ends. The policeman is the active one showering; the firefighter is the passive one being showered. Only the policeman holds the hand shower. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification (P6 batch_10, final set r4): blind forced-choice trials 5/5 per sentence (fresh headless opus), lex + real-world check by fresh opus session: no faults, no ambiguity remarks.

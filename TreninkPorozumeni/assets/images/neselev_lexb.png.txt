@@ -1,0 +1,14 @@
+Image: neselev_lexb.png
+Generated: 2026-09-30
+Candidate: batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big grey elephant walks on all four legs to the left and carries a young striped orange tiger on its back. The tiger lies on top of the elephant's back, its front paws around the elephant's neck, its hind legs hanging down along the elephant's sides, all of the tiger's paws off the ground. The elephant is the active one who carries, the tiger is the passive one being carried and is smaller than the elephant. Only the elephant's four paws are at ground level. Two clearly separate whole animals with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, calm friendly faces with mouths closed, no fused or hybrid animals, all feet of the standing figures at the same level, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind-test result:
+- lex check: matches neither variant sentence (fresh opus session); real-world fault check passed (fresh opus session).

@@ -1,0 +1,14 @@
+Image: medvedstrom_gram.png
+Generated: 2026-10-01
+Candidate: P8 batch09 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a single tall tree with a straight brown trunk, a full round green leafy crown and a few thick branches, the trunk standing on a small round patch of green grass, the whole tree fully visible from the grass patch to the top of the crown; a big brown bear sits on the highest thick branch at the very top of the crown, resting there, all four paws on the branch; nothing else on the branch, no tools, no objects. It is clearly AFTER the activity: the work is completely finished and nobody is working on it any more, the tools are put down. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_medvedstrom_gram.png from P8 batch09 folder r4 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 in final pair round (batch folder r4) (5 x v1 + 5 x v2 sentence, fresh headless opus per trial, neutral names), only cosmetic consistency notes in that round; lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched; remaining real-world remarks minor/cosmetic only (logged in Temp/P8/batch09_result.md). Logs: Temp/P8/batch_09/bt_results.jsonl, lex_results.jsonl.

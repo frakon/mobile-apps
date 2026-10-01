@@ -1,0 +1,13 @@
+Image: myjekluk_gram.png
+Generated: 2026-09-30
+Candidate: batch_09 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a father with short brown hair and a short brown beard in a green shirt and jeans stands on the left, fully dressed and dry, and presses a big yellow sponge firmly against the bare back of a small boy with short brown hair, shirtless, in blue swim shorts, barefoot, scrubbing it; the sponge touches the boy's back. The boy stands on the right with his back turned toward the father, both arms hanging at his sides, white soap foam only on his back where the sponge scrubs. The father is the active one washing, the boy is the passive one being washed. Both stand at the same ground level, no bathtub, no tub. Two clearly separate whole figures with correct realistic anatomy, every arm, leg, paw and tail complete and fully visible, not hidden behind anything, both arms and both hands of every person clearly visible, exactly two arms and two legs per person, exactly four legs per four-legged animal, calm friendly faces with mouths closed, no fused or hybrid animals, the only contact is the sponge on the back, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (batch_09): target/gram pair 5/5 forced choice for both sentences (variant 1 + swapped); lex check: each picture matches only its own sentence or neither, no real-world faults. Final round folder: r2. See AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types/Temp/P3/batch_09/report.md

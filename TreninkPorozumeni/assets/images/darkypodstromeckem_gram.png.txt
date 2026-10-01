@@ -1,0 +1,13 @@
+Image: darkypodstromeckem_gram.png (accepted from folder r2)
+Generated: 2026-09-30
+Candidate: P4 (type 5.2) batch_12 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one small decorated green Christmas tree with red and gold baubles and a yellow star on top, standing in a brown pot on a thin grey floor line, its lowest branches spreading wide just above the floor, the tree on the left half of the picture. Three wrapped gift boxes (one red, one blue, one green) with golden ribbons and bows lie on the floor line right NEXT TO the tree on its right side, just beyond the tips of the lowest branches with a small empty gap, no branch above them. The floor under the tree around the pot is empty. The gifts are beside the tree, not under it. Everything shown whole, with correct realistic anatomy and plausible sizes, on pure white empty space, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Blind test result: forced choice target vs gram r2 pair 10/10 (0 remarks); lex/real-world check L2 clean (target~s1, gram~s2 only). Accepted into assets 2026-09-30 by P4 batch_12.

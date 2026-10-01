@@ -1,0 +1,11 @@
+Image: strihaprinceznasala_target.png
+Generated: 2026-10-01
+Candidate: P9 batch_05 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A princess with long golden hair in a long pink gown and a small golden tiara (same in every picture) (the princess wears a long plain bright green scarf around its neck) stands behind a lion with a mane (the lion has nothing around its neck, no scarf) holding scissors and trimming the mane of the lion, the scissors gripped by her fingers, her other arm visible; the lion sits still on a low wooden stool with four legs clearly visible, no cape. ONLY the princess wears a long plain bright green scarf around its neck; the lion has nothing around its neck, no scarf. Both figures are shown whole from head to toe, small and centered with a wide white margin around them. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

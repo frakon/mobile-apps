@@ -1,0 +1,13 @@
+Image: p54_hlazenmaminka_gram.png
+Generated: 2026-09-30
+Candidate: P6 batch_01 round 1b
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter side view: a boy (about eight years old) with a red cap, a yellow T-shirt and blue shorts sits calmly on the floor on the right, legs folded, facing left, both hands resting in her/his lap, not touching anyone. a mother (grown-up adult woman) with brown hair in a bun, a green blouse and a blue skirt stands on the left, facing the sitting one, and gently strokes the top of the sitting one's head with one open hand; the other arm hangs relaxed. The mother is the active one stroking; the boy is the passive one being stroked and does nothing. Only the mother's hand touches the other's head. Both are ordinary humans, no animal features, no fur, no tail. Two clearly separate whole figures with correct realistic anatomy, every arm, hand, leg and foot complete and fully visible, no extra limbs, calm friendly faces with mouths closed, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Blind-test result (P6 batch_01): t1: forced choice 10/10 (2 remarks: hand on cap, no ambiguity); lex/real-world check: no faults

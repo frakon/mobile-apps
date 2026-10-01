@@ -1,0 +1,11 @@
+Image: p58_tahlsanky_lexb.png
+Generated: 2026-10-01
+Candidate: P10 batch07 (type 5.8) round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails tied with ribbons (no hat), wearing a pink winter coat with a wide skirt-like hem flaring out like a dress, white tights, a scarf, mittens and winter boots walks to the LEFT pulling an empty small wooden four-wheeled cart BEHIND her; the long pull handle is attached to the front axle of the cart and held in her hand behind her back, the cart trailing on the right. She is unmistakably a girl: long pigtails and a pink dress-like coat. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

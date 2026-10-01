@@ -1,0 +1,11 @@
+Image: libakockabatoh_target.png
+Generated: 2026-10-01
+Candidate: P9 batch_06 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: A grey cat (the cat carries a small blue backpack on its back, both straps over the shoulders) stands upright on its hind legs, its front paws resting on the shoulder of a father with a short beard in a checked shirt (the father carries no backpack and no bag); the father kneels low on both knees; the cat presses its closed lips onto the middle of his round cheek just below his eye, clearly on his face (not the ear, not the neck), the cat's eyes closed. The father looks straight ahead toward the viewer side, eyes open, mouth closed and not puckered, smiling, he does not kiss back, both his arms visible hanging at his sides; only the cat kisses, a one-way kiss. ONLY the cat carries a blue backpack on its back; the father carries no backpack and no bag. Exactly two clearly separate whole figures with correct realistic anatomy, all limbs fully visible, calm friendly faces, both figures shown whole from head to toe with all feet inside the picture, small and centered with a wide white margin all around, no other people or animals, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

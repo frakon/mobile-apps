@@ -1,0 +1,14 @@
+Image: knihavbatohu_gram.png
+Generated: 2026-09-30
+Candidate: batch_11 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: a big red school backpack standing upright on its flat bottom, seen from the front: a top carry handle, two shoulder straps attached at the top and running down the sides to the bottom corners, a front pocket zipped closed, the main compartment zipped completely closed, nothing sticking out of it; a big thick blue book lies flat right BESIDE the backpack, to the right of it with a clear empty gap, the whole book fully visible, the bottom of the book exactly at the same level as the bottom of the backpack. The book is next to the backpack, not in it. Every thing is complete and fully visible (except where stated as hidden) with correct realistic proportions; every person and animal has correct anatomy with all limbs complete, calm friendly faces with mouths closed, objects have no faces, no fused or hybrid figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30, P4 batch_11, source folder r4):
+r1 open empty front pocket glitch -> closed pocket r2; gram straps r3; target straps hidden r4. Pair r4 10/10 no remarks; lex L4 clean.

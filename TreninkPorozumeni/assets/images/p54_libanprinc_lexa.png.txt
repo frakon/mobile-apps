@@ -1,0 +1,13 @@
+Image: p54_libanprinc_lexa.png
+Generated: 2026-10-01
+Candidate: P6 batch_08 (type 5.4) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, view: a knight (adult man) in shiny silver armour, with no helmet so his face with short brown hair is visible kneels on one knee on the right, body and face turned FRONTALLY toward the viewer, eyes closed, mouth closed and far away from the other figure, both arms hanging down at the sides clearly visible, not kissing, only receiving. a fairy (young woman) with long hair, a light green dress and two small transparent wings on her back stands on the left in pure profile facing right, bends slightly and presses puckered lips onto the side of the knight's cheek next to the ear, clearly a kiss on the cheek, NOT on the mouth; the fairy's both arms hang down at its sides, both clearly visible. One small red heart floats above. The fairy is the active one kissing; the knight is the passive one being kissed on the cheek. The only contact is the fairy's lips on the knight's cheek; their mouths never meet. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, foot, paw and tail complete and fully visible, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, the kneeling knee on the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: ACCEPTED P6 batch_08 final set r2 - blind trials 10/10 clean (fresh opus, 5 v1->target, 5 v2->gram, no remarks); lex/real-world check (fresh opus): only target~A, gram~B, no faults.

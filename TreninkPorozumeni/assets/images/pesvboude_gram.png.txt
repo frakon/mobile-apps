@@ -1,0 +1,13 @@
+Image: pesvboude_gram.png
+Generated: 2026-09-30
+Candidate: P4 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, soft colours: one wooden doghouse with a red roof that has the same shingles on both roof slopes, four wooden walls and a round door opening in the front wall with no board or step at the door (the doghouse is complete: walls, roof and door), seen from the side at a slight angle. a brown dog with floppy ears (exactly four legs and one tail) is lying on its belly ON the roof of the doghouse, stretched along the top ridge, all four legs visible folded under and beside its body on the roof, its tail visible. The round door opening is empty and dark. The dog is clearly lying on the doghouse roof, not inside it. Everything complete and anatomically correct, calm friendly face. Only these things in the picture, floating in pure white empty space, no ground, no floor line, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Acceptance (2026-09-30): P4 batch_02, final candidate set r3. Blind forced-choice target vs gram 10/10 (5 per variant), fresh opus headless sessions, no ambiguity/glitch remark; lex check (4 shuffled pictures, one fresh session): only target~sentence1 and gram~sentence2; real-world fault check clean.

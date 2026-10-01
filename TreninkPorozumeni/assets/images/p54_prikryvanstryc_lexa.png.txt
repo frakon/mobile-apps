@@ -1,0 +1,13 @@
+Image: p54_prikryvanstryc_lexa.png
+Generated: 2026-10-01
+Candidate: P6 batch_04 (type 5.4) round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, clear side view: A simple low wooden bed with four short legs, a pillow, no headboard and no footboard. a boy (about 8 years old) with short brown hair, bareheaded, no hat lies in the bed on the back, head on the pillow, eyes closed, both arms on top of the blanket, whole body within the mattress. A big blue blanket already lies over the boy's whole body from the feet up to the chest; the boy's legs and feet are completely UNDER the blanket, not visible, nothing on top of the blanket except the arms. a girl (about 7 years old) in a yellow dress with two pigtails stands upright on the floor level beside the bed, both feet on the same ground line as the bed legs, leaning over, and with both hands pulls the top edge of the blanket up to the boy's chin, tucking the boy in. The girl is the active one tucking in, the boy is the passive one being covered. The girl stands, only the boy lies in bed. Two clearly separate whole people with correct realistic anatomy, the standing one's arms, legs and feet complete and fully visible, the lying one's legs hidden under the blanket, not hidden behind anything, no extra limbs, no fused or hybrid figures, calm friendly faces, simple clear pose, all feet at the same ground level, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, nothing else in the picture.
+
+3. Verification: P6 batch_04 accepted after tested round 3 (set r3); blind forced choice 10/10 (5 per sentence, fresh opus sessions), no ambiguity/glitch remarks; lex + real-world check (fresh opus): lex pictures match neither sentence, no faults.

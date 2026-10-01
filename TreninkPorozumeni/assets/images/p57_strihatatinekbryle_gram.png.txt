@@ -1,0 +1,11 @@
+Image: strihatatinekbryle_gram.png
+Generated: 2026-10-01
+Candidate: P9 strict audit 2 (5.7) repair round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, the seated father on the LEFT facing left, the standing grandmother on the RIGHT just behind his head: A grandmother with grey hair in a bun and a purple dress and black flat shoes (the grandmother wears big round black glasses) stands beside and slightly behind the head of a father with a short brown beard in a blue checked shirt and dark trousers (the father wears no glasses) holding scissors in one hand at the top of the head of the seated person, snipping the hair, her other arm free, hanging at her side in front of her body, fully visible, of the father; the father sits still on a low wooden stool with four legs clearly visible, hands resting on knees, both feet on the floor level, no cape. ONLY the grandmother wears big round black glasses; the father wears no glasses. Exactly two clearly separate whole people with correct realistic anatomy, all limbs fully visible, calm friendly faces, no other people or animals, no letters, no numbers, no marks on the clothes, both figures shown whole from head to toe, small and centered with a wide white margin around them, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
