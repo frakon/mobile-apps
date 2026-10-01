@@ -26,7 +26,23 @@ export const PEXESO_WORDS: readonly PexesoWord[] = WORDS.filter((entry) => !entr
   archivePath: `words/${entry.id}.zip`,
 }));
 
-export const PEXESO_LETTER_AUDIO: LetterAudioMap = LETTER_AUDIO;
+// Pexeso keeps DISTINGUISHING vowel readings, unlike the general long-vowel LETTER_AUDIO (A "á" long, Á "dlouhé á",
+// I "měkké í", í "dlouhé měkké í", E/O/U "é/ó/ú" long, ú/ů named) - `_LetterTraining_PROMPTS.md` /
+// "## Follow-up prompt 11" + "## Q&A 11" + "## Follow-up prompt 16 — Long vowel pronunciation everywhere".
+export const PEXESO_LETTER_AUDIO: LetterAudioMap = {
+  ...LETTER_AUDIO,
+  'a': require('../../assets/audio/letters/a_long.mp3'),
+  'á': require('../../assets/audio/letters/aa.mp3'),
+  'e': require('../../assets/audio/letters/e_long.mp3'),
+  'é': require('../../assets/audio/letters/ee.mp3'),
+  'i': require('../../assets/audio/letters/i_soft_long.mp3'),
+  'í': require('../../assets/audio/letters/ii.mp3'),
+  'o': require('../../assets/audio/letters/o_long.mp3'),
+  'ó': require('../../assets/audio/letters/oo.mp3'),
+  'u': require('../../assets/audio/letters/u_long.mp3'),
+  'ú': require('../../assets/audio/letters/uu.mp3'),
+  'ů': require('../../assets/audio/letters/uo.mp3'),
+};
 
 // One identical ear-with-sound picture on every sound card - "Q&A 9 — Pexeso improvements round 2".
 export const EAR_IMAGE: number = require('../../assets/images/pexeso_ear.png');

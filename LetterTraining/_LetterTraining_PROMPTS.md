@@ -309,3 +309,13 @@ Specification change: in "Začátky slov" (all three levels): do not show the gr
 Another change request: in "Začátky slov" (first syllable and the last syllable variant: level 2 and 3): re-generate the .mp3s again. Neither the "no viny" style, nor the "novi ny" style does not work. On some words it works, but e.g. "do pis" is read as "do pé í es" and the "bros kev" is read as "bros kiev". That is completely wrong. Therefore: we will not try to invent or use any pronouncing with emphasize, nor do any editations. We will for now just generate the .mp3 from the complete and unchanged words ("dopis", "broskev", "noviny"). Regenerate it now for all and then commit, push, redeploy
 
 Note: commit/push/redeploy handled by the master agent; this supersedes "## Follow-up prompt 12"'s spaced-split style.
+
+## Follow-up prompt 16 — Long vowel pronunciation everywhere (verbatim) (2026-10-01) — activates the pronunciation bullet of "## Follow-up prompt 11"
+Problem: In "skládání slov - písmena" the letters "A", "E", "O", etc. are still read very shortly. I need them to be pronounced as "á" (long like english letter "r" or like "a:"). Revise it, analyze a few sample .mp3 directly (whether the "a" get truly longer in a new way of generation) and then replace it everywhere there the long "á" should be already read instead of "A", which is basically everywhere. And analogously for other vowels.
+
+Note (not a user prompt): this activates the pronunciation bullet of "## Follow-up prompt 11" (general rule everywhere; pexeso keeps the distinguishing readings per "## Q&A 11"). Decided mapping — general: a/á→"á", e/é→"é", i/í→"í", o/ó→"ó", u/ú/ů→"ú"; y/ý keep ypsilon. Pexeso: A→"á", Á→"dlouhé á", I→"měkké í", í→"dlouhé měkké í", E/O/U→"é/ó/ú", ú/ů keep "ú s čárkou"/"ů s kroužkem".
+
+### Refinement of "## Follow-up prompt 16" (verbatim) (2026-10-01)
+And to be more precise: replace the pronanciation of A/a as long "á" ("a:") truly everywhere: also in pexeso, in the train, everywhere. And the same for other vowels. And be careful that "á" is said in the same way or as "dlouhé 'á'", where the 'á' must be said also long. And the same for other vowels.
+
+Note (not a user prompt): pexeso keeps its separate distinguishing map, but every vowel it plays — the short-letter readings AND the vowel inside "dlouhé á", "měkké í", "dlouhé měkké í", "ú s čárkou", "ů s kroužkem" etc. — must be clearly long (same ≥0.45 s voiced-duration bar, measured from the decoded mp3); the train uses the general long-vowel map.

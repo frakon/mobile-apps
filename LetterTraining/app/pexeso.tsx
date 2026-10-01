@@ -10,7 +10,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 
 import PexesoGame from '../src/pexeso/PexesoGame';
 import { warmBundledAudioModules } from '../src/resources/warmBundledAudio';
-import { LETTER_AUDIO } from '../src/words';
+import { PEXESO_LETTER_AUDIO } from '../src/pexeso/pexesoPlatform';
 
 export default function PexesoScreen() {
   const router = useRouter();
@@ -20,7 +20,8 @@ export default function PexesoScreen() {
   // Phase E sync) so the first card flip never waits on the Metro
   // download in Expo Go (verification Phase C R1 M2). Image-card word audio comes hot from the backend archives.
   useEffect(() => {
-    warmBundledAudioModules(Object.values(LETTER_AUDIO));
+    // Pexeso's own distinguishing map ("## Follow-up prompt 16"), i.e. exactly the modules the cards play.
+    warmBundledAudioModules(Object.values(PEXESO_LETTER_AUDIO));
   }, []);
   useFocusEffect(
     useCallback(() => {
