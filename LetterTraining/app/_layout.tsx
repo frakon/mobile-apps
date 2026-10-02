@@ -5,8 +5,18 @@ import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import { Platform } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import { configureResourceBackend } from '../src/resources/resourceStore';
+
+// Web dev preview runs in a browser on the dev machine, where the VPN address 10.67.0.1 is
+// usually unreachable; use a ResourceBackend started locally (ResourceBackend/server.js with
+// RESOURCE_BACKEND_HOST=127.0.0.1) on the same host that serves the page. Native apps keep the default.
+if (__DEV__ && Platform.OS === 'web' && typeof window !== 'undefined') {
+  configureResourceBackend({ baseUrl: `http://${window.location.hostname}:9080` });
+}
 
 import {
   CURSIVE_COMENIA_FONT_FAMILY,

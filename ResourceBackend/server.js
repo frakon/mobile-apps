@@ -50,6 +50,9 @@ const server = http.createServer((request, response) => {
     // The app's cache invalidation runs off manifest.json version/checksums, not HTTP caching;
     // no-cache keeps any intermediate layer from serving a stale manifest or a replaced archive.
     'Cache-Control': 'no-cache',
+    // Expo web preview (browser) fetches from a different origin (e.g. http://localhost:8082);
+    // without this the browser blocks the responses. Server stays VPN-only via its bind address.
+    'Access-Control-Allow-Origin': '*',
   });
   if (request.method === 'HEAD') {
     response.end();
