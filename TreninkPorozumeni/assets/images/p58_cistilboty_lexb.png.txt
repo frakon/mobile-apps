@@ -1,6 +1,6 @@
 Image: p58_cistilboty_lexb.png
 Generated: 2026-10-01
-Candidate: P10 pilot (type 5.8) round 2
+Candidate: P10 repair R6 lex (type 5.8) round 1
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 pilot (type 5.8) round 2
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a young woman with long brown hair in a ponytail, wearing a long red dress stands brushing a long brown coat hanging on a free-standing coat stand with a clothes brush; no shoes anywhere. She is unmistakably a woman: long hair and a long dress. Calm friendly face, mouth closed. Exactly one figure with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. The whole figure is visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing is cut off by the picture edge; the figure is drawn small enough to fit completely.
+Children's book watercolor illustration, simple and clean, side view: a young woman with long brown hair in a ponytail, wearing a long red dress kneels scrubbing a white free-standing bathtub on four little feet with a brush. There are no shoes and no shoe brush anywhere. She is unmistakably a woman: long hair and a long dress. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, with a clear white margin below the feet, nothing cut off, drawn small enough to fit; only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

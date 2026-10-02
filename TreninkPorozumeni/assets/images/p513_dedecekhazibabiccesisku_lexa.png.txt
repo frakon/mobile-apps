@@ -1,0 +1,11 @@
+Image: p513_dedecekhazibabiccesisku_lexa.png
+Generated: 2026-10-02
+Candidate: P15 b06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: an old grandfather with a wrinkled face, white hair and a full white beard, without glasses, wearing a flat cap whose whole top and short peak are covered all over in bright turquoise with white horizontal stripes (no plain area on the cap), a long-sleeved round-neck sweater in bright turquoise with white horizontal stripes, plain black trousers and brown lace-up shoes; and an old grandmother with a wrinkled face, grey hair in a bun and round glasses, wearing a headscarf in bright pink with white polka dots folded into a wide band over the top of her head and knotted at the BACK of her head above the grey bun, her ears, cheeks, chin and neck uncovered and nothing under the chin, a long-sleeved buttoned cardigan in bright pink with white polka dots, a plain black ankle-length skirt without any pattern and black lace-up shoes. Each person looks exactly like this. The grandfather stands on the left facing right and listens on a small plain black mobile phone held to his ear with his right hand, his left hand resting on his hip; the grandmother stands on the right facing left turned three-quarters toward the viewer with both hands on her hips and watches. Nobody gives, brings or does anything for the other one, and nobody moves toward the other one. There is no pine cone anywhere. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs of each person complete and visible, nothing hidden behind objects, feet on one ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. Clean pure white background without any paint speckles, dots or splashes.

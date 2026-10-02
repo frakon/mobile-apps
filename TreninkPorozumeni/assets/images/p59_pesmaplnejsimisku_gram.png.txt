@@ -1,0 +1,11 @@
+Image: pesmaplnejsimisku_gram.png
+Generated: 2026-10-01
+Candidate: P11 batch_05 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: two animals side by side, both facing left, a WIDE gap between them, far apart, each stands right behind its own food bowl standing on the floor line in front of it: on the LEFT a light golden dog; on the RIGHT a grey cat. The cat's food bowl standing on the floor line in front of it heaped full of food; the dog's food bowl standing on the floor line in front of it holds only a little food at its bottom. Both food bowls have the same size and shape.  Both are fully grown ADULT animals. Each animal bends its head down over ITS OWN bowl, the bowl directly under its own nose; the dog's bowl is under the dog's head on the left side, the cat's bowl is under the cat's head on the right side; no bowl stands between the two animals. The two bowls are seen slightly from above so the food inside is clearly visible; a heaped bowl has food piled up above its rim. Calm friendly faces, all limbs fully visible. Exactly two figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

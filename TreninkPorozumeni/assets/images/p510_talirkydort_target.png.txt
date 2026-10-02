@@ -1,0 +1,11 @@
+Image: talirkydort_target.png (installed as p510_talirkydort_target.png)
+Generated: 2026-10-01
+Candidate: P12 r1d spare round 2 (true render #2)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view seen slightly from above: exactly three identical small round pink plates in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first plate has one triangular slice of yellow layered sponge cake with plain smooth white cream on top, no fruit and no decoration lying on it; the second plate has exactly the same plain slice of cake lying on it; the third plate has exactly the same plain slice of cake lying on it. All three plates are in the same state: each one has exactly one slice of cake on it. Every plate is a complete round plate with a rim, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

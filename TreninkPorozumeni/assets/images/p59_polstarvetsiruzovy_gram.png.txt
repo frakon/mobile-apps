@@ -1,0 +1,11 @@
+Image: polstarvetsiruzovy_gram.png
+Generated: 2026-10-01
+Candidate: P11 batch_07 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, three square cushions of the same shape stand upright side by side in a row, their bottoms exactly on one same level, clear gaps between them: a pink pillow on the LEFT, a blue pillow in the MIDDLE, an orange pillow on the RIGHT. The orange pillow is the biggest, about TWICE as big as each of the other two. The pink pillow and the blue pillow are exactly the SAME small size as each other, identical in width and height, their tops exactly level. The three colours are bold, solid and clearly different. Exactly three pillows and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

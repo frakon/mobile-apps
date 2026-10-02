@@ -1,0 +1,11 @@
+Image: stuluzsicerveny_gram.png
+Generated: 2026-10-01
+Candidate: P11 batch_01 round 6
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, the two tables with four legs stand side by side in a row, their bottoms exactly on one same level, a clear gap between them: the red table with four legs is on the LEFT, the blue table with four legs is on the RIGHT. The red table with four legs is about TWICE as wide as the blue table with four legs; the blue tabletop is a NARROW small square, only HALF as wide as the long red tabletop; the difference is large and obvious; apart from colour and width they look the same. The two colours are bold, solid and clearly different. Both tables have EXACTLY the same HEIGHT: their tabletops lie on one same horizontal line and their legs are equally long; only the WIDTH of the tabletop differs. Exactly two tables with four legs and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: papiryobrazek_lexa.png
+Generated: 2026-10-01
+Candidate: P14 batch_02 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, top view: exactly four sheets of coloured paper in one row from left to right, with clear gaps between them, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a green sheet of paper that is blank, nothing on it; the second is a blue sheet of paper that has a drawing of a sun and a house on it; the third is a blue sheet of paper that has a drawing of a sun and a house on it; the fourth is a green sheet of paper that is blank, nothing on it. Exactly two are blue and exactly two are green. Both blue ones: has a drawing of a sun and a house on it. Both green ones: is blank, nothing on it. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

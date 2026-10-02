@@ -1,0 +1,11 @@
+Image: p513_babickaneseholciccekufrik_lexb.png
+Generated: 2026-10-02
+Candidate: P15 b17 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: an old grandmother with a wrinkled face, short grey curly hair and round glasses, with nothing on her head (no headscarf, no hat, no headband, no bow in the hair), wearing a long-sleeved buttoned cardigan in bright blue with white polka dots, a plain black ankle-length skirt without any pattern and black lace-up shoes; and a small girl of about six with small child proportions and two long brown braids, both braids hanging straight down over her shoulders, each braid tied at its end with exactly one small bow in bright pink with white polka dots (exactly two bows in total, no other bows, no headband), wearing a knee-length dress with short puffed sleeves in bright pink with white polka dots, white socks and red flat buckle shoes. Each person looks exactly like this. The girl stands on the right facing left and plays a small plain yellow ukulele exactly the way a real ukulele player holds it, her left hand on its neck and her right hand strumming the strings (the ukulele is the prop of her play); the grandmother stands on the left facing right turned three-quarters toward the viewer and waves her right hand high above her head, her left hand resting on her hip. Nobody gives, brings or does anything for the other one, and nobody moves toward the other one. There is no small suitcase anywhere. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs of each person complete and visible, nothing hidden behind objects, feet on one ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. Clean pure white background without any paint speckles, dots or splashes.

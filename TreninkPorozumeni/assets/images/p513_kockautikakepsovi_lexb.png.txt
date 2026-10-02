@@ -1,0 +1,11 @@
+Image: p513_kockautikakepsovi_lexb.png
+Generated: 2026-10-02
+Candidate: P15 b10 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small slim short-haired plain medium-grey cat (clearly medium grey all over, not white, not light grey) with short smooth fur, pointed upright ears, a long thin straight tail and a plain bright red collar; and a small sturdy short-haired plain brown dog with short smooth fur (not shaggy, not curly), short floppy ears hanging down, a short straight tail and a plain bright blue collar. Each figure looks exactly like this. The dog lies on the right and gnaws one white bone held between its front paws (the bone is the dog's own chew, part of its activity); the cat sits calmly on the left on its hind legs, all four legs visible. Nobody runs. Two clearly separate whole animals with correct realistic anatomy, all four legs of each animal complete and visible, nothing hidden behind objects, feet on one ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. Clean pure white background without any paint speckles, dots or splashes.

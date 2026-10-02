@@ -1,0 +1,11 @@
+Image: kunnizsihnedy_lexa.png
+Generated: 2026-10-01
+Candidate: P11 batch_08 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, the two horses stand side by side in a row, all facing left, all legs and paws fully visible, feet at one same level, a clear gap between them: the white horse is on the LEFT, the brown horse is on the RIGHT. Both are exactly the same height (equally tall); all other features identical. The two colours are bold, solid and clearly different. Both are fully grown ADULT animals of the same age with adult proportions. The two horses are EXACTLY equally tall: their backs and their heads at exactly the same height, standing with a clear gap, not overlapping. Exactly two horses and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: dortmensizluty_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_07 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, the two wrapped gift boxes with bows stand side by side in a row, their bottoms exactly on one same level, a clear gap between them: the yellow wrapped gift box with a bow is on the LEFT, the green wrapped gift box with a bow is on the RIGHT. The green wrapped gift box with a bow is about TWICE as big as the yellow wrapped gift box with a bow; the difference is large and obvious; apart from colour and size they look the same. The two colours are bold, solid and clearly different. Exactly two wrapped gift boxes with bows and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no round birthday cake anywhere in the picture.

@@ -1,6 +1,6 @@
 Image: p58_zraloseno_lexa.png
 Generated: 2026-10-01
-Candidate: P10 batch05 (type 5.8) round 1
+Candidate: P10 repair R5 lexA (type 5.8) round 4
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch05 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a small young brown-and-white calf without horns lies resting next to a small pile of hay, not eating. It is clearly a tiny baby animal, much smaller than an adult cow. It must be clearly visible that the calf is NOT doing this: eats hay from a small pile. Whole animal visible including all legs, hooves or feet and the tail, nothing cut off, with a clear white margin around; drawn small enough to fit. Lying on its belly, legs folded under, head up away from the hay, mouth closed. The calf is a newborn baby calf about one third the size of an adult cow, with a short round muzzle, big eyes, short smooth coat, no horns at all, no udder, a gentle baby face; clearly a baby, nothing else. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a small young brown-and-white calf without horns, clearly a tiny baby animal much smaller than an adult cow stands on all four legs playing with a big red ball, gently touching it with the tip of its nose; a male calf with a smooth belly, no udder, no teats, the muzzle and the ball clearly separate outlines; bare natural hooves, no shoes. There is no hay, no grass and no food anywhere. Whole animal visible including all four legs, hooves and the tail. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, with a clear white margin below the feet, nothing cut off, drawn small enough to fit; only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

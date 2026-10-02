@@ -1,0 +1,11 @@
+Image: tatajede_lexa.png
+Generated: 2026-10-02
+Candidate: P16 R1 repair A round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a short red-and-white electric city tram (streetcar) travelling on two thin steel rails, clearly a tram and not a bus: a pantograph on its roof, small steel railway wheels hidden under the body skirt, big side windows, the tram body intact with a solid lower wall; through the front window a young professional tram driver, a slim clean-shaven young man with short ginger hair, wearing a dark-blue uniform jacket and a dark-blue peaked driver's cap, sits at the controls in the front cab, clearly at work driving, clearly a stranger at work and not travelling with the passenger; further back, through a big side window, a light-skinned European father with pale skin, short black hair and a short black beard, a blue shirt, jeans and brown shoes sits as the only passenger on a passenger seat, riding along. Exactly these two people: the tram driver and the father. There is no car and no bicycle anywhere in the picture. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

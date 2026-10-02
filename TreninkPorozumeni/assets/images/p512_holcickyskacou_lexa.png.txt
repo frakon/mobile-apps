@@ -1,0 +1,11 @@
+Image: holcickyskacou_lexa.png
+Generated: 2026-10-01
+Candidate: P14 batch_02 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four grown-ups in one row from left to right, with clear gaps between them, all the same size and drawn in the same style. From left to right: the first is a tall grown-up mother with long hair in a green coat, a long skirt and green shoes that stands still holding nothing; the second is a tall grown-up mother with long hair in a green coat, a long skirt and green shoes that stands still holding nothing; the third is a tall grown-up father with a full dark beard and moustache in a grey coat, grey trousers and black shoes that jumps over its own skipping rope, both feet in the air; the rope is one continuous unbroken curve from the handle in the left hand under the feet to the handle in the right hand; the fourth is a tall grown-up father with a full dark beard and moustache in a grey coat, grey trousers and black shoes that jumps over its own skipping rope, both feet in the air; the rope is one continuous unbroken curve from the handle in the left hand under the feet to the handle in the right hand. Exactly two are fathers and exactly two are mothers. Both fathers: jumps over its own skipping rope, both feet in the air; the rope is one continuous unbroken curve from the handle in the left hand under the feet to the handle in the right hand. Both mothers: stands still holding nothing. Each skipping rope is one single smooth thin arc with a clearly visible wooden handle at each end, one handle held in each hand; the arc passes just under the lifted feet; the two ropes never touch or cross each other; no extra loops, no loose ends. All four are clearly adults, tall grown-ups with adult faces and adult bodies, no children at all. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

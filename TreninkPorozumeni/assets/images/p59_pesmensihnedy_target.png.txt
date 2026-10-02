@@ -1,0 +1,11 @@
+Image: pesmensihnedy_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, the two dogs stand side by side in a row, all facing left, all legs and paws fully visible, feet at one same level, a clear gap between them: the brown dog is on the LEFT, the white dog is on the RIGHT. The white dog is about TWICE as big as the brown dog; the difference is large and obvious; apart from colour and size they look the same. The two colours are bold, solid and clearly different. Exactly two dogs and nothing else, Correct dog anatomy: each tail grows from the rump at the BACK end of the body, above the hind legs; four legs each. floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

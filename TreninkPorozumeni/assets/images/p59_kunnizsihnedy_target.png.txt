@@ -1,0 +1,11 @@
+Image: kunnizsihnedy_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_08 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, the two horses stand side by side in a row, all facing left, all legs and paws fully visible, feet at one same level, a clear gap between them: the white horse is on the LEFT, the brown horse is on the RIGHT. The white horse is about TWICE as tall as the brown horse; the brown one reaches only to the middle of the white one; the difference is large and obvious; apart from colour and height they look the same. The two colours are bold, solid and clearly different. The small horse is a fully grown adult Shetland PONY: stocky body, short sturdy legs, thick long mane, small head relative to body; NOT a foal (no long thin legs, no big head). The tall horse is a big adult horse. Each horse has exactly ONE tail at its rear and four legs; correct horse anatomy, normal neck length. Everything fully inside the picture with a wide white margin, nothing cut off at any edge. Exactly two horses and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

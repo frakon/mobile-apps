@@ -1,0 +1,11 @@
+Image: klucidrak_lexb.png
+Generated: 2026-10-01
+Candidate: P14 batch_01 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: three boys (green T-shirt, red T-shirt, blue T-shirt, all in blue shorts and white sneakers) standing side by side with gaps, facing right; each boy carries his own paper kite tucked tightly under one arm against his side, the kite pointing down toward the floor, its tail rolled up, the boys walking; the kites are clearly carried, not flying, no string in the air, nothing above the boys. Each kite is one simple diamond-shaped paper kite with a short ribbon tail; no spools, no reels, no strings visible. Every figure and object is complete with all its parts, correct anatomy, all hands and feet visible, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

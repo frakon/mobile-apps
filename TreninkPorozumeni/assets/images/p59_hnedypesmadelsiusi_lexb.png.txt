@@ -1,0 +1,11 @@
+Image: hnedypesmadelsiusi_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_03 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: two ADULT animals of exactly the same body size and age stand side by side, both facing left, all legs fully visible, feet at one same level, a clear gap between them: on the LEFT a brown dog; on the RIGHT a grey dog. Both dogs are the same breed, same body size and same height. The brown dog has a long straight tail hanging down behind its hind legs to the level of its hocks, high above the ground; the grey dog has a very short stubby tail, only half as long; the difference is large and obvious. Both dogs have exactly the same small pointed UPRIGHT ears standing up on top of the head, identical in size and shape; the ears are NOT different and NOT floppy. Every tail hangs down from the rump behind the hind legs and never touches or lies on the ground; long hair (mane) is short and neat unless it is the compared part. Calm friendly faces. Exactly two whole figures with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

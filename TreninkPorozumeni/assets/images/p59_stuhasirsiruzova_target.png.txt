@@ -1,0 +1,11 @@
+Image: stuhasirsiruzova_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, two shiny satin ribbons, laid out straight and flat, each with both ends cut in a neat V-shaped notch, lie horizontally one above the other, a clear gap between them; both ribbons have exactly the SAME LENGTH, their left ends aligned on one vertical line and their right ends aligned on one vertical line: the pink ribbon on TOP, the yellow ribbon at the BOTTOM. The pink ribbon is a WIDE ribbon, about TWICE as wide (from its upper edge to its lower edge) as the narrow yellow ribbon; the difference is large and obvious; apart from colour and width they look the same. Clearly ribbons, not paper strips. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly two ribbons and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

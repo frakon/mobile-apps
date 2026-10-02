@@ -1,0 +1,11 @@
+Image: saladelsioranzova_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, the two T-shirts lie flat one above the other, a clear gap between them: the blue T-shirt is in the TOP row, the orange T-shirt is in the BOTTOM row. The two T-shirts are short-sleeved, laid out flat; the orange T-shirt is clearly much bigger, about TWICE the size of the blue T-shirt; apart from colour and size they look the same. The two colours are bold, solid and clearly different. Exactly two T-shirts and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no knitted scarf anywhere in the picture.

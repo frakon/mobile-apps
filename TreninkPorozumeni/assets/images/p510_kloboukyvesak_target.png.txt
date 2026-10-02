@@ -1,0 +1,11 @@
+Image: kloboukyvesak_target.png
+Generated: 2026-10-01
+Candidate: P12 batch_03 round 3 (true render #2)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one tall wooden coat stand with a round heavy base and four hooks at the top; exactly four identical brown hats, all the same size and drawn the same way. All four are in the same state: each one hangs on one hook of the coat stand. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. The coat stand is a classic coat tree: one straight pole with four curved hooks sticking out at the top. Each hat is a plain brown felt hat with a dark band, hanging by its band from the tip of a hook; the hooks do not pierce the hats. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

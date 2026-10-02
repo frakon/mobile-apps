@@ -1,0 +1,11 @@
+Image: p513_tatineknabizibonbonmamince_gram.png
+Generated: 2026-10-02
+Candidate: P15 b01 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a tall adult father, a grown-up man, with short dark hair, a short dark beard and a moustache, wearing a baseball cap whose whole crown AND peak are covered all over in dark blue with white horizontal stripes (no plain area on the cap), a long-sleeved buttoned shirt with a collar in dark blue with white horizontal stripes, plain black trousers and brown lace-up shoes; and a young adult mother, a grown-up woman much taller than a child, with long loose black hair down to her waist, wearing a long-sleeved buttoned blouse with a small turned-down collar in bright purple with white polka dots, a plain black ankle-length skirt without any pattern and flat black slip-on ballet shoes without laces. Each person looks exactly like this. The mother stands on the right facing left and holds one small sweet the size of a walnut, wrapped in shiny red paper twisted at both ends, (the same size in every picture) on her flat open right palm and offers it to the father at arm's length; her left hand rests on her hip. The father stands on the left facing right, with both hands open in front of his chest, palms up toward the sweet, not touching it yet, ready to receive it. The mother is the active giver, the father the receiver. Exactly one sweet in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs of each person complete and visible, nothing hidden behind objects, feet on one ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. Clean pure white background without any paint speckles, dots or splashes.

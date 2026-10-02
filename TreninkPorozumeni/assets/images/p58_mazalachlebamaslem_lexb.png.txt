@@ -1,6 +1,6 @@
-Image: p58_mazalachlebamaslem_lexb.png
+Image: maz_lexb_c.png
 Generated: 2026-10-01
-Candidate: P10 batch08 (type 5.8) round 1
+Candidate: P10 retestB (type 5.8) repair render
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch08 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: an adult man about 35 years old with very short dark hair and a short beard, wearing a checked shirt and trousers spreads honey on a bread roll with a knife. He is unmistakably a man: short hair, beard and trousers. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. He stands at a small wooden table with four legs, standing on the same level as the feet, a round bread roll cut in half on a plate, a glass jar of golden honey with a wooden honey dipper next to it; the knife spreads golden runny honey on the roll; no butter anywhere. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: an adult man about 35 years old with very short dark hair and a short beard, wearing a checked shirt and trousers spreads honey on a crescent bread roll with a knife. He is unmistakably a man: short hair, beard and trousers. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. He stands at a small wooden table with four legs, standing on the same level as the feet. On a white plate on the table lies ONE whole golden-brown crescent-shaped bread roll in one single piece (not cut, no bread slices anywhere), clearly baked pastry; with his right hand he spreads a thin layer of golden runny honey on the top of the roll with a table knife, and his left hand rests on the table edge, both arms visible. A glass jar of golden honey with a wooden honey dipper stands next to the plate; no butter, no fruit, no other food. Calm friendly face, mouth closed. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

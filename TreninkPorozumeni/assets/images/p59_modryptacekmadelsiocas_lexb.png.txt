@@ -1,0 +1,11 @@
+Image: modryptacekmadelsiocas_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_08 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: two ADULT animals of exactly the same body size and age stand side by side, both facing left, all legs fully visible, feet at one same level, a clear gap between them: on the LEFT a green small bird; on the RIGHT a blue small bird. The blue small bird has very long beak, about TWICE as long as the short beak of the green small bird; the difference is large and obvious. Both have exactly equally long tail feathers, identical in length and shape. Every tail hangs down from the rump behind the hind legs and never touches or lies on the ground; long hair (mane) is short and neat unless it is the compared part. Calm friendly faces. Two ADULT songbirds of the same species, perched standing on their own two legs. Exactly two whole figures with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

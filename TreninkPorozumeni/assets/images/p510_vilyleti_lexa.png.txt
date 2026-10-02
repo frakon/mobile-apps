@@ -1,0 +1,11 @@
+Image: vilyleti_lexa.png (installed as p510_vilyleti_lexa.png)
+Generated: 2026-10-01
+Candidate: P12 r1_repair round 1 (true render #3)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four identical small fairies with wings and pink dresses, all the same size and drawn the same way, with clear gaps between them. Across the bottom of the picture there is one thin flat strip of green grass. From left to right: the first fairy flies high in the air near the top of the picture with her wings spread and her legs bent back, far above the grass; the second fairy flies high in the air near the top of the picture with her wings spread and her legs bent back, far above the grass; the third fairy stands on the grass strip at the bottom with both feet flat on the grass, her wings folded, her body upright; the fourth fairy flies high in the air near the top of the picture with her wings spread and her legs bent back, far above the grass. Exactly three fairies fly high above the grass with a big empty gap between their feet and the grass; exactly one fairy stands on the grass with both feet touching it. The difference is large and obvious. All four fairies have the same face, the same hair and the same flower in the hair. Calm friendly faces, correct realistic anatomy, every figure complete with all its body parts. Only the four fairies and the thin strip of grass, white empty space everywhere else, no shadow, no other scenery, no text, nothing else in the picture.

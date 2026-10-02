@@ -1,0 +1,11 @@
+Image: pesmensikoza_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: two animals stand side by side, both facing LEFT, all four legs fully visible, feet at one same level, a clear gap between them: on the LEFT a white adult goose; on the RIGHT an adult rooster with a red comb and colourful tail feathers. The goose is about TWICE as big as the rooster (twice as tall and twice as long); the difference is large and obvious. Both are fully grown ADULT animals, neither is a baby or a young animal; the size difference comes only from the kind of animal. Calm friendly faces. Two separate whole animals with correct realistic anatomy. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly two animals and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no dog and no goat anywhere in the picture.

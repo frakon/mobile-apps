@@ -1,0 +1,11 @@
+Image: babickamyjeauto_lexb.png
+Generated: 2026-10-01
+Candidate: P13 batch A round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a grandmother with grey hair in a bun and round glasses, wearing a headscarf in bright green with white polka dots, a cardigan in bright green with white polka dots, a plain black ankle-length skirt without any pattern and black shoes, on the left; and a grandfather with white hair and a white moustache, without glasses, wearing a flat cap in bright purple with white horizontal stripes, a sweater in bright purple with white horizontal stripes, plain black trousers and brown shoes, on the other side. Each person wears exactly this outfit. The grandmother and the grandfather both sweep the floor with plain brown brooms, facing each other. There is no car anywhere. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

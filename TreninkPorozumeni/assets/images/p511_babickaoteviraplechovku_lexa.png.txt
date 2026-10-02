@@ -1,0 +1,11 @@
+Image: p511_babickaoteviraplechovku_lexa.png (batch C render r5/babickaoteviraplechovku_lexa.png)
+Generated: 2026-10-01
+Candidate: P13 batch C round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: an old grandmother with grey hair in a bun and round glasses, wearing a headscarf tied under her chin covering the top of her head in bright purple with white polka dots, a long-sleeved cardigan without buttons in bright purple with white polka dots, a plain black ankle-length skirt without any pattern and black flat shoes, on the left; and a boy of about seven with short brown hair, wearing a stiff baseball cap with a rounded peak, the whole cap including the peak in bright blue with white horizontal stripes, a short-sleeved round-neck T-shirt without collar in bright blue with white horizontal stripes, plain dark grey shorts without any pattern, white ankle socks and brown shoes, on the other side. Each person wears exactly this outfit. The grandmother stands facing right and holds one plain clear glass jar with a plain metal lid at the boy's chest height in her left hand, and with her right hand twists its lid off, opening it toward the boy; the boy stands facing left a small step away, both arms at his sides, looking at the jar. There is no tin box anywhere. The object is held or placed clearly apart from the clothes of both people with white space around it, never in front of the top garment of anyone, so it can never blend into the clothes. Each person looks exactly the same as described, with no extra clothing items, no collars, no buttons and no extra hair accessories. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

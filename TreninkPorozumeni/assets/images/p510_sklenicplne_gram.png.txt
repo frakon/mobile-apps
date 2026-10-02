@@ -1,0 +1,11 @@
+Image: sklenicplne_gram.png
+Generated: 2026-10-01
+Candidate: P12 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, seen slightly from above so the dry inside bottom of each glass is visible: exactly three identical tall straight clear drinking glasses (tall, slightly wider at the top, each with one smooth continuous unbroken round rim) in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one is completely empty and clear; the second one is completely empty and clear; the third one is completely empty and clear. All three are in the same state: each one is completely empty and clear. Each empty glass is drawn only with thin light-grey glass outlines and a soft vertical highlight on the side, the inside left completely unpainted white, so it obviously contains nothing at all, no water. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

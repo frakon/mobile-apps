@@ -1,6 +1,6 @@
-Image: p58_nesltasku_lexa.png
+Image: nesltasku_lexa_b.png
 Generated: 2026-10-01
-Candidate: P10 batch08 (type 5.8) round 1
+Candidate: P10 retestB (type 5.8) repair render
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch08 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: an adult man about 35 years old with very short dark hair and a short beard, wearing a checked shirt and trousers stands still with arms hanging down next to a big shopping bag full of groceries on the ground. He is unmistakably a man: short hair, beard and trousers. It must be clearly visible that the man is NOT doing this: walks carrying a big shopping bag full of groceries in one hand. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The cloth shopping bag with bread and green leaves stands on the ground next to his feet; both his hands are empty. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a young man with very short dark hair and a short beard, wearing a checked shirt and trousers stands playing a violin, the violin under his chin and the bow in his other hand. There is no bag, no shopping, no groceries anywhere in the picture. He is unmistakably a man: short hair, beard and trousers. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Calm friendly face. Exactly one figure with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

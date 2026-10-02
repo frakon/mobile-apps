@@ -1,0 +1,11 @@
+Image: p513_holcickanalevababiccecaj_gram.png
+Generated: 2026-10-02
+Candidate: P15 b08 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small girl of about six with small child proportions and exactly two long brown braids (no third braid), one braid hanging straight down over each shoulder, each braid tied at its very bottom tip, below her shoulder, with exactly one small bow (no bows on the dress) in bright turquoise with white polka dots (exactly two bows in total, no other bows, no headband), wearing a knee-length dress with short puffed sleeves in bright turquoise with white polka dots, white socks and red flat buckle shoes; and an old grandmother with a wrinkled face, short grey curly hair and round glasses, with nothing on her head (no headscarf, no hat, no headband, no bow in the hair), wearing a long-sleeved buttoned cardigan in bright purple with white polka dots, a plain black ankle-length skirt without any pattern and black lace-up shoes. Each person looks exactly like this. The grandmother stands on the right facing left and pours opaque golden-brown tea from one plain white jug held in her right hand into one plain white cup with a handle (normal cup size, the same size in every picture) that is already half full of it, a thick stream going from the jug spout into the cup; her left hand steadies the bottom of the jug. The girl stands on the left facing right and holds that cup in both hands at arm's length toward the grandmother. The grandmother is the active one who pours, the girl the receiver who holds the cup. Exactly one jug and one cup in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs of each person complete and visible, nothing hidden behind objects, feet on one ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. Clean pure white background without any paint speckles, dots or splashes.

@@ -1,0 +1,11 @@
+Image: nejdelsisuknemodra_gram.png
+Generated: 2026-10-01
+Candidate: P11 batch_04 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, the three skirts hang upright side by side from one horizontal line, their waistbands exactly on one same level, a clear gap between them: the blue skirt is LEFT; the green skirt is MIDDLE; the yellow skirt is RIGHT. The yellow skirt is clearly the most long: about TWICE as long as each of the other two; the blue and the green skirts are exactly equal to each other and both much less long. The three colours are bold, solid and clearly different. Exactly three skirts and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

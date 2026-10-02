@@ -1,0 +1,11 @@
+Image: kockamensicerna_lexa.png
+Generated: 2026-10-01
+Candidate: P11 batch_08 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, the two cats stand side by side in a row, all facing left, all legs and paws fully visible, feet at one same level, a clear gap between them: the black cat is on the LEFT, the white cat is on the RIGHT. Both are exactly the same size (equally big); all other features identical. The two colours are bold, solid and clearly different. Both are normal adult domestic cats with natural short cat legs and natural cat proportions, not slender or dog-like. Each cat has exactly ONE tail growing from its rear end behind the hind legs, tail clearly visible. Everything fully inside the picture with a wide white margin, nothing cut off at any edge. Exactly two cats and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

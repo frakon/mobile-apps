@@ -1,0 +1,11 @@
+Image: klukjivetsizmrzlinu_lexb.png
+Generated: 2026-10-01
+Candidate: P11 strict_audit round g4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: two children stand side by side, a clear gap between them, each holds with both hands in front of the chest their own small golden-brown Czech rohlik (a slim, slightly curved crescent bread roll, NOT a round bun, NOT a loaf) and is eating it: on the LEFT a girl of about seven with two brown pigtails in a yellow dress; on the RIGHT a boy of about seven with short brown hair, green T-shirt and blue shorts. The girl's rohlik is short, as long as her palm; the boy's rohlik is about TWICE as long as the girl's, as long as both his hands side by side; both are normal real-life bread rolls, the difference is clear and obvious. Both children about the same body size. Calm friendly faces, all limbs fully visible. Exactly two children and two bread rolls, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no ice cream anywhere in the picture.

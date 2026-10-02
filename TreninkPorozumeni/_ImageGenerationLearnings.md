@@ -1,6 +1,6 @@
 # Image Generation Learnings — TreninkPorozumeni (round 2, 2026-09-30)
 
-Model: SDXL-Turbo int8 (rupeshs/sdxl-turbo-openvino-int8), OpenVINO CPU, `http://10.67.0.12:7861/generate`.
+Model: SDXL-Turbo int8 (rupeshs/sdxl-turbo-openvino-int8), OpenVINO CPU, `<image-gen-host>:7861/generate`.
 Params used: 512x512, steps 2-6, varied seeds. **Guidance scale is fixed at 0 → negative prompts have NO effect** — every constraint must be positively phrased.
 
 ## Headline learning: direct two-subject prompts are unusable on this model

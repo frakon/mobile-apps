@@ -1,6 +1,6 @@
 Image: p58_lezelanadece_lexa.png
 Generated: 2026-10-01
-Candidate: P10 batch08 (type 5.8) round 1
+Candidate: P10 repair R5 lexA (type 5.8) round 3
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch08 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails tied with ribbons, wearing a pink dress stands folding a picnic blanket. She is unmistakably a girl: long pigtails and a pink dress. It must be clearly visible that the girl is NOT doing this: lies on the back on a picnic blanket. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. She stands upright, holding a red-and-white checked picnic blanket half folded in both hands in front of her. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails tied with ribbons, wearing a pink dress stands upright clapping her hands happily in front of her chest; her hair is in exactly two pigtails, one on each side of the head at the same height; three-quarter front view so that both separate pigtails with ribbons are clearly visible. There is no blanket, no cloth, no picnic anywhere; she is not lying. She is unmistakably a girl: long pigtails and a pink dress. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, with a clear white margin below the feet, nothing cut off, drawn small enough to fit; only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

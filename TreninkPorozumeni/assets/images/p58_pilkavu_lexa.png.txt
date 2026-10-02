@@ -1,6 +1,6 @@
 Image: p58_pilkavu_lexa.png
 Generated: 2026-10-01
-Candidate: P10 batch05 (type 5.8) round 6
+Candidate: P10 final verify R2 repair (type 5.8), candidate pil_lexa_r2b, Temp/P10/repair_R1/cand (lex tested, Temp/P10/repair_R2)
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch05 (type 5.8) round 6
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a bald grandfather with a big grey moustache, wearing brown trousers and a vest sits at a table reading a newspaper held open in both hands (the newspaper shows only plain grey lines and one small picture, no letters), a full cup of coffee standing untouched. He is unmistakably an old man: bald head, moustache and trousers. It must be clearly visible that the grandfather is NOT doing this: sits at a table drinking coffee from a cup. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The table is a complete small wooden table with four sturdy legs standing on the same level as the feet; every object rests on the tabletop. The person sits on a complete simple wooden chair with four legs. The coffee cup is a small white cup with dark brown coffee and a saucer, held by its handle at the lips. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a bald grandfather with a big grey moustache, wearing brown trousers and a vest sits on a wooden chair at a small empty wooden table reading an open newspaper held with both hands. The table top is completely empty: no cup, no glass, no drink, no food.  His chin and cheeks are clean-shaven: NO beard at all, only a big grey moustache. He is unmistakably an old man: bald head, moustache and trousers. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Calm friendly face, mouth closed. Exactly one figure with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: medvedistrom_lexa.png
+Generated: 2026-10-01
+Candidate: P12 batch_01 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: exactly four identical trees standing in one row from left to right with clear gaps between them, each tree with a thick sturdy brown trunk and a round leafy crown, all four trees the same height and size with crowns not touching. Exactly four identical brown bears: next to each of the four trees, on the left side of its trunk, one bear sits on its bottom on the ground with a clear gap to the trunk, not climbing, its whole body visible. So there are four trees and four sitting bears, one bear for each tree, no bear is climbing. All of them look exactly the same in every detail. Calm friendly faces, correct realistic anatomy, all limbs complete and fully visible, nothing hidden behind other things, all feet at one level. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: dumsirsicerveny_gram.png
+Generated: 2026-10-01
+Candidate: P11 strict_audit round g1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, the three houses stand side by side in a row, their bottoms exactly on one same level, a clear gap between them: the purple house is LEFT; the yellow house is MIDDLE; the red house is RIGHT. All three houses are EXACTLY the same height: their walls are equally tall and the tips of their simple gable roofs are at exactly one same height line. They differ ONLY in width: the purple house is a broad wide house, about TWICE as wide as each of the other two, with two windows side by side; the yellow and the red houses are narrow and exactly equal to each other. Same simple style for all three houses: plain wall, one door, plain triangular roof, no chimney, no tower, no spire. The three colours are bold, solid and clearly different. Exactly three houses and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

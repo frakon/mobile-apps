@@ -114,31 +114,9 @@ export function explanationForSlot(
   }
 }
 
-// Asset prefetching support (see _TreninkPorozumeni_Fields123_PROMPTS.md, section
-// "User follow-up request 16 — prefetch upcoming rounds' assets"): collect the Metro module
-// ids of EXACTLY the assets this round can use in the regime it was built for — the slot
-// images (2 or 4, the slots already reflect the regime) plus the sentence audio and the
-// explanation audio of each NON-target slot present (2-image regime → only gram_why; the
-// lexa/lexb pictures and their explanations are unreachable there and are skipped).
-// Static `require('...png')` returns a number (the Metro module id) — anything else
-// (e.g. a null explanation audio) is not prefetchable and is ignored.
-export function collectRoundAssetModules(round: GameRound): number[] {
-  const moduleIds: number[] = [];
-  const addModule = (source: unknown) => {
-    if (typeof source === 'number') {
-      moduleIds.push(source);
-    }
-  };
-  addModule(sentenceAudioForRound(round));
-  for (const slot of round.slots) {
-    addModule(slot.image);
-    const explanation = explanationForSlot(round, slot.kind);
-    if (explanation !== null) {
-      addModule(explanation.audio);
-    }
-  }
-  return moduleIds;
-}
+// Per-round resources come from the ResourceBackend per-item archives (src/itemResources.ts; the Metro
+// prefetch of "User follow-up request 16" was replaced by the 5-round archive preload of
+// _TreninkPorozumeni_Fields123_PROMPTS.md — "User request 26", mobile-apps-preferences skill).
 
 function shuffled<T>(source: readonly T[]): T[] {
   const result = [...source];

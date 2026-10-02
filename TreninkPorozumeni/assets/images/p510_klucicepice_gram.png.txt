@@ -1,0 +1,11 @@
+Image: klucicepice_gram.png
+Generated: 2026-10-01
+Candidate: P12 pilot round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three identical little boys in blue T-shirts, blue shorts and white sneakers in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one has no cap at all, bare head with short brown hair; the second one has no cap at all, bare head with short brown hair; the third one has no cap at all, bare head with short brown hair. All three are in the same state: each one has no cap at all, bare head with short brown hair. All of them wear exactly the same clothes in every detail. Calm friendly faces, correct realistic anatomy, all limbs complete and fully visible, nothing hidden behind other things, all feet at one level. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

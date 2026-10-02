@@ -1,0 +1,11 @@
+Image: kockaskacevyspes_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_03 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: two figures each jumping straight up in the air in place, side by side, a clear gap between them, both the same body size: on the LEFT a brown hare; on the RIGHT a red squirrel. The hare jumped much higher: the hare's feet are about as high as the squirrel's head; the squirrel is only a little above the floor line. Exactly two, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no cat and no dog anywhere in the picture.

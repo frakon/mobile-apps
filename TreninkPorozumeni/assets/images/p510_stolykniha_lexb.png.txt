@@ -1,0 +1,11 @@
+Image: stolykniha_lexb.png
+Generated: 2026-10-01
+Candidate: P12 batch_03 round 2 (true render #2)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four wall shelves in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one has one red book lying on its top; the second one has one red book lying on its top; the third one has one red book lying on its top; the fourth one has one red book lying on its top. All four are in the same state: each one has one red book lying on its top. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. There are only wall shelves, no small wooden tables anywhere. Each shelf is a plain wooden board fixed to the wall by two metal brackets under it, no legs. Each book is a clearly recognizable closed hardcover book with a visible spine and white page edges. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

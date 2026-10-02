@@ -1,0 +1,11 @@
+Image: ponozkaspinavejsizelena_lexa.png
+Generated: 2026-10-01
+Candidate: P11 batch_05 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, two normal socks hang side by side, each a real sock shape with a ribbed cuff at the TOP, a bent heel and a foot with a rounded toe pointing sideways, a clear gap between them: the blue sock is on the LEFT, the green sock is on the RIGHT. Both socks are EQUALLY dirty: each has exactly the same three irregular brown mud smudges of the same size; both have the same size and shape. The two colours are bold, solid and clearly different. Exactly two socks and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

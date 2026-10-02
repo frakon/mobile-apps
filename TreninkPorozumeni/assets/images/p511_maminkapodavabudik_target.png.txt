@@ -1,0 +1,11 @@
+Image: maminkapodavabudik_target.png
+Generated: 2026-10-01
+Candidate: P13 batch A round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a grown-up mother of about thirty-five, a tall adult woman as tall as the grandfather, with long loose dark hair, wearing a headband in bright red with white polka dots, a long-sleeved blouse in bright red with white polka dots, a plain black ankle-length skirt without any pattern and black shoes, on the left; and a grandfather with white hair and a white moustache, without glasses, wearing a flat cap in bright blue with white horizontal stripes, a sweater in bright blue with white horizontal stripes, plain black trousers and brown shoes, on the other side. Each person wears exactly this outfit. The mother stands facing right with both arms stretched forward, holding a round alarm clock with two bells, a white clock face with two clear black hands, out in both hands toward the grandfather; the grandfather stands facing left a small step away with both hands open and raised toward it, not yet touching it, ready to receive it. The mother is clearly the giver who holds it, the grandfather is the receiver. The round alarm clock with two bells is bright blue with white horizontal stripes, exactly the same colour and pattern as the grandfather's clothes, so it clearly belongs to the grandfather. Nothing on the round alarm clock with two bells has the bright red colour. Exactly one round alarm clock with two bells in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

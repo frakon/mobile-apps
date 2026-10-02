@@ -1,6 +1,6 @@
 Image: p58_mavalkloboukem_lexa.png
 Generated: 2026-10-01
-Candidate: P10 batch04 (type 5.8) round 1
+Candidate: P10 repair R5 lexA (type 5.8) round 1
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch04 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a young man with very short dark hair and a short beard, wearing a checked shirt and trousers stands still holding a hat in front of the chest. He is unmistakably a man: short hair, beard and trousers. It must be clearly visible that the man is NOT doing this: waves a hat high above the head. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a young man with very short dark hair and a short beard, wearing a checked shirt and trousers saws a wooden board resting on a wooden sawhorse with a hand saw. He wears no hat and there is no hat anywhere. He is unmistakably a man: short hair, beard and trousers. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, with a clear white margin below the feet, nothing cut off, drawn small enough to fit; only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: babickajede_lexa.png
+Generated: 2026-10-02
+Candidate: P16 R1 repair A round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a short red passenger train travelling on railway wheels: a small red steam locomotive with a chimney in front, in its open driver cab a young professional train driver, a slim clean-shaven young man with short ginger hair, wearing a dark-blue uniform jacket and a dark-blue peaked driver's cap, sits at the controls in the front cab, clearly at work driving, clearly a stranger at work and not travelling with the passenger; the locomotive pulls one red passenger carriage with big windows, and in the carriage, seen through its window, a grandmother with grey hair in a bun, round glasses, a purple cardigan, a long grey skirt and brown shoes sits as the only passenger. Exactly these two people: the engine driver in the locomotive and the grandmother in the carriage. There is no bus and no car anywhere in the picture. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

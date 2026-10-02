@@ -1,0 +1,11 @@
+Image: nejsirsisalacervena_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_08 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, the three T-shirts stand side by side in a row, their bottoms exactly on one same level, a clear gap between them: the purple T-shirt is LEFT; the yellow T-shirt is MIDDLE; the red T-shirt is RIGHT. The red T-shirt is clearly the most wide: about TWICE as wide as each of the other two; the purple and the yellow T-shirts are exactly equal to each other and both much less wide. The three colours are bold, solid and clearly different. All three T-shirts are exactly the same height (same length from collar to hem), they differ only in width; collars level. Normal short T-shirts with normal T-shirt proportions (not long like dresses); the wide red T-shirt is wider but NOT longer. Exactly three T-shirts and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no knitted scarf anywhere in the picture.

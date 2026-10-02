@@ -1,0 +1,11 @@
+Image: traktoryvozik_gram.png
+Generated: 2026-10-01
+Candidate: P14 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, all facing left: exactly four small tractors placed from left to right in a descending diagonal staircase: each next tractor stands clearly lower and further right than the previous one, so no trailer is ever on the same level as another tractor, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a blue small tractor that pulls a small wooden trailer full of hay behind it; the second is a red small tractor that stands alone with no trailer; the third is a blue small tractor that pulls a small wooden trailer full of hay behind it; the fourth is a red small tractor that stands alone with no trailer. Exactly two are red and exactly two are blue. Both red ones: stands alone with no trailer. Both blue ones: pulls a small wooden trailer full of hay behind it. Each tractor-with-trailer is one separate unit: the trailer is hitched by a short visible drawbar to the BACK of its own tractor (to the right of that tractor), and after every trailer there is a very wide empty white gap before the next tractor, so no trailer is near any other tractor. All four tractors are exactly the same model and the same size, each with a cab. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

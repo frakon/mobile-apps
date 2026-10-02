@@ -1,0 +1,11 @@
+Image: ovcelezi_lexb.png
+Generated: 2026-10-01
+Candidate: P14 batch_03 round 1 (true render 1 of max 5 for this picture)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: exactly four sheep in one row from left to right, with clear gaps between them, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a black sheep that stands upright on all four legs; the second is a white sheep that stands and drinks water from a small wooden trough in front of it; the third is a white sheep that stands and drinks water from a small wooden trough in front of it; the fourth is a black sheep that stands upright on all four legs. Exactly two are white and exactly two are black. Both white ones: stands and drinks water from a small wooden trough in front of it. Both black ones: stands upright on all four legs. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

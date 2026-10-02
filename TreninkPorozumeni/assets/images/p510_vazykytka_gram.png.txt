@@ -1,0 +1,11 @@
+Image: vazykytka_gram.png
+Generated: 2026-10-01
+Candidate: P12 batch_03 round 8 (true render #5)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four identical clear glass vases in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one is empty; the second one is empty; the third one is empty; the fourth one is empty. All four are in the same state: each one is empty. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. Each vase is a classic clear glass flower vase with a round belly, a narrower waist and a wide flared rim at the top, clearly a flower vase and not a drinking glass. All four vases are totally empty and dry: no water, no flowers, nothing inside. The glass is drawn with thin grey outlines only and is perfectly colourless inside: no blue tint, no shading, no speckles, so the vases are plainly empty. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

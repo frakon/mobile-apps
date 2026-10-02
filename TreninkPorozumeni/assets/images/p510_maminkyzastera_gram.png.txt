@@ -1,0 +1,11 @@
+Image: maminkyzastera_gram.png
+Generated: 2026-10-01
+Candidate: P12 batch_01 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three identical adult mothers about 35 years old, clearly grown-up women (not girls, not teenagers), with hair in a low bun, in blue dresses in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one wears no apron, only the plain blue dress; the second one wears no apron, only the plain blue dress; the third one wears no apron, only the plain blue dress. All three are in the same state: each one wears no apron, only the plain blue dress. All of them look exactly the same in every detail. Calm friendly faces, correct realistic anatomy, all limbs complete and fully visible, nothing hidden behind other things, all feet at one level. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

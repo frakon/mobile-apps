@@ -1,0 +1,11 @@
+Image: stuhadelsizelena_gram.png
+Generated: 2026-10-01
+Candidate: P11 batch_04 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three identical shiny satin gift ribbons of the same width, laid out straight, each with a soft satin sheen and both ends cut in a neat V-shaped notch like a real ribbon, lie horizontally one above the other in parallel rows, their LEFT ends exactly aligned on one vertical line with a clear white margin on the left, no ribbon touches the left edge, a clear gap between the rows: the YELLOW ribbon on TOP, the PURPLE ribbon in the MIDDLE, the GREEN ribbon at the BOTTOM. The YELLOW ribbon is very long, but it ends with a clear white margin before the right edge of the picture; all three ribbons are completely inside the picture with both ends fully visible and neatly cut, nothing runs off the edge. The PURPLE ribbon and the GREEN ribbon are short, both exactly the same length, each only HALF as long as the YELLOW one: their right ends stop exactly at the middle of the picture. So the YELLOW ribbon is about TWICE as long as each of the other two; the difference is large and obvious. The three colours are bold, solid and clearly different. Clearly ribbons, not paper strips. Exactly three ribbons and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

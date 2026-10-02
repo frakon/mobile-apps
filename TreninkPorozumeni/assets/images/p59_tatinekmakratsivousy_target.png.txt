@@ -1,0 +1,11 @@
+Image: tatinekmakratsivousy_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_03 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: two people stand side by side facing the viewer, feet on one same level, full figures, a clear gap between them: on the LEFT a father: a grown-up man with brown hair and a beard, checked shirt and jeans; on the RIGHT a grandfather: an old man with grey hair and a dark grey beard, brown vest and grey trousers. The grandfather has very long beard, about TWICE as long as the short beard of the father; the difference is large and obvious. Calm friendly faces. Exactly two whole figures with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -24,6 +24,17 @@ download them, cache them compressed on device (200 MB LRU), and preload rounds 
     placeholder/UI assets (those stay bundled in the apps).
   - Zips use store mode (level 0) with a fixed mtime: PNG/MP3 do not deflate, store is fastest, and
     the fixed mtime makes checksums deterministic across repacks.
+  - **TreninkPorozumeni group** (`packPorozumeni.js`, called at the end of `pack.js`; option
+    `--porozumeni <appDir>`, default `../TreninkPorozumeni`; TreninkPorozumeni PROMPTS "User request 26"):
+    `porozumeni/items/<exampleId>.zip` — one store-mode zip per example with fixed inner names
+    `sentence.mp3`, `target.png`, `gram.png`, `lexa.png`, `lexb.png`, `gram_why.mp3`, `lexa_why.mp3`,
+    `lexb_why.mp3` and the swapped-variant `v2_sentence.mp3`, `v2_gram_why.mp3`, `v2_lexa_why.mp3`,
+    `v2_lexb_why.mp3` (only those the item has) — plus its OWN `porozumeni/manifest.json` (same shape,
+    keys relative to `porozumeni/`, e.g. `items/honi.zip`; the root manifest stays LetterTraining-only).
+    The item → file mapping is parsed from the app's item definitions (`src/items.ts`, `src/items/*.ts`:
+    every `<slot>: require('…')` line); the parser fails loudly if a file's `require(` count differs.
+    `.txt`/`.md`/`.part` are never packed. Test run 2026-10-01: 905 items, 791.8 MB, deterministic
+    version on repack. App base URL: `http://<backend-host>:9080/porozumeni`, configured in the app via `EXPO_PUBLIC_RESOURCE_BASE_URL` (git-ignored `TreninkPorozumeni/.env.local`).
 - **`server.js`** — minimal zero-dependency Node static fileserver serving `dist/`.
 
 ## Commands

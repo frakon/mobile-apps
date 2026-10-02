@@ -1,6 +1,6 @@
 Image: p58_hraballisti_lexa.png
 Generated: 2026-10-01
-Candidate: P10 batch11 (type 5.8) round 1
+Candidate: P10 repair R5 lexA (type 5.8) round 1
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch11 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a bald grandfather with a big grey moustache, wearing brown trousers and a vest carries a basket full of autumn leaves, no rake. He is unmistakably an old man: bald head, moustache and trousers. It must be clearly visible that the grandfather is NOT doing this: rakes autumn leaves into a pile with a rake. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Everything stands on one small patch of flat ground at the same level as the feet. Standing, he carries a round wicker basket full of orange, red and yellow autumn leaves in both hands; no rake anywhere. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a bald grandfather with a big grey moustache, wearing brown trousers and a vest sits on a complete wooden chair with four legs, solving a crossword in a folded newspaper with a pencil; the crossword is only a grid of empty white and black squares. There are no leaves, no rake, no garden tools anywhere. He is unmistakably an old man: bald head, moustache and trousers. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, with a clear white margin below the feet, nothing cut off, drawn small enough to fit; only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

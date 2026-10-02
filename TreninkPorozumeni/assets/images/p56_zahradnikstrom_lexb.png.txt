@@ -1,6 +1,6 @@
 Image: zahradnikstrom_lexb.png
 Generated: 2026-10-01
-Candidate: P8 batch04 round 2
+Candidate: P8 repair R1 round 1
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,7 +8,7 @@ Candidate: P8 batch04 round 2
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a tall grown-up man gardener about forty years old with a short grey beard, in green dungarees and a straw hat stands on a small patch of flat brown soil, a spade lying on the soil, his hands empty and relaxed at his sides; next to him lie three small flower pots with red flowers, not planted yet. It is clearly the moment BEFORE starting: nothing has been done yet, everything lies ready and untouched, nobody is working. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a tall grown-up man gardener about forty years old with a short grey beard, in green dungarees and a straw hat stands on a small patch of flat brown soil, a spade lying on the soil, his hands empty and relaxed at his sides; next to him stands an open wicker basket full of whole brown seed potatoes, none of them planted yet, no holes dug, the soil smooth. It is clearly the moment BEFORE starting: nothing has been done yet, everything lies ready and untouched, nobody is working. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
 
-Installed as p56_zahradnikstrom_lexb.png from P8 batch04 folder r2 on 2026-10-01.
-3. Blind test: target vs gram forced choice 10/10 in final pair round 2 (5 x v1 + 5 x v2 sentence, fresh headless opus per trial, neutral names), only cosmetic consistency notes in that round; lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched, no real-world faults. Logs: Temp/P8/batch_04/bt_results.jsonl, lex_results.jsonl.
+Installed as p56_zahradnikstrom_lexb.png from Temp\P8\rep1\r1 on 2026-10-01 (P8 repair R1).
+3. Lex-only change (repair R1): lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched; target/gram unchanged. Log: Temp/P8/rep1/results.jsonl.

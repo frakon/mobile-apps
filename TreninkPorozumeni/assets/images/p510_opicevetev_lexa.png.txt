@@ -1,0 +1,11 @@
+Image: opicevetev_lexa.png
+Generated: 2026-10-01
+Candidate: P12 batch_02 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one long thick horizontal brown tree branch (only the branch, no tree); exactly three identical brown monkeys, all the same size and drawn the same way. Exactly two of them: each of these hangs from the branch holding it with both hands, feet in the air. The other one: each of these stands upright on its feet below the branch, hands down, not touching the branch. The difference is large and obvious. All of them look exactly the same in every detail. Calm friendly faces, correct realistic anatomy, every figure complete with all its body parts. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

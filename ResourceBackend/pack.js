@@ -4,8 +4,10 @@
 // with a global content-derived version + per-archive sha256/size so the app can invalidate stale cache.
 // Blind-test logs / *.txt / *.md files are excluded by design (they no longer live under assets/ anyway).
 //
-// Usage: node pack.js [--assets <dir>] [--out <dir>]
+// Usage: node pack.js [--assets <dir>] [--porozumeni <dir>] [--out <dir>]
 //   --assets  LetterTraining assets dir (default: ../LetterTraining/assets relative to this file)
+//   --porozumeni  TreninkPorozumeni app dir (default: ../TreninkPorozumeni) — its per-item zips go to
+//                 <out>/porozumeni/ with their own manifest (packPorozumeni.js; "User request 26")
 //   --out     output dir (default: ./dist relative to this file) — gitignored build output
 
 'use strict';
@@ -21,6 +23,7 @@ function argValue(name, defaultValue) {
 
 const assetsDir = path.resolve(__dirname, argValue('--assets', path.join('..', 'LetterTraining', 'assets')));
 const outDir = path.resolve(__dirname, argValue('--out', 'dist'));
+const porozumeniAppDir = path.resolve(__dirname, argValue('--porozumeni', path.join('..', 'TreninkPorozumeni')));
 
 const imagesDir = path.join(assetsDir, 'images');
 const audioDir = path.join(assetsDir, 'audio');
@@ -130,3 +133,8 @@ const totalBytes = Object.values(manifestArchives).reduce((sum, a) => sum + a.by
 console.log(`Packed ${Object.keys(manifestArchives).length} archives (${wordCount} word zips, ` +
   `${syllableGroups.size} syllable zips, 1 train zip), total ${(totalBytes / 1024 / 1024).toFixed(1)} MB.`);
 console.log(`Manifest version: ${manifest.version}  ->  ${path.join(outDir, 'manifest.json')}`);
+
+// --- TreninkPorozumeni per-item archives (own manifest under porozumeni/), see packPorozumeni.js.
+if (fs.existsSync(porozumeniAppDir)) {
+  require('./packPorozumeni').packPorozumeni({ appDir: porozumeniAppDir, outDir, writeArchive, sha256 });
+}

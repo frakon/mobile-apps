@@ -1,6 +1,6 @@
 Image: p58_pralaponozky_lexb.png
 Generated: 2026-10-01
-Candidate: P10 batch09 (type 5.8) round 1
+Candidate: P10 final verify R1 repair (type 5.8), candidate prala_lexb_a, Temp/P10/repair_R1 (blind/lex tested)
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch09 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a bald grandfather with a big grey moustache, wearing brown trousers and a vest washes a towel by hand in a tub of soapy water on a small table. He is unmistakably an old man: bald head, moustache and trousers. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a bald grandfather with a big grey moustache and a short full grey beard, wearing a cream shirt, a brown vest and brown trousers washes a big blue-and-white striped bath towel in a round metal tub of soapy water standing on a small wooden stool; he lifts the wide towel up with both hands so its large rectangular shape with fringes is fully visible, dripping into the tub. There are no socks anywhere. He is unmistakably an old man: bald head, grey moustache and beard, trousers. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Calm friendly face, mouth closed. Exactly one figure with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

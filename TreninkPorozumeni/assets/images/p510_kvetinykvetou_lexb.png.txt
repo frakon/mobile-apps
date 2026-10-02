@@ -1,0 +1,11 @@
+Image: kvetinykvetou_lexb.png (installed as p510_kvetinykvetou_lexb.png)
+Generated: 2026-10-01
+Candidate: P12 r1b lexb5 repair round 1 (true render #2)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three identical big fruit trees in one row from left to right, with clear gaps between them, all the same size and drawn the same way, each tree tall with one thick brown woody trunk and a big wide round crown of branches. From left to right: the first tree has its whole crown full of white blossoms; the second tree has its whole crown full of white blossoms; the third tree has its whole crown full of white blossoms. All three are in the same state: each big tree is blossoming with white blossoms high up in its crown. Every tree is complete from the bottom of the thick trunk to the top of the crown, nothing cropped at the edge, nothing overlapping. There are only three big trees in the picture, nothing growing at the foot of the trunks, no tulips, no garden flowers, no grass anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

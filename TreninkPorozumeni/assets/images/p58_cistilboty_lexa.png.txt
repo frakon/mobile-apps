@@ -1,6 +1,6 @@
 Image: p58_cistilboty_lexa.png
 Generated: 2026-10-01
-Candidate: P10 pilot (type 5.8) round 2
+Candidate: P10 repair R5 lexA (type 5.8) round 2
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 pilot (type 5.8) round 2
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a young man with very short dark hair and a short beard, wearing a checked shirt and dark trousers walks carrying a pair of brown leather shoes in one hand, no brush, not cleaning them. He is unmistakably a man: short hair, beard and trousers. Calm friendly face, mouth closed. Exactly one figure with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. The whole figure is visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing is cut off by the picture edge; the figure is drawn small enough to fit completely.
+Children's book watercolor illustration, simple and clean, side view: a young man with very short dark hair and a short beard, wearing a checked shirt and trousers measures the width of a small wooden cupboard with a yellow tape measure; the tape blade is plain yellow with no marks or numbers. He holds no shoes and there is no shoe brush, no polish and no spare shoes anywhere. He is unmistakably a man: short hair, beard and trousers. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, with a clear white margin below the feet, nothing cut off, drawn small enough to fit; only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

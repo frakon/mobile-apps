@@ -1,0 +1,11 @@
+Image: tuzkadelsifialova_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, the three spoons lie horizontally one above the other in parallel rows, their LEFT ends exactly aligned on one vertical line, a clear gap between the rows: the purple spoon is TOP; the yellow spoon is MIDDLE; the green spoon is BOTTOM. The purple spoon is clearly the most long: about TWICE as long as each of the other two; the yellow and the green spoons are exactly equal to each other and both much less long. The three colours are bold, solid and clearly different. Exactly three spoons and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no pencil anywhere in the picture.

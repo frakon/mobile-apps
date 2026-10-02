@@ -1,0 +1,11 @@
+Image: klukhodilmicdal_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_08 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, two horizontal lanes one above the other, each a plain light green grass strip: in the TOP lane a boy of about seven with short brown hair, green T-shirt and blue shorts stands at the LEFT end with empty hands, having just thrown a red ball along the lane; in the BOTTOM lane a girl of about seven with two brown pigtails in a yellow dress stands at the LEFT end with empty hands, having just thrown a red ball along the lane; both stand exactly on one vertical start line. The boy's ball lies FAR away near the RIGHT edge of the picture; the girl's ball lies only one short step in front of the girl. Both balls are identical and lie on the grass, not in the air. Calm friendly faces, all limbs fully visible. Exactly two figures and two balls, no other objects, white background around the lanes, no text.

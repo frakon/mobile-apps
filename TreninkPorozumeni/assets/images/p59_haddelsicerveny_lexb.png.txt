@@ -1,0 +1,11 @@
+Image: haddelsicerveny_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: three adult lizards with four legs each stand one above the other in parallel rows, a clear gap between the rows, all facing RIGHT, all four legs visible, their tail tips exactly aligned on one vertical line on the left: the green lizard in the TOP row, the red lizard in the MIDDLE row, the yellow lizard in the BOTTOM row. The red lizard is clearly the longest: about TWICE as long as each of the other two; the green and the yellow lizards are exactly equal to each other, each only half as long. Real lizard anatomy with natural short legs. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly three lizards and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no snake anywhere in the picture.

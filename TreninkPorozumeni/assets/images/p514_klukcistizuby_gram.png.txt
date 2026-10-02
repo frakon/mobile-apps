@@ -1,0 +1,11 @@
+Image: klukcistizuby_gram.png
+Generated: 2026-10-02
+Candidate: P16 batch_01 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, every person shown whole from head to shoes: a boy about seven years old with short brown hair, a green T-shirt, blue shorts and white sneakers is brushing his teeth all alone, rubbing his front teeth with his index finger that has a blob of white toothpaste on it, his mouth open in a wide grin showing the teeth and some white toothpaste foam on his teeth, clearly brushing his teeth with the finger, holding nothing. He is the only person in the picture, nobody else is there. There is no toothbrush anywhere in the picture. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -17,26 +17,27 @@
 // Per "User follow-up request 21": the field is split into two sub-tests of 10 (route params
 // field + part), and every player plays at the persisted speech speed (setPlaybackRate).
 
-import { Asset } from 'expo-asset';
 import { setAudioModeAsync } from 'expo-audio';
 import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { playAudio, stopAllAudio, stopAudioIfOwnedBy } from '../src/audioController';
+import { archivePathForExample, explanationAudioSource, sentenceAudioSource, slotImageSource } from '../src/itemResources';
 import { FIELDS, FieldId } from '../src/items';
 import { clearPausedGame, consumePausedGame, savePausedGame } from '../src/pausedGame';
 import {
   buildRoundPlan,
-  collectRoundAssetModules,
   explanationForSlot,
   GameRound,
   Regime,
-  sentenceAudioForRound,
   TestPart,
   testPartCount,
 } from '../src/rounds';
+import { OfflineRetry } from '../src/resources/OfflineRetry';
+import { useArchivePreloading } from '../src/resources/useArchivePreloading';
 import { loadRegime, loadSpeechSpeedPercent } from '../src/settings';
+import { StartAnimation } from '../src/StartAnimation';
 
 const FEEDBACK_DURATION_MILLISECONDS = 500;
 // Safety cap for the explanation playback: if the finish event never arrives (corrupt file,
@@ -213,42 +214,30 @@ export default function GameScreen() {
   const finished = roundPlan !== null && roundIndex >= roundPlan.length;
   const currentRound = roundPlan === null || finished ? null : roundPlan[roundIndex];
 
-  // Asset prefetching of the upcoming rounds (see _TreninkPorozumeni_Fields123_PROMPTS.md,
-  // section "User follow-up request 16 — prefetch upcoming rounds' assets"): in Expo Go with
-  // a remote Metro every FIRST use of an image/mp3 is an HTTP fetch, which caused the
-  // user-visible stalls the lazy load + watchdog only mitigate. On every round start (and on
-  // plan build / resume, since roundIndex is a dependency too) fire-and-forget download of the
-  // assets of rounds [roundIndex .. roundIndex + 2]: the next TWO rounds per the request, plus
-  // the CURRENT round so the very first round (and the restored round after a resume) gets its
-  // explanation audios warmed as well — its sentence/images still load the old way, they are
-  // being displayed/played right now anyway. Asset.fromModule(id).downloadAsync() works
-  // uniformly for images and audio module ids; in a release build the assets are already
-  // bundled and it resolves immediately. Failures are IGNORED — prefetching is an optimization
-  // only, the existing lazy load + watchdog remain the fallback, and it must never block the
-  // UI or the round advance. The Set de-duplicates per session so nothing is fetched twice.
-  const prefetchedModuleIdsRef = useRef<Set<number>>(new Set());
-  useEffect(() => {
-    if (roundPlan === null) {
-      return;
-    }
-    for (let index = roundIndex; index <= roundIndex + 2 && index < roundPlan.length; index++) {
-      for (const moduleId of collectRoundAssetModules(roundPlan[index])) {
-        if (prefetchedModuleIdsRef.current.has(moduleId)) {
-          continue;
-        }
-        prefetchedModuleIdsRef.current.add(moduleId);
-        try {
-          Asset.fromModule(moduleId)
-            .downloadAsync()
-            .catch(() => {
-              // Silent by design: the round will lazy-load the asset as before.
-            });
-        } catch {
-          // fromModule threw synchronously (unknown module id): equally silent.
-        }
-      }
-    }
-  }, [roundPlan, roundIndex]);
+  // Backend resources + preloading (_TreninkPorozumeni_Fields123_PROMPTS.md — "User request 26" (mobile-apps-preferences skill); supersedes the 2-round
+  // Metro prefetch of "User follow-up request 16"): the CURRENT round's per-item archive is REQUIRED (downloaded,
+  // disk-cached compressed in the 200 MB LRU cache, unzipped in memory, its sounds written as local files) before
+  // the round is shown; the archives of the NEXT 5 rounds are prefetched the same way in parallel; archives of
+  // rounds left behind are released from memory (their compressed copies stay cached). While the current round is
+  // not ready, the start animation (or the offline retry screen) replaces the pictures.
+  const PRELOAD_ROUNDS_AHEAD = 5;
+  const requiredArchives = currentRound === null ? [] : [archivePathForExample(currentRound.example)];
+  const prefetchArchives =
+    roundPlan === null
+      ? []
+      : roundPlan
+          .slice(roundIndex + 1, roundIndex + 1 + PRELOAD_ROUNDS_AHEAD)
+          .map((round) => archivePathForExample(round.example));
+  const preload = useArchivePreloading(requiredArchives, prefetchArchives);
+  const currentArchive =
+    currentRound === null || preload.status !== 'ready'
+      ? undefined
+      : preload.archives[archivePathForExample(currentRound.example)];
+  const roundReady = currentArchive !== undefined;
+  // Read by the audio callbacks (keeps them independent of the archive object identity, so a re-render with the
+  // same archive never re-triggers the sentence auto-play).
+  const currentArchiveRef = useRef(currentArchive);
+  currentArchiveRef.current = currentArchive;
 
   useEffect(() => {
     setAudioModeAsync({ playsInSilentMode: true })
@@ -284,8 +273,13 @@ export default function GameScreen() {
     if (!currentRound || leavingRef.current) {
       return;
     }
+    // Backend sound, already a local file of the hot current-round archive ("User request 26"); not ready -> no play.
+    const sentenceSource = sentenceAudioSource(currentRound, currentArchiveRef.current);
+    if (sentenceSource === null) {
+      return;
+    }
     // Start watchdog + one fresh-player retry if not started within 2.5 s (_TreninkPorozumeni_Fields123_PROMPTS.md, "User follow-up request 22 (verbatim) — every play: latest request wins").
-    playAudio(sentenceAudioForRound(currentRound), {
+    playAudio(sentenceSource, {
       key: sentenceKey,
       rate: speechRate ?? 1,
       owner: audioOwner,
@@ -298,16 +292,21 @@ export default function GameScreen() {
   // and the speech-speed setting is loaded — so even the FIRST sentence plays at the set speed).
   // playAudio stops everything else first (latest request wins, "request 22").
   useEffect(() => {
-    if (!currentRound || !audioModeReady || speechRate === null) {
-      return;
+    if (!currentRound || !audioModeReady || speechRate === null || !roundReady) {
+      return; // also waits for the round's backend archive ("User request 26")
     }
     if (userAudioRoundRef.current !== roundIndex) {
       playSentence(); // skipped when the child's own tap/replay in this round already won
     }
     return () => stopAudioIfOwnedBy(audioOwner); // leaving the round: nothing of it may keep sounding
-  }, [currentRound, audioModeReady, speechRate, playSentence, roundIndex, audioOwner]);
+  }, [currentRound, audioModeReady, speechRate, playSentence, roundIndex, audioOwner, roundReady]);
 
   const replayAudio = useCallback(() => {
+    if (!roundReady) {
+      // No source yet: a tap while loading must not count as the child's play, or the round's auto-play
+      // would be skipped and the round stay silent (_TreninkPorozumeni_Fields123_PROMPTS.md — User request 26).
+      return;
+    }
     if (!currentRound || roundAdvancePending.current || leavingRef.current) {
       return; // leaving (exit animation, "request 22"): nothing may start; no replay during the green-feedback window: the old sentence would keep sounding under the next round's sentence ("request 19")
     }
@@ -316,7 +315,7 @@ export default function GameScreen() {
     userAudioRoundRef.current = roundIndex;
     setWrongTappedIndex(null);
     playSentence();
-  }, [currentRound, playSentence, roundIndex]);
+  }, [currentRound, playSentence, roundIndex, roundReady]);
 
   const handlePictureTap = useCallback(
     (index: number) => {
@@ -379,7 +378,17 @@ export default function GameScreen() {
         // Spoken "why it is wrong" explanation: red tint stays for the whole playback; when
         // the audio is missing (null) or fails, fall back to the plain 500 ms tint.
         const explanation = explanationForSlot(currentRound, currentRound.slots[index].kind);
-        if (explanation !== null && explanation.audio !== null) {
+        // Backend explanation sound of the hot archive ("User request 26"); null -> plain tint as before.
+        const explanationAudio =
+          explanation === null
+            ? null
+            : explanationAudioSource(
+                currentRound,
+                currentRound.slots[index].kind,
+                explanation.audio,
+                currentArchiveRef.current
+              );
+        if (explanationAudio !== null) {
           // Central controller ("request 22"): stops the sentence / previous explanation
           // (pause, then remove), plays this one at the speech speed ("request 21"). Its
           // callbacks fire ONLY while this play is still the latest request. Failure paths —
@@ -387,7 +396,7 @@ export default function GameScreen() {
           // started playing" watchdog ("User follow-up request 7") — fall back to the plain
           // 500 ms tint; the 15 s safety cap ends the tint if no finish ever arrives.
           userAudioRoundRef.current = roundIndex;
-          playAudio(explanation.audio, {
+          playAudio(explanationAudio, {
             key: `explanation:${roundIndex}:${index}`,
             rate: speechRate ?? 1,
             owner: audioOwner,
@@ -547,7 +556,11 @@ export default function GameScreen() {
         }}
         onPress={() => handlePictureTap(index)}
       >
-        <Image source={currentRound.slots[index].image} style={styles.picture} resizeMode="contain" />
+        <Image
+          source={slotImageSource(currentRound, currentRound.slots[index].kind, currentArchive) ?? undefined}
+          style={styles.picture}
+          resizeMode="contain"
+        />
         {showRed && <View style={[styles.pictureOverlay, styles.redOverlay]} />}
         {showGreen && (
           <View style={[styles.pictureOverlay, styles.greenOverlay]}>
@@ -577,11 +590,31 @@ export default function GameScreen() {
           <Text style={styles.progressLabel}>
             {roundIndex + 1} / {roundPlan.length}
           </Text>
-          <Pressable style={styles.replayButton} onPress={replayAudio} accessibilityLabel="Přehrát znovu">
+          <Pressable
+            style={[styles.replayButton, !roundReady && { opacity: 0.4 }]}
+            onPress={replayAudio}
+            disabled={!roundReady}
+            accessibilityLabel="Přehrát znovu"
+          >
             <Text style={styles.replayIcon}>🔊</Text>
           </Pressable>
         </View>
-        {regime === 2 ? (
+        {!roundReady ? (
+          // Backend resources of this round not ready yet ("User request 26"): start animation until they are
+          // (cut immediately when ready), or the child-friendly offline screen with "Zkusit znovu".
+          preload.status === 'offline' ? (
+            <View style={styles.picturesRow}>
+              <OfflineRetry
+                onRetry={preload.retry}
+                message={'Na obrázky a zvuky potřebujeme internet.\nPřipoj se a zkus to znovu.'}
+              />
+            </View>
+          ) : (
+            <View style={styles.picturesRow}>
+              <StartAnimation field={field} />
+            </View>
+          )
+        ) : regime === 2 ? (
           // 2-image regime: target + grammatical distractor side by side. The left controls
           // column benefits this regime too: the app is landscape-only, so picture size is
           // height-limited and removing the old top bar makes the pictures bigger here as well.

@@ -1,0 +1,11 @@
+Image: lampanizsiruzova_gram.png
+Generated: 2026-10-01
+Candidate: P11 strict_audit round g3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, the two table lamps stand side by side in a row, their round flat feet exactly on one same bottom level, a clear gap between them: the green table lamp is on the LEFT, the pink table lamp is on the RIGHT. Both lamps are of EXACTLY the same design and the same width: a pleated fabric lampshade shaped like a cone that is wider at the bottom, a thin turned lamp stand, and a round flat foot; clearly lamps, not mushrooms. The pink lamp has a very LONG stand and is TWICE as tall as the green lamp; the top of the green lamp's shade reaches only up to the MIDDLE of the pink lamp's stand. Same shade size for both lamps; only the stand length (the height) differs. The two colours are bold, solid and clearly different. Everything fully inside the picture with a wide white margin. Exactly two table lamps and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

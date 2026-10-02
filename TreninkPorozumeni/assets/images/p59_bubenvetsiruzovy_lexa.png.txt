@@ -1,0 +1,11 @@
+Image: bubenvetsiruzovy_lexa.png
+Generated: 2026-10-01
+Candidate: P11 batch_03 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, the three toy drums stand side by side in a row, their bottoms exactly on one same level, a clear gap between them: the orange toy drum is LEFT; the pink toy drum is MIDDLE; the green toy drum is RIGHT. All three are exactly the same size (equally big). Each toy drum is a complete drum: a cylinder seen slightly from above with a tight light-beige drumhead skin stretched across its closed top and laced sides, clearly a drum and not a bucket or a cup; no drumsticks. The three colours are bold, solid and clearly different. Exactly three toy drums and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

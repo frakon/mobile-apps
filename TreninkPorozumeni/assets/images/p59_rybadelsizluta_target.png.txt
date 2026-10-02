@@ -1,0 +1,11 @@
+Image: rybadelsizluta_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_04 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, two fish lie horizontally one above the other in parallel rows, a clear gap between the rows, their LEFT ends (tail tips) exactly aligned on one vertical line near the left margin, both facing RIGHT: the YELLOW fish in the TOP row, the GREEN fish in the BOTTOM row. The yellow fish is big and long, reaching from the left margin almost to the right margin. The green fish is small, only HALF as long as the yellow fish: its head ends exactly at the middle of the picture, below the middle of the yellow fish. The yellow fish is about TWICE as long; the difference is large and obvious; the green fish has exactly the same shape, only smaller. Both are ordinary real fish drawn in the same style: an oval body covered with scales, a fan-shaped tail fin, a fin on top and a fin below, a round eye, a small mouth, both facing RIGHT. Not dolphins. The two colours are bold, solid and clearly different. Exactly two fish and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,14 @@
+Image: dedecekvajicko_gram.png
+Generated: 2026-10-01
+Candidate: P8 repair R2 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grey-haired grandfather with a grey moustache in a brown waistcoat and trousers wearing no glasses, sits at a small complete wooden table with four legs; on the table lies a white plate; on the plate lies one whole completely peeled hard-boiled egg lying on its side: the bare egg white is glossy, wet-shiny and pure snow-white all over, with not a single bit of shell left on it; next to it on the plate lie exactly the few broken pieces of ONE brown eggshell, curved, brown on the outside and white on the inside, a small neat heap that is clearly the shell of just this one egg; his hands rest on the table, empty. It is clearly AFTER the activity: the work is completely finished and nobody is working on it any more, the tools are put down. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_dedecekvajicko_gram.png from Temp\P8\rep2\r4 on 2026-10-01 (P8 repair R2).
+3. Blind test (repair R2): target vs gram forced choice 10/10 (5 x v1 + 5 x v2, fresh headless opus per trial, neutral names), strict rule (max 1 dismissed loose reading per 5 trials); lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched. Log: Temp/P8/rep2/results.jsonl (r3).

@@ -1,0 +1,11 @@
+Image: mamakraji_target.png
+Generated: 2026-10-02
+Candidate: P16 R1 repair B round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, every person shown whole from head to shoes: a mother with shoulder-length blond hair, a yellow blouse, blue trousers and white shoes is cutting peeled hard-boiled white eggs lying on a small white plate on a normal rectangular wooden kitchen table with four legs, waist high all alone, using a small kitchen knife held in the hand. She is the only person in the picture, nobody else is there. There is no egg slicer anywhere in the picture. The mother looks exactly like described: straight shoulder-length blond hair to the shoulders, a plain yellow long-sleeved blouse, blue trousers, white shoes. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

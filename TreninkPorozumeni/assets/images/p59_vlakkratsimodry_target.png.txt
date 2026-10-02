@@ -1,0 +1,11 @@
+Image: vlakkratsimodry_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_03 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, the two toy trains lie horizontally one above the other in parallel rows, their LEFT ends exactly aligned on one vertical line, a clear gap between the rows: the blue toy train is in the TOP row, the green toy train is in the BOTTOM row. The blue toy train is SHORT: one locomotive and only TWO wagons. The green toy train is LONG: one locomotive and FIVE wagons. The green toy train is about TWICE as long as the blue toy train; the blue one ends at the middle of the green one; the difference is large and obvious; apart from colour and length they look the same. Every wagon is connected to the next by a short visible coupling bar, the locomotive and all wagons of one train joined into one continuous train with no gaps. All wagons are the same size in both trains; both locomotives are identical in size and style. The two colours are bold, solid and clearly different. Exactly two toy trains and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

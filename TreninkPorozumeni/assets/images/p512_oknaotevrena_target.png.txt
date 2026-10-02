@@ -1,0 +1,11 @@
+Image: oknaotevrena_target.png
+Generated: 2026-10-01
+Candidate: P14 batch_02 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four wooden window frames painted in colour in one row from left to right, with clear gaps between them, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a blue window frame that has its two window panes swung wide open outward; the second is a blue window frame that has its two window panes swung wide open outward; the third is a green window frame that has its two window panes shut; the fourth is a green window frame that has its two window panes shut. Exactly two are blue and exactly two are green. Both blue ones: has its two window panes swung wide open outward. Both green ones: has its two window panes shut. Every window frame has clear light-blue see-through glass in its panes with a white shine highlight, so they are clearly glass windows and not doors or cupboards; no handles, no knobs. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

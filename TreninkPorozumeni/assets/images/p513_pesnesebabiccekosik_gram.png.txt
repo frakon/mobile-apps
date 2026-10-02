@@ -1,0 +1,11 @@
+Image: p513_pesnesebabiccekosik_gram.png
+Generated: 2026-10-02
+Candidate: P15 b09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small sturdy short-haired plain brown dog with short smooth fur (not shaggy, not curly), short floppy ears hanging down, a short straight tail and a plain bright yellow collar; and an old grandmother with a wrinkled face, grey hair in a bun and round glasses, wearing a headscarf in bright turquoise with white polka dots folded into a wide band over the top of her head and knotted at the BACK of her head above the grey bun, her ears, cheeks, chin and neck uncovered and nothing under the chin, a long-sleeved buttoned cardigan in bright turquoise with white polka dots, a plain black ankle-length skirt without any pattern and black lace-up shoes. Each figure looks exactly like this. The grandmother walks from the right toward the left, toward the dog, carrying one small empty wicker basket with a handle (the same size in every picture) in both hands in front of her chest, one foot stepping forward. The dog sits still on the left facing right, waiting, its mouth closed and empty. The grandmother is the active one who brings the basket to the dog; the dog stays still and waits. Exactly one basket in the picture. One clearly separate whole person and one clearly separate whole dog with correct realistic anatomy, the person's both arms, both hands and both legs and all four legs of the dog complete and visible, nothing hidden behind objects, feet on one ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. Clean pure white background without any paint speckles, dots or splashes.

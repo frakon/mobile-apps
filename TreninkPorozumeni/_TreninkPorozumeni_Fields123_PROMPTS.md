@@ -216,3 +216,9 @@ Then add this new rule to the prompts file and to a dedicated .md file which wil
 7. Q: What are the web explorer's limits and where does its output go? — A: "Read-only Czech sources, saved in app (Recommended)"
 8. Q: Does this rule override 'Follow doc per type' and per-type feasibility constraints (e.g. 5.9 comparatives only)? — A: "Yes, where depictable (Recommended)"
 Rule file: _TestTypeScopeRule.md (referenced from README.md).
+
+## User request 26 (verbatim) — apply mobile-apps-preferences
+
+"Meanwhile: appoint a new level-1 subagent to load delegate-1-ops and mobile-apps-preferences skill and to manage implementation of everything written in the mobile-apps-preferences skill into the TreninkPorozumeni app. Everything what is in the skill overwrites current potentially conflicting instructions (e.g. that we shall preload 5 rounds instead of 2, etc.)."
+
+Note (coordinator): per this request the mobile-apps-preferences skill overrides these earlier instructions: request 16 "Implementation decisions" (Metro/expo-asset prefetch of 2 rounds, "no loading indicator needed", static `require` of all assets, "in a release build the assets are bundled") → per-item zip archives from ResourceBackend, on-device compressed LRU cache (200 MB), preload of the next 5 rounds, start animation while round-1 resources load; SPEC "Rounds" (current + NEXT TWO rounds, SPEC:71) → next 5 rounds; SPEC "Technical notes"/"Assets" (static require, PNG per id bundled) → backend-served per-item archives, only UI/icon/splash bundled; SPEC:130 provenance `.png.txt` next to images → excluded from the packer and the bundler (files are not moved, because field content is edited in parallel); README "Deploy" (shared screen `expo`) → per-app screen `expo-TreninkPorozumeni`, port 8081. New: custom app icon + splash (welcome) screen. NOT overridden: every request-22 audio controller guarantee (hot sounds = pre-cached local file URIs passed to a fresh player per play).

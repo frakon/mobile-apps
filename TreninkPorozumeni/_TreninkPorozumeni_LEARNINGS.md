@@ -88,6 +88,12 @@ Fix/rules: add an explicit end-to-end continuity clause — "one single continuo
 - expo-audio iOS: `pause()` without `keepAudioSessionActive` schedules `AVAudioSession.setActive(false)` 100 ms later if no player is in `.playing` state (`node_modules/expo-audio/ios/AudioModule.swift`, `deactivateSession`). A new player still loading is NOT `.playing` → pause-old + play-new deactivated the session under the new sound. That this made the new sound SILENT is a code-derived HYPOTHESIS, not confirmed on a device. Always create players with `keepAudioSessionActive: true`.
 - Keep: a FRESH player per play request (no re-use/seekTo replay: a stale didJustFinish could kill the replay); release = `pause()` → unsubscribe → `remove()` → `release()` (`remove()` only unregisters; `release()` frees the native player); screen cleanups stop only their own sound (`stopAudioIfOwnedBy`); 2.5 s start watchdog (explanation: fail → plain tint; sentence: one fresh-player retry) / 15 s safety cap acting only on the current token.
 
+## Backend resources learnings (User request 26)
+
+- Per-exercise pictures/sounds come from the ResourceBackend; an item's image/audio field is only a marker string at runtime (babel rewrite) — resolve sources with `src/itemResources.ts` by example id + fixed entry name. A new item only needs its normal `require(...)` lines; it reaches the app after the NEXT pack + upload of the backend archives.
+- Hot sounds = local files written at unzip time, passed as `{ uri }` to `playAudio`; never keep pre-created players to make audio "hot" (breaks the fresh-player guarantee above).
+- After changing `babel.config.js` / the babel plugin, start Metro with `--clear` once (transform cache).
+
 ## Audio generation settings
 
 - All sentence and why-wrong mp3s: edge-tts voice `cs-CZ-VlastaNeural`, rate `-10%` (keep identical for new/regenerated audio).

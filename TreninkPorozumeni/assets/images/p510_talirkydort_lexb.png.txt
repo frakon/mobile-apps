@@ -1,0 +1,11 @@
+Image: talirkydort_lexb.png (installed as p510_talirkydort_lexb.png)
+Generated: 2026-10-01
+Candidate: P12 r1d spare round 2 (true render #2)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view seen slightly from above: exactly three identical small open brown cardboard boxes without lids in one row from left to right, with clear gaps between them, all the same size and drawn the same way, square boxes with four upright cardboard walls. From left to right: the first box has one triangular slice of yellow layered sponge cake with plain smooth white cream on top, no fruit and no decoration inside it; the second box has exactly the same plain slice of cake inside it; the third box has exactly the same plain slice of cake inside it. All three boxes are in the same state: each one has exactly one slice of cake inside it. Every box is complete, nothing cropped at the edge, nothing overlapping. There are only cardboard boxes, no plates anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: maminkahrajenaxylofon_gram.png
+Generated: 2026-10-01
+Candidate: P13 batch B round 7b
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a young mother with long loose dark hair, wearing a headband in bright blue with white polka dots, a long-sleeved blouse in bright blue with white polka dots, a plain black ankle-length skirt without any pattern and black shoes, on the left; and a boy of about seven with short brown hair, wearing a cap with a peak in bright orange with white horizontal stripes, a T-shirt in bright orange with white horizontal stripes, plain dark grey shorts without any pattern, white socks and brown shoes, on the other side. Each person wears exactly this outfit. A small round plain wooden table with three legs stands between them; on it lies one toy xylophone with plain silver metal bars on a wooden frame. Nobody holds the xylophone. The mother and the boy stand on both sides of the table facing each other; each of them holds exactly one small mallet in one hand and strikes a silver bar with it right now, the head of each mallet touching a bar, their other arm hanging at their side. They play it together. The xylophone's frame (the part under the bars) is painted. The toy xylophone is bright blue with white polka dots, exactly the same colour and pattern as the mother's clothes, so it clearly belongs to the mother. Nothing on the toy xylophone has the bright orange colour. Exactly one toy xylophone in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,6 +1,6 @@
-Image: p58_trhalajablka_lexa.png
+Image: trhalajablka_b.png
 Generated: 2026-10-01
-Candidate: P10 batch01 (type 5.8) round 1
+Candidate: P10 retestB (type 5.8) repair render
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch01 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a clearly adult young woman with long brown hair in a ponytail, wearing a long red dress walks along carrying a wicker basket full of red apples on her arm; no tree anywhere, she is not picking anything. She is unmistakably an adult woman: long ponytail and a long dress. Calm friendly face, mouth closed. Exactly one person with correct realistic anatomy, only the described person and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. The whole figure is visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing is cut off by the picture edge; the figure is drawn small enough to fit completely.
+Children's book watercolor illustration, simple and clean, side view: a young woman with long brown hair in a ponytail, wearing a long red dress stands and plays a simple wooden recorder: the recorder points steeply DOWNWARD and forward from her lips at a 45-degree angle, held correctly from below with both hands, fingers on the holes; no tree, no fruit, no basket anywhere. She is unmistakably a woman: long hair and a long dress. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

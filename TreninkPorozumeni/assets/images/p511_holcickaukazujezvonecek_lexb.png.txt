@@ -1,0 +1,11 @@
+Image: holcickaukazujezvonecek_lexb.png
+Generated: 2026-10-01
+Candidate: P13 batch B round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a girl of about seven with two brown pigtails, each pigtail tied with a small bow in bright red with white polka dots, wearing a knee-length dress in bright red with white polka dots, white socks and brown shoes, on the left; and a grandfather with white hair and a white moustache, without glasses, wearing a flat cap in bright orange with white horizontal stripes, a sweater in bright orange with white horizontal stripes, plain black trousers and brown shoes, on the other side. Each person wears exactly this outfit. The grandfather stands facing left and holds one plain brown pine cone out in front of himself with both hands at the girl's eye level, turned so that both the girl and the viewer see it well. The girl stands facing right with both arms resting at her sides and only looks at it. The grandfather is the one showing, the girl only looks. There is no bell anywhere. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

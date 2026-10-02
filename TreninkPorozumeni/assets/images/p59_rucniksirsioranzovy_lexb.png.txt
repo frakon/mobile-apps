@@ -1,0 +1,11 @@
+Image: rucniksirsioranzovy_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: three normal short-sleeved T-shirts laid flat side by side, a clear gap between them, their collars at one same top level: the blue T-shirt on the LEFT, the orange T-shirt in the MIDDLE, the green T-shirt on the RIGHT. The orange T-shirt is a big adult T-shirt, about TWICE as big as each of the other two; the blue and the green T-shirts are small child's T-shirts exactly equal to each other. All have natural T-shirt proportions with a neck opening and two short sleeves. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly three T-shirts and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no towel anywhere in the picture.

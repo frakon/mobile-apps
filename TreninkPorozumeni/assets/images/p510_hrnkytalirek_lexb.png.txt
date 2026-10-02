@@ -1,0 +1,11 @@
+Image: hrnkytalirek_lexb.png (installed as p510_hrnkytalirek_lexb.png)
+Generated: 2026-10-01
+Candidate: P12 r1b lexb5 repair round 1 (true render #2)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three identical thick white wax candles in one row from left to right, with clear gaps between them, all the same size and drawn the same way, each candle a simple short white pillar with a small black wick on top and a small yellow flame. From left to right: the first candle stands upright on its own small white-and-blue saucer; the second candle stands upright on its own small white-and-blue saucer; the third candle stands upright on its own small white-and-blue saucer. All three are in the same state: each candle stands on its own small saucer. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. There are only three candles on three saucers in the picture, no cups, no mugs, no glasses, no handles anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

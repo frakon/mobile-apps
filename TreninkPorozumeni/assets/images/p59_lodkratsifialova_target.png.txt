@@ -1,0 +1,11 @@
+Image: lodkratsifialova_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_08 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, the three toy sailing boats lie horizontally one above the other in parallel rows, their LEFT ends exactly aligned on one vertical line, a clear gap between the rows: the green toy sailing boat is TOP; the purple toy sailing boat is MIDDLE; the yellow toy sailing boat is BOTTOM. The purple toy sailing boat is clearly the least long: only about HALF as long as each of the other two; the green and the yellow toy sailing boats are exactly equal to each other and both much more long. The three colours are bold, solid and clearly different. All boats have the same hull height and same sail height; they differ only in length. Boats seen exactly from the side. Exactly three toy sailing boats and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

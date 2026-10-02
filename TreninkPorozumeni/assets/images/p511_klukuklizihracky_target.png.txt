@@ -1,0 +1,11 @@
+Image: klukuklizihracky_target.png
+Generated: 2026-10-01
+Candidate: P13 batch B round s4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a boy of about seven with short brown hair, wearing a cap with a peak in bright blue with white horizontal stripes, a T-shirt in bright blue with white horizontal stripes, plain dark grey shorts without any pattern, white socks and brown shoes, on the left; and a young mother with long loose dark hair, wearing a headband in bright orange with white polka dots, a long-sleeved blouse in bright orange with white polka dots, a plain black ankle-length skirt without any pattern and black shoes, on the other side. Each person wears exactly this outfit. A big toy crate with an open lid stands on the floor in the middle; the boy and the mother kneel on both sides and each holds one toy in one hand and lowers it down into the crate, the hand with the toy reaching inside the crate opening, the toy held firmly by the fingers (clearly putting in, not taking out): the boy a small brown teddy bear, the mother a small red toy car; the crate is already half full of different toys (a yellow ball, a green toy train, plain wooden blocks; no toy is blue or orange); each of them has exactly two arms, the other hand rests on their knee, all four arms clearly visible. Both of them do it together, side by side. The big toy crate with an open lid is bright orange with white polka dots, exactly the same colour and pattern as the mother's clothes, so it clearly belongs to the mother. Nothing on the big toy crate with an open lid has the bright blue colour. Exactly one big toy crate with an open lid in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

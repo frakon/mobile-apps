@@ -1,0 +1,11 @@
+Image: tatavytahuje_gram.png
+Generated: 2026-10-02
+Candidate: P16 batch_01 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, every person shown whole from head to shoes: a father with short black hair and a short black beard, a blue shirt, jeans and brown shoes is pulling a nail out of a wooden board on a small table all alone, pulling the nail out with a hammer held in the hand: the hammer is held upside down, its forked claw at the back of the hammer head hooked under the head of a long nail that is already half out of the board, the hammer rocked backwards on the board like a lever, the hammer face pointing up and away from the nail; he is clearly pulling the nail out, not hammering it in. He is the only person in the picture, nobody else is there. There are no pliers anywhere in the picture. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

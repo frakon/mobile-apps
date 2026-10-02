@@ -1,0 +1,11 @@
+Image: klucikniha_gram.png
+Generated: 2026-10-01
+Candidate: P14 batch_01 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: three boys (green, red and blue T-shirts, blue shorts, plain white sneakers without laces) sitting on the floor line side by side; the three boys sit close together and all three bend their heads down and look down into one single big open book with plain blank pages, their eyes on the pages, nobody looks at the viewer; the middle boy holds the book with both hands, the boy on the left holds the left corner of the book with his right hand and rests his left hand on his knee, the boy on the right holds the right corner with his left hand and rests his right hand on his knee; legs not overlapping; exactly one book. All six arms and hands are fully visible. Every figure and object is complete with all its parts, correct anatomy, all hands and feet visible, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

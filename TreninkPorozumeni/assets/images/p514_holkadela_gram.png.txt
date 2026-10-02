@@ -1,0 +1,11 @@
+Image: holkadela_gram.png
+Generated: 2026-10-02
+Candidate: P16 R1 repair B round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, every person shown whole from head to shoes: a girl about seven years old with a long brown ponytail, a red dress and white sneakers and a boy about seven years old with curly red hair, an orange T-shirt, grey shorts and blue sneakers are making sand cakes on a small flat heap of damp sand together side by side, both clearly taking part in it, each lifting a small red toy bucket off a finished sand cake, having turned the bucket full of damp sand upside down to make big bucket-shaped sand cakes. Exactly these two, nobody else. There is no star-shaped sand mould anywhere in the picture. The finished sand cakes are solid, full and smooth on top (no hole or hollow on top), like a sand cake knocked out of a mould. Both arms of each child are visible. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

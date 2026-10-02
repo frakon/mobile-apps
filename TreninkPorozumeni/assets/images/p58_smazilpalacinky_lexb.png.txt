@@ -1,6 +1,6 @@
-Image: p58_smazilpalacinky_lexb.png
+Image: smazil_lexb_e.png
 Generated: 2026-10-01
-Candidate: P10 batch03 (type 5.8) round 1
+Candidate: P10 retestB (type 5.8) repair render
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch03 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a clearly adult young woman (about 30 years old) with long brown hair in a ponytail, wearing a long red dress and shoes stands at a small free-standing white kitchen stove with four legs and a cooking plate on top, frying one thick golden-brown breaded schnitzel (a breaded meat cutlet) in a frying pan held by its handle on the cooking plate, turning it with a fork; clearly a breaded schnitzel, no pancakes anywhere. She is unmistakably a woman: long ponytail and a long dress. The whole figure is visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Exactly one person in the picture. Calm friendly face, mouth closed. Correct realistic anatomy, only the described figures and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a tall grown-up woman about 30 years old with adult proportions and an adult face, long brown hair in a ponytail, wearing a long red dress and brown shoes, stands at a normal white kitchen cooker: a box with a clearly drawn front oven door with a handle and a row of knobs on its FRONT panel, four short feet, burners on top; a black frying pan rests flat ON the front burner; she holds the pan handle with one hand and a spatula in the other; seen slightly from above so the inside of the pan is clearly visible: two fried eggs with bright yellow round yolks and white egg whites; a cracked brown eggshell lies on the stove top. No pancakes, no batter, no meat, no plate, no other food anywhere. She is unmistakably an adult woman: long hair and a long dress. Calm friendly face, mouth closed. Exactly one figure, whole body visible from the top of the head down to both feet with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

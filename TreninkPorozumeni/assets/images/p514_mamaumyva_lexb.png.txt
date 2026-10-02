@@ -1,0 +1,11 @@
+Image: mamaumyva_lexb.png
+Generated: 2026-10-02
+Candidate: P16 batch b03 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, every person shown whole from head to shoes: a mother with shoulder-length blond hair, a yellow blouse, blue trousers and white shoes and a grandfather, bald with a big grey moustache, a brown vest over a white shirt, grey trousers and black shoes are washing one flat rectangular window with glass panes in a wooden frame standing upright on its own together side by side, both clearly taking part in it, each of them using big yellow sponges. Exactly these two, nobody else. There is no cloth rag anywhere in the picture. White soap foam and water drops are on the glass panes, clearly washing, and a bucket of soapy water stands on the floor next to it. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

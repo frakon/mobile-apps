@@ -1,0 +1,11 @@
+Image: piratipapousek_lexb.png
+Generated: 2026-10-01
+Candidate: P12 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four grandmothers in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one has a green parrot sitting on its shoulder; the second one has a green parrot sitting on its shoulder; the third one has a green parrot sitting on its shoulder; the fourth one has a green parrot sitting on its shoulder. All four are in the same state: each one has a green parrot sitting on its shoulder. All of them look exactly the same in every detail. Calm friendly faces, correct realistic anatomy, all limbs complete and fully visible, nothing hidden behind other things, all feet at one level. There are only grandmothers in the picture, no pirates anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: sklenicebrcko_lexb.png (installed as p510_sklenicebrcko_lexb.png)
+Generated: 2026-10-01
+Candidate: P12 r1c rule-1 repair round 1 (true render #2)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three identical small rectangular cardboard juice boxes (children's drink cartons) with a picture of an orange printed on the front, in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one has one red drinking straw stuck into the small hole on its top; the second one has one red drinking straw stuck into the small hole on its top; the third one has one red drinking straw stuck into the small hole on its top. All three are in the same state: each juice box has one red straw in it. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. There are only cardboard juice boxes, no glasses, no mugs and no cups anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

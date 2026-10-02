@@ -1,0 +1,11 @@
+Image: medvidcipolice_target.png
+Generated: 2026-10-01
+Candidate: P14 batch_01 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one long wooden shelf held by two wooden brackets on a short piece of wall, the shelf placed high, much higher than the heads of the bears on the floor; exactly four teddy bears in one row from left to right, with clear gaps between them, drawn the same way, two of them big and two of them clearly small, about half the size of the big ones. From left to right: the first is a small teddy bear that sits on the floor line far below the shelf, its head clearly lower than the shelf board, with a wide empty white gap between its head and the shelf; the second is a big teddy bear that sits on the long wooden shelf; the third is a big teddy bear that sits on the long wooden shelf; the fourth is a small teddy bear that sits on the floor line far below the shelf, its head clearly lower than the shelf board, with a wide empty white gap between its head and the shelf. Exactly two are big and exactly two are small. Both big ones: sits on the long wooden shelf. Both small ones: sits on the floor line far below the shelf, its head clearly lower than the shelf board, with a wide empty white gap between its head and the shelf. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Only one thin pale grey floor line under everything, pure white background, no other ground, no shadow, no scenery, no text, nothing else in the picture.

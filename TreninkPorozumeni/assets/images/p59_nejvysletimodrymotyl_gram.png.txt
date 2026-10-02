@@ -1,0 +1,11 @@
+Image: nejvysletimodrymotyl_gram.png
+Generated: 2026-10-01
+Candidate: P11 batch_07 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, three things in the air side by side with clear horizontal gaps, all the same size: a yellow butterfly flying on the LEFT; a pink butterfly flying on the MIDDLE; a blue butterfly flying on the RIGHT. The yellow one is HIGH near the top of the picture; the pink and the blue ones are both LOW near the bottom, exactly at the same height as each other; the height difference is large and obvious. The three colours are bold, solid and clearly different. Exactly three, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: salakratsiruzova_lexa.png
+Generated: 2026-10-01
+Candidate: P11 batch_05 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, two flat knitted scarves with equal fringes at BOTH ends, clearly bright candy PINK and lemon YELLOW, drawn small enough to fit: both scarves span from the left margin to about 75 percent of the picture width, nothing cut off at any edge, the two knitted scarves lie horizontally one above the other in parallel rows, their LEFT ends exactly aligned on one vertical line, a clear gap between the rows: the pink knitted scarf is in the TOP row, the yellow knitted scarf is in the BOTTOM row. Both are exactly the same length (equally long); all other features identical. The two colours are bold, solid and clearly different. Exactly two knitted scarves and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

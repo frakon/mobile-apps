@@ -1,0 +1,11 @@
+Image: p58_susilsivlasy_gram.png
+Generated: 2026-10-01
+Candidate: P10 new items (type 5.8) round 8
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a clearly adult woman about 35 years old with long loose brown hair reaching below her shoulders, wearing a long red dress stands holding a small electric hair dryer in one raised hand; the nozzle points straight down at the top of her own head from about a hand's width away; her hair is visibly lifted and fluttering in the warm air. No water, no droplets, no mist, no spray, no drawn airflow lines. The hair dryer's black cable hangs down to the ground and ends in a plug that is fully pushed into a small white power socket strip lying on the ground beside the feet; the plug is clearly inside the socket. She is unmistakably an adult woman: long hair and a long dress. This picture is the mirrored twin of a paired picture: exactly the same action, pose, objects, composition and style; the ONLY difference is that the figure is a woman, not a man. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, with a clear white margin below the feet, nothing cut off, drawn small enough to fit; only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

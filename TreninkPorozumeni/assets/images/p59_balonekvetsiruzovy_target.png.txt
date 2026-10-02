@@ -1,0 +1,11 @@
+Image: balonekvetsiruzovy_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, three round balloons, each tied to a straight thin string, all strings equally long and ending at one same bottom level, side by side in a row, a clear gap between them: the green balloon on the LEFT, the pink balloon in the MIDDLE, the blue balloon on the RIGHT. The pink balloon is clearly the biggest: about TWICE as big across as each of the other two; the green and the blue balloons are exactly equal to each other, both small. Apart from colour and size they look the same. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly three balloons and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

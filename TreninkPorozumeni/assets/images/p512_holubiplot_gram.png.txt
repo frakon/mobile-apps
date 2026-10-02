@@ -1,0 +1,11 @@
+Image: holubiplot_gram.png
+Generated: 2026-10-01
+Candidate: P14 batch_03 round 1 (true render 1 of max 5 for this picture)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one long low wooden fence; exactly four pigeons in one row from left to right, with clear gaps between them, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a white pigeon that stands low beside the fence on the floor line, its whole body clearly below the top rail, not touching the fence; the second is a grey pigeon that sits on top of the wooden fence; the third is a grey pigeon that sits on top of the wooden fence; the fourth is a white pigeon that stands low beside the fence on the floor line, its whole body clearly below the top rail, not touching the fence. Exactly two are white and exactly two are grey. Both white ones: stands low beside the fence on the floor line, its whole body clearly below the top rail, not touching the fence. Both grey ones: sits on top of the wooden fence. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Only one thin pale grey floor line under everything, pure white background, no other ground, no shadow, no scenery, no text, nothing else in the picture.

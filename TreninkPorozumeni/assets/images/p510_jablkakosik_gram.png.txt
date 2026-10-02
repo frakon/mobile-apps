@@ -1,0 +1,11 @@
+Image: jablkakosik_gram.png
+Generated: 2026-10-01
+Candidate: P12 strict_audit round 2 (true render #5)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, slightly from above: one empty wicker basket with a handle in the middle of the picture; exactly three identical red apples, each with a short stem and one small green leaf, all the same size and drawn the same way, all lying on the same floor line as the bottom of the basket and each one directly touching the outside wall of the basket: the first apple lies pressed against the left side of the basket; the second apple lies pressed against the right side of the basket; the third apple lies pressed against the front of the basket wall, low at its bottom corner on the right. No apple is on top of another apple, no apple is far from the basket. The basket is clearly empty, all three apples are outside the basket, right next to it. Every object is complete with all its parts, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

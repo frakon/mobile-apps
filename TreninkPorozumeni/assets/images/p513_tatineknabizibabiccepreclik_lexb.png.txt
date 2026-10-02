@@ -1,0 +1,11 @@
+Image: p513_tatineknabizibabiccepreclik_lexb.png
+Generated: 2026-10-02
+Candidate: P15 b02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a tall adult father, a grown-up man, with short dark hair, a short dark beard and a moustache, wearing a baseball cap whose whole crown AND peak are covered all over in bright green with white horizontal stripes (no plain area on the cap), a long-sleeved buttoned shirt with a collar in bright green with white horizontal stripes, plain black trousers and brown lace-up shoes; and an old grandmother with a wrinkled face, grey hair in a bun and round glasses, wearing a headscarf (a narrow band, NOT a full kerchief) in bright yellow with white polka dots folded into a wide band over the top of her head and knotted at the BACK of her head above the grey bun, her ears, cheeks, chin and neck uncovered and nothing under the chin, a long-sleeved buttoned cardigan in bright yellow with white polka dots, a plain black ankle-length skirt without any pattern and black lace-up shoes. Each person looks exactly like this. The grandmother kneels on the right facing left and measures a plain wooden board lying on the ground with a yellow tape measure held in both hands; the father stands on the left facing right turned three-quarters toward the viewer and waves his right hand high above his head, his left hand resting on his hip. Nobody gives, brings or does anything for the other one, and nobody moves toward the other one. There is no pretzel anywhere. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs of each person complete and visible, nothing hidden behind objects, feet on one ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. Clean pure white background without any paint speckles, dots or splashes.

@@ -1,0 +1,11 @@
+Image: holcickyskacou_target.png
+Generated: 2026-10-01
+Candidate: P14 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four children in one row from left to right, with clear gaps between them, all the same size and drawn in the same style. From left to right: the first is a little boy in a green T-shirt, blue shorts and white sneakers that stands still holding nothing; the second is a little boy in a green T-shirt, blue shorts and white sneakers that stands still holding nothing; the third is a little girl in a yellow dress and white sneakers that jumps over its own skipping rope, both feet in the air; the rope is one continuous unbroken curve from the handle in the left hand under the feet to the handle in the right hand; the fourth is a little girl in a yellow dress and white sneakers that jumps over its own skipping rope, both feet in the air; the rope is one continuous unbroken curve from the handle in the left hand under the feet to the handle in the right hand. Exactly two are girls and exactly two are boys. Both girls: jumps over its own skipping rope, both feet in the air; the rope is one continuous unbroken curve from the handle in the left hand under the feet to the handle in the right hand. Both boys: stands still holding nothing. Each skipping rope is one single smooth thin arc with a clearly visible wooden handle at each end, one handle held in each hand; the arc passes just under the lifted feet; the cord between the two handles is one plain smooth thin line with nothing on it, no beads, no knots, no extra handles along the cord; no extra loops, no coils lying on the ground, no loose ends. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

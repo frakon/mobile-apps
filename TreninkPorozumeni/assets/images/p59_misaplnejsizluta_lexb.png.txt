@@ -1,0 +1,11 @@
+Image: misaplnejsizluta_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_02 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, the two cooking pots stand side by side, their bottoms exactly on one same level, a clear gap between them, seen slightly from above so that the inside is visible: the red cooking pot is on the LEFT, the yellow cooking pot is on the RIGHT. The yellow cooking pot is heaped full to the top with cherries; the red cooking pot is with only a few cherries at its bottom; both have the same size and shape. The two colours are bold, solid and clearly different. Exactly two cooking pots and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no wide bowl anywhere in the picture.

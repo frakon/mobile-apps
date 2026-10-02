@@ -1,0 +1,11 @@
+Image: klukfoti_lexb.png
+Generated: 2026-10-02
+Candidate: P16 R1 repair B round 7
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, three-quarter view, every person shown whole from head to shoes: a boy about seven years old with short brown hair, a green T-shirt, blue shorts and white sneakers and a girl about seven years old with two short black pigtails, a yellow dress and pink sneakers are taking a photo of a small colourful rainbow arching in the air nearby together side by side, both clearly taking part in it, each holding up in one hand a small ordinary black smartphone, only palm-sized (no bigger than the child's hand), turned sideways, its flat back with a tiny lens visible to the viewer; clearly small phones, not tablets, pointed at the rainbow (clearly a smartphone, not a camera, no lens barrel). Exactly these two, nobody else. There is no black camera anywhere in the picture. Both stand side by side facing the same direction, towards the rainbow in front of them; nobody turns away from the rainbow. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

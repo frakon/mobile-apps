@@ -1,0 +1,11 @@
+Image: pesmaspinavejsitlapky_gram.png
+Generated: 2026-10-01
+Candidate: P11 r1_repair round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: two ADULT animals stand side by side, both facing left, all legs and paws fully visible, feet at one same level, a clear gap between them: on the LEFT a light golden medium-sized ADULT dog (a fully grown dog with a long muzzle, long legs and adult proportions, NOT a puppy); on the RIGHT a normal ADULT grey tabby cat (fully grown, NOT a kitten), the cat about HALF as tall as the dog, as in real life; the two animals have exactly these same sizes as each other in every picture. The cat's paws are covered with brown mud; the dog's paws have only one small mud spot. Both whole animals fit completely inside the picture with a wide white margin on every side. The cat is a big fully grown adult tomcat with adult proportions (small head relative to its long body, long legs, long tail), clearly NOT a kitten. Calm friendly faces, all limbs fully visible. Exactly two figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

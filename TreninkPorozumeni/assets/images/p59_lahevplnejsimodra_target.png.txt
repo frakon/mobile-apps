@@ -1,0 +1,11 @@
+Image: lahevplnejsimodra_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_07 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view seen slightly from above, two identical bottles of the same size and shape stand side by side, their bottoms exactly on one same level, a clear gap between them. The LEFT bottle is made entirely of bold RED transparent coloured glass (a red bottle); the RIGHT bottle is made entirely of bold BLUE transparent coloured glass (a blue bottle). Through the coloured glass the water inside is clearly visible as a darker, deeper shade of the bottle colour with a clear bright water surface line; the empty part above the water is a lighter shade. The red bottle has only a little water: a low water layer about one fifth of its height at the bottom. The blue bottle is filled with water almost up to the neck, nearly full. The difference in fullness is large and obvious; apart from colour and the amount of water they look the same. Exactly two bottles without caps, no labels, and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

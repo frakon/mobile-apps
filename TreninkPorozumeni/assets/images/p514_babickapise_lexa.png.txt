@@ -1,0 +1,11 @@
+Image: babickapise_lexa.png
+Generated: 2026-10-02
+Candidate: P16 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, every person shown whole from head to shoes: a grandmother with grey hair in a bun, round glasses, a purple cardigan, a long grey skirt and brown shoes is writing a greeting card at a small table all alone: a folded greeting card standing open on the table, its front decorated with a big red heart and small flowers, and she writes a few lines of handwriting inside the card,, using a fat green marker held in the hand. She is the only person in the picture, nobody else is there. There is no fountain pen with a shiny gold nib anywhere in the picture. It is clearly a greeting card. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

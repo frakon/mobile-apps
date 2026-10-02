@@ -1,0 +1,11 @@
+Image: p513_maminkaceseholcicce_lexa.png
+Generated: 2026-10-01
+Candidate: P15 pilot round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a young adult mother with long loose black hair down to her waist, wearing a long-sleeved buttoned blouse with a small turned-down collar in bright green with white polka dots, a plain black ankle-length skirt without any pattern and black shoes; and a small girl of about six with long loose brown hair down to her waist and exactly one small bow in bright orange with white polka dots clipped directly into the hair on top of her head (no headband), wearing a knee-length dress in bright orange with white polka dots, white socks and red shoes. Each person looks exactly like this. The girl stands on the left facing right and blows soap bubbles through a small plain round bubble wand held in her right hand, a few round soap bubbles floating in front of her; her left hand holds a small plain white bottle. The mother stands on the right facing left, both arms clearly visible: her hands rest together in front of her waist, and she watches the bubbles. Nobody combs anyone; there is no comb and no stool anywhere. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs of each person complete and visible, nothing hidden behind objects, feet on one ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. Clean pure white background without any paint speckles, dots or splashes.

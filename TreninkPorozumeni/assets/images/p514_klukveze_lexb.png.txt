@@ -1,0 +1,11 @@
+Image: klukveze_lexb.png
+Generated: 2026-10-02
+Candidate: P16 batch b03 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, every person shown whole from head to shoes: a boy about seven years old with short brown hair, a green T-shirt, blue shorts and white sneakers and a mother with shoulder-length blond hair, a yellow blouse, blue trousers and white shoes are moving a load of sand both walking toward the left side of the picture, side by side, looking forward to the left; one small four-wheeled wooden wagon full of sand rolls BEHIND them on the right side of the picture, and they pull it after them by its long wooden handle, which goes from their hands held behind their backs down back to the front of the wagon; the wagon follows them, it is not in front of them. Exactly these two, nobody else. There is no wheelbarrow anywhere in the picture. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

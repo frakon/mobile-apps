@@ -1,0 +1,11 @@
+Image: knihyotevrene_lexa.png
+Generated: 2026-10-01
+Candidate: P12 batch_02 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, view slightly from above, all four books lying flat on the same level: exactly four identical thick books with green covers in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one lies open in the middle, both open pages showing the same simple picture of a green tree; the second one lies flat and closed, its green cover on top and white page edges visible on the side; the third one lies open in the middle, both open pages showing the same simple picture of a green tree; the fourth one lies open in the middle, both open pages showing the same simple picture of a green tree. Exactly three of them: each of these lies open in the middle, both open pages showing the same simple picture of a green tree. The other one: each of these lies flat and closed, its green cover on top and white page edges visible on the side. The difference is large and obvious. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: holubiplot_lexb.png
+Generated: 2026-10-01
+Candidate: P14 verify-improve R1 repair round 3 (true render 4 of max 5 for this picture)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one long horizontal tree branch (only the branch); exactly four pigeons in one row from left to right, with clear gaps between them, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a grey pigeon that stands on the floor line below the branch, its whole body clearly under the branch, not touching it, wings folded; the second is a white pigeon that sits on top of the long tree branch; the third is a white pigeon that sits on top of the long tree branch; the fourth is a grey pigeon that stands on the floor line below the branch, its whole body clearly under the branch, not touching it, wings folded. Exactly two are white and exactly two are grey. Both white ones: sits on top of the long tree branch. Both grey ones: stands on the floor line below the branch, its whole body clearly under the branch, not touching it, wings folded. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. No fence anywhere in the picture. Exactly four pigeons in the whole picture: exactly TWO white pigeons sitting on the branch (not three) and exactly TWO grey pigeons standing on the floor line, no other birds; no pigeon flies. The long branch grows sideways from the trunk of one small leafy tree standing at the far left edge; no posts, no poles, no fence, no rails. Only one thin pale grey floor line under everything, pure white background, no other ground, no shadow, no scenery, no text, nothing else in the picture.

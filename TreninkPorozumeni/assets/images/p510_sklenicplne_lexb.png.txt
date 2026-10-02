@@ -1,0 +1,11 @@
+Image: sklenicplne_lexb.png (installed as p510_sklenicplne_lexb.png)
+Generated: 2026-10-01
+Candidate: P12 r1c rule-1 repair round 1 (true render #2)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view seen slightly from above: exactly three identical big silver metal cooking pots with two side handles and no lids, in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one is filled to the top with orange soup; the second one is filled to the top with orange soup; the third one is filled to the top with orange soup. All three are in the same state: each cooking pot is full of soup. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. There are only metal cooking pots, no glasses, no jars and no bottles anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

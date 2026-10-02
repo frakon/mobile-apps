@@ -1,0 +1,11 @@
+Image: modreautostojibliz_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one small simple yellow house with a brown roof and a door stands at the RIGHT side of the picture; two long toy city buss stand one above the other in two rows to the LEFT of the house, both facing RIGHT toward the house: the red bus in the TOP row, the blue bus in the BOTTOM row. The blue bus stands very CLOSE to the house, its front almost touching the house wall; the red bus stands FAR from the house near the LEFT side, a big empty gap of about half the picture between it and the house. Both buss have exactly the same size and shape, only the colour differs. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly one house and two buss and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. Clearly long buses with a row of many side windows, not cars. There is no car anywhere in the picture.

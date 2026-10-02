@@ -1,6 +1,6 @@
 Image: p58_hazelklacekpsovi_lexa.png
 Generated: 2026-10-01
-Candidate: P10 batch03 (type 5.8) round 1
+Candidate: P10 repair R6 lex (type 5.8) round 1
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch03 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a bald grandfather with a big grey moustache, wearing brown trousers, a vest and shoes crouches next to a medium-sized brown adult dog and gently strokes its head with one hand; no stick anywhere, not throwing. He is unmistakably an old man: bald head, big moustache and trousers. The whole figure is visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Calm friendly face, mouth closed. Correct realistic anatomy, only the described figures and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. One person and one dog.
+Children's book watercolor illustration, simple and clean, side view: a bald grandfather with a big grey moustache, wearing brown trousers and a vest pumps water with an old green cast-iron hand pump on a short post, water flowing from its spout into a metal bucket standing below. There is no dog, no stick and no animal anywhere. He is unmistakably an old man: bald head, moustache and trousers. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, with a clear white margin below the feet, nothing cut off, drawn small enough to fit; only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

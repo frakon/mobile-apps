@@ -1,0 +1,11 @@
+Image: holcickapodavalopatku_target.png
+Generated: 2026-10-01
+Candidate: P13 batch A round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a girl of about seven with two brown pigtails, each pigtail tied with a small bow in bright red with white polka dots, wearing a knee-length dress in bright red with white polka dots, white socks and brown shoes, on the left; and a boy of about seven with short brown hair, wearing a cap with a peak in bright blue with white horizontal stripes, a T-shirt in bright blue with white horizontal stripes, plain dark grey shorts without any pattern, white socks and brown shoes, on the other side. Each person wears exactly this outfit. The girl stands facing right with both arms stretched forward, holding a small toy sand spade horizontally out in both hands toward the boy: a straight handle with a T-grip at one end and a wide flat rounded scoop blade at the other end, the whole spade clearly visible and nothing covering it; the boy stands facing left a small step away with both hands open and raised toward it, not yet touching it, ready to receive it. The girl is clearly the giver who holds it, the boy is the receiver. The small toy spade is bright blue with white horizontal stripes, exactly the same colour and pattern as the boy's clothes, so it clearly belongs to the boy. Nothing on the small toy spade has the bright red colour. Exactly one small toy spade in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

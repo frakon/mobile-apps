@@ -1,0 +1,11 @@
+Image: tatinekmakratsivousy_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_03 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: two people stand side by side facing the viewer, feet on one same level, full figures, a clear gap between them: on the LEFT a father: a grown-up man with short brown hair and a SHORT neatly trimmed brown beard that covers only his chin and cheeks, checked shirt and jeans; on the RIGHT a grandfather: an old man with a SHORT neatly trimmed dark grey beard that covers only his chin and cheeks, exactly as short as the father's beard, and very long grey hair falling down past his shoulders to the middle of his back, brown vest and grey trousers. Both beards are equally short and end at the chin; only the HAIR differs: the grandfather's hair is about TWICE as long as the father's short hair. Calm friendly faces. Exactly two whole figures with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

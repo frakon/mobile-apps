@@ -1,0 +1,11 @@
+Image: koberecsirsiruzovy_lexa.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, seen from above: two flat woven rugs with a simple border pattern and short fringes on their top and bottom ends lie side by side, a clear gap between them; both rugs have exactly the SAME LENGTH from top to bottom, their top ends aligned on one horizontal line and their bottom ends aligned on one horizontal line: the green rug on the LEFT, the pink rug on the RIGHT. Both rugs are exactly the same width, identical apart from colour. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly two rugs and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

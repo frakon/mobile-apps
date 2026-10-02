@@ -1,6 +1,6 @@
 Image: p58_rozbalovaldarek_lexa.png
 Generated: 2026-10-01
-Candidate: P10 batch03 (type 5.8) round 1
+Candidate: P10 repair R6 lex (type 5.8) round 1
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch03 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a little boy with very short hair, wearing a blue T-shirt, long dark trousers and shoes walks carrying a closed, completely wrapped present box with a big bow in both hands, not opening it. He is unmistakably a boy: very short hair and trousers. The whole figure is visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Exactly one person in the picture. Calm friendly face, mouth closed. Correct realistic anatomy, only the described figures and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a little boy with very short hair, wearing a blue T-shirt and long dark trousers stands at a small table playing with a red horseshoe magnet that picks up a few metal paper clips. There is no present, no box, no wrapping paper and no ribbon anywhere. He is unmistakably a boy: very short hair and trousers. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, with a clear white margin below the feet, nothing cut off, drawn small enough to fit; only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

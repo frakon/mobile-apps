@@ -1,0 +1,11 @@
+Image: rukavicestul_target.png
+Generated: 2026-10-01
+Candidate: P14 batch_01 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view seen slightly from above: one long wooden table with exactly four straight legs, one at each corner, all four legs clearly visible standing on the floor line, no middle leg; exactly four woollen five-finger gloves in one row from left to right, with clear gaps between them, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a blue woollen five-finger glove that lies flat palm-down on the table top like a pancake, fully on the table, well inside its edges, nothing hanging over; the second is a red woollen five-finger glove that lies flat palm-down directly on the floor line, touching the floor, under the table between the front legs, not touching the legs; the third is a red woollen five-finger glove that lies flat palm-down directly on the floor line, touching the floor, under the table between the front legs, not touching the legs; the fourth is a blue woollen five-finger glove that lies flat palm-down on the table top like a pancake, fully on the table, well inside its edges, nothing hanging over. Exactly four gloves in total. Exactly two are red and exactly two are blue. Both red ones: lies flat palm-down directly on the floor line, touching the floor, under the table between the front legs, not touching the legs. Both blue ones: lies flat palm-down on the table top like a pancake, fully on the table, well inside its edges, nothing hanging over. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Only one thin pale grey floor line under everything, pure white background, no other ground, no shadow, no scenery, no text, nothing else in the picture.

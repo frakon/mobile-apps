@@ -1,0 +1,11 @@
+Image: babickanesekos_gram.png
+Generated: 2026-10-01
+Candidate: P13 batch B round s1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a grandmother with grey hair in a bun and round glasses, wearing a headscarf in bright green with white polka dots, a cardigan in bright green with white polka dots, a plain black ankle-length skirt without any pattern and black shoes, on the left; and a boy of about seven with short brown hair, wearing a cap with a peak in bright red with white horizontal stripes, a T-shirt in bright red with white horizontal stripes, plain dark grey shorts without any pattern, white socks and brown shoes, on the other side. Each person wears exactly this outfit. The grandmother and the boy walk side by side to the right, carrying one big basket with two handles between them; the grandmother's right hand firmly grips the left handle, her fingers wrapped around it, and the boy's left hand firmly grips the right handle, his fingers wrapped around it; the basket hangs between them and both clearly carry its weight; each of them has exactly two arms, their free arm hangs at their side. Both of them do it together, side by side. The big basket with two handles is bright green with white polka dots, exactly the same colour and pattern as the grandmother's clothes, so it clearly belongs to the grandmother. Nothing on the big basket with two handles has the bright red colour. Exactly one big basket with two handles in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

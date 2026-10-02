@@ -1,0 +1,11 @@
+Image: dortysvicka_gram.png
+Generated: 2026-10-01
+Candidate: P12 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four identical round chocolate cakes in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one has a plain top with no candle; the second one has a plain top with no candle; the third one has a plain top with no candle; the fourth one has a plain top with no candle. All four are in the same state: each one has a plain top with no candle. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

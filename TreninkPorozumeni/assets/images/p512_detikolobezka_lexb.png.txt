@@ -1,0 +1,11 @@
+Image: detikolobezka_lexb.png
+Generated: 2026-10-01
+Candidate: P14 batch_03 round 1 (true render 1 of max 5 for this picture)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, all facing left: exactly four children in one row from left to right, with clear gaps between them, all the same size and drawn in the same style. From left to right: the first is a little girl in a yellow dress and white sneakers that rides a small bicycle; the second is a little boy in a green T-shirt, blue shorts and white sneakers that walks on foot with empty hands; the third is a little boy in a green T-shirt, blue shorts and white sneakers that walks on foot with empty hands; the fourth is a little girl in a yellow dress and white sneakers that rides a small bicycle. Exactly two are girls and exactly two are boys. Both girls: rides a small bicycle. Both boys: walks on foot with empty hands. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

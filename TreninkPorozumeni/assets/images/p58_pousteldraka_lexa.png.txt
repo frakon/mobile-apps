@@ -1,6 +1,6 @@
 Image: p58_pousteldraka_lexa.png
 Generated: 2026-10-01
-Candidate: P10 batch11 (type 5.8) round 1
+Candidate: P10 repair R5 lexA (type 5.8) round 1
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch11 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a little boy with very short hair, wearing a blue T-shirt and long dark trousers walks carrying a colourful kite under the arm, the kite not flying. He is unmistakably a boy: very short hair and trousers. It must be clearly visible that the boy is NOT doing this: stands flying a colourful kite high in the air on a long string held in the hands. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Walking on a small patch of green grass, he carries the diamond-shaped red and yellow kite under one arm, its string wound up on a spool in the other hand; the kite is not flying; nothing in the sky. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a little boy with very short hair, wearing a blue T-shirt and long dark trousers stands blowing his nose into a white handkerchief held in both hands. There is no kite and no string anywhere. He is unmistakably a boy: very short hair and trousers. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, with a clear white margin below the feet, nothing cut off, drawn small enough to fit; only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

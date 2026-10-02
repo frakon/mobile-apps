@@ -1,0 +1,14 @@
+Image: tatinekboty_target.png
+Generated: 2026-10-01
+Candidate: P8 pb2 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a father with short dark hair and a short beard in a green checked shirt and jeans kneels in front of a girl about six years old with two blond braided pigtails in a red dress who sits on a small bench; he has just finished putting new red shoes on her: she now wears the red shoes with buckled straps on BOTH feet over white socks, he is still kneeling right at her feet with his hands resting on his own knees, both look happily at the shoes; on the floor beside him lies an empty open shoebox with its lid, and her old pair of worn blue slippers that she took off. It is clearly AFTER the activity: the work is completely finished and nobody is working on it any more. No tools, no toolbox, no other objects. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_tatinekboty_target.png from P8 pb2 folder r4 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 in final pair round r4 (5 x v1 + 5 x v2 sentence, fresh headless opus per trial, neutral names), strict rule (at most 1 dismissed loose reading per variant, drawing glitches logged); lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched; minor cosmetic faults logged in Temp/P8/pb2_result.md. Logs: Temp/P8/pb2/bt_results.jsonl, lex_results.jsonl.

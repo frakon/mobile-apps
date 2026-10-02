@@ -1,0 +1,11 @@
+Image: modreautostojibliz_lexa.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one small simple yellow house with a brown roof and a door stands at the RIGHT side of the picture; two small toy cars, each car only about one sixth of the picture width stand one above the other in two rows to the LEFT of the house, both facing RIGHT toward the house: the red car in the TOP row, the blue car in the BOTTOM row. Both small cars stand at exactly the same distance from the house, their front ends exactly aligned on one vertical line in the middle of the picture. Both cars have exactly the same size and shape, only the colour differs. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly one house and two cars and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

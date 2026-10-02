@@ -1,0 +1,11 @@
+Image: bonbonymiska_lexa.png
+Generated: 2026-10-01
+Candidate: P12 batch_02 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one deep plain blue bowl (a bowl with high round sides, not a plate) seen slightly from above, EMPTY inside; exactly three identical wrapped sweets in shiny red paper twisted at both ends, all the same size and drawn the same way. All three are in the same state: each one lies on the same level outside the bowl, clearly apart from it with a wide white gap, not touching the bowl. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

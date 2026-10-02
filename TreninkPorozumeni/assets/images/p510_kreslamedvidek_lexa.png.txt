@@ -1,0 +1,11 @@
+Image: kreslamedvidek_lexa.png
+Generated: 2026-10-01
+Candidate: P12 batch_02 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four identical blue armchairs, each with a high rounded backrest, two padded armrests and four short wooden legs clearly visible under the seat in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one has one teddy bear sitting on its seat; the second one has one teddy bear sitting on its seat; the third one has an empty seat; the fourth one has one teddy bear sitting on its seat. Exactly three of them: each of these has one teddy bear sitting on its seat. The other one: each of these has an empty seat. The difference is large and obvious. Every armchair is a complete piece of furniture with backrest, armrests, seat and four legs. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

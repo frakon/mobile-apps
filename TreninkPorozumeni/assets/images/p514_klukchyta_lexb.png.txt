@@ -1,0 +1,11 @@
+Image: klukchyta_lexb.png
+Generated: 2026-10-02
+Candidate: P16 R1 repair A round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, every person shown whole from head to shoes: a boy about seven years old with short brown hair, a green T-shirt, blue shorts and white sneakers and a grandfather, bald with a big grey moustache, a brown vest over a white shirt, grey trousers and black shoes stand side by side, both bareheaded, and together try to catch two butterflies fluttering above them: each of them holds a straw hat upside down in both raised hands like a net, the open side of the hat facing up towards the butterflies, scooping at them. Neither of them wears a hat on the head; the two straw hats are only held in the hands. Exactly these two, nobody else. There is no butterfly net anywhere in the picture. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: tatineknalevavodu_target.png
+Generated: 2026-10-01
+Candidate: P13 batch B round s4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a father of about thirty-five with short dark hair and a full short dark beard (not stubble), wearing a baseball cap with a peak in bright orange with white horizontal stripes, a long-sleeved shirt in bright orange with white horizontal stripes, plain black trousers and brown shoes, on the left; and a grandmother with grey hair in a bun and round glasses, wearing a headscarf in bright purple with white polka dots, a cardigan in bright purple with white polka dots, a plain black ankle-length skirt without any pattern and black shoes, on the other side. Each person wears exactly this outfit. A small round plain wooden table with three legs stands between them. On it stands one tall drinking glass, right at the table edge in front of the grandmother; nobody holds the glass. The father stands facing right and pours water from a plain clear glass jug with a handle and a spout (a jug, not a bottle), the jug clearly half full of water into it, one single water stream going from the spout tip straight down into the opening of the glass, no other water anywhere with both hands. The grandmother stands facing left on the other side of the table, holding out one open hand toward the glass, ready to take it and drink; the water is for her. The drinking glass (a painted opaque tumbler) is bright purple with white polka dots, exactly the same colour and pattern as the grandmother's clothes, so it clearly belongs to the grandmother. Nothing on the drinking glass (a painted opaque tumbler) has the bright orange colour. Exactly one drinking glass (a painted opaque tumbler) in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

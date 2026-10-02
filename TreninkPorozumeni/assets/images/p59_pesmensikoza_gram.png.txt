@@ -1,0 +1,11 @@
+Image: pesmensikoza_gram.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: two animals stand side by side, both facing LEFT, all four legs fully visible, feet at one same level, a clear gap between them: on the LEFT a white adult goat with small horns and a little beard; on the RIGHT a big adult dog of a big breed (like a shepherd dog). The dog is about TWICE as big as the goat (twice as tall and twice as long); the difference is large and obvious; the goat is a small breed adult goat. Both are fully grown ADULT animals, neither is a baby or a young animal; the size difference comes only from the kind of animal. Calm friendly faces. Two separate whole animals with correct realistic anatomy. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly two animals and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. The dog is a fully grown ADULT dog with adult proportions (long legs, long muzzle), NOT a puppy; the goat is a fully grown ADULT goat with long horns and a beard, NOT a kid. Both animals are drawn small enough to fit completely inside the picture with a wide white margin; the right animal's tail and back are fully visible.

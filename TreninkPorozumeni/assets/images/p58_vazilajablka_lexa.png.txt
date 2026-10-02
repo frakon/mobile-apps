@@ -1,6 +1,6 @@
 Image: p58_vazilajablka_lexa.png
 Generated: 2026-10-01
-Candidate: P10 batch08 (type 5.8) round 1
+Candidate: P10 repair R5 lexA (type 5.8) round 1
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch08 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: an adult woman about 35 years old with long brown hair in a ponytail, wearing a long red dress washes red apples in a bowl of water. She is unmistakably a woman: long hair and a long dress. It must be clearly visible that the woman is NOT doing this: weighs red apples on a kitchen scale. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. She stands at a small wooden table with four legs, standing on the same level as the feet, washing red apples with her hands in a big glass bowl of water on the table; no scale anywhere. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a clearly adult woman about 35 years old with long brown hair in a ponytail, wearing a long red dress stands at a small wooden table with four legs turning a screw into a wooden board with a screwdriver. There are no apples, no fruit and no scale anywhere. She is unmistakably an adult woman: long ponytail and a long dress. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, with a clear white margin below the feet, nothing cut off, drawn small enough to fit; only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

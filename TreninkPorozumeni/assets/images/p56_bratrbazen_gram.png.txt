@@ -1,0 +1,14 @@
+Image: bratrbazen_gram.png
+Generated: 2026-10-01
+Candidate: P8 pb1 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: an older boy about twelve years old in a grey hoodie and jeans stands next to a fully inflated round blue paddling pool with plump round sides, empty of water, the foot air pump put aside, his hands empty and relaxed at his sides. It is clearly AFTER the activity: the work is completely finished and nobody is working on it any more, the tools are put down. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_bratrbazen_gram.png from P8 pb1 folder r1 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 in final pair round 1 (5 x v1 + 5 x v2 sentence, fresh headless opus per trial, neutral names), no tense-ambiguity remarks beyond at most 1 dismissed loose reading per variant (drawing glitches logged in Temp/P8/pb1_result.md); lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched, real-world faults only minor (logged). Logs: Temp/P8/pb1/bt_results.jsonl, lex_results.jsonl.

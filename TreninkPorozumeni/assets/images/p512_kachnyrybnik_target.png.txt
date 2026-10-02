@@ -1,0 +1,11 @@
+Image: kachnyrybnik_target.png
+Generated: 2026-10-01
+Candidate: P14 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: one small round blue pond in the middle; exactly four ducks in one row from left to right, with clear gaps between them, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a brown duck that stands on the grass strip next to the pond, outside the water; the second is a white duck that swims in the small round blue pond; the third is a white duck that swims in the small round blue pond; the fourth is a brown duck that stands on the grass strip next to the pond, outside the water. Exactly two are white and exactly two are brown. Both white ones: swims in the small round blue pond. Both brown ones: stands on the grass strip next to the pond, outside the water. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Only one thin pale grey floor line under everything, pure white background, no other ground, no shadow, no scenery, no text, nothing else in the picture.

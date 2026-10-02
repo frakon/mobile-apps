@@ -1,6 +1,6 @@
 Image: p58_pozorovalmravence_lexa.png
 Generated: 2026-10-01
-Candidate: P10 batch12 (type 5.8) round 1
+Candidate: P10 repair R6 lex (type 5.8) round 1
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch12 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a little boy with very short hair, wearing a blue T-shirt and long dark trousers sits on a patch of grass, no magnifying glass, a small anthill nearby. He is unmistakably a boy: very short hair and trousers. It must be clearly visible that the boy is NOT doing this: kneels looking through a big magnifying glass at a few ants on a small anthill. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Everything is on one small patch of green grass at the same level as the feet. He sits on the grass with his legs crossed, hands resting on his knees, looking straight ahead; no ants, no anthill, no magnifying glass anywhere. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a little boy with very short hair, wearing a blue T-shirt and long dark trousers kneels playing with a green toy dinosaur, holding it up in both hands. There are no ants, no anthill, no insects, no magnifying glass and no grass anywhere. He is unmistakably a boy: very short hair and trousers. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, with a clear white margin below the feet, nothing cut off, drawn small enough to fit; only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

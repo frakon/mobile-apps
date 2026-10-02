@@ -1,6 +1,6 @@
 Image: malirzed_lexb.png
 Generated: 2026-10-01
-Candidate: P8 pilot round 2
+Candidate: P8 repair R1 round 1
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,7 +8,7 @@ Candidate: P8 pilot round 2
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a house painter in white overalls and a white paper cap stands at a short wooden picket fence whose pickets are nailed to two horizontal rails between two posts, painting it with a brush right now: half of the fence is white, the other half still bare wood. It is clearly the MIDDLE of the activity: the work is only half done and it is being done right now. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure and object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a house painter in white overalls and a white paper cap stands at a tall wooden wardrobe with two doors and four short legs, painting it with a brush right now: the left door is already painted white, the right door is still bare brown wood; a can of white paint stands on the ground beside him. It is clearly the MIDDLE of the activity: the work is only half done and it is being done right now. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
 
-Installed as p56_malirzed_lexb.png from P8 pilot folder r2 on 2026-10-01.
-3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2 sentence) with no ambiguity remark beyond cosmetic notes in the final pair round; lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched, no real-world faults. Logs: Temp/P8/pilot/bt_results.jsonl, lex_results.jsonl.
+Installed as p56_malirzed_lexb.png from Temp\P8\rep1\r1 on 2026-10-01 (P8 repair R1).
+3. Lex-only change (repair R1): lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched; target/gram unchanged. Log: Temp/P8/rep1/results.jsonl.

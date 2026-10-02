@@ -1,0 +1,11 @@
+Image: kockaskacevyspes_gram.png
+Generated: 2026-10-01
+Candidate: P11 batch_03 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: two figures each jumping straight up in the air in place, side by side, a clear gap between them, both the same body size: on the LEFT a brown dog; on the RIGHT a grey cat. The dog jumped much higher: the dog's feet are about as high as the cat's head; the cat makes only a small hop straight up: the cat is clearly in the air jumping upward with its body upright and all four paws off the floor just a little above the floor line, not running and not walking. Both animals are clearly jumping straight up, not running forward. Exactly two, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

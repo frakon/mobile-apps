@@ -1,0 +1,11 @@
+Image: rybakratsimodra_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_05 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: two frogs sitting on their bent hind legs, one above the other, a clear gap between them, both facing right, natural compact frog anatomy with four legs: the blue frog in the TOP row, the yellow frog in the BOTTOM row. The yellow frog is about TWICE as big as the blue frog. The two colours are bold, solid and clearly different. Exactly two frogs and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no fish anywhere in the picture.

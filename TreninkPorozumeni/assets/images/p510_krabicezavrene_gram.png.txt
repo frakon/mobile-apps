@@ -1,0 +1,11 @@
+Image: krabicezavrene_gram.png
+Generated: 2026-10-01
+Candidate: P12 pilot round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four identical brown cardboard boxes, each with a separate lift-off square lid in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one is open: its separate square lid lies flat on the floor line right next to it and the empty inside of the box is visible; the second one is open: its separate square lid lies flat on the floor line right next to it and the empty inside of the box is visible; the third one is open: its separate square lid lies flat on the floor line right next to it and the empty inside of the box is visible; the fourth one is open: its separate square lid lies flat on the floor line right next to it and the empty inside of the box is visible. All four are in the same state: each one is open: its separate square lid lies flat on the floor line right next to it and the empty inside of the box is visible. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

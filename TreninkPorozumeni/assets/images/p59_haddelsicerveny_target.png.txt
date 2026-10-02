@@ -1,0 +1,14 @@
+Image: haddelsicerveny_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 4 = round 3 render + Pillow post-processing (no new render)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, seen from above, three real-looking snakes lie stretched out straight horizontally one above the other in parallel rows, a clear gap between the rows, all heads on the RIGHT and all tails on the LEFT, all tail tips exactly aligned on one vertical line near the left margin: the green snake in the TOP row, the red snake in the MIDDLE row, the yellow snake in the BOTTOM row. Each is a real snake: a slender pointed tail that tapers to a thin tip, a scaly patterned body, a snake head with eyes and a small forked tongue; clearly snakes, not worms. All three have the same body thickness. The green snake is SHORT: it reaches only from the left margin to the CENTRE of the picture. The yellow snake is SHORT too, exactly as long as the green snake: it also reaches only from the left margin to the CENTRE of the picture. The red snake is LONG: it reaches from the left margin almost to the right margin, so it is TWICE as long as each short snake. The right half of the picture is empty except for the front half of the red snake. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly three snakes and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Post-processing: scripts/p11_b09_snakefix.py rescaled the two short snakes horizontally (anchored at the tail) to exactly half the long snake's length; then whole picture scaled to 460x460 and centred on a white 512x512 canvas (margin).
+4. Background cleanup: near-white low-saturation pixels (min channel >=215, spread <=18) set to pure white (removes faint paper edge).

@@ -1,0 +1,11 @@
+Image: holcickaukazujezvonecek_target.png
+Generated: 2026-10-01
+Candidate: P13 batch B round s3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a girl of about seven with two brown pigtails, each pigtail tied with a small bow in bright red with white polka dots, wearing a knee-length dress in bright red with white polka dots, white socks and brown shoes, on the left; and a grandfather with white hair and a white moustache, without glasses, wearing a flat cap in bright orange with white horizontal stripes, a sweater in bright orange with white horizontal stripes, plain black trousers and brown shoes, on the other side. Each person wears exactly this outfit. The girl stands facing right and holds a hand bell (as big as a cup, shaped like a classic school bell: a metal bell body opening downward, with one short wooden handle sticking straight up from its top; nothing below the bell) up beside her own face in her left hand and points at the bell with the index finger of her right hand, showing it to the grandfather; she does not hand it over, the bell stays right next to her own face, far from the grandfather. The grandfather stands facing left a few steps away, bends slightly forward and looks closely at the bell, both arms resting at his sides. The girl is the one showing, the grandfather only looks. The whole metal body of the hand bell is painted bright red with big clearly visible white polka dots all over it, exactly the same colour and pattern as the girl's clothes, so it clearly belongs to the girl. Nothing on the small hand bell (painted) has the bright orange colour. Exactly one small hand bell (painted) in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

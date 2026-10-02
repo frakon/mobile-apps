@@ -1,0 +1,11 @@
+Image: p513_kluknesededeckovikrabici_target.png
+Generated: 2026-10-02
+Candidate: P15 b06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small boy of about seven with small child proportions and short brown hair, wearing a baseball cap whose whole crown AND peak are covered all over in bright yellow with white horizontal stripes (no plain area on the cap), a short-sleeved round-neck T-shirt in bright yellow with white horizontal stripes, plain dark grey shorts without any pattern, white socks and brown lace-up sneakers; and an old grandfather with a wrinkled face, white hair and a full white beard, without glasses, wearing a flat cap whose whole top and short peak are covered all over in bright blue with white horizontal stripes (no plain area on the cap), a long-sleeved round-neck sweater in bright blue with white horizontal stripes, plain black trousers and brown lace-up shoes. Each person looks exactly like this. The boy runs from the left toward the right, toward the grandfather, carrying one plain brown cardboard box with a closed lid (the same size in every picture) in both hands in front of his chest, one foot lifted behind in a running step. The grandfather stands still on the right facing left, waiting, both hands open in front of his chest toward the boy, not touching the box. The boy is the active one who brings the box to the grandfather; the grandfather stays still and waits. Exactly one box in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs of each person complete and visible, nothing hidden behind objects, feet on one ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. Clean pure white background without any paint speckles, dots or splashes.

@@ -1,0 +1,11 @@
+Image: dedecekmensibabicka_gram.png
+Generated: 2026-10-01
+Candidate: P11 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: two people stand side by side facing the viewer, feet on one same level, full figures from head to feet, a clear gap between them: on the LEFT a grandmother: an old woman with grey hair in a bun, glasses-free, purple dress; on the RIGHT a grandfather: an old man with white hair and a white moustache, brown vest and grey trousers. The grandfather is clearly much taller: the grandmother reaches only up to the grandfather's chest. Calm friendly faces. Exactly two people, all limbs fully visible, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

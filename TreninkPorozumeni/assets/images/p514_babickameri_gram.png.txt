@@ -1,0 +1,11 @@
+Image: babickameri_gram.png
+Generated: 2026-10-02
+Candidate: P16 R1 repair B round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, every person shown whole from head to shoes: a grandmother with grey hair in a bun, round glasses, a purple cardigan, a long grey skirt and brown shoes and a mother with shoulder-length blond hair, a yellow blouse, blue trousers and white shoes are measuring a long piece of flowered cloth lying on a normal rectangular table with four legs together side by side, both clearly taking part in it, each holding a short clear plastic school ruler, about 30 cm long with printed numbers, flat against the cloth. Exactly these two, nobody else. There is no yellow tape measure anywhere in the picture. Exactly two short clear plastic rulers, each lying fully flat on a different part of the cloth, not touching each other; no long ruler, no measuring stick. The cloth lies fully on the table top. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

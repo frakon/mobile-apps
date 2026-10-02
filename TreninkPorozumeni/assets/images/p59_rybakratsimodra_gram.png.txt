@@ -1,0 +1,11 @@
+Image: rybakratsimodra_gram.png
+Generated: 2026-10-01
+Candidate: P11 strict_audit round g4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, two fish of the same simple shape lie horizontally one above the other in parallel rows, both facing LEFT, their heads (LEFT ends) exactly aligned on one vertical line, a clear gap between the rows: the blue fish is in the TOP row, the yellow fish is in the BOTTOM row. The blue fish is a LONG slender fish, about TWICE as long as the yellow fish: the yellow fish is a SHORT fish whose tail ends exactly below the MIDDLE of the blue fish, so the right half of the bottom row is empty white. Both fish have the same body height; apart from colour and length they look the same. The two colours are bold, solid and clearly different. Everything fully inside the picture with a wide white margin. Exactly two fish and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

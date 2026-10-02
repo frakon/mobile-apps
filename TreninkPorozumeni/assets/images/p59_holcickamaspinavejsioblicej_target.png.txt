@@ -1,0 +1,11 @@
+Image: holcickamaspinavejsioblicej_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, shown from the waist up, large: two children stand side by side facing the viewer, a clear gap between them: on the LEFT a boy of about seven with short brown hair in a green T-shirt; on the RIGHT a girl of about seven with two brown pigtails in a yellow T-shirt. Both hold up both open hands beside their shoulders, palms toward the viewer, all fingers visible. The girl's face is smeared all over with big brown chocolate smudges on her cheeks, nose, chin and forehead; the boy's face has only one tiny chocolate spot on his chin. Both children's hands are completely clean. Calm friendly smiling faces, both children the same size. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly two children and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

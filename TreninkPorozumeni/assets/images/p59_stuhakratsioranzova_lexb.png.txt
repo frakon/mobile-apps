@@ -1,0 +1,11 @@
+Image: stuhakratsioranzova_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, the two pencils lie horizontally one above the other in parallel rows, their LEFT ends exactly aligned on one vertical line, a clear gap between the rows: the orange pencil is in the TOP row, the pink pencil is in the BOTTOM row. The pink pencil is about TWICE as long as the orange pencil; the orange one ends at the middle of the pink one; the difference is large and obvious; apart from colour and length they look the same. The two colours are bold, solid and clearly different. Exactly two pencils and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no ribbon anywhere in the picture.

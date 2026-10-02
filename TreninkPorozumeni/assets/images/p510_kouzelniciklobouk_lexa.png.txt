@@ -1,0 +1,11 @@
+Image: kouzelniciklobouk_lexa.png
+Generated: 2026-10-01
+Candidate: P12 batch_03 round 6 (true render #3)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three identical magicians in dark blue capes in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one wears a tall black top hat; the second one has no hat and nothing on the head, bare head with short dark hair; the third one wears a tall black top hat. Exactly two of them: each of these wears a tall black top hat. The other one: each of these has no hat and nothing on the head, bare head with short dark hair. The difference is large and obvious. All of them look exactly the same in every detail. Calm friendly faces, correct realistic anatomy, all limbs complete and fully visible, nothing hidden behind other things, all feet at one level. Every magician wears the same clearly magical outfit: a long dark blue cape covered with small yellow stars and moons over a dark blue buttoned jacket, black trousers and black shoes, and holds up a black magic wand with a white tip and a few little sparkles at its tip; short black hair. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

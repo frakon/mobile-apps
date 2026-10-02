@@ -1,0 +1,11 @@
+Image: kluknesevetsikrabici_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_03 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: two people side by side, a clear gap between them, each carries in both arms their own cardboard box: on the LEFT a boy of about seven with short brown hair, green T-shirt and blue shorts; on the RIGHT a girl of about seven with two brown pigtails in a yellow dress. The boy's cardboard box is about TWICE as big as the girl's cardboard box; the difference is large and obvious. The two cardboard boxes are drawn the same except for the compared property. Calm friendly faces, all limbs fully visible, hands clearly holding. Exactly two people and two cardboard boxes, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

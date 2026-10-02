@@ -1,0 +1,11 @@
+Image: nejvysleticervenydrak_gram.png
+Generated: 2026-10-01
+Candidate: P11 batch_03 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, three things in the air side by side with clear horizontal gaps, all the same size: a green kite with a long ribbon tail, its string hanging straight down on the LEFT; a yellow kite with a long ribbon tail, its string hanging straight down on the MIDDLE; a red kite with a long ribbon tail, its string hanging straight down on the RIGHT. Each kite is a diamond with its ribbon tail and its string both attached to the BOTTOM tip of the diamond, the string continuing straight down from the bottom tip. The yellow one is HIGH near the top of the picture; the green and the red ones are both LOW near the bottom, exactly at the same height as each other; the height difference is large and obvious. The three colours are bold, solid and clearly different. Exactly three, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: modralampavisiniz_lexa.png
+Generated: 2026-10-01
+Candidate: P11 batch_04 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one straight horizontal ceiling line along the top edge; each hangs from it on its own straight cord; on the LEFT a green lamp with a lampshade; on the RIGHT a blue lamp with a lampshade; a clear horizontal gap between them, both the same size and shape. Both cords are equally long and both lamps hang at exactly the same height. Exactly two, nothing else, white background, no text.

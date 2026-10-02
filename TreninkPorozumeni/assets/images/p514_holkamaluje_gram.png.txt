@@ -1,0 +1,11 @@
+Image: holkamaluje_gram.png
+Generated: 2026-10-01
+Candidate: P16 pilot round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, every person shown whole from head to shoes: a girl about seven years old with a long brown ponytail, a red dress and white sneakers and a grandmother with grey hair in a bun, round glasses, a purple cardigan, a long grey skirt and brown shoes are painting a picture on a sheet of paper lying on a small table together side by side, both clearly taking part in it, each of them using wax crayons. Exactly these two, nobody else. There is no paintbrush anywhere in the picture. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

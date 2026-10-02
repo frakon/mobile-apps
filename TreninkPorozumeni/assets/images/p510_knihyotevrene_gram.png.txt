@@ -1,0 +1,11 @@
+Image: knihyotevrene_gram.png
+Generated: 2026-10-01
+Candidate: P12 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, view slightly from above and from the side: exactly four identical thick books with green covers in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one lies closed, its green hard cover on top, the white page edges visible along the side and its straight spine on the left side, clearly a closed book; the second one lies closed, its green hard cover on top, the white page edges visible along the side and its straight spine on the left side, clearly a closed book; the third one lies closed, its green hard cover on top, the white page edges visible along the side and its straight spine on the left side, clearly a closed book; the fourth one lies closed, its green hard cover on top, the white page edges visible along the side and its straight spine on the left side, clearly a closed book. All four are in the same state: each one lies closed, its green hard cover on top, the white page edges visible along the side and its straight spine on the left side, clearly a closed book. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

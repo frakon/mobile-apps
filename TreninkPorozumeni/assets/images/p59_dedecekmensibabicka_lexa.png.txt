@@ -1,0 +1,13 @@
+Image: dedecekmensibabicka_lexa.png
+Generated: 2026-10-01
+Candidate: P11 batch_01 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: two people stand side by side facing the viewer, feet on one same level, full figures from head to feet, a clear gap between them: on the LEFT a grandmother: an old woman with grey hair tied in a small flat bun at the BACK of the head (nothing sticking up on top), glasses-free, purple dress; on the RIGHT a grandfather: an old man with white hair and a white moustache, brown vest and grey trousers. Both are exactly the same height: the tops of their heads lie on one same horizontal line and their feet on one same line; neither is taller, their eyes are at the same level. Calm friendly faces. Exactly two people, all limbs fully visible, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+
+3. Post-processing (b01 r8): the r5 render had the grandfather 23 px taller (442 vs 419 px); the grandfather figure was cropped and downscaled (Pillow LANCZOS, factor 419/442) keeping his feet line and centre, so both figures are equally tall. Script: scripts/p11_b01_eqheight.py. No new render.

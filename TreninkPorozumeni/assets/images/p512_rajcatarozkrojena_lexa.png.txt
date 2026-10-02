@@ -1,0 +1,11 @@
+Image: rajcatarozkrojena_lexa.png
+Generated: 2026-10-01
+Candidate: P14 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four tomatoes in one row from left to right, with clear gaps between them, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a orange tomato that is whole and round; the second is a yellow tomato that is cut in half, the two halves lying side by side; the third is a yellow tomato that is cut in half, the two halves lying side by side; the fourth is a orange tomato that is whole and round. Exactly two are yellow and exactly two are orange. Both yellow ones: is cut in half, the two halves lying side by side. Both orange ones: is whole and round. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

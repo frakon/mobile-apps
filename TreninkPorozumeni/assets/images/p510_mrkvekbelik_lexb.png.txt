@@ -1,0 +1,11 @@
+Image: mrkvekbelik_lexb.png
+Generated: 2026-10-01
+Candidate: P12 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one blue bucket seen slightly from above; exactly four potatoes, all the same size and drawn the same way. All four are in the same state: each one lies in the bucket, visible above the rim. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. There are only potatoes in the picture, no orange carrots anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

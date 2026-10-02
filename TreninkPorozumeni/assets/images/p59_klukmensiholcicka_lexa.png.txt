@@ -1,0 +1,11 @@
+Image: klukmensiholcicka_lexa.png
+Generated: 2026-10-01
+Candidate: P11 batch_06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: two people stand side by side facing the viewer, feet on one same level, full figures from head to feet, a clear gap between them: on the LEFT a boy of about seven with short brown hair, green T-shirt and blue shorts; on the RIGHT a girl of about seven with two brown pigtails in a yellow dress. Both are exactly the same height, the tops of their heads exactly level. Calm friendly faces. Exactly two people, all limbs fully visible, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

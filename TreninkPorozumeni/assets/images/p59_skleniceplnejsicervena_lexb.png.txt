@@ -1,0 +1,11 @@
+Image: skleniceplnejsicervena_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_04 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, the two mugs with handles stand side by side, their bottoms exactly on one same level, a clear gap between them, seen slightly from above so that the inside is visible: the green mug with a handle is on the LEFT, the red mug with a handle is on the RIGHT. The red mug with a handle is filled with water up to the brim; the green mug with a handle is with only a little water at the very bottom; both have the same size and shape. The two colours are bold, solid and clearly different. Exactly two mugs with handles and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no drinking glass of clear see-through glass with a wide bold coloured band painted around it, the water level clearly visible through the glass anywhere in the picture.

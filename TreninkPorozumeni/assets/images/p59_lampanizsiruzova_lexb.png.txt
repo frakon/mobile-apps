@@ -1,0 +1,11 @@
+Image: lampanizsiruzova_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_04 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, the two vases stand side by side in a row, their bottoms exactly on one same level, a clear gap between them: the green vase is on the LEFT, the pink vase is on the RIGHT. The green vase is about TWICE as tall as the pink vase; the pink one reaches only to the middle of the green one; the difference is large and obvious; apart from colour and height they look the same. The two colours are bold, solid and clearly different. Exactly two vases and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no table lamp with a lampshade anywhere in the picture.

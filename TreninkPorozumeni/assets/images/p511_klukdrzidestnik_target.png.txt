@@ -1,0 +1,11 @@
+Image: klukdrzidestnik_target.png
+Generated: 2026-10-01
+Candidate: P13 batch B round s6
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a boy of about seven with short brown hair, wearing a cap with a peak in bright orange with white horizontal stripes, a T-shirt in bright orange with white horizontal stripes, plain dark grey shorts without any pattern, white socks and brown shoes, on the left; and a grandmother with grey hair in a bun and round glasses, wearing a simple headscarf tied in a knot under her chin, covering her hair (not a hood), in bright red with white polka dots, a cardigan in bright red with white polka dots, a plain black ankle-length skirt without any pattern and black shoes, on the other side. Each person wears exactly this outfit. The boy stands facing right close beside the grandmother and stretches both arms up and toward the grandmother and holds an open umbrella by its handle so that the middle of its canopy is directly above the GRANDMOTHER's head, not above the boy; the boy himself stands half outside the canopy. The grandmother stands facing left right under the middle of the umbrella, both arms at her sides. The boy holds the umbrella over the grandmother. The open umbrella is bright red with white polka dots, exactly the same colour and pattern as the grandmother's clothes, so it clearly belongs to the grandmother. Nothing on the open umbrella has the bright orange colour. Exactly one open umbrella in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

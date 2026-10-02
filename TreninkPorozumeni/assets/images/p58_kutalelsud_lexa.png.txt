@@ -1,6 +1,6 @@
 Image: p58_kutalelsud_lexa.png
 Generated: 2026-10-01
-Candidate: P10 batch10 (type 5.8) round 1
+Candidate: P10 repair R6 lex (type 5.8) round 3
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch10 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a young man with very short dark hair and a short beard, wearing a checked shirt and trousers sits on top of a standing wooden barrel. He is unmistakably a man: short hair, beard and trousers. It must be clearly visible that the man is NOT doing this: rolls a wooden barrel on its side by pushing it. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. The wooden barrel stands upright, perfectly still, on a small patch of flat ground; he sits on its flat top lid, hands on his knees, feet hanging down beside the barrel. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a young man with very short dark hair and a short beard, wearing a checked shirt and trousers plays table tennis: stands at the short end of a green ping-pong table with a net, the table top at his hip height, the WHOLE table with its four straight legs fully inside the picture (drawn small enough to fit, nothing cut off), hitting a small white ball with a red paddle. There is no barrel anywhere. He is unmistakably a man: short hair, beard and trousers. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible from the top of the head down to both feet (shoes clearly drawn) with correct realistic anatomy, with a clear white margin below the feet, nothing cut off, drawn small enough to fit; only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

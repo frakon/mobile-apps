@@ -1,4 +1,4 @@
-Image: p58_zpivaladomikrofonu_lexa.png
+Image: zpivaladomikrofonu_lexa_a.png
 Generated: 2026-10-01
 Candidate: P10 retestB (type 5.8) repair render
 
@@ -8,4 +8,4 @@ Candidate: P10 retestB (type 5.8) repair render
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails, each pigtail tied with exactly one small pink ribbon bow (only two bows in total, one per pigtail, no other bows in the hair), wearing a pink dress stands next to a microphone on a complete microphone stand with a round heavy base standing on the same level as her feet, drinking water from a glass. She is unmistakably a girl: long pigtails and a pink dress. It must be clearly visible that the girl is NOT doing this: stands singing with an open mouth into a microphone on a stand. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a little girl with long hair in two pigtails tied with ribbons, wearing a pink dress stands at a small easel painting a picture with a brush. There is no microphone, no stand, no drink, mouth closed anywhere in the picture. She is unmistakably a girl: long pigtails and a pink dress. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Calm friendly face. Exactly one figure with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.

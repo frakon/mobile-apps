@@ -1,0 +1,11 @@
+Image: p511_klukdrzizrcatko_lexa.png (batch C render r3/klukdrzizrcatko_lexa.png)
+Generated: 2026-10-01
+Candidate: P13 batch C round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a boy of about seven with short brown hair, wearing a stiff baseball cap with a rounded peak, the whole cap including the peak in bright green with white horizontal stripes, a short-sleeved round-neck T-shirt without collar in bright green with white horizontal stripes, plain dark grey shorts without any pattern, white ankle socks and brown shoes, on the left; and a girl of about seven with brown hair in exactly two low pigtails, one above each ear, each pigtail tied with one small bow in bright blue with white polka dots, wearing a short-sleeved round-neck knee-length dress without collar and without buttons in bright blue with white polka dots, white ankle socks and brown shoes, on the other side. Each person wears exactly this outfit. The boy stands facing right and holds up a plain white plate at the girl's face height with both hands; the girl stands facing left, arms at her sides. There is no mirror anywhere. The object is held or placed clearly apart from the clothes of both people with white space around it, never in front of the top garment of anyone, so it can never blend into the clothes. Each person looks exactly the same as described, with no extra clothing items, no collars, no buttons and no extra hair accessories. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

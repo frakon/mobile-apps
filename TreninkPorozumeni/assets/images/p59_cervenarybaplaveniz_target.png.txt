@@ -1,0 +1,11 @@
+Image: cervenarybaplaveniz_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: the whole picture is plain light blue water with a thin wavy surface line at the top; on the LEFT a red fish swimming to the left; on the RIGHT a blue fish swimming to the left; a clear horizontal gap between them, both the same size and shape. The blue fish swims HIGH just under the water surface, the red fish swims LOW near the bottom of the picture; the height difference is large and obvious. Exactly two, no plants, no stones, nothing else, no text.

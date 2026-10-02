@@ -1,0 +1,11 @@
+Image: kolospinavejsizelene_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, two complete kick scooters (a low flat standing deck, two small wheels, a tall T-shaped handlebar, no seat, no pedals) stand side by side, both facing LEFT, a clear gap between them: the blue kick scooter on the LEFT, the green kick scooter on the RIGHT. The green kick scooter is covered all over with many big brown mud splashes on the frame and wheels; the blue kick scooter has only one small brown mud spot. Both kick scooters have exactly the same size and shape. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly two kick scooters and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no bicycle anywhere in the picture.

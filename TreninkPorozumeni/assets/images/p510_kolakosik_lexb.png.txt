@@ -1,0 +1,11 @@
+Image: kolakosik_lexb.png (installed as p510_kolakosik_lexb.png)
+Generated: 2026-10-01
+Candidate: P12 r1b lexb5 repair round 2 (true render #2)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: exactly four identical grey-brown bunnies with long upright ears in one row from left to right, with clear gaps between them, all the same size and drawn the same way, each bunny standing upright on its hind legs. From left to right: the first bunny holds one wicker basket in its front paws; the second bunny holds one wicker basket in its front paws; the third bunny holds one wicker basket in its front paws; the fourth bunny holds one wicker basket in its front paws. All four are in the same state: each bunny holds its own empty wicker basket with a handle. Four clearly separate whole animals with correct realistic anatomy, all paws visible, all feet at one level, nothing overlapping, nothing cropped at the edge. There are only four bunnies with baskets in the picture, no bicycles, no scooters, no wheels, no carts, no vehicles anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

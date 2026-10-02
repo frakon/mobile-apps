@@ -1,0 +1,11 @@
+Image: tatinekstojipodslunecnikem_target.png
+Generated: 2026-10-01
+Candidate: P13 batch B round s6
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a young father with short dark hair and a short dark beard, wearing a baseball cap with a peak in bright red with white horizontal stripes running all around the whole crown (not only on the front), a long-sleeved shirt in bright red with white horizontal stripes, plain black trousers and brown shoes, on the left; and a young mother with long loose dark hair, wearing a headband in bright blue with white polka dots, a long-sleeved blouse in bright blue with white polka dots, a plain black ankle-length skirt without any pattern and black shoes, on the other side. Each person wears exactly this outfit. A big beach parasol on a pole with a heavy round base stands between them; the father and the mother both stand under its open canopy, facing each other, arms at their sides. Nobody holds the parasol. The big beach parasol is bright blue with white polka dots, exactly the same colour and pattern as the mother's clothes, so it clearly belongs to the mother. Nothing on the big beach parasol has the bright red colour. Exactly one big beach parasol in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

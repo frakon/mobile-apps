@@ -1,0 +1,11 @@
+Image: autakolo_lexb.png
+Generated: 2026-10-01
+Candidate: P14 batch_01 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, all facing left: exactly four cars in one row from left to right, with clear gaps between them, drawn the same way, two of them big and two of them clearly small, about half the size of the big ones. From left to right: the first is a small car that has a bare roof; the second is a small car that has a bare roof; the third is a big car that carries a pair of skis lying flat on a roof rack, the two skis parallel side by side along the length of the car, not crossed, no bicycle; the fourth is a big car that carries a pair of skis lying flat on a roof rack, the two skis parallel side by side along the length of the car, not crossed, no bicycle. Exactly two are big and exactly two are small. Both big ones: carries a pair of skis lying flat on a roof rack, the two skis parallel side by side along the length of the car, not crossed, no bicycle. Both small ones: has a bare roof. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

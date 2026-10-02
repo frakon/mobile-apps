@@ -1,0 +1,11 @@
+Image: modryptacekletivys_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_02 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: two things in the air side by side, a clear horizontal gap between them, both the same size: on the LEFT a green butterfly flying; on the RIGHT a blue butterfly flying. The blue one is HIGH near the top of the picture, the green one is LOW near the bottom of the picture; the height difference is large and obvious. Exactly two, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no small bird anywhere in the picture.

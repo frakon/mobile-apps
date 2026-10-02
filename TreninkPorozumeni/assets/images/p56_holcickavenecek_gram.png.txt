@@ -1,0 +1,14 @@
+Image: holcickavenecek_gram.png
+Generated: 2026-10-01
+Candidate: P8 pb3 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a girl about six years old with two blond pigtails in a red dress sits cross-legged weaving a short chain of white daisies right now, holding the short chain in both hands in front of her: the chain is only a short straight piece of six daisies, far from a closed circle, and a small pile of loose picked daisies still lies on the floor beside her.  It is clearly the MIDDLE of the activity: the work is only half done and it is being done right now. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_holcickavenecek_gram.png from P8 pb3 folder r5 on 2026-10-01.
+3. Blind test: target vs gram forced choice 10/10 in final pair round 5 (5 x v1 + 5 x v2 sentence, fresh headless opus per trial, neutral names), no unresolved meaning remarks (strict rule) in that round; lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched; minor drawing faults if any listed in Temp/P8/pb3_result.md. Logs: Temp/P8/pb3/bt_results.jsonl, lex_results.jsonl.

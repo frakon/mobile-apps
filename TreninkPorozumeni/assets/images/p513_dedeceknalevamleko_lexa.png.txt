@@ -1,0 +1,11 @@
+Image: p513_dedeceknalevamleko_lexa.png
+Generated: 2026-10-01
+Candidate: P15 pilot round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: an old grandfather with white hair and a full white beard, without glasses, wearing a flat cap in bright blue with white horizontal stripes, a sweater in bright blue with white horizontal stripes, plain black trousers and brown shoes; and a small girl of about six with two long brown braids, each braid tied with a small bow in bright red with white polka dots, wearing a knee-length dress in bright red with white polka dots, white socks and red shoes. Each person looks exactly like this. The grandfather stands on the left facing right and plays a plain brown violin exactly the way a real violinist holds it: the violin body rests on his LEFT shoulder, his chin on it, the neck of the violin pointing forward away from him and held by his left hand, and his right hand draws a straight bow across the strings; the girl stands on the right facing left with both braids hanging down behind her shoulders, both her arms clearly visible with her hands clasped in front of her, and listens. Nobody pours anything; there is no jug, no glass and no milk anywhere. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs of each person complete and visible, nothing hidden behind objects, feet on one ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. Clean pure white background without any paint speckles, dots or splashes.

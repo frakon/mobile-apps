@@ -1,0 +1,11 @@
+Image: zabavetsihneda_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_07 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, two lizards of the same kind stand on their four legs side by side in a row, their feet exactly on one same level, a clear gap between them: a brown lizard on the LEFT, a green lizard on the RIGHT. The brown lizard is about TWICE as big as the green lizard; the difference is large and obvious; apart from colour and size they look the same. Each is a real lizard with correct lizard anatomy: a slim body, a narrow pointed lizard head, exactly four short legs, each with five small toes, and a long thin tapering tail; they do not look like frogs. Both lizards face right; each has exactly ONE tail that stretches straight out behind it to the left. Both lizards are completely inside the picture with a white margin around them, nothing cut off at the edges. Exactly two lizards and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no frog anywhere in the picture.

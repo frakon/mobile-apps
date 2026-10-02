@@ -1,0 +1,11 @@
+Image: nejdelsisuknemodra_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_04 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, three ordinary short-sleeved T-shirts hang side by side from one straight horizontal clothesline by their shoulders, each held by two clothes pegs, their shoulders on the same line: the BLUE T-shirt on the LEFT, the GREEN T-shirt in the MIDDLE, the YELLOW T-shirt on the RIGHT. The blue T-shirt is a long one that hangs down about TWICE as far as the other two; the green and the yellow T-shirts are exactly equal, shorter ones. Each is a normal T-shirt with a round neck and two short sleeves, shaped like a real shirt. The three colours are bold, solid and clearly different. Exactly three T-shirts on the line and nothing else, no skirts, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

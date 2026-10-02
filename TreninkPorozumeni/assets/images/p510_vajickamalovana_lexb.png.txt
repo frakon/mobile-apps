@@ -1,0 +1,11 @@
+Image: vajickamalovana_lexb.png
+Generated: 2026-10-01
+Candidate: P12 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four round plates in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one is painted with bright colourful stripes and dots; the second one is painted with bright colourful stripes and dots; the third one is painted with bright colourful stripes and dots; the fourth one is painted with bright colourful stripes and dots. All four are in the same state: each one is painted with bright colourful stripes and dots. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. There are only round plates in the picture, no eggs anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

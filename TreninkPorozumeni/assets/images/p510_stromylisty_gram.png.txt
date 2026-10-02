@@ -1,0 +1,11 @@
+Image: stromylisty_gram.png
+Generated: 2026-10-01
+Candidate: P12 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three identical small trees in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one has bare brown branches with no leaves at all; the second one has bare brown branches with no leaves at all; the third one has bare brown branches with no leaves at all. All three are in the same state: each one has bare brown branches with no leaves at all. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

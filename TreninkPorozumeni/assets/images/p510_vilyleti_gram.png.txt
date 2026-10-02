@@ -1,0 +1,11 @@
+Image: vilyleti_gram.png (installed as p510_vilyleti_gram.png)
+Generated: 2026-10-01
+Candidate: P12 r1_repair round 1 (true render #2)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four identical small fairies with wings and pink dresses in one row from left to right, with clear gaps between them, all the same size and drawn the same way. Across the bottom of the picture there is one thin flat strip of green grass. From left to right: the first fairy stands on the grass strip with both feet flat on the grass, her wings folded, her body upright; the second fairy stands on the grass strip with both feet flat on the grass, her wings folded, her body upright; the third fairy stands on the grass strip with both feet flat on the grass, her wings folded, her body upright; the fourth fairy stands on the grass strip with both feet flat on the grass, her wings folded, her body upright. All four are in the same state: each one stands on the grass with both feet touching it, none of them flies. All four fairies have the same face, the same short blonde hair and the same small pink flower in the hair. Calm friendly faces, correct realistic anatomy, every figure complete with all its body parts. Only the four fairies and the thin strip of grass, white empty space everywhere else, no shadow, no other scenery, no text, nothing else in the picture.

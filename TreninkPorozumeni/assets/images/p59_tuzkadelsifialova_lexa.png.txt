@@ -1,0 +1,11 @@
+Image: tuzkadelsifialova_lexa.png
+Generated: 2026-10-01
+Candidate: P11 batch_06 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, the three pencils lie horizontally one above the other in parallel rows, their LEFT ends exactly aligned on one vertical line, a clear gap between the rows: the purple pencil is TOP; the yellow pencil is MIDDLE; the green pencil is BOTTOM. All three are exactly the same length (equally long). Each is a real wooden pencil: a pink eraser in a silver ferrule on the LEFT end and a sharpened wooden cone with a graphite tip on the RIGHT end; all three tips end on one vertical line. are bold, solid and clearly different. Exactly three pencils and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

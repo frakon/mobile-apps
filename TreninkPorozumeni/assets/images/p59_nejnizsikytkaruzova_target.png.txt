@@ -1,0 +1,11 @@
+Image: nejnizsikytkaruzova_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, three flowers stand upright side by side in a row, the bottom ends of their stems exactly on one same level, a clear gap between them: the blue flower on the LEFT, the yellow flower in the MIDDLE, the pink flower on the RIGHT. Each flower is a single blossom of the same size on a straight green stem. The blue and the yellow flowers are TALL, exactly equally tall, with long stems. The pink flower is SHORT: it has a very short stem, so its blossom is down at the height of the MIDDLE of the tall stems; the pink flower is only HALF as tall as each tall flower. The difference is large and obvious; apart from colour and height they look the same. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly three flowers and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

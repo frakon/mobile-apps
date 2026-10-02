@@ -1,0 +1,11 @@
+Image: detikoberec_target.png
+Generated: 2026-10-01
+Candidate: P14 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one big round red rug lying flat on the floor, drawn as a wide flat ellipse seen slightly from above, only just wide enough for the two seated boys, a small rug in the centre of the picture; exactly four children in one row from left to right, with clear gaps between them, all the same size and drawn in the same style. From left to right: the first is a little girl in a yellow dress and white sneakers that stands on both feet next to the rug; the second is a little boy in a green T-shirt, blue shorts and white sneakers that sits cross-legged on the big round rug; the third is a little boy in a green T-shirt, blue shorts and white sneakers that sits cross-legged on the big round rug; the fourth is a little girl in a yellow dress and white sneakers that stands on both feet next to the rug. Exactly two are boys and exactly two are girls. Both boys: sits cross-legged on the big round rug. Both girls: stands on both feet next to the rug. The two girls stand clearly outside the rug far away at the left and right edges of the picture, with a wide empty white gap as wide as one child between each girl and the rug edge. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

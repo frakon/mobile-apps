@@ -1,6 +1,6 @@
 Image: klukhrad_gram.png
 Generated: 2026-10-01
-Candidate: P8 pilot round 2
+Candidate: P8 repair R1 round 2
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,7 +8,7 @@ Candidate: P8 pilot round 2
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: a boy about seven years old with short brown hair in a blue T-shirt and dark shorts stands upright next to a smooth round untouched heap of yellow sand, holding an empty yellow bucket and a small red spade down at his sides, the spade not touching the sand; there is no castle at all yet, the heap is perfectly smooth with no marks. It is clearly the moment BEFORE starting: nothing has been done yet, everything lies ready and untouched. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure and object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a boy about seven years old with short brown hair in a blue T-shirt and dark shorts, barefoot with no shoes, stands upright a small step away from a smooth round untouched heap of yellow sand, his hands empty and relaxed at his sides, looking at the sand; an empty yellow bucket stands upright and a small red spade lies flat on the ground between him and the heap, both clearly apart from the sand; there is no castle at all yet, the heap is perfectly smooth with no marks and no holes. It is clearly the moment BEFORE starting: nothing has been done yet, everything lies ready and untouched, nobody is working. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
 
-Installed as p56_klukhrad_gram.png from P8 pilot folder r2 on 2026-10-01.
-3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2 sentence) with no ambiguity remark beyond cosmetic notes in the final pair round; lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched, no real-world faults. Logs: Temp/P8/pilot/bt_results.jsonl, lex_results.jsonl.
+Installed as p56_klukhrad_gram.png from Temp\P8\rep1\r2 on 2026-10-01 (P8 repair R1).
+3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2, fresh headless opus per trial, neutral names), strict rule (max 1 dismissed loose reading per 5 trials, none unresolved); lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched. Logs: Temp/P8/rep1/results.jsonl.

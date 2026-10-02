@@ -1,0 +1,11 @@
+Image: sovyoci_lexb.png
+Generated: 2026-10-01
+Candidate: P14 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four owls in one row from left to right, with clear gaps between them, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a white owl that sits with its eyes closed, sleeping; the second is a brown owl that sits with its eyes closed and holds a small grey toy mouse in its beak; the third is a brown owl that sits with its eyes closed and holds a small grey toy mouse in its beak; the fourth is a white owl that sits with its eyes closed, sleeping. Exactly two are brown and exactly two are white. Both brown ones: sits with its eyes closed and holds a small grey toy mouse in its beak. Both white ones: sits with its eyes closed, sleeping. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

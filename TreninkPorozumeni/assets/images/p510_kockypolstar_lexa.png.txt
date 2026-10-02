@@ -1,0 +1,11 @@
+Image: kockypolstar_lexa.png
+Generated: 2026-10-01
+Candidate: P12 batch_02 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three identical grey cats in one row from left to right, with clear gaps between them, all the same size and drawn the same way; all three cushions are identical round red cushions. From left to right: the first one lies curled on its own red cushion; the second one lies curled on its own red cushion; the third one sits upright on the floor level with a wide white gap to the right of its own EMPTY red cushion, not touching the cushion at all. Exactly two of them: each of these lies curled on its own red cushion. The other one: each of these sits next to its own red cushion, not on it. The difference is large and obvious. All of them look exactly the same in every detail. Calm friendly faces, correct realistic anatomy, all limbs complete and fully visible, nothing hidden behind other things, all feet at one level. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

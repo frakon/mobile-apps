@@ -1,0 +1,11 @@
+Image: dedeckovesedi_lexa.png
+Generated: 2026-10-01
+Candidate: P12 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four identical grandfathers with white beards in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one sits on his own wooden stool with three legs; the second one sits on his own wooden stool with three legs; the third one sits on his own wooden stool with three legs; the fourth one stands upright next to his own wooden stool. Exactly three of them: each of these sits on his own wooden stool with three legs. The other one: each of these stands upright next to his own wooden stool. The difference is large and obvious. All of them look exactly the same in every detail. Calm friendly faces, correct realistic anatomy, all limbs complete and fully visible, nothing hidden behind other things, all feet at one level. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

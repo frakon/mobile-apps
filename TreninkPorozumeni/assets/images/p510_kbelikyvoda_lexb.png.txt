@@ -1,0 +1,11 @@
+Image: kbelikyvoda_lexb.png
+Generated: 2026-10-01
+Candidate: P12 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four open bowls seen slightly from above in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one is full of blue water; the second one is full of blue water; the third one is full of blue water; the fourth one is full of blue water. All four are in the same state: each one is full of blue water. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. There are only open bowls seen slightly from above, no red buckets anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

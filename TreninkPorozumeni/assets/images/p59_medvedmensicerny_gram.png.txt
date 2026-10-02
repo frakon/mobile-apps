@@ -1,0 +1,11 @@
+Image: medvedmensicerny_gram.png
+Generated: 2026-10-01
+Candidate: P11 batch_08 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, the two bears stand side by side in a row, all facing left, all legs and paws fully visible, feet at one same level, a clear gap between them: the black bear is on the LEFT, the white bear is on the RIGHT. The black bear is about TWICE as big as the white bear; the difference is large and obvious; apart from colour and size they look the same. The two colours are bold, solid and clearly different. Both are fully grown ADULT animals of the same age: the smaller one is NOT a baby, kitten, cub, foal or calf, it has adult proportions (small head, long legs), just a smaller adult. Exactly two bears and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

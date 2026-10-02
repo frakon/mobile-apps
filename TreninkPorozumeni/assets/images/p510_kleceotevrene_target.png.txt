@@ -1,0 +1,11 @@
+Image: kleceotevrene_target.png
+Generated: 2026-10-01
+Candidate: P12 strict_audit round 1 (true render #4)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three identical empty grey metal bird cages in one row from left to right, with clear gaps between them, all the same size and drawn the same way: classic round dome-topped birdcages with a small ring on top, thin vertical wire bars all around, a flat grey base tray. Each cage has one small square wire door in the middle of its front, made of the same thin bars as the cage; in every cage this little door is swung wide open outward to the right on its hinge, sticking out from the cage front, and through the small square door opening you can see the inside of the cage and the bars of the back wall. All the other front bars are complete around the small opening. All three cages are in the same state: the small door is open. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

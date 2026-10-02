@@ -1,0 +1,11 @@
+Image: p513_maminkadavadedeckovihrusku_target.png
+Generated: 2026-10-02
+Candidate: P15 b01 round 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a mum of about thirty-five with a mature grown-up woman's face (clearly a mother, not a girl or teenager), much taller than a child, wearing a short plain white kitchen apron tied at her waist over her skirt, with long loose black hair down to her waist, wearing a long-sleeved buttoned blouse with a small turned-down collar in bright blue with white polka dots, a plain black ankle-length skirt without any pattern and flat black slip-on ballet shoes without laces; and an old grandfather with a wrinkled face, white hair and a full white beard, without glasses, wearing a flat cap whose whole top and short peak are covered all over in bright orange with white horizontal stripes (no plain area on the cap), a long-sleeved round-neck sweater in bright orange with white horizontal stripes, plain black trousers and brown lace-up shoes. Each person looks exactly like this. The mother stands on the left facing right and firmly holds one big green pear (the same size in every picture) in her right hand and holds it out toward the grandfather at arm's length; her left arm hangs relaxed at her side with the hand clearly visible. The grandfather stands on the right facing left, with both hands open in front of his chest, palms up toward the pear, not touching it yet, ready to receive it. The mother is the active giver, the grandfather the receiver. Exactly one pear in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs of each person complete and visible, nothing hidden behind objects, feet on one ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. Clean pure white background without any paint speckles, dots or splashes.

@@ -1,0 +1,11 @@
+Image: saladelsioranzova_target.png
+Generated: 2026-10-01
+Candidate: P11 strict_audit round g3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, the two knitted winter scarves lie flat, straight and horizontal one above the other in parallel rows, their LEFT ends exactly aligned on one vertical line, a clear gap between the rows: the blue scarf is in the TOP row, the orange scarf is in the BOTTOM row. Both scarves have exactly the SAME width (thickness of the band), the same knit pattern and fringe tassels at both ends; both lie perfectly straight, not twisted, not wavy. Exact layout: the orange scarf is LONG and stretches from the left margin almost to the right margin; the blue scarf is exactly HALF as long and stretches from the left margin only to the VERTICAL CENTRE LINE of the picture, so the right half of its row is empty white. Only the length differs. The two colours are bold, solid and clearly different. Everything fully inside the picture with a wide white margin. Exactly two knitted scarves and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

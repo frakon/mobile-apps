@@ -1,0 +1,11 @@
+Image: hrnkylzicka_lexb.png (installed as p510_hrnkylzicka_lexb.png)
+Generated: 2026-10-01
+Candidate: P12 r1b lexb5 repair round 1 (true render #3)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view seen slightly from above: exactly four identical wide shallow white soup bowls in one row from left to right, with clear gaps between them, all the same size and drawn the same way, each bowl low and much wider than it is tall, round with no handle at all, empty. From left to right: the first bowl has one small silver teaspoon lying in it, its handle resting on the rim; the second bowl has one small silver teaspoon lying in it, its handle resting on the rim; the third bowl has one small silver teaspoon lying in it, its handle resting on the rim; the fourth bowl has one small silver teaspoon lying in it, its handle resting on the rim. All four are in the same state: each wide bowl has one teaspoon in it. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. There are only four wide shallow bowls in the picture, no cups, no mugs, no handles on the bowls, no saucers anywhere. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

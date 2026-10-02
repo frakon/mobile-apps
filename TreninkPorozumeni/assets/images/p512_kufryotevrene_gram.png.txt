@@ -1,0 +1,11 @@
+Image: p512_kufryotevrene_gram.png
+Generated: 2026-10-01
+Candidate: P14 strict_audit round 2 (true render 2 of max 5 for this picture)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four suitcases in one row from left to right, with clear gaps between them, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a blue suitcase that lies open with its lid up, folded clothes visible inside; the second is a red suitcase that lies closed; the third is a blue suitcase that lies open with its lid up, folded clothes visible inside; the fourth is a red suitcase that lies closed. Exactly two are red and exactly two are blue. Both red ones: lies closed. Both blue ones: lies open with its lid up, folded clothes visible inside. All four are exactly the same model: a classic rectangular hard-shell suitcase with straight sides, rounded corners, one handle and two metal latches on the front edge of the lid, the same size; every closed suitcase shows its handle on top and both latches; on every open suitcase the lid with its handle and latches stands up at the back. Only the colour and open/closed differ. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

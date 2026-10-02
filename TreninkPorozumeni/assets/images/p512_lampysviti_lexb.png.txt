@@ -1,0 +1,11 @@
+Image: lampysviti_lexb.png
+Generated: 2026-10-01
+Candidate: P14 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four table lamps in one row from left to right, with clear gaps between them, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a yellow table lamp whose shade and stand are both painted in this colour that has fallen over and lies on its side, switched off and dark; the second is a yellow table lamp whose shade and stand are both painted in this colour that has fallen over and lies on its side, switched off and dark; the third is a blue table lamp whose shade and stand are both painted in this colour that is switched off, completely dark, no light at all; the fourth is a blue table lamp whose shade and stand are both painted in this colour that is switched off, completely dark, no light at all. Exactly two are yellow and exactly two are blue. Both yellow ones: has fallen over and lies on its side, switched off and dark. Both blue ones: is switched off, completely dark, no light at all. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

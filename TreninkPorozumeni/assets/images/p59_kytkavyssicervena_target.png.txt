@@ -1,0 +1,11 @@
+Image: kytkavyssicervena_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_07 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, two simple flowers of the same kind, each with one round blossom on a straight green stem with two leaves, stand upright side by side, the bottom ends of both stems exactly on one same horizontal line, a clear gap between them: the red flower is on the LEFT, the blue flower is on the RIGHT. The red flower is TWICE as tall as the blue flower: the blue flower is short, its blossom is only at the height of the MIDDLE of the red flower's stem; the red blossom is high up near the top of the picture. The height difference is large and obvious; apart from colour and height they look the same (same blossom size). The two colours are bold, solid and clearly different. Exactly two flowers and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

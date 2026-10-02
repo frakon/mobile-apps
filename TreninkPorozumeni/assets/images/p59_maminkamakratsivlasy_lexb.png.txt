@@ -1,0 +1,11 @@
+Image: maminkamakratsivlasy_lexb.png
+Generated: 2026-10-01
+Candidate: P11 r1_repair round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: two people stand side by side facing the viewer, feet on one same level, full figures, a clear gap between them: on the LEFT a girl of about seven with two brown pigtails in a yellow dress; on the RIGHT a mother: a grown-up woman with brown hair in a blue dress. The girl has very long dress, about TWICE as long as the short dress of the mother; the difference is large and obvious. Both have exactly equally long hair. Calm friendly faces. Exactly two whole figures with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. The mother is clearly a grown-up woman about 35 years old with an adult face and adult body, much taller than the little girl (the girl reaches only to her chest); she is NOT a teenager. Both have the SAME shoulder-length brown hair ending exactly at the shoulders. Both wear shoes.

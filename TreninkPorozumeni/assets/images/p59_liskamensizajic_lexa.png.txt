@@ -1,0 +1,11 @@
+Image: liskamensizajic_lexa.png
+Generated: 2026-10-01
+Candidate: P11 batch_08 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: two animals stand side by side, both facing left, all legs fully visible, feet at one same level, a clear gap between them: on the LEFT a red fox; on the RIGHT a brown hare with long ears. Both animals are exactly the same size (same height and same body length). Calm friendly faces. Both are fully grown ADULT animals of the same age with adult proportions. Both stand on all four legs; the fox's bushy tail grows from its rump at the back and hangs behind it; the fox's back and the hare's back at exactly the same height, the hare's ears are short-ish laid back so the hare is not taller. Exactly two separate whole animals with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

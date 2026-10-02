@@ -1,0 +1,11 @@
+Image: klukmaspinavejsiruce_gram.png
+Generated: 2026-10-01
+Candidate: P11 batch_06 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: two people stand side by side facing the viewer, each shows both open hands to the viewer, full figures, a clear gap between them: on the LEFT a boy of about seven with short brown hair, green T-shirt and blue shorts; on the RIGHT a girl of about seven with two brown pigtails in a yellow dress. The girl's hands are covered all over with brown mud; the boy's hands have only one small mud spot. Calm friendly faces, all limbs fully visible. Exactly two figures, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

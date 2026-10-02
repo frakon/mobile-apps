@@ -1,0 +1,11 @@
+Image: kockypsispi_gram.png
+Generated: 2026-10-01
+Candidate: P14 batch_02 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly four animals in one row from left to right, with clear gaps between them, all the same size and drawn in the same style. From left to right: the first is a grey cat that sits upright awake with its eyes wide open; the second is a brown dog that sleeps curled up with its eyes closed; the third is a brown dog that sleeps curled up with its eyes closed; the fourth is a grey cat that sits upright awake with its eyes wide open. Exactly two are cats and exactly two are dogs. Both cats: sits upright awake with its eyes wide open. Both dogs: sleeps curled up with its eyes closed. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

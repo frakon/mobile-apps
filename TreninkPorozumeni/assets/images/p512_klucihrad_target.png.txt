@@ -1,0 +1,11 @@
+Image: klucihrad_target.png
+Generated: 2026-10-01
+Candidate: P14 batch_03 round 1 (true render 1 of max 5 for this picture)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: three boys (green, red and blue T-shirts, blue shorts) kneeling on a small strip of yellow sand; each boy builds his own small sand castle in front of him with his hands; exactly three small castles, with gaps between the boys. Every figure and object is complete with all its parts, correct anatomy, all hands and feet visible, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: krabiceotevrene_lexb.png
+Generated: 2026-10-01
+Candidate: P14 batch_03 round 1 (true render 1 of max 5 for this picture)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view seen slightly from above: exactly four painted cardboard boxes in one row from left to right, with clear gaps between them, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a blue cardboard box painted that is closed with its lid on top; the second is a red cardboard box painted that is closed with its lid on top and has a big white ribbon bow tied on the lid; the third is a blue cardboard box painted that is closed with its lid on top; the fourth is a red cardboard box painted that is closed with its lid on top and has a big white ribbon bow tied on the lid. Exactly two are red and exactly two are blue. Both red ones: is closed with its lid on top and has a big white ribbon bow tied on the lid. Both blue ones: is closed with its lid on top. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

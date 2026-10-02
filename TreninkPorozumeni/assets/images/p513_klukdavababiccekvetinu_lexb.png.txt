@@ -1,0 +1,11 @@
+Image: p513_klukdavababiccekvetinu_lexb.png
+Generated: 2026-10-01
+Candidate: P15 pilot round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small boy of about seven with short brown hair, wearing a baseball cap whose whole crown AND peak are covered all over in bright blue with white horizontal stripes (no plain area on the cap), a T-shirt in bright blue with white horizontal stripes, plain dark grey shorts without any pattern, white socks and brown shoes; and an old grandmother with grey hair in a bun and round glasses, wearing a headscarf in bright red with white polka dots folded into a wide band over the top of her head and knotted at the BACK of her head above the grey bun, her ears, cheeks, chin and neck uncovered and nothing under the chin, a cardigan in bright red with white polka dots, a plain black ankle-length skirt without any pattern and black shoes. Each person looks exactly like this. The grandmother stands on the left facing right and holds a big open book in both hands, turned toward herself so that the viewer sees only the plain green outside cover and none of the pages, reading aloud from it; the cover has no letters and no picture; the boy stands on the right turned three-quarters toward the viewer close to her, both of his arms clearly visible with his hands clasped in front of his tummy, listening and looking at the page. Nobody gives anything. There is no flower anywhere. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs of each person complete and visible, nothing hidden behind objects, feet on one ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. Clean pure white background without any paint speckles, dots or splashes.

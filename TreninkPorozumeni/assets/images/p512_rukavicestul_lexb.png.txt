@@ -1,0 +1,11 @@
+Image: rukavicestul_lexb.png
+Generated: 2026-10-01
+Candidate: P14 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: one wooden chair with four legs; exactly four woollen gloves in one row from left to right, with clear gaps between them, all the same size and shape and drawn the same way, differing only in colour. From left to right: the first is a blue woollen glove that lies on the seat of the chair; the second is a red woollen glove that lies on the floor line under the chair; the third is a red woollen glove that lies on the floor line under the chair; the fourth is a blue woollen glove that lies on the seat of the chair. Exactly two are red and exactly two are blue. Both red ones: lies on the floor line under the chair. Both blue ones: lies on the seat of the chair. The difference is large and obvious. Every figure and object is complete with all its parts, correct anatomy, nothing cropped at the edge, nothing overlapping. No table anywhere in the picture. Only one thin pale grey floor line under everything, pure white background, no other ground, no shadow, no scenery, no text, nothing else in the picture.

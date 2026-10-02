@@ -1,0 +1,11 @@
+Image: tatinekhazikruh_lexb.png
+Generated: 2026-10-01
+Candidate: P13 strict audit A round s3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a young father with short dark hair and a short dark beard, wearing a baseball cap with a peak in bright red with white horizontal stripes, a long-sleeved shirt in bright red with white horizontal stripes, plain black trousers and brown shoes, on the left; and a girl of about seven with two brown pigtails, each pigtail tied with a small bow in bright purple with white polka dots, wearing a knee-length dress in bright purple with white polka dots, white socks and brown shoes, on the other side. Each person wears exactly this outfit. The girl stands facing left, her right arm swung forward and up in a clear follow-through right after tossing something, hand open with fingers pointing toward the father, one foot stepped forward; a plain brown teddy bear flies upward through the air in a small arc halfway between them at head height. The father stands facing right with both forearms raised in front of his chest and his palms turned toward the teddy bear, ready to catch it, not touching it yet. The girl is the one who threw it. There is no swimming ring anywhere. The girl has clearly just thrown the teddy bear: her throwing arm is stretched forward in the follow-through, and the teddy bear has just left her hand, still very close to her fingers, flying toward the father. The father stands still a few steps away with both hands held low in front of his chest, ready to catch. The girl is the thrower, the father is the catcher. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

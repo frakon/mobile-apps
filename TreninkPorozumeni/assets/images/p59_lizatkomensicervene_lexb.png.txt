@@ -1,0 +1,11 @@
+Image: lizatkomensicervene_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_09 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, two ice cream cones (one scoop on a brown waffle cone each) stand upright side by side, their bottoms exactly on one same level, a clear gap between them: the green ice cream cone on the LEFT, the red ice cream cone on the RIGHT. The green ice cream cone is about TWICE as big as the red ice cream cone (twice as tall and twice as wide); the difference is large and obvious; apart from the scoop colour and size they look the same. Everything is completely inside the picture with a wide white margin on every side, nothing is cut off by the picture edge. The colours are bold, solid and clearly different. Exactly two ice cream cones and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no lollipop anywhere in the picture.

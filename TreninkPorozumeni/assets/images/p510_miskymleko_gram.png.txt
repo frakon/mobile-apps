@@ -1,0 +1,11 @@
+Image: miskymleko_gram.png
+Generated: 2026-10-01
+Candidate: P12 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view, seen slightly from above so the inside of every bowl is visible: exactly four identical blue bowls in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one is completely empty and dry, no milk, no liquid at all, and on its dry inside bottom one small yellow flower is painted, clearly visible because the bowl is empty; the second one is completely empty and dry, no milk, no liquid at all, and on its dry inside bottom one small yellow flower is painted, clearly visible because the bowl is empty; the third one is completely empty and dry, no milk, no liquid at all, and on its dry inside bottom one small yellow flower is painted, clearly visible because the bowl is empty; the fourth one is completely empty and dry, no milk, no liquid at all, and on its dry inside bottom one small yellow flower is painted, clearly visible because the bowl is empty. All four are in the same state: each one is completely empty and dry, no milk, no liquid at all, and on its dry inside bottom one small yellow flower is painted, clearly visible because the bowl is empty. Every object is complete with all its parts, nothing cropped at the edge, nothing overlapping. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

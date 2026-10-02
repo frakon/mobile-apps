@@ -1,0 +1,11 @@
+Image: babickamaze_gram.png
+Generated: 2026-10-02
+Candidate: P16 batch_02 round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, every person shown whole from head to shoes: a grandmother with grey hair in a bun, round glasses, a purple cardigan, a long grey skirt and brown shoes is spreading butter on a slice of bread on a plate all alone, using an ordinary small shiny metal teaspoon, its small round spoon bowl turned down and spreading the butter on the bread; the plate with the bread is held up in front of her at chest height so the teaspoon is clearly visible against the white background. She is the only person in the picture, nobody else is there. There is no small kitchen knife anywhere in the picture. It is clearly a small teaspoon, not a knife and not a big spoon. Every person, animal and object is complete with all its parts and correct anatomy, nothing cropped at the edge. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

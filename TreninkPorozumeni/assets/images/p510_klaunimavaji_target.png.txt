@@ -1,0 +1,11 @@
+Image: klaunimavaji_target.png
+Generated: 2026-10-01
+Candidate: P12 batch_02 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three identical clowns in yellow costumes, each with exactly the same look: red curly hair, a pointed yellow hat with one red pompom on top, a white ruff collar, three red pompom buttons down the front, a round red nose, baggy yellow trousers and big yellow shoes in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one waves with one hand raised high above his head; the second one waves with one hand raised high above his head; the third one waves with one hand raised high above his head. All three are in the same state: each one waves with one hand raised high above his head. All of them look exactly the same in every detail. Calm friendly faces, correct realistic anatomy, every figure complete with all its body parts. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,14 @@
+Image: maminkapletesalu_lexa.png
+Generated: 2026-10-01
+Candidate: P8 repair R1 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grey-haired grandmother with her hair in a bun, in a purple cardigan and a long skirt sits on a simple complete wooden chair with four legs, knitting with two long knitting needles held in both hands right now; a half-finished long narrow striped red and white knitted scarf hangs down from the needles to her knees, clearly a narrow scarf being knitted, its top row still on the needles; a ball of red wool lies on the floor beside the chair. No younger woman anywhere. The yarn is one single continuous unbroken thread from the ball of wool up to the knitting, with no breaks and no loose ends. It is clearly the MIDDLE of the activity: the work is only half done and it is being done right now. Calm friendly face(s), mouth closed. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no ground, no shadow, no scenery, no decorations, nothing else in the picture.
+
+Installed as p56_maminkapletesalu_lexa.png from Temp\P8\rep1\r2 on 2026-10-01 (P8 repair R1).
+3. Blind test: target vs gram forced choice 10/10 (5 x v1 + 5 x v2, fresh headless opus per trial, neutral names), strict rule (max 1 dismissed loose reading per 5 trials, none unresolved); lex check (4 shuffled pictures, both sentences): only target~v1 and gram~v2 matched. Logs: Temp/P8/rep1/results.jsonl.

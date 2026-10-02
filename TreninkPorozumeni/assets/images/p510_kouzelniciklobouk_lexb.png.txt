@@ -1,0 +1,11 @@
+Image: kouzelniciklobouk_lexb.png
+Generated: 2026-10-01
+Candidate: P12 batch_03 round 2 (true render #2)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, front view: exactly three snowmen made of three snowballs in one row from left to right, with clear gaps between them, all the same size and drawn the same way. From left to right: the first one wears a tall black top hat; the second one wears a tall black top hat; the third one wears a tall black top hat. All three are in the same state: each one wears a tall black top hat. All of them look exactly the same in every detail. Calm friendly faces. There are only snowmen made of three snowballs in the picture, no magicians anywhere. Snowmen have no legs and no feet: the bottom snowball sits directly on the ground; stick arms only. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

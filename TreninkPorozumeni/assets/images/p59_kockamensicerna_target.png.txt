@@ -1,0 +1,11 @@
+Image: kockamensicerna_target.png
+Generated: 2026-10-01
+Candidate: P11 batch_08 round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view, the two cats stand side by side in a row, all facing left, all legs and paws fully visible, feet at one same level, a clear gap between them: the black cat is on the LEFT, the white cat is on the RIGHT. The white cat is about TWICE as big as the black cat; the difference is large and obvious; apart from colour and size they look the same. The two colours are bold, solid and clearly different. Both are fully grown ADULT animals of the same age with normal realistic adult anatomy and natural proportions for their species; the smaller one is NOT a baby, kitten, cub or calf, just a smaller adult. Normal domestic cats with natural short cat legs, not slender or dog-like. Each cat holds its tail raised UP in a curve above its back end: the tail starts at the very top of the rump behind the hind legs and rises upward, never under the belly, never touching the other cat. Everything fully inside the picture with a wide white margin, nothing cut off at any edge, a wide gap between the cats. Exactly two cats and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

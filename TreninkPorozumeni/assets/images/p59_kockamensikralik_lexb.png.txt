@@ -1,0 +1,11 @@
+Image: kockamensikralik_lexb.png
+Generated: 2026-10-01
+Candidate: P11 batch_05 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: two fully grown ADULT animals stand side by side on all four legs, both facing left, all legs fully visible, feet at one same level, a clear gap between them: on the LEFT a red squirrel with a big bushy tail; on the RIGHT a brown hedgehog with spines. Both have their natural real sizes, about equally big. Calm friendly faces. Exactly two separate whole animals with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture. There is no cat and no rabbit anywhere in the picture.

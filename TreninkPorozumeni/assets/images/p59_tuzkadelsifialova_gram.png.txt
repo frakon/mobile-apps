@@ -1,0 +1,11 @@
+Image: tuzkadelsifialova_gram.png
+Generated: 2026-10-01
+Candidate: P11 r1_repair round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, the three pencils lie horizontally one above the other in parallel rows, their LEFT ends exactly aligned on one vertical line, a clear gap between the rows: the purple pencil is TOP; the yellow pencil is MIDDLE; the green pencil is BOTTOM. The yellow pencil is clearly the most long: about TWICE as long as each of the other two; the purple and the green pencils are exactly equal to each other and both much less long. The three colours are bold, solid and clearly different. All three whole pencils are fully inside the picture with a wide white margin on every side; the two short pencils are each exactly HALF the length of the long pencil, their sharpened right tips stop exactly at the middle of the long pencil. The long pencil is a full TWO times longer than each short pencil, so the length difference is huge. Exactly three pencils and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: klukneszidli_gram.png
+Generated: 2026-10-01
+Candidate: P13 strict audit A round s2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a boy of about seven with short brown hair, wearing a cap with a peak in bright green with white horizontal stripes, a T-shirt in bright green with white horizontal stripes, plain dark grey shorts without any pattern, white socks and brown shoes, on the left; and a grandmother with grey hair in a bun and round glasses, wearing a headscarf in bright orange with white polka dots, a cardigan in bright orange with white polka dots, a plain black ankle-length skirt without any pattern and black shoes, on the other side. Each person wears exactly this outfit. The boy walks to the right toward the grandmother, carrying one simple wooden chair with four legs and a backrest in front of him with both hands, the chair held upright at his chest so that all four chair legs are clearly visible. The grandmother stands facing left a few steps ahead, waiting, both arms at her sides. The boy is bringing the chair to the grandmother. The chair's seat, backrest and legs are painted bright green with white horizontal stripes, exactly the same colour and pattern as the boy's clothes, so it clearly belongs to the boy. Nothing on the chair has the bright orange colour. Exactly one chair in the picture. The boy carries the chair by the top of its backrest in one hand, the chair hanging low beside his legs at his side at arm's length, entirely below the hem of his T-shirt and away from his T-shirt, with a clear gap of white space between the chair and his body. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, feet on the same ground level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: kachnamensislepice_gram.png
+Generated: 2026-10-01
+Candidate: P11 batch_02 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: two animals stand side by side, both facing left, all legs fully visible, feet at one same level, a clear gap between them: on the LEFT a brown hen with a red comb; on the RIGHT a white duck with an orange beak. The duck is about TWICE as big as the hen (twice as tall and twice as long); the difference is large and obvious. Calm friendly faces. Exactly two separate whole animals with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

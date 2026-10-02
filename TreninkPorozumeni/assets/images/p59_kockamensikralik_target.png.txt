@@ -1,0 +1,11 @@
+Image: kockamensikralik_target.png
+Generated: 2026-10-01
+Candidate: P11 strict_audit round g3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: two animals both sitting upright on their haunches side by side, both facing left, all paws visible, at one same bottom level, a clear gap between them: on the LEFT a grey adult cat; on the RIGHT a white adult domestic rabbit. The rabbit is about TWICE as big as the cat (the cat's head reaches only to the middle of the rabbit). The cat is a fully grown adult cat with a slender adult body, a small head relative to its body, narrow almond eyes, long legs and a long tail lying around its paws; NOT a kitten. The rabbit is a fully grown adult domestic rabbit with a round body and upright ears; NOT a hare, NOT a baby bunny. The rabbit is a giant breed rabbit (Flemish Giant); the cat is a small but clearly ADULT cat breed (Singapura). The size difference comes only from the breed. Calm friendly faces. Exactly two separate whole animals with correct realistic anatomy, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

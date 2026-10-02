@@ -1,6 +1,6 @@
-Image: p58_zalevalakytky_lexa.png
+Image: zalevalakytky_lexa_a.png
 Generated: 2026-10-01
-Candidate: P10 batch09 (type 5.8) round 1
+Candidate: P10 retestB (type 5.8) repair render
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +8,4 @@ Candidate: P10 batch09 (type 5.8) round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, simple and clean, side view: an adult woman about 35 years old with long brown hair in a ponytail, wearing a long red dress picks flowers from a flower bed, holding a small bunch; a green watering can stands on the ground. She is unmistakably a woman: long hair and a long dress. It must be clearly visible that the woman is NOT doing this: waters a flower bed with a green watering can, water pouring from the spout. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Calm friendly face, mouth closed unless the action needs it. Exactly one figure, whole body visible with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, simple and clean, side view: a young woman with long brown hair in a ponytail, wearing a long red dress plays tennis, swinging a tennis racket at a yellow ball in the air. There is no flowers, no plants, no watering can, no garden anywhere in the picture. She is unmistakably a woman: long hair and a long dress. Whole figure visible from the top of the head down to both feet (shoes clearly drawn), with a clear white margin below the feet; nothing cut off; drawn small enough to fit. Calm friendly face. Exactly one figure with correct realistic anatomy, only the described figure and objects, floating in pure white empty space, no ground, no shadow, no scenery, no text, no letters, no numbers, nothing else in the picture.
