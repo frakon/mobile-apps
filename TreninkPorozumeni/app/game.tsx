@@ -40,6 +40,22 @@ import { loadRegime, loadSpeechSpeedPercent } from '../src/settings';
 import { StartAnimation } from '../src/StartAnimation';
 
 const FEEDBACK_DURATION_MILLISECONDS = 500;
+// Silent-switch audio mode (mobile-apps-preferences skill „Sound playback“; _TreninkPorozumeni_Fields123_PROMPTS.md
+// "User request 26"): applied ONCE per app session (module-level memoized promise) and capped by a short timeout,
+// so a hanging native call never blocks the sentence auto-play.
+const AUDIO_MODE_TIMEOUT_MILLISECONDS = 1500;
+let audioModePromise: Promise<void> | null = null;
+function ensureAudioMode(): Promise<void> {
+  if (audioModePromise === null) {
+    audioModePromise = Promise.race([
+      setAudioModeAsync({ playsInSilentMode: true }).catch(() => {
+        // Audio mode is a nicety (play even with the mute switch on); ignore failures.
+      }),
+      new Promise<void>((resolve) => setTimeout(resolve, AUDIO_MODE_TIMEOUT_MILLISECONDS)),
+    ]);
+  }
+  return audioModePromise;
+}
 // Safety cap for the explanation playback: if the finish event never arrives (corrupt file,
 // audio session hiccup), unblock the game after this long instead of staying stuck.
 const EXPLANATION_SAFETY_TIMEOUT_MILLISECONDS = 15000;
@@ -240,13 +256,15 @@ export default function GameScreen() {
   currentArchiveRef.current = currentArchive;
 
   useEffect(() => {
-    setAudioModeAsync({ playsInSilentMode: true })
-      .catch(() => {
-        // Audio mode is a nicety (play even with the mute switch on); ignore failures.
-      })
-      .then(() => {
+    let cancelled = false;
+    void ensureAudioMode().then(() => {
+      if (!cancelled) {
         setAudioModeReady(true); // gate the first auto-play so it happens under the applied mode
-      });
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Clear any pending feedback timers on unmount.

@@ -222,3 +222,25 @@ Rule file: _TestTypeScopeRule.md (referenced from README.md).
 "Meanwhile: appoint a new level-1 subagent to load delegate-1-ops and mobile-apps-preferences skill and to manage implementation of everything written in the mobile-apps-preferences skill into the TreninkPorozumeni app. Everything what is in the skill overwrites current potentially conflicting instructions (e.g. that we shall preload 5 rounds instead of 2, etc.)."
 
 Note (coordinator): per this request the mobile-apps-preferences skill overrides these earlier instructions: request 16 "Implementation decisions" (Metro/expo-asset prefetch of 2 rounds, "no loading indicator needed", static `require` of all assets, "in a release build the assets are bundled") → per-item zip archives from ResourceBackend, on-device compressed LRU cache (200 MB), preload of the next 5 rounds, start animation while round-1 resources load; SPEC "Rounds" (current + NEXT TWO rounds, SPEC:71) → next 5 rounds; SPEC "Technical notes"/"Assets" (static require, PNG per id bundled) → backend-served per-item archives, only UI/icon/splash bundled; SPEC:130 provenance `.png.txt` next to images → excluded from the packer and the bundler (files are not moved, because field content is edited in parallel); README "Deploy" (shared screen `expo`) → per-app screen `expo-TreninkPorozumeni`, port 8081. New: custom app icon + splash (welcome) screen. NOT overridden: every request-22 audio controller guarantee (hot sounds = pre-cached local file URIs passed to a fresh player per play).
+
+## User request 25 — follow-up 6: final verification clarifications (Q&A verbatim, 2026-10-03)
+
+Context: questions asked by the coordinator before the final rework/verification phases of the 15 types (endgame task `AGENTS/Tasks/20260930_191525_TreninkPorozumeni15Types`, `_plan_progress_L2.md`); questions in short form, answers verbatim.
+
+1. Q1: When to commit/push (after each deployed phase / only at the very end / no commit)? — A: "After each deployed phase"
+2. Q2: Deploy the rework even though the types are already live? — A: "Yes, after Phase A and also after Phase B and C"
+3. Q3: Backend images are already 512×512 PNG; convert backend-archive images to JPEG/WebP, or skip and log? — A: "Skip and log"
+4. Q4: 5.2 word-order-only minority (PP-first) if judged insufficient: replace with real directional forms, or accept and log? — A: "Accept and log"
+5. Q5: 5.5 minority share at the upper edge / verb repetition („nesedí" 8× in 32 negated): accept, or push toward 33 %? — A: "Accept larger minority, vary verbs"
+6. Q6: Repair scope if the final check finds issues in already-deployed types: fix medium+ and redeploy / fix all incl. low / log only? — A: "Fix medium+ and redeploy"
+7. Q7: Rework: regenerate a lexical image when a new sentence makes that lex picture fit? — A: "Regenerate that image"
+8. Q8: Server cleanup of orphan archives and old /tmp uploads: remove each explicitly, or leave and log? — A: "Remove, one file per command. Be VERY careful with each removal (so that nothing goes wrong)."
+9. Q9: /tmp/x.py created outside the repo by a worker: leave and report, or delete? — A: "Leave and report"
+10. Q10: Verification round cap: up to 5 rounds then log remaining lows, or unlimited? — A: "Up to 5, then log the lows"
+11. Q11: Keep the Fable ban / opus-medium-agent verifiers? — A: "Keep Fable ban, use fable only as advisor if needed."
+12. Q12: Pending open_questions.md items: present at the end, or decide each now? — A: "Present at the end"
+13. Q13: Provenance `.png.txt`/`.part` inside `assets/` (excluded from bundler and packer): leave and log, or move to a repo-only folder? — A: "Leave and log"
+14. Q14: A reworked type cannot stay within 32–34 % minority share: choose other items/forms until in range, or accept another value and log? — A: "Minority share 33-50% is permitted when enough diversity is could not be achieved otherwise."
+    - Coordinator interpretation: 32–34 % stays the target; a higher minority share (up to 50 %) only when enough diversity cannot be achieved otherwise; every such case is logged (rule file `_TestTypeScopeRule.md` §4).
+15. Q15: Endgame repo still tracks force-added AudioFix_R* verification files: leave, or untrack in the next commit? — A: "Untrack in next commit"
+16. Q16: Device/Expo Go end-to-end check: user tests manually, or agents re-check via web preview? — A: "You test manually"

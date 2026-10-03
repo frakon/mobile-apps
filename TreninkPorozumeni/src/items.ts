@@ -26,7 +26,9 @@ import { field515Examples } from './items/field515';
 
 // 15 test types 5.1–5.15 ("User request 25" in _TreninkPorozumeni_Fields123_PROMPTS.md);
 // names taken from Documentation/doc1 (5.1–5.10) and doc2 (5.11–5.15), shortened to the
-// section title without the parenthetical detail.
+// section title without the parenthetical detail. Exception: 5.15 is labelled by its implemented content
+// ("Dokonavý a nedokonavý vid", Documentation/TypeScope/5.15_scope.md) instead of the doc2 title
+// "Komplexní Časové Relace".
 export type FieldId =
   | 'field51' | 'field52' | 'field53' | 'field54' | 'field55'
   | 'field56' | 'field57' | 'field58' | 'field59' | 'field510'

@@ -1,6 +1,7 @@
-Image: hvezdavetsiruzova_gram.png
-Generated: 2026-10-01
-Candidate: P11 batch_07 round 1
+Image: p59_hvezdavetsiruzova_gram.png
+Generated: 2026-10-03
+Candidate: Phase C R2 (PC_R2_59) round 1
+True render 2 of this picture slot (render 1 = original P11 batch render; replaced in Phase C R2 because the v2 sentence changed to „nejmenší" and needs three distinct sizes). Blind test: v1 5/5, v2 5/5, lex session PASS (Temp/PC_R2_59/repair_log.md).
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +9,4 @@ Candidate: P11 batch_07 round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, front view, the three paper stars stand side by side in a row, their bottoms exactly on one same level, a clear gap between them: the yellow paper star is LEFT; the pink paper star is MIDDLE; the blue paper star is RIGHT. The yellow paper star is clearly the most big: about TWICE as big as each of the other two; the pink and the blue paper stars are exactly equal to each other and both much less big. The three colours are bold, solid and clearly different. Exactly three paper stars and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, front view, the three paper stars stand side by side in a row, their bottoms exactly on one same level, a clear gap between them: the yellow paper star is LEFT; the pink paper star is MIDDLE; the blue paper star is RIGHT. Three clearly different sizes: the yellow paper star is the biggest, about TWICE as big as the blue one; the blue paper star is medium; the pink paper star is clearly the smallest, only about HALF as big as the blue one. The three colours are bold, solid and clearly different. Exactly three paper stars and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

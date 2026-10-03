@@ -1,6 +1,7 @@
-Image: srdcevetsimodre_gram.png
-Generated: 2026-10-01
-Candidate: P11 batch_01 round 1
+Image: p59_srdcevetsimodre_gram.png
+Generated: 2026-10-03
+Candidate: Phase C R2 (PC_R2_59) round 1
+True render 2 of this picture slot (render 1 = original P11 batch render; replaced in Phase C R2 because the v2 sentence changed to „nejmenší" and needs three distinct sizes). Blind test: v1 5/5, v2 5/5, lex session PASS (Temp/PC_R2_59/repair_log.md).
 
 1. Service and exact parameters:
 - Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
@@ -8,4 +9,4 @@ Candidate: P11 batch_01 round 1
 - API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
 
 2. Verbatim prompt:
-Children's book watercolor illustration, front view, the three paper hearts stand side by side in a row, their bottoms exactly on one same level, a clear gap between them: the blue paper heart is LEFT; the yellow paper heart is MIDDLE; the green paper heart is RIGHT. The green paper heart is clearly the most big: about TWICE as big as each of the other two; the blue and the yellow paper hearts are exactly equal to each other and both much less big. The three colours are bold, solid and clearly different. Exactly three paper hearts and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
+Children's book watercolor illustration, front view, the three paper hearts stand side by side in a row, their bottoms exactly on one same level, a clear gap between them: the blue paper heart is LEFT; the yellow paper heart is MIDDLE; the green paper heart is RIGHT. Three clearly different sizes: the green paper heart is the biggest, about TWICE as big as the yellow one; the yellow paper heart is medium; the blue paper heart is clearly the smallest, only about HALF as big as the yellow one. The three colours are bold, solid and clearly different. Exactly three paper hearts and nothing else, floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

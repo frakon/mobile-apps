@@ -45,6 +45,7 @@ Load this file BEFORE implementing a new test type (5.x) or reworking an existin
 - **Expected minority share:**
   - Formula: E = Σ_items (number of minority variants in the item) / 2 / 100.
   - The target for E is **32–34%**. Example: 66 mixed-variant items (1 minority variant each) give 33%.
+  - **User exception (2026-10-03, Q14, verbatim):** "Minority share 33-50% is permitted when enough diversity is could not be achieved otherwise." **Coordinator interpretation (not user text):** 32–34% stays the target; a higher share, up to 50%, is allowed only when enough diversity (A9 diversity rule, e.g. no verb/construction repeated too often) cannot be achieved otherwise. Every such case MUST be logged (endgame task `open_questions.md` + the `field5X.ts` header + the type's TypeScope doc) with the diversity reason. Current case: 5.5 = 37.5% (Q5: "Accept larger minority, vary verbs"). Source: `_TreninkPorozumeni_Fields123_PROMPTS.md` „User request 25 — follow-up 6".
 - **Per-group floor:** every group of 10 (1–10 … 91–100) must have **at least 3 expected minority sentences**, i.e. Σ over the group's items (minority variants / 2) ≥ 3.
 
 ## 5. Mixing rules
@@ -74,27 +75,29 @@ The swap rule (target ↔ first grammatical distractor) and the lex rule (lex pi
 - **New types (5.10–5.15):** apply from the start.
 
 ## 9. Starting-hypothesis table (evaluator proposal; the explorer confirms or corrects it)
-| Type | Majority | Proposed minority |
-|---|---|---|
-| 5.1 | SVO with visible case | OVS order ("Medvěda tlačí lev") |
-| 5.2 | spatial prepositions | other preposition pairs / case-governed forms (za+Acc motion vs za+Ins position, k/od, mezi, přes) |
-| 5.3 | singular↔plural | plural shown by the verb only; irregular plurals (dítě/děti, člověk/lidé) |
-| 5.4 | passive | active, with role reversal as distractor |
-| 5.5 | negated | affirmative; lexical/pronoun negation (nikdo, nic, žádný) |
-| 5.6 | future/past | present tense as target; perfective vs analytic future |
-| 5.7 | subject relative „který" | object relatives („kterého honí"), co/kde relatives, temporal clauses |
-| 5.8 | -la (feminine) | -l / -lo / plural -li/-ly |
-| 5.9 | comparatives | superlatives with 3 objects, adverb degrees, negative comparison, „stejně … jako" |
-| 5.10 | všechny | někteří / žádný / stejně |
-| 5.11 | jeho/její | svůj vs jeho; personal/demonstrative pronouns |
-| 5.12 | pouze/kromě | každý, žádný, někteří |
-| 5.13 | dative recipient | role swap without dative; k/pro |
-| 5.14 | instrumental tool | comitative „s + Ins" |
-| 5.15 | perfective past | imperfective past, mixed both ways |
+Start hypotheses only; the per-type `Documentation/TypeScope/5.X_scope.md` + the logged coordinator decision supersede the row. The „Final minority" column is filled only where the Phase C verification (2026-10-03) stated the implemented form.
+
+| Type | Majority | Proposed minority | Final minority (implemented) |
+|---|---|---|---|
+| 5.1 | SVO with visible case | OVS order ("Medvěda tlačí lev") | — |
+| 5.2 | spatial prepositions | other preposition pairs / case-governed forms (za+Acc motion vs za+Ins position, k/od, mezi, přes) | — |
+| 5.3 | singular↔plural | plural shown by the verb only; irregular plurals (dítě/děti, člověk/lidé) | — |
+| 5.4 | passive | active, with role reversal as distractor | — |
+| 5.5 | negated | affirmative; lexical/pronoun negation (nikdo, nic, žádný) | — |
+| 5.6 | future/past | present tense as target; perfective vs analytic future | — |
+| 5.7 | subject relative „který" | object relatives („kterého honí"), co/kde relatives, temporal clauses | object relatives (kterého/kterou/kterému/kterým, preposition + který); co/kde relatives and temporal clauses not used |
+| 5.8 | -la (feminine) | -l / -lo / plural -li/-ly | present tense + agreeing sám/sama (replaced -l/-lo/-li/-ly) |
+| 5.9 | comparatives | superlatives with 3 objects, adverb degrees, negative comparison, „stejně … jako" | — |
+| 5.10 | všechny | někteří / žádný / stejně | žádný/nikdo, jen jeden, oba/obě (někteří/stejně dropped) |
+| 5.11 | jeho/její | svůj vs jeho; personal/demonstrative pronouns | svůj (personal/demonstrative pronouns excluded) |
+| 5.12 | pouze/kromě | každý, žádný, někteří | kromě, každý–svůj / spolu (žádný/někteří excluded as 5.10 overlap) |
+| 5.13 | dative recipient | role swap without dative; k/pro | dative-first order, k + Dat, possessive dative (role swap without dative rejected) |
+| 5.14 | instrumental tool | comitative „s + Ins" | — |
+| 5.15 | perfective past | imperfective past, mixed both ways | imperfective past, minority in v2 only (two-person PP design for pure-majority items) |
 
 ## 10. Verifier checklist (add to every verify-improve round of a type)
 - [ ] `Documentation/TypeScope/5.X_scope.md` exists, cites its sources, and the coordinator's decision is logged.
-- [ ] The expected minority share E is 32–34%, recomputed from `field5X.ts`.
+- [ ] The expected minority share E is 32–34%, recomputed from `field5X.ts` — or ≤50% only with a logged diversity reason (§4 user exception, Q14).
 - [ ] Every group of 10 has at least 3 expected minority sentences.
 - [ ] No more than 4 pure-majority items in a row; the shuffle seed is recorded.
 - [ ] Every minority item keeps the type's contrast; the swap and lex rules hold.
@@ -102,3 +105,5 @@ The swap rule (target ↔ first grammatical distractor) and the lex rule (lex pi
 
 ## 11. Change log
 - 2026-10-01: created from User request 25 follow-up 5 and its 8 Q&A answers.
+- 2026-10-03: §4 user exception (Q14: minority up to 50% only when diversity cannot be achieved otherwise; every case logged), §10 checklist adjusted, §9 „Final minority" column added (PROMPTS „User request 25 — follow-up 6").
+- 2026-10-03 (Phase C R4): §4 — the text after the verbatim Q14 quote labelled „Coordinator interpretation (not user text)".
