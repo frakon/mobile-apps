@@ -1,0 +1,11 @@
+Image: chlapecponozky_target.png
+Generated: 2026-10-02
+Candidate: P17 batch_02 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a boy about seven years old with light skin and short brown hair, in a short-sleeved blue T-shirt, dark blue shorts, white socks and white sneakers. He stands beside a washing line stretched between two complete wooden posts. Eight colourful socks hang along the whole line fixed with pegs, and an empty small basket stands on the ground. The clothes peg lies put down beside it, nobody holds it. It is clearly AFTER the activity: the work is completely finished, all tools are put down, his hands are free and resting, and he looks content at the finished result; nobody is working any more. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: malirstrom_lexb.png
+Generated: 2026-10-02
+Candidate: P17 R7 fix8 batch 1 (rule-a lexB near-dup replacement, new activity) round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a house painter with light skin in white overalls, a white cap and white shoes. He kneels at a big wooden picture frame lying on the floor and stretches white canvas over it, fixing it with a staple gun right now, the staple gun in his hand touching the work. The white canvas lies over the whole frame; along the left side it is already pulled tight and stapled, he pulls the loose right edge of the canvas taut over the frame with one hand and presses the staple gun on the frame edge with the other hand; the right half of the canvas is still wrinkled. It is clearly the MIDDLE of the activity: the work is only half done and he is doing it right now, eyes on the work. There is no painted tree anywhere in the picture. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

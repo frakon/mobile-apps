@@ -1,0 +1,11 @@
+Image: maminkadort_gram.png
+Generated: 2026-10-02
+Candidate: P17 R1 repair round 10
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a young mother with light skin and a long dark brown ponytail, in a long-sleeved green blouse, blue jeans and brown shoes. She stands at a small complete wooden table with four legs. On a cake plate on the table stands a big round chocolate cake with dark brown chocolate icing and a ring of white cream rosettes on top, clearly a birthday cake, seen slightly from above. She is cutting the cake in two right now: a long deep straight cut already runs from the front edge of the cake to its center, so the front half of the cake is clearly split open and the brown sponge inside shows along the cut, while the back half of the cake is still whole and uncut. The big knife blade is sunk deep in the cake at the end of the cut in the middle of the cake, her hand holds the knife handle and pushes it on through the cake, her other hand steadies the plate. It is clearly the MIDDLE of the activity: the cake is cut only halfway through and she is doing it right now, eyes on the work. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: detihruska_target.png
+Generated: 2026-10-02
+Candidate: P17 batch_03 round 2 (true render 2 of max 5 for this picture)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: two people side by side with a wide clear gap between them, each busy with their own yellow pear. On the left: a girl about six years old with light skin and two short blond pigtails tied with small red ribbons, one on each side of her head, in a short-sleeved red dress, white socks and red shoes. She sits on a small wooden stool with four legs; beside her on a small round table with legs lies a plate with a clearly recognisable pear core: the narrow middle with the brown stalk on top and dark seeds visible, nothing else of the pear is left. It is clearly AFTER the activity: the work is completely finished, all tools are put down, her hands are free and resting, and she looks content at the finished result; nobody is working any more. On the right: a boy about seven years old with light skin and short brown hair, in a short-sleeved blue T-shirt, dark blue shorts, white socks and white sneakers. He sits on a small wooden stool with four legs and bites into a big yellow pear held in his hand right now. Half of the pear is already eaten, the other half is still left. It is clearly the MIDDLE of the activity: the work is only half done and he is doing it right now, eyes on the work. The difference between the two is large and obvious: the left person is completely finished and resting, the right person is still in the middle of the work right now. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

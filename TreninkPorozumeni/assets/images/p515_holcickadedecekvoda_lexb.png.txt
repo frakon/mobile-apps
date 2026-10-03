@@ -1,0 +1,11 @@
+Image: holcickadedecekvoda_lexb.png
+Generated: 2026-10-02
+Candidate: P17 R7 fix8 batch 3 (new lexB activity, rule a) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: two people side by side with a wide clear gap between them, each busy with their own sand sifted through a sieve. On the left: a girl about six years old with light skin and two short blond pigtails tied with small red ribbons, one on each side of her head, in a short-sleeved red dress, white socks and red shoes. She kneels on a small patch of sand and sifts sand through a round garden sieve onto a heap right now. Under the sieve lies a small heap of fine sand, the sieve is still full of lumpy sand and pebbles, and she shakes it. It is clearly the MIDDLE of the activity: the work is only half done and she is doing it right now, eyes on the work. On the right: a grandfather with light skin, white hair and a white moustache, in a brown vest over a white shirt, grey trousers and black shoes. He kneels beside a big heap of fine smooth sand; the sieve lies put down with only a few pebbles left in it. It is clearly AFTER the activity: the work is completely finished, all tools are put down, his hands are free and resting, and he looks content at the finished result; nobody is working any more. The difference between the two is large and obvious: the right person is completely finished and resting, the left person is still in the middle of the work right now. There is no glass of yellow lemonade anywhere in the picture. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

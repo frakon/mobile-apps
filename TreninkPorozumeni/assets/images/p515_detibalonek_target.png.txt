@@ -1,0 +1,11 @@
+Image: detibalonek_target.png
+Generated: 2026-10-02
+Candidate: P17 pilot round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: two people side by side with a wide clear gap between them, each busy with their own red balloon. On the left: a girl about six years old with light skin and two blond pigtails, in a red dress, white socks and red shoes. She holds a big round fully blown-up red balloon by its freshly tied knot right in front of her face, with no string and no stick; she has just finished blowing it up herself. It is clearly AFTER the activity: the work is completely finished and she proudly shows the finished result; nobody is working any more. On the right: a boy about seven years old with light skin and short brown hair, in a blue T-shirt, dark blue shorts, white socks and white sneakers. He blows up a red balloon held to his lips right now. The balloon at his lips is still small and only half blown up, and his cheeks are puffed. It is clearly the MIDDLE of the activity: the work is only half done and he is doing it right now, eyes on the work. The difference between the two is large and obvious: the left person is completely finished and resting, the right person is still in the middle of the work right now. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

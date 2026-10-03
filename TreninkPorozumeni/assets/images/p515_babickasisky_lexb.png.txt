@@ -1,0 +1,11 @@
+Image: babickasisky_lexb.png
+Generated: 2026-10-02
+Candidate: P17 R7 lex fix4 (P17_R7_V3 H1/H2/M1/M2) round 8
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grandmother with light skin, grey hair in a bun and round glasses, in a purple cardigan, a long dark grey skirt and black shoes. She sits on a small three-legged milking stool right behind the hind legs of a white goat, which stands side-on, and milks it into a metal bucket placed under the udder right now. The metal bucket under the goat is half full of white milk, and she milks the goat with both hands holding the udder, which hangs between the hind legs of the goat, a thin stream of milk going from the udder straight down into the bucket. It is clearly the MIDDLE of the activity: the work is only half done and she is doing it right now, eyes on the work. There are no brown pine cones anywhere in the picture. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

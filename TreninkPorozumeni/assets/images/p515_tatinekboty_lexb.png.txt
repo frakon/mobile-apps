@@ -1,0 +1,11 @@
+Image: tatinekboty_lexb.png
+Generated: 2026-10-02
+Candidate: P17 R7 fix8 batch 2 (rule-a lexB near-dup replacement, new activity) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a young father with light skin, short black hair and a short black beard, in a long-sleeved red checked shirt, blue jeans and brown shoes. He kneels on short green grass beside a pile of cut brown branches and ties them into bundles with a ball of string right now, the ball of string in his hand touching the work. One bundle of branches tied with string already lies on the grass, a loose pile of branches still lies beside it, and he wraps the string around the second bundle. It is clearly the MIDDLE of the activity: the work is only half done and he is doing it right now, eyes on the work. There is no pair of yellow shoes anywhere in the picture, apart from the clothes the people are wearing. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: dedecekhvezda_lexa.png
+Generated: 2026-10-02
+Candidate: P17 R7 lex batch 2 round 76
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grandfather with light skin, white hair and a white moustache, in a brown vest over a white shirt, grey trousers and black shoes. He holds up a flat cut-out big yellow paper flower with exactly five round petals and no stem, holding it by one petal, and the same yellow sheet with a hole of exactly the same five-petal flower shape and size lies on a small complete wooden table with four legs standing beside him, all four table legs visible. The scissors lies put down beside it, nobody holds it. It is clearly AFTER the activity: the work is completely finished and he proudly shows the finished result; nobody is working any more. There is no yellow paper star anywhere in the picture. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: zahradnikovce_target.png
+Generated: 2026-10-02
+Candidate: P17 batch_03 round 2 (true render 2 of max 5 for this picture)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a gardener with light skin in green dungarees over a yellow shirt, a straw hat and brown rubber boots. He stands next to a calm fluffy white sheep. The calm sheep stands shorn all over and is still clearly a sheep: sheep face, small ears and only very short pinkish-white stubble all over its body, its pink skin showing through, clearly bald and naked compared with the thick wool heap; a big heap of thick fluffy white wool, as big as the sheep itself, lies on the ground beside it, the shorn sheep looks clearly thinner and smaller than a woolly sheep, and he stands beside it. The pair of big shears lies put down beside it, nobody holds it. It is clearly AFTER the activity: the work is completely finished, all tools are put down, his hands are free and resting, and he looks content at the finished result; nobody is working any more. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

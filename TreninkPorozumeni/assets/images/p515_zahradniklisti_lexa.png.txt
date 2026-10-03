@@ -1,0 +1,11 @@
+Image: zahradniklisti_lexa.png
+Generated: 2026-10-02
+Candidate: P17 batch_01 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a gardener with light skin in green dungarees over a yellow shirt, a straw hat and brown rubber boots. All the brown pine cones lie in one big neat heap on a small patch of short green lawn, none are scattered around. The garden rake lies put down beside it, nobody holds it. He stands beside it, hands free and resting. It is clearly AFTER the activity: the work is completely finished, all tools are put down, his hands are free and resting, and he looks content at the finished result; nobody is working any more. There are no brown autumn leaves anywhere in the picture. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

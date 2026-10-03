@@ -1,0 +1,11 @@
+Image: maminkajablkoloup_target.png
+Generated: 2026-10-02
+Candidate: P17 pilot round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a young mother with light skin and a long dark brown ponytail, in a long-sleeved green blouse, blue jeans and brown shoes. She sits on a wooden chair with four legs at a small complete wooden table with four legs. On a plate on the table lies a completely peeled pale apple with no red skin left on it, and the long red peel lies beside it. The small knife lies put down beside it, nobody holds it. It is clearly AFTER the activity: the work is completely finished, all tools are put down, her hands are free and resting, and she looks content at the finished result; nobody is working any more. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

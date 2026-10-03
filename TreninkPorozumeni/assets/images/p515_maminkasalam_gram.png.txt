@@ -1,0 +1,11 @@
+Image: maminkasalam_gram.png
+Generated: 2026-10-02
+Candidate: P17 batch_02 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a young mother with light skin and a long dark brown ponytail, in a long-sleeved green blouse, blue jeans and brown shoes. She stands at a small complete wooden table with four legs and cuts a long salami into thin round slices on a wooden board right now, the kitchen knife in her hand touching the work. It is ONE single salami: its left half is already cut into a row of thin round slices lying right next to the knife, and its right half is still one long uncut piece that continues directly from the knife blade, clearly the same salami. It is clearly the MIDDLE of the activity: the work is only half done and she is doing it right now, eyes on the work. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

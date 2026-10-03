@@ -1,0 +1,11 @@
+Image: kuchartalire_gram.png
+Generated: 2026-10-02
+Candidate: P17 batch_01 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a cook with light skin in a tall white chef hat, a white chef jacket, black trousers and black shoes. He stands at a small kitchen sink cabinet and washes dirty plates with a dish brush right now, the dish brush in his hand touching the work. A stack of dirty plates with brown sauce stains stands on the left, three clean plates stand in a drying rack on the right, and he scrubs one plate over the sink; the sink cabinet is wide with a flat worktop and a metal tap over the sink; the stack of dirty plates stands ON the worktop at the left of the sink and the drying rack stands ON the worktop at the right of the sink, everything resting on the worktop, nothing floating. It is clearly the MIDDLE of the activity: the work is only half done and he is doing it right now, eyes on the work. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

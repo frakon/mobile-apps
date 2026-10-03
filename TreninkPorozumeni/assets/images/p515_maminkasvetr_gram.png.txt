@@ -1,0 +1,11 @@
+Image: maminkasvetr_gram.png
+Generated: 2026-10-02
+Candidate: P17 R1 repair round 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a young mother with light skin and a long dark brown ponytail, in a long-sleeved green blouse, blue jeans and brown shoes. She sits on a chair with four legs and knits a yellow woolly sweater with two knitting needles right now. Only the lower half of the front of the sweater is knitted: a flat yellow knitted piece hangs from the needles, with no sleeves and no neck yet, and a big ball of yellow wool lies beside her. It is clearly the MIDDLE of the activity: the work is only half done and she is doing it right now, eyes on the work. The knitted piece is already big and clearly the lower half of a sweater body: a wide yellow knitted rectangle as wide as her chest with a ribbed bottom edge, much wider than a scarf; one continuous yellow yarn runs from the needles to the ball of wool. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: tatinekkalhoty_lexb.png
+Generated: 2026-10-02
+Candidate: P17 R7 lex fix4 (P17_R7_V3 H1/H2/M1/M2) round 11
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a young father with light skin, short black hair and a short black beard, in a long-sleeved red checked shirt, blue jeans and brown shoes. He sits on a wooden chair with four legs at a small complete wooden table with four legs and models a big hedgehog out of brown modelling clay with his fingers right now. On the table lies a big oval brown clay hedgehog body with a pointed nose and two eyes; only the FRONT half of its back is covered with many short brown clay spikes, the whole BACK half is still completely smooth and bare with no spikes, a heap of loose clay spikes waits beside it, and he presses one more spike onto the bare half. It is clearly the MIDDLE of the activity: the work is only half done and he is doing it right now, eyes on the work. There are no brown trousers anywhere in the picture, apart from the clothes the people are wearing. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

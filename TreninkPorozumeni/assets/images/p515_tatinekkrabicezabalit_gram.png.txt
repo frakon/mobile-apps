@@ -1,0 +1,11 @@
+Image: tatinekkrabicezabalit_gram.png
+Generated: 2026-10-02
+Candidate: P17 batch_02 round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a young father with light skin, short black hair and a short black beard, in a long-sleeved red checked shirt, blue jeans and brown shoes. He stands at a small complete wooden table with four legs and wraps a big box in brown paper right now. Only half of the box is covered with the brown paper, the other half of the white box still shows. It is clearly the MIDDLE of the activity: the work is only half done and he is doing it right now, eyes on the work. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

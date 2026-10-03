@@ -1,0 +1,11 @@
+Image: maminkakosilepovesit_lexb.png
+Generated: 2026-10-02
+Candidate: P17 R7 fix8 batch 3 (new lexB activity, rule a) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a young mother with light skin and a long dark brown ponytail, in a long-sleeved green blouse, blue jeans and brown shoes. She sits on a wooden chair with four legs at a small complete wooden table with four legs and paints the fingernails of her left hand red with a small brush from a little bottle of red nail polish, her left hand resting flat on the table right now, the nail polish brush in her hand touching the work. The nails of the thumb and the first two fingers are already shiny red, the last two fingernails are still bare pink, and the little bottle stands open. It is clearly the MIDDLE of the activity: the work is only half done and she is doing it right now, eyes on the work. There are no shirts on a line anywhere in the picture, apart from the clothes the people are wearing. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

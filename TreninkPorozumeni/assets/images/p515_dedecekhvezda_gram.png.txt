@@ -1,0 +1,11 @@
+Image: dedecekhvezda_gram.png
+Generated: 2026-10-02
+Candidate: P17 R1 repair round 17
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grandfather with light skin, white hair and a white moustache, in a brown vest over a white shirt, grey trousers and black shoes. He sits on a wooden chair with four legs at a small complete wooden table with four legs and cuts a big star out of a sheet of yellow paper with scissors right now, the pair of scissors in his hand touching the work. The sheet of yellow paper lies flat on the table, seen slightly from above, with ONE big star outline on it, nothing else. The left half of the star is ALREADY CUT through: along the left half of the outline there is a clear cut edge with a thin white gap, and the cut left half of the star bends slightly up from the sheet like a flap. The right half of the star is still joined to the sheet, only a thin pencil line marks it. His hand holds the scissors low on the paper: the open scissor blades lie flat on the paper with the paper between them, exactly at the end of the cut at the top point of the star, cutting further right now. It is clearly the MIDDLE of the activity: the work is only half done and he is doing it right now, eyes on the work. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

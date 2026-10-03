@@ -1,0 +1,11 @@
+Image: holcickavez_gram.png
+Generated: 2026-10-02
+Candidate: P17 batch_03 round 1 (true render 1 of max 5 for this picture)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a girl about six years old with light skin and two short blond pigtails tied with small red ribbons, one on each side of her head, in a short-sleeved red dress, white socks and red shoes. She kneels on the floor and builds a tower of colourful wooden blocks right now. The tower is six blocks high, half as tall as it will be, six unused blocks lie beside it, and she places the seventh block on the top with her hand. The red roof block that belongs on the top still lies on the floor beside the tower, waiting; the tower is clearly unfinished and much lower than a finished tower. It is clearly the MIDDLE of the activity: the work is only half done and she is doing it right now, eyes on the work. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

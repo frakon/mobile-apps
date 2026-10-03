@@ -1,0 +1,11 @@
+Image: kucharhrnec_lexb.png
+Generated: 2026-10-02
+Candidate: P17 R7 fix8 batch 1 (rule-a lexB near-dup replacement, new activity) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a cook with light skin in a tall white chef hat, a white chef jacket, black trousers and black shoes. He stands at a small complete wooden table with four legs and removes the stones from dark red cherries with a small cherry pitter over two bowls right now, the cherry pitter in his hand touching the work. Seen slightly from above, one bowl still holds many whole cherries with stalks, the other bowl has a few pitted cherries, a small heap of cherry stones lies on a saucer, and he presses a cherry in the pitter. It is clearly the MIDDLE of the activity: the work is only half done and he is doing it right now, eyes on the work. There is no big cooking pot anywhere in the picture. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

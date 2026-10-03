@@ -1,0 +1,11 @@
+Image: kuchardyne_gram.png
+Generated: 2026-10-02
+Candidate: P17 R1 repair round 15
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a cook with light skin in a tall white chef hat, a white chef jacket, black trousers and black shoes. He stands at a small complete wooden table with four legs. On the table lies a big round orange pumpkin, seen slightly from above. He is cutting the pumpkin in two right now: a long deep straight cut already runs from the top of the pumpkin down through its front half, so the front half of the pumpkin is clearly split open with a wide gap, and the bright orange flesh and white seeds inside show along the cut, while the back half of the pumpkin is still whole and uncut. The big knife blade is sunk deep inside the pumpkin at the end of the cut, his hand holds the knife handle and pushes it on through the pumpkin, his other hand steadies the pumpkin. It is clearly the MIDDLE of the activity: the pumpkin is cut only halfway through and he is doing it right now, eyes on the work. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

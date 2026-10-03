@@ -1,0 +1,11 @@
+Image: babickakolo_target.png
+Generated: 2026-10-02
+Candidate: P17 batch_03 round 2 (true render 2 of max 5 for this picture)
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grandmother with light skin, grey hair in a bun and round glasses, in a purple cardigan, a long dark grey skirt and black shoes. She stands next to a complete blue step-through bicycle with pedals, crank, chain and a kickstand down. The blue bicycle is completely clean and shiny with no mud anywhere, and a bucket stands beside it. The big yellow sponge lies put down beside it, nobody holds it. It is clearly AFTER the activity: the work is completely finished, all tools are put down, her hands are free and resting, and she looks content at the finished result; nobody is working any more. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

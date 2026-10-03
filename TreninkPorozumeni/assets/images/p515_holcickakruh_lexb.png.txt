@@ -1,0 +1,11 @@
+Image: holcickakruh_lexb.png
+Generated: 2026-10-02
+Candidate: P17 R7 fix8 batch 3 (new lexB activity, rule a) round 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a girl about six years old with light skin and two short blond pigtails tied with small red ribbons, one on each side of her head, in a short-sleeved red dress, white socks and red shoes. She kneels on the floor at the start of a long straight row of real black domino tiles with white dots and has just pushed the first tile right now. All tiles stand in ONE single straight line running from her to the right. She kneels at the LEFT end and pushes the first tile to the right. The near half of this same line, next to her hand, already lies toppled one on another like fallen cards in the same line, like a real falling domino chain: all fallen tiles tip to the RIGHT, away from her, each resting its top on the next tile; the first tiles next to her hand lie the flattest, each following tile leans a little less steeply, and the last tipping tile at the front of the wave leans against the first upright tile with NO gap between fallen and standing tiles. Her fingertip still touches the first fallen tile. The far half of the same line still stands upright; there is no second row and no loose tile. It is clearly the MIDDLE of the activity: the work is only half done and she is doing it right now, eyes on the work. There is no big yellow inflatable swim ring anywhere in the picture. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

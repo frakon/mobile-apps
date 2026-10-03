@@ -1,0 +1,11 @@
+Image: dedecektricka_lexa.png
+Generated: 2026-10-02
+Candidate: P17 R7 lex repair batch 1 round 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a grandfather with light skin, white hair and a white moustache, in a brown vest over a white shirt, grey trousers and black shoes. He stands at a small complete wooden table with four legs. On the table lies the big thick soft woolly plaid blanket with long fringes on its edges, folded into a small neat thick square, the fringes visible. It is clearly AFTER the activity: the work is completely finished, all tools are put down, his hands are free and resting, and he looks content at the finished result; nobody is working any more. There are no T-shirts anywhere in the picture, apart from the clothes the people are wearing. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

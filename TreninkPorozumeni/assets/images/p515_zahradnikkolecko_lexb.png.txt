@@ -1,0 +1,11 @@
+Image: zahradnikkolecko_lexb.png
+Generated: 2026-10-02
+Candidate: P17 R7 fix8 batch 3 (new lexB activity, rule a) round s2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a gardener with light skin with short light brown hair, in green dungarees with rolled-up trouser cuffs over a short-sleeved yellow shirt, a round natural straw hat with a frayed wide brim and brown rubber boots, exactly the same man in every picture. He kneels on a small patch of bare brown soil beside a straight row of six loose open lettuce plants, each a flat rosette of soft wavy frilly light-green leaves spread wide open, clearly lettuce, NOT tight round cabbage heads and spreads a fine green garden net over them with both hands right now. The first three lettuce heads are already covered by the fine green net, the other three lettuce heads are still uncovered, and he pulls the edge of the net over the fourth lettuce head with both hands. It is clearly the MIDDLE of the activity: the work is only half done and he is doing it right now, eyes on the work. There is no green garden wheelbarrow anywhere in the picture. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.

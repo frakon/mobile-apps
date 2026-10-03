@@ -1,0 +1,11 @@
+Image: zahradnikbramborykopat_lexb.png
+Generated: 2026-10-02
+Candidate: P17 R7 fix8 batch 2 (rule-a lexB near-dup replacement, new activity) round 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, simple and clean, side view: a gardener with light skin in green dungarees over a yellow shirt, a straw hat and brown rubber boots. He stands at a row of four young tomato plants with red tomatoes, each beside a wooden stake, and ties them to the stakes with green string right now. Two tomato plants already stand straight, tied to their stakes, two still lean over and droop, and he ties the third with green string. It is clearly the MIDDLE of the activity: the work is only half done and he is doing it right now, eyes on the work. There are no potatoes in the soil anywhere in the picture. Calm friendly faces. Correct realistic anatomy, every figure whole from head to feet with both arms visible and a margin around it, every object complete and fully visible, no limb hidden behind objects, no text, no letters, no numbers, no clock, no thought bubble, floating in pure white empty space, only the elements described, no other ground, no shadow, no scenery, no decorations, nothing else in the picture.
