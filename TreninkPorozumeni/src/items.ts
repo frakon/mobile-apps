@@ -111,7 +111,7 @@ export interface ComprehensionExample {
 // remain in assets/audio and assets/images.
 export const comprehensionExamples: ComprehensionExample[] = [
   // 5.1 order: seeded shuffle (Python random.Random(510006).shuffle of the previous order), P18 retroactive scope rework
-  // (_TestTypeScopeRule.md; Documentation/TypeScope/5.1_scope.md): minority = object-first (OVS) order, E 33.0%%, >=3 per group, max 4 majority in a row.
+  // (_TestTypeScopeRule.md; Documentation/TypeScope/5.1_scope.md): minority = object-first (OVS) order, E 33.0%, >=3 per group, max 4 majority in a row.
   {
     id: 'lechtadedecek',
     field: 'field51',
