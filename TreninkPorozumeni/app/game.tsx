@@ -31,8 +31,8 @@ import {
   explanationForSlot,
   GameRound,
   Regime,
+  isValidTestPart,
   TestPart,
-  testPartCount,
 } from '../src/rounds';
 import { OfflineRetry } from '../src/resources/OfflineRetry';
 import { useArchivePreloading } from '../src/resources/useArchivePreloading';
@@ -88,8 +88,8 @@ export default function GameScreen() {
   // "User request 25": groups 1..10 (1–10 … 91–100); a missing/invalid group or one the field
   // does not have falls back to group 1 (an empty type then shows the empty state).
   const requestedPart = Array.isArray(params.part) ? NaN : Number(params.part);
-  const part: TestPart =
-    Number.isInteger(requestedPart) && requestedPart >= 1 && requestedPart <= testPartCount(field) ? requestedPart : 1;
+  // Extra groups (part 11, 12, … — _TreninkPorozumeni_Fields123_PROMPTS.md "User request 28" Q1/Q5) are valid too (src/rounds.ts isValidTestPart).
+  const part: TestPart = isValidTestPart(field, requestedPart) ? requestedPart : 1;
 
   // Invalid/missing field param (deep link like /game?field=xyz): go back to the field
   // selection instead of silently playing 5.1.

@@ -96,6 +96,10 @@ export interface ComprehensionExample {
   // Optional variant 2 ("User request 25"); the fields above are variant 1. Items without it
   // always play variant 1.
   swappedVariant?: SwappedVariant;
+  // Extra category (_TreninkPorozumeni_Fields123_PROMPTS.md, "User request 27" + "User request 28" Q1–Q5):
+  // true = a good item kept outside the regular 1–100 (played via the "Extra" tile, exempt from the ratio
+  // rules); absent = a regular item. See src/rounds.ts (EXTRA_PART_OFFSET).
+  extra?: true;
 }
 
 // Sentences, picture contents, and explanation texts follow the content spec

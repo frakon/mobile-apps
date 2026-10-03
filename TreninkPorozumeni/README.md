@@ -1,6 +1,6 @@
 # TreninkPorozumeni
 
-Czech speech-comprehension trainer for children (Expo / React Native, landscape, iPad-first). 15 grammar test types 5.1–5.15 (doc1/doc2 sections), each with 100 items in 10 sets of 10 (set list page `app/sets.tsx`); every item has two sentence variants (target↔grammatical picture swapped), one picked 50/50 at play time. Each round plays a Czech sentence; the child taps the matching picture among 2 or 4 (setting: target + grammatical distractor, optionally + 2 lexical distractors). A wrong tap turns the picture red and plays a short spoken child-friendly explanation of why it is wrong.
+Czech speech-comprehension trainer for children (Expo / React Native, landscape, iPad-first). 15 grammar test types 5.1–5.15 (doc1/doc2 sections), each with 100 items in 10 sets of 10 (set list page `app/sets.tsx`); good items beyond the 100 are kept as `extra: true` items in an optional "Extra" tile with groups of 10 — see SPEC "Rounds"; every item has two sentence variants (target↔grammatical picture swapped), one picked 50/50 at play time. Each round plays a Czech sentence; the child taps the matching picture among 2 or 4 (setting: target + grammatical distractor, optionally + 2 lexical distractors). A wrong tap turns the picture red and plays a short spoken child-friendly explanation of why it is wrong.
 
 Full behavior spec: `_TreninkPorozumeni_SPEC.md`. All user prompts verbatim: `_TreninkPorozumeni_Fields123_PROMPTS.md`.
 

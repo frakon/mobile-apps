@@ -244,3 +244,63 @@ Context: questions asked by the coordinator before the final rework/verification
     - Coordinator interpretation: 32–34 % stays the target; a higher minority share (up to 50 %) only when enough diversity cannot be achieved otherwise; every such case is logged (rule file `_TestTypeScopeRule.md` §4).
 15. Q15: Endgame repo still tracks force-added AudioFix_R* verification files: leave, or untrack in the next commit? — A: "Untrack in next commit"
 16. Q16: Device/Expo Go end-to-end check: user tests manually, or agents re-check via web preview? — A: "You test manually"
+
+## User request 27 (verbatim, 2026-10-03) — Round 2 feedback on open questions
+Context: answers to open_questions.md items 3 (server orphan cleanup), 4 (5.5 minority share), 6 (endgame AudioFix_R untrack), 7 (machine addresses in tracked files), plus 5.5 explanation and 5.11 diversity feedback.
+
+"""
+Ad 5.5: it must be corrected. I opened the example with "Lev neleží na kameni.". The picture with lev on a stone says: "Tady lev leží na kameni, nepije z řeky.": the "nepije z řeky" is completely irelevant and not a proper explanation. The only relevant part is "Tady lev leží na kameni." and maybe yet better explanation would be "Tady naopak lev leží na kameni.". But also picture with zebra is wrong and misleading and could be much corrected, curent text: "Tady neleží na kameni zebra, ne lev". The "Tady neleží na kameni zebra" is wrong, it shall be "Tady je zebra". The part about kámen is irelevant and there even is not "kámen" there. So the proper explanation would be "Tady je zebra, ne lev". The third picture text (with tiger on the stone) is also mediocre, current text: "Tady leží na kameni tygr, ne lev". The text contradicts/explains only the tiger vs lion, but it does not explain, that it wronglz lies on a stone. So the correct explanation would contain also the stone lying explanation: "Tady je místo lva tygr a navíc leží na kameni.". That sentence is correct and nice in czech and yet explains both problems: that there is tiger instead of lion and that it lies on the stone instead of not lying on it. Go through all texts and improve the explanations significantly.
+
+Ad 5.11: 29 of podává is too much. There are countless of possibilities of what one person or even a dog (animal) can do with a thing of he/she/it (of other person or thing). Just a few of examples, that may be multiplied/said differently in multiple ways (and which even do not need the constructs with the two very distinguished colors of their clothes): "pes roztrhl její sukni", "chlapec jí dal svou hračku" (e.g. traktor or bagr (typical male toy)), "utrhl její jahůdku" (a boy is seen to hold a straberry while the girl pures water on strabberries), "odnesl její klubíčko" (a dog (which is in czech language a male) is seen with ball of yarn (which is typically connected to cats) and a cat is somewhere further behind (in czech language "kočka" is a female word)), etc. etc. So many possibilities. Instruct the subagents to be much more creative: with the persons (animals, objects) and also with the verbs and target objects. But do not just throw away the current already created examples. Rather put them to an Extra category (behind all the 1-10,...,91-100 categories), no need to delete them completely, if they are otherwise good. I just need the 1-100 pictures in regular categories/excercises to be good and nicely diversed and to have nice diverse examples.
+
+The previous holds for everything: when we have already good pictures and an otherwise good test set (then it is just alone: not being considered as part of 100 of its kind), then never delete it: put it into Extra (category above the 100 count).
+
+Ad 3.: I approve the clean up: but be very careful not to delete anything else than what is wanted.
+
+Ad 4.: 5.5's minority share: 37.5% is ok.
+
+Ad 6.: I explicitly request: the AudioFix_R* untrack
+
+Ad 7.: "Private machine addresses are in tracked mobile-apps files": private are ok, public would be problem
+"""
+
+Follow-up (verbatim): "And you (your subagents) are now permitted to use fable as advisor or idea maker or evaluator"
+
+## User request 28 (verbatim, 2026-10-03) — Round 2 Q&A answers
+Context: answers to the 27 upfront Round 2 questions (Task folder round2_questions.md).
+
+Answers to round2_questions.md, verbatim as relayed by the coordinator:
+- Q1 Extra layout: "One Extra tile + sub-screen".
+- Q2: "Only if type has extras".
+- Q3: "Exempt" (Extra items are exempt from the ratio rules).
+- Q5 progress tracking: "Yes, same as others".
+- Q4 order: "Seeded shuffle".
+- Q6 5.11 verb cap: "≤6 of 200, ≤3 minority".
+- Q7 objects and actors, USER'S OWN ANSWER verbatim: "No object or person or animal repeat in more than 25% of test sets".
+- Q8/Q9: "As many as caps need".
+- Q10 tense: "Mixed past + present".
+- Q11 gender: "Via grammar, where clear".
+- Q12 templates, USER'S OWN ANSWER verbatim: "Use more natual explanations generally. Always first: evaluate, what everything is wrong on a picture, and what to the contrary should there be or be differently (make this evaluation first). Then propose 5 very short and coincise explanations in czech. Then let 3 evaluators rate them by factual correctness, czech language correctness and by which is the most natural czech language sentence. Decide the winner according to rates, for ties decide yourself (the currently executing agent). Use this for all categories."
+  - Follow-up answers: batching is allowed ("Yes, batch": the 3 evaluators can each score 20–50 texts per run). The 5-candidate process runs "Only those found flawed", after every text has been evaluated.
+- Q13: "Evaluate all, rewrite flawed".
+- Q14: "Fix all" (style issues included).
+- Q15 length, verbatim: "1 short sentence is prefered, but if no correctly explaing AND simple sentence exists (children need simple sentences), then it may be longer. But always prefer coinciness."
+- Q16: "Separately per variant".
+- Q17 [coordinator interpretation]: covered by the Q12 process.
+- Q18 stale `_why.mp3`: "Leave and list".
+- Q19 orphans: "Assess; good ones to Extra" (delete the rest one file per command, VERY carefully).
+- Q20 [coordinator interpretation]: approved items are cleaned up before the deploy and new orphans after it, as you recommended.
+- Q21 deploy: "After each phase" ([coordinator interpretation] deploy after EACH content phase, i.e. B, C1, C2, C3 and D, with the Extra mechanism shipped with the first one).
+- Q22/23 endgame: "Untracks + pending KB, then push".
+- Q24 mobile-apps [coordinator interpretation]: commit and push after each deploy, as authorized before.
+- Q25 Fable: "Advisor, ideas, evaluator" (final verifiers stay opus-medium-agent; Fable can be one of the 3 evaluators).
+- Q26 picture: "Re-render only that one".
+- Q27 other types' diversity: "Measure and report only".
+
+## User request 29 (verbatim, 2026-10-03) — Q7 clarification: what is a "test set"
+Context: clarification of the Q7 answer in User request 28 (5.11 rule "No object or person or animal repeat in more than 25% of test sets").
+
+- Question: For the 5.11 rule "No object or person or animal repeat in more than 25% of test sets", what is a "test set"?
+- User answer verbatim: "Group of 10 (≤2–3 groups of 10)".
+- Option description: "No object, person or animal in more than 25% of the 10 groups (1–10, …, 91–100). Much stricter, so far more replacement items."
+- [coordinator interpretation]: for regular items 1–100, each specific object, person role and animal may appear in items from at most 2 of the 10 groups (25% of 10 = 2.5). Extra is exempt.

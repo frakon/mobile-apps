@@ -14,7 +14,7 @@ export interface PausedGame {
   field: FieldId;
   // Sub-test part ("User follow-up request 21"): the paused-test identity is field + part —
   // resume must reopen exactly the same sub-test (e.g. "5.1 Reverzibilní věty 11–20").
-  part: TestPart; // group 1..10 since "User request 25"
+  part: TestPart; // group 1..10 since "User request 25"; Extra groups 11, 12, … (_TreninkPorozumeni_Fields123_PROMPTS.md "User request 28" Q5, src/rounds.ts)
   // Each round of roundPlan stores its drawn variant ("User request 25"), so resuming keeps
   // the same sentences / correct pictures; only a new start or restart re-draws.
   regime: Regime; // regime the paused plan was built for; a differing regime setting invalidates the pause

@@ -21,29 +21,96 @@ export type TestPart = number;
 export const EXAMPLES_PER_TEST_PART = 10;
 export const MAX_TEST_PARTS = 10;
 
+// Extra category (_TreninkPorozumeni_Fields123_PROMPTS.md, "User request 27" — never delete good items,
+// put them to an Extra category behind 1–10 … 91–100 — and "User request 28" Q1–Q5): items flagged
+// `extra: true` are NOT part of the regular 1–100; they are played as Extra groups of 10, reached via ONE
+// "Extra" tile + sub-screen (Q1), shown only for types that have extras (Q2), exempt from the ratio rules
+// (Q3), in a SEEDED shuffle order (Q4), and tracked like any other part incl. pause/resume (Q5).
+// Extra group g (1-based) is encoded as part number EXTRA_PART_OFFSET + g (11, 12, …), so the plain
+// numeric TestPart of the paused/resume state works unchanged.
+export const EXTRA_PART_OFFSET = MAX_TEST_PARTS;
+
 function examplesForField(field: FieldId): ComprehensionExample[] {
   return comprehensionExamples.filter((example) => example.field === field);
 }
 
-// Number of existing groups of a field (0 = empty type), capped at 10 (items 1–100).
+// Regular items 1–100 of a field (Extra items excluded), in items.ts order.
+function regularExamplesForField(field: FieldId): ComprehensionExample[] {
+  return examplesForField(field)
+    .filter((example) => example.extra !== true)
+    .slice(0, MAX_TEST_PARTS * EXAMPLES_PER_TEST_PART);
+}
+
+// Seeded, STABLE Extra order (Q4; coordinator decision R2-A): every Extra item gets a sort key = FNV-1a hash of
+// "<field id>:<item id>" mixed by one mulberry32 step; items are ordered by that key (ties by id). The order
+// is identical on every app start, and adding an item only inserts it — the relative order of the existing
+// Extra items never changes (a Fisher-Yates over the whole list would reshuffle all groups on every addition).
+function extraSortKey(field: FieldId, id: string): number {
+  const key = `${field}:${id}`;
+  let hash = 0x811c9dc5;
+  for (let index = 0; index < key.length; index++) {
+    hash = Math.imul(hash ^ key.charCodeAt(index), 0x01000193) >>> 0;
+  }
+  let value = (hash + 0x6d2b79f5) >>> 0;
+  value = Math.imul(value ^ (value >>> 15), value | 1);
+  value ^= value + Math.imul(value ^ (value >>> 7), value | 61);
+  return (value ^ (value >>> 14)) >>> 0;
+}
+
+// Extra items of a field in their seeded stable order (empty when the type has no extras).
+export function extraExamplesForField(field: FieldId): ComprehensionExample[] {
+  return examplesForField(field)
+    .filter((example) => example.extra === true)
+    .map((example) => ({ example, key: extraSortKey(field, example.id) }))
+    .sort((a, b) => a.key - b.key || (a.example.id < b.example.id ? -1 : a.example.id > b.example.id ? 1 : 0))
+    .map((entry) => entry.example);
+}
+
+// Number of existing regular groups of a field (0 = empty type), capped at 10 (items 1–100).
 export function testPartCount(field: FieldId): number {
-  return Math.min(MAX_TEST_PARTS, Math.ceil(examplesForField(field).length / EXAMPLES_PER_TEST_PART));
+  return Math.ceil(regularExamplesForField(field).length / EXAMPLES_PER_TEST_PART);
 }
 
-// "1–10", "11–20", … — the last group shows its real end when it is not full.
+// Number of Extra groups of 10 (0 = no Extra tile, Q2).
+export function extraTestPartCount(field: FieldId): number {
+  return Math.ceil(extraExamplesForField(field).length / EXAMPLES_PER_TEST_PART);
+}
+
+export function isExtraTestPart(part: TestPart): boolean {
+  return part > EXTRA_PART_OFFSET;
+}
+
+// Part numbers of the Extra sub-screen (11, 12, …).
+export function extraTestParts(field: FieldId): TestPart[] {
+  return Array.from({ length: extraTestPartCount(field) }, (_, index) => EXTRA_PART_OFFSET + index + 1);
+}
+
+// A regular group 1..testPartCount or an Extra group 11..10+extraTestPartCount.
+export function isValidTestPart(field: FieldId, part: TestPart): boolean {
+  if (!Number.isInteger(part) || part < 1) {
+    return false;
+  }
+  return isExtraTestPart(part) ? part - EXTRA_PART_OFFSET <= extraTestPartCount(field) : part <= testPartCount(field);
+}
+
+// "1–10", "11–20", … ; Extra groups "Extra 1–10", "Extra 11–20", … — the last group shows its real end when it is not full.
 export function testPartRangeLabel(field: FieldId, part: TestPart): string {
-  const first = (part - 1) * EXAMPLES_PER_TEST_PART + 1;
+  const groupIndex = isExtraTestPart(part) ? part - EXTRA_PART_OFFSET : part;
+  const first = (groupIndex - 1) * EXAMPLES_PER_TEST_PART + 1;
   const last = first - 1 + examplesForTestPart(field, part).length;
-  return `${first}–${last}`;
+  return `${isExtraTestPart(part) ? 'Extra ' : ''}${first}–${last}`;
 }
 
-// The examples of one sub-test (field + part), in the fixed items.ts order (pre-shuffle).
+// The examples of one sub-test (field + part), pre-shuffle: regular groups in the fixed items.ts order,
+// Extra groups in the seeded Extra order.
 export function examplesForTestPart(field: FieldId, part: TestPart): ComprehensionExample[] {
-  if (!Number.isInteger(part) || part < 1 || part > MAX_TEST_PARTS) {
+  if (!isValidTestPart(field, part)) {
     return [];
   }
-  const startIndex = (part - 1) * EXAMPLES_PER_TEST_PART;
-  return examplesForField(field).slice(startIndex, startIndex + EXAMPLES_PER_TEST_PART);
+  const extra = isExtraTestPart(part);
+  const startIndex = ((extra ? part - EXTRA_PART_OFFSET : part) - 1) * EXAMPLES_PER_TEST_PART;
+  const source = extra ? extraExamplesForField(field) : regularExamplesForField(field);
+  return source.slice(startIndex, startIndex + EXAMPLES_PER_TEST_PART);
 }
 
 // Variant chosen for one play of an example ("User request 25"): 1 = the base fields,

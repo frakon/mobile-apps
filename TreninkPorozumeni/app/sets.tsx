@@ -4,6 +4,9 @@
 // set starts the game for that type and group (fresh — it clears any paused test). Pause in
 // the game returns here, so this page also offers "Pokračuj v testu" (shared with the start page
 // via src/pausedTestOffer.tsx; decision logged in the task's open_questions.md).
+// Extra category (_TreninkPorozumeni_Fields123_PROMPTS.md "User request 27" + "User request 28" Q1/Q2): ONE "Extra" tile after the regular groups,
+// shown only if the type has Extra items; it opens this same screen as the Extra sub-screen (/sets?field=…&extra=1)
+// listing the Extra groups of 10 ("Extra 1–10", …; part numbers 11, 12, … — src/rounds.ts).
 
 import { useFocusEffect, useLocalSearchParams, useRouter } from 'expo-router';
 import React, { useCallback, useEffect, useRef } from 'react';
@@ -12,16 +15,19 @@ import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import { FIELDS, fieldLabel, FieldId } from '../src/items';
 import { clearPausedGame } from '../src/pausedGame';
 import { ResumeTestButton, usePausedTestOffer } from '../src/pausedTestOffer';
-import { testPartCount, testPartRangeLabel } from '../src/rounds';
+import { extraTestParts, testPartCount, testPartRangeLabel } from '../src/rounds';
 
 export default function TestSetsScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const params = useLocalSearchParams<{ field?: string }>();
+  const params = useLocalSearchParams<{ field?: string; extra?: string }>();
+  const showExtra = !Array.isArray(params.extra) && params.extra === '1';
   const fieldIsValid =
     !Array.isArray(params.field) && FIELDS.some((candidate) => candidate.id === params.field);
   const field = (fieldIsValid ? params.field : 'field51') as FieldId;
-  const parts = Array.from({ length: testPartCount(field) }, (_, index) => index + 1);
+  const extraParts = extraTestParts(field);
+  const parts = showExtra ? extraParts : Array.from({ length: testPartCount(field) }, (_, index) => index + 1);
+  const showExtraTile = !showExtra && extraParts.length > 0;
   const pausedTest = usePausedTestOffer();
 
   // Same double-tap guard as the start page; re-armed on focus.
@@ -62,7 +68,7 @@ export default function TestSetsScreen() {
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
       >
-        <Text style={styles.title}>{fieldLabel(field)}</Text>
+        <Text style={styles.title}>{showExtra ? `${fieldLabel(field)} — Extra` : fieldLabel(field)}</Text>
         {pausedTest !== null && (
           <ResumeTestButton
             pausedTest={pausedTest}
@@ -99,6 +105,20 @@ export default function TestSetsScreen() {
                 <Text style={styles.setButtonLabel}>{testPartRangeLabel(field, part)}</Text>
               </Pressable>
             ))}
+            {showExtraTile && (
+              <Pressable
+                style={[styles.setButton, styles.extraButton]}
+                onPress={() => {
+                  if (navigationPendingRef.current) {
+                    return;
+                  }
+                  navigationPendingRef.current = true;
+                  router.push({ pathname: '/sets', params: { field, extra: '1' } });
+                }}
+              >
+                <Text style={styles.setButtonLabel}>Extra</Text>
+              </Pressable>
+            )}
           </View>
         )}
       </ScrollView>
@@ -158,7 +178,7 @@ const styles = StyleSheet.create({
     color: '#A79C87',
     textAlign: 'center',
   },
-  // Up to 10 sets: 5 per row (2 rows) on both iPad and landscape iPhone.
+  // Up to 10 sets (+ the Extra tile): 5 per row on both iPad and landscape iPhone.
   setButtonsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -174,6 +194,9 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  extraButton: {
+    backgroundColor: '#B8D98A',
   },
   setButtonLabel: {
     fontSize: 24,
