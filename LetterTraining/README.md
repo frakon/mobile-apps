@@ -112,9 +112,8 @@ the task `words.json` (re-run it after new pictures are accepted; never edit it 
 an ACCEPTED picture (`assets/images/<id>.png` + accepted `blind_test_data/_blind_test_log/<id>.md`) and exports `WORDS`
 (word, syllables, firstLetter, alternativeNames, excludeLevel1/2/3, hasAudioFirst, hasAudioLast; pictures/audio live in backend `words/<id>.zip`),
 `LETTER_AUDIO`, `SYLLABLE_AUDIO` (real + synthetic syllables) and `REAL_SYLLABLES` (all words.json syllables).
-Level 1 plays the plain word, Level 2 the word read naturally with the first syllable separated by a space ("no viny",
-`audio/words_first/`), Level 3 read with the last syllable separated ("novi ny", `audio/words_last/`) — one natural TTS
-reading per file, no syllable concatenation or artificial emphasis ("## Follow-up prompt 12"). `excludeLevelN` words are skipped in that level; in Level 1 only
+Level 1 plays the plain word, Level 2 (`audio/words_first/`) and Level 3 (`audio/words_last/`) play the complete unchanged
+word too (byte copies of `audio/words/`, "## Change request 15"); all audio is ElevenLabs raw (text-to-speech skill, see `assets/audio/audio_texts.md` and "## ElevenLabs regeneration of all sounds (2026-10-04)" in `_LetterTraining_PROMPTS.md`). `excludeLevelN` words are skipped in that level; in Level 1 only
 letters with >= 3 eligible words can be the correct answer (a level without eligible words shows „Pro tuto úroveň
 zatím nejsou žádná slova."). `assets/placeholder/` is no longer used.
 

@@ -38,20 +38,20 @@ test('every LETTER_AUDIO / PEXESO_LETTER_AUDIO key resolves to an existing file 
   }
 });
 
-test('general map: every vowel variant reads one long vowel; y/ý keep ypsilon', () => {
+test('general map: every vowel variant reads one long vowel; y/ý read as "í" (i_long)', () => {
   const expected: Record<string, string> = {
     'a': 'a_long', 'á': 'a_long', 'e': 'e_long', 'é': 'e_long', 'i': 'i_long', 'í': 'i_long',
-    'o': 'o_long', 'ó': 'o_long', 'u': 'u_long', 'ú': 'u_long', 'ů': 'u_long', 'y': 'y', 'ý': 'yy',
+    'o': 'o_long', 'ó': 'o_long', 'u': 'u_long', 'ú': 'u_long', 'ů': 'u_long', 'y': 'i_long', 'ý': 'i_long',
   };
   for (const [letter, name] of Object.entries(expected)) {
     expect({ letter, file: path.basename(general.get(letter) ?? '') }).toEqual({ letter, file: `${name}.mp3` });
   }
 });
 
-test('pexeso map keeps distinguishing readings', () => {
+test('pexeso map keeps distinguishing readings (y/ý keep their names, to stay distinguishable from i)', () => {
   const expected: Record<string, string> = {
     'a': 'a_long', 'á': 'aa', 'e': 'e_long', 'é': 'ee', 'i': 'i_soft_long', 'í': 'ii',
-    'o': 'o_long', 'ó': 'oo', 'u': 'u_long', 'ú': 'uu', 'ů': 'uo',
+    'o': 'o_long', 'ó': 'oo', 'u': 'u_long', 'ú': 'uu', 'ů': 'uo', 'y': 'y', 'ý': 'yy',
   };
   for (const [letter, name] of Object.entries(expected)) {
     expect({ letter, file: path.basename(pexeso.get(letter) ?? '') }).toEqual({ letter, file: `${name}.mp3` });

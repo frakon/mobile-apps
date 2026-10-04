@@ -509,7 +509,7 @@ export const PEXESO_WORDS: readonly PexesoWord[] = [
 ];
 
 // Spoken letter per lowercase letter key ("ch" is one letter).
-// Pexeso DISTINGUISHING vowel readings (A "á" long, Á "dlouhé á", I "měkké í", í "dlouhé měkké í", E/O/U "é/ó/ú" long,
+// Pexeso DISTINGUISHING vowel readings (A "á" long, Á "dlouhé á", I "í" (liška), í "dlouhé í", E/O/U "é/ó/ú" long,
 // ú/ů named) - LetterTraining `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 11" + "## Q&A 11" + "## Follow-up prompt 16".
 export const PEXESO_LETTER_AUDIO: Readonly<Partial<Record<string, number>>> = {
   'a': require('../assets/audio/letters/a_long.mp3'),

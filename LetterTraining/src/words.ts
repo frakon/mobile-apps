@@ -11,8 +11,8 @@
 // `_LetterTraining_PROMPTS.md` / "## Initial request (2026-10-01)", "## Follow-up prompt 1 (verbatim)",
 // "## Q&A 2 (verbatim answers)", "## Follow-up prompt 2 (verbatim)", "## Q&A 3 (pilot)",
 // "## Follow-up prompt 3 (verbatim)" (audioFirst = Level 2 audio, audioLast = Level 3 audio); since
-// "## Follow-up prompt 12" the word is read naturally with the first ("no viny") / last ("novi ny") syllable
-// separated by a space - no emphasis.
+// "## Change request 15" first.mp3/last.mp3 are the complete unchanged word (same text as word.mp3); all audio is ElevenLabs
+// (text-to-speech skill), see "## ElevenLabs regeneration of all sounds (2026-10-04)" in `_LetterTraining_PROMPTS.md`.
 
 import { LetterAudioMap, SyllableAudioMap, WordEntry } from './wordStarts/types';
 
@@ -532,7 +532,7 @@ export const WORDS: readonly WordEntry[] = [
   { id: 'dlazdice', word: 'dlaždice', syllables: ['dlaž', 'di', 'ce'], firstLetter: 'd', alternativeNames: ['kachlička'], excludeLevel1: false, excludeLevel2: false, excludeLevel3: false, hasAudioFirst: true, hasAudioLast: true },
 ];
 
-// Vowels a/á, e/é, i/í, o/ó, u/ú/ů all read as one clearly LONG vowel (á/é/í/ó/ú, *_long.mp3; y/ý keep ypsilon) -
+// Vowels a/á, e/é, i/í, o/ó, u/ú/ů all read as one clearly LONG vowel (á/é/í/ó/ú, *_long.mp3; y/ý read as "í" = i_long.mp3, text-to-speech skill; since 2026-10-04 each *_long.mp3 is a byte copy of the vowel's letter-name file a/e/i/o/u.mp3, not separately generated - `_LetterTraining_PROMPTS.md` / "## ElevenLabs regeneration of all sounds (2026-10-04)") -
 // `_LetterTraining_PROMPTS.md` / "## Follow-up prompt 11" (pronunciation bullet) + "## Follow-up prompt 16 — Long vowel pronunciation everywhere".
 export const LETTER_AUDIO: LetterAudioMap = {
   'a': require('../assets/audio/letters/a_long.mp3'),
@@ -573,8 +573,8 @@ export const LETTER_AUDIO: LetterAudioMap = {
   'v': require('../assets/audio/letters/v.mp3'),
   'w': require('../assets/audio/letters/w.mp3'),
   'x': require('../assets/audio/letters/x.mp3'),
-  'y': require('../assets/audio/letters/y.mp3'),
-  'ý': require('../assets/audio/letters/yy.mp3'),
+  'y': require('../assets/audio/letters/i_long.mp3'),
+  'ý': require('../assets/audio/letters/i_long.mp3'),
   'z': require('../assets/audio/letters/z.mp3'),
   'ž': require('../assets/audio/letters/zx.mp3'),
 };

@@ -27,8 +27,10 @@ export const PEXESO_WORDS: readonly PexesoWord[] = WORDS.filter((entry) => !entr
 }));
 
 // Pexeso keeps DISTINGUISHING vowel readings, unlike the general long-vowel LETTER_AUDIO (A "á" long, Á "dlouhé á",
-// I "měkké í", í "dlouhé měkké í", E/O/U "é/ó/ú" long, ú/ů named) - `_LetterTraining_PROMPTS.md` /
+// I "í" (liška), í "dlouhé í", E/O/U "é/ó/ú" long, ú/ů named) - `_LetterTraining_PROMPTS.md` /
 // "## Follow-up prompt 11" + "## Q&A 11" + "## Follow-up prompt 16 — Long vowel pronunciation everywhere".
+// y/ý keep their NAMES (y.mp3 "ypsilon", yy.mp3 "dlouhé ypsilon"): the general LETTER_AUDIO reads y/ý as "í", which would be
+// indistinguishable from the i cards in pexeso.
 export const PEXESO_LETTER_AUDIO: LetterAudioMap = {
   ...LETTER_AUDIO,
   'a': require('../../assets/audio/letters/a_long.mp3'),
@@ -42,6 +44,8 @@ export const PEXESO_LETTER_AUDIO: LetterAudioMap = {
   'u': require('../../assets/audio/letters/u_long.mp3'),
   'ú': require('../../assets/audio/letters/uu.mp3'),
   'ů': require('../../assets/audio/letters/uo.mp3'),
+  'y': require('../../assets/audio/letters/y.mp3'),
+  'ý': require('../../assets/audio/letters/yy.mp3'),
 };
 
 // One identical ear-with-sound picture on every sound card - "Q&A 9 — Pexeso improvements round 2".

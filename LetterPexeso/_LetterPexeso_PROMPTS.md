@@ -104,3 +104,72 @@ standalone LetterPexeso gets the same treatment).
 - Settings preview: three bundled 168 px samples (decision 9), copies of LetterTraining's `assets/images/pexeso_samples`.
 - `src/pexesoWords.ts` no longer `require`s word images/audio (they stay in `assets/` unreferenced, not bundled).
 - Start animation (decision 4): not part of this step — arrives with the shared `PexesoGame.tsx` from LetterTraining Phase D.
+
+
+## ElevenLabs regeneration of all sounds (2026-10-04)
+Prompt 1 (verbatim, /ios-expo-react-native invocation): "Regenerate all sounds in applications LetterPexeso and LetterTraining by the new skill: text-to-speech using everywhere the elevenLabs method and the scripts/methods described in the skill (they override any method/instruction used till now). Also: I want the syllables to have just one form (to be generated in just one form): not trying to generate it for mid-word and word-end separatelly."
+
+Prompt 2 (verbatim, follow-up while exploration was running): "Then: commit, push, deploy apps"
+
+Note (not a user prompt): this supersedes the Vlasta/edge-tts audio and post-processing of the earlier prompts (long-vowel stretching/trim/fade of "## Follow-up prompt 16/18" etc.); everything is ElevenLabs raw per the text-to-speech skill (voice CzKids_Bedtime_BestVoice, eleven_v4, language cs, mp3_44100_192). Task record: endgame2 AGENTS/Tasks/20261004_063630_RegenerateLetterAppsSoundsElevenLabs/. Syllables use the single unified method with a carrier word each (`syllable_carrier_words.json` in the task folder, listed in `assets/audio/audio_texts.md`). `letters_en/` (English) not regenerated; orphan files not regenerated/deleted. The commit/push/deploy part is handled by the master agent, not by the generation agent.
+
+Q&A (verbatim, follow-up after verification): Q: "Syllables and *_long vowels made with next_text come out cut off (the text has no trailing period). Adding a final "." to the text ("pe.", "á."), with previous_text and next_text unchanged, gave a clean ending in 14 of 14 test runs. How do I proceed?" A: "Listen to samples first"
+
+Q&A (verbatim): Q: "Two smaller changes the implementer made or skipped. What should I do about the letter "ú" name and the "y"/"ý" pronunciation?" A: "Revert ú name, y/ý -> í (Recommended)" (option text: Letter ú goes back to "ú s čárkou" (the implementer changed it to "dlouhé ú" without being asked). y/ý pronunciation files use "í" per the skill, with the test file updated accordingly.)
+
+Prompt (verbatim, user question during the listening trials, about the syllable method): "How were the syllable sounds created? With "Slabika:" as previous_text:? If yes: I want it to be regenerated (as another trial) also without any "previous_text", just with "next_text"."
+
+Prompt (verbatim, listening-trial follow-up): "And, instead of trimming: generate also variants with fade out: start untouched and end being shortened to standardized 100ms and 150ms with fadeout"
+
+Prompt (verbatim, listening-trial follow-up): "tr, zr, hr, br use directly from variant 2 without trimming. Ad trimming: create yet variants with longer trimming and the former trimmed variants without trimming the starts at all (also the longer trimming variants shall not have the start trimmed at all)."
+
+Prompt (verbatim, listening feedback): ""tr", "zr", "hr" sound better in variant 2, everything else sounds better in variant 3. But all variants 3 have "long empty end", or long fade out end ... could you appoint a subagent to make it shorter (by some postprocessing)? E.g. to imply faster fadeout to the already fading out part of the sound?"
+
+Prompt (verbatim, decision after the no-previous_text trial and the post-processing trials): "The variants without "Slabika:" are clearly better. Let's go that way. For everything except hr, br, tr, zr the single "_take2" variant is the best. No further modification of that is needed (no fade out or trimming)."
+
+Note (not a user prompt): decision implemented 2026-10-04: syllables (except the 16 vowel-less ones, whose recipe the user chooses later; their files stay untouched) and the six `*_long` pronunciation files are regenerated raw with text `"<syllable>."` (trailing period), next_text `"jako ve slově <carrier>"`, NO previous_text, language cs, no trim / fade / post-processing; flagged files (cut-off / near-silent / very short) got up to 3 retake attempts. Letter names (previous_text `"Písmeno:"`) and words are unchanged. Scripts: task folder `scripts/regen_noprev.py`, results `noprev_results.json`.
+
+### Vowel-less syllables: final recipe (follow-up, 2026-10-04)
+Context: the user listened to the 32 trial variants in `ListenSamples/VowelLess` (hr, br, tr, zr; slash-IPA vs plain letters, period vs comma, 2 takes each) and chose.
+
+User decision (verbatim): "Use for all the _plain_comma_t2 variant (for all hr, br, tr and similar) as it is."
+
+Note (not a user prompt): implemented for all 16 vowel-less syllables (bl, br, chl, cvr, fr, gr, hr, mr, prs, prst, srd, tr, vlk, vr, zmrz, zr): plain letters (no slash-IPA), text `"<syllable>,"` (trailing comma), next_text `"jako ve slově <carrier>"`, no previous_text, language cs, raw. hr/br/tr/zr = the existing `_plain_comma_t2` trial files copied byte-identically; the other 12 generated (script `vowelless_final.py`, results `vowelless_final_results.json` in the task folder). Syllable files exist only in LetterTraining; recorded here too for consistency.
+
+
+### *_long vowel files = copies of the vowel letter files (follow-up, 2026-10-04)
+Context: after the regeneration, the user listened to the apps; the `*_long.mp3` vowel files (a_long, e_long, i_long, i_soft_long, o_long, u_long; made with text "á."/"é."/... + next_text "jako ve slově <word>") sounded odd.
+
+Prompt (verbatim): 'Ad a_long and e_long: they sound weird. I want them (and analogous ones) to be created exactly as the "a.mp3" and "e.mp3". I also want the skill text-to-speech to be updated in this way (so that sounds like a_long and e_long are never more created). This holds only for vowels.'
+
+Prompt (verbatim, correction): 'Not forbiding long vowel form, but generating it in the same way as "a.mp3"'
+
+Clarification question asked by the master (verbatim as relayed, abbreviated by "..." in the relay): 'What exactly differs between how a.mp3 was made and how a_long was made? ... Which part should a_long take from a.mp3?'
+
+User answer (verbatim): "Nothing differs between them (the sound and the creation). The only difference is that "a.mp3" corresponds to vowel "a" and "a_long.mp3" corresponds to vowel "á". But they are pronounced exactly the same and shall be created in the same way (and since a.mp3 is already created: we can create a_long.mp3 as copy of a.mp3)."
+
+Note (not a user prompt): implemented as byte copies in `assets/audio/letters`: a_long = a.mp3, e_long = e.mp3, i_long = i_soft_long = i.mp3, o_long = o.mp3, u_long = u.mp3 (file names unchanged; code/tests unchanged). Task scripts: `build_jobs.py` (`LONG_COPY`), `gen_audio_texts.py`.
+
+
+### Misread syllables: only the slash-IPA (V2) files are right (follow-up, 2026-10-04)
+Context: the user listened to the Misread trial (`ListenSamples/Misread`: sy, lec, xy, pid, cvr, xo, uk, xi in variants V1-V6) and to the installed syllables.
+
+Prompt (verbatim, earlier feedback): "all lec, xy, sy, pid and cvr are wrong. E.g. "sy" is pronounced as "es ypsilon", the "lec" is pronounced as "el é cé", etc."
+
+Prompt (verbatim, feedback on the trial): "Ad cvr: only the cvr_V2_ipa_t1 and cvr_V2_ipa_t2 files have it right. And the same for everything else."
+
+Note (not a user prompt): interpreted as: for every syllable of the trial (sy, lec, xy, pid, cvr, xo, uk, xi) only the V2 slash-IPA files are right. Implemented 2026-10-04: `<syl>_V2_ipa_t1.mp3` installed as a byte copy over `assets/audio/syllables/<syl>.mp3` (LetterTraining only; the LetterPexeso app has no syllable files). Other scan suspects (hvěz, naut, ap, mat, nec, min, qe, rov, tec, svíč, špend) got slash-IPA samples in `ListenSamples/Misread2` (not installed, awaiting the user's listening). Scripts: `misread2.py`, `gen_audio_texts.py`.
+
+
+### IpaSlashContext / IpaCut feedback: Q4 recipe for ap, mat, uk (follow-up, 2026-10-04)
+Context: the user listened to the IpaCut trial (cut variants) and the IpaSlashContext trial (`ListenSamples/IpaSlashContext`: ap, mat, uk, sy, xy in recipes Q1-Q6, slashes in previous_text/next_text).
+
+Prompt (verbatim): "Ad IpaCut: none is right. Ad IpaSlashContext: Q1, Q4, Q5, Q6 are correct for ap, mat, uk. All QX are correct for sy and xy."
+
+Note (not a user prompt): implemented 2026-10-04: `ap_Q4_t1.mp3`, `mat_Q4_t1.mp3`, `uk_Q4_t1.mp3` installed as byte copies over `assets/audio/syllables/{ap,mat,uk}.mp3` (LetterTraining only; the LetterPexeso app has no syllable files). Q4 request: text `"<syl>,"`, previous_text `"/"`, next_text `"/ jako ve slově <carrier>"`, model eleven_v4, language_code cs. sy and xy stay as the installed V2 slash-IPA files. Q4-recipe samples for the other suspects (hvěz, naut, nec, min, qe, rov, tec, svíč, špend) are in `ListenSamples/Q4Suspects` (not installed). Scripts: `q4_install_and_suspects.py`, `gen_audio_texts.py`.
+
+Prompt (verbatim, feedback on the Q4Suspects trial): "Ad Q4Suspects: all are pronounced correctly"
+
+Note (not a user prompt): implemented 2026-10-04: `<f>_Q4_t1.mp3` for hvěz, naut, nec, min, qe, rov, tec, svíč, špend (`hvexz`, `naut`, `nec`, `min`, `qe`, `rov`, `tec`, `sviicx`, `sxpend`) from `ListenSamples/Q4Suspects` installed as byte copies over `assets/audio/syllables/<f>.mp3` (LetterTraining only; LetterPexeso has no syllable files). Q4 recipe as above (rendered text = IPA/Czech letters followed by a comma, previous_text `"/"`, next_text `"/ jako ve slově <carrier>"`). Scripts: `q4_install_suspects.py`, `gen_audio_texts.py`.
+
+Agent note (not a user prompt, record correction 2026-10-04): (1) the 11 syllables pe, to, a, ho, ki, hi, ché (file chee), qu, nú (nuu), ďu (dxu), ut are NOT plain regenerations but byte copies of the user-approved `ListenSamples/NoPrevious/<item>_N1_noprev_period_take2.mp3` trial files (same plain recipe: text `"<syl>."` + next_text, no previous_text; the user chose these takes); LetterPexeso has no syllable files, the syllables belong to LetterTraining. (2) The letter name ú (file uu.mp3) was regenerated with text `"ú s čárkou."` + previous_text `"Písmeno:"` (ú revert at the user's request).
