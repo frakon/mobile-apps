@@ -113,7 +113,7 @@ export interface SwappedVariant {  // same picture set, target <-> grammatical d
 
 ## Assets (strict naming contract, per-example)
 
-- Audio: `assets/audio/<id>.mp3` (Edge TTS, cs-CZ neural voice). Migrated 5.1 examples reuse the old `<id>_a.mp3` names.
+- Audio: `assets/audio/<id>.mp3` (ElevenLabs TTS, Czech voice, mp3 44.1 kHz / 192 kbps / mono, since 2026-10-04 per type batch). Migrated 5.1 examples reuse the old `<id>_a.mp3` names.
 - Explanation audio: `assets/audio/<id>_gram_why.mp3`, `<id>_lexa_why.mp3`, `<id>_lexb_why.mp3` (same TTS voice). Generated and wired for all 1500 examples (15 types × 100), both variants (variant 2: `<id>_v2.mp3`, `<id>_v2_gram_why.mp3`, `<id>_v2_lexa_why.mp3`, `<id>_v2_lexb_why.mp3`); if a file were ever missing the model field stays `null` and the game falls back to the plain 500 ms red tint.
 - Images: `assets/images/<id>_target.png`, `<id>_gram.png`, `<id>_lexa.png`, `<id>_lexb.png` — children-friendly painted fairy-tale-book style, only the described situation, no background/extras. Migrated 5.1 examples reuse the old `<id>_a.png`/`<id>_b.png` names for target/gram.
 - Provenance: a `.txt` file next to every generated image (service + parameters + verbatim prompt). Non-runtime files (`.txt`, `.md`, `.part`) are excluded by `metro.config.js` and by the packer ("User request 26"; not moved, because content managers edit `assets/` in parallel).

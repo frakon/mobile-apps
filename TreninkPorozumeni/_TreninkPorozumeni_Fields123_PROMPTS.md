@@ -304,3 +304,25 @@ Context: clarification of the Q7 answer in User request 28 (5.11 rule "No object
 - User answer verbatim: "Group of 10 (≤2–3 groups of 10)".
 - Option description: "No object, person or animal in more than 25% of the 10 groups (1–10, …, 91–100). Much stricter, so far more replacement items."
 - [coordinator interpretation]: for regular items 1–100, each specific object, person role and animal may appear in items from at most 2 of the 10 groups (25% of 10 = 2.5). Extra is exempt.
+
+## User request 30 (verbatim, 2026-10-04) — ElevenLabs regeneration of all TTS sounds
+
+"There is a new skill text-to-speech. I would like you to manage by another L1 agent a regeneration of all "text to speech"-like sounds in the TreninkPorozumeni application using everywhere the elevenLabs method and the scripts/methods described in the skill (they override any method/instruction used till now). Also: I want the syllables to have just one form (to be generated in just one form): not trying to generate it for mid-word and word-end separatelly."
+
+- Question: "Another session already regenerated LetterTraining + LetterPexeso with ElevenLabs, with syllables in one form, but without the skill's „Slabika:" lead-in. What should the ElevenLabs regeneration phase cover?"
+- User answer verbatim: "TreninkPorozumeni only (Recommended)".
+- Option description: "Leave LetterTraining and LetterPexeso as the other session made them."
+
+## User request 31 (verbatim, 2026-10-04) — answers to ElevenLabs questions Q-E1..Q-E10
+
+- Q-E1 quota: "I count with that and I enabled pay-as-you-go with 0.08$/1000k characters and limit 500$. That means upto about 6M characters, so you are fine."
+- Q-E2: "No need to see it: upto 6M you are fine." (still Fatal stop on 401/quota)
+- Q-E3 order: "Generate by ElevenLabs the test types that are already rewritten, then continue to rewrites which will finish later (after they finish)"
+- Q-E4: "Raw, no trimming now (may be requested later)."
+- Q-E5: "No checks now. Deploy it and I will check it directly in the application."
+  - L2 interpretation (not user words): no listening/quality checks; keep cheap automatic integrity checks (exists, mono/44.1k/192k, non-zero sane duration, TS==text).
+- Q-E6: "Per batch of finished types"
+- Q-E7: "Keep committing"
+- Q-E8 speed: "Default speed"
+- Q-E9: "Generate once, copy"
+- Q-E10: "List only"
