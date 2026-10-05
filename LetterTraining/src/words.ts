@@ -13,6 +13,9 @@
 // "## Follow-up prompt 3 (verbatim)" (audioFirst = Level 2 audio, audioLast = Level 3 audio); since
 // "## Change request 15" first.mp3/last.mp3 are the complete unchanged word (same text as word.mp3); all audio is ElevenLabs
 // (text-to-speech skill), see "## ElevenLabs regeneration of all sounds (2026-10-04)" in `_LetterTraining_PROMPTS.md`.
+// Syllable audio (SYLLABLE_AUDIO files) regenerated 2026-10-05 under the final syllable rules of the text-to-speech skill (request frame
+// text "<T>," + previous_text "/" + next_text "/ jako ve slově <carrier>", ways per syllable class, automatic check, fallback ladder): see
+// "## Syllable regeneration under the final text-to-speech rules (2026-10-05)" in `_LetterTraining_PROMPTS.md` and `assets/audio/audio_texts.md`.
 
 import { LetterAudioMap, SyllableAudioMap, WordEntry } from './wordStarts/types';
 

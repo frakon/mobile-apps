@@ -173,3 +173,45 @@ Prompt (verbatim, feedback on the Q4Suspects trial): "Ad Q4Suspects: all are pro
 Note (not a user prompt): implemented 2026-10-04: `<f>_Q4_t1.mp3` for hvěz, naut, nec, min, qe, rov, tec, svíč, špend (`hvexz`, `naut`, `nec`, `min`, `qe`, `rov`, `tec`, `sviicx`, `sxpend`) from `ListenSamples/Q4Suspects` installed as byte copies over `assets/audio/syllables/<f>.mp3` (LetterTraining only; LetterPexeso has no syllable files). Q4 recipe as above (rendered text = IPA/Czech letters followed by a comma, previous_text `"/"`, next_text `"/ jako ve slově <carrier>"`). Scripts: `q4_install_suspects.py`, `gen_audio_texts.py`.
 
 Agent note (not a user prompt, record correction 2026-10-04): (1) the 11 syllables pe, to, a, ho, ki, hi, ché (file chee), qu, nú (nuu), ďu (dxu), ut are NOT plain regenerations but byte copies of the user-approved `ListenSamples/NoPrevious/<item>_N1_noprev_period_take2.mp3` trial files (same plain recipe: text `"<syl>."` + next_text, no previous_text; the user chose these takes); LetterPexeso has no syllable files, the syllables belong to LetterTraining. (2) The letter name ú (file uu.mp3) was regenerated with text `"ú s čárkou."` + previous_text `"Písmeno:"` (ú revert at the user's request).
+
+### QuCandidates listening feedback: qu = "kvu" (follow-up, 2026-10-04)
+
+Context: after listening to `ListenSamples/QuCandidates/` (15 request variants x 2 takes of qu candidates + old qu files), the user answered:
+
+User feedback (verbatim): "Ad QuCandidates: ku both correct; kv: only kv_Q4_kviz_t2.mp3 is fully correct (kv_Q4_kviz_t1.mp3 is not correct; the three kv_V2_nextquad_t1.mp3, kv_V2_nextquad_t2.mp3 and kv_V2_nocontext_t1.mp3 would have the sound right, but it is inside "lomítko" word); kvu: correct everywhere; old_00_INSTALLED_now_qu.mp3 is very incorrect (sounds like "g"); all old_ are incorrect."
+
+Question: which sound should 'qu' have? User answer (verbatim): "kvu (correct everywhere)"
+
+Question: wider fix? User answer (verbatim): "Fix qu, you check a random sample first"
+
+Result: `LetterTraining/assets/audio/syllables/qu.mp3` = byte copy of `ListenSamples/QuCandidates/kvu_Q4_quad_t1.mp3` (Q4 recipe: text "kvu," + previous_text "/" + next_text "/ jako ve slově quad"); a random sample of installed plain-recipe syllables was prepared in `ListenSamples/RandomInstalled/` for the user to listen to.
+
+Note: LetterPexeso has no syllable files; the qu change concerns LetterTraining only.
+
+### RandomInstalled listening feedback and Q4 regeneration of all syllables (follow-up, 2026-10-04)
+
+Context: after the "Fix qu, you check a random sample first" decision the master took a random sample (seed 20261004) of 40 installed plain-recipe syllable files (`ListenSamples/RandomInstalled/`) and the user listened to it; the user also commented on the earlier list of saa, butx, sxek, zxo, oz, uon and nen.
+
+User feedback (verbatim, RandomInstalled): "Ad RandomInstalled: all correct except: eep__eep.mp3 says full "epizoda", had__had.mp3 says "hed" instead of correct czech "had", mra__mra.mp3 is with sigh and very feeble "mrh" sound, oos__oos.mp3 sounds like "ús" - not as correct "ós", qa__qa.mp3 is spelled separatelly and as in english ("kju: ei") - was there czech language specified? Or was the word used as example czech enough?, quu__quu.mp3 sounds like "ú", uum__uum.mp3 sounds like nasal "nnn". Everything else in RandomInstalled is correct."
+
+User feedback (verbatim, follow-up): "Ad "saa, butx, sxek, zxo, oz, uon and ne": the saa, butx, sxek, zxo: all are correct in Q4Historical folder; oz is correct in folder RandomInstalled (I did not find it anywhere else); I cannot find uon and nen anywhere in ListenSamples."
+
+Earlier agreement (see the previous section): answer 'Fix qu, you check a random sample first': "If you find problems there, we regenerate everything with Q4".
+
+Result (agent note, not a user prompt): 7 of 40 plain-recipe files were wrong, so all syllables of SYLLABLE_AUDIO (829) were regenerated with recipe Q4 (text `"<syl>,"`, previous_text `"/"`, next_text `"/ jako ve slově <carrier>"`, eleven_v4, language_code cs, raw) EXCEPT the keep-set: the 33 sampled files the user confirmed correct, the 10 approved take2 files, qu, the 16 vowel-less ones, the 7 slash-IPA V2 ones, the 12 approved Q4 ones, and the 7 wrong ones (eep, had, mra, oos, qa, quu, uum; variants made by another job, current files untouched). `language_code` cs was sent in every request (it is in the request body of `q4_historical.py`, `q4_install_suspects.py` and this run). Details: task folder `AGENTS/Tasks/20261004_063630_RegenerateLetterAppsSoundsElevenLabs/` (`q4_regen_results.json`, `q4_regen_install_manifest.json`, `ListenSamples/RandomInstalled2/`).
+
+### SevenWrong listening feedback and installed takes (follow-up, 2026-10-04)
+
+Context: the user listened to `AGENTS/Tasks/20261004_063630_RegenerateLetterAppsSoundsElevenLabs/ListenSamples/SevenWrong` (variants A-D per syllable, qa also E-H; A = Czech letters + original carrier, B = IPA letters + original carrier, C = Czech letters + new Czech carrier, D = IPA letters + new Czech carrier).
+
+User feedback (verbatim): "Ad SevenWrong: eep: all correct; had: A is almost correct, but sounds more like with english accent, had in B,C,D is fully correct; mra: correct everywhere; oos: correct everywhere; qa: A,C,E-H not correct (sounds like "ka"), B and D correct; quu: A,C not correct (sounds like "ků"), B and D correct; úm: correct everywhere".
+
+Result (agent note, not a user prompt): per syllable one user-approved take was installed as a byte copy, chosen by measurement (cleanest among the approved variants): eep = eep_D_era_t2, had = had_D_hadice_t2, mra = mra_D_mrak_t2, oos = oos_A_oda_t2, qa = qa_D_Katar_t2, quu = quu_B_quad_t2 (1.12 s, the only B/D takes with a trailing silence >= 0.1 s are longer than 1.0 s), uum = uum_B_umysl_t1. Texts/carriers are in `assets/audio/audio_texts.md` (EXCEPTION 5); `scripts/seven_wrong_install.py`, `seven_wrong_install_report.json` in the task folder.
+
+### KveXu listening feedback, installed takes, gong/loud status (follow-up, 2026-10-04)
+
+Context: the user listened to `AGENTS/Tasks/20261004_063630_RegenerateLetterAppsSoundsElevenLabs/ListenSamples/KveXu` (kvě variants A0-A3 = Czech letters "kvě" with carriers květina/květák/květ/kvést, B1-B2 = IPA kvjɛ with carriers květen/květina, C1 = Czech letters "kve" with carrier květák; xú variants I1-I3 = IPA ksuː with carriers boxů/luxus/Xu, G1 = IPA ɡzuː, R0 = Czech letters "xú"; Q4 recipe: previous_text "/", next_text "/ jako ve slově <carrier>").
+
+User feedback (verbatim): "Ad KveXu folder: kve: all A0-A3 are saying "květen", all B1-B2 correct "kvě" (if it should have been softened), both C1 are saying "kve"; xuu is correct in I1-I3 (pronounced as "ksú", everywhere else incorrect)".
+
+Result (agent note, not a user prompt): kvex.mp3 = byte copy of kve_B1_kveten_t2.mp3 (text "kvjɛ,", carrier květen; 0.72 s, one voiced segment 0.50 s, trailing silence 0.19 s, last-10ms level -81.6 dB; B1 t1 is flagged cut-off, B2 takes were 0.64 s with 0.11-0.13 s trailing silence; B1 t2 has the most trailing margin), xuu.mp3 = byte copy of xuu_I1_boxu_t2.mp3 (text "ksuː,", carrier boxů; 1.12 s, one segment 0.61 s, trailing silence 0.47 s, the shortest tail and the loudest peak -4.8 dBFS among I1-I3; all I takes are >1.0 s only because of trailing silence). gong.mp3 and loud.mp3 keep the files of the first ElevenLabs regeneration (the Q4 takes were unusable: gong best take 0.16 s near silent, loud four takes of 0.08 s); variants for the user to pick (2 takes each, not installed) are in `ListenSamples/GongLoud/`. Texts/carriers in `assets/audio/audio_texts.md` (EXCEPTION 6, 7); `scripts/kvex_xuu_install.py`, `kvex_xuu_install_report.json`, `scripts/gong_loud.py` in the task folder.
