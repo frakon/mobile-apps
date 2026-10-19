@@ -326,3 +326,13 @@ Context: clarification of the Q7 answer in User request 28 (5.11 rule "No object
 - Q-E8 speed: "Default speed"
 - Q-E9: "Generate once, copy"
 - Q-E10: "List only"
+
+## User request 32 (verbatim, 2026-10-19) — Explanation audio tone (wrong-answer `_why` files)
+
+Context: the shipped `<id>_gram_why|_lexa_why|_lexb_why.mp3` files (and the `_v2_` ones) were generated with the plain text only (ElevenLabs `eleven_v4`, voice `xiS6BE89wW6zbLVHQm2r`, default voice settings, no audio tags); the user found the reading slightly amused ("It sounds like that she laughs to a children fault") and wanted a "You made a mistake, but do not worry" tone. The endgame `text-to-speech` skill got a tone/emotion reference (`tone-and-emotion.md`), then about 190 variants of six explanation sentences (e.g. "Tady je místo vrtulníku letadlo a navíc letí nad věží.") were generated and the user listened to them.
+
+- "I liked the variants 31-40. I think I liked variants with more stability."
+- "Try only czech tags like [empaticky, s pochopením], do not try english at all (they do not work very well with the czech sentences)."
+- "Try in half of trials also shorter explanation previous-text and next-text (WHY: because I pay by characters)" ([coordinator interpretation]: the short contexts were not selected afterwards; the long previous_text won.)
+- Decision: "So: choose the variant "76      │ P1 + [s drobnou váhavostí]  │ 0.7" as the default one for wrong answers for wrong answers explanations anywhere across apps. Write it to the text-to-speech skill. Write it also somewhere to the TreninkPorozumeni app itself."
+  - [coordinator interpretation] variant 76 = `eleven_v4`, `language_code` `cs`, voice `xiS6BE89wW6zbLVHQm2r`, `voice_settings` `{"stability": 0.7, "similarity_boost": 0.75}`, text = `"[s drobnou váhavostí] " + <sentence>`, `previous_text` = "Dítě odpovědělo špatně na otázku, co je na obrázku. Řekni mu následující větu laskavě, s pochopením a empatií.", no `next_text` (P1 = that previous_text). It was the only setting the user marked favourite on all six sentences. Recorded as the default in the endgame skill `.claude/skills/text-to-speech/tone-and-emotion.md`. The currently shipped `_why` files were NOT regenerated with it yet.
