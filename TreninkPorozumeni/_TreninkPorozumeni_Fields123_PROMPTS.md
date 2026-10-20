@@ -336,3 +336,11 @@ Context: the shipped `<id>_gram_why|_lexa_why|_lexb_why.mp3` files (and the `_v2
 - "Try in half of trials also shorter explanation previous-text and next-text (WHY: because I pay by characters)" ([coordinator interpretation]: the short contexts were not selected afterwards; the long previous_text won.)
 - Decision: "So: choose the variant "76      │ P1 + [s drobnou váhavostí]  │ 0.7" as the default one for wrong answers for wrong answers explanations anywhere across apps. Write it to the text-to-speech skill. Write it also somewhere to the TreninkPorozumeni app itself."
   - [coordinator interpretation] variant 76 = `eleven_v4`, `language_code` `cs`, voice `xiS6BE89wW6zbLVHQm2r`, `voice_settings` `{"stability": 0.7, "similarity_boost": 0.75}`, text = `"[s drobnou váhavostí] " + <sentence>`, `previous_text` = "Dítě odpovědělo špatně na otázku, co je na obrázku. Řekni mu následující větu laskavě, s pochopením a empatií.", no `next_text` (P1 = that previous_text). It was the only setting the user marked favourite on all six sentences. Recorded as the default in the endgame skill `.claude/skills/text-to-speech/tone-and-emotion.md`. The currently shipped `_why` files were NOT regenerated with it yet.
+
+## User request 33 (verbatim, 2026-10-19) — continue planned work with the new explanation-audio method
+
+Context: the R2-C3 phase (explanation rewrites for 5.1, 5.4, 5.8, 5.9, 5.12, 5.13, 5.15 + ElevenLabs batch 2) had been interrupted by a session limit; the wrong-answer explanation audio method had meanwhile changed (User request 32).
+
+- "I want you to continue in the planned work. Keep in mind: the way of generation of the wrong answer explanations changed: subagents shall re-read it (in the text-to-speech skill)."
+- "Also meanwhile: regenerate wrong answer explanation sounds/speeches of all already finished questions (by the new way of the sound generation)."
+  - [coordinator interpretation] "already finished questions" = the types whose explanation texts were final and already ElevenLabs-generated in batch 1: 5.2, 5.3, 5.5, 5.6, 5.7, 5.10, 5.14 (texts unchanged; only the `_why` audio regenerated with the User request 32 method).
