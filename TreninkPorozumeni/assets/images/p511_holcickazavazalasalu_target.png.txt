@@ -1,0 +1,11 @@
+Image: p511_holcickazavazalasalu_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a friendly snowman made of three round white snowballs, with an orange carrot nose, two black coal eyes, two thin brown stick arms and a black top hat with a red-and-white checked band, standing on the right; and a girl of about six with two brown pigtails, wearing a light blue knitted bobble hat with white stars, light blue knitted mittens with white stars, a plain dark red winter coat, dark grey trousers and brown winter boots, on the left. Each figure looks exactly like this in the whole picture. The girl stands facing right close to the snowman and has just tied a knitted scarf around the snowman's neck, between his top and middle snowball; the knot in front is finished and her two hands still hold its two ends. The girl is the one who tied the scarf. The scarf she tied is red-and-white checked, exactly the same fabric as the band on the snowman's top hat, so it is the snowman's own scarf. Around her own neck the girl wears her own light blue knitted scarf with white stars, matching her bobble hat and mittens. Exactly one red-and-white checked scarf in the picture. Her hair is exactly two brown pigtails, one on each side of her head, both clearly visible, each tied with exactly one small light blue hair band; no ponytail, no braids, no bow. One clearly separate whole girl and one whole snowman with correct realistic anatomy, all arms, hands and legs complete and visible, nothing hidden behind objects, all feet and paws at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

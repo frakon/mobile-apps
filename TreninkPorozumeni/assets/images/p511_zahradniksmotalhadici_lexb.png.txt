@@ -1,0 +1,11 @@
+Image: p511_zahradniksmotalhadici_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b7 round 21, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: on the left a gardener man of about fifty with a grey moustache, a straw hat, a green shirt with rolled-up sleeves, a long plain dark green apron, brown trousers and brown rubber boots; on the right a young shop saleswoman of about thirty with a long black plait, dressed in a shop assistant's uniform: a pink short-sleeved shop tunic with one small plain blank white name badge pinned on her chest, a yellow pencil tucked behind her right ear, a long pink shop apron printed with small white flowers with one front pocket holding a small white notepad, a dark blue skirt and pink shoes; she clearly looks like a friendly shop saleswoman at work. Each person wears exactly this outfit in the whole picture. The gardener greets the saleswoman by lifting his one straw hat a little above his head with his right hand, so his grey hair shows; he has exactly one straw hat, the one in his raised hand, and nothing else on his head; the saleswoman greets him with a small curtsy, holding the sides of her skirt with both hands. There is no hose anywhere. Two clearly separate whole people with correct realistic anatomy, five fingers on each hand, both arms and both legs complete and visible, nothing hidden behind objects, all feet at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

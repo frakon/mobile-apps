@@ -1,0 +1,11 @@
+Image: p511_kravaustlalapostel_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b7 round 12, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a friendly white cow with large black spots, a pink nose, two short curved cream horns, a pink udder and a long thin tail ending in a black tuft; and a small dark grey velvety mole with a pink pointed nose, tiny black eyes, small pink front paws with long claws and a short pink tail, standing upright on his hind legs. Each animal looks exactly like this in the picture. The cow lies resting on the ground level with her legs folded under her and her eyes closed; the mole lies curled up asleep on top of the cow's back, between her shoulders, far from her udder. The whole cow is fully inside the picture. There is no bed and no straw anywhere. Two clearly separate whole animals, a cow and a mole, with correct realistic anatomy, all arms, legs, hooves and paws complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

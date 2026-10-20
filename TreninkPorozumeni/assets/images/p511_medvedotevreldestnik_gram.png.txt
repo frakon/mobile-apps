@@ -1,0 +1,11 @@
+Image: p511_medvedotevreldestnik_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 10, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big brown bear with thick brown fur, small round ears, a light brown muzzle and a tiny stubby tail, on the left; and a small brown owl with big round yellow eyes, a speckled brown and cream chest, small ear tufts and yellow feet, on the right. Each figure looks exactly like this in every detail. The bear is a fable animal standing upright on his hind legs; the owl stands on her feet. The bear stands upright on the left facing right, his right front paw stretched far out to the right, holding an open umbrella by its handle, the whole umbrella canopy right above the small owl and not above the bear, the bear himself standing outside the umbrella next to it; his left front paw hangs at his side. The owl stands on the right under the umbrella, facing left, looking up. The bear is the one who holds the open umbrella over the owl. The umbrella is small and yellow with one little brown owl printed on its canopy, clearly visible, the owl's size, looking like a toy in the bear's big paw; its canopy is directly above the owl's head, covering her, an owl's umbrella, so it clearly belongs to the owl. Exactly one umbrella in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, wings and tails complete and visible, nothing hidden behind objects, calm friendly faces. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

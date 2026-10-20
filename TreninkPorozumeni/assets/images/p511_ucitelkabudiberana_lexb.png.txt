@@ -1,0 +1,11 @@
+Image: p511_ucitelkabudiberana_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b7 round 3, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a young woman teacher of about thirty with dark brown hair tied up in a neat bun at the back of her head, round glasses, a long green cardigan over a cream blouse, a brown knee-length skirt and brown shoes; and a white woolly ram with thick curly white wool, a black face, black legs and big brown horns curled in spirals beside his ears. The ram lies asleep with his legs folded under his body and his eyes closed. The teacher and the ram look exactly like this in the picture. The teacher walks quietly past the sleeping ram on tiptoe, her right forefinger raised to her closed lips, her left arm slightly out to the side for balance. The ram's neck is bare and he keeps sleeping peacefully with both eyes closed. There is no bell anywhere. Two clearly separate whole figures, a woman teacher and a ram, with correct realistic anatomy, all arms, legs, hooves and paws complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

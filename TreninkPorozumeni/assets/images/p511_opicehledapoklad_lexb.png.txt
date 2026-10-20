@@ -1,0 +1,11 @@
+Image: p511_opicehledapoklad_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a friendly pirate man with a short black beard, a black eye patch over his left eye, a black three-cornered pirate hat with one white skull, a red-and-white striped shirt, a wide brown belt, black trousers and black boots, standing on the left; and a small brown monkey with a light beige face, round ears and a long curly tail, standing upright on the right. Each figure looks exactly like this in the whole picture. The pirate stands on the left and scratches his head with one hand; the monkey stands on the right and scratches her head with one hand in exactly the same way, copying him. There is no map and no banana anywhere. One clearly separate whole person and one whole monkey with correct realistic anatomy, all arms, hands, legs, paws and tails complete and visible, nothing hidden behind objects, all feet and paws at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

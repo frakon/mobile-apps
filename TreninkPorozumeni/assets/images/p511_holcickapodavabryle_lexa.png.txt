@@ -1,0 +1,11 @@
+Image: p511_holcickapodavabryle_lexa.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a boy of about six with short curly brown hair, wearing a plain orange T-shirt, plain dark green shorts, white socks and blue sneakers, on the right; and a girl of about six with a short black bob haircut with a straight fringe, wearing a plain lilac knee-length dress, white socks and white shoes, on the left. Each figure looks exactly like this in the whole picture. The girl stands facing right and holds out at arm's length one small wristwatch with a brown strap in one hand toward the boy; the boy holds one hand open toward it, not touching it. Nobody wears glasses and there are no glasses anywhere. Two clearly separate whole children with correct realistic anatomy, all arms, hands and legs complete and visible, nothing hidden behind objects, all feet and paws at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

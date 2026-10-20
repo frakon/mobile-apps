@@ -1,0 +1,11 @@
+Image: p511_kovbojjedesdoktorkou_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b7 round 14, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a cowboy man of about thirty-five with a brown moustache, a wide brown cowboy hat, a red and white checked shirt, a brown leather waistcoat, blue jeans and brown cowboy boots; and a woman doctor of about thirty-five with black hair tied up in a knot at the back of her head, a long white doctor's coat worn open over a light blue knee-length dress, a stethoscope around her neck and white shoes. Each person wears exactly this outfit. Exactly one horse walks calmly to the left. The cowboy sits in front in the saddle holding the reins in both hands; the doctor sits behind him on the same horse with both hands lightly on his shoulders, both legs hanging down on one side of the horse. The horse is clearly the doctor's own horse: a white horse with a white mane and tail, a white saddle, a white bridle with one small red cross on the forehead strap, under the saddle a big white saddle blanket with one big red cross on it, and the doctor's brown leather doctor's case strapped flat on top of the horse's back right behind the doctor, held down by one buckled strap, clearly attached and high up, nowhere near the horse's legs or belly. The cowboy's boots rest in the stirrups. All the horse's gear is white and red like the doctor's white coat, nothing on the horse is brown leather. There is no lasso anywhere. The cowboy and the doctor are riding together on the doctor's white horse. Exactly one horse in the picture. Two clearly separate whole people, a cowboy and a woman doctor, with correct realistic anatomy, all arms, legs, hooves and paws complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

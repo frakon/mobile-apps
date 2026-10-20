@@ -1,0 +1,11 @@
+Image: p511_klukutrhljahodu_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 3, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a boy of about six with short blond hair, wearing a plain blue T-shirt, plain grey shorts, white socks and brown sandals; and a girl of about six with two red pigtails, wearing a plain yellow knee-length dress, white socks and green rubber boots. Each figure looks exactly like this in the whole picture. One small strawberry plant with green leaves and two ripe red strawberries still hanging on it grows from a small round patch of brown garden soil in the middle. The girl stands on the right beside the plant, facing the boy, her empty hands at her sides. The boy stands on the left of the plant and holds out toward the girl, at arm's length, one ripe red strawberry he has just picked from the plant, holding it by its green stem between finger and thumb, a clear white gap between the strawberry and his clothes. With his other hand the boy waters the plant from a small green watering can tilted over it, a thin stream of water falling on the leaves; he is the gardener, so it is clearly the boy's own strawberry plant. The boy is the one who picked the strawberry. Exactly one picked strawberry in the picture, in the boy's hand. Exactly one watering can in the picture, in the boy's hand. Her hair is exactly two red pigtails, one on each side of her head, both clearly visible, each tied with exactly one small green hair band; no ponytail, no braids, no bow. Two clearly separate whole children with correct realistic anatomy, all arms, hands and legs complete and visible, nothing hidden behind objects, all feet and paws at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

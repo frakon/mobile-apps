@@ -1,0 +1,11 @@
+Image: p511_kucharkrmikralovnu_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 2, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a chef, a grown man with a small black moustache, wearing a tall white chef hat, a white double-breasted chef jacket, black trousers and black shoes on the left; and a queen, a grown woman of about forty with long blond hair in one braid over her shoulder, wearing a small golden crown, a long light-blue gown with long sleeves and light-blue shoes on the right. Each figure looks exactly like this in every detail. The chef stands facing right, holds a small frying pan with one golden pancake in it by its long handle in his left hand at his side, a clear white gap between the pan and his jacket, and with a fork in his right hand holds one small piece of the pancake up to the queen's mouth, feeding her, his arm stretched out. The queen stands facing left, her hands folded in front of her. The queen leans forward a little, her lips just touching the bite. The chef is the one who feeds; the queen is the one who is fed. The fork is the queen's: a small dainty golden fork whose handle ends in a clearly visible golden crown as big as the fork's head, exactly like the queen's crown, sticking out above the chef's fingers, clearly hers. Exactly one fork in the picture. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: p511_pesspivpelisku_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 20, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a medium-sized black dog with a white chest, a white tip on his tail, pointed ears and a plain blue collar; and a ginger cat with white paws, a white chest and a long ginger tail. Each figure looks exactly like this in the whole picture. One small round wicker cat basket with a soft cushion, only just big enough for the cat - a cat bed, so it is the cat's bed. The cat lies curled up in the basket and the dog lies squeezed into the basket right beside her, side by side, the cat next to the dog and not on top of him, both peacefully asleep with closed eyes. Both of them sleep in the same bed. The dog is far too big for the little basket: his front legs hang over the rim on the right below his head, and his tail hangs over the rim on the opposite LEFT side at his rear end, far away from his head; the cat lies in the basket in front of the dog's belly; the dog's body and the cat's body are clearly separate with a thin white gap between them, the dog does not wrap around the cat. Exactly one pet bed in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, calm peaceful faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

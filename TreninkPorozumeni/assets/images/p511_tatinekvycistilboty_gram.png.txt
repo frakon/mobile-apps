@@ -1,0 +1,11 @@
+Image: p511_tatinekvycistilboty_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 2, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a father of about thirty-five with short black hair and a short black beard, wearing a light blue shirt with long sleeves, dark grey trousers and black shoes, on the left; and a mother of about thirty-five with shoulder-length brown hair, wearing a knee-length dark green dress with long sleeves and brown flat shoes, on the right. Each person wears exactly this outfit. The father and the mother kneel side by side facing each other; each of them holds one shoe of the same pair in the left hand and polishes it with a small shoe brush in the right hand, the two shoes of the pair held side by side between them, both shoes already shiny. The father and the mother do exactly the same thing: both polish; in both pictures they clean the pair together in the same way. The shoes are big brown men's lace-up leather shoes, so they clearly belong to the father. Exactly one pair of loose shoes in the picture, both shoes held in their hands, nothing floating. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

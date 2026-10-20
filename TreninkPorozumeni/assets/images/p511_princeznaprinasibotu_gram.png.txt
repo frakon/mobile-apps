@@ -1,0 +1,11 @@
+Image: p511_princeznaprinasibotu_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 15, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a friendly pirate man with short tousled black hair and a bare head (no hat, no bandana, no headscarf), a short black beard, a black eye patch over his left eye, a red-and-white striped shirt, a wide brown belt and black trousers, standing on the right; on both feet he wears tall black boots. And a young princess with long golden hair and a small gold crown, wearing an ankle-length light pink princess gown with puffed sleeves, on the left; on her left foot she wears one sparkly silver shoe, her right foot is only in a white stocking. Each figure looks exactly like this in the whole picture. The princess has just come from the left to the pirate and holds one shoe out to him at arm's length in one hand, a clear white gap between the shoe and her gown; her other hand lifts her gown a little. The pirate stands on the right facing her and holds both hands open toward the shoe to take it, not touching it yet. The princess is the one bringing the shoe and handing it over, the pirate is the one receiving it. The shoe she carries is a sparkly silver shoe, the twin of the shoe on the princess's left foot, so it is the princess's own shoe. Exactly two silver shoes (one on the princess's left foot, one in her hand) and exactly two tall black boots (both on the pirate's feet) in the picture. Two clearly separate whole people with correct realistic anatomy, all arms, hands and legs complete and visible, nothing hidden behind objects, all feet and paws at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

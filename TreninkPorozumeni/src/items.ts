@@ -5337,7 +5337,7 @@ export const comprehensionExamples: ComprehensionExample[] = [
   ...field59Examples,
   // Field 5.10 — Kvantifikátory: all 100 items live in src/items/field510.ts.
   ...field510Examples,
-  // Field 5.11 — Zájmena / anafora: items live in src/items/field511.ts (P13; 100 items, seeded order 5110037).
+  // Field 5.11 — Zájmena / anafora: items live in src/items/field511.ts (R2-D rework: 100 regular items + 117 Extra; header comment there).
   ...field511Examples,
   // Field 5.12 — Distributivní kvantifikátory: all 100 items live in src/items/field512.ts.
   ...field512Examples,

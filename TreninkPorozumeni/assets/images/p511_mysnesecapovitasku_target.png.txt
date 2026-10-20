@@ -1,0 +1,11 @@
+Image: p511_mysnesecapovitasku_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 3, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small grey mouse with big round pink ears, a pink nose, black bead eyes and a long thin pink tail, on the left; and a tall white stork with black wing tips, a long straight red beak and long thin red legs, on the right. Each figure looks exactly like this in every detail. The mouse is a fable animal walking upright on her hind legs. The small mouse walks upright to the right toward the tall stork, carrying a bag by its handles above her head with both front paws, the bag clearly separate from her body; the stork stands on the right facing left on both legs, bending his long neck down toward her. The mouse is the one who carries the bag to the stork. The bag is a big red travel bag with two handles, sized for the tall stork and much bigger than the mouse, with one big white stork painted on its side, clearly visible, a stork's bag, so it clearly belongs to the stork. Exactly one bag in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, wings and tails complete and visible, nothing hidden behind objects, calm friendly faces. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

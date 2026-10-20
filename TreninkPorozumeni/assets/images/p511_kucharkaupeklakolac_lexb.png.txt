@@ -1,0 +1,11 @@
+Image: p511_kucharkaupeklakolac_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b8 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a plump woman cook of about forty-five, clearly a woman, with a round friendly feminine face, rosy cheeks, pink lips, small gold earrings and short brown hair under a tall white cook's hat, a white double-breasted cook's jacket, a long white apron over a black knee-length skirt, and black shoes; and a postman of about forty with short black hair, a dark blue postman's cap, a dark blue uniform jacket with brass buttons, grey trousers, black shoes and a brown leather satchel worn across his body with a yellow post horn emblem on it. Each person wears exactly this outfit. The cook and the postman stand facing each other a little apart. There is no baking board anywhere. The postman holds out one small brown paper parcel to the cook with both hands, the cook reaches for it with both hands open, not yet touching it. There is no pie anywhere. Two clearly separate whole people, a woman cook and a postman, with correct realistic anatomy, all arms, legs, hooves and paws complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

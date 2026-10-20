@@ -1,0 +1,11 @@
+Image: p511_levpodavazirafebuben_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 5, true render 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a friendly lion with a big golden-brown mane, tawny fur and a tail with a dark tuft on the left; and a tall giraffe with orange-brown patches on cream fur, two small horns with dark tufts and a short dark brown mane along her long neck on the right. Each figure looks exactly like this in every detail. The lion sits upright like in a fable facing right and stretches both front legs straight out forward and holds the drum far out in front of him toward the giraffe, a wide white gap between the drum and his chest as wide as the drum itself, gripping it with both front paws on its two opposite sides, both front paws clearly visible on the outside of the drum, a clear white gap between the drum and his fur; he is not playing it. The giraffe stands facing left and bends her long neck down toward the drum to receive it. The lion is the one who hands the drum to the giraffe; nobody plays it. The drum is the giraffe's: a real musical drum, tall and narrow like a conga drum, with a tight white drum skin stretched over its top and zigzag lacing cords down its sides, its body covered with exactly the giraffe's orange-brown patch pattern, clearly hers. Exactly one drum in the picture. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

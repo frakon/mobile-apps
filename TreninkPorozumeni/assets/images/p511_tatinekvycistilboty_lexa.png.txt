@@ -1,0 +1,11 @@
+Image: p511_tatinekvycistilboty_lexa.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 16, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a father of about thirty-five with short black hair and a short black beard, wearing a light blue shirt with long sleeves, dark grey trousers and black shoes, on the left; and a mother of about thirty-five with shoulder-length brown hair, wearing a knee-length dark green dress with long sleeves and brown flat shoes, on the right. Each person wears exactly this outfit. The father and the mother kneel on both sides of a complete red bicycle seen exactly from the side standing on its kickstand between them, the whole bicycle fully visible in front of both people and not hidden by anyone, both round wheels complete, handlebars, chain and pedals visible, and wipe its frame together with two cloths. There are no loose shoes anywhere. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

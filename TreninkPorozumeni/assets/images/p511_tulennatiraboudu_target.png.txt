@@ -1,0 +1,11 @@
+Image: p511_tulennatiraboudu_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b6 round 7, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: on the left a smooth grey spotted seal with long white whiskers, big dark eyes, two front flippers and a tail flipper, resting upright on its belly and tail; on the right a brown female mallard duck with speckled brown and cream feathers, a flat orange bill and orange webbed feet. Each figure looks exactly like this in the whole picture. Between them stands one wooden hut with a pointed roof, shaped like a little dog kennel standing on the ground (not a birdhouse, no round hole). The hut is tiny and low, only as tall as the duck, much too small for the seal, with one arched duck-sized doorway reaching down to the ground, a little straw bedding inside it, and above the doorway one painted picture of a brown duck (a flat painted picture, not a real animal), so it is clearly the duck's own hut. The seal paints the hut's front wall with one paint roller held in one front flipper; the duck paints the same wall with one small paint roller whose short handle she holds crosswise in her flat bill, like a real duck that has no hands: both her wings stay folded flat on her back and do not touch the roller at all; half of the wall is already fresh bright blue, the other half still plain light wood. The seal and the duck are painting the hut together. Exactly one hut in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, arms, paws, flippers and wings complete and visible, nothing hidden behind objects, all feet at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

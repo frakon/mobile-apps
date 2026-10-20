@@ -1,0 +1,11 @@
+Image: p511_krokodylzasadilkaktus_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b6 round 10, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: on the left a green crocodile with a long snout, a bumpy ridged back and a long thick tail, standing upright on its hind legs like in a fable; on the right a small green turtle with a domed brown shell with a hexagon pattern, standing upright on its hind legs like in a fable, only as tall as the other figure's knees. Each figure looks exactly like this in the whole picture. Between them stands one rubber boot upright like a flower pot, with one small round green cactus freshly planted in the top of the boot. The boot is tiny, exactly the size of the turtle's foot, bright yellow, much too small for the crocodile, with one painted picture of a small green turtle (a flat painted picture, not a real animal) on its side, so it is clearly the turtle's own little boot. The crocodile stands on the left still holding one small garden trowel in its right front paw at arm's length, its left front paw at its side; the turtle stands on the right with both front feet together, looking happily at the cactus. The crocodile has just planted the cactus for the turtle. Exactly one boot and one cactus in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, arms, paws, flippers and wings complete and visible, nothing hidden behind objects, all feet at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

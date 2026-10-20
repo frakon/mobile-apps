@@ -1,0 +1,11 @@
+Image: p511_kockauvazalabryndak_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 3, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a slim grey tabby cat with darker grey stripes, white paws, green eyes and a long striped grey tail, on the left; and a medium-sized friendly dog with short brown fur, a white chest, four white paws, floppy brown ears and a short brown tail, on the right. Each figure looks exactly like this in every detail. The cat stands upright on her hind legs on the left facing right, like in a fable, has just finished tying the bib: its two strings are tied in one small neat bow at the back of the dog's neck, no loose strings anywhere else; her two front paws are lifting away from the bow, holding nothing, the bib hanging on his chest; the dog sits calmly on the right facing left, lifting his chin a little. The cat is the one who tied the bib on the dog; the dog only sits. The bib is a real feeding bib like babies wear for eating: one rounded U-shaped piece of soft quilted cloth with a neat border, wide and round at the bottom, covering the dog's whole chest, with a narrow neck band and two thin strings; it is not a scarf and not a bandana. The bib is pink with small white fish printed on it, a cat's bib, so it clearly belongs to the cat. Exactly one bib in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, calm friendly faces. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

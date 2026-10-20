@@ -1,0 +1,11 @@
+Image: p511_jezeknaplnilbatoh_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small brown hedgehog with a pointed snout, a pale face and a coat of brown spines on the left; and a red squirrel with a big bushy red tail, tufted ears and a white belly on the right. Each figure looks exactly like this in every detail. Exactly two backpacks are in the picture: the squirrel's small brown backpack with one big acorn patch sewn on its front, and the hedgehog's small green backpack with one red apple patch sewn on its front. The squirrel wears her own small brown backpack on her back; the hedgehog wears none. The hedgehog stands upright like in a fable on the left facing right and the squirrel sits on the right facing left. The hedgehog's small green backpack floats open between them, and it is already full to the top with small brown mushrooms; each animal holds one front paw just above its open top, having just put in the last mushroom. Both have filled it together; the open backpack is the hedgehog's, which is why he wears none. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

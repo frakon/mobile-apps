@@ -1,0 +1,11 @@
+Image: p511_slonrozsvitillampu_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 4, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a grey elephant with big floppy ears, a long trunk and no tusks on the left; and a tall giraffe with orange-brown patches on cream fur, two small horns with dark tufts and a short dark brown mane along her long neck on the right. Each figure looks exactly like this in every detail. The elephant is drawn small enough that his whole body, all four legs and his tail are fully inside the picture with white margin on every side, nothing cut off by the edge. The elephant stands facing right and a lamp stands at foot level between him and the giraffe on its wide round foot, and one short continuous little pull chain hangs straight down from the rim of its lampshade, firmly attached to the lamp at its top end, and its lower end is held in the tip of his trunk, which reaches down to it - he has just pulled it; the chain connects the shade and the trunk tip without any break; the lamp already shines with warm yellow light. The giraffe stands facing left beside the lamp and looks at the light. The elephant is the one who switched on the lamp. The lamp is the elephant's own: a short broad grey table lamp with a thick grey foot and a round grey fabric lampshade, sturdy like the elephant, clearly his, not a lantern. Exactly one lamp in the picture. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

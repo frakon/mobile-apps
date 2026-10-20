@@ -1,0 +1,11 @@
+Image: p511_tucnakvylovilholinku_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b8 round 1, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: on the left a black-and-white penguin with a white belly, a black back, a short orange beak and orange webbed feet, as tall as the goat; on the right a small white goat with short smooth white fur, two small curved grey horns, a little white chin beard, a pale pink nose, small upright ears and thin white legs with small dark hooves, standing on all four legs. Each animal looks exactly like this in the whole picture. Between them is one small round pond of clear blue water, no bigger than a puddle. Two fishing rods are in the picture: the penguin's own rod, which is all black with a bright orange reel, the same orange as his beak and feet, and with one tiny painted penguin face on its handle; and the goat's own rod, which is all white with one tiny painted white goat face with little grey horns on its handle. The penguin stands at the left edge of the pond and holds the penguin's own black rod with the orange reel up in both flippers at arm's length, with a clear white gap between the rod and his body; from the end of its thin fishing line hangs one green glass bottle with a cork, just pulled up out of the pond and dripping water. The goat's own white rod lies unused flat on its own right at the goat's front hooves, and nobody touches it. The goat stands on the right of the pond and looks happily at the dripping bottle. The penguin is the one who has just fished the bottle out of the pond for the goat. Exactly one bottle in the picture; exactly two fishing rods: one in use and one unused. Two clearly separate whole animals, a penguin and a goat, with correct realistic anatomy, both flippers and both webbed feet of the penguin and all four legs of the goat complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: p511_princeznamyjetygra_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 34, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a young princess with long golden hair and a small gold crown with pink jewels, wearing a long light pink princess gown with puffed sleeves and pink shoes; and a big friendly orange tiger with black stripes and a white muzzle. Each figure looks exactly like this in the whole picture. The princess stands on the left; the tiger lies calmly on his belly on the right with his head up. The princess stands beside the tiger's shoulder, holds a bath sponge in one hand just lifted from the fur on the tiger's back, a thin white gap and white soap foam between the sponge and his fur, washing him; her other hand rests gently on his neck. The princess is the one washing, the tiger lies still and enjoys it. The tiger lies facing right with his head and both front paws on the right side of the picture; his rear end with both hind legs tucked under it is on the LEFT side next to the princess, and his one tail lies on the ground at the far left behind his rear end, far from his head; the tail is NOT on the right. The sponge is small and light pink with tiny pink jewels on it, exactly like the pink jewels on her crown, so it is the princess's own sponge. Nothing on the sponge is orange or striped. Exactly one sponge in the picture. One clearly separate whole person and one whole tiger with correct realistic anatomy, all arms, hands, legs, paws and tails complete and visible, nothing hidden behind objects, all feet and paws at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

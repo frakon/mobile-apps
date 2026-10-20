@@ -1,0 +1,11 @@
+Image: p511_liskautrelapusu_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 10, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a slim red fox with orange fur, a white chest, black lower legs, pointed ears and a bushy orange tail with a white tip, on the left; and a grey wolf with grey fur, a light grey chest, pointed ears, yellow eyes and a bushy grey tail, on the right. Each figure looks exactly like this in every detail. Both are fable animals standing upright on their hind legs. The fox stands upright on the left facing right, her right front paw stretched far forward holding a napkin pressed against the wolf's mouth, the napkin touching his lips and covering the corner of his mouth, far away from the fox's own face; she has just wiped the wolf's mouth with it and is just lifting it off, her left front paw at her side; the wolf stands upright on the right facing left, his head bent a little toward her paw, his front paws at his sides, his neck bare. The fox is the one who wiped the wolf's mouth with the napkin. The napkin is big, as big as the wolf's whole head, white with a wide dark grey border and one big grey wolf head printed in its middle, clearly visible, a wolf's napkin, a clear white edge against his grey fur - a wolf-sized napkin, so it clearly belongs to the wolf. Exactly one napkin in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, calm friendly faces. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

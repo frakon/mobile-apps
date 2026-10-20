@@ -1,0 +1,11 @@
+Image: p511_kouzelnikposadilnakoste_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 4, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a kind old wizard with a long white beard, wearing a tall pointed dark blue hat with small silver stars, a long dark blue robe with small silver stars and brown shoes on the left; and a friendly witch, a grown woman with long straight black hair, wearing a tall pointed black hat with a purple band, a long-sleeved black dress reaching her ankles, purple-and-black striped stockings and pointed black shoes on the right. Each figure looks exactly like this in every detail. Exactly two brooms float horizontally: a classic witch's broom with a brown twig handle and straw bristles, and a wizard's broom with a dark blue handle with small silver stars and silver bristles. The witch already sits sideways on one broom and holds its handle with both hands; the wizard stands close beside her facing right and leans toward her, both his hands still resting on her shoulders, gently pressing her down onto the broom - he has just lifted her up and seated her there. The wizard's long robe hangs straight down to his own feet and never touches the broom; the whole broom with its silver bristles is clearly separate from his robe, with a white gap between them. The wizard is the one who seated the witch. She sits on the wizard's own starry blue broom; her brown straw witch's broom floats empty and horizontal low at knee height on the far right behind the witch's feet, with a wide white gap to every body, not crossing or touching anyone. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

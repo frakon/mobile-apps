@@ -1,0 +1,11 @@
+Image: p511_krokodylvyndavabanany_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big friendly green crocodile with a long snout and a bumpy back; and a small brown monkey with a light beige face, round ears and a long curly tail. Each figure looks exactly like this in the whole picture. The crocodile lies on his belly on the left and watches; the monkey stands upright on the right and juggles three oranges in the air. There is no banana and no backpack anywhere. Two clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, all feet and paws at the same level, calm friendly faces. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

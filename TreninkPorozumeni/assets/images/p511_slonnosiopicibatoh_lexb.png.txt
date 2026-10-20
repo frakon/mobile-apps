@@ -1,0 +1,11 @@
+Image: p511_slonnosiopicibatoh_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b5 round 3, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a grey elephant with big floppy ears, a long trunk and no tusks on the left; and a small brown monkey with a pale beige face, a pale belly, round ears and a long curly tail on the right. Each figure looks exactly like this in every detail. Both whole animals, all legs and tails are fully inside the picture with white margin on every side; the monkey's tail is one simple smooth curl. The elephant stands facing left; the monkey stands just behind his tail, her whole body clearly visible and not hidden behind the elephant, and pulls his short tail with both hands: she grips the middle of the tail. The elephant tail is a plain smooth grey tail of the same grey colour as his body, tapering to a thin grey point, with no tuft and no hair at its end; it clearly grows out of his rump. The monkey is the one who pulls. There is no backpack anywhere. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

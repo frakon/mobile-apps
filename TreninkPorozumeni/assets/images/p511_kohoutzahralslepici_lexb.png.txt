@@ -1,0 +1,11 @@
+Image: p511_kohoutzahralslepici_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a proud rooster with a tall red comb, red wattles, golden-orange neck feathers, a dark brown body, a long curved shiny dark green tail and yellow feet, wearing only a small cap in bright blue with white horizontal stripes, on the left; and a plump brown hen with a small red comb, a yellow beak and yellow feet, wearing only a small bonnet in bright red with white polka dots, on the right. Each figure looks exactly like this in every detail. The hen stands on the right facing left, bending down and pecking yellow grains of corn spilling from a small open cloth sack; the rooster stands on the left facing right, watching. The hen is the one who pecks the grains. There is no blanket anywhere. Two clearly separate whole birds with correct realistic anatomy, both wings, both legs and the tails complete and visible, nothing hidden behind objects, calm friendly faces. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

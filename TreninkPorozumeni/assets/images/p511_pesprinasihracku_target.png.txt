@@ -1,0 +1,11 @@
+Image: p511_pesprinasihracku_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 16, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a medium-sized black dog with a white chest, a white tip on his tail, pointed ears and a plain blue collar; and a ginger cat with white paws, a white chest and a long ginger tail. Each figure looks exactly like this in the whole picture. The dog has just come to the cat on all four legs from the left and holds a toy out to her gently in his mouth, his head stretched toward her; the cat sits upright on the right facing the dog and reaches one front paw out toward the toy to take it, not touching it yet. The dog is the one bringing the toy and handing it over, the cat is the one receiving it. The toy is a small round ball of pink wool yarn with one short loose end - a typical cat toy, so it is the cat's toy. Exactly one toy in the picture. Both animals are drawn small enough that the whole dog from his nose to the tip of his tail and the whole cat are completely inside the picture with a wide white margin on every side. Two clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, all feet and paws at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

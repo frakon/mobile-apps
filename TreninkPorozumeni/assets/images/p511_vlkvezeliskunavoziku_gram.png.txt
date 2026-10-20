@@ -1,0 +1,11 @@
+Image: p511_vlkvezeliskunavoziku_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 14, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a grey wolf with grey fur, a light grey chest, pointed ears, yellow eyes and a bushy grey tail, on the left; and a slim red fox with orange fur, a white chest, black lower legs, pointed ears and a bushy orange tail with a white tip, on the right. Each figure looks exactly like this in every detail. Both are fable animals; the wolf walks upright on his hind legs. The wolf is in front on the left, walking upright to the left, leaning forward and pulling a four-wheeled handcart behind him by its long handle held in both front paws; the fox sits calmly in the handcart behind him on the right, facing left. The wolf is the one who pulls the cart with the fox in it. On the side of the handcart facing the viewer one simple big grey wolf face with open yellow eyes, and nothing else, is painted on a white square, clearly visible, a wolf's cart. The handcart is big, heavy and made of old grey wood like the wolf's grey fur, a big wolf-sized cart, so it clearly belongs to the wolf. The wolf's bushy tail hangs down behind his legs, clearly apart from the handle. Exactly one handcart in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, calm friendly faces. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

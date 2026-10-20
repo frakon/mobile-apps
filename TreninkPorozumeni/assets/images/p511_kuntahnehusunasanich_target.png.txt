@@ -1,0 +1,11 @@
+Image: p511_kuntahnehusunasanich_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 13, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a friendly full-grown brown horse with realistic proportions, long legs, a normal-sized head, a black mane, a black tail and dark hooves, on the left; and a white goose with an orange beak and orange feet, on the right. Each figure looks exactly like this in every detail. The horse is in front on the left, walking to the left, leaning forward and pulling; the goose sits calmly down inside the sled behind the horse on the right, facing left, her whole body inside the sled and her feet tucked under her body, not visible. The sled is a small light wooden children's sled, just the goose's size, painted white and orange like the goose, with a little white goose painted on its side; the horse pulls it by two ropes fastened to a simple brown leather harness around his chest, each rope one single continuous taut line from the harness to the front of the sled, tied firmly to a metal ring on the sled's front, with no breaks and no loose ends. The small sled clearly belongs to the goose. Exactly one sled in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, both wings and tails complete and visible, nothing hidden behind objects, calm friendly faces. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

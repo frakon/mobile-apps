@@ -1,0 +1,11 @@
+Image: p511_jezekctepohlednici_lexa.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small brown hedgehog with a pointed snout, a pale face and a coat of brown spines on the left; and a red squirrel with a big bushy red tail, tufted ears and a white belly on the right. Each figure looks exactly like this in every detail. The hedgehog stands upright facing right and draws a picture of the squirrel with a red crayon on a sheet of paper clipped to a flat drawing board that he holds upright in his left front paw; the squirrel poses. The hedgehog is the one who draws. There is no postcard anywhere. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

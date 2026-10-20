@@ -1,0 +1,11 @@
+Image: p511_kovbojjedesdoktorkou_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b7 round 2b, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a cowboy man of about thirty-five with a brown moustache, a wide brown cowboy hat, a red and white checked shirt, a brown leather waistcoat, blue jeans and brown cowboy boots; and a woman doctor of about thirty-five with black hair tied up in a knot at the back of her head, a long white doctor's coat worn open over a light blue knee-length dress, a stethoscope around her neck and white shoes. Each person wears exactly this outfit. Exactly one horse walks calmly to the left. The cowboy sits in front in the saddle holding the reins in both hands; the doctor sits behind him on the same horse with both hands lightly on his shoulders, both legs hanging down on one side of the horse. The horse is clearly the cowboy's own horse: a brown horse with a black mane and tail, a brown leather western saddle with a saddle horn and brown leather fringes, a brown leather bridle, under the saddle a red and white checked saddle blanket exactly like the cowboy's shirt, and the cowboy's coiled lasso hanging on the saddle horn. All the horse's gear is brown leather and red-white checks like the cowboy's clothes, nothing on the horse is white. There is no red cross and no doctor's case anywhere. The cowboy and the doctor are riding together on the cowboy's brown horse. Exactly one horse in the picture. Two clearly separate whole people, a cowboy and a woman doctor, with correct realistic anatomy, all arms, legs, hooves and paws complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

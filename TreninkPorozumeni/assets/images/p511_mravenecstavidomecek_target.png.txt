@@ -1,0 +1,11 @@
+Image: p511_mravenecstavidomecek_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b7 round 9, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big friendly red-brown cartoon ant with a round head, two bent antennae, big kind eyes and six thin legs, standing on his four back legs and using his two front legs like hands; and a round fuzzy bee with yellow and black stripes, two transparent wings, two short antennae, big kind eyes and six thin black legs, standing on her four back legs and using her two front legs like hands. Both insects are seen in a three-quarter front view, not from the side, so that all six legs of each insect are clearly visible at once: two front legs used like hands and four thin legs standing below, two on the left and two on the right. Both are drawn the same size, as big as each other, side by side with a small gap between them. Each insect looks exactly like this in the picture. Between them stands one half-built little sandcastle of pale yellow sand: a low square base with one tall round tower on the left and one lower unfinished round tower on the right. On top of the tall tower stands one big flag, about as big as the bee's head, with yellow and black stripes exactly like the bee's body and one small bee painted on it (a flat painted picture, not a real insect), so it is clearly the bee's own sandcastle. Nothing on the flag is red-brown and there is no ant on it. The ant presses one new lump of wet sand onto the top of the lower tower with his two front legs, and the bee pats another lump of sand next to it with her front legs. The ant and the bee build the bee's sandcastle together. Exactly one sandcastle and one flag in the picture. Two clearly separate whole insects, an ant and a bee, with correct realistic anatomy, all arms, legs, hooves and paws complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

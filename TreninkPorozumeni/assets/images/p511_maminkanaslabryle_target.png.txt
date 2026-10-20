@@ -1,0 +1,11 @@
+Image: p511_maminkanaslabryle_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 9, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a mother of about thirty-five with shoulder-length brown hair, wearing a knee-length dark green dress with long sleeves and white polka dots and soft beige house slippers, on the left; and a father of about thirty-five with short black hair and a short black beard, wearing a light blue shirt with long sleeves and white horizontal stripes, dark grey trousers and grey socks, on the right. Each person wears exactly this outfit; neither of them wears glasses. The mother and the father kneel side by side facing each other, both bending forward and smiling with surprise at a pair of glasses they have just found between them; the mother and the father hold up together between their faces one open glasses case with a pair of glasses lying in it, the mother holding the left end of the case with her right hand and the father holding the right end of the case with his left hand, both looking at it happily. In both pictures they find them together in the same way. The glasses case is light blue with white horizontal stripes, exactly the same colour and pattern as the father's shirt, and the big square glasses in it have light blue frames, so they clearly belong to the father. Nothing on the case or the glasses is green or dotted. Exactly one glasses case and one pair of glasses in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

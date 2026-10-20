@@ -1,0 +1,11 @@
+Image: p511_jezeknafouklbalonek_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 11, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small brown hedgehog with a pointed snout, a black nose, dark brown spines on his back and a light brown belly, standing upright on his hind legs on the left; and a tiny grey mouse with big round pink ears, a pink nose and a long thin tail, standing upright on her hind legs on the right. Each figure looks exactly like this in the whole picture. The hedgehog has just blown up one round balloon for the mouse: he still holds the balloon's neck in both front paws right at his mouth, his cheeks puffed out from the last big breath, the big round balloon fully blown up and pointing toward the mouse, a clear white gap between the balloon and his body. The mouse stands facing him with both front paws open, ready to take it. The hedgehog is the one who blew the balloon up. The balloon is green with one small red apple picture on it - a hedgehog's balloon, so it is the hedgehog's own balloon. Exactly one balloon in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, all feet and paws at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

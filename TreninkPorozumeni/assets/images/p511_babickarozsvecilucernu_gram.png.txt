@@ -1,0 +1,11 @@
+Image: p511_babickarozsvecilucernu_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 2, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a kind grandmother of about seventy with grey hair in a neat round bun and small round glasses, wearing a long-sleeved plain purple dress reaching below her knees, a white apron with small red flowers, thick grey stockings and black lace-up shoes on the left; and a friendly grandfather of about seventy with short white hair and a short white beard, wearing a flat brown cap, a long-sleeved green-and-white checked shirt, a plain brown knitted vest, plain dark brown trousers and black lace-up boots on the right. Each figure looks exactly like this in every detail. The grandmother stands facing right; her left hand holds a lantern by its handle at arm's length between the two people, the lantern's small glass door stands open and her right hand pushes a long burning match in through the open door so that the match flame touches the black wick of the white candle inside; the wick is just catching fire with a tiny new flame, the moment of lighting it. The grandfather stands facing left, a step away, with both empty hands open toward the light. The grandmother is the one who lights the lantern. The lantern is the grandmother's own: a small round white lantern painted with exactly the same small red flowers as her apron, clearly hers. Exactly one lantern in the picture. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

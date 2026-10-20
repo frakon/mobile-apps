@@ -1,0 +1,11 @@
+Image: p511_rytirnosivlajku_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 5, true render 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a knight, a young man with short black hair and no helmet, wearing shiny silver armour with a green tunic over it showing one silver sword, and brown boots on the left; and a queen, a mature grown woman of about forty, clearly older than the young knight, with long blond hair in one braid over her shoulder, wearing a big tall golden queen's crown with jewels, a long light-blue gown with long sleeves and light-blue shoes on the right. Each figure looks exactly like this in every detail. The knight, with his own sword in its sheath at his belt on his far side, kneels on one knee facing right, both legs clearly visible, his right hand resting on his raised knee and his left hand on his sword hilt, both arms and hands clearly visible; he wears silver armour with a knee-length green tunic over the chest armour showing one big silver sword emblem on his chest; the queen stands facing left and touches his shoulder with the flat of a sword held in her right hand. The queen is the one who knights him. There is no flag anywhere. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

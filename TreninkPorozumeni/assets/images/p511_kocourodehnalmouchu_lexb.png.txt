@@ -1,0 +1,11 @@
+Image: p511_kocourodehnalmouchu_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b7 round 12, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big ginger tomcat with darker ginger stripes, a white chest, white paws, green eyes and a long ginger striped tail; and a friendly white cow with large black spots, a pink nose, two short curved cream horns, a pink udder and a long thin tail ending in a black tuft. Each animal looks exactly like this in the picture. The cow stands on all four legs facing right, her head turned down to the tomcat who stands on all four paws in front of her; the cow gently licks the top of the tomcat's head with her pink tongue, the tomcat has his eyes half closed and looks pleased. Both tails hang down still; the cow's tail hangs from the top of her rump at her back end. The whole cow, from her nose to the tuft of her tail, is fully inside the picture, drawn a little smaller, with white space around her. There is no fly anywhere. Two clearly separate whole animals, a tomcat and a cow, with correct realistic anatomy, all arms, legs, hooves and paws complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: p511_babickakrmioslamrkvi_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 3, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a kind grandmother of about seventy with grey hair in a neat round bun and small round glasses, wearing a long-sleeved plain purple dress reaching below her knees, a white apron with small red flowers, thick grey stockings and black lace-up shoes on the left; and a grey donkey with long upright ears, a pale grey muzzle and belly and a short dark mane, standing naturally on four legs on the right. Each figure looks exactly like this in every detail. The grandmother stands facing right and holds out a bunch of three orange carrots with green tops in her right hand toward the donkey's mouth at arm's length; her left hand reaches into the open top of the donkey's own feed sack, which hangs on the donkey's chest right in front of her, and pulls one more carrot out of it, so she is clearly taking the carrots from the donkey's sack. Exactly one sack in the whole picture, the donkey's; she holds no bag or sack of her own. The donkey stretches his head forward and nibbles the carrots. The grandmother is the one who feeds; the donkey is the one who eats. The small burlap feed sack has a big painted grey donkey head on it and hangs from a short strap around the donkey's own neck, full of carrots with green tops sticking out, so the carrots she feeds clearly come from the donkey's own sack. Her apron front pocket is flat and empty; she has no carrots of her own anywhere. Two clearly separate whole figures, the grandmother and the donkey with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

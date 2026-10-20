@@ -1,0 +1,11 @@
+Image: p511_pesopravilskockoudomecek_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 11, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a medium-sized friendly dog with short brown fur, a white chest, four white paws, floppy brown ears and a short brown tail, on the left; and a slim grey tabby cat with darker grey stripes, white paws, green eyes and a long striped grey tail, on the right. Each figure looks exactly like this in every detail. Both are fable animals standing upright on their hind legs. A pet house stands between them. The repair is finished: one new light wooden board is already nailed firmly flat onto the front wall of the house just above its round door, its two nail heads clearly visible, the board lying flat against the wall. The dog, on the left side of the house, standing upright on both hind legs with both hind paws on the floor, holds a small hammer lowered in his left front paw and rests his right front paw on the left end of the new board; the cat, on the right side, holds an identical small hammer lowered in her right front paw and rests her left front paw on the right end of the new board. They did exactly the same work: each holds a hammer and each touches the new board. Both look at the finished repair, pleased. The dog and the cat have repaired the house together; in both pictures they stand exactly like this. The pet house is small, round-roofed and pink, with a small orange fish painted above its round door, a cat house, so it clearly belongs to the cat. Exactly one pet house in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, calm friendly faces. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

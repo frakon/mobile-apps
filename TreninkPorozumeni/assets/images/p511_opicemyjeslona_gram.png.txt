@@ -1,0 +1,11 @@
+Image: p511_opicemyjeslona_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 3, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a grey elephant with big floppy ears, a long trunk and no tusks on the left; and a small brown monkey with a pale beige face, a pale belly, round ears and a long curly tail on the right. Each figure looks exactly like this in every detail. The elephant stands on four legs facing right: his head, ears and trunk are on the right side of the picture and his tail on the left. The monkey sits astride the middle of the elephant's back, halfway between his head and his tail, far from his ears, her near leg hanging down his side with her foot clearly visible, and scrubs his back with a washcloth held in both hands; white soap foam covers part of his back. The elephant waits calmly. The monkey is the one who washes; the elephant is the one being washed. The washcloth is the monkey's own: a tiny banana-yellow square bath washcloth with a hemmed edge, with one small brown monkey face embroidered in its corner, that fits her small hands, clearly hers. Exactly one washcloth in the picture. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

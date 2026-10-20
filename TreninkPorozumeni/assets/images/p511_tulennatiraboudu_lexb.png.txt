@@ -1,0 +1,11 @@
+Image: p511_tulennatiraboudu_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b6 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: on the left a smooth grey spotted seal with long white whiskers, big dark eyes, two front flippers and a tail flipper, resting upright on its belly and tail; on the right a brown female mallard duck with speckled brown and cream feathers, a flat orange bill and orange webbed feet. Each figure looks exactly like this in the whole picture. The seal balances one red hoop upright on the tip of its nose; the duck stands beside it and watches with her wings at her sides. There is no hut and no paint anywhere.  Two clearly separate whole animals with correct realistic anatomy, all legs, arms, paws, flippers and wings complete and visible, nothing hidden behind objects, all feet at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

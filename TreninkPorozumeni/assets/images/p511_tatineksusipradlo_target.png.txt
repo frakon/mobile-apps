@@ -1,0 +1,11 @@
+Image: p511_tatineksusipradlo_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 15, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a father of about thirty-five with short black hair and a short black beard, wearing a light blue shirt with long sleeves, dark grey trousers and black shoes, on the left; and a mother of about thirty-five with shoulder-length brown hair, wearing a knee-length dark green dress with long sleeves and brown flat shoes, on the right. Each person wears exactly this outfit. The father and the mother stand facing each other a few steps apart, each holding one end of a short white washing line at shoulder height, the line one single continuous straight cord between their hands with no breaks, the line ends exactly in their hands with nothing hanging down beyond their hands, exactly one line; three pieces of wet laundry hang on the line with wooden clothes pegs, drying. With their free hands the father and the mother each press one piece of laundry flat with an open palm, the open palm lying on the cloth, no fists. They dry the laundry together; in both pictures they do exactly the same. The laundry is a woman's red dress, a pink blouse and a skirt with small flowers, all women's clothes in the mother's size, so the laundry clearly belongs to the mother. Exactly three pieces of laundry in the picture, no men's clothes. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: p511_rytirnosivlajku_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 3, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a knight, a young man with short black hair and no helmet, wearing shiny silver armour with a green tunic over it showing one silver sword, and brown boots on the left; and a queen, a mature grown woman of about forty, clearly older than the young knight, with long blond hair in one braid over her shoulder, wearing a big tall golden queen's crown with jewels, a long light-blue gown with long sleeves and light-blue shoes on the right. Each figure looks exactly like this in every detail. The knight walks to the right toward the queen holding a flag on a long pole upright in his right hand beside him, with a white gap from his armour; his left arm swings freely. The knight looks exactly as in every picture: silver armour with a knee-length green tunic worn over the chest armour, the tunic showing one big silver sword emblem on his chest, and a sword in a sheath hanging at his belt. The queen stands facing left and waits with her hands folded. The knight is the one who carries the flag. The flag is the queen's: light blue with a white swan, the same light blue as her gown, clearly hers. Exactly one flag in the picture. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

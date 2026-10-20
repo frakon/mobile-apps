@@ -1,0 +1,11 @@
+Image: p511_mysnasazujecepici_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 13, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big grey-brown hare with very long upright ears, a white tail and strong hind legs; and a tiny grey mouse with big round pink ears, a pink nose and a long thin tail. Each figure looks exactly like this in the whole picture. The hare lies flat on his belly on the right, both front legs stretched forward side by side on the ground with normal short hare legs, his chin resting low near the ground so that his head is as low as the mouse; the mouse stands upright on her hind legs on the ground on the left, right in front of his face. With both front paws the mouse holds the brim of a knitted cap and is just pulling it down onto the hare's lowered head: the cap is only halfway on, sitting on the top of the hare's head above his eyes, his eyes and whole face clearly visible, the ears just starting to go through the holes. The mouse is the one putting the cap on, the hare holds still. The cap is big and green with two long holes through which the hare's long ears stick out - a cap made for long ears, so it is the hare's own cap. On her own head the mouse wears her own tiny knitted yellow cap with two small round holes for her round ears. Exactly one big green cap and exactly one tiny yellow cap in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, all feet and paws at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

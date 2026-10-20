@@ -1,0 +1,11 @@
+Image: p511_dedecekdavasalu_lexa.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 2, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a friendly grandfather of about seventy with short white hair and a short white beard, wearing a flat brown cap, a long-sleeved green-and-white checked shirt, a plain brown knitted vest, plain dark brown trousers and black lace-up boots on the left; and a kind grandmother of about seventy with grey hair in a neat round bun and small round glasses, wearing a long-sleeved plain purple dress reaching below her knees, a white apron with small red flowers, thick grey stockings and black lace-up shoes on the right. Each figure looks exactly like this in every detail. The grandfather stands facing right, leans forward and gives the grandmother a kiss on her cheek, his hands clasped behind his back; the grandmother stands facing left with both hands clasped together in front of her apron at waist height, both her arms and both hands clearly visible, smiling. The grandfather is the one who gives the kiss. There is no scarf anywhere. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

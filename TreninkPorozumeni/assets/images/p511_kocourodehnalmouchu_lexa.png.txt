@@ -1,0 +1,11 @@
+Image: p511_kocourodehnalmouchu_lexa.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b7 round 20, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big ginger tomcat with darker ginger stripes, a white chest, white paws, green eyes and a long ginger striped tail; and a friendly white cow with large black spots, a pink nose, two short curved cream horns, a pink udder and a long thin tail ending in a black tuft. Each animal looks exactly like this in the picture. The cow stands on all four legs facing left. The tomcat sits upright on the cow's back just in front of her hips and waves one white front paw in the air at one small black fly that buzzes right next to his raised paw, so close that his paw almost touches it, above the cow's back; his other front paw rests on her back. Both tails, the cow's and the tomcat's, hang down still. The cow's head and face are white, with black spots only on her body. The tomcat chases the fly away with his paw only. Exactly one fly in the picture. Two clearly separate whole animals, a tomcat and a cow, with correct realistic anatomy, all arms, legs, hooves and paws complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

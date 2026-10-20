@@ -1,0 +1,11 @@
+Image: p511_vlkvezeliskunavoziku_lexa.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 27, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a grey wolf with grey fur, a light grey chest, pointed ears, yellow eyes and a bushy grey tail, on the left; and a slim red fox with orange fur, a white chest, black lower legs, pointed ears and a bushy orange tail with a white tip, on the right. Each figure looks exactly like this in every detail. Both are fable animals. The fox sits in the back of one small wooden rowing boat floating in white space; the wolf sits in the front of the same boat and rows with two wooden oars like a real rower: his two paws hold the two oar handles side by side in front of his chest, and from there the near oar goes down over the near rim of the boat toward the front-left with its blade below the rim, while the far oar goes over the far rim and is mostly hidden behind the boat; the oars do not cross. There is no cart anywhere. Two clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, calm friendly faces. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

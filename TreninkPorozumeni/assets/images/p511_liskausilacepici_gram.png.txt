@@ -1,0 +1,11 @@
+Image: p511_liskausilacepici_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: an orange fox with a white chest, a white tip on her bushy tail and black paws on the left; and a big brown bear with round ears and a pale brown muzzle on the right. Each figure looks exactly like this in every detail. The fox sits upright like in a fable facing right and holds up a finished cap sized for the bear's big round head in her left paw at arm's length, a needle still hanging from it on a last short thread; she has just sewn it. The bear sits facing left and watches. The fox is the one who sewed the cap for the bear. The cap is made from orange fabric with white dots, the same as the fox's neckerchief; the fox's neck is bare now, while the bear still wears his own brown-green checked neckerchief, so the cap is made from the fox's scarf. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

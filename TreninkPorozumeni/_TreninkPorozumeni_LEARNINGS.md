@@ -28,6 +28,14 @@ Rule: before accepting any sentence, verify the verb's real Czech valence/govern
 ### 3. Reversible-sentence items must be case-DISambiguable (content-spec learning)
 „Autobus tlačí auto." was rejected during spec work because nominative = accusative for BOTH nouns — the child cannot tell subject from object by form at all, so the item tests nothing. Rule: in field 5.1, at least one noun must morphologically mark the case (kluka/holčička), or replace the item.
 
+### 4. Possessive items (5.11): the pronoun must be the ONLY cue (R2-D diversity rework, 2026-10-20)
+- Pure-majority items with role reversal („Kluk utrhl holčičce její jahůdku." / „Holčička utrhla klukovi jeho jahůdku.") were excluded before rendering: the actor noun alone picks the picture, the pronoun is not tested (that is 5.1's contrast). Valid pure-majority shapes keep the SAME actor and action in target and gram: comitative joint action with subject/partner swapped („Pes spí s kočkou v jejím pelíšku." / „Kočka spí se psem v jeho pelíšku.") or a converse v2 („Kočka dostává od psa jeho hračku.").
+- Dative = accusative forms (opici, slepici) made „Slon nosí opici …" read as carrying the monkey → use a form that differs (opičce) or another verb.
+- A past perfective sentence needs a RESULT picture (done / hands just leaving); in-progress pictures drew remarks → present tense instead.
+- Blind-test remarks that only restate the grammar („jeho is not reflexive, so it is the dog's") with the correct pick and no residual doubt are not meaning fails; residual doubt about WHOSE stays a fail.
+- The 5-render cap check in a render script must be cross-process: a worker restarted a still-running render and one picture got a 6th render (item dropped).
+- Owner motifs named in why-texts counted for the „≤2 of 10 groups" cap (ruling R2D-43: a thing counts if drawn as a real object or named in a text; unnamed decorative motifs do not): why-texts naming the fish motif („ručníkem s rybičkami", „misku s rybičkou") and a flower print („zástěra s kytičkami") put ryba and kytka into 3 groups, although the pictures were fine; those texts were rewritten to name the owner or the colour instead (R2D-V round 2 repair).
+
 ## Image learnings (per fault-class)
 
 For every class: the user quote is in the matching `ImageLearnings/<name>/_user_comment.md`; the exact repair prompt in `_repair_result.md` and the installed `assets/images/*.png.txt`.

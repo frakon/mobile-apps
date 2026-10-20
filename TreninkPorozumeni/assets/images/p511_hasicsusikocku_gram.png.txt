@@ -1,0 +1,11 @@
+Image: p511_hasicsusikocku_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 3, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a firefighter man of about thirty-five with short dark hair and a short dark beard, wearing a red firefighter helmet, a dark navy firefighter jacket and dark navy trousers both with yellow reflective stripes, and black lace-up leather boots, on the left; and a slim grey tabby cat with darker grey stripes, white paws, green eyes and a long striped grey tail, her fur wet with a few water drops, on the right. Each figure looks exactly like this in every detail. The firefighter kneels on one knee on the left facing right, holding a towel in both hands with his arms stretched forward, the towel pressed onto the wet cat's back and side, both his hands firmly rubbing her fur through the towel, the cat's whole head, face, ears and front legs fully visible in front of the towel and not covered, the towel clearly away from his own jacket with a white gap; the wet cat stands on all four legs on the right facing left, calm, being dried. The firefighter is the one who dries the cat; the cat is the one being dried. The towel is small and pink with little orange fish printed on it, a small pet towel, so it clearly belongs to the cat. Exactly one towel in the picture. One person and one animal, two clearly separate whole figures with correct realistic anatomy, both arms, both hands and both legs of the person and all legs and the tail of the animal complete and visible, nothing hidden behind objects, calm friendly faces. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

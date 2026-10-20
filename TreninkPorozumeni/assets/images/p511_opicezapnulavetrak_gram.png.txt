@@ -1,0 +1,11 @@
+Image: p511_opicezapnulavetrak_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 4, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small brown monkey with a pale beige face, a pale belly, round ears and a long curly tail on the left; and a grey elephant with big floppy ears, a long trunk and no tusks on the right. Each figure looks exactly like this in every detail. The monkey stands upright like in a fable and holds an electric fan standing on the open palm of her left hand at chest height and has just pressed its round button with one finger of her right hand, the finger still on it. The fan's front faces straight to the right at the elephant's face; exactly three short straight wind lines are drawn directly in front of the fan, in the gap between the fan and the elephant's trunk, and no wind lines anywhere else, none around or behind the elephant; the elephant's big ears flutter backward. The whole elephant is fully inside the picture with white margin on every side, nothing cut off by the edge. The elephant stands facing left and enjoys the wind. The monkey is the one who switched on the fan. The fan is the monkey's own: a tiny yellow desk fan with its own small round foot, small like her, clearly hers. Exactly one fan in the picture, without any cable. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

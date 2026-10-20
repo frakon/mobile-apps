@@ -1,0 +1,11 @@
+Image: p511_klaunsijezaplatu_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a cheerful clown, a grown man with curly orange hair, a round red nose and white face paint around his mouth, wearing a baggy yellow suit with big blue polka dots, a big red bow tie, white gloves and huge red shoes on the left; and a friendly witch, a grown woman with long straight black hair and no hat, wearing a long-sleeved black dress reaching her ankles, purple-and-black striped stockings and pointed black shoes on the right. Each figure looks exactly like this in every detail. Exactly one hat is in the picture: the witch's tall pointed black witch's hat with a purple band, the same purple as the stripes on her stockings; there is no other hat anywhere. Both the clown and the witch are bare-headed. The clown stands on the left facing right and the witch stands on the right facing left. The hat rests on the witch's open left palm held out at chest height between them, and they sew one round orange patch onto it together: the clown stitches the left side of the patch with a needle and thread in his right hand, and the witch stitches the right side with a needle and thread in her right hand; both needles touch the patch. Both sew it together; the hat is the witch's. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

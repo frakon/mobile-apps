@@ -1,0 +1,11 @@
+Image: p511_zajicprinasihrnicek_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big grey-brown hare with very long upright ears, a white tail and strong hind legs; and a tiny grey mouse with big round pink ears, a pink nose and a long thin tail. Each figure looks exactly like this in the whole picture. The hare walks upright on his hind legs from the left toward the mouse, carrying one mug by its handle in one front paw, holding it up in front of his chest at arm's length so it is clearly visible, a clear white gap between the mug and his fur; his other front paw swings at his side. The mouse sits upright on the right, waiting, facing the hare. The hare is the one bringing the mug. The mug is tiny and yellow, about as big as the mouse's head - mouse-sized, so it is the mouse's mug. Exactly one mug in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, all feet and paws at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

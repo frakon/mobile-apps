@@ -1,0 +1,11 @@
+Image: p511_babickamyjeholinky_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a kind grandmother of about seventy with grey hair in a neat round bun and small round glasses, wearing a long-sleeved plain purple dress reaching below her knees, a white apron with small red flowers, thick grey stockings on the left; and a friendly grandfather of about seventy with short white hair and a short white beard, wearing a flat brown cap, a long-sleeved green-and-white checked shirt, a plain brown knitted vest, plain dark brown trousers and thick grey woollen socks on the right. Each figure looks exactly like this in every detail. The grandfather stands behind the grandmother on her left side and ties the bow of her apron strings behind her back with both hands; the grandmother stands still with her hands folded. Both wear their own clean rubber boots: the grandmother her small red ones with white dots, the grandfather his big black ones. The grandfather is the one who ties the bow. Nobody touches any boot. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

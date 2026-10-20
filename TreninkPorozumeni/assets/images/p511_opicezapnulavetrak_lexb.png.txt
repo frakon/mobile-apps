@@ -1,0 +1,11 @@
+Image: p511_opicezapnulavetrak_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 3, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a small brown monkey with a pale beige face, a pale belly, round ears and a long curly tail on the left; and a grey elephant with big floppy ears, a long trunk and no tusks on the right. Each figure looks exactly like this in every detail. The whole elephant is fully inside the picture with white margin on every side, nothing cut off by the edge. The elephant stands facing left and flaps his own two big ears (exactly two ears, one on each side of his head, clearly drawn once each) to make wind for the monkey, who sits facing right and enjoys it. The elephant is the one who makes the wind. There is no electric fan anywhere. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

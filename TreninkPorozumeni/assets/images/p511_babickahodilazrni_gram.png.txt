@@ -1,0 +1,11 @@
+Image: p511_babickahodilazrni_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a kind grandmother of about seventy with grey hair in a neat round bun and small round glasses, wearing a long-sleeved plain purple dress reaching below her knees, a white apron with small red flowers, thick grey stockings and black lace-up shoes on the left; and a proud rooster with a bright red comb and wattles, golden-orange neck feathers, a brown body, a tall dark green tail and yellow legs on the right. Each figure looks exactly like this in every detail. The grandmother stands facing right; her right hand is stretched forward open and empty - she has just thrown a handful of golden grain toward the rooster, and the grains are still flying in an arc down to just in front of his feet. The rooster stands facing left, looking up at the flying grains. The grandmother is the one who threw the grain. In her left hand the grandmother holds out to her side, with a white gap from her apron, one small open white cloth bag with grain inside and the same small red flowers as her apron - her own bag; her right hand has just thrown the grain from it, so the grain is clearly the grandmother's. There is no other bag or sack in the picture. Two clearly separate whole figures, the grandmother and the rooster with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

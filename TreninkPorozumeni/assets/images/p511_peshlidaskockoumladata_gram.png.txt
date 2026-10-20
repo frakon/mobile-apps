@@ -1,0 +1,11 @@
+Image: p511_peshlidaskockoumladata_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b4 round 3, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a medium-sized friendly dog with short brown fur, a white chest, four white paws, floppy brown ears and a short brown tail, on the left; and a slim grey tabby cat with darker grey stripes, white paws, green eyes and a long striped grey tail, on the right. Each figure looks exactly like this in every detail. The dog lies on the left facing right and the cat lies on the right facing left, side by side like two guards, both with their heads up, alert and watchful, both guarding together the babies that play in the small space between them. The dog and the cat do exactly the same thing: both guard. The babies are two small puppies with short brown fur, white chests and white paws, looking exactly like small copies of the dog, so they clearly are the dog's puppies. The two babies sit a little apart from each other with a clear white gap between them, not touching each other or the adults, each baby whole with its own four paws and tail visible. Exactly two baby animals in the picture, much smaller than the adults. The whole group is shown complete in the middle of the picture at a medium size, with a wide white margin on every side; no animal and no tail is cut off at the picture edge. Four clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, calm friendly faces. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

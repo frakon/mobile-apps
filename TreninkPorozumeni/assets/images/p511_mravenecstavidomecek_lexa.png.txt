@@ -1,0 +1,11 @@
+Image: p511_mravenecstavidomecek_lexa.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b7 round 14, true render 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big friendly red-brown cartoon ant with a round head, two bent antennae, big kind eyes and six thin legs, standing on his four back legs and using his two front legs like hands; and a round fuzzy bee with yellow and black stripes, two transparent wings, two short antennae, big kind eyes and six thin black legs, standing on her four back legs and using her two front legs like hands. Both insects are seen in a three-quarter front view, not from the side, so that all six legs of each insect are clearly visible at once: two front legs used like hands and four thin legs standing below, two on the left and two on the right. Both are drawn the same size, as big as each other, side by side with a small gap between them. Each insect looks exactly like this in the picture. Between them stands one small neat stack of round green peas, like a little pyramid. The ant places one more pea on top with his two front legs. The bee hovers in the air just above the pea stack with her wings buzzing, holding another pea ready in her two front legs, her four other thin black legs dangling below her body, two on each side, so all six of her legs are clearly visible. There is no sandcastle and no sand anywhere. Two clearly separate whole insects, an ant and a bee, with correct realistic anatomy, all arms, legs, hooves and paws complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

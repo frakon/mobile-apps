@@ -1,0 +1,11 @@
+Image: p511_ucitelkabudiberana_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b7 round 7, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a young woman teacher of about thirty with dark brown hair tied up in a neat bun at the back of her head, round glasses, a long green cardigan over a cream blouse, a brown knee-length skirt and brown shoes; and a white woolly ram with thick curly white wool, a black face, black legs and big brown horns curled in spirals beside his ears. The ram lies asleep with his legs folded under his body and his eyes closed. The teacher and the ram look exactly like this in the picture. The teacher bends over the sleeping ram and with her right hand holds up the ram's whole wide brown leather neck collar by its buckle end: the complete collar strap with its metal buckle hangs fully visible in the air in front of her, with a clear white gap to the ram's head and horns, and one medium-sized copper bell dangles and rings at the bottom of the collar just above the ram's ear; her left hand rests on her knee. It is the ram's own bell, the kind a ram wears around his neck; the ram's neck is now bare. The ram is just waking up from the ringing: both his eyes are half open and sleepy, one ear twitches and his head lifts a little toward the bell. The teacher is the one who wakes the ram, with the ram's copper bell. Exactly one bell in the picture. Two clearly separate whole figures, a woman teacher and a ram, with correct realistic anatomy, all arms, legs, hooves and paws complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

@@ -1,0 +1,11 @@
+Image: p511_levctezirafeknihu_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 2, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a friendly lion with a big golden-brown mane, tawny fur and a tail with a dark tuft on the left; and a tall giraffe with orange-brown patches on cream fur, two small horns with dark tufts and a short dark brown mane along her long neck on the right. Each figure looks exactly like this in every detail. The lion sits upright like in a fable facing right and reads aloud from a book held wide open in both front paws at arm's length, the two open halves spread apart like a V, the white printed pages facing him and his eyes looking down into the pages; the outside of the open covers faces the viewer. The giraffe stands facing left and bends her long neck down to listen. The lion is the one who reads to the giraffe. The book is the lion's own: a square golden book whose covers show one big round lion-head emblem with a mane, clearly his. Exactly one book in the picture. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

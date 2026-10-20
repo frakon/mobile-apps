@@ -1,0 +1,11 @@
+Image: p511_hrochsecakavbazenku_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b6 round 3, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big plump grey hippopotamus with a pink belly, small round ears, a wide pink snout and short thick legs; and a white farm goose with a long white neck, an orange beak and orange webbed feet. Each animal looks exactly like this in the whole picture. Two round inflatable paddling pools full of clear blue water stand side by side: one small low pool, reaching only to the hippo's knees, white with an orange rim exactly like the goose's beak and feet, which is the goose's own pool; and one huge deep pool, wide and reaching up to the hippo's chest, grey with a pink rim exactly like the hippo's belly and snout, which is the hippo's own pool. On the outer side of the small pool is painted one big picture of a white goose (a flat painted picture, not a real animal), and on the outer side of the huge pool is painted one big picture of a grey hippo (a flat painted picture, not a real animal); both painted pictures are clearly visible. The hippo and the goose sit together in the goose's small white pool, the sitting hippo filling it completely and the goose squeezed in beside him, so water spills over the orange rim. They splash water at each other: the hippo pushes a splash toward the goose with one front leg, the goose flaps a splash toward the hippo with one wing; drops of water fly between them. The hippo's huge grey pool stands empty of animals beside them, its water calm. The hippo and the goose are splashing together in the goose's small white pool. Exactly two pools in the picture: one with both animals in it and one with nobody in it. Two clearly separate whole animals, a hippo and a goose, with correct realistic anatomy, both wings and both webbed feet of the goose and the head and front legs of the hippo clearly visible, calm happy faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

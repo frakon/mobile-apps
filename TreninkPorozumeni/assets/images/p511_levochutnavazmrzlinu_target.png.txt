@@ -1,0 +1,11 @@
+Image: p511_levochutnavazmrzlinu_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a friendly lion with a big golden-brown mane, tawny fur and a tail with a dark tuft on the left; and a small brown monkey with a pale beige face, a pale belly, round ears and a long curly tail on the right. Each figure looks exactly like this in every detail. The lion sits on the left facing right and the monkey sits on the right facing left. The monkey holds her own ice-cream cone - a tiny monkey-sized pink cone with one small scoop - up in her right hand at arm's length between them. The lion and the monkey both lick the top of the ice cream at the same time, the lion with his big tongue and the monkey with her small tongue. Both taste it together; the ice cream is the monkey's, she holds it, and the lion's front paws rest empty in front of him. Exactly one ice cream in the picture. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces, only the tips of the tongues out. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

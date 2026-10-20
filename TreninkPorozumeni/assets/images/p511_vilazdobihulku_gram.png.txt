@@ -1,0 +1,11 @@
+Image: p511_vilazdobihulku_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 3, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a young fairy, a grown woman of about twenty with long wavy golden hair, two large transparent butterfly wings on her back, wearing a knee-length pale pink dress and pink ballet slippers on the left; and a kind old wizard with a long white beard, wearing a tall pointed dark blue hat with small silver stars, a long dark blue robe with small silver stars and brown shoes on the right. Each figure looks exactly like this in every detail. Exactly two wands are in the picture: the wizard's long dark wooden wand with a silver tip and the fairy's thin white wand with a small golden star on its tip. The fairy stands on the left facing right and the wizard stands on the right facing left. The fairy's thin white wand floats horizontally at chest height between them, and they decorate it together: the fairy ties a pink ribbon bow around its middle with both hands, and the wizard sticks one small red paper heart onto it near its middle with his right hand. No loose stars anywhere. Both decorate it together; the decorated wand is the fairy's. The wizard's own long dark wooden wand with the silver tip lies flat and horizontal at foot level below the wizard's feet, as if lying on the floor, plain and not decorated, with a gap to everyone. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

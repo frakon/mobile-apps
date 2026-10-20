@@ -1,0 +1,11 @@
+Image: p511_medvedrozsvitilbaterku_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 5, true render 5
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big brown bear with round ears and a pale brown muzzle on the left; and an orange fox with a white chest, a white tip on her bushy tail and black paws on the right. Each figure looks exactly like this in every detail. The bear sits upright like in a fable facing right and holds a flashlight in his right paw at arm's length, his thumb still on its switch - he has just switched it on; a warm beam of light already shines straight forward and lands on the fox's chest, the same beam in the same direction. The whole bear is fully inside the picture with white margin on every side, nothing cut off by the edge. His left paw rests on his knee. The fox sits facing left and looks into the light. The bear is the one who switched on the flashlight. The flashlight is the bear's own: exactly the same simple shape as a small pocket torch, only three times bigger - one plain straight smooth brown cylinder with a round glass lens at the front end, nothing sticking out of it; the bear's paw wraps around the middle of the cylinder like around a stick; the bear's paw is plain brown fur with no cuff, no band and no sleeve, just like the fox's kind of flashlight but big, thick and heavy, sized for a bear's paw, clearly his; not a lantern, not a lamp, not a searchlight. Exactly one flashlight in the picture. Two clearly separate whole animals with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

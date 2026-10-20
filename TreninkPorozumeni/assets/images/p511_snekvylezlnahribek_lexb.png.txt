@@ -1,0 +1,11 @@
+Image: p511_snekvylezlnahribek_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b7 round 20, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a snail with a soft pale brown body, two long smooth feelers, each ending in one small round dark eye-knob, with no hairs, no fringes and no brush tips and one round shell on its back with a brown spiral pattern; and a ladybird of the same size as the snail, with a round shiny red back with seven black dots, a small black head with two short feelers and six thin black legs. Both small animals are drawn big. The snail's shell sits on the middle of his back and his head with the two feelers rises at the front end of his soft body. Each animal looks exactly like this in the whole picture. The ladybird flies with her red wing cases open and her thin wings spread, just above the snail, her six thin black legs hanging below her body, exactly three on each side, no more and no fewer; the snail crawls slowly to the right below her. There is no mushroom anywhere. Two clearly separate whole small animals with correct realistic anatomy, both feelers of each animal and all six legs of the ladybird complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

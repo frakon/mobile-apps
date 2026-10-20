@@ -1,0 +1,11 @@
+Image: p511_tatinekoblekmaminkukabat_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 4, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a father of about thirty-five with short black hair and a short black beard, wearing a light blue shirt with long sleeves, dark grey trousers and black shoes, on the left; and a mother of about thirty-five with shoulder-length brown hair, wearing a knee-length dark green dress with long sleeves and brown flat shoes, on the right. Each person wears exactly this outfit. The mother stands in front on the right facing right, already wearing the coat with both arms in its sleeves, her hands hanging relaxed at her sides, not in any pockets; the father stands close behind her on the left facing right, both his arms stretched forward, both his hands gripping the coat's collar and lifting it, having just pulled the coat up onto her shoulders - he has just put the coat on her; his hands hold only the coat, not her body. The father is the one who put the coat on the mother. The coat is a long dark brown man's coat, far too big for her, the sleeves covering her hands and the hem reaching her ankles, so it clearly belongs to the father. Exactly one coat in the picture. Two clearly separate whole people with correct realistic anatomy, both arms, both hands and both legs complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

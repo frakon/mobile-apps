@@ -1,0 +1,11 @@
+Image: p511_kockatahnepelisek_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b2 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a slim grey tabby cat with darker grey stripes, white paws, green eyes and a long striped grey tail, on the left; and a medium-sized friendly dog with short brown fur, a white chest, four white paws, floppy brown ears and a short brown tail, on the right. Each figure looks exactly like this in every detail. The cat sits upright on the left facing right, calmly watching. The dog is on the right, walking to the left toward the cat, leaning forward and pulling a long brown wooden stick in his teeth; the stick trails behind him. The dog is the one who pulls the stick. There is no pet bed anywhere. Two clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, calm friendly faces. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

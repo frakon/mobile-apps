@@ -1,0 +1,11 @@
+Image: p511_piratnasadilklobouk_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 25, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a friendly pirate man with short black hair, a short black beard, a black eye patch over his left eye, a red-and-white striped shirt, a wide brown belt, black trousers and black boots, on the left; and a young princess with long golden hair, wearing a long light pink princess gown with puffed sleeves and pink shoes, on the right. Each figure looks exactly like this in the whole picture. The pirate stands facing right and has just put a hat on the princess's head: the hat already sits on her head and his two hands still hold its brim on both sides, his fingers touching the brim, settling it in place; she stands facing left and holds still, her arms at her sides. The pirate is the one who put the hat on. The hat is a black three-cornered pirate hat with one white skull - a pirate's hat, so it is the pirate's own hat; his own head is bare, his short black hair visible. Exactly one hat in the picture. Two clearly separate whole people with correct realistic anatomy, all arms, hands and legs complete and visible, nothing hidden behind objects, all feet and paws at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

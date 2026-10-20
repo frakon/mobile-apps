@@ -1,0 +1,11 @@
+Image: p511_holcickazavazujesatek_target.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 9, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a white dog with black spots, floppy black ears and a black nose, sitting upright on the right; and a girl of about six with two blonde pigtails, wearing a plain lavender knee-length dress, white socks and brown shoes, on the left. Each figure looks exactly like this in the whole picture. The girl stands facing right in front of the sitting dog and with both hands ties a cotton neckerchief around the dog's neck, making a knot under his chin. The girl is the one tying it, the dog sits still. The neckerchief she ties is red with small white paw prints - a dog bandana, so it is the dog's own neckerchief. On her own head the girl wears her own yellow headscarf with white dots, tied under her chin, her pigtails sticking out below it. Exactly one red paw-print neckerchief in the picture. Her hair is exactly two blonde pigtails, one on each side of her head, both clearly visible, each tied with exactly one small lavender hair band; no ponytail, no braids, no bow. One clearly separate whole girl and one whole dog with correct realistic anatomy, all arms, hands, legs, paws and tails complete and visible, nothing hidden behind objects, all feet and paws at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

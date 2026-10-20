@@ -1,0 +1,11 @@
+Image: p511_dedecekposadilkozu_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a friendly grandfather of about seventy with short white hair and a short white beard, wearing a flat brown cap, a long-sleeved green-and-white checked shirt, a plain brown knitted vest, plain dark brown trousers and black lace-up boots on the left; and a white goat with small curved grey horns, a short white beard, a pink nose and a plain red collar, standing naturally on four legs on the right. Each figure looks exactly like this in every detail. Exactly one cart is in the picture: a small green goat cart sized for a goat, with two thin shafts, two small wheels and a little leather harness, with one small white goat head painted on its side; it stands on its wheels on the ground, seen from the side, fully inside the picture. There is no other cart anywhere. The grandfather stands facing right, bends down and with both arms sets the goat into the cart; the goat sits calmly in the cart, her four legs folded, her head up. The grandfather is the one who puts the goat in; the cart is the goat's own small goat cart. Two clearly separate whole figures, the grandfather and the goat with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

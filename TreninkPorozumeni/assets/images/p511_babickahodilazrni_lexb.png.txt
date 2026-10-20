@@ -1,0 +1,11 @@
+Image: p511_babickahodilazrni_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 2, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a kind grandmother of about seventy with grey hair in a neat round bun and small round glasses, wearing a long-sleeved plain purple dress reaching below her knees, a white apron with small red flowers, thick grey stockings and black lace-up shoes on the left; and a proud rooster with a bright red comb and wattles, golden-orange neck feathers, a brown body, a tall dark green tail and yellow legs on the right. Each figure looks exactly like this in every detail. The rooster stands right beside the grandmother's front shoe, his head bent down to it, and tugs with his beak at the short untied shoelace of that shoe; the lace is short, a normal shoelace only a few centimetres long, from the shoe straight to his beak. The grandmother stands still on both feet, both legs and both shoes clearly visible and separate, and looks down at him. The rooster is the one who pulls. There is no bag and no sack anywhere. No grain anywhere. Two clearly separate whole figures, the grandmother and the rooster with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

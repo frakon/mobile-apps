@@ -1,0 +1,11 @@
+Image: p511_carodejnicevarikakao_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b3 round 2, true render 2
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a friendly witch, a grown woman with long straight black hair, wearing a tall pointed black hat with a purple band, a long-sleeved black dress reaching her ankles, purple-and-black striped stockings and pointed black shoes on the left; and a kind old wizard with a long white beard, wearing a tall pointed dark blue hat with small silver stars, a long dark blue robe with small silver stars and brown shoes on the right. Each figure looks exactly like this in every detail. Exactly two small cauldrons stand low at foot level on three short legs each: a dark blue cauldron with small silver stars, exactly like the wizard's robe, and a black cauldron with a purple band, exactly like the witch's hat. The witch stands facing right and stirs hot steaming chocolate-brown cocoa with small white marshmallows on top in one of them with a long wooden spoon held in both hands. The wizard stands facing left a step away and holds out one empty white mug with both hands toward the stirred cauldron, waiting for his cocoa. The witch is the one who cooks the cocoa for the wizard; the wizard only waits to get it. She stirs the cocoa in her own black cauldron with the purple band, which stands between them next to her; the wizard's dark blue starry cauldron stands empty on the far right behind his heels. Two clearly separate whole people with correct realistic anatomy, every arm, hand, leg, paw, hoof, wing and tail complete and visible, nothing important hidden behind objects, a clear white gap between each held object and the body and clothes of the figures, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

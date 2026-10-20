@@ -1,0 +1,11 @@
+Image: p511_tulentocikolotocem_lexa.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b11 round 2, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: on the left a smooth grey spotted seal with long white whiskers, big dark eyes, two front flippers and a tail flipper; on the right a fluffy white sheep with thick curly white wool, a pale pink face, small pink ears and thin grey legs with small dark hooves, sitting upright like in a fable, as big as the seal. Each figure looks exactly like this in the whole picture. Between them stands one wooden seesaw: one long plain wooden plank balanced on one low wooden support in its middle, with one small wooden handle near each end. The seal sits upright on the left end of the plank and holds the left handle with both front flippers. The sheep sits upright on her bottom on the right end of the plank like a child, her body facing the seal, both front hooves holding the right handle and both hind legs hanging straight down below the plank on her side. The seal's end is down and the sheep's end is up in the air, so they are seesawing up and down. Exactly one seesaw. There is no carousel, no rope, no string and nothing that turns or spins anywhere. Two clearly separate whole animals with correct realistic anatomy, all four legs of the sheep, both flippers and the tail flipper of the seal complete and visible, nothing hidden behind objects, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

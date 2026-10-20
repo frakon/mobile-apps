@@ -1,0 +1,11 @@
+Image: p511_kacerchytamotyla_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b7 round 6, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: on the left a male mallard drake with a shiny dark green head, a thin white neck ring, a brown chest, a grey body, a yellow bill and orange webbed feet; on the right a small bright green frog with big round yellow eyes, a pale yellow belly and long webbed back feet, standing upright on its hind legs like in a fable, only as tall as the other animal's knees. Each figure looks exactly like this in the whole picture. Just above them one orange butterfly flies. The drake holds one butterfly net by the end of its handle in his bill and swings the open net up over the butterfly, which is already fluttering deep inside the white mesh of the net; the long grey handle points straight up and forward away from the drake, its lower end ending just behind his bill, with a wide clear white gap between the whole handle and his chest and neck; nothing of the handle hangs down across his body. The net is big with a long grey handle and white mesh like the drake's grey body and white neck ring, so it is clearly the drake's own big net. Nothing on the big net is green. The frog stands on the right with both front feet together, watching the butterfly. On the white space beside the frog's feet lies the frog's own tiny net with a short bright green handle and green mesh, unused, far from the drake. The drake is the one catching the butterfly for the frog. Exactly two nets in the picture: the drake's big grey net in the drake's bill and the frog's tiny green net lying unused beside the frog. Exactly one butterfly. Two clearly separate whole animals with correct realistic anatomy, all legs, arms, paws, flippers and wings complete and visible, nothing hidden behind objects, all feet at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

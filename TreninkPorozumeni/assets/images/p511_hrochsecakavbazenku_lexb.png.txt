@@ -1,0 +1,11 @@
+Image: p511_hrochsecakavbazenku_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b6 round 1, true render 1
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a big plump grey hippopotamus with a pink belly, small round ears, a wide pink snout and short thick legs; and a white farm goose with a long white neck, an orange beak and orange webbed feet. Each animal looks exactly like this in the whole picture. The hippo lies on his back and the goose lies on her belly side by side on one big striped beach towel, both with their eyes closed, sunbathing happily; one round yellow sun shines in the top corner. There is no water and there are no paddling pools anywhere. Two clearly separate whole animals, a hippo and a goose, with correct realistic anatomy, both wings and both webbed feet of the goose and the head and front legs of the hippo clearly visible, calm happy faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

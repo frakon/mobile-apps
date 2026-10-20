@@ -1,0 +1,11 @@
+Image: p511_pesspivpelisku_lexb.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b1 round 28, true render 4
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: a medium-sized black dog with a white chest, a white tip on his tail, pointed ears and a plain blue collar; and a ginger cat with white paws, a white chest and a long ginger tail. Each figure looks exactly like this in the whole picture. The dog lies awake on his belly with his head up, all four legs visible and his tail lying straight out behind his rear end, and the cat sleeps curled up on the dog's back. The dog has a normal body length, exactly four legs and one tail. The dog faces right: his head is on the right side of the picture, and his rear end and his tail are on the LEFT side of the picture, the tail lying on the ground at the far left. There is no bed and no basket anywhere. Two clearly separate whole animals with correct realistic anatomy, all legs, paws and tails complete and visible, nothing hidden behind objects, calm peaceful faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.

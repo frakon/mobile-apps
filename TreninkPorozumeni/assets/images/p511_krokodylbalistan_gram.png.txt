@@ -1,0 +1,11 @@
+Image: p511_krokodylbalistan_gram.png
+Generated: 2026-10-20
+Candidate: R2-D 5.11 diversity, b6 round 7, true render 3
+
+1. Service and exact parameters:
+- Service: Muse Spark (Meta Model API), POST https://api.meta.ai/v1/images/generations
+- Parameters: model=muse-image-1.0, size=1024x1024
+- API returned 1600x1600 WebP; downscaled with Pillow LANCZOS to 512x512 PNG
+
+2. Verbatim prompt:
+Children's book watercolor illustration, side view: on the left a green crocodile with a long snout, a bumpy ridged back and a long thick tail, standing upright on its hind legs like in a fable; on the right a zebra with bold black and white stripes, a short upright black-and-white mane and a black tuft at the end of its tail, standing upright on its hind legs like in a fable. Each figure looks exactly like this in the whole picture. Between them is one small camping tent that has already been taken down and is being packed: its two bare tent poles lie folded together beside their feet, and the flat triangular tent cloth, with its round door opening and its zipper clearly visible, is being rolled up into a tight roll. The tent cloth is green with a bumpy scale pattern exactly like the crocodile's skin, so it is clearly the crocodile's own tent. Nothing on the tent is striped. The crocodile rolls up one end of the tent cloth with both front paws and the zebra rolls up the other end with both front hooves, the rolled-up part growing in the middle between them, like packing a tent to carry it home; the cloth forms one neat tight roll held level between them, nothing hangs down and there is no sagging loop. The crocodile and the zebra are packing up the tent together. Exactly one tent in the picture. Two clearly separate whole animals with correct realistic anatomy, all legs, arms, paws, flippers and wings complete and visible, nothing hidden behind objects, all feet at the same level, calm friendly faces with closed mouths. Floating in pure white empty space, no ground, no shadow, no scenery, no text, nothing else in the picture.
