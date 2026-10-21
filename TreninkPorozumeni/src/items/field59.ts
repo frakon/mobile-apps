@@ -2570,7 +2570,7 @@ export const field59Examples: ComprehensionExample[] = [
       grammaticalDistractorExplanationAudio: require('../../assets/audio/p59_holcickamaspinavejsioblicej_v2_gram_why.mp3'),
       lexicalDistractorAExplanation: 'Tady má holčička stejně čistý obličej jako kluk.',
       lexicalDistractorAExplanationAudio: require('../../assets/audio/p59_holcickamaspinavejsioblicej_v2_lexa_why.mp3'),
-      lexicalDistractorBExplanation: 'Tady má holčička stejně špinavý obličej jako kluk.',
+      lexicalDistractorBExplanation: 'Tady má holčička na obličeji stejně malou tečku jako kluk, ale špinavé ruce.',
       lexicalDistractorBExplanationAudio: require('../../assets/audio/p59_holcickamaspinavejsioblicej_v2_lexb_why.mp3'),
     },
   },
