@@ -104,4 +104,4 @@ Fix/rules: add an explicit end-to-end continuity clause — "one single continuo
 
 ## Audio generation settings
 
-- All sentence and why-wrong mp3s: edge-tts voice `cs-CZ-VlastaNeural`, rate `-10%` (keep identical for new/regenerated audio).
+- All sentence and why-wrong mp3s: ElevenLabs (endgame `text-to-speech` skill, primary method) — voice `xiS6BE89wW6zbLVHQm2r`, `eleven_v4`, language `cs`, `mp3_44100_192` mono; sentences as plain text, `_why` files with the skill's wrong-answer default (see README "Assets naming contract"). Keep identical for new/regenerated audio. The former edge-tts voice `cs-CZ-VlastaNeural` is no longer used (all types regenerated in Round 2, 2026-10; it is only the skill's fallback after user confirmation).
